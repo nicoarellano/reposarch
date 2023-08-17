@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="https://cims.carleton.ca/#/home">CIMS lab</a>
+  |
+  <a href=https://osarchrep.vercel.app>CDT Demo</a>
+  |
+  <a href=https://nicoarellano.github.io/osarchrep/></a>
+</p>
+
+<img src="public/bb.ico">
+<h1><img src="public/bb.ico" width="40">Open Source Architectural Representation Course</h1>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
