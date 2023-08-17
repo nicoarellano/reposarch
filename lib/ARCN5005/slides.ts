@@ -8,7 +8,6 @@ import Map from "@/public/slides/Map";
 import NaMte from "@/public/students/NicolasArellano/MidTermExam";
 
 export const slides: Slides = [
-  { id: "", title: "", slide: Intro() },
   { id: "presentation", title: "Presentation", slide: Presentation() },
   { id: "toc", title: "Table of Content", slide: TOC() },
   { id: "map", title: "Map - Maplibre", slide: Map() },

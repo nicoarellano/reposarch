@@ -4,7 +4,12 @@ export default function Presentation() {
   const photo = "/slides/Presentation/osarchrep.png";
   const title = "osarchrep";
   return (
-    <div className=" flex items-center justify-center z-50">
+    <div className=" flex flex-col items-center justify-center z-50">
+      <h3>
+        <em>
+          AKA Open source cooding for <b>Architects</b>
+        </em>
+      </h3>
       <Image priority src={photo} height={200} width={500} alt={title} />
     </div>
   );
