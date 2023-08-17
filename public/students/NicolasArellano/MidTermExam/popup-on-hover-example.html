@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title>Midterm exam - Nico Arellano - Airports</title>
-    <meta
-      property="og:description"
-      content="Use extrusions to display buildings' height in 3D."
-    />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.css"
+    <title>Display a popup on hover</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
     />
-    <script src="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
     <style>
       body {
         margin: 0;
@@ -20,7 +19,7 @@
       }
       #map {
         position: absolute;
-        top: 50px;
+        top: 150px;
         bottom: 0;
         width: 100%;
       }
@@ -28,13 +27,25 @@
         color: red;
       }
     </style>
-        <h3>🔴 = Airport (hover to see description)</h3>
-  <div id="map"></div>
-  <script>
-      const map = new maplibregl.Map({
-          container: 'map',
-          style: "/map-styles/light.json",
-          center: [-75, 45],
+  </head>
+  <body>
+    <style>
+      .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <h1>Mapbox Tutorial 1</h1>
+    <h2>🔴 = airport (hover to see description)</h2>
+    <div id="map"></div>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoibmljby1hcmVsbGFubyIsImEiOiJjbGRkNzV1aDcwMHE5M3ZtcTA4OHZvdnZ2In0.62n_DqnBfOYRz2lNakP8IA";
+      const map = new mapboxgl.Map({
+        container: "map",
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: "mapbox://styles/mapbox/dark-v11",
+        center: [-75, 45],
         zoom: 5,
       });
 
@@ -903,8 +914,8 @@
 
         airporsFeatureCollection.push(airportFeature);
       });
-  
-      map.on('load', () => {
+
+      map.on("load", () => {
         map.addSource("places", {
           type: "geojson",
           data: {
@@ -912,9 +923,9 @@
             features: airporsFeatureCollection,
           },
         });
-  
-                  // Add a layer showing the places.
-                  map.addLayer({
+        // Add a layer showing the places.
+
+        map.addLayer({
           id: "places",
           type: "circle",
           source: "places",
@@ -925,38 +936,38 @@
             "circle-stroke-color": "yellow",
           },
         });
-  
-          // Create a popup, but don't add it to the map yet.
-          const popup = new maplibregl.Popup({
-              closeButton: false,
-              closeOnClick: false
-          });
-  
-          map.on('mouseenter', 'places', (e) => {
-              // Change the cursor style as a UI indicator.
-              map.getCanvas().style.cursor = 'pointer';
-  
-              const coordinates = e.features[0].geometry.coordinates.slice();
-              const description = e.features[0].properties.description;
-  
-              // Ensure that if the map is zoomed out such that multiple
-              // copies of the feature are visible, the popup appears
-              // over the copy being pointed to.
-              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-              }
-  
-              // Populate the popup and set its coordinates
-              // based on the feature found.
-              popup.setLngLat(coordinates).setHTML(description).addTo(map);
-          });
-  
-          map.on('mouseleave', 'places', () => {
-              map.getCanvas().style.cursor = '';
-              popup.remove();
-          });
+
+        // Create a popup, but don't add it to the map yet.
+        const popup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false,
+        });
+
+        map.on("mouseenter", "places", (e) => {
+          // Change the cursor style as a UI indicator.
+          map.getCanvas().style.cursor = "pointer";
+
+          // Copy coordinates array.
+          const coordinates = e.features[0].geometry.coordinates.slice();
+          const description = e.features[0].properties.description;
+
+          // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          // Populate the popup and set its coordinates
+          // based on the feature found.
+          popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        });
+
+        map.on("mouseleave", "places", () => {
+          map.getCanvas().style.cursor = "";
+          popup.remove();
+        });
       });
-  </script>
+    </script>
   </body>
-  </html>
-  
+</html>
