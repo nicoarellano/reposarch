@@ -56,7 +56,7 @@ export default function Footer({ slides }): ReactElement<Props> {
         <IconButton onClick={handleBack} disabled={Boolean(firstSlide)}>
           <ArrowBackIosRoundedIcon />
         </IconButton>
-        <strong>
+        <strong className="flex items-center">
           {currentSlideNumber} / {totalSlides}
         </strong>
         <IconButton onClick={handleForward} disabled={Boolean(lastSlide)}>

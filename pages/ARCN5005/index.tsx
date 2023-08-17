@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { slides } from "../../lib/DefaultSlides/arcn5005Slides";
+import { slides } from "../../lib/ARCN5005/slides";
 // import { slides } from "@/lib/DefaultSlides";
 
 // export default function Header({ theme }): ReactElement<{ theme: ThemeNames }> {
