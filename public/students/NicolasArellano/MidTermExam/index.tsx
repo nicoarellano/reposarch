@@ -1,3 +1,8 @@
 export default function NaMte() {
-  return <iframe src="./slides/Map/map.html" className="grow" />;
+  return (
+    <iframe
+      src="/students/NicolasArellano/MidtermExam/map.html"
+      className="grow"
+    />
+  );
 }
