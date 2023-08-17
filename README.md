@@ -6,7 +6,7 @@
   <a href=https://nicoarellano.github.io/osarchrep/></a>
 </p>
 
-<img src="public/bb.ico">
+<img src="public/images/webbased.png" align="center">
 <h1><img src="public/bb.ico" width="40">Open Source Architectural Representation Course</h1>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
