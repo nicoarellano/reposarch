@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function Presentation() {
-  const photo = "/slides/Presentation/osarchrep.png";
+  const photo = "/images/osarchrep.png";
   const title = "osarchrep";
   return (
     <div className=" flex flex-col items-center justify-center z-50">
