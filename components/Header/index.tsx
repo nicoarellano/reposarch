@@ -1,14 +1,13 @@
 import { useContext, useState } from "react";
 // Context
 import { SlidesContext } from "@/middleware/Slides/context";
-import Hamburger from "hamburger-react";
 
 import Link from "next/link";
 import Logo from "./Logo";
+import LeftSpeedDial from "../SpeedDial";
 
 export default function Header() {
   const { currentSlide } = useContext(SlidesContext)["state"]["slides"];
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
@@ -17,14 +16,9 @@ export default function Header() {
           <Logo />
         </Link>
         <h1 className="flex items-center">{currentSlide.title}</h1>
-        <Hamburger
-          color="black"
-          size={24}
-          rounded={true}
-          toggled={isOpen}
-          toggle={setIsOpen}
-          distance="lg"
-        />
+        <div className="w-90px">
+          <LeftSpeedDial />
+        </div>
       </header>
     </>
   );

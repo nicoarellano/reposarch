@@ -1,6 +1,6 @@
 import { Slides } from "@/types/types";
 import Intro from "../../public/slides/Intro";
-import Presentation from "@/public/slides/Presentation";
+import Presentation from "@/pages/ARCN5005/home";
 
 export const defSlides: Slides = [
   {

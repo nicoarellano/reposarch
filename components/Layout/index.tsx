@@ -35,24 +35,26 @@ export default function Layout({ slides }): ReactElement<Props> {
   }, [slides]);
 
   return (
-    <AppProvider>
-      <Head>
-        <link rel="icon" href={favicon} />
-        <meta name="og:title" content={title} />
-        <meta name="description" content={description} />
-      </Head>
-      {Boolean(route === "/") ? (
-        <div className="flex-col h-screen w-screen flex justify-center items-center">
-          <Box />
-          <Button>Login</Button>
-        </div>
-      ) : (
-        <div className="absolute flex flex-col min-w-full h-screen bg-slate-100 content-between justify-between right-0">
-          <Header />
-          <Body />
-          <Footer slides={slides} />
-        </div>
-      )}
-    </AppProvider>
+    <div className="overflow-hidden">
+      <AppProvider>
+        <Head>
+          <link rel="icon" href={favicon} />
+          <meta name="og:title" content={title} />
+          <meta name="description" content={description} />
+        </Head>
+        {Boolean(route === "/") ? (
+          <div className="flex-col h-screen w-screen flex justify-center items-center">
+            <Box />
+            <Button>Login</Button>
+          </div>
+        ) : (
+          <div className="absolute flex flex-col min-w-full h-screen bg-slate-100 content-between justify-between right-0">
+            <Header />
+            <Body />
+            <Footer slides={slides} />
+          </div>
+        )}
+      </AppProvider>
+    </div>
   );
 }
