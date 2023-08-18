@@ -1,9 +1,9 @@
 import { Slides } from "@/types/types";
 import Intro from "../../public/slides/Intro";
-import Map from "@/public/slides/Map";
-import Carleton from "@/public/slides/Carleton";
-import Downsview from "@/public/slides/Downsview";
-import ICDT from "@/public/slides/ICDT";
+import Map from "@/public/slides/Maplibre";
+import Carleton from "@/public/cims/Carleton";
+import Downsview from "@/public/cims/Downsview";
+import ICDT from "@/public/cims/ICDT";
 
 export const slides: Slides = [
   { id: "cdt", title: "CIMS Digital Twin", slide: Intro() },

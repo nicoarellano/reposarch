@@ -1,4 +1,4 @@
-import { ReactElement, useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 // Context
 import { SlidesContext } from "@/middleware/Slides/context";
 import Hamburger from "hamburger-react";

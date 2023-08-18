@@ -1,10 +1,4 @@
 import { Classes } from "@/types/types";
-//   { title: "Class 01", src: "/ARCN5005/", date: "2023-09-" },
-//   { title: "Class 02", src: "/ARCN5005/", date: "2023-09-" },
-//   { title: "Class 03", src: "/ARCN5005/", date: "2023-09-" },
-//   { title: "Class 04", src: "/ARCN5005/", date: "2023-09-" },
-//   { title: "Class 05", src: "/ARCN5005/", date: "2023-09-" },
-// ];
 
 export const arch5005Classes: Classes = [
   {
