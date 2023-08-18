@@ -10,11 +10,6 @@
         "maptiler_attribution": {
             "attribution": "<a href=\"https://www.maptiler.com/copyright/\" target=\"_blank\">&copy; MapTiler</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>",
             "type": "vector"
-        },
-        "hillshadeSource": {
-            "type": "raster-dem",
-            "url": "./assets/map/terrain/hillshade.json",
-            "tileSize": 256
         }
     },
     "layers": [
@@ -7322,17 +7317,6 @@
             },
             "paint": {
                 "text-color": "rgba(119, 102, 85, 0.69)"
-            }
-        },
-        {
-            "id": "hills",
-            "type": "hillshade",
-            "source": "hillshadeSource",
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "hillshade-shadow-color": "#473B24"
             }
         }
     ],
