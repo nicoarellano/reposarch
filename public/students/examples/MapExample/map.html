@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Midterm exam - Nico Arellano - Airports</title>
+    <meta
+      property="og:description"
+      content="Use extrusions to display buildings' height in 3D."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        width: 100%;
+      }
+      h1 {
+        color: red;
+      }
+    </style>
+        <h3>🔴 = Airport (hover to see description)</h3>
+  <div id="map"></div>
+  <script>
+      const map = new maplibregl.Map({
+          container: 'map',
+          style: "/map-styles/light.json",
+          center: [-75, 45],
+        zoom: 5,
+      });
+
+      var airports = [
+        {
+          code: "YXY",
+          name: "Erik Nielsen Whitehorse",
+          city: "Whitehorse",
+          province: "Yukon",
+          image: "",
+          latitude: 60.716666,
+          longitude: -135.066666,
+        },
+        {
+          code: "YYJ",
+          name: "Victoria International",
+          city: "Victoria",
+          province: "British Columbia",
+          image: "",
+          latitude: 48.65,
+          longitude: -123.433333,
+        },
+        {
+          code: "YYT",
+          name: "St John's Intl",
+          city: "Saint John",
+          province: "Newfoundland and Labrador",
+          image: "",
+          latitude: 47.616666,
+          longitude: -52.75,
+        },
+        {
+          code: "YQX",
+          name: "Gander International",
+          city: "Gander",
+          province: "Newfoundland and Labrador",
+          image: "",
+          latitude: 48.933333,
+          longitude: -54.566666,
+        },
+        {
+          code: "YHZ",
+          name: "Halifax Robert L. Stanfield International",
+          city: "Halifax",
+          province: "Nova Scotia",
+          image: "",
+          latitude: 44.883333,
+          longitude: -63.516666,
+        },
+        {
+          code: "YQM",
+          name: "Moncton/Greater Moncton International",
+          city: "Moncton",
+          province: "New Brunswick",
+          image: "",
+          latitude: 46.116666,
+          longitude: -64.683333,
+        },
+        {
+          code: "NULL",
+          name: "Chicoutimi/St-Honore",
+          city: "Chicoutimi",
+          province: "Quebec",
+          image: "",
+          latitude: 48.516666,
+          longitude: -71.05,
+        },
+        {
+          code: "YQB",
+          name: "Québec City Jean Lesage International Airport",
+          city: "Quebec City",
+          province: "Quebec",
+          image: "",
+          latitude: 46.8,
+          longitude: -71.4,
+        },
+        {
+          code: "YJN",
+          name: "St-Jean",
+          city: "Saint Jean",
+          province: "Quebec",
+          image: "",
+          latitude: 45.283333,
+          longitude: -73.266666,
+        },
+        {
+          code: "YHU",
+          name: "Montréal/St-Hubert",
+          city: "Longueuil",
+          province: "Quebec",
+          image: "",
+          latitude: 45.516666,
+          longitude: -73.416666,
+        },
+        {
+          code: "YUL",
+          name: "Montréal-Pierre Elliott Trudeau International",
+          city: "Dorval",
+          province: "Quebec",
+          image: "",
+          latitude: 45.466666,
+          longitude: -73.733333,
+        },
+        {
+          code: "YOW",
+          name: "Ottawa/Macdonald-Cartier International",
+          city: "Ottawa",
+          province: "Ontario",
+          image:
+            "data:image/jpeg;base64,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",
+          latitude: 45.316666,
+          longitude: -75.666666,
+        },
+        {
+          code: "YOO",
+          name: "Oshawa",
+          city: "Oshawa",
+          province: "Ontario",
+          image: "",
+          latitude: 43.916666,
+          longitude: -78.9,
+        },
+        {
+          code: "YKZ",
+          name: "Toronto/Buttonville Municipal",
+          city: "Markham",
+          province: "Ontario",
+          image: "",
+          latitude: 43.866666,
+          longitude: -79.366666,
+        },
+        {
+          code: "YTZ",
+          name: "Toronto City Centre",
+          city: "Toronto",
+          province: "Ontario",
+          image: "",
+          latitude: 43.627888,
+          longitude: -79.396101,
+        },
+        {
+          code: "YYZ",
+          name: "Toronto Pearson International",
+          city: "Mississauga",
+          province: "Ontario",
+          image:
+            "data:image/jpeg;base64,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",
+          latitude: 43.683333,
+          longitude: -79.633333,
+        },
+        {
+          code: "YHM",
+          name: "Hamilton",
+          city: "Hamilton",
+          province: "Ontario",
+          image: "",
+          latitude: 43.166666,
+          longitude: -79.933333,
+        },
+        {
+          code: "YKF",
+          name: "Kitchener/Waterloo",
+          city: "Waterloo",
+          province: "Ontario",
+          image: "",
+          latitude: 43.45,
+          longitude: -80.383333,
+        },
+        {
+          code: "YXU",
+          name: "London",
+          city: "London",
+          province: "Ontario",
+          image: "",
+          latitude: 43.033333,
+          longitude: -81.15,
+        },
+        {
+          code: "YQG",
+          name: "Windsor",
+          city: "Windsor",
+          province: "Ontario",
+          image: "",
+          latitude: 42.266666,
+          longitude: -82.966666,
+        },
+        {
+          code: "YAM",
+          name: "Sault Ste Marie",
+          city: "Sault Sainte Marie",
+          province: "Ontario",
+          image: "",
+          latitude: 46.483333,
+          longitude: -84.516666,
+        },
+        {
+          code: "YQT",
+          name: "Thunder Bay",
+          city: "Thunder Bay",
+          province: "Ontario",
+          image: "",
+          latitude: 48.366666,
+          longitude: -89.316666,
+        },
+        {
+          code: "NULL",
+          name: "Winnipeg/St Andrews",
+          city: "Winnipeg",
+          province: "Manitoba",
+          image: "",
+          latitude: 50.05,
+          longitude: -97.016666,
+        },
+        {
+          code: "YWG",
+          name: "Winnipeg James Armstrong Richardson International",
+          city: "Winnipeg",
+          province: "Manitoba",
+          image: "",
+          latitude: 49.916666,
+          longitude: -97.25,
+        },
+        {
+          code: "YQR",
+          name: "Regina International",
+          city: "Regina",
+          province: "Saskatchewan",
+          image: "",
+          latitude: 50.433333,
+          longitude: -104.666666,
+        },
+        {
+          code: "YXE",
+          name: "Saskatoon John G. Diefenbaker International",
+          city: "Saskatoon",
+          province: "Saskatchewan",
+          image: "",
+          latitude: 52.166666,
+          longitude: -106.7,
+        },
+        {
+          code: "YMM",
+          name: "Fort McMurray",
+          city: "Fort McMurray",
+          province: "Alberta",
+          image: "",
+          latitude: 56.65,
+          longitude: -111.216666,
+        },
+        {
+          code: "YXD",
+          name: "Edmonton City Centre (Blatchford Field)",
+          city: "Edmonton",
+          province: "Alberta",
+          image: "",
+          latitude: 53.566666,
+          longitude: -113.516666,
+        },
+        {
+          code: "NULL",
+          name: "Edmonton/Villeneuve",
+          city: "Saint Albert",
+          province: "Alberta",
+          image: "",
+          latitude: 53.666666,
+          longitude: -113.85,
+        },
+        {
+          code: "YEG",
+          name: "Edmonton Intl",
+          city: "Edmonton",
+          province: "Alberta",
+          image: "",
+          latitude: 53.316666,
+          longitude: -113.583333,
+        },
+        {
+          code: "YZF",
+          name: "Yellowknife",
+          city: "Yellowknife",
+          province: "Northwest Territories",
+          image: "",
+          latitude: 62.466666,
+          longitude: -114.433333,
+        },
+        {
+          code: "YYC",
+          name: "Calgary International",
+          city: "Calgary",
+          province: "Alberta",
+          image: "",
+          latitude: 51.116666,
+          longitude: -114.016666,
+        },
+        {
+          code: "NULL",
+          name: "Calgary/Springbank",
+          city: "Calgary",
+          province: "Alberta",
+          image: "",
+          latitude: 51.1,
+          longitude: -114.366666,
+        },
+        {
+          code: "YXS",
+          name: "Prince George",
+          city: "Prince George",
+          province: "British Columbia",
+          image: "",
+          latitude: 53.883333,
+          longitude: -122.683333,
+        },
+        {
+          code: "YLW",
+          name: "Kelowna",
+          city: "Kelowna",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.95,
+          longitude: -119.383333,
+        },
+        {
+          code: "YXX",
+          name: "Abbotsford",
+          city: "Abbotsford",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.033333,
+          longitude: -122.366666,
+        },
+        {
+          code: "YLY",
+          name: "Langley",
+          city: "Langley",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.1,
+          longitude: -122.616666,
+        },
+        {
+          code: "CXH",
+          name: "Vancouver Harbour",
+          city: "Vancouver",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.283333,
+          longitude: -123.1,
+        },
+        {
+          code: "YVR",
+          name: "Vancouver International",
+          city: "Richmond",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.2,
+          longitude: -123.183333,
+        },
+        {
+          code: "YPK",
+          name: "Pitt Meadows",
+          city: "Pitt Meadows",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.2,
+          longitude: -122.7,
+        },
+        {
+          code: "YDT",
+          name: "Boundary Bay",
+          city: "Ladner",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.066666,
+          longitude: -123,
+        },
+        {
+          code: "YBL",
+          name: "Campbell River",
+          city: "Campbell River",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.95,
+          longitude: -125.266666,
+        },
+        {
+          code: "YCD",
+          name: "Nanaimo",
+          city: "Nanaimo",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.05,
+          longitude: -123.866666,
+        },
+        {
+          code: "YWH",
+          name: "Victoria Harbour",
+          city: "Victoria",
+          province: "British Columbia",
+          image: "",
+          latitude: 48.416666,
+          longitude: -123.366666,
+        },
+        {
+          code: "YYF",
+          name: "Penticton",
+          city: "Penticton",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.466666,
+          longitude: -119.6,
+        },
+        {
+          code: "YCG",
+          name: "Castlegar",
+          city: "Castlegar",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.3,
+          longitude: -117.633333,
+        },
+        {
+          code: "YPR",
+          name: "Prince Rupert",
+          city: "Prince Rupert",
+          province: "British Columbia",
+          image: "",
+          latitude: 54.283333,
+          longitude: -130.45,
+        },
+        {
+          code: "YXT",
+          name: "Terrace",
+          city: "Terrace",
+          province: "British Columbia",
+          image: "",
+          latitude: 54.466666,
+          longitude: -128.583333,
+        },
+        {
+          code: "YZT",
+          name: "Port Hardy",
+          city: "Port Hardy",
+          province: "British Columbia",
+          image: "",
+          latitude: 50.683333,
+          longitude: -127.366666,
+        },
+        {
+          code: "YYD",
+          name: "Smithers",
+          city: "Smithers",
+          province: "British Columbia",
+          image: "",
+          latitude: 54.816666,
+          longitude: -127.183333,
+        },
+        {
+          code: "YVQ",
+          name: "Norman Wells",
+          city: "Norman Wells",
+          province: "Northwest Territories",
+          image: "",
+          latitude: 65.283333,
+          longitude: -126.8,
+        },
+        {
+          code: "YWL",
+          name: "Williams Lake",
+          city: "Williams Lake",
+          province: "British Columbia",
+          image: "",
+          latitude: 52.183333,
+          longitude: -122.05,
+        },
+        {
+          code: "YXJ",
+          name: "Fort St John",
+          city: "Fort Saint John",
+          province: "British Columbia",
+          image: "",
+          latitude: 56.233333,
+          longitude: -120.733333,
+        },
+        {
+          code: "YQU",
+          name: "Grande Prairie",
+          city: "Grande Prairie",
+          province: "Alberta",
+          image: "",
+          latitude: 55.183333,
+          longitude: -118.883333,
+        },
+        {
+          code: "YPE",
+          name: "Peace River",
+          city: "Peace River",
+          province: "Alberta",
+          image: "",
+          latitude: 56.233333,
+          longitude: -117.45,
+        },
+        {
+          code: "YYE",
+          name: "Fort Nelson",
+          city: "Fort Nelson",
+          province: "British Columbia",
+          image: "",
+          latitude: 58.833333,
+          longitude: -122.6,
+        },
+        {
+          code: "YKA",
+          name: "Kamloops",
+          city: "Kamloops",
+          province: "British Columbia",
+          image: "",
+          latitude: 50.7,
+          longitude: -120.45,
+        },
+        {
+          code: "YXC",
+          name: "Cranbrook/Canadian Rockies",
+          city: "Cranbrook",
+          province: "British Columbia",
+          image: "",
+          latitude: 49.616666,
+          longitude: -115.783333,
+        },
+        {
+          code: "YQL",
+          name: "Lethbridge",
+          city: "Lethbridge",
+          province: "Alberta",
+          image: "",
+          latitude: 49.633333,
+          longitude: -112.8,
+        },
+        {
+          code: "YXH",
+          name: "Medicine Hat",
+          city: "Medicine Hat",
+          province: "Alberta",
+          image: "",
+          latitude: 50.016666,
+          longitude: -110.716666,
+        },
+        {
+          code: "YZU",
+          name: "Whitecourt",
+          city: "Whitecourt",
+          province: "Alberta",
+          image: "",
+          latitude: 54.133333,
+          longitude: -115.783333,
+        },
+        {
+          code: "YQF",
+          name: "Red Deer Regional",
+          city: "Red Deer",
+          province: "Alberta",
+          image: "",
+          latitude: 52.166666,
+          longitude: -113.883333,
+        },
+        {
+          code: "YLL",
+          name: "Lloydminster",
+          city: "Lloydminster",
+          province: "Alberta",
+          image: "",
+          latitude: 53.316666,
+          longitude: -110.066666,
+        },
+        {
+          code: "YPA",
+          name: "Prince Albert (Glass Field)",
+          city: "Prince Albert",
+          province: "Saskatchewan",
+          image: "",
+          latitude: 53.216666,
+          longitude: -105.666666,
+        },
+        {
+          code: "YVC",
+          name: "La Ronge (Barber Field)",
+          city: "La Ronge",
+          province: "Saskatchewan",
+          image: "",
+          latitude: 55.15,
+          longitude: -105.266666,
+        },
+        {
+          code: "YQK",
+          name: "Kenora",
+          city: "Kenora",
+          province: "Ontario",
+          image: "",
+          latitude: 49.783333,
+          longitude: -94.366666,
+        },
+        {
+          code: "YXL",
+          name: "Sioux Lookout",
+          city: "Sioux Lookout",
+          province: "Ontario",
+          image: "",
+          latitude: 50.116666,
+          longitude: -91.9,
+        },
+        {
+          code: "YTH",
+          name: "Thompson",
+          city: "Thompson",
+          province: "Manitoba",
+          image: "",
+          latitude: 55.8,
+          longitude: -97.866666,
+        },
+        {
+          code: "YYQ",
+          name: "Churchill",
+          city: "Churchill",
+          province: "Manitoba",
+          image: "",
+          latitude: 58.733333,
+          longitude: -94.066666,
+        },
+        {
+          code: "YBR",
+          name: "Brandon Municipal",
+          city: "Brandon",
+          province: "Manitoba",
+          image: "",
+          latitude: 49.916666,
+          longitude: -99.95,
+        },
+        {
+          code: "YOJ",
+          name: "High Level",
+          city: "High Level",
+          province: "Alberta",
+          image: "",
+          latitude: 58.616666,
+          longitude: -117.166666,
+        },
+        {
+          code: "YCM",
+          name: "St. Catharines Niagara District",
+          city: "Niagra-on-the-lake",
+          province: "Ontario",
+          image: "",
+          latitude: 43.191667,
+          longitude: -79.171111,
+        },
+        {
+          code: "YWK",
+          name: "Wabush",
+          city: "Wabush",
+          province: "Newfoundland and Labrador",
+          image: "",
+          latitude: 52.916666,
+          longitude: -66.866666,
+        },
+        {
+          code: "YDF",
+          name: "Deer Lake",
+          city: "Deer Lake",
+          province: "Newfoundland and Labrador",
+          image: "",
+          latitude: 49.216666,
+          longitude: -57.383333,
+        },
+        {
+          code: "YYG",
+          name: "Charlottetown",
+          city: "Charlottetown",
+          province: "Prince Edward Island",
+          image: "",
+          latitude: 46.283333,
+          longitude: -63.116666,
+        },
+        {
+          code: "YZV",
+          name: "Sept-Iles",
+          city: "Seven Islands",
+          province: "Quebec",
+          image: "",
+          latitude: 50.216666,
+          longitude: -66.266666,
+        },
+        {
+          code: "YSJ",
+          name: "Saint John",
+          city: "Saint John",
+          province: "New Brunswick",
+          image: "",
+          latitude: 45.316666,
+          longitude: -65.883333,
+        },
+        {
+          code: "YEV",
+          name: "Inuvik (Mike Zubko)",
+          city: "Inuvik",
+          province: "Northwest Territories",
+          image: "",
+          latitude: 68.3,
+          longitude: -133.483333,
+        },
+        {
+          code: "YFB",
+          name: "Iqaluit",
+          city: "Iqaluit",
+          province: "Nunavut",
+          image: "",
+          latitude: 63.75,
+          longitude: -68.55,
+        },
+        {
+          code: "YVP",
+          name: "Kuujjuaq",
+          city: "Kuujjuaq",
+          province: "Quebec",
+          image: "",
+          latitude: 58.1,
+          longitude: -68.433333,
+        },
+        {
+          code: "YGL",
+          name: "La Grande Riviere",
+          city: "Radisson",
+          province: "Quebec",
+          image: "",
+          latitude: 53.633333,
+          longitude: -77.7,
+        },
+        {
+          code: "YYY",
+          name: "Mont-Joli",
+          city: "Mont Jolie",
+          province: "Quebec",
+          image: "",
+          latitude: 48.616666,
+          longitude: -68.2,
+        },
+        {
+          code: "YVO",
+          name: "Val-d'Or",
+          city: "Bourlamaque",
+          province: "Quebec",
+          image: "",
+          latitude: 48.05,
+          longitude: -77.783333,
+        },
+        {
+          code: "YUY",
+          name: "Rouyn-Noranda",
+          city: "McWatters",
+          province: "Quebec",
+          image: "",
+          latitude: 48.2,
+          longitude: -78.833333,
+        },
+        {
+          code: "YTS",
+          name: "Timmins Victor M. Power",
+          city: "Timmins",
+          province: "Ontario",
+          image: "",
+          latitude: 48.566666,
+          longitude: -81.383333,
+        },
+        {
+          code: "YSB",
+          name: "Sudbury",
+          city: "Falconbridge",
+          province: "Ontario",
+          image: "",
+          latitude: 46.633333,
+          longitude: -80.8,
+        },
+        {
+          code: "YRT",
+          name: "Rankin Inlet",
+          city: "Rankin Inlet",
+          province: "Nunavut",
+          image: "",
+          latitude: 62.816666,
+          longitude: -92.116666,
+        },
+        {
+          code: "YGK",
+          name: "Kingston",
+          city: "Kingston",
+          province: "Ontario",
+          image: "",
+          latitude: 44.233333,
+          longitude: -76.6,
+        },
+        {
+          code: "YND",
+          name: "Ottawa/Gatineau",
+          city: "Gatineau",
+          province: "Quebec",
+          image: "",
+          latitude: 45.516666,
+          longitude: -75.566666,
+        },
+        {
+          code: "YYB",
+          name: "North Bay",
+          city: "North Bay",
+          province: "Ontario",
+          image: "",
+          latitude: 46.366666,
+          longitude: -79.416666,
+        },
+        {
+          code: "YGR",
+          name: "Iles-de-la-Madeleine",
+          city: "Iles-de-la-Madeleine",
+          province: "Quebec",
+          image: "",
+          latitude: 47.416666,
+          longitude: -61.783333,
+        },
+        {
+          code: "YMX",
+          name: "Montreal (Mirabel)",
+          city: "Mirabel",
+          province: "Quebec",
+          image:
+            "data:image/jpeg;base64,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",
+          latitude: 45.683333,
+          longitude: -74.033333,
+        },
+        {
+          code: "YFC",
+          name: "Fredericton International",
+          city: "Fredericton",
+          province: "New Brunswick",
+          image: "",
+          latitude: 45.866666,
+          longitude: -66.533333,
+        },
+      ];
+
+      var airporsFeatureCollection = [];
+
+      airports.forEach((airport) => {
+        const image =
+          airport.image === ""
+            ? "https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg"
+            : airport.image;
+
+        var airportFeature = {
+          code: `${airport.code}`,
+          type: "Feature",
+          properties: {
+            description: `<h1>${airport.name}</h1><ul><li>Code: ${airport.code}</li><li>Province: ${airport.province}</li><li>City: ${airport.city}</li></ul><img src="${image}" alt="${airport.code}" width=200px>`,
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [airport.longitude, airport.latitude],
+          },
+        };
+
+        airporsFeatureCollection.push(airportFeature);
+      });
+  
+      map.on('load', () => {
+        map.addSource("places", {
+          type: "geojson",
+          data: {
+            type: "FeatureCollection",
+            features: airporsFeatureCollection,
+          },
+        });
+  
+                  // Add a layer showing the places.
+                  map.addLayer({
+          id: "places",
+          type: "circle",
+          source: "places",
+          paint: {
+            "circle-color": "red",
+            "circle-radius": 6,
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "yellow",
+          },
+        });
+  
+          // Create a popup, but don't add it to the map yet.
+          const popup = new maplibregl.Popup({
+              closeButton: false,
+              closeOnClick: false
+          });
+  
+          map.on('mouseenter', 'places', (e) => {
+              // Change the cursor style as a UI indicator.
+              map.getCanvas().style.cursor = 'pointer';
+  
+              const coordinates = e.features[0].geometry.coordinates.slice();
+              const description = e.features[0].properties.description;
+  
+              // Ensure that if the map is zoomed out such that multiple
+              // copies of the feature are visible, the popup appears
+              // over the copy being pointed to.
+              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+              }
+  
+              // Populate the popup and set its coordinates
+              // based on the feature found.
+              popup.setLngLat(coordinates).setHTML(description).addTo(map);
+          });
+  
+          map.on('mouseleave', 'places', () => {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+          });
+      });
+  </script>
+  </body>
+  </html>
+  

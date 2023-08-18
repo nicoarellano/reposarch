@@ -2,10 +2,10 @@ import { Slides } from "@/types/types";
 
 import Presentation from "../../public/slides/Presentation";
 import TOC from "@/public/slides/TOC";
-import Map from "@/public/slides/Map";
-import MapExample from "@/public/students/NicolasArellano/MapExample";
-import FinalExam from "@/public/students/NicolasArellano/FinalExam";
-import ThreeExample from "@/public/students/NicolasArellano/ThreeExample";
+import MapExample from "@/public/students/examples/MapExample";
+import FinalExam from "@/public/students/examples/FinalExam";
+import ThreeExample from "@/public/students/examples/ThreeExample";
+import IfcExample from "@/public/students/examples/IfcJsExample";
 
 export const slides: Slides = [
   {
@@ -14,8 +14,8 @@ export const slides: Slides = [
     slide: Presentation(),
   },
   { id: "toc", title: "Table of Content", slide: TOC() },
-  { id: "map", title: "Map - Maplibre", slide: Map() },
   { id: "map-example", title: "Map Example ", slide: MapExample() },
   { id: "three-example", title: "Three Example ", slide: ThreeExample() },
+  { id: "ifcjs-example", title: "IFC.js Example ", slide: IfcExample() },
   { id: "final", title: "Final Exam - Example", slide: FinalExam() },
 ];

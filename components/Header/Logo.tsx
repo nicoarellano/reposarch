@@ -7,7 +7,7 @@ export default function Logo() {
   // const { title, logo } = ThemeAttributes(theme)["themeInfo"];
 
   const favicon = "/bb.ico";
-  const title = "osarchrep";
+  const title = "reposarch";
 
   const router = useRouter();
   return (
