@@ -1,15 +1,24 @@
-import { useContext, ReactElement, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import Fade from "@mui/material/Fade";
 
 import { SlidesContext } from "@/middleware/Slides/context";
 
 export default function Body() {
-  const { currentSlide } = useContext(SlidesContext)["state"]["slides"];
+  const { currentSlide, currentSlideNumber } =
+    useContext(SlidesContext)["state"]["slides"];
+  const [appear, setAppear] = useState(true);
+
+  useEffect(() => {
+    setAppear(true);
+  }, [currentSlide]);
 
   return (
     <>
-      <section className=" flex bg-slate-100 grow justify-center">
-        {currentSlide.slide}
-      </section>
+      <Fade in={appear} mountOnEnter unmountOnExit>
+        <section className=" flex bg-slate-100 grow justify-center overflow-hidden">
+          {currentSlide.slide}
+        </section>
+      </Fade>
     </>
   );
 }
