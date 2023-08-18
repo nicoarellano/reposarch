@@ -16,18 +16,10 @@ export default function Footer({ slides }): ReactElement<Props> {
   const totalSlides: number = slides.length - 1;
 
   const [currentSlideNumber, setCurrenSliderNuber] = useState(0);
-  const [firstSlide, setFirstSlide] = useState(!Boolean(currentSlideNumber));
-  const [lastSlide, setLastSlide] = useState(
-    currentSlideNumber === totalSlides
-  );
-
-  useEffect(() => {
-    setFirstSlide(!Boolean(currentSlideNumber));
-    setLastSlide(currentSlideNumber === totalSlides);
-  }, [currentSlideNumber, totalSlides]);
 
   const handleBack = () => {
-    const previousNumber = firstSlide ? 0 : currentSlideNumber - 1;
+    const previousNumber =
+      currentSlideNumber === 0 ? 0 : currentSlideNumber - 1;
     setCurrenSliderNuber(previousNumber);
     slidesDispatch({
       type: "PREVIOUS_SLIDE",
@@ -39,7 +31,8 @@ export default function Footer({ slides }): ReactElement<Props> {
   };
 
   const handleForward = () => {
-    const nextNumber = lastSlide ? totalSlides : currentSlideNumber + 1;
+    const nextNumber =
+      currentSlideNumber === totalSlides ? totalSlides : currentSlideNumber + 1;
     setCurrenSliderNuber(nextNumber);
     slidesDispatch({
       type: "NEXT_SLIDE",
@@ -49,6 +42,25 @@ export default function Footer({ slides }): ReactElement<Props> {
       },
     });
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") {
+        handleBack();
+      } else if (event.key === "ArrowRight" || event.key === " ") {
+        handleForward();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [currentSlideNumber, totalSlides]);
+
+  const firstSlide = currentSlideNumber === 0;
+  const lastSlide = currentSlideNumber === totalSlides;
 
   return (
     <>

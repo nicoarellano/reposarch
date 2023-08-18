@@ -2,10 +2,10 @@ import { Slides } from "@/types/types";
 
 import Presentation from "../../public/slides/Presentation";
 import TOC from "@/public/slides/TOC";
-import MapExample from "@/public/students/examples/MapExample";
-import FinalExam from "@/public/students/examples/FinalExam";
-import ThreeExample from "@/public/students/examples/ThreeExample";
-import IfcExample from "@/public/students/examples/IfcJsExample";
+import MapExample from "@/public/slides/examples/MapExample";
+import FinalExam from "@/public/slides/examples/FinalExam";
+import ThreeExample from "@/public/slides/examples/ThreeExample";
+import IfcExample from "@/public/slides/examples/IfcJsExample";
 
 export const slides: Slides = [
   {
