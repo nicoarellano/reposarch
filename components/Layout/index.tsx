@@ -11,14 +11,13 @@ import Header from "../Header";
 import { Slides } from "@/types/types";
 import Footer from "../Footer";
 import Body from "../Body";
-import { defSlides } from "@/lib/DefaultSlides";
 
 interface Props {
   slides: Slides;
 }
 
 export default function Layout({ slides }): ReactElement<Props> {
-  const favicon = "./bb.ico";
+  const favicon = "/bb.ico";
   const title = "Open Source Architecture Representation";
   const description = "Open Source Architecture Representation";
 
