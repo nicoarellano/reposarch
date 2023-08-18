@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://cims.carleton.ca/#/home">CIMS lab</a>
   |
-  <a href=https://osarchrep.vercel.app>OSARCHREP</a>
+  <a href=https://reposarch.vercel.app>REPOSARCH</a>
   |
-  <a href=https://nicoarellano.github.io/osarchrep/></a>
+  <a href=https://nicoarellano.github.io/reposarch/></a>
 </p>
 
 <img src="public/images/webbased.png" align="center" width="200">
