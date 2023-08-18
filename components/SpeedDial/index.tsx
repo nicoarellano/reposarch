@@ -58,6 +58,12 @@ export default function BasicSpeedDial() {
           position: "absolute",
           bottom: 16,
           right: 16,
+          "& .MuiFab-primary": {
+            backgroundColor: "#eee",
+            color: "white",
+            boxShadow: "none",
+            "&:hover": { backgroundColor: "#ddd" },
+          },
         }}
         icon={
           <SpeedDialIcon
