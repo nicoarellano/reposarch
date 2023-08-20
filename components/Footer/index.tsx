@@ -12,10 +12,16 @@ import { Slides } from "@/types/types";
 interface Props {
   slides: Slides;
 }
-export default function Footer(): ReactElement<Props> {
-  // const slidesDispatch = useContext(SlidesContext)["dispatch"];
-  const { slides } = useContext(SlidesContext)["state"]["slides"];
-  const totalSlides: number = slides.length - 1;
+export default function Footer(slides): ReactElement<Props> {
+  const slidesDispatch = useContext(SlidesContext)["dispatch"];
+
+  const [totalSlides, setTotalSlides] = useState(0);
+
+  useEffect(() => {
+    if (slides) setTotalSlides(slides.lenght - 1);
+  }, [slides]);
+
+  console.log(slides, totalSlides);
 
   const [currentSlideNumber, setCurrenSliderNuber] = useState(0);
 
@@ -23,26 +29,26 @@ export default function Footer(): ReactElement<Props> {
     const previousNumber =
       currentSlideNumber === 0 ? 0 : currentSlideNumber - 1;
     setCurrenSliderNuber(previousNumber);
-    // slidesDispatch({
-    //   type: "PREVIOUS_SLIDE",
-    //   payload: {
-    //     currentSlideNumber: previousNumber,
-    //     currentSlide: slides[previousNumber],
-    //   },
-    // });
+    slidesDispatch({
+      type: "PREVIOUS_SLIDE",
+      payload: {
+        currentSlideNumber: previousNumber,
+        currentSlide: slides[previousNumber],
+      },
+    });
   };
 
   const handleForward = () => {
     const nextNumber =
       currentSlideNumber === totalSlides ? totalSlides : currentSlideNumber + 1;
     setCurrenSliderNuber(nextNumber);
-    // slidesDispatch({
-    //   type: "NEXT_SLIDE",
-    //   payload: {
-    //     currentSlideNumber: nextNumber,
-    //     currentSlide: slides[nextNumber],
-    //   },
-    // });
+    slidesDispatch({
+      type: "NEXT_SLIDE",
+      payload: {
+        currentSlideNumber: nextNumber,
+        currentSlide: slides[nextNumber],
+      },
+    });
   };
 
   useEffect(() => {
@@ -65,7 +71,7 @@ export default function Footer(): ReactElement<Props> {
   const lastSlide = currentSlideNumber === totalSlides;
 
   return (
-    <footer className="z-20 flex flex-row min-w-full content-between justify-between p-5 bottom-0 ">
+    <footer className="z-50 flex flex-row min-w-full content-between justify-between p-5 bottom-0 absolute bg-slate-100">
       <IconButton onClick={handleBack} disabled={Boolean(firstSlide)}>
         <ArrowBackIosRoundedIcon />
       </IconButton>

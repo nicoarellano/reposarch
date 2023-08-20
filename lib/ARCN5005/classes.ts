@@ -1,12 +1,13 @@
 import { Classes } from "@/types/types";
+import dayjs from "dayjs";
 
-const initialDate = new Date();
+const initialDate = dayjs("2023-09-07");
 
 export const arch5005Classes: Classes = [
   {
     title: "Week 01 - The art of computer graphics",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate,
     topics: [
       "1. Overview of the course",
       "2. How to use this Notion Page",
@@ -20,7 +21,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 02 - Digitalization of architectural representation",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(1, "week"),
     topics: [
       "1. Overview to digital tools for architects",
       "2. Digital turns",
@@ -32,7 +33,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 03 - Coding and scripting for architects",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(2, "week"),
     topics: [
       "1. Coding, programming, scripting",
       "2. Close-sourced scripting",
@@ -44,7 +45,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 04 - Open source software",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(3, "week"),
     topics: [
       "1. Open source. History of open-source",
       "- FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
@@ -58,7 +59,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 05 - Internet",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(4, "week"),
     topics: [
       "1. History of internet - Guess lecturer: Julie Ivanoff (?)",
       "2. History of Hackerdom",
@@ -70,14 +71,14 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 06 - Collaboration",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(5, "week"),
     topics: ["1. Git", "2. Github", "🖥️ LAB 5: Web based BIM GIS software"],
   },
 
   {
     title: "Week 07 - BIM",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(6, "week"),
     topics: [
       "1. What is BIM? , Open and Closed BIM",
       "2. ClosedBIM: Revit, Archicad",
@@ -92,7 +93,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 08 - Web based 3D graphics",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(7, "week"),
     topics: [
       "1. Web based 3D graphics",
       "2. WebGL",
@@ -105,7 +106,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 09 - IFC.js",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(8, "week"),
     topics: [
       "1. Introduction to web-based open source tools for architects",
       "🖥️ LAB 8: IFC.js",
@@ -115,7 +116,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 10 - OS GIS",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(9, "week"),
     topics: [
       "1. Geospatial Information Systems",
       "2. Coordination Systems",
@@ -130,7 +131,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 11 - Going online “hello world”",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(10, "week"),
     topics: [
       "1. Deploy your software",
       "- Github pages",
@@ -141,7 +142,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 12 - Scalability and maintainability",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(11, "week"),
     topics: [
       "1. Frontend frameworks: Vue, Svelte, Angular React.js + Typescript",
       "🖥️ LAB11 : Web based BIM GIS software",
@@ -151,7 +152,7 @@ export const arch5005Classes: Classes = [
   {
     title: "Week 13",
     src: "/ARCN5005/",
-    date: "2023-09-",
+    date: initialDate.add(12, "week"),
     topics: ["🏁 Final presentations (Hackathon)"],
   },
 ];

@@ -10,32 +10,49 @@ import CloseIcon from "@mui/icons-material/CloseRounded";
 import HomeIcon from "@mui/icons-material/HomeRounded";
 import TocIcon from "@mui/icons-material/ListAltRounded";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
+import Link from "next/link";
 
 export default function BasicSpeedDial() {
   const actions = [
     {
-      icon: <HomeIcon />,
+      icon: (
+        <Link href={"/arcn5005"}>
+          <HomeIcon />
+        </Link>
+      ),
       name: "Home",
       onclick: () => {
         console.log("GO TO HOME!");
       },
     },
     {
-      icon: <TocIcon />,
+      icon: (
+        <Link href={"/arcn5005/toc"}>
+          <TocIcon />
+        </Link>
+      ),
       name: "Table of Content",
       onclick: () => {
         console.log("GO TO TOC!");
       },
     },
     {
-      icon: <InfoIcon />,
+      icon: (
+        <Link href={"/arcn5005/course-description"}>
+          <InfoIcon />
+        </Link>
+      ),
       name: "Course Description",
       onclick: () => {
         console.log("GO TO COURSE DESCRIPTION!");
       },
     },
     {
-      icon: <CalendarIcon />,
+      icon: (
+        <Link href={"/arcn5005/calendar"}>
+          <CalendarIcon />
+        </Link>
+      ),
       name: "Calendar",
       onclick: () => {
         console.log("GO TO CALENDAR!");
@@ -51,11 +68,10 @@ export default function BasicSpeedDial() {
         transform: "translateZ(0px)",
         flexGrow: 1,
         position: "absolute",
-        zIndex: 10,
       }}
     >
       <SpeedDial
-        ariaLabel="SpeedDial basic example"
+        ariaLabel="SpeedDial"
         sx={{
           position: "absolute",
           bottom: 16,

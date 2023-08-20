@@ -60,7 +60,9 @@ export default function NestedParentList({ list }: Props) {
                 <SlideshowIcon />
               </IconButton>
             </ListItemIcon>
-            <ListItemText primary={`${item.title} (${item.date})`} />
+            <ListItemText
+              primary={`${item.title} (${item.date.format("YYYY/MM/DD")})`}
+            />
             {open[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={open[index]} timeout="auto" unmountOnExit>
