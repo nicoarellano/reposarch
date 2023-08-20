@@ -1,3 +1,4 @@
+"use client";
 import { useContext, useState } from "react";
 // Context
 import { SlidesContext } from "@/middleware/Slides/context";
@@ -11,7 +12,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex flex-row justify-between min-w-max z-50 m-5">
+      <header className="flex flex-row justify-between min-w-max z-10 m-5">
         <Link href="/">
           <Logo />
         </Link>

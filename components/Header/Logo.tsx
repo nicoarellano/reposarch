@@ -1,6 +1,5 @@
-// Import Next
 import Image from "next/image";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 // export default function Logo({ theme }): ReactElement<{ theme: ThemeNames }> {
 export default function Logo() {
@@ -9,13 +8,13 @@ export default function Logo() {
   const favicon = "/bb.ico";
   const title = "reposarch";
 
-  const router = useRouter();
+  // const router = useRouter();
   return (
     <div
       title={title}
       className="pointer-events-auto"
       onClick={() => {
-        router.reload();
+        // router.reload();
       }}
     >
       <Image priority src={favicon} height={55} width={55} alt={title} />

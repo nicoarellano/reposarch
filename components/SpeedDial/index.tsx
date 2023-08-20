@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
@@ -50,6 +51,7 @@ export default function BasicSpeedDial() {
         transform: "translateZ(0px)",
         flexGrow: 1,
         position: "absolute",
+        zIndex: 10,
       }}
     >
       <SpeedDial

@@ -1,5 +1,5 @@
 import { Slides } from "@/types/types";
-import Intro from "../../public/slides/Intro";
+import Intro from "../../app/home";
 import Map from "@/public/slides/Maplibre";
 import Carleton from "@/public/cims/Carleton";
 import Downsview from "@/public/cims/Downsview";

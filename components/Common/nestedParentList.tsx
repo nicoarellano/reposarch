@@ -16,8 +16,10 @@ interface Props {
   list: Classes;
 }
 
+type OpenArray = boolean[];
+
 export default function NestedParentList({ list }: Props) {
-  const [open, setOpen] = useState([]);
+  const [open, setOpen] = useState<OpenArray>([]);
 
   const handleClick = (index: number) => {
     const newOpen = [...open];
@@ -28,7 +30,8 @@ export default function NestedParentList({ list }: Props) {
   return (
     <List
       sx={{
-        width: "100%",
+        width: "60%",
+        height: "100%",
         minWidth: 800,
         bgcolor: "background.paper",
         maxHeight: 500,
