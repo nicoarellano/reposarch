@@ -10,14 +10,16 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ScrollableList from "./scrollableList";
 import { IconButton } from "@mui/material";
-import { Classes } from "@/types/types";
+import { Classes } from "../../types/types";
 
 interface Props {
   list: Classes;
 }
 
+type OpenArray = boolean[];
+
 export default function NestedParentList({ list }: Props) {
-  const [open, setOpen] = useState([]);
+  const [open, setOpen] = useState<OpenArray>([]);
 
   const handleClick = (index: number) => {
     const newOpen = [...open];
@@ -28,7 +30,8 @@ export default function NestedParentList({ list }: Props) {
   return (
     <List
       sx={{
-        width: "100%",
+        width: "60%",
+        height: "100%",
         minWidth: 800,
         bgcolor: "background.paper",
         maxHeight: 500,
@@ -57,7 +60,9 @@ export default function NestedParentList({ list }: Props) {
                 <SlideshowIcon />
               </IconButton>
             </ListItemIcon>
-            <ListItemText primary={`${item.title} (${item.date})`} />
+            <ListItemText
+              primary={`${item.title} (${item.date.format("YYYY/MM/DD")})`}
+            />
             {open[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={open[index]} timeout="auto" unmountOnExit>

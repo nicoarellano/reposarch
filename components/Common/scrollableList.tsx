@@ -1,9 +1,9 @@
-import { Topics } from "@/types/types";
 import Box from "@mui/material/Box";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList, ListChildComponentProps } from "react-window";
+import { Topics } from "../../types/types";
 
 function RenderRow(props: ListChildComponentProps) {
   const { index, style, itemList } = props;
@@ -32,15 +32,13 @@ export default function ScrollableList({ itemList }: Props) {
     <Box
       sx={{
         width: "100%",
-        height: 150,
-        maxWidth: 800,
+        height: 200,
         bgcolor: "background.paper",
         overflowY: "auto",
       }}
     >
       <FixedSizeList
-        height={150}
-        width={800}
+        height={200}
         itemSize={46}
         itemCount={itemList.length}
         overscanCount={5}

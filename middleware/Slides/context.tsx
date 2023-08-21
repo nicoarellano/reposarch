@@ -1,3 +1,4 @@
+"use client";
 import {
   FC,
   PropsWithChildren,
@@ -7,8 +8,8 @@ import {
   Dispatch,
 } from "react";
 import { SlidesReducer, SlidesActions, SlidesState } from "./reducer";
-import { Slide, Slides } from "@/types/types";
-import { defSlides } from "@/lib/DefaultSlides";
+import { Slides, Slide } from "../../types/types";
+import { mainSlides } from "../../public/arcn5005/slides";
 
 type InitialStateType = {
   slides: SlidesState;
@@ -16,8 +17,9 @@ type InitialStateType = {
 
 const initialState = {
   slides: {
-    slides: defSlides as Slides,
-    currentSlide: defSlides[0] as Slide,
+    totalSlides: mainSlides.length - 1,
+    slides: mainSlides as Slides,
+    currentSlide: mainSlides[0] as Slide,
     currentSlideNumber: 0 as number,
   },
 };

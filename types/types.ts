@@ -1,3 +1,4 @@
+import { Dayjs } from "dayjs";
 // Interfaces
 export interface Identified {
   _id?: string; //Mongo db id
@@ -8,7 +9,7 @@ export interface Identified {
 export interface Slide {
   id: string;
   title: string;
-  slide: JSX.Element;
+  url: string;
 }
 
 // export interface Topic {
@@ -20,7 +21,7 @@ export interface Class {
   id?: string;
   title: string;
   src: string;
-  date: string;
+  date: Dayjs;
   topics: Topic[];
 }
 

@@ -1,25 +1,27 @@
-import { useContext, useState } from "react";
-// Context
-import { SlidesContext } from "@/middleware/Slides/context";
-
+"use client";
 import Link from "next/link";
 import Logo from "./Logo";
 import LeftSpeedDial from "../SpeedDial";
+import { usePathname } from "next/navigation";
+import { mainSlides } from "../../public/arcn5005/slides";
 
 export default function Header() {
-  const { currentSlide } = useContext(SlidesContext)["state"]["slides"];
+  const path = usePathname();
+
+  const currentSlide = mainSlides.find((slide) => slide.url === path);
+  const slideTitle = currentSlide?.title;
 
   return (
-    <>
-      <header className="flex flex-row justify-between min-w-max z-50 m-5">
+    <nav>
+      <header className="flex flex-row justify-between w-screen z-40 p-6">
         <Link href="/">
           <Logo />
         </Link>
-        <h1 className="flex items-center">{currentSlide.title}</h1>
-        <div className="w-90px">
+        <h1 className="flex items-center">{slideTitle}</h1>
+        <nav className="w-90px z-50">
           <LeftSpeedDial />
-        </div>
+        </nav>
       </header>
-    </>
+    </nav>
   );
 }
