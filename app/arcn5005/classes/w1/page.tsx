@@ -1,7 +1,7 @@
 "use client";
 
-import NestedParentList from "../../../components/Common/nestedParentList";
-import { arcn5005Classes } from "../../../lib/arcn5005/classes";
+import NestedParentList from "../../../../components/Common/nestedParentList";
+import { arcn5005Classes } from "../../../../lib/arcn5005/classes";
 
 export default function TOC() {
   return (

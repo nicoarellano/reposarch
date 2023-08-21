@@ -1,5 +1,5 @@
-import { Classes } from "@/types/types";
 import dayjs from "dayjs";
+import { Classes } from "../../types/types";
 
 const initialDate = dayjs("2023-09-07");
 

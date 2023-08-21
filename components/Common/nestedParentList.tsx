@@ -10,7 +10,7 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ScrollableList from "./scrollableList";
 import { IconButton } from "@mui/material";
-import { Classes } from "@/types/types";
+import { Classes } from "../../types/types";
 
 interface Props {
   list: Classes;

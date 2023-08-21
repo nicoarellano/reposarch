@@ -1,9 +1,9 @@
-import { Topics } from "@/types/types";
 import Box from "@mui/material/Box";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList, ListChildComponentProps } from "react-window";
+import { Topics } from "../../types/types";
 
 function RenderRow(props: ListChildComponentProps) {
   const { index, style, itemList } = props;

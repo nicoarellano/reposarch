@@ -8,8 +8,8 @@ import {
   Dispatch,
 } from "react";
 import { SlidesReducer, SlidesActions, SlidesState } from "./reducer";
-import { Slide, Slides } from "@/types/types";
-import { mainSlides } from "@/lib/arcn5005/slides";
+import { Slides, Slide } from "../../types/types";
+import { mainSlides } from "../../lib/arcn5005/slides";
 
 type InitialStateType = {
   slides: SlidesState;

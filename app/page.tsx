@@ -1,10 +1,10 @@
 "use client";
 
-import Box from "@/components/Common/Box";
-import { mainSlides } from "@/lib/arcn5005/slides";
-import { SlidesContext } from "@/middleware/Slides/context";
 import Link from "next/link";
 import { useContext } from "react";
+import { SlidesContext } from "../middleware/Slides/context";
+import { mainSlides } from "../lib/arcn5005/slides";
+import Box from "../components/Common/Box";
 
 export default function Home() {
   const slidesDispatch = useContext(SlidesContext)["dispatch"];

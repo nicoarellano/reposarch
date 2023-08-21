@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-import { mainSlides } from "@/lib/arcn5005/slides";
 import Stack from "@mui/material/Stack";
 
 import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import { mainSlides } from "../../lib/arcn5005/slides";
 
 export default function Footer() {
   const router = useRouter();

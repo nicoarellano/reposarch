@@ -1,9 +1,8 @@
 "use client";
 
-import Header from "@/components/Header";
-import { AppProvider } from "@/middleware/CombineProviders";
-
-import Footer from "@/components/Footer";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import { AppProvider } from "../../middleware/CombineProviders";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
