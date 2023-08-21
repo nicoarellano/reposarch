@@ -16,8 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className} suppressHydrationWarning={true}>
-        <main className="bg-slate-100 w-screen h-screen">{children}</main>
+        <main className="bg-slate-100">{children}</main>
       </body>
     </html>
   );

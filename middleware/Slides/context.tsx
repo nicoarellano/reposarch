@@ -9,7 +9,7 @@ import {
 } from "react";
 import { SlidesReducer, SlidesActions, SlidesState } from "./reducer";
 import { Slide, Slides } from "@/types/types";
-import { defSlides } from "@/lib/DefaultSlides";
+import { mainSlides } from "@/lib/arcn5005/MainSlides";
 
 type InitialStateType = {
   slides: SlidesState;
@@ -17,8 +17,9 @@ type InitialStateType = {
 
 const initialState = {
   slides: {
-    slides: defSlides as Slides,
-    currentSlide: defSlides[0] as Slide,
+    totalSlides: mainSlides.length - 1,
+    slides: mainSlides as Slides,
+    currentSlide: mainSlides[0] as Slide,
     currentSlideNumber: 0 as number,
   },
 };

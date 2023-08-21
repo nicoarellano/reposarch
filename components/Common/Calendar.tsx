@@ -10,7 +10,7 @@ import { arch5005Classes } from "@/lib/arcn5005/classes";
 
 const classDays: Dayjs[] = arch5005Classes.map((cl) => cl.date);
 
-const initialValue = dayjs("2023-09-01");
+const initialValue = dayjs();
 
 function ServerDay(
   props: PickersDayProps<Dayjs> & { highlightedDays?: Dayjs[] }
@@ -35,7 +35,6 @@ function ServerDay(
         day={day}
         onMouseOver={() => {
           if (isClassDay) {
-            console.log(day.format("YYYY-MM-DD"));
           }
         }}
       />

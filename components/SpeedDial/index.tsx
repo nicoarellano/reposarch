@@ -13,50 +13,46 @@ import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import Link from "next/link";
 
 export default function BasicSpeedDial() {
+  const actionStyle = {
+    backgroundColor: "#f1f1f195",
+    borderRadius: "50px",
+    width: "42px",
+    height: "42px",
+    padding: "10px",
+  };
   const actions = [
     {
       icon: (
         <Link href={"/arcn5005"}>
-          <HomeIcon />
+          <HomeIcon sx={actionStyle} />
         </Link>
       ),
       name: "Home",
-      onclick: () => {
-        console.log("GO TO HOME!");
-      },
-    },
-    {
-      icon: (
-        <Link href={"/arcn5005/toc"}>
-          <TocIcon />
-        </Link>
-      ),
-      name: "Table of Content",
-      onclick: () => {
-        console.log("GO TO TOC!");
-      },
     },
     {
       icon: (
         <Link href={"/arcn5005/course-description"}>
-          <InfoIcon />
+          <InfoIcon sx={actionStyle} />
         </Link>
       ),
       name: "Course Description",
-      onclick: () => {
-        console.log("GO TO COURSE DESCRIPTION!");
-      },
     },
     {
       icon: (
+        <Link href={"/arcn5005/toc"}>
+          <TocIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Table of Content",
+    },
+
+    {
+      icon: (
         <Link href={"/arcn5005/calendar"}>
-          <CalendarIcon />
+          <CalendarIcon sx={actionStyle} />
         </Link>
       ),
       name: "Calendar",
-      onclick: () => {
-        console.log("GO TO CALENDAR!");
-      },
     },
   ];
   const [isOpen, setIsOpen] = useState(false);
@@ -89,7 +85,6 @@ export default function BasicSpeedDial() {
             openIcon={<CloseIcon color="action" />}
           />
         }
-        // <Menu color="action" />
         direction="down"
       >
         {actions.map((action) => (
