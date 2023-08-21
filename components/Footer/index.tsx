@@ -8,7 +8,7 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import { mainSlides } from "../../lib/arcn5005/slides";
+import { mainSlides } from "../../public/arcn5005/slides";
 
 export default function Footer() {
   const router = useRouter();

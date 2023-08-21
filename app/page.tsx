@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { SlidesContext } from "../middleware/Slides/context";
-import { mainSlides } from "../lib/arcn5005/slides";
+import { mainSlides } from "../public/arcn5005/slides";
 import Box from "../components/Common/Box";
 
 export default function Home() {
