@@ -3,12 +3,12 @@ import Link from "next/link";
 import Logo from "./Logo";
 import LeftSpeedDial from "../SpeedDial";
 import { usePathname } from "next/navigation";
-import { mainSlides } from "../../public/arcn5005/slides";
+import { coreSlides } from "../../public/arcn5005/coreSlides";
 
 export default function Header() {
   const path = usePathname();
 
-  const currentSlide = mainSlides.find((slide) => slide.url === path);
+  const currentSlide = coreSlides.find((slide) => slide.url === path);
   const slideTitle = currentSlide?.title;
 
   return (

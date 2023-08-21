@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactElement } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import Stack from "@mui/material/Stack";
@@ -8,24 +8,28 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import { mainSlides } from "../../public/arcn5005/slides";
+import { Slides } from "../../types/types";
 
-export default function Footer() {
+interface Props {
+  slides: Slides;
+}
+
+export default function Footer({ slides }): ReactElement<Props> {
   const router = useRouter();
   const path = usePathname();
 
-  const pathIndex = mainSlides.findIndex((slide) => slide.url === path);
+  const pathIndex = slides.findIndex((slide) => slide.url === path);
   const [index, setIndex] = useState<number>(pathIndex === 0 ? 1 : pathIndex);
 
   useEffect(() => {
-    const index = mainSlides.findIndex((slide) => slide.url === path);
+    const index = slides.findIndex((slide) => slide.url === path);
     setIndex(index === 0 ? 1 : index);
   }, [path]);
 
   function handlePaginationChange(e, value) {
     const pageIndex = value;
     setPage(pageIndex);
-    router.replace(mainSlides[pageIndex].url);
+    router.replace(slides[pageIndex].url);
   }
   const [page, setPage] = useState(index);
 
@@ -33,7 +37,7 @@ export default function Footer() {
     <Stack spacing={3}>
       <Pagination
         className=" w-screen flex justify-center"
-        count={mainSlides.length - 1}
+        count={slides.length - 1}
         size="large"
         page={page as number}
         onChange={handlePaginationChange}

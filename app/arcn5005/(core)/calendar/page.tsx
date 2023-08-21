@@ -1,6 +1,6 @@
 "use client";
 
-import Calendar from "../../../components/Common/Calendar";
+import Calendar from "../../../../components/Common/Calendar";
 
 export default function CourseCalendar() {
   return (

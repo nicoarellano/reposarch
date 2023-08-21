@@ -1,6 +1,6 @@
 import { Slides } from "../../types/types";
 
-export const mainSlides: Slides = [
+export const coreSlides: Slides = [
   {
     id: "reposarch",
     title: "ARCN 5005 - Theory and Practice of Architectural Representation",
