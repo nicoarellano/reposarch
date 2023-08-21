@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-import { mainSlides } from "@/lib/arcn5005/MainSlides";
+import { mainSlides } from "@/lib/arcn5005/slides";
 import Stack from "@mui/material/Stack";
 
 import Pagination from "@mui/material/Pagination";

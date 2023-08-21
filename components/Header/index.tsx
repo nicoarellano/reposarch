@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import LeftSpeedDial from "../SpeedDial";
 import { usePathname } from "next/navigation";
-import { mainSlides } from "@/lib/arcn5005/MainSlides";
+import { mainSlides } from "@/lib/arcn5005/slides";
 
 export default function Header() {
   const path = usePathname();

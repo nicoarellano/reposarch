@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 
 const initialDate = dayjs("2023-09-07");
 
-export const arch5005Classes: Classes = [
+export const arcn5005Classes: Classes = [
   {
     title: "Week 01 - The art of computer graphics",
     src: "/ARCN5005/",

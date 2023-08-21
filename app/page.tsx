@@ -1,7 +1,7 @@
 "use client";
 
 import Box from "@/components/Common/Box";
-import { mainSlides } from "@/lib/arcn5005/MainSlides";
+import { mainSlides } from "@/lib/arcn5005/slides";
 import { SlidesContext } from "@/middleware/Slides/context";
 import Link from "next/link";
 import { useContext } from "react";
