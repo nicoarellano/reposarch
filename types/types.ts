@@ -7,28 +7,24 @@ export interface Identified {
 }
 
 export interface Slide {
+  title: string;
   id: string;
-  title: string;
-  url: string;
+  url?: string;
+  content?: JSX.Element;
+  notes?: string;
+  date?: Dayjs;
 }
 
-// export interface Topic {
-//   title: string;
-//   src: string;
-// }
-
-export interface Class {
-  id?: string;
+export interface Lecture {
   title: string;
-  src: string;
+  id: string;
+  url?: string;
+  content?: JSX.Element;
+  notes?: string;
+  slides?: Slides;
   date: Dayjs;
-  topics: Topic[];
 }
+
+export type Lectures = Lecture[];
 
 export type Slides = Slide[];
-
-export type Classes = Class[];
-
-export type Topic = string;
-
-export type Topics = Topic[];

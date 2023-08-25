@@ -23,7 +23,7 @@ body {
 
 h1 {
   font-size: 34px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 38px;
 
 }
@@ -57,5 +57,40 @@ h5 {
   font-size: 16px;
   font-weight: 300;
   line-height: 38px;
-  color: rgba(255, 255, 255, 0.7);
+}
+
+.mdx ul {
+  list-style-type: square;
+  margin-left: 2rem;
+}
+
+.mdx h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 38px;
+
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 50px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
 }

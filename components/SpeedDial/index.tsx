@@ -1,16 +1,17 @@
 "use client";
-import { useState } from "react";
 import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
-import CalendarIcon from "@mui/icons-material/CalendarMonthRounded";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
+import Link from "next/link";
+
+import SpeedDialIcon from "@mui/material/SpeedDialIcon";
+import CalendarIcon from "@mui/icons-material/CalendarMonthRounded";
 import InfoIcon from "@mui/icons-material/HelpOutlineRounded";
-import Menu from "@mui/icons-material/MenuRounded";
+import MenuIcon from "@mui/icons-material/MenuRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import HomeIcon from "@mui/icons-material/HomeRounded";
 import TocIcon from "@mui/icons-material/ListAltRounded";
-import SpeedDialIcon from "@mui/material/SpeedDialIcon";
-import Link from "next/link";
+import BookIcon from "@mui/icons-material/MenuBookRounded";
 
 export default function BasicSpeedDial() {
   const actionStyle = {
@@ -54,13 +55,20 @@ export default function BasicSpeedDial() {
       ),
       name: "Calendar",
     },
+    {
+      icon: (
+        <Link href={"/arcn5005/bibliography"}>
+          <BookIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Bibliography",
+    },
   ];
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Box
       sx={{
-        height: 320,
+        height: 370,
         transform: "translateZ(0px)",
         flexGrow: 1,
         position: "absolute",
@@ -81,7 +89,7 @@ export default function BasicSpeedDial() {
         }}
         icon={
           <SpeedDialIcon
-            icon={<Menu color="action" />}
+            icon={<MenuIcon color="action" />}
             openIcon={<CloseIcon color="action" />}
           />
         }

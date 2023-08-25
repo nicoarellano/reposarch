@@ -3,8 +3,8 @@ import { Slides, Slide } from "../../types/types";
 
 interface SlidesTypes {
   totalSlides: number;
-  slides: Slides;
-  currentSlide: Slide;
+  slides: any;
+  currentSlide: Slide | null;
   currentSlideNumber: number;
 }
 
@@ -12,8 +12,10 @@ export type SlidesState = SlidesTypes;
 
 export type SlidesPayload = {
   ["SET_SLIDES"]: SlidesTypes;
-  ["NEXT_SLIDE"]: Pick<SlidesTypes, "currentSlideNumber" | "currentSlide">;
-  ["PREVIOUS_SLIDE"]: Pick<SlidesTypes, "currentSlideNumber" | "currentSlide">;
+  ["SET_SLIDE_NUMBER"]: Pick<
+    SlidesTypes,
+    "currentSlideNumber" | "currentSlide"
+  >;
 };
 
 export type SlidesActions =
@@ -30,13 +32,7 @@ export const SlidesReducer = (state: SlidesState, action: SlidesActions) => {
         currentSlideNumber,
         totalSlides,
       };
-    case "NEXT_SLIDE":
-      return {
-        ...state,
-        currentSlideNumber: action.payload.currentSlideNumber,
-        currentSlide: action.payload.currentSlide,
-      };
-    case "PREVIOUS_SLIDE":
+    case "SET_SLIDE_NUMBER":
       return {
         ...state,
         currentSlideNumber: action.payload.currentSlideNumber,
