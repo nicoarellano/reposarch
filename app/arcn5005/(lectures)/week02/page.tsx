@@ -19,6 +19,8 @@ export default function WeekToc() {
 
   useEffect(() => {
     if (currentSlide?.content) setContent(currentSlide.content);
+    if (currentSlide?.notes)
+      console.log(`%c${currentSlide.notes}`, "font-size: 50px");
   }, [currentSlideNumber]);
 
   useEffect(() => {
