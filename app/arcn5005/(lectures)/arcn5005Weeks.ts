@@ -1,32 +1,15 @@
 import dayjs from "dayjs";
 import { Slides } from "../../../types/types";
-import { slides as week01 } from "./week01/week01Slides";
-import { slides as week02 } from "./week02/week02Slides";
+import { slides as week01 } from "./week01/slides";
+import { slides as week02 } from "./week02/slides";
+import { slides as week03 } from "./week03/slides";
 
 const initialDate = dayjs("2023-09-07");
 
 export const weeks = {
   week01,
   week02,
-  week03: [
-    {
-      id: "",
-      title: "Coding, programming, scripting",
-    },
-    { id: "", title: "Close-sourced scripting" },
-    {
-      id: "",
-      title: "Coding for efficiency and automatization",
-    },
-    {
-      id: "",
-      title: "Programming and architecture",
-    },
-    {
-      id: "",
-      title: "🖥️ LAB 2: Close-source scripting - Dynamo / Sverchok",
-    },
-  ],
+  week03,
 };
 /** 
   },

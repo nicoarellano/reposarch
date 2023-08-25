@@ -9,6 +9,13 @@ import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
 import { arcn5005Lectures } from "../../app/arcn5005Lectures";
 
 const classDays = arcn5005Lectures.map((lecture) => lecture.date);
+const quizes = [dayjs("2023-09-28"), dayjs("2023-11-09")];
+const assignments = [
+  dayjs("2023-10-19"),
+  dayjs("2023-11-23"),
+  dayjs("2023-12-07"),
+];
+const fallBreak = [dayjs("2023-10-26")];
 
 const initialValue = dayjs();
 
@@ -22,12 +29,32 @@ function ServerDay(
     highlightedDays.some((date) => date.isSame(day, "day"));
 
   const isClassDay = classDays.some((classDay) => classDay.isSame(day, "day"));
+  const isAssignmentDay = assignments.some((assignmentDay) =>
+    assignmentDay.isSame(day, "day")
+  );
+  const isQuizDay = quizes.some((quizDay) => quizDay.isSame(day, "day"));
+  const isFallBreakDay = fallBreak.some((fallBreakDay) =>
+    fallBreakDay.isSame(day, "day")
+  );
+  const isFinalAssignmentDay = day.isSame(dayjs("2023-12-07"), "day");
 
   return (
     <Badge
       key={day.toString()}
       overlap="circular"
-      badgeContent={isSelected ? "🔵" : undefined}
+      badgeContent={
+        isFinalAssignmentDay
+          ? "🏁"
+          : isAssignmentDay
+          ? "🔴"
+          : isQuizDay
+          ? "🟡"
+          : isFallBreakDay
+          ? "✖️"
+          : isSelected
+          ? "🔵"
+          : undefined
+      }
     >
       <PickersDay
         {...other}
