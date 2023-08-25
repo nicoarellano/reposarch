@@ -1,4 +1,5 @@
-import { useState, Fragment, useEffect } from "react";
+"use client";
+import { useState, Fragment } from "react";
 import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -10,10 +11,11 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ScrollableList from "./scrollableList";
 import { IconButton } from "@mui/material";
-import { Classes } from "../../types/types";
+import { Lectures, Lecture } from "../../types/types";
+import Link from "next/link";
 
 interface Props {
-  list: Classes;
+  list: Lectures;
 }
 
 type OpenArray = boolean[];
@@ -31,7 +33,6 @@ export default function NestedParentList({ list }: Props) {
     <List
       sx={{
         width: "60%",
-        height: "100%",
         minWidth: 800,
         bgcolor: "background.paper",
         maxHeight: 500,
@@ -45,29 +46,31 @@ export default function NestedParentList({ list }: Props) {
         </ListSubheader>
       }
     >
-      {list.map((item, index) => (
+      {list.map((item: Lecture, index) => (
         <Fragment key={item.title}>
           <ListItemButton
             onClick={() => handleClick(index)}
             sx={{ borderBottom: 1, borderTop: 1, borderColor: "#ddd" }}
           >
-            <ListItemIcon
-              onClick={() => {
-                console.log(`Jump to ${item.title}!`);
-              }}
-            >
-              <IconButton>
-                <SlideshowIcon />
-              </IconButton>
-            </ListItemIcon>
+            <Link href={item.url ? item.url : item.id} title={item.title}>
+              <ListItemIcon>
+                <IconButton>
+                  <SlideshowIcon />
+                </IconButton>
+              </ListItemIcon>
+            </Link>
             <ListItemText
-              primary={`${item.title} (${item.date.format("YYYY/MM/DD")})`}
+              primary={`${item.title}${
+                item.date ? `(${item.date.format("YYYY/MM/DD")})` : ""
+              }`}
             />
             {open[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          <Collapse in={open[index]} timeout="auto" unmountOnExit>
-            <ScrollableList itemList={item.topics} />
-          </Collapse>
+          {Boolean(item.slides) && (
+            <Collapse in={open[index]} timeout="auto" unmountOnExit>
+              <ScrollableList itemList={item.slides} />
+            </Collapse>
+          )}
         </Fragment>
       ))}
     </List>

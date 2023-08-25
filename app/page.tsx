@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useContext } from "react";
 import { SlidesContext } from "../middleware/Slides/context";
-import { mainSlides } from "../public/arcn5005/slides";
+import { slides } from "./slides";
 import Box from "../components/Common/Box";
 
 export default function Home() {
@@ -13,13 +13,12 @@ export default function Home() {
     slidesDispatch({
       type: "SET_SLIDES",
       payload: {
-        slides: mainSlides,
-        currentSlide: mainSlides[0],
+        slides: slides,
+        currentSlide: slides[0],
         currentSlideNumber: 0,
-        totalSlides: mainSlides.length - 1,
+        totalSlides: slides.length - 1,
       },
     }),
-    console.log(mainSlides),
   ];
 
   return (

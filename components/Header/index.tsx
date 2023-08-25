@@ -1,14 +1,18 @@
 "use client";
+import { ReactElement } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import LeftSpeedDial from "../SpeedDial";
 import { usePathname } from "next/navigation";
-import { mainSlides } from "../../public/arcn5005/slides";
+import { Slides, Slide } from "../../types/types";
+interface Props {
+  slides: Slides;
+}
 
-export default function Header() {
+export default function Header({ slides }): ReactElement<Props> {
   const path = usePathname();
 
-  const currentSlide = mainSlides.find((slide) => slide.url === path);
+  const currentSlide = slides.find((slide: Slide) => path.endsWith(slide.id));
   const slideTitle = currentSlide?.title;
 
   return (

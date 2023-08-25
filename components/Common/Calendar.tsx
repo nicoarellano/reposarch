@@ -6,9 +6,9 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
-import { arcn5005Classes } from "../../public/arcn5005/allClasses";
+import { arcn5005Lectures } from "../../app/arcn5005Lectures";
 
-const classDays: Dayjs[] = arcn5005Classes.map((cl) => cl.date);
+const classDays = arcn5005Lectures.map((lecture) => lecture.date);
 
 const initialValue = dayjs();
 
