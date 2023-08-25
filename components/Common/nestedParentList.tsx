@@ -13,6 +13,7 @@ import ScrollableList from "./scrollableList";
 import { IconButton } from "@mui/material";
 import { Lectures, Lecture } from "../../types/types";
 import Link from "next/link";
+import dayjs from "dayjs";
 
 interface Props {
   list: Lectures;
@@ -52,18 +53,25 @@ export default function NestedParentList({ list }: Props) {
             onClick={() => handleClick(index)}
             sx={{ borderBottom: 1, borderTop: 1, borderColor: "#ddd" }}
           >
-            <Link href={item.url ? item.url : item.id} title={item.title}>
+            <ListItemText
+              primary={`${item.title}${
+                item.date ? `(${item.date.format("YYYY/MM/DD")})` : ""
+              }`}
+            />
+            <Link
+              hidden={
+                item.date > dayjs("2023/09/07") &&
+                item.date > dayjs().add(1, "week")
+              }
+              href={item.url ? item.url : item.id}
+              title={item.title}
+            >
               <ListItemIcon>
                 <IconButton>
                   <SlideshowIcon />
                 </IconButton>
               </ListItemIcon>
             </Link>
-            <ListItemText
-              primary={`${item.title}${
-                item.date ? `(${item.date.format("YYYY/MM/DD")})` : ""
-              }`}
-            />
             {open[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           {Boolean(item.slides) && (
