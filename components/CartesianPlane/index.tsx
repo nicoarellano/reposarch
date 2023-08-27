@@ -24,8 +24,11 @@ export default function CartesianPlane() {
 
   return (
     <section className="w-screen overflow-hidden grow flex flex-col">
-      <div className="flex flex-col absolute right-10 border-2 p-7 z-20">
-        X:
+      <div className="flex flex-col absolute right-10 border-2 p-6 z-20 rounded-md shadow-md">
+        <h5>
+          pt1: ({xPosition}, {yPosition}, {zPosition})
+        </h5>
+        X
         <Slider
           sx={{ width: "200px", color: "red" }}
           min={0}
@@ -35,7 +38,7 @@ export default function CartesianPlane() {
           marks
           onChange={handleXSliderChange}
         />
-        Y:
+        Y
         <Slider
           sx={{ width: "200px", color: "green" }}
           aria-label="Y"
@@ -45,7 +48,7 @@ export default function CartesianPlane() {
           marks
           onChange={handleYSliderChange}
         />
-        Z:
+        Z
         <Slider
           sx={{ width: "200px", color: "blue" }}
           aria-label="Z"
@@ -57,14 +60,19 @@ export default function CartesianPlane() {
         />
       </div>
       <section className="grow">
-        <Canvas className="grow">
+        <Canvas
+          orthographic
+          camera={{ zoom: 50, position: [10, 10, 10] }}
+          className="grow"
+        >
+          <OrbitControls />
           <ambientLight intensity={0.1} />
           <directionalLight color="white" position={[2, 2, 5]} />
           <ambientLight color="white" intensity={0.1} />
-          <OrbitControls />
+
           <axesHelper args={[10]} />
           <gridHelper args={[10]} />
-          <mesh position={[xPosition, zPosition, yPosition]}>
+          <mesh position={[xPosition, yPosition, zPosition]}>
             <meshStandardMaterial color="gray" />
             <sphereGeometry args={[0.1]} />
           </mesh>
