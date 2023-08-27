@@ -21,5 +21,14 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
+const withTM = require("next-transpile-modules")([
+  // "web-ifc-three",
+  // "web-ifc",
+  // "openbim-components",
+  // "bim-fragment",
+  "three",
+  // "@popperjs/core",
+]);
+
 // Merge MDX config with Next.js config
 module.exports = withMDX(nextConfig);

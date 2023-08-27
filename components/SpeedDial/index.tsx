@@ -66,43 +66,34 @@ export default function BasicSpeedDial() {
   ];
 
   return (
-    <Box
+    <SpeedDial
+      ariaLabel="SpeedDial"
       sx={{
-        height: 370,
-        transform: "translateZ(0px)",
-        flexGrow: 1,
         position: "absolute",
+        top: 16,
+        right: 16,
+        "& .MuiFab-primary": {
+          backgroundColor: "#eee",
+          color: "white",
+          boxShadow: "none",
+          "&:hover": { backgroundColor: "#ddd" },
+        },
       }}
+      icon={
+        <SpeedDialIcon
+          icon={<MenuIcon color="action" />}
+          openIcon={<CloseIcon color="action" />}
+        />
+      }
+      direction="down"
     >
-      <SpeedDial
-        ariaLabel="SpeedDial"
-        sx={{
-          position: "absolute",
-          bottom: 16,
-          right: 16,
-          "& .MuiFab-primary": {
-            backgroundColor: "#eee",
-            color: "white",
-            boxShadow: "none",
-            "&:hover": { backgroundColor: "#ddd" },
-          },
-        }}
-        icon={
-          <SpeedDialIcon
-            icon={<MenuIcon color="action" />}
-            openIcon={<CloseIcon color="action" />}
-          />
-        }
-        direction="down"
-      >
-        {actions.map((action) => (
-          <SpeedDialAction
-            key={action.name}
-            icon={action.icon}
-            tooltipTitle={action.name}
-          />
-        ))}
-      </SpeedDial>
-    </Box>
+      {actions.map((action) => (
+        <SpeedDialAction
+          key={action.name}
+          icon={action.icon}
+          tooltipTitle={action.name}
+        />
+      ))}
+    </SpeedDial>
   );
 }
