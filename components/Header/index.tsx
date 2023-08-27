@@ -13,7 +13,6 @@ export default function Header({ slides }): ReactElement<Props> {
   const path = usePathname();
 
   const currentSlide = slides.find((slide: Slide) => path.endsWith(slide.id));
-  console.log(currentSlide, path);
   const slideTitle = currentSlide?.title;
 
   return (
