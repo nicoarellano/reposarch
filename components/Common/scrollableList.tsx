@@ -31,7 +31,11 @@ export default function ScrollableList({ itemList }: Props) {
   return (
     <>
       {Boolean(itemList) && (
-        <Box
+        <FixedSizeList
+          height={200}
+          itemSize={46}
+          itemCount={itemList ? itemList.length : 0}
+          overscanCount={5}
           sx={{
             width: "100%",
             height: 200,
@@ -39,15 +43,8 @@ export default function ScrollableList({ itemList }: Props) {
             overflowY: "auto",
           }}
         >
-          <FixedSizeList
-            height={200}
-            itemSize={46}
-            itemCount={itemList ? itemList.length : 0}
-            overscanCount={5}
-          >
-            {(props) => <RenderRow {...props} itemList={itemList} />}
-          </FixedSizeList>
-        </Box>
+          {(props) => <RenderRow {...props} itemList={itemList} />}
+        </FixedSizeList>
       )}
     </>
   );
