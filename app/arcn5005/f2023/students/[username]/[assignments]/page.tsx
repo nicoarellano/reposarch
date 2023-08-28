@@ -14,9 +14,7 @@ const page: FC<Props> = ({ params }) => {
         FINAL ASSIGNMENT OF: {params.username} {params.assignments}
       </h1> */}
       <iframe
-        src={
-          "https://github.com/nicoarellano/osarchrep/blob/classes/public/students/f2023/nicolasarellanorisop/map/index.html"
-        }
+        src={`/arcn5005/f2023/students/${params.username}/${params.assignments}/index.html`}
         className="grow w-full h-full"
       />
     </div>
