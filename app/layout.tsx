@@ -16,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         <main className="bg-slate-100 w-screen h-screen">{children}</main>
       </body>

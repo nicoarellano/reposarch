@@ -1,10 +1,6 @@
-import dayjs from "dayjs";
-import { Slides } from "../../../types/types";
 import { slides as week01 } from "./week01/slides";
 import { slides as week02 } from "./week02/slides";
 import { slides as week03 } from "./week03/slides";
-
-const initialDate = dayjs("2023-09-07");
 
 export const weeks = {
   week01,

@@ -12,6 +12,7 @@ import CloseIcon from "@mui/icons-material/CloseRounded";
 import HomeIcon from "@mui/icons-material/HomeRounded";
 import TocIcon from "@mui/icons-material/ListAltRounded";
 import BookIcon from "@mui/icons-material/MenuBookRounded";
+import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
 
 export default function BasicSpeedDial() {
   const actionStyle = {
@@ -62,6 +63,14 @@ export default function BasicSpeedDial() {
         </Link>
       ),
       name: "Bibliography",
+    },
+    {
+      icon: (
+        <Link href={"/arcn5005/f2023/students"}>
+          <StudentPageIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Class List",
     },
   ];
 
