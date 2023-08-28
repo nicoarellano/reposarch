@@ -1,12 +1,14 @@
+"use client";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { IconButton, ListSubheader } from "@mui/material";
-import { Slide, Slides } from "../../types/types";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface Props {
-  list: Slides;
+  list: { title: string }[];
   icon?: JSX.Element;
   subheader?: string;
 }
@@ -16,6 +18,7 @@ export default function ListWithIcon({
   icon,
   subheader = "Topics",
 }: Props) {
+  const path = usePathname();
   return (
     <List
       sx={{
@@ -27,10 +30,16 @@ export default function ListWithIcon({
       aria-labelledby="nested-list-subheader"
       subheader={<ListSubheader component="div">{subheader}</ListSubheader>}
     >
-      {list.map((item: Slide, index) => (
+      {list.map((item: { title: string; url?: string }, index) => (
         <ListItem key={index}>
           <ListItemIcon>
-            <IconButton>{icon}</IconButton>
+            {Boolean(item.url) ? (
+              <Link href={`${path}/${item.url}`}>
+                <IconButton>{icon}</IconButton>
+              </Link>
+            ) : (
+              <IconButton>{icon}</IconButton>
+            )}
           </ListItemIcon>
           <ListItemText primary={item.title} />
         </ListItem>

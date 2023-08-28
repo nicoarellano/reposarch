@@ -5,13 +5,14 @@ import Logo from "./Logo";
 import LeftSpeedDial from "../SpeedDial";
 import { usePathname } from "next/navigation";
 import { Slides, Slide } from "../../types/types";
+import { useRouter } from "next/navigation";
 
 interface Props {
   title: string;
 }
 
 export function Header({ title }): ReactElement<Props> {
-  const path = usePathname();
+  const router = useRouter();
 
   return (
     <nav>
@@ -19,7 +20,12 @@ export function Header({ title }): ReactElement<Props> {
         <Link href="/">
           <Logo />
         </Link>
-        <h1 className="flex items-center">{title}</h1>
+        <h1
+          className="flex items-center hover:cursor-pointer"
+          onClick={() => router.back()}
+        >
+          {title}
+        </h1>
         <nav className="w-90px z-50">
           <LeftSpeedDial />
         </nav>

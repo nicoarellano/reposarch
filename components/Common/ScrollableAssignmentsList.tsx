@@ -3,13 +3,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList, ListChildComponentProps } from "react-window";
 import Link from "next/link";
-
-const itemList = [
-  { title: "Three js Assignment", url: "three" },
-  { title: "Ifc js Assignment", url: "ifc" },
-  { title: "Map Assignment", url: "map" },
-  { title: "Final Assignment", url: "final" },
-];
+import { Assignments } from "../../app/arcn5005/assignments";
 
 function RenderRow(props: ListChildComponentProps) {
   const { index, style, username } = props;
@@ -23,8 +17,8 @@ function RenderRow(props: ListChildComponentProps) {
       disablePadding
     >
       <ListItemButton>
-        <Link href={`students/${username}/${itemList[index].url}`}>
-          <ListItemText primary={itemList[index].title} />
+        <Link href={`students/${username}/${Assignments[index].url}`}>
+          <ListItemText primary={Assignments[index].title} />
         </Link>
       </ListItemButton>
     </ListItem>
@@ -41,7 +35,7 @@ export default function ScrollableAssignmetnsList({ username }: Props) {
       <FixedSizeList
         height={190}
         itemSize={46}
-        itemCount={itemList.length}
+        itemCount={Assignments.length}
         overscanCount={5}
         sx={{
           width: "100%",

@@ -1,3 +1,8 @@
-export default function NaFe() {
-  return <iframe src="/examples/FinalExam/map-n-three.html" className="grow" />;
+export default function FinalExample() {
+  return (
+    <iframe
+      src="/arcn5005/f2023/students/nicolasarellanorisop/final/index.html"
+      className="grow"
+    />
+  );
 }
