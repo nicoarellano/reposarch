@@ -2,7 +2,6 @@ import { FC } from "react";
 import ListWithIcon from "../../../../../components/Common/ListWithIcon";
 import { Assignments } from "../../../assignments";
 import LinkIcon from "@mui/icons-material/InsertLinkRounded";
-import Avatar from "@mui/material/Avatar";
 
 interface Props {
   params: { username: string };

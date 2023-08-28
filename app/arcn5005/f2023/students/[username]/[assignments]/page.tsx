@@ -6,12 +6,10 @@ interface Props {
 }
 
 const page: FC<Props> = ({ params }) => {
-  const path = `/index.html`;
-
   return (
     <iframe
       src={`/arcn5005/f2023/students/${params.username}/${params.assignments}/index.html`}
-      className="grow"
+      className="grow z-0"
     />
   );
 };
