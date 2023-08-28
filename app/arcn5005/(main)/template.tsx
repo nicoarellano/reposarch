@@ -1,7 +1,7 @@
 "use client";
 
 import { Footer } from "../../../components/Footer";
-import HeaderOfSlide from "../../../components/Header";
+import { HeaderOfSlide } from "../../../components/Header";
 import { slides } from "../../slides";
 
 export default function NestedTemplate({

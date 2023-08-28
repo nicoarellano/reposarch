@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { MiddlewareFooter } from "../../../components/Footer";
-import HeaderOfSlide from "../../../components/Header";
+import { HeaderOfSlide } from "../../../components/Header";
 import { arcn5005Lectures } from "../../arcn5005Lectures";
 
 export default function NestedTemplate({
