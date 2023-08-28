@@ -9,15 +9,10 @@ const page: FC<Props> = ({ params }) => {
   const path = `/index.html`;
 
   return (
-    <div className="w-screen">
-      {/* <h1>
-        FINAL ASSIGNMENT OF: {params.username} {params.assignments}
-      </h1> */}
-      <iframe
-        src={`/arcn5005/f2023/students/${params.username}/${params.assignments}/index.html`}
-        className="grow w-full h-full"
-      />
-    </div>
+    <iframe
+      src={`/arcn5005/f2023/students/${params.username}/${params.assignments}/index.html`}
+      className="grow"
+    />
   );
 };
 
