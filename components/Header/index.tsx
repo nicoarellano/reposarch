@@ -22,9 +22,7 @@ export function Header({ title }): ReactElement<Props> {
         </Link>
         <h1
           className="flex items-center hover:cursor-pointer"
-          onClick={() => {
-            router.back();
-          }}
+          onClick={() => router.back()}
         >
           {title}
         </h1>
