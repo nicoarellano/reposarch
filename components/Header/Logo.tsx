@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function Logo() {
-  const favicon = "/bb.ico";
+  const favicon = "/images/favicon.ico";
   const title = "reposarch";
 
   // const router = useRouter();

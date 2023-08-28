@@ -14,6 +14,7 @@ export interface Slide {
   notes?: string;
   date?: Dayjs;
 }
+export type Slides = Slide[];
 
 export interface Lecture {
   title: string;
@@ -24,7 +25,14 @@ export interface Lecture {
   slides?: Slides;
   date: Dayjs;
 }
-
 export type Lectures = Lecture[];
 
-export type Slides = Slide[];
+export interface Student {
+  id: string;
+  username: string;
+  lastName: string;
+  firstName: string;
+  email: string;
+}
+
+export type Students = Student[];
