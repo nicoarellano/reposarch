@@ -30,13 +30,7 @@ export default function NestedTemplate({
           } ${params.assignments ? `- ${params.assignments} assignment` : ""}`}
         />
       </nav>
-      {Boolean(student) ? (
-        <section className="flex justify-center grow">{children}</section>
-      ) : (
-        <section className="flex justify-center grow items-center">
-          <ReturnButton />
-        </section>
-      )}
+      <section className="flex justify-center grow">{children}</section>
       <footer className="m-4 flex flex-row-reverse absolute z-20 bottom-0 right-0">
         <IconButton onClick={() => router.back()} title={"Back"}>
           <Avatar
