@@ -1,11 +1,11 @@
 "use client";
-import { FC } from "react";
+import { ReactElement } from "react";
 
 interface Props {
   params: { username: string; assignments: string };
 }
 
-const page: FC<Props> = ({ params }) => {
+export default function Page({ params }): ReactElement<Props> {
   return (
     <section className="flex w-screen items-center justify-center flex-col gap-8">
       <iframe
@@ -14,6 +14,4 @@ const page: FC<Props> = ({ params }) => {
       />
     </section>
   );
-};
-
-export default page;
+}
