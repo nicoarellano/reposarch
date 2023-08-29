@@ -9,7 +9,7 @@ interface Props {
 
 const page: FC<Props> = ({ params }) => {
   return (
-    <section className="flex w-screen items-center justify-center w-1/2 flex-col gap-8">
+    <section className="flex items-center justify-center w-1/2 flex-col gap-8">
       <ListWithIcon
         list={Assignments}
         subheader="Assignments"

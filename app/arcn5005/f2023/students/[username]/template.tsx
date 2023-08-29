@@ -26,7 +26,7 @@ export default function NestedTemplate({
             student
               ? `${student.firstName} ${student.lastName}`
               : "Unregistered Student"
-          }`}
+          } ${params.assignments ? `- ${params.assignments} assignment` : ""}`}
         />
       </nav>
       {Boolean(student) ? (
