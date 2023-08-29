@@ -22,7 +22,7 @@ export interface Lecture {
   url?: string;
   content?: JSX.Element;
   notes?: string;
-  slides?: Slides;
+  slides?: string[];
   date: Dayjs;
 }
 export type Lectures = Lecture[];

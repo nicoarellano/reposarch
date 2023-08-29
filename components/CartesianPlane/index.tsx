@@ -24,7 +24,7 @@ export default function CartesianPlane() {
 
   return (
     <section className="w-screen overflow-hidden grow flex flex-col">
-      <div className="flex flex-col absolute right-10 border-2 p-6 z-20 rounded-md shadow-md">
+      <div className="flex flex-col absolute right-10 border-2 p-5 z-20 rounded-md shadow-md">
         <h5>
           pt1: ({xPosition}, {yPosition}, {zPosition})
         </h5>

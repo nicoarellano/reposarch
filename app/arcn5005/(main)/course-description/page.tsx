@@ -50,7 +50,7 @@ export default function CourseDescription() {
         human-readable instructions that define a computer program—of the
         software that they use must be accessible for modification by the user.
         <br />
-        This course will explore both the obstacles—digital oblivion and
+        This course will explore both obstacles—digital oblivion and
         black-boxes—that architects must overcome in order to benefit from a
         fruitful relationship between programming and architecture. <br />
         Coding has the potential to further expand the current limits of our
@@ -59,10 +59,9 @@ export default function CourseDescription() {
         that includes human input with computer logic and processing power to
         arrive at collaborative solutions. <br />
         Every class will be followed by a lab that will give students the skills
-        to build a basic digital tool from scratch. This will give them
+        to understand, modify, and to develop digital tools. This will give them
         awareness of the parts of a digital software in order to understand its
-        biases and potential. The outcome will be a web based open source GIS
-        and BIM software crafted by the students from scratch.
+        biases and potential.
         <br />
         <br />
         <small>

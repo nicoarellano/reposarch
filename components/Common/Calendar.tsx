@@ -9,7 +9,7 @@ import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
 import { arcn5005Lectures } from "../../app/arcn5005Lectures";
 
 const classDays = arcn5005Lectures.map((lecture) => lecture.date);
-const quizes = [dayjs("2023-09-28"), dayjs("2023-11-09")];
+const quizes = [dayjs("2023-10-05"), dayjs("2023-11-09"), dayjs("2023-11-30")];
 const assignments = [
   dayjs("2023-10-19"),
   dayjs("2023-11-23"),
@@ -36,7 +36,7 @@ function ServerDay(
   const isFallBreakDay = fallBreak.some((fallBreakDay) =>
     fallBreakDay.isSame(day, "day")
   );
-  const isFinalAssignmentDay = day.isSame(dayjs("2023-12-07"), "day");
+  const isFinalAssignmentDay = day.isSame(dayjs("2023-12-18"), "day");
 
   return (
     <Badge
