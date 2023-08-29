@@ -62,7 +62,7 @@ export default function BasicSpeedDial() {
           <BookIcon sx={actionStyle} />
         </Link>
       ),
-      name: "Bibliography",
+      name: "Resources",
     },
     {
       icon: (

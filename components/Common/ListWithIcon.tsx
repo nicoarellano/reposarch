@@ -34,7 +34,13 @@ export default function ListWithIcon({
         <ListItem key={index}>
           <ListItemIcon>
             {Boolean(item.url) ? (
-              <Link href={`${path}/${item.url}`}>
+              <Link
+                href={
+                  item.url?.startsWith("http")
+                    ? item.url
+                    : `${path}/${item.url}`
+                }
+              >
                 <IconButton>{icon}</IconButton>
               </Link>
             ) : (

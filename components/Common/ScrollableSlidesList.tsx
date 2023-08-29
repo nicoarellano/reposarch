@@ -23,7 +23,7 @@ function RenderRow(props: ListChildComponentProps) {
 }
 
 interface Props {
-  itemList: Slides | undefined;
+  itemList: string[] | undefined;
 }
 
 export default function ScrollableList({ itemList }: Props) {
