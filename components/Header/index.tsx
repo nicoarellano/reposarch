@@ -1,25 +1,59 @@
-import { useContext, useState } from "react";
-// Context
-import { SlidesContext } from "@/middleware/Slides/context";
-
+"use client";
+import { ReactElement } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import LeftSpeedDial from "../SpeedDial";
+import { usePathname } from "next/navigation";
+import { Slides, Slide } from "../../types/types";
+import { useRouter } from "next/navigation";
 
-export default function Header() {
-  const { currentSlide } = useContext(SlidesContext)["state"]["slides"];
+interface Props {
+  title: string;
+}
+
+export function Header({ title }): ReactElement<Props> {
+  const router = useRouter();
 
   return (
-    <>
-      <header className="flex flex-row justify-between min-w-max z-50 m-5">
+    <nav>
+      <header className="flex flex-row justify-between w-screen z-40 p-6">
         <Link href="/">
           <Logo />
         </Link>
-        <h1 className="flex items-center">{currentSlide.title}</h1>
-        <div className="w-90px">
+        <h1
+          className="flex items-center hover:cursor-pointer"
+          onClick={() => router.back()}
+        >
+          {title}
+        </h1>
+        <nav className="w-90px z-50">
           <LeftSpeedDial />
-        </div>
+        </nav>
       </header>
-    </>
+    </nav>
+  );
+}
+interface SlidesProps {
+  slides: Slides | null;
+}
+
+export function HeaderOfSlide({ slides }): ReactElement<SlidesProps> {
+  const path = usePathname();
+
+  const currentSlide = slides.find((slide: Slide) => path.endsWith(slide.id));
+  const slideTitle: string = currentSlide?.title;
+
+  return (
+    <nav>
+      <header className="flex flex-row justify-between w-screen z-40 p-6">
+        <Link href="/">
+          <Logo />
+        </Link>
+        <h1 className="flex items-center">{slideTitle}</h1>
+        <nav className="w-90px z-50">
+          <LeftSpeedDial />
+        </nav>
+      </header>
+    </nav>
   );
 }

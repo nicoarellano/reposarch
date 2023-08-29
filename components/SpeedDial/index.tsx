@@ -1,87 +1,108 @@
-import { useState } from "react";
+"use client";
 import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
-import CalendarIcon from "@mui/icons-material/CalendarMonthRounded";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
+import Link from "next/link";
+
+import SpeedDialIcon from "@mui/material/SpeedDialIcon";
+import CalendarIcon from "@mui/icons-material/CalendarMonthRounded";
 import InfoIcon from "@mui/icons-material/HelpOutlineRounded";
-import Menu from "@mui/icons-material/MenuRounded";
+import MenuIcon from "@mui/icons-material/MenuRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
 import HomeIcon from "@mui/icons-material/HomeRounded";
 import TocIcon from "@mui/icons-material/ListAltRounded";
-import SpeedDialIcon from "@mui/material/SpeedDialIcon";
+import BookIcon from "@mui/icons-material/MenuBookRounded";
+import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
 
 export default function BasicSpeedDial() {
+  const actionStyle = {
+    backgroundColor: "#f1f1f195",
+    borderRadius: "50px",
+    width: "42px",
+    height: "42px",
+    padding: "10px",
+  };
   const actions = [
     {
-      icon: <HomeIcon />,
+      icon: (
+        <Link href={"/arcn5005"}>
+          <HomeIcon sx={actionStyle} />
+        </Link>
+      ),
       name: "Home",
-      onclick: () => {
-        console.log("GO TO HOME!");
-      },
     },
     {
-      icon: <TocIcon />,
-      name: "Table of Content",
-      onclick: () => {
-        console.log("GO TO TOC!");
-      },
-    },
-    {
-      icon: <InfoIcon />,
+      icon: (
+        <Link href={"/arcn5005/course-description"}>
+          <InfoIcon sx={actionStyle} />
+        </Link>
+      ),
       name: "Course Description",
-      onclick: () => {
-        console.log("GO TO COURSE DESCRIPTION!");
-      },
     },
     {
-      icon: <CalendarIcon />,
+      icon: (
+        <Link href={"/arcn5005/toc"}>
+          <TocIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Table of Content",
+    },
+
+    {
+      icon: (
+        <Link href={"/arcn5005/calendar"}>
+          <CalendarIcon sx={actionStyle} />
+        </Link>
+      ),
       name: "Calendar",
-      onclick: () => {
-        console.log("GO TO CALENDAR!");
-      },
+    },
+    {
+      icon: (
+        <Link href={"/arcn5005/bibliography"}>
+          <BookIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Resources",
+    },
+    {
+      icon: (
+        <Link href={"/arcn5005/f2023/students"}>
+          <StudentPageIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Class List",
     },
   ];
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box
+    <SpeedDial
+      ariaLabel="SpeedDial"
       sx={{
-        height: 320,
-        transform: "translateZ(0px)",
-        flexGrow: 1,
         position: "absolute",
+        top: 16,
+        right: 16,
+        "& .MuiFab-primary": {
+          backgroundColor: "#eee",
+          color: "white",
+          boxShadow: "none",
+          "&:hover": { backgroundColor: "#ddd" },
+        },
       }}
+      icon={
+        <SpeedDialIcon
+          icon={<MenuIcon color="action" />}
+          openIcon={<CloseIcon color="action" />}
+        />
+      }
+      direction="down"
     >
-      <SpeedDial
-        ariaLabel="SpeedDial basic example"
-        sx={{
-          position: "absolute",
-          bottom: 16,
-          right: 16,
-          "& .MuiFab-primary": {
-            backgroundColor: "#eee",
-            color: "white",
-            boxShadow: "none",
-            "&:hover": { backgroundColor: "#ddd" },
-          },
-        }}
-        icon={
-          <SpeedDialIcon
-            icon={<Menu color="action" />}
-            openIcon={<CloseIcon color="action" />}
-          />
-        }
-        // <Menu color="action" />
-        direction="down"
-      >
-        {actions.map((action) => (
-          <SpeedDialAction
-            key={action.name}
-            icon={action.icon}
-            tooltipTitle={action.name}
-          />
-        ))}
-      </SpeedDial>
-    </Box>
+      {actions.map((action) => (
+        <SpeedDialAction
+          key={action.name}
+          icon={action.icon}
+          tooltipTitle={action.name}
+        />
+      ))}
+    </SpeedDial>
   );
 }

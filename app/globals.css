@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: white
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.effect:hover {
+  font-weight: 500;
+  scale: 1.01;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 38px;
+}
+
+.mdx ul {
+  list-style-type: square;
+  margin-left: 2rem;
+}
+
+.mdx h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 38px;
+
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 50px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+}

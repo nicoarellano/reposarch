@@ -1,3 +1,4 @@
+import { Dayjs } from "dayjs";
 // Interfaces
 export interface Identified {
   _id?: string; //Mongo db id
@@ -6,28 +7,40 @@ export interface Identified {
 }
 
 export interface Slide {
+  title: string;
   id: string;
-  title: string;
-  slide: JSX.Element;
+  url?: string;
+  content?: JSX.Element;
+  notes?: string;
+  date?: Dayjs;
 }
-
-// export interface Topic {
-//   title: string;
-//   src: string;
-// }
-
-export interface Class {
-  id?: string;
-  title: string;
-  src: string;
-  date: string;
-  topics: Topic[];
-}
-
 export type Slides = Slide[];
 
-export type Classes = Class[];
+export interface Resource {
+  title: string;
+  id?: string;
+  url?: string;
+  author?: string;
+}
+export type Resources = Resource[];
 
-export type Topic = string;
+export interface Lecture {
+  title: string;
+  id: string;
+  url?: string;
+  content?: JSX.Element;
+  notes?: string;
+  slides?: string[];
+  date: Dayjs;
+}
+export type Lectures = Lecture[];
 
-export type Topics = Topic[];
+export interface Student {
+  id: string;
+  username: string;
+  lastName: string;
+  firstName: string;
+  email: string;
+}
+
+export type Students = Student[];

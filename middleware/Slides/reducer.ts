@@ -1,18 +1,21 @@
-import { Slide, Slides } from "@/types/types";
 import { ActionMap } from "../ActionMap";
+import { Slides, Slide } from "../../types/types";
 
 interface SlidesTypes {
-  slides: Slides;
-  currentSlide: Slide;
+  totalSlides: number;
+  slides: any;
+  currentSlide: Slide | null;
   currentSlideNumber: number;
 }
 
 export type SlidesState = SlidesTypes;
 
 export type SlidesPayload = {
-  ["SET_SLIDES"]: Pick<SlidesTypes, "slides">;
-  ["NEXT_SLIDE"]: Pick<SlidesTypes, "currentSlideNumber" | "currentSlide">;
-  ["PREVIOUS_SLIDE"]: Pick<SlidesTypes, "currentSlideNumber" | "currentSlide">;
+  ["SET_SLIDES"]: SlidesTypes;
+  ["SET_SLIDE_NUMBER"]: Pick<
+    SlidesTypes,
+    "currentSlideNumber" | "currentSlide"
+  >;
 };
 
 export type SlidesActions =
@@ -20,14 +23,16 @@ export type SlidesActions =
 export const SlidesReducer = (state: SlidesState, action: SlidesActions) => {
   switch (action.type) {
     case "SET_SLIDES":
-      return { ...state, slides: action.payload.slides };
-    case "NEXT_SLIDE":
+      const { currentSlide, slides, currentSlideNumber, totalSlides } =
+        action.payload;
       return {
         ...state,
-        currentSlideNumber: action.payload.currentSlideNumber,
-        currentSlide: action.payload.currentSlide,
+        currentSlide,
+        slides,
+        currentSlideNumber,
+        totalSlides,
       };
-    case "PREVIOUS_SLIDE":
+    case "SET_SLIDE_NUMBER":
       return {
         ...state,
         currentSlideNumber: action.payload.currentSlideNumber,

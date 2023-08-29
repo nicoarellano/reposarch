@@ -1,80 +1,140 @@
-import { useContext, ReactElement, useState, useEffect } from "react";
+"use client";
+import { useState, useEffect, ReactElement, useContext } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
-import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
 
-import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-
-import { SlidesContext } from "@/middleware/Slides/context";
-import { Slides } from "@/types/types";
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
+import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import { Slides } from "../../types/types";
+import { SlidesContext } from "../../middleware/Slides/context";
 
 interface Props {
   slides: Slides;
 }
-export default function Footer({ slides }): ReactElement<Props> {
-  const slidesDispatch = useContext(SlidesContext)["dispatch"];
-  const totalSlides: number = slides.length - 1;
 
-  const [currentSlideNumber, setCurrenSliderNuber] = useState(0);
+export function Footer({ slides }): ReactElement<Props> {
+  const router = useRouter();
+  const path = usePathname();
 
-  const handleBack = () => {
-    const previousNumber =
-      currentSlideNumber === 0 ? 0 : currentSlideNumber - 1;
-    setCurrenSliderNuber(previousNumber);
-    slidesDispatch({
-      type: "PREVIOUS_SLIDE",
-      payload: {
-        currentSlideNumber: previousNumber,
-        currentSlide: slides[previousNumber],
-      },
-    });
-  };
-
-  const handleForward = () => {
-    const nextNumber =
-      currentSlideNumber === totalSlides ? totalSlides : currentSlideNumber + 1;
-    setCurrenSliderNuber(nextNumber);
-    slidesDispatch({
-      type: "NEXT_SLIDE",
-      payload: {
-        currentSlideNumber: nextNumber,
-        currentSlide: slides[nextNumber],
-      },
-    });
-  };
+  const pathIndex = slides.findIndex((slide) => slide.url === path);
+  const [index, setIndex] = useState<number>(pathIndex === -1 ? 0 : pathIndex);
+  const [page, setPage] = useState(index + 1);
 
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowLeft") {
-        handleBack();
-      } else if (event.key === "ArrowRight" || event.key === " ") {
-        handleForward();
+    const index = slides.findIndex((slide) => slide.url === path);
+    setIndex(index === 0 ? 1 : index);
+  }, [path]);
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      event.stopPropagation();
+
+      event.key === "ArrowRight" ||
+        event.key === " " ||
+        event.key === "ArrowLeft" ||
+        event.key === "Backspace";
+
+      window.focus();
+      if (event.key === "ArrowRight" || event.key === " ") {
+        const nextPage = Math.min(page + 1, slides.length);
+        router.replace(slides[nextPage - 1].url);
+      } else if (event.key === "ArrowLeft" || event.key === "Backspace") {
+        const prevPage = Math.max(page - 1, 1);
+        router.replace(slides[prevPage - 1].url);
       }
-    };
+    }
 
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [currentSlideNumber, totalSlides]);
+  }, [page, slides, router]);
 
-  const firstSlide = currentSlideNumber === 0;
-  const lastSlide = currentSlideNumber === totalSlides;
+  function handlePaginationChange(e, value) {
+    const pageIndex = value;
+    setPage(pageIndex);
+    router.replace(slides[pageIndex - 1].url);
+  }
 
   return (
-    <>
-      <footer className="z-50 flex flex-row min-w-full content-between justify-between p-5">
-        <IconButton onClick={handleBack} disabled={Boolean(firstSlide)}>
-          <ArrowBackIosRoundedIcon />
-        </IconButton>
-        <strong className="flex items-center">
-          {currentSlideNumber} / {totalSlides}
-        </strong>
-        <IconButton onClick={handleForward} disabled={Boolean(lastSlide)}>
-          <ArrowForwardIosRoundedIcon />
-        </IconButton>
-      </footer>
-    </>
+    <Stack spacing={2} visibility={slides.length > 1 ? "visible" : "hidden"}>
+      <Pagination
+        className=" w-screen flex justify-center"
+        count={slides.length}
+        size="large"
+        page={page}
+        onChange={handlePaginationChange}
+        renderItem={(item) => (
+          <PaginationItem
+            slots={{ previous: BackIcon, next: ForwardIcon }}
+            {...item}
+          />
+        )}
+      />
+    </Stack>
+  );
+}
+
+export function MiddlewareFooter() {
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    slidesDispatch({
+      type: "SET_SLIDE_NUMBER",
+      payload: { currentSlideNumber: page, currentSlide: slides[page - 1] },
+    });
+  }, [page]);
+
+  const slidesDispatch = useContext(SlidesContext)["dispatch"];
+  const { totalSlides, slides, currentSlideNumber } =
+    useContext(SlidesContext)["state"]["slides"];
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      event.key === "ArrowRight" ||
+        event.key === " " ||
+        event.key === "ArrowLeft" ||
+        event.key === "Backspace";
+
+      if (event.key === "ArrowRight" || event.key === " ") {
+        const nextPage = Math.min(page + 1, totalSlides);
+        setPage(nextPage);
+      } else if (event.key === "ArrowLeft" || event.key === "Backspace") {
+        const prevPage = Math.max(page - 1, 1);
+        setPage(prevPage);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [page]);
+
+  function handlePaginationChange(e, value) {
+    setPage(value);
+  }
+
+  return (
+    <Stack spacing={2} visibility={totalSlides > 1 ? "visible" : "hidden"}>
+      <Pagination
+        className=" w-screen flex justify-center"
+        count={totalSlides}
+        size="large"
+        page={page}
+        onChange={handlePaginationChange}
+        renderItem={(item) => (
+          <PaginationItem
+            slots={{ previous: BackIcon, next: ForwardIcon }}
+            {...item}
+          />
+        )}
+      />
+    </Stack>
   );
 }
