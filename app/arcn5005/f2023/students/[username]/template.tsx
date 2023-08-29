@@ -18,7 +18,6 @@ export default function NestedTemplate({
   const student = classListf2023.find(
     (student) => student.username === params.username
   );
-  console.log(student);
   return (
     <main className="flex flex-col w-screen h-screen justify-between">
       <nav className="top-0 flex flex-row w-screen h-24 ">
@@ -27,7 +26,7 @@ export default function NestedTemplate({
             student
               ? `${student.firstName} ${student.lastName}`
               : "Unregistered Student"
-          } ${params.assignments ? `- ${params.assignments} assignment` : ""}`}
+          }`}
         />
       </nav>
       {Boolean(student) ? (
