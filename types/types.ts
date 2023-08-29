@@ -16,13 +16,21 @@ export interface Slide {
 }
 export type Slides = Slide[];
 
+export interface Resource {
+  title: string;
+  id?: string;
+  url?: string;
+  author?: string;
+}
+export type Resources = Resource[];
+
 export interface Lecture {
   title: string;
   id: string;
   url?: string;
   content?: JSX.Element;
   notes?: string;
-  slides?: Slides;
+  slides?: string[];
   date: Dayjs;
 }
 export type Lectures = Lecture[];

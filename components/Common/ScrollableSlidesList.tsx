@@ -1,4 +1,3 @@
-import Box from "@mui/material/Box";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
@@ -17,14 +16,14 @@ function RenderRow(props: ListChildComponentProps) {
       disablePadding
     >
       <ListItemButton>
-        <ListItemText primary={itemList[index].title} />
+        {index + 1}.&emsp; <ListItemText primary={itemList[index]} />
       </ListItemButton>
     </ListItem>
   );
 }
 
 interface Props {
-  itemList: Slides | undefined;
+  itemList: string[] | undefined;
 }
 
 export default function ScrollableList({ itemList }: Props) {
@@ -32,15 +31,13 @@ export default function ScrollableList({ itemList }: Props) {
     <>
       {Boolean(itemList) && (
         <FixedSizeList
-          height={200}
+          height={itemList ? itemList.length * 47 : 0}
           itemSize={46}
           itemCount={itemList ? itemList.length : 0}
           overscanCount={5}
           sx={{
             width: "100%",
-            height: 200,
             bgcolor: "background.paper",
-            overflowY: "auto",
           }}
         >
           {(props) => <RenderRow {...props} itemList={itemList} />}

@@ -33,15 +33,13 @@ export default function ScrollableAssignmetnsList({ username }: Props) {
   return (
     <>
       <FixedSizeList
-        height={190}
+        height={Assignments ? Assignments.length * 47 : 0}
         itemSize={46}
         itemCount={Assignments.length}
         overscanCount={5}
         sx={{
           width: "100%",
-          height: 200,
           bgcolor: "background.paper",
-          overflowY: "auto",
         }}
       >
         {(props) => <RenderRow {...props} username={username} />}

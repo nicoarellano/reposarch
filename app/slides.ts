@@ -14,9 +14,9 @@ export const slides: Slides = [
   { id: "toc", title: "Table of Content", url: "/arcn5005/toc" },
   { id: "calendar", title: "Course Calendar", url: "/arcn5005/calendar" },
   {
-    id: "bibliography",
-    title: "Bibliography",
-    url: "/arcn5005/bibliography",
+    id: "resources",
+    title: "Resources",
+    url: "/arcn5005/resources",
   },
   {
     id: "three-example",

@@ -9,31 +9,13 @@ export const arcn5005Lectures: Lectures = [
     id: `week01`,
     date: initialDate,
     slides: [
-      {
-        id: "",
-        url: "/arcn5005",
-        title: "Overview of the course",
-      },
-      {
-        id: "",
-        title: "From Descartes and Alberti to Ivan Southerland.",
-      },
-      {
-        id: "",
-        title: "Introduction to digital tools",
-      },
-      {
-        id: "",
-        title: "The Art of Computer graphics ",
-      },
-      {
-        id: "",
-        title: "Cartesian space and digital representation of geometry",
-      },
-      {
-        id: "",
-        title: "Overview of assignments and final project",
-      },
+      "Overview of the course",
+      "From Descartes and Alberti to Ivan Southerland.",
+      "Introduction to digital tools",
+      "The Art of Computer graphics ",
+      "Cartesian space and digital representation of geometry",
+      "Overview of assignments and final project",
+      "🖥️ LAB 1: Dowloading free software, creating Github account, forking repo",
     ],
   },
   {
@@ -41,13 +23,10 @@ export const arcn5005Lectures: Lectures = [
     id: `week02`,
     date: initialDate.add(1, "week"),
     slides: [
-      {
-        id: "",
-        title: "Overview to digital tools for architects",
-      },
-      { id: "", title: "Digital turns" },
-      { id: "", title: "CAD, 3D CAD" },
-      { id: "", title: "🖥️ LAB 1: Blender" },
+      "Overview to digital tools for architects",
+      "Digital turns",
+      "CAD, 3D CAD",
+      "🖥️ LAB 2: Blender",
     ],
   },
 
@@ -56,23 +35,11 @@ export const arcn5005Lectures: Lectures = [
     id: `week03`,
     date: initialDate.add(2, "week"),
     slides: [
-      {
-        id: "",
-        title: "Coding, programming, scripting",
-      },
-      { id: "", title: "Close-sourced scripting" },
-      {
-        id: "",
-        title: "Coding for efficiency and automatization",
-      },
-      {
-        id: "",
-        title: "Programming and architecture",
-      },
-      {
-        id: "",
-        title: "🖥️ LAB 2: Close-source scripting - Dynamo / Sverchok",
-      },
+      "Coding, programming, scripting",
+      "Close-sourced scripting",
+      "Coding for efficiency and automatization",
+      "Programming and architecture",
+      "🖥️ LAB 3: Close-source scripting - Dynamo / Sverchok",
     ],
   },
   {
@@ -80,29 +47,12 @@ export const arcn5005Lectures: Lectures = [
     id: `week04`,
     date: initialDate.add(3, "week"),
     slides: [
-      {
-        id: "",
-        title: "Open source. History of open-source",
-      },
-      {
-        id: "",
-        title:
-          "FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
-      },
-      {
-        id: "",
-        title:
-          "OSI: Erik Raymond - The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary (1999)",
-      },
-      {
-        id: "",
-        title: "Coding as a Language, as a tools and as an apparatus.",
-      },
-      { id: "", title: "OS Libraries / Packages" },
-      {
-        id: "",
-        title: "🖥️ LAB 3: Visual studio code",
-      },
+      "Open source. History of open-source",
+      "FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
+      "OSI: Erik Raymond - The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary (1999)",
+      "Coding as a Language, as a tools and as an apparatus.",
+      "OS Libraries / Packages",
+      "🖥️ LAB 4: Visual studio code",
     ],
   },
 
@@ -111,34 +61,18 @@ export const arcn5005Lectures: Lectures = [
     id: `week05`,
     date: initialDate.add(4, "week"),
     slides: [
-      {
-        id: "",
-        title: "History of internet - Guess lecturer: Julie Ivanoff (?)",
-      },
-      { id: "", title: "History of Hackerdom" },
-      {
-        id: "",
-        title: "How does a website work? Structure, style, logic",
-      },
-      { id: "", title: "Backend and fronted" },
-      {
-        id: "",
-        title: "🖥️ LAB 4: HTML and CSS, JavaScript and GUI (DOM events)",
-      },
+      "History of internet - Guess lecturer: Julie Ivanoff (?)",
+      "History of Hackerdom",
+      "How does a website work? Structure, style, logic",
+      "Backend and fronted",
+      "🖥️ LAB 5: HTML and CSS, JavaScript and GUI (DOM events)",
     ],
   },
   {
     title: "Week 06 - Collaboration",
     id: `week06`,
     date: initialDate.add(5, "week"),
-    slides: [
-      { id: "", title: "Git" },
-      { id: "", title: "Github" },
-      {
-        id: "",
-        title: "🖥️ LAB 5: Web based BIM GIS software",
-      },
-    ],
+    slides: ["Git", "Github", "🖥️ LAB 6: Web based BIM GIS software"],
   },
 
   {
@@ -146,23 +80,14 @@ export const arcn5005Lectures: Lectures = [
     id: `week07`,
     date: initialDate.add(6, "week"),
     slides: [
-      {
-        id: "",
-        title: "What is BIM? , Open and Closed BIM",
-      },
-      { id: "", title: "ClosedBIM: Revit, Archicad" },
-      { id: "", title: "OpenBIM - OSArch" },
-      { id: "", title: "File formats - .rvt vs .ifc" },
-      {
-        id: "",
-        title: "BuildingSmart International and IFC",
-      },
-      { id: "", title: "Post 2020 milestones" },
-      {
-        id: "",
-        title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz",
-      },
-      { id: "", title: "🖥️ LAB 6: BlenderBIM" },
+      "What is BIM? , Open and Closed BIM",
+      "ClosedBIM: Revit, Archicad",
+      "OpenBIM - OSArch",
+      "File formats - .rvt vs .ifc",
+      "BuildingSmart International and IFC",
+      "Post 2020 milestones",
+      "BlenderBIM - Guess lecturer: Raphaël Vouilloz",
+      "🖥️ LAB 7: BlenderBIM",
     ],
   },
   {
@@ -170,11 +95,11 @@ export const arcn5005Lectures: Lectures = [
     id: `week08`,
     date: initialDate.add(8, "week"),
     slides: [
-      { id: "", title: "Web based 3D graphics" },
-      { id: "", title: "WebGL" },
-      { id: "", title: "GLTF" },
-      { id: "", title: "Tree.js" },
-      { id: "", title: "🖥️ LAB 7: and Three.js" },
+      "Web based 3D graphics",
+      "WebGL",
+      "GLTF",
+      "Tree.js",
+      "🖥️ LAB 8: and Three.js",
     ],
   },
 
@@ -183,11 +108,8 @@ export const arcn5005Lectures: Lectures = [
     id: `week09`,
     date: initialDate.add(9, "week"),
     slides: [
-      {
-        id: "",
-        title: "Introduction to web-based open source tools for architects",
-      },
-      { id: "", title: "🖥️ LAB 8: IFC.js" },
+      "Introduction to web-based open source tools for architects",
+      "🖥️ LAB 9: IFC.js",
     ],
   },
 
@@ -196,16 +118,13 @@ export const arcn5005Lectures: Lectures = [
     id: `week10`,
     date: initialDate.add(10, "week"),
     slides: [
-      { id: "", title: "Geospatial Information Systems" },
-      { id: "", title: "Coordination Systems" },
-      { id: "", title: "Proprietary GIS (Arc GIS)" },
-      { id: "", title: "Proprietary web GIS - Cesium and Mapbox" },
-      {
-        id: "",
-        title: "Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)",
-      },
-      { id: "", title: "Open Source web GIS - Leaflet and Maplibre" },
-      { id: "", title: "🖥️ LAB 9: Maplibre" },
+      "Geospatial Information Systems",
+      "Coordination Systems",
+      "Proprietary GIS (Arc GIS)",
+      "Proprietary web GIS - Cesium and Mapbox",
+      "Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)",
+      "Open Source web GIS - Leaflet and Maplibre",
+      "🖥️ LAB 10: Maplibre",
     ],
   },
 
@@ -214,9 +133,9 @@ export const arcn5005Lectures: Lectures = [
     id: `week11`,
     date: initialDate.add(11, "week"),
     slides: [
-      { id: "", title: "Deploy your software" },
-      { id: "", title: "Github pages" },
-      { id: "", title: "🖥️ LAB 10: Web based BIM GIS software" },
+      "Deploy your software",
+      "Github pages",
+      "🖥️ LAB 11: Web based BIM GIS software",
     ],
   },
 
@@ -225,14 +144,14 @@ export const arcn5005Lectures: Lectures = [
     id: `week12`,
     date: initialDate.add(12, "week"),
     slides: [
-      { id: "", title: "Frontend framework" },
-      { id: "", title: "Vue" },
-      { id: "", title: "Svelte" },
-      { id: "", title: "Angular" },
-      { id: "", title: " React.js" },
-      { id: "", title: "Typescrip" },
-      { id: "", title: "Next.js" },
-      { id: "", title: "🖥️ LAB11 : Web based BIM GIS software" },
+      "Frontend framework",
+      "Vue",
+      "Svelte",
+      "Angular",
+      " React.js",
+      "Typescrip",
+      "Next.js",
+      "🖥️ LAB 12 : Web based BIM GIS software",
     ],
   },
 
@@ -240,6 +159,12 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 13",
     id: `week13`,
     date: initialDate.add(13, "week"),
-    slides: [{ id: "", title: "🏁 Final presentations (Hackathon)" }],
+    slides: ["🖥️ LAB 13 Final assignment workshop"],
+  },
+  {
+    title: "Week 14",
+    id: `week14`,
+    date: dayjs("2023-12-18"),
+    slides: ["🏁 Final presentations"],
   },
 ];
