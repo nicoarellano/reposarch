@@ -58,7 +58,7 @@ export default function BasicSpeedDial() {
     },
     {
       icon: (
-        <Link href={"/arcn5005/bibliography"}>
+        <Link href={"/arcn5005/resources"}>
           <BookIcon sx={actionStyle} />
         </Link>
       ),
