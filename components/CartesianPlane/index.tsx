@@ -24,6 +24,7 @@ export default function CartesianPlane() {
 
   return (
     <section className="w-screen overflow-hidden grow flex flex-col">
+      <h4 className="absolute m-8">Cartesian Plane:</h4>
       <div className="flex flex-col absolute right-10 border-2 p-5 z-20 rounded-md shadow-md">
         <h5>
           pt1: ({xPosition}, {yPosition}, {zPosition})
@@ -62,7 +63,7 @@ export default function CartesianPlane() {
       <section className="grow">
         <Canvas
           orthographic
-          camera={{ zoom: 45, position: [10, 10, 10] }}
+          camera={{ zoom: 60, position: [10, 10, 10] }}
           className="grow"
         >
           <OrbitControls />

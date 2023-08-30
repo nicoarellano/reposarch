@@ -56,15 +56,14 @@ export default function BasicSpeedDial() {
       ),
       name: "Table of Content",
     },
-
-    {
-      icon: (
-        <Link href={"/arcn5005/calendar"}>
-          <CalendarIcon sx={actionStyle} />
-        </Link>
-      ),
-      name: "Calendar",
-    },
+    // {
+    //   icon: (
+    //     <Link href={"/arcn5005/calendar"}>
+    //       <CalendarIcon sx={actionStyle} />
+    //     </Link>
+    //   ),
+    //   name: "Calendar",
+    // },
     {
       icon: (
         <Link href={"/arcn5005/resources"}>

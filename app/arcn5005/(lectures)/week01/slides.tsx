@@ -1,33 +1,43 @@
-import S1 from "./s1.mdx";
-import S2 from "./s2.mdx";
-import S3 from "./s3.mdx";
-import S4 from "./s4.mdx";
-import S5 from "./s5.mdx";
-import S6 from "./s6.mdx";
-import S7 from "./s7.mdx";
-import S8 from "./s8.mdx";
-import S9 from "./s9.mdx";
-import S10 from "./s10.mdx";
-import S11 from "./s11.mdx";
-import S12 from "./s12.mdx";
-import S13 from "./s13.mdx";
-import S14 from "./s14.mdx";
-import S15 from "./s15.mdx";
+import Overview from "./slides/overview.mdx";
+import Acknowlegement from "./slides/aknowlegement.mdx";
+import FromDescartes from "./slides/fromDescartes.mdx";
+import Rome1 from "./slides/rome1.mdx";
+import Rome2 from "./slides/rome2.mdx";
+import AlbertisDevice from "./slides/albertisDevice.mdx";
+import DescartesSystem from "./slides/descartesSystem.mdx";
+import CartesianPlane from "./slides/cartesianPlane.mdx";
+import Maplibre from "./slides/maplibre.mdx";
+import Computer from "./slides/computer.mdx";
+import Sutherland from "./slides/sutherland.mdx";
+import Workspace from "./slides/workspace.mdx";
+import Levels from "./slides/levels.mdx";
+import Mandates from "./slides/mandates.mdx";
+import S15 from "./slides/s15.mdx";
 
 export const slides = [
-  { content: <S1 /> },
-  { content: <S2 /> },
-  { content: <S3 /> },
-  { content: <S4 />, notes: "Testing speaker notes!" },
-  { content: <S5 /> },
-  { content: <S6 /> },
-  { content: <S7 /> },
-  // { content: <S8 /> },
-  // { content: <S9 /> },
-  // { content: <S10 /> },
-  // { content: <S11 /> },
-  // { content: <S12 /> },
-  // { content: <S13 /> },
-  // { content: <S14 /> },
+  { content: <Overview /> },
+  { content: <Acknowlegement /> },
+  { content: <FromDescartes /> },
+  { content: <Rome1 /> },
+  { content: <Rome2 /> },
+  { content: <AlbertisDevice /> },
+  { content: <DescartesSystem /> },
+  { content: <CartesianPlane /> },
+  { content: <Maplibre /> },
+  { content: <Computer /> },
+  {
+    content: <Sutherland />,
+    notes: "Ivan Sutherland inventor of Sketchpad, the first GUI",
+  },
+  { content: <Workspace /> },
+  { content: <Levels /> },
+  {
+    content: <Mandates />,
+    notes:
+      "Government BIM mandates.\
+  Countries all over the word are becoming to regulate the use of BIM. So if one wants to participate in public works and even non public projects BIM is a requirement.\
+  Which means that BIM is in many cases not an option anymore but a mandate.\
+  Knowing that BIM software are mainly controlled by a few vendors, this mean that these software companies will have a tremendous impact over our practice.",
+  },
   // { content: <S15 /> },
 ];

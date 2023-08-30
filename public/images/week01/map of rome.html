@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Midterm exam - Nico Arellano - Airports</title>
+    <meta
+      property="og:description"
+      content="Use extrusions to display buildings' height in 3D."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        width: 100%;
+      }
+      h1 {
+        color: red;
+      }
+    </style>
+  <div id="map"></div>
+  <script>
+      const map = new maplibregl.Map({
+          container: 'map',
+          style: "../../map-styles/streets.json",
+          center: [12.4964, 41.90],
+          zoom: 13,
+          minZoom:12,
+          maxBounds: [
+            [12.424232,41.846004], 
+            [12.549030,41.918450]
+        ],
+      });
+  </script>
+  </body>
+  </html>
+  
