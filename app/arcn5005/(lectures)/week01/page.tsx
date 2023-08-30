@@ -36,7 +36,7 @@ export default function WeekToc() {
   }, [week]);
 
   return (
-    <div className=" flex flex-col items-center justify-center grow gap-8 mdx max-w-[80%]">
+    <div className=" flex flex-col items-center justify-center grow gap-8 mdx max-w-[80%] max-h-[580px]">
       {content}
     </div>
   );
