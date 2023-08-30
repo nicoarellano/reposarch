@@ -10,7 +10,15 @@ export const Websites: Resources = [
     url: "https://ifcjs.github.io/info/",
   },
   {
+    title: "That Open Company",
+    url: "https://thatopen.com/f001-p01-launch-optin",
+  },
+  {
     title: "Blender",
     url: "https://www.blender.org/",
+  },
+  {
+    title: "P5.js",
+    url: "https://p5js.org/",
   },
 ];

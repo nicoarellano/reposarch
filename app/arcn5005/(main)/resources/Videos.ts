@@ -14,6 +14,10 @@ export const Videos: Resources = [
     url: "https://youtu.be/L_SdlR57NtU?si=lYat9Mx9a6k5rL5F",
   },
   {
+    title: "The Coding Train - Programming for beginners with p5",
+    url: "https://youtu.be/yPWkPOfnGsw?si=iy6PTAkKoSt67pj_",
+  },
+  {
     title: "Nicolas Arellano - DeBlackboxing BIM",
     url: "https://youtu.be/t0U9tqBy4oc?si=ChAf74agIf9ij4fi",
   },
