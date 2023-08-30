@@ -62,7 +62,7 @@ export default function CartesianPlane() {
       <section className="grow">
         <Canvas
           orthographic
-          camera={{ zoom: 50, position: [10, 10, 10] }}
+          camera={{ zoom: 45, position: [10, 10, 10] }}
           className="grow"
         >
           <OrbitControls />
