@@ -9,16 +9,16 @@ export default function Arcn5005() {
   const title = "osarchrep";
   return (
     <section className=" flex flex-col items-center justify-between w-screen gap-5">
-      <h4>
-        <em>
-          Open source digital tools for <b>Architects</b>
-        </em>
-      </h4>
       <section className="w-screen grid grid-cols-3 divide-x grow max-h-full overflow-x-auto">
         <div className="flex items-center justify-center">
           <ProgressPage />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center flex-col">
+          <h4 className="text-center">
+            <em>
+              Open source digital tools for <b>Architects</b>
+            </em>
+          </h4>
           <Image priority src={photo} height={400} width={400} alt={title} />
         </div>
         <div className="flex items-center justify-center flex-col">
