@@ -1,18 +1,18 @@
-import S1 from "./s1.mdx";
-import S2 from "./s2.mdx";
-import S3 from "./s3.mdx";
-import S4 from "./s4.mdx";
-import S5 from "./s5.mdx";
-import S6 from "./s6.mdx";
-import S7 from "./s7.mdx";
-import S8 from "./s8.mdx";
-import S9 from "./s9.mdx";
-import S10 from "./s10.mdx";
-import S11 from "./s11.mdx";
-import S12 from "./s12.mdx";
-import S13 from "./s13.mdx";
-import S14 from "./s14.mdx";
-import S15 from "./s15.mdx";
+import S1 from "./slides/s1.mdx";
+import S2 from "./slides/s2.mdx";
+import S3 from "./slides/s3.mdx";
+import S4 from "./slides/s4.mdx";
+import S5 from "./slides/s5.mdx";
+import S6 from "./slides/s6.mdx";
+import S7 from "./slides/s7.mdx";
+import S8 from "./slides/s8.mdx";
+import S9 from "./slides/s9.mdx";
+import S10 from "./slides/s10.mdx";
+import S11 from "./slides/s11.mdx";
+import S12 from "./slides/s12.mdx";
+import S13 from "./slides/s13.mdx";
+import S14 from "./slides/s14.mdx";
+import S15 from "./slides/s15.mdx";
 
 export const slides = [
   { content: <S1 /> },
