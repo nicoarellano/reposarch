@@ -11,6 +11,11 @@ export const slides: Slides = [
     title: "Course Description",
     url: "/arcn5005/course-description",
   },
+  {
+    id: "course-outline",
+    title: "Course Outline",
+    url: "/arcn5005/course-outline",
+  },
   { id: "toc", title: "Table of Content", url: "/arcn5005/toc" },
   { id: "calendar", title: "Course Calendar", url: "/arcn5005/calendar" },
   {

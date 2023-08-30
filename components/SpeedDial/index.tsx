@@ -13,6 +13,7 @@ import HomeIcon from "@mui/icons-material/HomeRounded";
 import TocIcon from "@mui/icons-material/ListAltRounded";
 import BookIcon from "@mui/icons-material/MenuBookRounded";
 import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
+import PaperIcon from "@mui/icons-material/FeedRounded";
 
 export default function BasicSpeedDial() {
   const actionStyle = {
@@ -38,6 +39,14 @@ export default function BasicSpeedDial() {
         </Link>
       ),
       name: "Course Description",
+    },
+    {
+      icon: (
+        <Link href={"/arcn5005/course-outline"}>
+          <PaperIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Course Outline",
     },
     {
       icon: (
