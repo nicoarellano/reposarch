@@ -22,7 +22,7 @@ export default function ListWithIcon({
   return (
     <List
       sx={{
-        width: "50%",
+        width: "100%",
         bgcolor: "background.paper",
         overflowY: "auto",
       }}
