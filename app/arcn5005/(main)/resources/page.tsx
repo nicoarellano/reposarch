@@ -2,92 +2,46 @@
 
 import ListWithIcon from "../../../../components/Common/ListWithIcon";
 import LinkIcon from "@mui/icons-material/InsertLinkRounded";
+import InternetIcon from "@mui/icons-material/LanguageRounded";
 import BookIcon from "@mui/icons-material/MenuBookRounded";
 import VideoIcon from "@mui/icons-material/OndemandVideoRounded";
-import { Resources } from "../../../../types/types";
+import ToolsIcon from "@mui/icons-material/HomeRepairServiceRounded";
+import ArticleIcon from "@mui/icons-material/FeedRounded";
 
-export default function TOC() {
-  const Books: Resources = [
-    {
-      title: "Mario Carpo - The Alphabeth and the Algorithm",
-      url: "https://courseworks2.columbia.edu/files/594343/download?download_frd=1",
-    },
-    {
-      title: "Eric Raymond - The Cathedral and the Bazaar",
-      url: "https://monoskop.org/images/e/e0/Raymond_Eric_S_The_Cathedral_and_the_Bazaar_rev_ed.pdf",
-    },
-    {
-      title: "Douglas  - Program or be programmed",
-      url: "https://addc401fall2016.files.wordpress.com/2016/08/rushkoff-program-or-be-programmed.pdf",
-    },
-  ];
+import { Books } from "./Books";
+import { Websites } from "./Websites";
+import { Videos } from "./Videos";
+import { Software } from "./Software";
+import { Articles } from "./Articles";
 
-  const WebSites: Resources = [
-    {
-      title: "OSArch",
-      url: "",
-    },
-    {
-      title: "IFC.js",
-      url: "",
-    },
-    {
-      title: "Blender",
-      url: "",
-    },
-  ];
-
-  const Videos: Resources = [
-    {
-      title: "Dion Moult - FLOSS",
-      url: "https://youtu.be/DK4zmfkp_pw?si=OuFkdOM3_jD6cU_1",
-    },
-    {
-      title: "Antonio Gonzalez Viegas - IFC.js",
-      url: "https://youtu.be/YQnyVjSufsA?si=F8Wtmc6wXE29hdBZ",
-    },
-    {
-      title: "Photomesh on Meshroom and Blender",
-      url: "https://youtu.be/L_SdlR57NtU?si=lYat9Mx9a6k5rL5F",
-    },
-    {
-      title: "Nicolas Arellano - DeBlackboxing BIM",
-      url: "https://youtu.be/t0U9tqBy4oc?si=ChAf74agIf9ij4fi",
-    },
-  ];
-
-  const FreeSoftware: Resources = [
-    {
-      title: "Blender",
-      url: "",
-    },
-  ];
-
+export default function Resources() {
   return (
-    <section className="flex w-screen max-h-[580px] overflow-y-scroll p-12 items-baseline text-justify">
-      <div className="w-screen flex flex-col items-center justify-center overflow-y-auto overflow-x-hidden">
+    <section className="flex w-screen h-[580px] overflow-y-scroll overflow-x-hidden p-12 items-baseline text-justify justify-center">
+      <div className="w-1/2 flex flex-col  content-center">
+        <ListWithIcon list={Books} icon={<BookIcon />} subheader="📖 Books:" />
+        <br />
         <ListWithIcon
-          list={Books ? Books : []}
-          icon={<BookIcon />}
-          subheader="📖 Books:"
+          list={Websites}
+          icon={<InternetIcon />}
+          subheader="🌐 Websites:"
         />
         <br />
         <ListWithIcon
-          list={WebSites ? WebSites : []}
-          icon={<LinkIcon />}
-          subheader="📖 Books:"
-        />
-        <br />
-        <ListWithIcon
-          list={Videos ? Videos : []}
+          list={Videos}
           icon={<VideoIcon />}
           subheader="📺 Videos:"
         />
         <br />
         <ListWithIcon
-          list={FreeSoftware ? FreeSoftware : []}
-          icon={<VideoIcon />}
-          subheader="📺 Videos:"
+          list={Software}
+          icon={<ToolsIcon />}
+          subheader="🧰 Free Software:"
+        />
+        <br />
+        <ListWithIcon
+          list={Articles}
+          icon={<ArticleIcon />}
+          subheader="📄 Articles:"
         />
         <br />
         <em>* Resourses list will keep growing along the course</em>
