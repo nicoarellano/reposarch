@@ -16,7 +16,7 @@ export default function NestedTemplate({
   const router = useRouter();
 
   const student = classListf2023.find(
-    (student) => student.username === params.username
+    (student) => student.username === params.student[0]
   );
   return (
     <main className="flex flex-col w-screen h-screen justify-between">
