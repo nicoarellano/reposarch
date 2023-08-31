@@ -19,7 +19,6 @@ const initialState = {
   slides: {
     totalSlides: slides.length - 1,
     slides: slides,
-    currentSlide: null,
     currentSlideNumber: 0 as number,
   },
 };

@@ -2,19 +2,6 @@
 
 /public/ignore
 
-/app/arcn5005/(Lectures)/week-02
-/app/arcn5005/(Lectures)/week-03
-/app/arcn5005/(Lectures)/week-04
-/app/arcn5005/(Lectures)/week-05
-/app/arcn5005/(Lectures)/week-06
-/app/arcn5005/(Lectures)/week-07
-/app/arcn5005/(Lectures)/week-08
-/app/arcn5005/(Lectures)/week-09
-/app/arcn5005/(Lectures)/week-10
-/app/arcn5005/(Lectures)/week-11
-/app/arcn5005/(Lectures)/week-12
-/app/arcn5005/(Lectures)/week-13
-
 # dependencies
 /node_modules
 /.pnp

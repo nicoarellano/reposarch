@@ -1,6 +1,6 @@
 "use client";
 
-import { Footer } from "../../../components/Footer";
+import { SlidesFooter } from "../../../components/Footer";
 import { HeaderOfSlide } from "../../../components/Header";
 import { slides } from "../../slides";
 
@@ -16,7 +16,7 @@ export default function NestedTemplate({
       </nav>
       <section className="flex justify-center grow">{children}</section>
       <nav className="w-screen flex h-16 items-center">
-        <Footer slides={slides} />
+        <SlidesFooter slides={slides} />
       </nav>
     </main>
   );

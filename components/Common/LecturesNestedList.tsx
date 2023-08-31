@@ -74,9 +74,9 @@ export default function LencutesNestedList({ list }: Props) {
             </Link>
             {open[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
-          {Boolean(item.slides) && (
+          {Boolean(item.toc) && (
             <Collapse in={open[index]} timeout="auto" unmountOnExit>
-              <ScrollableList itemList={item.slides} />
+              <ScrollableList toc={item.toc} />
             </Collapse>
           )}
         </Fragment>
