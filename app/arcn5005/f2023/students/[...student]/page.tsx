@@ -16,8 +16,8 @@ export default function Page({ params }): ReactElement<Props> {
       {Boolean(assignment) ? (
         <section className="flex w-screen items-center justify-center flex-col gap-8">
           <iframe
-            src={`/arcn5005/f2023/students/${username}/${assignment}/index.html`}
-            className="grow h-[550px] w-screen"
+            src={`../../../../arcn5005/f2023/students/${username}/${assignment}/index.html`}
+            className="grow h-[580px] w-screen"
           />
         </section>
       ) : (
