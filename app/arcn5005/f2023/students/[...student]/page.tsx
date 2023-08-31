@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import ListWithIcon from "../../../../../components/Common/ListWithIcon";
 import { Assignments } from "../../../assignments";
 import LinkIcon from "@mui/icons-material/InsertLinkRounded";
+import StudentIframe from "../../../../../students/StudentIframe";
 
 interface Props {
   params: { student: string };
@@ -15,10 +16,7 @@ export default function Page({ params }): ReactElement<Props> {
     <section className="flex items-center justify-center w-1/2 flex-col gap-8">
       {Boolean(assignment) ? (
         <section className="flex w-screen items-center justify-center flex-col gap-8">
-          <iframe
-            src={`../../../../arcn5005/f2023/students/${username}/${assignment}/index.html`}
-            className="grow h-[580px] w-screen"
-          />
+          <StudentIframe username={username} assignment={assignment} />
         </section>
       ) : (
         <ListWithIcon
