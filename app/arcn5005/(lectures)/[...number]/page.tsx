@@ -27,34 +27,35 @@ export default function Page({ params }): ReactElement<Props> {
 
   useEffect(() => {
     if (lecture?.content) {
-      let paramsNumber: number = 0;
-      if (params.number.lengh < 2) {
-        router.push("1");
-      } else Number(params.number[1]);
-      const fullContent = [
-        {
-          element: (
-            <nav className="w-2/5">
-              <ListWithIcon
-                list={lecture.toc as { title: string }[]}
-                subheader="Table of Content"
-                icon={<ArrowRightIcon />}
-              />
-            </nav>
-          ),
-        },
-        ...lecture?.content,
-      ];
+      if (!params.number[1]) router.push("1");
+      else {
+        const paramsNumber = Number(params.number[1]);
 
-      const index =
-        paramsNumber < 1
-          ? 1
-          : paramsNumber > fullContent.length
-          ? fullContent.length
-          : paramsNumber;
+        const fullContent = [
+          {
+            element: (
+              <nav className="w-2/5">
+                <ListWithIcon
+                  list={lecture.toc as { title: string }[]}
+                  subheader="Table of Content"
+                  icon={<ArrowRightIcon />}
+                />
+              </nav>
+            ),
+          },
+          ...lecture?.content,
+        ];
 
-      setCurrentSlideNumber(index);
-      setContent(fullContent);
+        const index =
+          paramsNumber < 1
+            ? 1
+            : paramsNumber > fullContent.length
+            ? fullContent.length
+            : paramsNumber;
+
+        setCurrentSlideNumber(index);
+        setContent(fullContent);
+      }
     }
   }, [params.number[1], lecture]);
 

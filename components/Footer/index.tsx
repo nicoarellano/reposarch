@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, ReactElement, useContext } from "react";
+import { useState, useEffect, ReactElement } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import Stack from "@mui/material/Stack";
@@ -12,10 +12,10 @@ import { Slides } from "../../types/types";
 
 interface Props {
   list: [];
-  currentPage?: number;
+  currentPage: number;
 }
 
-export function Footer({ list, currentPage = 1 }): ReactElement<Props> {
+export function Footer({ list, currentPage }): ReactElement<Props> {
   const router = useRouter();
   const path = usePathname();
   const [page, setPage] = useState(1);
