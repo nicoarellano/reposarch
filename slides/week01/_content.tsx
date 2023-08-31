@@ -16,7 +16,6 @@ import S15 from "./s15.mdx";
 import { Toc } from "../../types/types";
 
 export const content: Toc = [
-  // { element: <Toc /> },
   { element: <Acknowlegement /> },
   { element: <FromDescartes /> },
   { element: <Rome1 /> },

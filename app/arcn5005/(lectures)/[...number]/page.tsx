@@ -6,6 +6,8 @@ import { arcn5005Lectures } from "../../../arcn5005Lectures";
 import { Lecture, Toc } from "../../../../types/types";
 import { Header } from "../../../../components/Header";
 import { Footer } from "../../../../components/Footer";
+import ListWithIcon from "../../../../components/Common/ListWithIcon";
+import ArrowRightIcon from "@mui/icons-material/ArrowRightRounded";
 
 interface Props {
   params: { number: string };
@@ -23,16 +25,31 @@ export default function Page({ params }): ReactElement<Props> {
   useEffect(() => {
     if (lecture?.content) {
       const paramsNumber = Number(params.number[1]);
+      const fullContent = [
+        {
+          element: (
+            <nav className="w-2/5">
+              <ListWithIcon
+                list={lecture.toc as { title: string }[]}
+                subheader="Table of Content"
+                icon={<ArrowRightIcon />}
+              />
+            </nav>
+          ),
+        },
+        ...lecture?.content,
+      ];
+      console.log(fullContent);
+
       const index =
         paramsNumber < 1
           ? 1
-          : paramsNumber > lecture?.content?.length
-          ? lecture?.content?.length
+          : paramsNumber > fullContent.length
+          ? fullContent.length
           : paramsNumber;
 
-      console.log("INDEX: ", index);
       setCurrentSlideNumber(index);
-      setContent(lecture.content);
+      setContent(fullContent);
     }
   }, [params.number[1], lecture]);
 
@@ -40,12 +57,11 @@ export default function Page({ params }): ReactElement<Props> {
     if (content.length > 0) {
       const currentContent = content[currentSlideNumber - 1];
       if (currentContent?.notes)
-        console.log(`%c${currentContent.notes}`, "font-size: 50px");
+        // 🎶 Speaker notes as console log
+        console.log(`%c${currentContent.notes}`, "font-size: 40px");
       setCurrentSlideElement(currentContent.element);
     }
   }, [content, currentSlideNumber]);
-
-  // 🎶 Speaker notes as console log
 
   return (
     <main className="flex flex-col w-screen h-screen justify-between">

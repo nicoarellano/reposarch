@@ -1,4 +1,5 @@
-// import _Toc from "./_toc.mdx";
+import { Toc } from "../../types/types";
+import S1 from "./s1.mdx";
 import S2 from "./s2.mdx";
 import S3 from "./s3.mdx";
 import S4 from "./s4.mdx";
@@ -13,22 +14,21 @@ import S12 from "./s12.mdx";
 import S13 from "./s13.mdx";
 import S14 from "./s14.mdx";
 import S15 from "./s15.mdx";
-import { Toc } from "../../types/types";
 
 export const content: Toc = [
-  // { element: <_Toc /> },
-  { element: <S2 /> },
-  { element: <S3 /> },
-  { element: <S4 /> },
-  { element: <S5 /> },
-  { element: <S6 /> },
-  { element: <S7 /> },
-  { element: <S8 /> },
-  { element: <S9 /> },
-  { element: <S10 /> },
-  { element: <S11 /> },
-  { element: <S12 /> },
-  { element: <S13 /> },
-  { element: <S14 /> },
-  { element: <S15 /> },
+  { element: <S1 /> },
+  // { element: <S2 /> },
+  // { element: <S3 /> },
+  // { element: <S4 /> },
+  // { element: <S5 /> },
+  // { element: <S6 /> },
+  // { element: <S7 /> },
+  // { element: <S8 /> },
+  // { element: <S9 /> },
+  // { element: <S10 /> },
+  // { element: <S11 /> },
+  // { element: <S12 /> },
+  // { element: <S13 /> },
+  // { element: <S14 /> },
+  // { element: <S15 /> },
 ];
