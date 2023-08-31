@@ -2,9 +2,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList, ListChildComponentProps } from "react-window";
+import { Toc } from "../../types/types";
 
 function RenderRow(props: ListChildComponentProps) {
-  const { index, style, itemList } = props;
+  const { index, style, toc } = props;
 
   return (
     <ListItem
@@ -15,33 +16,32 @@ function RenderRow(props: ListChildComponentProps) {
       disablePadding
     >
       <ListItemButton>
-        {index + 1}.&emsp; <ListItemText primary={itemList[index]} />
+        {index + 1}.&emsp; <ListItemText primary={toc[index].title} />
       </ListItemButton>
     </ListItem>
   );
 }
 
 interface Props {
-  itemList: string[] | undefined;
+  toc: Toc;
 }
 
-export default function ScrollableList({ itemList }: Props) {
+export default function ScrollableList({ toc }: Props) {
   return (
     <>
-      {Boolean(itemList) && (
-        <FixedSizeList
-          height={itemList ? itemList.length * 47 : 0}
-          itemSize={46}
-          itemCount={itemList ? itemList.length : 0}
-          overscanCount={5}
-          sx={{
-            width: "100%",
-            bgcolor: "background.paper",
-          }}
-        >
-          {(props) => <RenderRow {...props} itemList={itemList} />}
-        </FixedSizeList>
-      )}
+      <FixedSizeList
+        height={toc ? toc.length * 47 : 0}
+        itemSize={46}
+        itemCount={toc ? toc.length : 0}
+        overscanCount={5}
+        sx={{
+          width: "100%",
+          bgcolor: "background.paper",
+        }}
+      >
+        {(props) => <RenderRow {...props} toc={toc} />}
+      </FixedSizeList>
+      )
     </>
   );
 }
