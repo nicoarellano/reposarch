@@ -6,6 +6,7 @@ interface SlidesTypes {
   slides: any;
   currentSlide: Slide | null;
   currentSlideNumber: number;
+  toc?: { title: string }[];
 }
 
 export type SlidesState = SlidesTypes;
@@ -23,7 +24,7 @@ export type SlidesActions =
 export const SlidesReducer = (state: SlidesState, action: SlidesActions) => {
   switch (action.type) {
     case "SET_SLIDES":
-      const { currentSlide, slides, currentSlideNumber, totalSlides } =
+      const { currentSlide, slides, currentSlideNumber, totalSlides, toc } =
         action.payload;
       return {
         ...state,
@@ -31,6 +32,7 @@ export const SlidesReducer = (state: SlidesState, action: SlidesActions) => {
         slides,
         currentSlideNumber,
         totalSlides,
+        toc,
       };
     case "SET_SLIDE_NUMBER":
       return {

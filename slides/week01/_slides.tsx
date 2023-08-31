@@ -1,21 +1,21 @@
-import Overview from "./slides/overview.mdx";
-import Acknowlegement from "./slides/aknowlegement.mdx";
-import FromDescartes from "./slides/fromDescartes.mdx";
-import Rome1 from "./slides/rome1.mdx";
-import Rome2 from "./slides/rome2.mdx";
-import AlbertisDevice from "./slides/albertisDevice.mdx";
-import DescartesSystem from "./slides/descartesSystem.mdx";
-import CartesianPlane from "./slides/cartesianPlane.mdx";
-import Maplibre from "./slides/maplibre.mdx";
-import Computer from "./slides/computer.mdx";
-import Sutherland from "./slides/sutherland.mdx";
-import Workspace from "./slides/workspace.mdx";
-import Levels from "./slides/levels.mdx";
-import Mandates from "./slides/mandates.mdx";
-import S15 from "./slides/s15.mdx";
+import Toc from "./_toc";
+import Acknowlegement from "./aknowlegement.mdx";
+import FromDescartes from "./fromDescartes.mdx";
+import Rome1 from "./rome1.mdx";
+import Rome2 from "./rome2.mdx";
+import AlbertisDevice from "./albertisDevice.mdx";
+import DescartesSystem from "./descartesSystem.mdx";
+import CartesianPlane from "./cartesianPlane.mdx";
+import Maplibre from "./maplibre.mdx";
+import Computer from "./computer.mdx";
+import Sutherland from "./sutherland.mdx";
+import Workspace from "./workspace.mdx";
+import Levels from "./levels.mdx";
+import Mandates from "./mandates.mdx";
+import S15 from "./s15.mdx";
 
 export const slides = [
-  { content: <Overview /> },
+  { content: <Toc /> },
   { content: <Acknowlegement /> },
   { content: <FromDescartes /> },
   { content: <Rome1 /> },
