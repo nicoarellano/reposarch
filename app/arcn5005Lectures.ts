@@ -3,6 +3,17 @@ import { Lectures } from "../types/types";
 import { content as week01 } from "../slides/week01/_content";
 import { content as week02 } from "../slides/week02/_content";
 import { content as week03 } from "../slides/week03/_content";
+import { content as week04 } from "../slides/week04/_content";
+import { content as week05 } from "../slides/week05/_content";
+import { content as week06 } from "../slides/week06/_content";
+import { content as week07 } from "../slides/week07/_content";
+import { content as week08 } from "../slides/week08/_content";
+import { content as week09 } from "../slides/week09/_content";
+import { content as week10 } from "../slides/week10/_content";
+import { content as week11 } from "../slides/week11/_content";
+import { content as week12 } from "../slides/week12/_content";
+import { content as week13 } from "../slides/week13/_content";
+import { content as week14 } from "../slides/week14/_content";
 
 const initialDate = dayjs("2023-09-07");
 
@@ -29,19 +40,20 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 02 - Digitalization of architectural representation",
     id: `week02`,
     date: initialDate.add(1, "week"),
+    content: week02,
     toc: [
       { title: "Overview to digital tools for architects" },
       { title: "Digital turns" },
       { title: "CAD, 3D CAD" },
       { title: "🖥️ LAB 2: Blender" },
     ],
-    content: week02,
   },
 
   {
     title: "Week 03 - Coding and scripting for architects",
     id: `week03`,
     date: initialDate.add(2, "week"),
+    content: week03,
     toc: [
       { title: "Coding, programming, scripting" },
       { title: "Close-sourced scripting" },
@@ -54,6 +66,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 04 - Open source software",
     id: `week04`,
     date: initialDate.add(3, "week"),
+    content: week04,
     toc: [
       { title: "Open source. History of open-source" },
       {
@@ -74,8 +87,9 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 05 - Internet",
     id: `week05`,
     date: initialDate.add(4, "week"),
+    content: week05,
     toc: [
-      { title: "History of internet - Guess lecturer: Julie Ivanoff (?)" },
+      { title: "History of internet - Guess lecturer: (?)" },
       { title: "History of Hackerdom" },
       { title: "How does a website work? Structure, style, logic" },
       { title: "Backend and fronted" },
@@ -86,6 +100,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 06 - Collaboration",
     id: `week06`,
     date: initialDate.add(5, "week"),
+    content: week06,
     toc: [
       { title: "Git" },
       { title: "Github" },
@@ -97,6 +112,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 07 - BIM",
     id: `week07`,
     date: initialDate.add(6, "week"),
+    content: week07,
     toc: [
       { title: "What is BIM? , Open and Closed BIM" },
       { title: "ClosedBIM: Revit, Archicad" },
@@ -112,6 +128,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 08 - Web based 3D graphics",
     id: `week08`,
     date: initialDate.add(8, "week"),
+    content: week08,
     toc: [
       { title: "Web based 3D graphics" },
       { title: "WebGL" },
@@ -125,6 +142,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 09 - IFC.js",
     id: `week09`,
     date: initialDate.add(9, "week"),
+    content: week09,
     toc: [
       { title: "Introduction to web-based open source tools for architects" },
       { title: "🖥️ LAB 9: IFC.js" },
@@ -135,6 +153,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 10 - OS GIS",
     id: `week10`,
     date: initialDate.add(10, "week"),
+    content: week10,
     toc: [
       { title: "Geospatial Information Systems" },
       { title: "Coordination Systems" },
@@ -150,6 +169,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 11 - Going online “hello world”",
     id: `week11`,
     date: initialDate.add(11, "week"),
+    content: week11,
     toc: [
       { title: "Deploy your software" },
       { title: "Github pages" },
@@ -161,6 +181,7 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 12 - Scalability and maintainability",
     id: `week12`,
     date: initialDate.add(12, "week"),
+    content: week12,
     toc: [
       { title: "Frontend framework" },
       { title: "Vue" },
@@ -177,12 +198,14 @@ export const arcn5005Lectures: Lectures = [
     title: "Week 13",
     id: `week13`,
     date: initialDate.add(13, "week"),
+    content: week13,
     toc: [{ title: "🖥️ LAB 13 Final assignment workshop" }],
   },
   {
     title: "Week 14",
     id: `week14`,
     date: dayjs("2023-12-18"),
+    content: week14,
     toc: [{ title: "🏁 Final presentations" }],
   },
 ];
