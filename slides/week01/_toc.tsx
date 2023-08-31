@@ -1,8 +1,8 @@
 import ListWithIcon from "../../components/Common/ListWithIcon";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
-import { Resources } from "../../types/types";
+import { Toc } from "../../types/types";
 
-const toc: Resources = [
+const toc: Toc = [
   {
     title: "Territory Acknowledgement",
     url: "https://carleton.ca/indigenous/policies-procedures/algonquin-territory-acknowledgment/",
@@ -32,7 +32,7 @@ const toc: Resources = [
 export default function Toc() {
   return (
     <ListWithIcon
-      list={toc}
+      list={toc as { title: string }[]}
       subheader="Table of Content"
       icon={<SlideshowIcon />}
     />
