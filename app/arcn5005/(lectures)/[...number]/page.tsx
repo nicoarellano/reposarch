@@ -8,6 +8,7 @@ import { Header } from "../../../../components/Header";
 import { Footer } from "../../../../components/Footer";
 import ListWithIcon from "../../../../components/Common/ListWithIcon";
 import ArrowRightIcon from "@mui/icons-material/ArrowRightRounded";
+import { useRouter } from "next/navigation";
 
 interface Props {
   params: { number: string };
@@ -22,9 +23,14 @@ export default function Page({ params }): ReactElement<Props> {
   const [currentSlideElement, setCurrentSlideElement] = useState<JSX.Element>();
   const [currentSlideNumber, setCurrentSlideNumber] = useState(0);
 
+  const router = useRouter();
+
   useEffect(() => {
     if (lecture?.content) {
-      const paramsNumber = Number(params.number[1]);
+      let paramsNumber: number = 0;
+      if (params.number.lengh < 2) {
+        router.push("1");
+      } else Number(params.number[1]);
       const fullContent = [
         {
           element: (
@@ -39,7 +45,6 @@ export default function Page({ params }): ReactElement<Props> {
         },
         ...lecture?.content,
       ];
-      console.log(fullContent);
 
       const index =
         paramsNumber < 1

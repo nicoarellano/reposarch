@@ -21,6 +21,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 01 - The art of computer graphics",
     id: `week01`,
+    url: `week01/1`,
     date: initialDate,
     content: week01,
     toc: [
@@ -39,6 +40,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 02 - Digitalization of architectural representation",
     id: `week02`,
+    url: `week02/1`,
     date: initialDate.add(1, "week"),
     content: week02,
     toc: [
@@ -52,6 +54,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 03 - Coding and scripting for architects",
     id: `week03`,
+    url: `week03/1`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
@@ -65,6 +68,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 04 - Open source software",
     id: `week04`,
+    url: `week04/1`,
     date: initialDate.add(3, "week"),
     content: week04,
     toc: [
@@ -86,6 +90,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 05 - Internet",
     id: `week05`,
+    url: `week05/1`,
     date: initialDate.add(4, "week"),
     content: week05,
     toc: [
@@ -99,6 +104,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 06 - Collaboration",
     id: `week06`,
+    url: `week06/1`,
     date: initialDate.add(5, "week"),
     content: week06,
     toc: [
@@ -111,6 +117,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 07 - BIM",
     id: `week07`,
+    url: `week07/1`,
     date: initialDate.add(6, "week"),
     content: week07,
     toc: [
@@ -127,6 +134,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 08 - Web based 3D graphics",
     id: `week08`,
+    url: `week08/1`,
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
@@ -141,6 +149,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 09 - IFC.js",
     id: `week09`,
+    url: `week09/1`,
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
@@ -152,6 +161,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 10 - OS GIS",
     id: `week10`,
+    url: `week10/1`,
     date: initialDate.add(10, "week"),
     content: week10,
     toc: [
@@ -168,6 +178,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 11 - Going online “hello world”",
     id: `week11`,
+    url: `week11/1`,
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
@@ -180,6 +191,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 12 - Scalability and maintainability",
     id: `week12`,
+    url: `week12/1`,
     date: initialDate.add(12, "week"),
     content: week12,
     toc: [
@@ -197,6 +209,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 13",
     id: `week13`,
+    url: `week13/1`,
     date: initialDate.add(13, "week"),
     content: week13,
     toc: [{ title: "🖥️ LAB 13 Final assignment workshop" }],
@@ -204,6 +217,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Week 14",
     id: `week14`,
+    url: `week14/1`,
     date: dayjs("2023-12-18"),
     content: week14,
     toc: [{ title: "🏁 Final presentations" }],
