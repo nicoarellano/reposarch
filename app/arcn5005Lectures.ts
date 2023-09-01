@@ -94,6 +94,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(4, "week"),
     content: week05,
     toc: [
+      { title: "🟡 Quiz 1" },
       { title: "Git and Github" },
       { title: "Open source. History of open-source" },
       {
@@ -128,11 +129,12 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(6, "week"),
     content: week07,
     toc: [
+      { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
+      { title: "🔴 Assignment 1 - presentation" },
       { title: "Open vs Closed BIM" },
       { title: "File formats - .rvt vs .ifc" },
       { title: "BuildingSmart International and IFC" },
       { title: "Post 2020 milestones" },
-      { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
       { title: "🖥️ LAB 7: BlenderBIM" },
     ],
   },
@@ -158,6 +160,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
+      { title: "🟡 Quiz 2" },
       { title: "Introduction to web-based open source tools for architects" },
       { title: "IFC.js" },
       { title: "🖥️ LAB 9: IFC.js " },
@@ -188,6 +191,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
+      { title: "🔴 Assignment 2 - presentation" },
       { title: "Deploy your software" },
       { title: "Github pages" },
       { title: "🖥️ LAB 11: Web based BIM GIS software" },
@@ -201,6 +205,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(12, "week"),
     content: week12,
     toc: [
+      { title: "🟡 Quiz 3" },
       { title: "Frontend framework" },
       { title: "Vue" },
       { title: "Svelte" },
@@ -218,7 +223,10 @@ export const arcn5005Lectures: Lectures = [
     url: `week13/1`,
     date: initialDate.add(13, "week"),
     content: week13,
-    toc: [{ title: "🖥️ LAB 13 Final assignment workshop" }],
+    toc: [
+      { title: "🔴 Assignment 3 - presentation" },
+      { title: "🖥️ LAB 13 Final assignment workshop" },
+    ],
   },
   {
     title: "Final Presentation",
