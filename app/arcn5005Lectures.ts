@@ -29,10 +29,10 @@ export const arcn5005Lectures: Lectures = [
       { title: "Understanding the course portal" },
       { title: "Course Outline" },
       { title: "Evaluations" },
+      { title: "Overview of assignments and final project" },
       { title: "From Descartes and Alberti to Ivan Southerland." },
       { title: "The Art of Computer graphics " },
       { title: "Cartesian space and digital representation of geometry" },
-      { title: "Overview of assignments and final project" },
       {
         title:
           "🖥️ LAB 1: Dowloading free software, creating Github account, forking repo : Visual studio code",
