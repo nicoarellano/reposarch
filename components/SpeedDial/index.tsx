@@ -14,6 +14,7 @@ import TocIcon from "@mui/icons-material/ListAltRounded";
 import BookIcon from "@mui/icons-material/MenuBookRounded";
 import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
 import PaperIcon from "@mui/icons-material/FeedRounded";
+import EvaluationsIcon from "@mui/icons-material/EmojiEventsRounded";
 
 export default function BasicSpeedDial() {
   const actionStyle = {
@@ -79,6 +80,14 @@ export default function BasicSpeedDial() {
         </Link>
       ),
       name: "Class List",
+    },
+    {
+      icon: (
+        <Link href={"/arcn5005/evaluations"}>
+          <EvaluationsIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Evaluations",
     },
   ];
 

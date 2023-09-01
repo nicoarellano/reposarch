@@ -1,5 +1,5 @@
 import { Toc } from "../../types/types";
-import Miquel from "./miquel.mdx";
+import S1 from "./s1.mdx";
 import S2 from "./s2.mdx";
 import S3 from "./s3.mdx";
 import S4 from "./s4.mdx";
@@ -16,7 +16,7 @@ import S14 from "./s14.mdx";
 import S15 from "./s15.mdx";
 
 export const content: Toc = [
-  { element: <Miquel /> },
+  { element: <S1 /> },
   // { element: <S2 /> },
   // { element: <S3 /> },
   // { element: <S4 /> },

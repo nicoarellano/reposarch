@@ -9,7 +9,7 @@ import {
 } from "react";
 import { SlidesReducer, SlidesActions, SlidesState } from "./reducer";
 import { Slides, Slide } from "../../types/types";
-import { slides } from "../../app/slides";
+import { slides } from "../../app/MainMenu";
 
 type InitialStateType = {
   slides: SlidesState;
