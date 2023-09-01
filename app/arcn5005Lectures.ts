@@ -13,7 +13,7 @@ import { content as week10 } from "../slides/week10/_content";
 import { content as week11 } from "../slides/week11/_content";
 import { content as week12 } from "../slides/week12/_content";
 import { content as week13 } from "../slides/week13/_content";
-import { content as week14 } from "../slides/week14/_content";
+import { content as final } from "../slides/finalPresentation/_content";
 
 const initialDate = dayjs("2023-09-07");
 
@@ -121,7 +121,6 @@ export const arcn5005Lectures: Lectures = [
       { title: "🖥️ LAB 6:  JavaScript" },
     ],
   },
-
   {
     title: "Week 07 - OpenBIM",
     id: `week07`,
@@ -222,11 +221,11 @@ export const arcn5005Lectures: Lectures = [
     toc: [{ title: "🖥️ LAB 13 Final assignment workshop" }],
   },
   {
-    title: "Week 14",
-    id: `week14`,
-    url: `week14/1`,
+    title: "Final Presentation",
+    id: `final`,
+    url: `final/1`,
     date: dayjs("2023-12-18"),
-    content: week14,
+    content: final,
     toc: [{ title: "🏁 Final presentations" }],
   },
 ];
