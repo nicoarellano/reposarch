@@ -2,7 +2,7 @@
 
 import { SlidesFooter } from "../../../components/Footer";
 import { HeaderOfSlide } from "../../../components/Header";
-import { slides } from "../../slides";
+import { slides } from "../../MainMenu";
 
 export default function NestedTemplate({
   children,

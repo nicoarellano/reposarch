@@ -24,6 +24,11 @@ export const slides: Slides = [
     url: "/arcn5005/resources",
   },
   {
+    id: "evaluations",
+    title: "Evaluations",
+    url: "/arcn5005/evaluations",
+  },
+  {
     id: "three-example",
     title: "Three Example ",
     url: "/arcn5005/three-example",

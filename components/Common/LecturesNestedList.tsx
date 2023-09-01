@@ -55,7 +55,7 @@ export default function LencutesNestedList({ list }: Props) {
           >
             <ListItemText
               primary={`${item.title}${
-                item.date ? `(${item.date.format("YYYY/MM/DD")})` : ""
+                item.date ? ` (${item.date.format("YYYY/MM/DD")})` : ""
               }`}
             />
             <Link

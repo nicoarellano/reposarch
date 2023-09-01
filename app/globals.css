@@ -62,6 +62,10 @@ h5 {
   line-height: 38px;
 }
 
+.mdx {
+  text-align: center;
+}
+
 .mdx ul {
   list-style-type: square;
   margin-left: 2rem;
