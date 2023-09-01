@@ -75,7 +75,7 @@ export default function BasicSpeedDial() {
     },
     {
       icon: (
-        <Link href={"/arcn5005/evaluations"}>
+        <Link href={"/arcn5005/f2023/students"}>
           <StudentPageIcon sx={actionStyle} />
         </Link>
       ),
@@ -83,7 +83,7 @@ export default function BasicSpeedDial() {
     },
     {
       icon: (
-        <Link href={"/arcn5005/f2023/students"}>
+        <Link href={"/arcn5005/evaluations"}>
           <EvaluationsIcon sx={actionStyle} />
         </Link>
       ),
