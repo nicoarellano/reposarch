@@ -30,7 +30,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "Course Outline" },
       { title: "Evaluations" },
       { title: "Overview of assignments and final project" },
-      { title: "From Descartes and Alberti to Ivan Southerland." },
+      { title: "From the Renaissance to the computer era." },
       { title: "The Art of Computer graphics " },
       { title: "Cartesian space and digital representation of geometry" },
       {
@@ -46,7 +46,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(1, "week"),
     content: week02,
     toc: [
-      { title: " Photogrametry - Guess lecturer: Miguel Reina Ortiz" },
+      { title: "Photogrametry - Guess lecturer: Miguel Reina Ortiz" },
       { title: "Introduction to digital tools" },
       { title: "Digital tools for architects" },
       { title: "Digital turns" },
@@ -63,6 +63,8 @@ export const arcn5005Lectures: Lectures = [
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
+      { title: "What is BIM" },
+      { title: "Closed-BIM" },
       { title: "Close-sourced scripting" },
       { title: "Coding, programming, scripting" },
       {
