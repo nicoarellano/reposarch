@@ -4,7 +4,7 @@ import Acknowlegement from "./aknowlegement.mdx";
 import FromTheRenaissance from "./FromTheRenaissance.mdx";
 import Rome1 from "./rome1.mdx";
 import Rome2 from "./rome2.mdx";
-import AlbertisDevice from "./AlbertisDevice.mdx";
+import AlbertisDevice from "./albertisDevice.mdx";
 import AlbertisGrid from "./AlbertisGrid.mdx";
 import DescartesSystem from "./descartesSystem.mdx";
 import CartesianPlane from "./cartesianPlane.mdx";
