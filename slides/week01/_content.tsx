@@ -24,7 +24,7 @@ import AnalogProcess from "./AnalogProcess.mdx";
 import BlackBoxDiagram from "./BlackBoxDiagram.mdx";
 import DigitalCreativeProcess from "./DigitalCreativeProcess.mdx";
 import ProcessGui from "./ProcessGui.mdx";
-import Vendors from "./Vendors.mdx";
+import Vendors from "./vendors.mdx";
 import Box from "../../components/Common/Box";
 
 export const content: Toc = [
