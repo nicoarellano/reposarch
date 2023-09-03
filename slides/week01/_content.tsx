@@ -20,12 +20,19 @@ import DigitalTurns from "./DigitalTurns.mdx";
 import DigitalTurn1 from "./DigitalTurn1.mdx";
 import DurersWindow from "./DurersWindow.mdx";
 import DurersWindow2 from "./DurersWindow2.mdx";
+import AnalogProcess from "./AnalogProcess.mdx";
+import BlackBoxDiagram from "./BlackBoxDiagram.mdx";
+import DigitalCreativeProcess from "./DigitalCreativeProcess.mdx";
+import ProcessGui from "./ProcessGui.mdx";
+import Vendors from "./Vendors.mdx";
+import Box from "../../components/Common/Box";
 
 export const content: Toc = [
   { element: <Acknowlegement /> },
   { element: <FromTheRenaissance /> },
   { element: <Rome1 /> },
   { element: <Rome2 /> },
+  { element: <AnalogProcess /> },
   {
     element: <AlbertisDevice />,
     notes:
@@ -63,18 +70,34 @@ export const content: Toc = [
     element: <Sutherland />,
     notes: "Ivan Sutherland inventor of Sketchpad, the first GUI",
   },
+  { element: <ProcessGui /> },
   { element: <DigitalTurns /> },
+  { element: <DigitalCreativeProcess /> },
   { element: <Workspace /> },
   { element: <DigitalTurn1 /> },
   { element: <Workspace /> },
+  { element: <Vendors /> },
   {
     element: <Blackbox />,
     notes:
       "The term black box to describe opaque computer processes has been used since early\
-      1940s. It has its origins in electronic circuits to describe a system that can be understood only in\
+      1940s. It has its origins in electronic circuits",
+  },
+  {
+    element: <BlackBoxDiagram />,
+    notes:
+      "to describe a system that can be understood only in\
     terms of its inputs and outputs, but which process is not accessible or even visible to users. To\
     'de-blackbox' is to understand the process, parts, and connection of the system.",
   },
+  {
+    element: <Box />,
+    notes:
+      "to describe a system that can be understood only in\
+    terms of its inputs and outputs, but which process is not accessible or even visible to users. To\
+    'de-blackbox' is to understand the process, parts, and connection of the system.",
+  },
+
   { element: <Picon /> },
   { element: <SecondDigitalTurn /> },
 ];
