@@ -11,6 +11,7 @@ import CartesianPlane from "./cartesianPlane.mdx";
 import Maplibre from "./maplibre.mdx";
 import Computer from "./computer.mdx";
 import Mitchell from "./Mitchell.mdx";
+import Mitchell1 from "./Mitchell1.mdx";
 import Sutherland from "./sutherland.mdx";
 import SecondDigitalTurn from "./secondDigitalTurn.mdx";
 import Workspace from "./workspace.mdx";
@@ -64,6 +65,7 @@ export const content: Toc = [
   },
   { element: <Computer /> },
   { element: <Mitchell /> },
+  { element: <Mitchell1 /> },
   { element: <Maplibre /> },
 
   {
