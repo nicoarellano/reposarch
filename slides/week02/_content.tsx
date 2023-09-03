@@ -1,7 +1,7 @@
 import { Toc } from "../../types/types";
 import Miquel from "./miquel.mdx";
-import S2 from "./s2.mdx";
-import S3 from "./s3.mdx";
+import Cad from "./Cad.mdx";
+import ToolsOfTheImagination from "./ToolsOfTheImagination.mdx";
 import S4 from "./s4.mdx";
 import S5 from "./s5.mdx";
 import S6 from "./s6.mdx";
@@ -17,8 +17,8 @@ import S15 from "./s15.mdx";
 
 export const content: Toc = [
   { element: <Miquel /> },
-  // { element: <S2 /> },
-  // { element: <S3 /> },
+  { element: <Cad /> },
+  { element: <ToolsOfTheImagination /> },
   // { element: <S4 /> },
   // { element: <S5 /> },
   // { element: <S6 /> },
