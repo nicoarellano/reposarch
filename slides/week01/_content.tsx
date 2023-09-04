@@ -21,7 +21,6 @@ export const content: Toc = [
         <Image
           src="/images/week01/from-the-renaissance.jpg"
           alt="Medieval hacker"
-          caption={"Ai generated image"}
         />
       </div>
     ),
@@ -143,16 +142,25 @@ export const content: Toc = [
         src="/images/week01/mitchell.jpg"
         alt="The Art of Computer Graphics Programming"
         caption={
-          "The Art of Computer Graphics Programming - William Mitchell (1987)"
+          "The Art of Computer Graphics Programming - William J. Mitchell (1987)"
         }
       />
     ),
     notes:
       "Alberti's dream remained technically impossible for 500 years untill the creation of the modern computers.",
   },
+  {
+    element: (
+      <Image
+        src="/images/week01/primitives.png"
+        alt="Primitives"
+        caption={
+          "Kandinsky's graphic primitives—the point, the line, and the plane—become the pixel, the vector, and the filled polygon. - WJM"
+        }
+      />
+    ),
+  },
   { element: <Maplibre /> },
-  { element: <h1>Quote from WM</h1> },
-
   {
     element: (
       <Image
@@ -285,22 +293,47 @@ export const content: Toc = [
       <>
         <h1>Two obstacles</h1>
         <br />
-        <h3>Black boxes</h3>
         <h3>Digital oblivion</h3>
+        <h3>Black boxes</h3>
       </>
     ),
-    notes: "",
+    notes:
+      "Two conditions must be met before architects can fully de-blackbox the digital toolbox.\
+    Firstly, architects must have a working knowledge of computer programming. Secondly, the\
+    source code—the list of human-readable instructions that define a computer program—of the\
+    software that they use must be accessible for modification by the user.",
   },
   {
     element: (
       <>
         <h1>Action</h1>
         <br />
-        <h3>Participate in the Open source communities</h3>
         <h3>Educate ourselves and our peers</h3>
+        <h3>Participate in the Open source communities</h3>
       </>
     ),
     notes: "",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          You need not know all the technical details governing the operation of
+          a computer in order to produce graphics successfully any more that you
+          need to be an expert in automobile technology in order to drive a car.
+          <br />
+          You must, however, know the basic terminology, understand the roles of
+          the various fundamental components and know where limitations on
+          capacity and performance are likely to appear.
+        </em>
+        <h5>
+          <br />
+          <em>
+            William J. Mitchell - The Art of Computer Graphics Programming{" "}
+          </em>
+        </h5>
+      </h4>
+    ),
   },
   {
     element: <Box />,
