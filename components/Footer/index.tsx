@@ -66,7 +66,7 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
   return (
     <Stack spacing={2} visibility={list.length > 1 ? "visible" : "hidden"}>
       <Pagination
-        className=" w-screen flex justify-center"
+        className=" w-screen flex justify-center absolute bottom-0 p-5"
         count={list.length}
         size="large"
         page={page}

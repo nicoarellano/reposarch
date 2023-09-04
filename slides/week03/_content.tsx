@@ -29,7 +29,6 @@ export const content: Toc = [
 However, that is not exactly the way the Architecture Engineering and Construction or AEC industry is using BIM.\
 The status quo is to work with proprietary solutions and closed file formats.",
   },
-  { element: <Levels /> },
   {
     element: <Mandates />,
     notes:

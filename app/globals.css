@@ -62,46 +62,46 @@ h5 {
   line-height: 38px;
 }
 
-.mdx {
+.slides {
   text-align: center;
 }
 
-.mdx ul {
+.slides ul {
   list-style-type: square;
   margin-left: 2rem;
 }
 
-.mdx h1 {
+.slides h1 {
   font-size: 60px;
   font-weight: 700;
   line-height: 80px;
 
 }
 
-.mdx h2 {
+.slides h2 {
   font-size: 50px;
   font-weight: 500;
   line-height: 70px;
 }
 
-.mdx h3 {
+.slides h3 {
   font-size: 40px;
   font-weight: 400;
   line-height: 60px;
 }
 
-.mdx h4 {
+.slides h4 {
   font-size: 30px;
   font-weight: 300;
   line-height: 50px;
 }
 
-.mdx h5 {
+.slides h5 {
   font-size: 20px;
   font-weight: 300;
   line-height: 40px;
 }
 
-.mdx img {
-  max-height: 500px;
+.slides img {
+  max-height: 520px;
 }

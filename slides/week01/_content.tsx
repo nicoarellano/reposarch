@@ -1,4 +1,5 @@
 import { Toc } from "../../types/types";
+import Image from "../../components/Common/Image";
 
 import Acknowlegement from "./aknowlegement.mdx";
 import FromTheRenaissance from "./FromTheRenaissance.mdx";
@@ -29,13 +30,36 @@ import Vendors from "./vendors.mdx";
 import Box from "../../components/Common/Box";
 
 export const content: Toc = [
-  { element: <Acknowlegement /> },
-  { element: <FromTheRenaissance /> },
+  {
+    element: <Acknowlegement />,
+    notes:
+      "I would like to begin by acknowledging that the land on which we gather is the traditional and unceded territory of the Algonquin nation.",
+  },
+  {
+    element: (
+      <div>
+        <h3>From the Renaissance to the Computer Era</h3>
+        <br />
+        <Image
+          src="/images/week01/from-the-renaissance.jpg"
+          alt="Medieval hacker"
+        />
+      </div>
+    ),
+  },
   { element: <Rome1 /> },
   { element: <Rome2 /> },
   { element: <AnalogProcess /> },
   {
-    element: <AlbertisDevice />,
+    element: (
+      <Image
+        src="/images/week01/albertis-device.png"
+        alt="Alberti's device"
+        caption={
+          "Leon Battista Alberti’s device for the topographical survey of the city of Rome (1450)"
+        }
+      />
+    ),
     notes:
       "Alberti’s survey of Rome records the passage and lineamenta (outline) of certain features in the city of Rome including: \
       walls, rivers, streets, hills, and buildings, as well as the locations of temples, public works, gates, and monuments.\
