@@ -70,14 +70,12 @@ export default function Page({ params }): ReactElement<Props> {
   }, [content, currentSlideNumber]);
 
   return (
-    <main className="flex flex-col w-screen h-screen justify-between">
+    <main className="flex flex-col w-screen max-h-screen justify-between">
       <nav className="top-0 flex flex-row w-screen h-24 ">
         <Header title={lecture?.title} />
       </nav>
-      <section className="flex justify-center grow">
-        <section className=" flex flex-col items-center justify-center grow gap-8 mdx max-w-[80%] max-h-[580px]">
-          {currentSlideElement}
-        </section>
+      <section className=" flex flex-col items-center justify-center slides w-screen h-[550px] ">
+        {currentSlideElement}
       </section>
       <nav className="w-screen flex h-16 items-center">
         <Footer list={content} currentPage={currentSlideNumber} />
