@@ -15,13 +15,15 @@ export default function CustomImage({
   ...props
 }: Props) {
   return (
-    <div className="flex justify-center col-span-6 md:col-span-4 lg:col-span-3 aspect-video w-full relative">
-      <Image src={src} fill objectFit="contain" alt={alt} {...props} />
+    <>
+      <div className="flex justify-center col-span-6 md:col-span-4 lg:col-span-3 aspect-video w-full relative">
+        <Image src={src} fill objectFit="contain" alt={alt} {...props} />
+      </div>
       {caption && (
-        <p className="absolute bottom-0 text-gray-500">
+        <p className="relative bottom-0 text-gray-500 mt-3">
           <em>{caption}</em>
         </p>
       )}
-    </div>
+    </>
   );
 }
