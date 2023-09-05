@@ -10,8 +10,21 @@ import Mandates from "./Mandates.mdx";
 import RevitOrArchicad from "./RevitOrArchicad.mdx";
 import RevitWins from "./RevitWins.mdx";
 import ClosedBim from "./ClosedBim.mdx";
+import Cad from "./Cad.mdx";
+import WhatIsCad from "./WhatIsCad.mdx";
 
 export const content: Toc = [
+  { element: <Cad /> },
+  { element: <WhatIsCad /> },
+  {
+    element: (
+      <Image
+        src="/images/week02/tools0of-the-imagination.jpg"
+        alt="Tools of the Imagination"
+        caption={"Tools of the imagination - Susan Piedmont-Palladino (2007)"}
+      />
+    ),
+  },
   { element: <WhatIsBim /> },
   { element: <BimOrCad /> },
   {
