@@ -18,6 +18,9 @@ export default function NestedTemplate({
   const student = classListf2023.find(
     (student) => student.username === params.student[0]
   );
+
+  const username = params.student[0];
+  const assignment = params.student[1];
   return (
     <main className="flex flex-col w-screen h-screen justify-between">
       <nav className="top-0 flex flex-row w-screen h-24 ">
@@ -39,7 +42,7 @@ export default function NestedTemplate({
       <footer className="m-4 flex flex-row-reverse absolute z-20 bottom-0 right-0">
         <IconButton onClick={() => router.back()} title={"Back"}>
           <Avatar
-            src={`/arcn5005/f2023/students/${params.username}/avatar.jpg`}
+            src={`/arcn5005/f2023/students/${username}/avatar.jpg`}
             sx={{ width: 45, height: 45 }}
           />
         </IconButton>

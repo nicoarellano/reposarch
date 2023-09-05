@@ -1,5 +1,4 @@
 import { Toc } from "../../../../types/types";
-import Link from "next/link";
 
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
@@ -12,6 +11,36 @@ export const content: Toc = [
     element: <h1>Territory Acknowledgment</h1>,
     notes:
       "I would like to begin by acknowledging that the land on which we gather is the traditional and unceded territory of the Algonquin nation.",
+  },
+  {
+    element: (
+      <section className=" grid grid-cols-2 divide-x grow max-h-1/4 w-full overflow-x-auto">
+        <div className="flex items-center justify-center grow">
+          <Image src="/images/week01/Nico.png" alt="Medieval hacker" />
+        </div>
+        <div className="flex items-center justify-center ">
+          <ul>
+            <li>
+              <h4>Architect from Universidad Catolica of Chile</h4>
+            </li>
+            <li>
+              <h4>
+                Research team lead at Carleton Immersive Media Studio (CIMS)
+              </h4>
+            </li>
+            <li>
+              <h4>PhD candidate at Carleton University</h4>
+            </li>
+            <li>
+              <h4>Amateur programme</h4>
+            </li>
+          </ul>
+        </div>
+      </section>
+    ),
+  },
+  {
+    element: <h1>Tell me about you</h1>,
   },
   {
     element: (

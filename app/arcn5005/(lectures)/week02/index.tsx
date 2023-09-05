@@ -16,7 +16,17 @@ export const content: Toc = [
     element: <h1>🗣️ Language! </h1>,
     notes:
       "Humans use language to define and understand the world around them, but also to communicate ideas. Language is also a process of creation.\
-    Artificial languages is a tool human use to communicate to each other and to create ideas and worlds (cosmopoiesis)",
+    Artificial languages s a tool human use to communicate to each other and to create ideas and worlds (cosmopoiesis)",
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h1>Rise your hand if you have never coaded</h1>
+      </>
+    ),
+    notes: "False, anybody literate person has coded",
   },
   {
     element: (
@@ -32,9 +42,9 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "  Codes > systematization of language > meaning to abstract symbols\
-      Humans have created codes to systematize artificial language into abstract symbols.\
-      Such symbols are conventions that lacked meaning until we combine them",
+      " Code is a tecnology humans have created to systematize artificial language into abstract symbols.\
+      Such symbols are conventions that lacked meaning until we combine them\
+      Then, they allow us to create and to communicate ideas",
   },
   {
     element: (
@@ -81,6 +91,15 @@ export const content: Toc = [
       The ‘data’ that computers read doesn't need to be readable to us.\
       Humans use programming ‘languages’ so they know what they are instructing, but a computer just needs ‘binary code’—which is a combination between zeros (when the electronic device is in the charged stage) and ones (when uncharged).\
       programming languages designed to translate our operations into machine code.",
+  },
+  {
+    element: (
+      <>
+        <h1>0️⃣1️⃣❔</h1>
+        <br />
+        <h1>Does anybody know how does binary code work?</h1>
+      </>
+    ),
   },
   {
     element: (

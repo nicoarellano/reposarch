@@ -7,10 +7,10 @@ export const Announcements: Resources = [
     url: "",
   },
   {
-    title: `2023/09/05:  My name is Nicolas Arellano, I am an Architect and a PhD Candidate at Carleton University.\n
-    I am honoured to be your teachear and very excited of starting the class.\n
-    Our first class will be this Thursday September 7th at 2:35 pm at the Room AA-435 at the Architecture Building\n
-    💻 Please bring your own laptop for the class!\n
+    title: `2023/09/05:  My name is Nicolas Arellano, I am an Architect and a Ph.D. Candidate at Carleton University.
+    I am honoured to be your teacher and very excited about starting the class.
+    Our first class will be this Thursday, September 7th at 2:35 pm in Room AA-435 at the Architecture Building
+    💻 Please bring your own laptop for the class!
     I am looking forward forward to meeting you all!`,
   },
 ];
