@@ -14,7 +14,69 @@ import Cad from "./Cad.mdx";
 import WhatIsCad from "./WhatIsCad.mdx";
 
 export const content: Toc = [
+  {
+    element: (
+      <Image
+        src="/images/week01/sutherland.png"
+        alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
+        caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
+      />
+    ),
+    notes:
+      "In 1973, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
+       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
+       GUIs made computer more accessible for non-programmers, including architects.\
+       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\
+       Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/tools0of-the-imagination.jpg"
+        alt="Tools of Imagination"
+        caption="Tools of Imagination - Susan Piedmont-Palladino"
+        href="https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false"
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/vendors.png"
+        alt="AECO's main CAD/BIM Vendors"
+        caption={"AECO's main CAD/BIM Vendors"}
+      />
+    ),
+    notes:
+      "the programs for architects that were produced using GUIs had been designed with specific functionalities.\
+      On the one hand, they allowed architects to explore infinite graphic possibilities.\
+      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/process-with-gui.png"
+        alt="Digital Creative Process"
+        caption={"Digital creative process with GUI"}
+      />
+    ),
+    notes:
+      "Carpo says that GUIs quickly became “the only computer use that most people had ever known”.\
+      This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
+      In some cases, an accessible tool, but in most cases, an utterly opaque one.",
+  },
   { element: <Cad /> },
+  {
+    element: (
+      <embed
+        src="/resources/may_everythingisalreadyanimage.pdf"
+        width="90%"
+        height="100%"
+        type="application/pdf"
+      ></embed>
+    ),
+  },
   { element: <WhatIsCad /> },
   {
     element: (

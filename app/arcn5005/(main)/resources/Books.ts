@@ -41,4 +41,8 @@ export const Books: Resources = [
     title: "Picon, Antoine – Digital culture and architecture (2010)",
     url: "https://courseworks2.columbia.edu/files/594319/download?download_frd=1",
   },
+  {
+    title: "Tools of Imagination - Susan Piedmont-Palladino",
+    url: "https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false",
+  },
 ];

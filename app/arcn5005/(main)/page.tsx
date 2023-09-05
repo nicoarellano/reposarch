@@ -10,7 +10,7 @@ export default function Arcn5005() {
   return (
     <section className=" flex flex-col items-center justify-between w-11/12 gap-5">
       <section className=" grid grid-cols-3 divide-x grow max-h-11/12 overflow-x-auto">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center ">
           <ProgressPage />
         </div>
         <div className="flex items-center justify-center flex-col">

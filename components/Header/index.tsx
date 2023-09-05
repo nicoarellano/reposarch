@@ -1,6 +1,5 @@
 "use client";
 import { ReactElement } from "react";
-import Link from "next/link";
 import Logo from "./Logo";
 import LeftSpeedDial from "../SpeedDial";
 import { usePathname } from "next/navigation";
@@ -17,9 +16,7 @@ export function Header({ title }): ReactElement<Props> {
   return (
     <nav>
       <header className="flex flex-row justify-between w-screen z-40 p-6">
-        <Link href="/">
-          <Logo />
-        </Link>
+        <Logo />
         <h1
           className="flex items-center hover:cursor-pointer"
           onClick={() => router.back()}
@@ -46,9 +43,7 @@ export function HeaderOfSlide({ slides }): ReactElement<SlidesProps> {
   return (
     <nav>
       <header className="flex flex-row justify-between w-screen z-40 p-6">
-        <Link href="/">
-          <Logo />
-        </Link>
+        <Logo />
         <h1 className="flex items-center">{slideTitle}</h1>
         <nav className="w-90px z-50">
           <LeftSpeedDial />

@@ -62,9 +62,14 @@ export default function Page({ params }): ReactElement<Props> {
   useEffect(() => {
     if (content.length > 0) {
       const currentContent = content[currentSlideNumber - 1];
-      if (currentContent?.notes)
+      if (currentContent?.notes) {
         // 🎶 Speaker notes as console log
-        console.log(`%c${currentContent.notes}`, "font-size: 40px");
+        console.log(
+          `%c${currentSlideNumber}- ==================================`,
+          "color: red; font-size: 30px"
+        );
+        console.log(`%c${currentContent.notes}`, "font-size: 35px");
+      }
       setCurrentSlideElement(currentContent.element);
     }
   }, [content, currentSlideNumber]);
