@@ -40,15 +40,15 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
-    title: "Week 02 - Digitalization of architectural representation",
+    title: "Week 02 - Programming and digitalization of the physical world",
     id: `week02`,
     url: `week02/1`,
     date: initialDate.add(1, "week"),
     content: week02,
     toc: [
+      { title: "Digitalization of the physical wold" },
       { title: "Photogrametry - Guess lecturer: Miguel Reina Ortiz" },
       { title: "Introduction to digital tools" },
-      { title: "Digital tools for architects" },
       { title: "Digital turns" },
       { title: "Coding, programming, scripting" },
       { title: "🖥️ LAB 2: MeshRoom to Blender" },
@@ -63,6 +63,7 @@ export const arcn5005Lectures: Lectures = [
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
+      { title: "Digital tools for architects" },
       { title: "Representation Processes: CAD, 3D CAD, BIM" },
       { title: "What is BIM" },
       { title: "Proprietary software" },

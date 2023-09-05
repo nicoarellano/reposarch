@@ -1,4 +1,5 @@
 import { Toc } from "../../../../types/types";
+import Link from "next/link";
 
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
@@ -55,6 +56,9 @@ export const content: Toc = [
         caption={"Analog creative process"}
       />
     ),
+    notes:
+      "We have been using analogue tools for centuries to express our creativity.\
+    This allows a particular relationship with the object.",
   },
   {
     element: (
@@ -178,6 +182,13 @@ export const content: Toc = [
         caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
       />
     ),
+    notes:
+      "In 1973, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
+       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
+       GUIs made computer more accessible for non-programmers, including architects.\
+       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\
+       Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.",
   },
   {
     element: (
@@ -259,6 +270,28 @@ export const content: Toc = [
         caption={"AECO's main CAD/BIM Vendors"}
       />
     ),
+    notes:
+      "the programs for architects that were produced using GUIs had been designed with specific functionalities.\
+      On the one hand, they allowed architects to explore infinite graphic possibilities.\
+      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          GUIs quickly became “the only computer use that most people had ever
+          known”
+        </em>
+        <h5>
+          <br />
+          <em>Mario Carpo - Digital Turn</em>
+        </h5>
+      </h4>
+    ),
+    notes:
+      "Carpo says that GUIs quickly became “the only computer use that most people had ever known”.\
+      This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
+      In some cases, an accessible tool, but in most cases, an utterly opaque one.",
   },
   {
     element: (
@@ -300,10 +333,10 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h1>Two obstacles</h1>
+        <h1>Two obstacles 🛑</h1>
         <br />
-        <h3>Digital oblivion</h3>
-        <h3>Black boxes</h3>
+        <h3>1. Digital oblivion</h3>
+        <h3>2. Black boxes</h3>
       </>
     ),
     notes:
@@ -315,10 +348,10 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h1>Action</h1>
+        <h1>Action 🎬</h1>
         <br />
-        <h3>Educate ourselves and our peers</h3>
-        <h3>Participate in the Open source communities</h3>
+        <h3>1. Educate ourselves and our peers</h3>
+        <h3>2. Participate in the Open source communities</h3>
       </>
     ),
     notes: "",
@@ -347,6 +380,96 @@ export const content: Toc = [
   {
     element: <TOC />,
     notes: "",
+  },
+  {
+    element: (
+      <>
+        <h1> Next class:</h1>
+        <br />
+        <h3>Programming and digitalization of the physical world</h3>
+      </>
+    ),
+  },
+  {
+    element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
+    notes:
+      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
+    They are used to communicate with computers and with people through computers.",
+  },
+  {
+    element: (
+      <>
+        <h2>We program by writing text</h2>
+        <br />
+        <h3>Next class we will learn about programming languages</h3>
+        <br />
+        <h3>To write text on a computer we need a text editor or an IDE</h3>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h1>What is an IDE?</h1>
+        <br />
+        <h3>Integrated Development Environment</h3>
+      </>
+    ),
+    notes:
+      " What is an IDE?\
+    Code is nothing more than text, so we could do this with any text editing tool (like Word or the Notepad),\
+    but writing code with notepad would not be too comfortable for a number of reasons (e.g. no syntax highlighting, no code checking, no code formatter, etc).\
+    Instead, people usually use IDEs:  a text editor with some extra tools to make the programmer's life easier.",
+  },
+  {
+    element: (
+      <>
+        <h2>Which language to use?</h2>
+        <br />
+        <h4>There are thousands of programming languages</h4>
+        <h4>
+          For this course we will mainly focus on <strong>Javascript</strong>
+        </h4>
+        <h4>Which is the language of all modern internet browsers</h4>
+        <br />
+        <Image
+          src="/images/week01/js.png"
+          alt="JavaScript"
+          href="https://en.wikipedia.org/wiki/JavaScript"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/vsCode.png"
+        alt="Visual Studio Code"
+        href="https://code.visualstudio.com/download"
+        caption={"Visual Studio Code, free IDE from Microsoft."}
+      />
+    ),
+    notes:
+      "we are going to use Visual Studio Code, which is a free IDE from Microsoft. It’s one of the most widely used in the web development world.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/extensions.png"
+        alt="Visual Studio Code"
+        href="https://code.visualstudio.com/download"
+        caption={
+          "We are going to download 5 extensions: \
+        1. Live Server\
+        2. Prettier\
+        3. Material Icon \
+        4. Console Ninja\
+        5. Auto Import"
+        }
+      />
+    ),
   },
   {
     element: (
