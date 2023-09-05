@@ -34,7 +34,7 @@ export default function Page({ params }): ReactElement<Props> {
         const fullContent = [
           {
             element: (
-              <nav className="w-2/5">
+              <nav className="w-2/5 flex items-center">
                 <ListWithIcon
                   list={lecture.toc as { title: string }[]}
                   subheader="Table of Content"
@@ -70,7 +70,7 @@ export default function Page({ params }): ReactElement<Props> {
   }, [content, currentSlideNumber]);
 
   return (
-    <main className="flex flex-col w-screen max-h-screen justify-between">
+    <main className="flex flex-col w-screen h-screen justify-between">
       <nav className="top-0 flex flex-row w-screen h-24 ">
         <Header title={lecture?.title} />
       </nav>

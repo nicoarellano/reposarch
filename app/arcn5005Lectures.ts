@@ -1,19 +1,19 @@
 import dayjs from "dayjs";
 import { Lectures } from "../types/types";
-import { content as week01 } from "../slides/week01/_content";
-import { content as week02 } from "../slides/week02/_content";
-import { content as week03 } from "../slides/week03/_content";
-import { content as week04 } from "../slides/week04/_content";
-import { content as week05 } from "../slides/week05/_content";
-import { content as week06 } from "../slides/week06/_content";
-import { content as week07 } from "../slides/week07/_content";
-import { content as week08 } from "../slides/week08/_content";
-import { content as week09 } from "../slides/week09/_content";
-import { content as week10 } from "../slides/week10/_content";
-import { content as week11 } from "../slides/week11/_content";
-import { content as week12 } from "../slides/week12/_content";
-import { content as week13 } from "../slides/week13/_content";
-import { content as final } from "../slides/finalPresentation/_content";
+import { content as week01 } from "./arcn5005/(lectures)/week01";
+import { content as week02 } from "./arcn5005/(lectures)/week02";
+import { content as week03 } from "./arcn5005/(lectures)/week03";
+import { content as week04 } from "./arcn5005/(lectures)/week04/";
+import { content as week05 } from "./arcn5005/(lectures)/week05/";
+import { content as week06 } from "./arcn5005/(lectures)/week06/";
+import { content as week07 } from "./arcn5005/(lectures)/week07/";
+import { content as week08 } from "./arcn5005/(lectures)/week08/";
+import { content as week09 } from "./arcn5005/(lectures)/week09/";
+import { content as week10 } from "./arcn5005/(lectures)/week10/";
+import { content as week11 } from "./arcn5005/(lectures)/week11/";
+import { content as week12 } from "./arcn5005/(lectures)/week12/";
+import { content as week13 } from "./arcn5005/(lectures)/week13/";
+import { content as final } from "./arcn5005/(lectures)/final";
 
 const initialDate = dayjs("2023-09-07");
 
@@ -50,23 +50,24 @@ export const arcn5005Lectures: Lectures = [
       { title: "Introduction to digital tools" },
       { title: "Digital tools for architects" },
       { title: "Digital turns" },
-      { title: "CAD, 3D CAD" },
+      { title: "Coding, programming, scripting" },
       { title: "🖥️ LAB 2: MeshRoom to Blender" },
     ],
   },
 
   {
-    title: "Week 03 - BIM : The new paradigm?",
+    title: "Week 03 - Representation tools and processes for architects",
     id: `week03`,
     url: `week03/1`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
+      { title: "Representation Processes: CAD, 3D CAD, BIM" },
       { title: "What is BIM" },
-      { title: "Closed-BIM" },
+      { title: "Proprietary software" },
+      { title: "Closed source formats" },
       { title: "Close-sourced scripting" },
-      { title: "Coding, programming, scripting" },
       {
         title:
           "Coding for efficiency and automatization or the good old ; Programming solutions for repetetive tasks",
