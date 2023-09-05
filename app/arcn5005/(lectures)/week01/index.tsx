@@ -428,16 +428,34 @@ export const content: Toc = [
       <>
         <h2>Which language to use?</h2>
         <br />
+        <Image
+          src="/images/week02/top-programming-languages.png"
+          alt="Top programming languages"
+          href="https://gowithcode.com/top-programming-languages"
+          caption="Top programming languages: https://gowithcode.com/top-programming-languages"
+        />
+      </>
+    ),
+    notes: "There are thousands of programming languages",
+  },
+  {
+    element: (
+      <>
+        <h2>Which language to use?</h2>
+        <br />
         <h4>There are thousands of programming languages</h4>
         <h4>
           For this course we will mainly focus on <strong>Javascript</strong>
         </h4>
-        <h4>Which is the language of all modern internet browsers</h4>
+        <h4>
+          Which is the language of all modern internet browsers and one of the
+          most popular programming languages in the world
+        </h4>
         <br />
         <Image
           src="/images/week01/js.png"
           alt="JavaScript"
-          href="https://en.wikipedia.org/wiki/JavaScript"
+          href="https://gowithcode.com/top-programming-languages#javascript"
         />
       </>
     ),

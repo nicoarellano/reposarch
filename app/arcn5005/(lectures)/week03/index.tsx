@@ -33,6 +33,16 @@ export const content: Toc = [
   {
     element: (
       <Image
+        src="/images/week03/tools0of-the-imagination.jpg"
+        alt="Tools of Imagination"
+        caption="Tools of Imagination - Susan Piedmont-Palladino"
+        href="https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false"
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
         src="/images/week01/vendors.png"
         alt="AECO's main CAD/BIM Vendors"
         caption={"AECO's main CAD/BIM Vendors"}

@@ -22,10 +22,22 @@ export default function CustomImage({
       <div className="flex justify-center col-span-6 md:col-span-4 lg:col-span-3 aspect-video w-full relative">
         {href ? (
           <Link href={href}>
-            <Image src={src} fill objectFit="contain" alt={alt} {...props} />
+            <Image
+              src={src}
+              fill
+              style={{ objectFit: "contain" }}
+              alt={alt}
+              {...props}
+            />
           </Link>
         ) : (
-          <Image src={src} fill objectFit="contain" alt={alt} {...props} />
+          <Image
+            src={src}
+            fill
+            style={{ objectFit: "contain" }}
+            alt={alt}
+            {...props}
+          />
         )}
       </div>
       {caption && (
