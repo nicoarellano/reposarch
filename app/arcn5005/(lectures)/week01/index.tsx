@@ -32,7 +32,7 @@ export const content: Toc = [
               <h4>PhD candidate at Carleton University</h4>
             </li>
             <li>
-              <h4>Amateur programme</h4>
+              <h4>Amateur programmer</h4>
             </li>
           </ul>
         </div>

@@ -20,17 +20,17 @@ export default function Page({ params }): ReactElement<Props> {
         </section>
       ) : (
         <div className="flex flex-col justify-center items-center h-fit">
-          <div className="w-1/4 h-1/2">
+          <div className="w-1/4 h-[380px]">
             <ListWithIcon
               list={Assignments}
               subheader="Assignments"
               icon={<LinkIcon />}
             />
           </div>
-          <div className="h-1/2">
+          <div className="h-fit">
             <iframe
               src={`/arcn5005/f2023/students/${username}/about.html`}
-              className="grow h-[200px] w-screen"
+              className="grow h-[260px] w-screen"
             />
           </div>
         </div>
