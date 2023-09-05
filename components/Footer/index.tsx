@@ -66,7 +66,7 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
   return (
     <Stack spacing={2} visibility={list.length > 1 ? "visible" : "hidden"}>
       <Pagination
-        className=" w-screen flex justify-center absolute bottom-0 p-5"
+        className=" w-screen flex justify-center p-3 "
         count={list.length}
         size="large"
         page={page}
@@ -148,63 +148,3 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
     </Stack>
   );
 }
-
-// export function MiddlewareFooter() {
-//   const [page, setPage] = useState(1);
-
-//   useEffect(() => {
-//     slidesDispatch({
-//       type: "SET_SLIDE_NUMBER",
-//       payload: { currentSlideNumber: page },
-//     });
-//   }, [page]);
-
-//   const slidesDispatch = useContext(SlidesContext)["dispatch"];
-//   const { totalSlides, slides, currentSlideNumber } =
-//     useContext(SlidesContext)["state"]["slides"];
-
-//   useEffect(() => {
-//     function handleKeyDown(event: KeyboardEvent) {
-//       event.key === "ArrowRight" ||
-//         event.key === " " ||
-//         event.key === "ArrowLeft" ||
-//         event.key === "Backspace";
-
-//       if (event.key === "ArrowRight" || event.key === " ") {
-//         const nextPage = Math.min(page + 1, totalSlides);
-//         setPage(nextPage);
-//       } else if (event.key === "ArrowLeft" || event.key === "Backspace") {
-//         const prevPage = Math.max(page - 1, 1);
-//         setPage(prevPage);
-//       }
-//     }
-
-//     window.addEventListener("keydown", handleKeyDown);
-
-//     return () => {
-//       window.removeEventListener("keydown", handleKeyDown);
-//     };
-//   }, [page]);
-
-//   function handlePaginationChange(e, value) {
-//     setPage(value);
-//   }
-
-//   return (
-//     <Stack spacing={2} visibility={totalSlides > 1 ? "visible" : "hidden"}>
-//       <Pagination
-//         className=" w-screen flex justify-center"
-//         count={totalSlides}
-//         size="large"
-//         page={page}
-//         onChange={handlePaginationChange}
-//         renderItem={(item) => (
-//           <PaginationItem
-//             slots={{ previous: BackIcon, next: ForwardIcon }}
-//             {...item}
-//           />
-//         )}
-//       />
-//     </Stack>
-//   );
-// }
