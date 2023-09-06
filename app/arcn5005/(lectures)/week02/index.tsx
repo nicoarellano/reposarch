@@ -5,11 +5,80 @@ import Video from "../../../../components/Common/Video";
 export const content: Toc = [
   {
     element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h2>How to bring physical objects to the digital world</h2>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>There are multiple tools to do this...</h2>
+        <br />
+        <h2>Today we will talk about one of them called Photogrametry</h2>
+      </>
+    ),
+  },
+  {
+    element: (
       <Image
         src="/images/week02/Miquel_Reina_Ortiz_BW.jpg"
         alt="Miquel Reina Ortiz"
         caption="Miquel Reina Ortiz - Arquitect, Ph.D Candidate"
       />
+    ),
+    notes:
+      "Miquel Reina Ortiz is an Assistant Professor (2021-present) and a Ph.D. Candidate in Architecture (2015-present) at the Azrieli School of Architecture and Urbanism (ASAU) at Carleton University. His research concerns the relationship between different scales of intervention within the context of the Historic City. He has been teaching courses in heritage conservation, site and building documentation, urbanism and design studio at the ASAU. He collaborates with the Carleton Immersive Media Studio (CIMS) in the development of new digital workflows applied to heritage conservation. He has participated in international field works and co-authored articles on topics related to digital heritage documentation. He is the Canadian representative of the ICOMOS Emerging Professional Working Group (EPWG) since 2020. He studied architecture at ETSABarcelona (UPC), where he graduated with honours in 2011, and holds a MsC in Restoration and Rehabilitation at ETSABarcelona (UPC). His professional experience in the architecture studio Ravetllat-Ribas Barcelona (2008-2015) focused on adaptive reuse projects, and as a licensed architect, he has designed public space, housing, interiors and competitions.",
+  },
+  {
+    element: (
+      <>
+        <h3>Miquel Reina Ortiz</h3>
+        <br />
+        <h5>
+          Miquel Reina Ortiz was an Assistant Professor (2021) and isa Ph.D.
+          Candidate in Architecture (2015-present) at the Azrieli School of
+          Architecture and Urbanism (ASAU) at Carleton University. His research
+          concerns the relationship between different scales of intervention
+          within the context of the Historic City. He has been teaching courses
+          in heritage conservation, site and building documentation, urbanism
+          and design studio at the ASAU. He collaborates with the Carleton
+          Immersive Media Studio (CIMS) in the development of new digital
+          workflows applied to heritage conservation. He has participated in
+          international field works and co-authored articles on topics related
+          to digital heritage documentation. He is the Canadian representative
+          of the ICOMOS Emerging Professional Working Group (EPWG) since 2020.
+          He studied architecture at ETSABarcelona (UPC), where he graduated
+          with honours in 2011, and holds a MsC in Restoration and
+          Rehabilitation at ETSABarcelona (UPC). His professional experience in
+          the architecture studio Ravetllat-Ribas Barcelona (2008-2015) focused
+          on adaptive reuse projects, and as a licensed architect, he has
+          designed public space, housing, interiors and competitions
+        </h5>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h2>Thoughts about photogrametry?</h2>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h2>
+          Can you think of any other technology to capture the physical world
+          digitally?
+        </h2>
+      </>
     ),
   },
   {
@@ -23,7 +92,7 @@ export const content: Toc = [
       <>
         <h1>❔</h1>
         <br />
-        <h1>Rise your hand if you have never coaded</h1>
+        <h1>Rise your hand if you have never coded</h1>
       </>
     ),
     notes: "False, anybody literate person has coded",
@@ -119,7 +188,15 @@ export const content: Toc = [
       there weren’t even terms to define the emerging actors that constituted this new ‘computer science’.\
       The way in which programmers were naming things had to be invented as well",
   },
-
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h1>What is your preferred programming language and why?</h1>
+      </>
+    ),
+  },
   {
     element: <h1>Programming</h1>,
     notes:
