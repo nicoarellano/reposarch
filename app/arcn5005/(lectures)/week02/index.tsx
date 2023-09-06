@@ -15,9 +15,22 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>There are multiple tools to do this...</h2>
+        <h2>There are multiple tools to do this:</h2>
+        <ul>
+          <li>
+            <h3>Surveying</h3>
+          </li>
+          <li>
+            <h3>Digital Photography</h3>
+          </li>
+          <li>
+            <h3>3D Scanning</h3>
+          </li>
+        </ul>
         <br />
-        <h2>Today we will talk about one of them called Photogrametry</h2>
+        <h2>
+          Today we will talk about one of them called <b>Photogrametry</b>
+        </h2>
       </>
     ),
   },
@@ -114,6 +127,12 @@ export const content: Toc = [
       " Code is a tecnology humans have created to systematize artificial language into abstract symbols.\
       Such symbols are conventions that lacked meaning until we combine them\
       Then, they allow us to create and to communicate ideas",
+  },
+  {
+    element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
+    notes:
+      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
+    They are used to communicate with computers and with people through computers.",
   },
   {
     element: (
@@ -245,7 +264,26 @@ export const content: Toc = [
       />
     ),
   },
-
+  {
+    element: (
+      <h4>
+        <em>
+          Although the first courses in computer programming were introduced in
+          some architecture schools like Harvard or MIT in the late 1980s and
+          early 1990s, scripting has developed only in the past years, fostered
+          by the growing computer literacy of young architectural students and
+          architects who are now able to write code instead of relying only on
+          the predefined software functions. Scripting does open new
+          perspectives on the evolution of design: it even raises some questions
+          that are not fully answered yet.
+        </em>
+        <h5>
+          <br />
+          <em>Antoine Picon - Digital Turns in Architecture</em>
+        </h5>
+      </h4>
+    ),
+  },
   /*
 Now our dialogue with design is in part mediated by computers.
 This mediation occurs through multiple devices.

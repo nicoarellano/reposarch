@@ -80,18 +80,6 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/analog-process.png"
-        alt="Analog Process"
-        caption={"Analog creative process"}
-      />
-    ),
-    notes:
-      "We have been using analogue tools for centuries to express our creativity.\
-    This allows a particular relationship with the object.",
-  },
-  {
-    element: (
-      <Image
         src="/images/week01/albertis-device.png"
         alt="Alberti's device"
         caption={
@@ -222,40 +210,51 @@ export const content: Toc = [
   {
     element: (
       <Image
+        src="/images/week01/digital-turns.png"
+        alt="Digital Turns"
+        caption={"Mario Carpo First and Second digital Turns in Architecture"}
+        href="https://andreaarianoitcaadsaggio.files.wordpress.com/2018/06/digital-turn.pdf"
+      />
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/analog-process.png"
+        alt="Analog Process"
+        caption={"Analog creative process"}
+      />
+    ),
+    notes:
+      "We have been using analogue tools for centuries to express our creativity.\
+    This allows a particular relationship with the object.",
+  },
+  {
+    element: (
+      <Image
         src="/images/week01/process-with-gui.png"
         alt="Digital Creative Process"
         caption={"Digital creative process with GUI"}
       />
     ),
-  },
-  {
-    element: (
-      <Image
-        src="/images/week01/digital-turns.png"
-        alt="Digital Turns"
-        caption={"Mario Carpo First and Second digital Turns in Architecture"}
-      />
-    ),
-  },
-  {
-    element: (
-      <Image
-        src="/images/week01/creative-process.png"
-        alt="Digital Creative Process"
-        caption={"Digital Creative Process"}
-      />
-    ),
+    notes:
+      "Just as the new representational technology of pencil and paper challenged Renaissance architects to rethink the nature of their work away from the construction site,\
+       today’s new representational technology must find ways to nurture the material imagination.\
+        - Susan Piedmon-Palladino - Tools of the Imagination",
   },
   {
     element: (
       <Image
         src="/images/week01/workplace.png"
         alt="Change in the workplace"
-        caption={
-          "With the change of the tools, the way we work gets disrupted..."
-        }
+        caption={"With the change of the tools, the way we work changes..."}
       />
     ),
+    notes:
+      "25 years ago, Using computers for drafting in architecture offices was not common. \
+    Design was done by hand. Today, no architectural practice could do without digital technology \
+    Antoine Picon - Digital culture and architecture ",
   },
   {
     element: (
@@ -264,6 +263,30 @@ export const content: Toc = [
         alt="Change of the buildings"
         caption={"...our buildings change..."}
       />
+    ),
+    notes:
+      "Almost a generation ago, the early software for computer aided design and manufacturing (CAD/CAM)\
+     spawned a style of smooth and curving lines and surfaces that gave visible form to the first digital age,\
+      and left an indelible mark on contemporary architecture. - Mario Carpo - The Second Digital Turn",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          Spline modeler (embedded in most authoring software) translate random
+          cluster of points or sketches into smooth curving mathematical lines.
+          polishing of the man-made environment (58) NURBS (for Non-Uniform
+          Rational B-Splines), the blob (Binary Large Object) each sign of human
+          intervention—the wavy, uncertain trace of the gesture of the human
+          hand and its analog tools have been removed. meant to increase
+          precision, reduce tolerances in fabrication, and save the time and
+          cost of making
+        </em>
+        <h5>
+          <br />
+          <em>Mario Carpo, Second Digital Turn</em>
+        </h5>
+      </h4>
     ),
   },
   {
@@ -274,6 +297,41 @@ export const content: Toc = [
         caption={"...our cities too"}
       />
     ),
+    notes:
+      "All tools modify the gestures of their users,   \
+     this feedback often leaves a visible trace. When these traces become consistent and pervasive,    \
+     they coalesce into the style of an age and express the spirit of a time.    \
+     - Mario Carpo - The Second Digital Turn",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          2000s curvilinear style associated with irrational exuberance. (Zaha
+          Haddid, Patrik Schumacher). The mathematics of free-form is the zenith
+          and culmination of a historical process that started with Descartes,
+          Leibniz, and Newton (Alberti and Durer)
+        </em>
+        <h5>
+          <br />
+          <em>Mario Carpo, Second Digital Turn</em>
+        </h5>
+      </h4>
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/creative-process.png"
+        alt="Digital Creative Process"
+        caption={"Digital Creative Process"}
+      />
+    ),
+    notes:
+      "The machine has been instrumental in the direction taken by digital architecture... \
+    Since the early developments of CAD all sorts of new and spectacular forms have appeared on screens... \
+    begun to transform the built environment. \
+    Antoine Picon - Digital culture and architecture",
   },
   {
     element: (
@@ -302,7 +360,8 @@ export const content: Toc = [
     notes:
       "the programs for architects that were produced using GUIs had been designed with specific functionalities.\
       On the one hand, they allowed architects to explore infinite graphic possibilities.\
-      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.",
+      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.\
+      'We are at the mercy of our notational tools.' (Proprietary companies) - Mario Carpo, Second Digital Turn",
   },
   {
     element: (
@@ -318,8 +377,7 @@ export const content: Toc = [
       </h4>
     ),
     notes:
-      "Carpo says that GUIs quickly became “the only computer use that most people had ever known”.\
-      This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
+      "This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
       In some cases, an accessible tool, but in most cases, an utterly opaque one.",
   },
   {
@@ -418,12 +476,6 @@ export const content: Toc = [
         <h3>Programming and digitalization of the physical world</h3>
       </>
     ),
-  },
-  {
-    element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
-    notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-    They are used to communicate with computers and with people through computers.",
   },
   {
     element: (

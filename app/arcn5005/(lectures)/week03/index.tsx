@@ -27,17 +27,95 @@ export const content: Toc = [
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
        With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
        GUIs made computer more accessible for non-programmers, including architects.\
-       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\
-       Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.",
+       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.",
   },
   {
     element: (
+      <h4>
+        <em>
+          Sketchpad pioneered the graphical user interface (GUI), which allows
+          interaction with the virtual world without typing in long strings of
+          coded commands. Instead, the user points, clicks, and double-clicks on
+          displays of icons, the virtual tools on the screen.
+        </em>
+        <h5>
+          <br />
+          <em>Susan Piedmont Palladino - Tools of the imagination .</em>
+        </h5>
+      </h4>
+    ),
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          GUIs quickly became “the only computer use that most people had ever
+          known”
+        </em>
+        <h5>
+          <br />
+          <em>Mario Carpo - Digital Turn</em>
+        </h5>
+      </h4>
+    ),
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          GUIs have profoundly changed the way in which architects interact with
+          computers. “the graphical user interface, which makes computers so
+          easy to use, also makes them hard to use powerfully.
+        </em>
+        <h5>
+          <br />
+          <em>Robert Woodbury - Elements of Parametric Design</em>
+        </h5>
+      </h4>
+    ),
+  },
+
+  {
+    element: (
       <Image
-        src="/images/week03/tools0of-the-imagination.jpg"
+        src="/images/week03/tools-of-the-imagination.jpg"
         alt="Tools of Imagination"
         caption="Tools of Imagination - Susan Piedmont-Palladino"
         href="https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false"
       />
+    ),
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          The architect needs the right tools for the job. [...] The newest
+          tool, the computer, is really an entirely new toolbox full of software
+          to solve old and new problems.
+        </em>
+        <h5>
+          <br />
+          <em>Susan Piedmont Palladino - Tools of the imagination .</em>
+        </h5>
+      </h4>
+    ),
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          It is through the mastery of the full range of tools that the images
+          in the architect’s mind are translated into drawings and models, and
+          from the drawings and the models into buildings. Whether a simple
+          pencil or computer software, these tools give form to the wishes and
+          the instructions of the architect, but they are also active shapers of
+          what is possible.
+        </em>
+        <h5>
+          <br />
+          <em>Susan Piedmont Palladino - Tools of the imagination .</em>
+        </h5>
+      </h4>
     ),
   },
   {

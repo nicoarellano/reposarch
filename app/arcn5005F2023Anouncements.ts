@@ -15,11 +15,8 @@ export const Announcements: Resources = [
   },
   {
     title:
-      "2023/09/05: All meetings will be at the School of architecture ()AA-435) but they will also be recorded in case you miss it or you want to rewatch it\
-  The Zoom link is: Nicolas Arellano Risopatron is inviting you to a scheduled Zoom meeting.\
-  Topic: ARCN5005A Theory and Pract Architectu Repres (SEM) Fall 2023 \
-  Time: Thursdays, 2023 02:30 PM Eastern Time (US and Canada) \
-Join URL: https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09\
+      "2023/09/05: All meetings will be at the School of architecture (AA-435) but they will also be recorded in case you miss it or you want to rewatch it.\
+  The Zoom link is https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09 -\
   Meeting ID: 931 4954 9185\
   Passcode: arcn5005",
     url: "https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09",

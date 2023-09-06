@@ -62,7 +62,7 @@ h5 {
   line-height: 38px;
 }
 
-ul {
+.slides ul {
   list-style-type: square;
   margin-left: 3rem;
   text-align: left;
