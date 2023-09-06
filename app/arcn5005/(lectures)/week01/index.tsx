@@ -491,6 +491,15 @@ export const content: Toc = [
   },
   {
     element: (
+      <>
+        <h1>💻 Lab 1</h1>
+        <br />
+        <h1>Installing an IDE and some extensions</h1>
+      </>
+    ),
+  },
+  {
+    element: (
       <Image
         src="/images/week01/vsCode.png"
         alt="Visual Studio Code"

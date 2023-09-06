@@ -210,17 +210,6 @@ export const content: Toc = [
       "While a ‘software’ is a set of programs combined by a programmer to address74 a more specific problem.\
       Software, (which is also the plural of software) are sets of programs that have a specific function. ",
   },
-
-  /*     
-    Translation > to move from one medium to a different one, with minimum alteration
-    Parallel between translation from drawings to buildings and to move ideas from one medium to a utterly different one with minimum alteration (Alberti and the digital map of Rome (the alphabet and the algorithm - Carpo))
-    
-    GUI > human-computer interaction devices (icons)
-    Invention from early 1970s, graphical user interface. Ivan Southerland (MIT) Sketchpad. The 1st GUI allows human-computer interaction without having to write words in a programming language. 
-    limited the boundaries that architects could explore
-    This is the moment when computer ceased to be an open language to interact with the machine, and thus became a tool (accessible but opaque)
-      
-    */
   {
     element: (
       <Image
@@ -273,4 +262,13 @@ This mediation occurs through multiple devices.
     > Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.
 
   */
+  {
+    element: (
+      <>
+        <h1>💻 Lab 2</h1>
+        <br />
+        <h1>Photogrametry Excercise</h1>
+      </>
+    ),
+  },
 ];
