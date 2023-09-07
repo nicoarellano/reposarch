@@ -35,6 +35,7 @@ export default function LencutesNestedList({ list }: Props) {
       sx={{
         width: "60%",
         minWidth: 800,
+        minHeight: 220,
         bgcolor: "background.paper",
         maxHeight: 500,
         overflowY: "auto",
