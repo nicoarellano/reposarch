@@ -631,9 +631,9 @@ export const content: Toc = [
       <>
         <h1>❔</h1>
         <br />
-        <h1>Does anyone has an account?</h1>
+        <h1>Does anyone have a GitHub account?</h1>
         <br />
-        <h3>If you don&apos;t let&apos;s create one</h3>
+        <h3>If you don&apos;t, let&apos;s create one</h3>
         <br />
         <Button
           size="large"
