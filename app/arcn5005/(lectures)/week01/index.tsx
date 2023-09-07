@@ -9,6 +9,15 @@ import TOC from "../../(main)/toc/page";
 
 export const content: Toc = [
   {
+    element: (
+      <>
+        <h1>Welcome everyone to ARCN5005 Fall 2023</h1>
+        <br />
+        <h2>Looking forward to meeting you all</h2>
+      </>
+    ),
+  },
+  {
     element: <h1>Territory Acknowledgment</h1>,
     notes:
       "I would like to begin by acknowledging that the land on which we gather is the traditional and unceded territory of the Algonquin nation.",
@@ -34,6 +43,9 @@ export const content: Toc = [
             </li>
             <li>
               <h4>Amateur programmer</h4>
+            </li>
+            <li>
+              <h4>Father of a 3-years-old girl and a 10 months old boy</h4>
             </li>
           </ul>
         </div>
