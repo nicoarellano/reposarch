@@ -59,10 +59,7 @@ export default function LencutesNestedList({ list }: Props) {
               }`}
             />
             <Link
-              hidden={
-                item.date > dayjs("2023/09/07") &&
-                item.date > dayjs().add(1, "week")
-              }
+              hidden={item.date > dayjs().add(6, "days")}
               href={item.url ? item.url : item.id}
               title={item.title}
             >

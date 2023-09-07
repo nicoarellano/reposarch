@@ -242,7 +242,6 @@ export const content: Toc = [
       Since the seventies, the creative process has been progressively incorporating a digital process.\
       Within this new medium, the relationship with the object and process drastically changes.",
   },
-
   {
     element: (
       <>
@@ -307,6 +306,65 @@ This mediation occurs through multiple devices.
         <br />
         <h1>Photogrametry Excercise</h1>
       </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Download Meshroom</h2>
+        <br />
+        <Image
+          src="/images/week02/logo-meshroom.png"
+          alt="Meshroom"
+          caption={"Meshroom - Open-Source photogrametry software"}
+          href="https://alicevision.org/#meshroom"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Download Bleder</h2>
+        <br />
+        <Image
+          src="/images/week02/blender.png"
+          alt="Blender"
+          caption={
+            "Blender - Open-Source 3d creative suite - 3D CAD, BIM and much more..."
+          }
+          href="https://www.blender.org/download/"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>👥</h1>
+        <br />
+        <h1>Form groups of 2</h1>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>📸</h1>
+        <br />
+        <h1>Do you have a Camera?</h1>
+        <br />
+        <h2>If you don&apos;t, we can rent one for free at the photo lab</h2>
+      </>
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/L_SdlR57NtU?si=jS7DahueRTtPfJb0"
+        title="Protogrammetry in Blender and Meshroom"
+        caption="Protogrammetry in Blender and Meshroom"
+      />
     ),
   },
 ];

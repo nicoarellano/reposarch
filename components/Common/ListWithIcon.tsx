@@ -26,6 +26,7 @@ export default function ListWithIcon({
         maxHeight: "80%",
         bgcolor: "background.paper",
         overflowY: "auto",
+        overflowX: "hidden",
       }}
       component="nav"
       aria-labelledby="nested-list-subheader"
