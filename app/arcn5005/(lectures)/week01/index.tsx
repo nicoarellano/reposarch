@@ -164,7 +164,7 @@ export const content: Toc = [
       <Image
         src="/images/week01/computer.jpg"
         alt="Turin's Computer 1950s"
-        caption={"By Wikimedia"}
+        caption={"One of the first computers of the modern era - By Wikimedia"}
       />
     ),
     notes:
