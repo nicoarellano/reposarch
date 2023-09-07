@@ -2,11 +2,21 @@ import { Toc } from "../../../../types/types";
 
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
+import { Button } from "@mui/material";
 
 import CartesianPlane from "../../../../components/CartesianPlane";
 import TOC from "../../(main)/toc/page";
 
 export const content: Toc = [
+  {
+    element: (
+      <>
+        <h1>Welcome everyone to ARCN5005 Fall 2023</h1>
+        <br />
+        <h2>Looking forward to meeting you all</h2>
+      </>
+    ),
+  },
   {
     element: <h1>Territory Acknowledgment</h1>,
     notes:
@@ -33,6 +43,9 @@ export const content: Toc = [
             </li>
             <li>
               <h4>Amateur programmer</h4>
+            </li>
+            <li>
+              <h4>Father of a 3-years-old girl and a 10 months old boy</h4>
             </li>
           </ul>
         </div>
@@ -76,18 +89,6 @@ export const content: Toc = [
         }
       />
     ),
-  },
-  {
-    element: (
-      <Image
-        src="/images/week01/analog-process.png"
-        alt="Analog Process"
-        caption={"Analog creative process"}
-      />
-    ),
-    notes:
-      "We have been using analogue tools for centuries to express our creativity.\
-    This allows a particular relationship with the object.",
   },
   {
     element: (
@@ -163,7 +164,7 @@ export const content: Toc = [
       <Image
         src="/images/week01/computer.jpg"
         alt="Turin's Computer 1950s"
-        caption={"By Wikimedia"}
+        caption={"One of the first computers of the modern era - By Wikimedia"}
       />
     ),
     notes:
@@ -222,40 +223,51 @@ export const content: Toc = [
   {
     element: (
       <Image
+        src="/images/week01/digital-turns.png"
+        alt="Digital Turns"
+        caption={"Mario Carpo First and Second digital Turns in Architecture"}
+        href="https://andreaarianoitcaadsaggio.files.wordpress.com/2018/06/digital-turn.pdf"
+      />
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/analog-process.png"
+        alt="Analog Process"
+        caption={"Analog creative process"}
+      />
+    ),
+    notes:
+      "We have been using analogue tools for centuries to express our creativity.\
+    This allows a particular relationship with the object.",
+  },
+  {
+    element: (
+      <Image
         src="/images/week01/process-with-gui.png"
         alt="Digital Creative Process"
         caption={"Digital creative process with GUI"}
       />
     ),
-  },
-  {
-    element: (
-      <Image
-        src="/images/week01/digital-turns.png"
-        alt="Digital Turns"
-        caption={"Mario Carpo First and Second digital Turns in Architecture"}
-      />
-    ),
-  },
-  {
-    element: (
-      <Image
-        src="/images/week01/creative-process.png"
-        alt="Digital Creative Process"
-        caption={"Digital Creative Process"}
-      />
-    ),
+    notes:
+      "Just as the new representational technology of pencil and paper challenged Renaissance architects to rethink the nature of their work away from the construction site,\
+       today’s new representational technology must find ways to nurture the material imagination.\
+        - Susan Piedmon-Palladino - Tools of the Imagination",
   },
   {
     element: (
       <Image
         src="/images/week01/workplace.png"
         alt="Change in the workplace"
-        caption={
-          "With the change of the tools, the way we work gets disrupted..."
-        }
+        caption={"With the change of the tools, the way we work changes..."}
       />
     ),
+    notes:
+      "25 years ago, Using computers for drafting in architecture offices was not common. \
+    Design was done by hand. Today, no architectural practice could do without digital technology \
+    Antoine Picon - Digital culture and architecture ",
   },
   {
     element: (
@@ -264,6 +276,30 @@ export const content: Toc = [
         alt="Change of the buildings"
         caption={"...our buildings change..."}
       />
+    ),
+    notes:
+      "Almost a generation ago, the early software for computer aided design and manufacturing (CAD/CAM)\
+     spawned a style of smooth and curving lines and surfaces that gave visible form to the first digital age,\
+      and left an indelible mark on contemporary architecture. - Mario Carpo - The Second Digital Turn",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          Spline modeler (embedded in most authoring software) translate random
+          cluster of points or sketches into smooth curving mathematical lines.
+          polishing of the man-made environment (58) NURBS (for Non-Uniform
+          Rational B-Splines), the blob (Binary Large Object) each sign of human
+          intervention—the wavy, uncertain trace of the gesture of the human
+          hand and its analog tools have been removed. meant to increase
+          precision, reduce tolerances in fabrication, and save the time and
+          cost of making
+        </em>
+        <h5>
+          <br />
+          <em>Mario Carpo, Second Digital Turn</em>
+        </h5>
+      </h4>
     ),
   },
   {
@@ -274,6 +310,41 @@ export const content: Toc = [
         caption={"...our cities too"}
       />
     ),
+    notes:
+      "All tools modify the gestures of their users,   \
+     this feedback often leaves a visible trace. When these traces become consistent and pervasive,    \
+     they coalesce into the style of an age and express the spirit of a time.    \
+     - Mario Carpo - The Second Digital Turn",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          2000s curvilinear style associated with irrational exuberance. (Zaha
+          Haddid, Patrik Schumacher). The mathematics of free-form is the zenith
+          and culmination of a historical process that started with Descartes,
+          Leibniz, and Newton (Alberti and Durer)
+        </em>
+        <h5>
+          <br />
+          <em>Mario Carpo, Second Digital Turn</em>
+        </h5>
+      </h4>
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/creative-process.png"
+        alt="Digital Creative Process"
+        caption={"Digital Creative Process"}
+      />
+    ),
+    notes:
+      "The machine has been instrumental in the direction taken by digital architecture... \
+    Since the early developments of CAD all sorts of new and spectacular forms have appeared on screens... \
+    begun to transform the built environment. \
+    Antoine Picon - Digital culture and architecture",
   },
   {
     element: (
@@ -302,7 +373,8 @@ export const content: Toc = [
     notes:
       "the programs for architects that were produced using GUIs had been designed with specific functionalities.\
       On the one hand, they allowed architects to explore infinite graphic possibilities.\
-      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.",
+      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.\
+      'We are at the mercy of our notational tools.' (Proprietary companies) - Mario Carpo, Second Digital Turn",
   },
   {
     element: (
@@ -318,8 +390,7 @@ export const content: Toc = [
       </h4>
     ),
     notes:
-      "Carpo says that GUIs quickly became “the only computer use that most people had ever known”.\
-      This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
+      "This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
       In some cases, an accessible tool, but in most cases, an utterly opaque one.",
   },
   {
@@ -420,12 +491,6 @@ export const content: Toc = [
     ),
   },
   {
-    element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
-    notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-    They are used to communicate with computers and with people through computers.",
-  },
-  {
     element: (
       <>
         <h2>We program by writing text</h2>
@@ -491,6 +556,15 @@ export const content: Toc = [
   },
   {
     element: (
+      <>
+        <h1>💻 Lab 1</h1>
+        <br />
+        <h1>Installing an IDE and some extensions</h1>
+      </>
+    ),
+  },
+  {
+    element: (
       <Image
         src="/images/week01/vsCode.png"
         alt="Visual Studio Code"
@@ -521,10 +595,80 @@ export const content: Toc = [
   {
     element: (
       <>
+        <h1>❔</h1>
+        <br />
+        <h1>What is GitHub?</h1>
+        <br />
+        <Image
+          src="/images/week01/GitHub-logo.png"
+          alt="GitHub"
+          href="https://en.wikipedia.org/wiki/GitHub#"
+          caption={"GitHub - Wikipedia"}
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>Course GitHub</h1>
+        <br />
+        <h3>Reposarch = Open Source Architectural Representation</h3>
+        <br />
+        <Image
+          src="/images/week01/course-GitHub.png"
+          alt="GitHub"
+          href="https://github.com/nicoarellano/reposarch"
+          caption={
+            "Reposarch - Course GitHub - https://github.com/nicoarellano/reposarch"
+          }
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h1>Does anyone has an account?</h1>
+        <br />
+        <h3>If you don&apos;t let&apos;s create one</h3>
+        <br />
+        <Button
+          size="large"
+          color="inherit"
+          href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
+          variant="outlined"
+        >
+          SIGN UP TO GITHUB
+        </Button>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h3>Fork the course GitHub repository</h3>
+        <br />
+        <Video
+          src="/images/week01/fork-reposarch.mp4"
+          title="Fork Github Repository"
+          caption={
+            "Fork Github Repository https://github.com/nicoarellano/reposarch/fork"
+          }
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
         <h4>
           Homework, watch &#34;The Second Digital Turn&#34; by the professor
           Mario Carpo
         </h4>
+        <br />
         <Video
           src="https://www.youtube.com/embed/UVerq5DSdKU?si=GmIUk9y3PpRTwK2w"
           title="The Second Digital Turn | Mario Carpo | Talks at Google"

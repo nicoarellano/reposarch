@@ -25,17 +25,20 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate,
     content: week01,
     toc: [
-      { title: "Overview of the course" },
-      { title: "Understanding the course portal" },
-      { title: "Course Outline" },
-      { title: "Evaluations" },
-      { title: "Overview of assignments and final project" },
-      { title: "From the Renaissance to the computer era." },
-      { title: "The Art of Computer graphics " },
-      { title: "Cartesian space and digital representation of geometry" },
+      {
+        title: "Overview of the course: Understanding the course portal",
+        url: "/arcn5005",
+      },
+      { title: "Course Outline", url: "/arcn5005/course-outline" },
+      { title: "Evaluations", url: "/arcn5005/evaluations" },
+      {
+        title: "Overview of assignments and final project",
+        url: "/arcn5005/three-example",
+      },
+      { title: "The Art of Computer graphics", url: "/arcn5005/week01" },
       {
         title:
-          "🖥️ LAB 1: Dowloading free software, creating Github account, forking repo : Visual studio code",
+          "🖥️ LAB 1: Dowloading software, installing an IDE (Visual studio code), creating Github account, forking repo",
       },
     ],
   },
