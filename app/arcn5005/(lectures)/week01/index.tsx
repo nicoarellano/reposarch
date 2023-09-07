@@ -2,6 +2,7 @@ import { Toc } from "../../../../types/types";
 
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
+import { Button } from "@mui/material";
 
 import CartesianPlane from "../../../../components/CartesianPlane";
 import TOC from "../../(main)/toc/page";
@@ -582,10 +583,80 @@ export const content: Toc = [
   {
     element: (
       <>
+        <h1>❔</h1>
+        <br />
+        <h1>What is GitHub?</h1>
+        <br />
+        <Image
+          src="/images/week01/GitHub-logo.png"
+          alt="GitHub"
+          href="https://en.wikipedia.org/wiki/GitHub#"
+          caption={"GitHub - Wikipedia"}
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>Course GitHub</h1>
+        <br />
+        <h3>Reposarch = Open Source Architectural Representation</h3>
+        <br />
+        <Image
+          src="/images/week01/course-GitHub.png"
+          alt="GitHub"
+          href="https://github.com/nicoarellano/reposarch"
+          caption={
+            "Reposarch - Course GitHub - https://github.com/nicoarellano/reposarch"
+          }
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h1>Does anyone has an account?</h1>
+        <br />
+        <h3>If you don&apos;t let&apos;s create one</h3>
+        <br />
+        <Button
+          size="large"
+          color="inherit"
+          href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
+          variant="outlined"
+        >
+          SIGN UP TO GITHUB
+        </Button>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h3>Fork the course GitHub repository</h3>
+        <br />
+        <Video
+          src="/images/week01/fork-reposarch.mp4"
+          title="Fork Github Repository"
+          caption={
+            "Fork Github Repository https://github.com/nicoarellano/reposarch/fork"
+          }
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
         <h4>
           Homework, watch &#34;The Second Digital Turn&#34; by the professor
           Mario Carpo
         </h4>
+        <br />
         <Video
           src="https://www.youtube.com/embed/UVerq5DSdKU?si=GmIUk9y3PpRTwK2w"
           title="The Second Digital Turn | Mario Carpo | Talks at Google"

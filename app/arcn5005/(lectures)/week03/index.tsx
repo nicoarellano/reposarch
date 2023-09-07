@@ -225,7 +225,7 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/week03/levels.png"
-        alt="BIM Books"
+        alt="BIM Maturity Levels"
         caption={"BIM Maturity Levels"}
       />
     ),

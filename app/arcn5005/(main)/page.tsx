@@ -5,8 +5,8 @@ import ProgressPage from "../../../components/Progress";
 import CalendarLegend from "./calendar/calendarLegend";
 
 export default function Arcn5005() {
-  const photo = "/images/osarchrep.png";
-  const title = "osarchrep";
+  const photo = "/images/reposarch.png";
+  const title = "reposarch";
   return (
     <section className=" flex flex-col items-center justify-between w-11/12 gap-5">
       <section className=" grid grid-cols-3 divide-x grow max-h-11/12 overflow-x-auto">
