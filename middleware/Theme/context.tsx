@@ -8,13 +8,7 @@ import {
   createContext,
   Dispatch,
 } from "react";
-import {
-  ThemeReducer,
-  ThemeActions,
-  ThemeState,
-  lightColor,
-  darkColor,
-} from "./reducer";
+import { ThemeReducer, ThemeActions, ThemeState } from "./reducer";
 import { Mode } from "../../types/types";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -25,8 +19,6 @@ type InitialStateType = {
 const initialState = {
   theme: {
     mode: "light" as Mode,
-    backgroundColor: lightColor,
-    textColor: darkColor,
   },
 };
 
@@ -49,8 +41,6 @@ export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {
     theme: {
       mode: initialThemeMode,
-      backgroundColor: isDarkModeEnabled ? darkColor : lightColor,
-      textColor: isDarkModeEnabled ? lightColor : darkColor,
     },
   });
   return (
