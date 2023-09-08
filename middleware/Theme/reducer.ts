@@ -14,11 +14,17 @@ export type ThemePayload = {
 export type ThemeActions =
   ActionMap<ThemePayload>[keyof ActionMap<ThemePayload>];
 
+export const lightColor: string = "gray-100";
+export const darkColor: string = "gray-900";
+
 export const ThemeReducer = (state: ThemeState, action: ThemeActions) => {
   switch (action.type) {
     case "TOGGLE-DARK-MODE":
       const { mode } = action.payload;
-      return { ...state, mode };
+      return {
+        ...state,
+        mode,
+      };
     default:
       return state;
   }

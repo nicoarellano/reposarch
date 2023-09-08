@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import { ThemeContext } from "../middleware/Theme/context";
 
@@ -12,7 +12,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider theme={theme}>
       <main
-        className={`absolute flex flex-col min-h-full justify-between overflow-hidden ${
+        className={`absolute flex flex-col min-h-full justify-between overflow-x-hidden ${
           mode === "light"
             ? "bg-gray-100 text-gray-900"
             : "bg-gray-900 text-gray-100"

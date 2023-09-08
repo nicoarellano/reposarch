@@ -22,10 +22,11 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </head>
-      <body className={inter.className} suppressHydrationWarning={true}>
-        <AppProvider>
-          <main className="m-0 grow ">{children}</main>
-        </AppProvider>
+      <body
+        className={inter.className + "overflow-x-hidden w-screen h-screen"}
+        suppressHydrationWarning={true}
+      >
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );
