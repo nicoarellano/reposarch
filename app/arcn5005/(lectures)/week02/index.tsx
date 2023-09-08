@@ -246,6 +246,7 @@ export const content: Toc = [
     element: (
       <>
         <h4>The Second Digital Turn by Mario Carpo ... Thoughts?</h4>
+        <br />
         <Video
           src="https://www.youtube.com/embed/UVerq5DSdKU?si=GmIUk9y3PpRTwK2w"
           title="The Second Digital Turn | Mario Carpo | Talks at Google"

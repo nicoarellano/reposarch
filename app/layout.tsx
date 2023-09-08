@@ -24,7 +24,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         <AppProvider>
-          <main className=" w-screen m-0 max-h-screen">{children}</main>
+          <main className="m-0 grow ">{children}</main>
         </AppProvider>
       </body>
     </html>
