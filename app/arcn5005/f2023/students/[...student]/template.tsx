@@ -32,7 +32,7 @@ export default function NestedTemplate({
           } ${params.assignments ? `- ${params.assignments} assignment` : ""}`}
         />
       </nav>
-      {Boolean(student) ? (
+      {Boolean(student || assignment) ? (
         <section className="flex justify-center grow">{children}</section>
       ) : (
         <section className="flex justify-center grow items-center">

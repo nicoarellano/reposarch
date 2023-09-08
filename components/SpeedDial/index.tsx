@@ -1,11 +1,9 @@
 "use client";
-import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import Link from "next/link";
 
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
-import CalendarIcon from "@mui/icons-material/CalendarMonthRounded";
 import InfoIcon from "@mui/icons-material/HelpOutlineRounded";
 import MenuIcon from "@mui/icons-material/MenuRounded";
 import CloseIcon from "@mui/icons-material/CloseRounded";
@@ -16,13 +14,26 @@ import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
 import PaperIcon from "@mui/icons-material/FeedRounded";
 import EvaluationsIcon from "@mui/icons-material/EmojiEventsRounded";
 
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+
+// Context
+import { useContext } from "react";
+import { ThemeContext } from "../../middleware/Theme/context";
+
 export default function BasicSpeedDial() {
+  const themeDispatch = useContext(ThemeContext)["dispatch"];
+  const { mode } = useContext(ThemeContext)["state"]["theme"];
+
   const actionStyle = {
-    backgroundColor: "#f1f1f195",
+    backgroundColor: mode === "light" ? "#f1f1f195" : "#090c1495",
     borderRadius: "50px",
     width: "42px",
     height: "42px",
     padding: "10px",
+    "&:hover": {
+      backgroundColor: mode === "light" ? "#f3f3f395" : "#33333395",
+    },
   };
   const actions = [
     {
@@ -57,14 +68,6 @@ export default function BasicSpeedDial() {
       ),
       name: "Table of Content",
     },
-    // {
-    //   icon: (
-    //     <Link href={"/arcn5005/calendar"}>
-    //       <CalendarIcon sx={actionStyle} />
-    //     </Link>
-    //   ),
-    //   name: "Calendar",
-    // },
     {
       icon: (
         <Link href={"/arcn5005/resources"}>
@@ -89,6 +92,25 @@ export default function BasicSpeedDial() {
       ),
       name: "Evaluations",
     },
+    {
+      icon: (
+        <div
+          onClick={() => {
+            themeDispatch({
+              type: "TOGGLE-DARK-MODE",
+              payload: { mode: mode === "light" ? "dark" : "light" },
+            });
+          }}
+        >
+          {mode === "dark" ? (
+            <Brightness7Icon sx={actionStyle} />
+          ) : (
+            <Brightness4Icon sx={actionStyle} />
+          )}
+        </div>
+      ),
+      name: mode === "light" ? "Toggle Dark mode" : "Toggle Light mode",
+    },
   ];
 
   return (
@@ -99,10 +121,13 @@ export default function BasicSpeedDial() {
         top: 16,
         right: 16,
         "& .MuiFab-primary": {
-          backgroundColor: "#eee",
-          color: "white",
+          backgroundColor: mode === "light" ? "white" : "#090c14",
+
+          color: mode === "light" ? "white" : "black",
           boxShadow: "none",
-          "&:hover": { backgroundColor: "#ddd" },
+          "&:hover": {
+            backgroundColor: mode === "light" ? "white" : "#33333395",
+          },
         },
       }}
       icon={

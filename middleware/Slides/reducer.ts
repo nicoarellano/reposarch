@@ -1,5 +1,4 @@
 import { ActionMap } from "../ActionMap";
-import { Slides, Slide, Content } from "../../types/types";
 
 interface SlidesTypes {
   totalSlides: number;

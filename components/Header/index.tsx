@@ -44,7 +44,7 @@ export function HeaderOfSlide({ slides }): ReactElement<SlidesProps> {
     <nav>
       <header className="flex flex-row justify-between w-screen z-40 p-6">
         <Logo />
-        <h1 className="flex items-center">{slideTitle}</h1>
+        <h2 className="flex items-center">{slideTitle}</h2>
         <nav className="w-90px z-50">
           <LeftSpeedDial />
         </nav>

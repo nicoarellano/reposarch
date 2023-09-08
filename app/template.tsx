@@ -1,11 +1,25 @@
 "use client";
 
-import { AppProvider } from "../middleware/CombineProviders";
+import { useContext } from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+import { ThemeContext } from "../middleware/Theme/context";
 
 export default function Template({ children }: { children: React.ReactNode }) {
+  const { mode } = useContext(ThemeContext)["state"]["theme"];
+  const theme = createTheme({ palette: { mode } });
+
   return (
-    <main className="flex flex-col w-screen h-screen bg-slate-100 justify-between">
-      <AppProvider>{children}</AppProvider>
-    </main>
+    <ThemeProvider theme={theme}>
+      <main
+        className={`absolute flex flex-col min-h-full justify-between overflow-x-hidden ${
+          mode === "light"
+            ? "bg-gray-100 text-gray-900"
+            : "bg-gray-900 text-gray-100"
+        }`}
+      >
+        {children}
+      </main>
+    </ThemeProvider>
   );
 }

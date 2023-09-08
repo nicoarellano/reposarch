@@ -12,22 +12,22 @@ arcn5005Lectures.map((lecture) => (lecture["url"] = lecture.id));
 
 const currentLectures = arcn5005Lectures.filter(
   (lecture) =>
-    lecture.date < dayjs("2023/09/08") || lecture.date < dayjs().add(1, "weeks")
+    lecture.date < dayjs("2023/09/08") || lecture.date < dayjs().add(6, "days")
 );
 
 const announcements = Announcements.reverse();
 
 export default function Progress() {
   return (
-    <section className="grid grid-row-2 divide-y h-[550px]  p-6 gap-6">
-      <div className="max-h-[265px] overflow-x-auto">
+    <section className="grid grid-row-2 divide-y h-11/12 p-6 gap-4">
+      <div className="max-h-[250px] min-h-[200px] overflow-y-auto overflow-x-hidden">
         <ListWithIcon
           list={announcements}
           icon={<AnnouncementsdIcon />}
           subheader="📢 Announcements:"
         />
       </div>
-      <div className="max-h-[265px] overflow-x-auto">
+      <div className="max-h-[250px] min-h-[200px] overflow-y-auto overflow-x-hidden">
         <ListWithIcon
           list={currentLectures}
           icon={<SlideshowIcon />}

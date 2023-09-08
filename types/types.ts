@@ -25,11 +25,6 @@ export interface Resource {
 }
 export type Resources = Resource[];
 
-// export interface Toc {
-//   title: string;
-//   url?: string;
-// }
-
 export interface Content {
   title?: string;
   url?: string;
@@ -60,3 +55,5 @@ export interface Student {
 }
 
 export type Students = Student[];
+
+export type Mode = "light" | "dark";

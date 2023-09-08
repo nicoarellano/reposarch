@@ -1,6 +1,9 @@
+"useclient";
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { AppProvider } from "../middleware/CombineProviders";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +22,11 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </head>
-      <body className={inter.className} suppressHydrationWarning={true}>
-        <main className="bg-slate-100 w-screen m-0 max-h-screen">
-          {children}
-        </main>
+      <body
+        className={inter.className + "overflow-x-hidden w-screen h-screen"}
+        suppressHydrationWarning={true}
+      >
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );

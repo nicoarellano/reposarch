@@ -305,4 +305,13 @@ The status quo is to work with proprietary solutions and closed file formats."
     Which means that BIM is in many cases not an option anymore but a mandate.\
     Knowing that BIM software are mainly controlled by a few vendors, this mean that these software companies will have a tremendous impact over our practice.",
   },
+  {
+    element: (
+      <>
+        <h1>💻 Lab 3</h1>
+        <br />
+        <h1>Basis of CAD with p5</h1>
+      </>
+    ),
+  },
 ];
