@@ -8,7 +8,6 @@ import {
   Dispatch,
 } from "react";
 import { SlidesReducer, SlidesActions, SlidesState } from "./reducer";
-import { Slides, Slide } from "../../types/types";
 import { slides } from "../../app/MainMenu";
 
 type InitialStateType = {

@@ -10,7 +10,7 @@ export default function NestedTemplate({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex flex-col w-screen h-screen justify-between">
+    <main className={`flex flex-col w-screen h-screen justify-between `}>
       <nav className="top-0 flex flex-row w-screen h-24 ">
         <HeaderOfSlide slides={slides} />
       </nav>

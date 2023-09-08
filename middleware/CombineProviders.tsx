@@ -1,4 +1,5 @@
 import { SlidesProvider } from "./Slides/context";
+import { ThemeProvider } from "./Theme/context";
 
 const compose = (providers) =>
   // eslint-disable-next-line react/display-name
@@ -8,5 +9,5 @@ const compose = (providers) =>
     </Prev>
   ));
 
-export const AppProvider = compose([SlidesProvider]);
+export const AppProvider = compose([SlidesProvider, ThemeProvider]);
 compose.displayName = "compose";

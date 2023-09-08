@@ -1,7 +1,7 @@
 "use client";
 export default function CourseDescription() {
   return (
-    <section className="flex  w-2/3 max-h-[500px] overflow-y-scroll m-6 bg-white p-12 items-baseline text-justify">
+    <section className="flex  w-2/3 h overflow-y-scroll m-6 bg-white p-12 items-baseline text-justify">
       <p className="text-lg ">
         The course reflects on the use of computers and computer coding for
         architectural representation, and it analyses the different ways in
