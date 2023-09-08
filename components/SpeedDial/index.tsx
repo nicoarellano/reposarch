@@ -26,13 +26,13 @@ export default function BasicSpeedDial() {
   const { mode } = useContext(ThemeContext)["state"]["theme"];
 
   const actionStyle = {
-    backgroundColor: mode === "light" ? "#f1f1f195" : "#22222295",
+    backgroundColor: mode === "light" ? "#f1f1f195" : "#090c1495",
     borderRadius: "50px",
     width: "42px",
     height: "42px",
     padding: "10px",
     "&:hover": {
-      backgroundColor: mode === "light" ? "#f3f3f395" : "#333",
+      backgroundColor: mode === "light" ? "#f3f3f395" : "#33333395",
     },
   };
   const actions = [
@@ -100,7 +100,6 @@ export default function BasicSpeedDial() {
               type: "TOGGLE-DARK-MODE",
               payload: { mode: mode === "light" ? "dark" : "light" },
             });
-            console.log(mode);
           }}
         >
           {mode === "dark" ? (
@@ -122,7 +121,7 @@ export default function BasicSpeedDial() {
         top: 16,
         right: 16,
         "& .MuiFab-primary": {
-          backgroundColor: mode === "light" ? "white" : "black",
+          backgroundColor: mode === "light" ? "white" : "#090c14",
 
           color: mode === "light" ? "white" : "black",
           boxShadow: "none",

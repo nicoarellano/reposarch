@@ -38,7 +38,7 @@ export default function ListWithIcon({
             {Boolean(item.url) ? (
               <Link
                 href={
-                  item.url?.startsWith("http")
+                  item.url?.startsWith("http") || item.url?.startsWith("/")
                     ? item.url
                     : `${path}/${item.url}`
                 }
