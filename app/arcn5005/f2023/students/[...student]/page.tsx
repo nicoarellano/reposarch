@@ -19,8 +19,8 @@ export default function Page({ params }): ReactElement<Props> {
           <StudentIframe username={username} assignment={assignment} />
         </section>
       ) : (
-        <div className="flex flex-col justify-center items-center h-fit">
-          <div className="w-1/4 h-[380px]">
+        <div className="flex flex-col justify-center items-center ">
+          <div className="w-1/4 h-[360px] ">
             <ListWithIcon
               list={Assignments}
               subheader="Assignments"

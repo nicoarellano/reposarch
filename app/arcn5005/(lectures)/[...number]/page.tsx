@@ -76,9 +76,9 @@ export default function Page({ params }): ReactElement<Props> {
 
   return (
     <main className="flex flex-col w-screen h-screen justify-between">
-      <nav className="top-0 flex flex-row w-screen h-24 ">
+      <header className="top-0 flex flex-row w-screen h-24 ">
         <Header title={lecture?.title} />
-      </nav>
+      </header>
       <section className=" flex flex-col items-center justify-center slides w-screen h-3/4 ">
         {currentSlideElement}
       </section>
