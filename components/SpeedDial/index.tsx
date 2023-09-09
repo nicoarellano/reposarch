@@ -21,7 +21,7 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { useContext } from "react";
 import { ThemeContext } from "../../middleware/Theme/context";
 
-export default function BasicSpeedDial() {
+export default function MenuSpeedDial() {
   const themeDispatch = useContext(ThemeContext)["dispatch"];
   const { mode } = useContext(ThemeContext)["state"]["theme"];
 
@@ -118,8 +118,9 @@ export default function BasicSpeedDial() {
       ariaLabel="SpeedDial"
       sx={{
         position: "absolute",
-        top: 16,
-        right: 16,
+        margin: "1.5rem",
+        top: 0,
+        right: 0,
         "& .MuiFab-primary": {
           backgroundColor: mode === "light" ? "white" : "#090c14",
 

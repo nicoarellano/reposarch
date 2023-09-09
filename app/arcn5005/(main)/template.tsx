@@ -5,7 +5,6 @@ import { SlidesFooter } from "../../../components/Footer";
 import { HeaderOfSlide } from "../../../components/Header";
 import { slides } from "../../MainMenu";
 import { ThemeContext } from "../../../middleware/Theme/context";
-import { darkColor, lightColor } from "../../../middleware/Theme/reducer";
 
 export default function NestedTemplate({
   children,
@@ -17,7 +16,7 @@ export default function NestedTemplate({
     <main className={`flex flex-col h-screen justify-between `}>
       <nav
         className={`top-0 sticky h-24 w-full z-50 ${
-          mode === "light" ? "bg-gray-100" : "bg-gray-900 "
+          mode === "light" ? "bg-light" : "bg-dark "
         }`}
       >
         <HeaderOfSlide slides={slides} />
@@ -27,7 +26,7 @@ export default function NestedTemplate({
       </section>
       <nav
         className={`bottom-0 static w-full flex h-16 items-center z-50 ${
-          mode === "light" ? "bg-gray-100" : "bg-gray-900 "
+          mode === "light" ? "bg-light" : "bg-dark "
         }`}
       >
         <SlidesFooter slides={slides} />

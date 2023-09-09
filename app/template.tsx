@@ -13,9 +13,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <ThemeProvider theme={theme}>
       <main
         className={`absolute flex flex-col min-h-full justify-between overflow-x-hidden ${
-          mode === "light"
-            ? "bg-gray-100 text-gray-900"
-            : "bg-gray-900 text-gray-100"
+          mode === "light" ? "bg-light text-dark" : "bg-dark text-light"
         }`}
       >
         {children}

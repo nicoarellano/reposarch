@@ -7,7 +7,7 @@ export default function Logo() {
 
   // const router = useRouter();
   return (
-    <Link href="/arcn5005">
+    <Link href="/arcn5005" className="z-50 m-5">
       <div
         title={title}
         className="pointer-events-auto"

@@ -8,8 +8,8 @@ export default function Arcn5005() {
   const photo = "/images/reposarch.png";
   const title = "reposarch";
   return (
-    <section className=" flex flex-col items-center justify-between w-11/12 gap-5">
-      <section className=" grid grid-cols-3 divide-x grow">
+    <section className=" flex flex-col items-center justify-between w-11/12 ">
+      <section className="grid grid-cols-3 divide-x grow gap-5">
         <div className="flex items-center justify-center ">
           <ProgressPage />
         </div>
