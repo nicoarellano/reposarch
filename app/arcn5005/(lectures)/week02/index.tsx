@@ -156,13 +156,47 @@ export const content: Toc = [
   },
   {
     element: (
+      <h4>
+        <em>
+          Every program can be expressed directly in terms of binary integers
+          that designate memory locations containing data to be operated upon,
+          together with binary integers that specify the operations (from the
+          machine&apos;s instructions set) to be performed. You can think of
+          each instrcution as the settings for a long string of switches,
+          expressed as a string of binary digits like:
+        </em>
+      </h4>
+    ),
+  },
+  {
+    element: (
       <h1>
         01101000 01100101 01101100 01101100 01101111 00100000 01110111 01101111
         01110010 01101100 01100100 00100001
       </h1>
     ),
-    notes: "Into machine language (binary = [0,1])",
+    notes: "binary integers = [0,1]",
   },
+  {
+    element: (
+      <h4>
+        <em>
+          This is called machine language programing. It is not very convinient,
+          however, to think in terms of binary numbers and elementary operantion
+          and to express programs in the cryptic binary notation. Machine
+          language programming is like trying to describe how to construct a
+          complex building by specifying the coordinates of each brick; it is
+          better, if possible, to structure your thoughts and expressions in
+          terms of higher-level, more immediately understandable constructs.
+        </em>
+        <h5>
+          <br />
+          <em>William Mitchell - The Art of Computer Graphics Programming</em>
+        </h5>
+      </h4>
+    ),
+  },
+
   {
     element: (
       <Image
@@ -188,6 +222,132 @@ export const content: Toc = [
         <h1>Does anybody know how does binary code work?</h1>
       </>
     ),
+    notes: "Counting on binary code is like counting with 2 fingers",
+  },
+  {
+    element: (
+      <>
+        <h1>🗣️ ➡️ 💻</h1>
+        <br />
+        <h1>What is an assembler?</h1>
+      </>
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          An assembler is a computer program that accepts instructions expressed
+          more concisely, at a highier level, and decodes these into the machine
+          language (lower-level)
+        </em>
+        <h5>
+          <br />
+          <em>William Mitchell - The Art of Computer Graphics Programming</em>
+        </h5>
+      </h4>
+    ),
+    notes:
+      "Ultimately, of course, a computer can only excecute instructions expressed in its own machine language (which have unambiguous meaning in terms of its own instruction set). \
+    So a program written  in high-level algorithmic language must always be translated into the machine language of the particular computer on which it is to run",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week02/interface.png"
+        alt="Human computer interaction"
+        caption={"Our relation with the digital is mediated by interfaces"}
+      />
+    ),
+    notes:
+      "Our relation with the digital is mediated by interfaces. \
+    An interface is the bridge, the gap, and the medium throug which we interact with the computer.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week02/devices-diagram.png"
+        alt="Physical input and output hardware"
+        caption={"Physical input and output hardware"}
+      />
+    ),
+    notes:
+      "Now our dialogue with design is in part mediated by computers.\
+    This mediation occurs through multiple devices.\
+    > There are different ways to interact with computers. \
+    > Physical input hardware. translate our body expressions into digital language. \
+        > The mouse or touchscreen. \
+        > The Keyboard that allows us to type words that are then translated into machine code to get executed by the computer, that action is called programming.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week02/interaction.png"
+        alt="Human computer interaction"
+        caption={"Interfaces"}
+      />
+    ),
+    notes:
+      "> Interfaces are devices or programs that allow users to interact with the code. \
+      > Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. \
+      the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium.\
+     makes the interaction with the computer more intuitive for the designers.",
+  },
+  {
+    element: (
+      <>
+        <h1>GUI</h1>
+        <br />
+        <h1>🖱️ ➡️ 💻</h1>
+        <br />
+        <h1>Text-based user interfaces</h1>
+      </>
+    ),
+    notes:
+      "> Text-based user interfaces (TUIs) use characters, text and symbols.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/sutherland.png"
+        alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
+        caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
+      />
+    ),
+    notes:
+      "In 1973, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
+       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
+       GUIs made computer more accessible for non-programmers, including architects.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week02/mac.png"
+        alt="First Macintosh (1984)"
+        caption={"First Macintosh (1984)"}
+      />
+    ),
+    notes:
+      "On January 24, 1984, former Apple CEO Steve Jobs introduced the first Macintosh at Apple's annual shareholder's meeting in Cupertino, \
+      California, debuting the new computer equipped with a 9-inch black and white display, an 8MHz Motorola 68000 processor, 128KB of RAM, a 3.5-inch floppy drive, \
+      and a price tag of $2,495. \
+      This computer revolutionized the market with its GUI and mouse",
+  },
+  {
+    element: (
+      <>
+        <h1>TUI</h1>
+        <br />
+        <h1>⌨️ ➡️ 💻</h1>
+        <br />
+        <h1>Text-based user interfaces</h1>
+      </>
+    ),
+    notes:
+      "> Text-based user interfaces (TUIs) use characters, text and symbols.",
   },
   {
     element: (
@@ -200,12 +360,40 @@ export const content: Toc = [
     ),
     notes:
       "There are thousands of programming languages\
-      All early computer languages were created in the second half of the twentieth century.\
+      > Programming languages (notational systems written by humans or computers and executed by computers):\
+    > Low-level PLs: machine code = binary electromagnetic operations to interact with (CPU). Translated by decoders into binary code (sequences of 1s and 0s) yes, no / on, off / true, false.\
+    > High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code.       All early computer languages were created in the second half of the twentieth century.\
       Usually, artificial languages are not created from scratch, but rather they evolve throughout long periods of time and are the result of multiple socio-cultural events that are hard to explain.\
       However, in the case of computer languages, not only did the language itself had to be quickly invented artificially,\
       but because this was a totally new phenomenon, \
       there weren’t even terms to define the emerging actors that constituted this new ‘computer science’.\
       The way in which programmers were naming things had to be invented as well",
+  },
+  {
+    element: (
+      <>
+        <h1>🗣️ ➡️ 💻</h1>
+        <br />
+        <h1>What is a compiler?</h1>
+      </>
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          A compiler is a special type of program that accepts as input a source
+          program written in high-level language and produces as output an
+          object program expressed in the appropiate machine language
+        </em>
+        <h5>
+          <br />
+          <em>William Mitchell - The Art of Computer Graphics Programming</em>
+        </h5>
+      </h4>
+    ),
+    notes: "",
   },
   {
     element: (
@@ -245,23 +433,10 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h4>The Second Digital Turn by Mario Carpo ... Thoughts?</h4>
+        <h1>🧠</h1>
         <br />
-        <Video
-          src="https://www.youtube.com/embed/UVerq5DSdKU?si=GmIUk9y3PpRTwK2w"
-          title="The Second Digital Turn | Mario Carpo | Talks at Google"
-          caption="The Second Digital Turn | Mario Carpo | Talks at Google"
-        />
+        <h1>Programming logic</h1>
       </>
-    ),
-  },
-  {
-    element: (
-      <Image
-        src="/images/week01/process-with-gui.png"
-        alt="Digital Creative Process"
-        caption={"Digital creative process with GUI"}
-      />
     ),
   },
   {
@@ -284,22 +459,6 @@ export const content: Toc = [
       </h4>
     ),
   },
-  /*
-Now our dialogue with design is in part mediated by computers.
-This mediation occurs through multiple devices.
-> There are different ways to interact with computers. 
-> Physical input hardware. translate our body expressions into digital language.   
-    > The mouse or touchscreen.
-    > The Keyboard that allows us to type words that are then translated into machine code to get executed by the computer, that action is called programming. 
-> Programming languages (notational systems written by humans or computers and executed by computers):
-    > Low-level PLs: machine code = binary electromagnetic operations to interact with (CPU). Translated by decoders into binary code (sequences of 1s and 0s) yes, no / on, off / true, false. 
-    > High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code. 
-> The mediators are called Interfaces.
-  > Interfaces device or program that allow users to interact with the code. 
-    > Text-based user interfaces (TUIs) use characters, text and symbols.
-    > Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.
-
-  */
   {
     element: (
       <>
