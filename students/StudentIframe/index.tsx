@@ -12,7 +12,7 @@ export default function StudentIframe({
   return (
     <iframe
       src={`/arcn5005/f2023/students/${username}/${assignment}/index.html`}
-      className="grow h-[550px] w-screen"
+      className="grow h-[550px] w-full"
     />
   );
 }

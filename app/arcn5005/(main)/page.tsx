@@ -8,12 +8,12 @@ export default function Arcn5005() {
   const photo = "/images/reposarch.png";
   const title = "reposarch";
   return (
-    <section className=" flex flex-col items-center justify-between w-11/12 ">
-      <section className="grid grid-cols-3 divide-x grow gap-5">
-        <div className="flex items-center justify-center ">
+    <section className=" flex flex-col items-center justify-between w-full m-5">
+      <section className="grid grid-cols-3 uneven-grid divide-x grow gap-5">
+        <div className=" flex items-center justify-center ">
           <ProgressPage />
         </div>
-        <div className="flex items-center justify-center flex-col">
+        <div className=" flex items-center justify-center flex-col">
           <h3 className="text-center">
             <em>
               Open source digital tools for <b>Architects</b>
@@ -21,7 +21,7 @@ export default function Arcn5005() {
           </h3>
           <Image priority src={photo} height={400} width={350} alt={title} />
         </div>
-        <div className="flex items-center justify-center flex-col">
+        <div className=" flex items-center justify-center flex-col">
           <Calendar />
           <CalendarLegend />
         </div>

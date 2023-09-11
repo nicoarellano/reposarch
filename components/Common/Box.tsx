@@ -10,7 +10,7 @@ export default function Box() {
   const [bbVisible, setBbVisible] = useState(true);
   return (
     <main
-      className="w-screen flex justify-center items-center"
+      className="w-full flex justify-center items-center"
       onMouseOver={() => setBbVisible(false)}
       onMouseLeave={() => setBbVisible(true)}
     >

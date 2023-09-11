@@ -107,3 +107,7 @@ h5 {
   font-weight: 300;
   line-height: 40px;
 }
+
+.uneven-grid {
+  grid-template-columns: 40% 30% 30%;
+}

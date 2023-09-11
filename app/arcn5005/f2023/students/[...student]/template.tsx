@@ -23,7 +23,7 @@ export default function NestedTemplate({
   const assignment = params.student[1];
   return (
     <main className="flex flex-col w-screen h-screen ">
-      <nav className="top-0 flex flex-row w-screen h-24 ">
+      <nav className="top-0 flex flex-row w-full h-24 ">
         <Header
           title={`${
             student
@@ -33,9 +33,11 @@ export default function NestedTemplate({
         />
       </nav>
       {Boolean(student || assignment) ? (
-        <section className="flex justify-center ">{children}</section>
+        <section className="flex justify-center w-full h-full">
+          {children}
+        </section>
       ) : (
-        <section className="flex justify-center items-center">
+        <section className="flex justify-center items-center w-full">
           <ReturnButton />
         </section>
       )}

@@ -8,7 +8,6 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import TocIcon from "@mui/icons-material/ListAltRounded";
 
 import { Slides } from "../../types/types";
 import { ThemeContext } from "../../middleware/Theme/context";
@@ -70,20 +69,20 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
 
   return (
     <footer
-      className={`bottom-0 static w-full flex h-16 items-center z-50 ${
+      className={`bottom-0 static w-screen justify-center flex h-16 items-center z-50 ${
         mode === "light" ? "bg-light" : "bg-dark "
       }`}
     >
       <Stack spacing={2} visibility={list.length > 1 ? "visible" : "hidden"}>
         <Pagination
-          className=" w-screen flex justify-center p-3 "
+          className="  flex justify-center p-3 "
           count={list.length}
           size="large"
           page={page}
           onChange={handlePaginationChange}
           renderItem={(item) => (
             <PaginationItem
-              slots={{ previous: BackIcon, next: ForwardIcon, first: TocIcon }}
+              slots={{ previous: BackIcon, next: ForwardIcon }}
               {...item}
             />
           )}
@@ -145,20 +144,20 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
 
   return (
     <footer
-      className={`bottom-0 static w-full flex h-16 items-center z-50 ${
+      className={`bottom-0 static w-screen flex justify-center h-16 items-center z-50 ${
         mode === "light" ? "bg-light" : "bg-dark "
       }`}
     >
       <Stack spacing={2} visibility={slides.length > 1 ? "visible" : "hidden"}>
         <Pagination
-          className=" w-screen flex justify-center"
+          className="  flex justify-center"
           count={slides.length}
           size="large"
           page={page}
           onChange={handlePaginationChange}
           renderItem={(item) => (
             <PaginationItem
-              slots={{ previous: BackIcon, next: ForwardIcon, first: TocIcon }}
+              slots={{ previous: BackIcon, next: ForwardIcon }}
               {...item}
             />
           )}
