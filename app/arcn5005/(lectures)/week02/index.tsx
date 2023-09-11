@@ -156,6 +156,29 @@ export const content: Toc = [
   },
   {
     element: (
+      <>
+        <h1>⌨️💬</h1>
+        <br />
+        <h1>Programming Languages</h1>
+      </>
+    ),
+    notes:
+      "Programming languages (notational systems written by humans or computers and executed by computers)",
+  },
+  {
+    element: (
+      <>
+        <h1>🤖💬</h1>
+        <br />
+        <h1>Lower-level computer programming or Machine Language</h1>
+      </>
+    ),
+    notes:
+      "Low-level PLs: machine code = binary electromagnetic operations to interact with (CPU). Translated by decoders into binary code (sequences of 1s and 0s) yes, no / on, off / true, false.\
+    ",
+  },
+  {
+    element: (
       <h4>
         <em>
           Every program can be expressed directly in terms of binary integers
@@ -170,10 +193,16 @@ export const content: Toc = [
   },
   {
     element: (
-      <h1>
-        01101000 01100101 01101100 01101100 01101111 00100000 01110111 01101111
-        01110010 01101100 01100100 00100001
-      </h1>
+      <>
+        <h1>
+          01101000 01100101 01101100 01101100 01101111 00100000 01110111
+          01101111 01110010 01101100 01100100 00100001
+        </h1>
+        <h5>
+          <br />
+          <em>Hello world! written in binary code</em>
+        </h5>
+      </>
     ),
     notes: "binary integers = [0,1]",
   },
@@ -196,7 +225,34 @@ export const content: Toc = [
       </h4>
     ),
   },
-
+  {
+    element: (
+      <>
+        <h1>0️⃣1️⃣❔</h1>
+        <br />
+        <h1>Does anybody know how does binary code work?</h1>
+      </>
+    ),
+    notes: "Counting on binary code is like counting with 2 fingers",
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/b7pOcU1xMks?si=24wZoeuNfpph5V90&amp;start=12"
+        title="Introduction to Binary Numbers"
+        caption={"Introduction to Binary Numbers"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/Xpk67YzOn5w?si=ZBSbiG4QwRIuoZqj&amp;start=219"
+        title="Introduction to Binary Numbers"
+        caption={"Introduction to Binary Numbers"}
+      />
+    ),
+  },
   {
     element: (
       <Image
@@ -215,42 +271,32 @@ export const content: Toc = [
       programming languages designed to translate our operations into machine code.",
   },
   {
-    element: (
-      <>
-        <h1>0️⃣1️⃣❔</h1>
-        <br />
-        <h1>Does anybody know how does binary code work?</h1>
-      </>
-    ),
-    notes: "Counting on binary code is like counting with 2 fingers",
+    element: <h1>Programming</h1>,
+    notes:
+      "Programs Set of instructions that use syntax to systematize the logic of computer operations\
+    A ‘computer program’ is a set of instructions that tells the computer what to do in order to achieve a desirable goal.\
+    I will be using the word ‘tool’ as many architects use it when talking about the computer as a device to assist the design process.",
   },
+
   {
     element: (
       <>
-        <h1>🗣️ ➡️ 💻</h1>
+        <h2>➡️ 🧠 ➡️ Programming logic</h2>
         <br />
-        <h1>What is an assembler?</h1>
+        <Image
+          src="/images/week02/input-process-output.png"
+          alt="Input ► Process ► Output"
+          caption="Input ► Process ► Output"
+        />
       </>
-    ),
-    notes: "",
-  },
-  {
-    element: (
-      <h4>
-        <em>
-          An assembler is a computer program that accepts instructions expressed
-          more concisely, at a highier level, and decodes these into the machine
-          language (lower-level)
-        </em>
-        <h5>
-          <br />
-          <em>William Mitchell - The Art of Computer Graphics Programming</em>
-        </h5>
-      </h4>
     ),
     notes:
-      "Ultimately, of course, a computer can only excecute instructions expressed in its own machine language (which have unambiguous meaning in terms of its own instruction set). \
-    So a program written  in high-level algorithmic language must always be translated into the machine language of the particular computer on which it is to run",
+      "The functions of many machines can be described by specifying their input, process, and output. \
+    The process transforms something that we have into something that we may want\
+    The basic functions of a computer can be described in this fashion as well.\
+    (for example, numbers typed in at a keybord)\
+    the process consist of arithmetic and logical operations applied to that (adding numbers)\
+      and the output consist of the new information that results from the operations performed upon the input",
   },
   {
     element: (
@@ -264,7 +310,6 @@ export const content: Toc = [
       "Our relation with the digital is mediated by interfaces. \
     An interface is the bridge, the gap, and the medium throug which we interact with the computer.",
   },
-
   {
     element: (
       <Image
@@ -351,6 +396,21 @@ export const content: Toc = [
   },
   {
     element: (
+      <>
+        <h1>🗣️ 🔤 💻</h1>
+        <br />
+        <h1>High-level computer programming</h1>
+      </>
+    ),
+    notes:
+      "Any computer program is written in some particular language. \
+      The language (unlike a natural language such as English) has a precisly specified vocabulary and syntax that must be followed rigorously\
+      The semantic properties are also well defined; any syntactically correct statement causes the computer to perform some specific action. \
+      Thus a programming language provides a very precise means of communication and requires you to express yourself exactly; \
+      there is no latitude for vagueness , incompleteness, ambiguities, and errors that we tolerate in everyday speech",
+  },
+  {
+    element: (
       <Image
         src="/images/week02/top-programming-languages.png"
         alt="Top programming languages"
@@ -359,10 +419,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "There are thousands of programming languages\
-      > Programming languages (notational systems written by humans or computers and executed by computers):\
-    > Low-level PLs: machine code = binary electromagnetic operations to interact with (CPU). Translated by decoders into binary code (sequences of 1s and 0s) yes, no / on, off / true, false.\
-    > High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code.       All early computer languages were created in the second half of the twentieth century.\
+      "High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code.       All early computer languages were created in the second half of the twentieth century.\
       Usually, artificial languages are not created from scratch, but rather they evolve throughout long periods of time and are the result of multiple socio-cultural events that are hard to explain.\
       However, in the case of computer languages, not only did the language itself had to be quickly invented artificially,\
       but because this was a totally new phenomenon, \
@@ -372,12 +429,14 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h1>🗣️ ➡️ 💻</h1>
+        <h1>🔤 ➡️ 0️⃣1️⃣</h1>
         <br />
         <h1>What is a compiler?</h1>
       </>
     ),
-    notes: "",
+    notes:
+      "Ultimately, of course, a computer can only excecute instructions expressed in its own machine language (which have unambiguous meaning in terms of its own instruction set). \
+    So a program written  in high-level algorithmic language must always be translated into the machine language of the particular computer on which it is to run",
   },
   {
     element: (
@@ -385,7 +444,8 @@ export const content: Toc = [
         <em>
           A compiler is a special type of program that accepts as input a source
           program written in high-level language and produces as output an
-          object program expressed in the appropiate machine language
+          object program expressed in the appropiate machine language 🤖💬 or
+          binary code 0️⃣1️⃣
         </em>
         <h5>
           <br />
@@ -400,45 +460,14 @@ export const content: Toc = [
       <>
         <h1>❔</h1>
         <br />
-        <h1>What is your preferred programming language and why?</h1>
+        <h1>Has anyone used any high-level programming language?</h1>
       </>
     ),
-  },
-  {
-    element: <h1>Programming</h1>,
     notes:
-      "Programs Set of instructions that use syntax to systematize the logic of computer operations\
-    A ‘computer program’ is a set of instructions that tells the computer what to do in order to achieve a desirable goal.\
-    I will be using the word ‘tool’ as many architects use it when talking about the computer as a device to assist the design process.",
+      "Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
+    and mathematically. So it is much easier to write, read, and understand programs in these languages.",
   },
-  {
-    element: <h1>Software</h1>,
-    notes:
-      "While a ‘software’ is a set of programs combined by a programmer to address74 a more specific problem.\
-      Software, (which is also the plural of software) are sets of programs that have a specific function. ",
-  },
-  {
-    element: (
-      <Image
-        src="/images/week02/change-of-medium.png"
-        alt="Change of medium"
-        caption="Change of medium"
-      />
-    ),
-    notes:
-      "We have been using analogue tools for centuries to express our creativity. This allows a particular relationship with the object.\
-      Since the seventies, the creative process has been progressively incorporating a digital process.\
-      Within this new medium, the relationship with the object and process drastically changes.",
-  },
-  {
-    element: (
-      <>
-        <h1>🧠</h1>
-        <br />
-        <h1>Programming logic</h1>
-      </>
-    ),
-  },
+
   {
     element: (
       <h4>
@@ -458,6 +487,22 @@ export const content: Toc = [
         </h5>
       </h4>
     ),
+  },
+  {
+    element: (
+      <>
+        <h1>Software</h1>
+        <br />
+        <h4>
+          Software is a set of programs combined by a programmer to address a
+          more specific problem. Software, (which is also the plural of
+          software) are sets of programs that have a specific function.
+        </h4>
+      </>
+    ),
+    notes:
+      "Software is a set of programs combined by a programmer to address a more specific problem.\
+      Software, (which is also the plural of software) are sets of programs that have a specific function. ",
   },
   {
     element: (

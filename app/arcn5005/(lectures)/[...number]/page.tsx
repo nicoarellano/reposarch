@@ -62,6 +62,7 @@ export default function Page({ params }): ReactElement<Props> {
   useEffect(() => {
     if (content.length > 0) {
       const currentContent = content[currentSlideNumber - 1];
+      console.clear();
       if (currentContent?.notes) {
         // 🎶 Speaker notes as console log
         console.log(

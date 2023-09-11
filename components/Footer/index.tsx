@@ -8,6 +8,8 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import TocIcon from "@mui/icons-material/ListAltRounded";
+
 import { Slides } from "../../types/types";
 import { ThemeContext } from "../../middleware/Theme/context";
 
@@ -81,7 +83,7 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
           onChange={handlePaginationChange}
           renderItem={(item) => (
             <PaginationItem
-              slots={{ previous: BackIcon, next: ForwardIcon }}
+              slots={{ previous: BackIcon, next: ForwardIcon, first: TocIcon }}
               {...item}
             />
           )}
@@ -156,7 +158,7 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
           onChange={handlePaginationChange}
           renderItem={(item) => (
             <PaginationItem
-              slots={{ previous: BackIcon, next: ForwardIcon }}
+              slots={{ previous: BackIcon, next: ForwardIcon, first: TocIcon }}
               {...item}
             />
           )}

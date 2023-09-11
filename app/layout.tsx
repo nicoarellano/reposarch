@@ -23,7 +23,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </head>
       <body
-        className={inter.className + "overflow-x-hidden w-screen h-screen"}
+        className={inter.className + "overflow-hidden w-11/12 h-screen"}
         suppressHydrationWarning={true}
       >
         <AppProvider>{children}</AppProvider>

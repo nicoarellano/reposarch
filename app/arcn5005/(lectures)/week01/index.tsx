@@ -597,6 +597,56 @@ export const content: Toc = [
       <>
         <h1>❔</h1>
         <br />
+        <h1>What is Git?</h1>
+        <br />
+        <Image
+          src="/images/week01/git.png"
+          alt="Git"
+          href="https://en.wikipedia.org/wiki/Git"
+          caption={"Git - Wikipedia"}
+        />
+        <br />
+        <Button
+          size="large"
+          color="inherit"
+          href="https://git-scm.com/download/win"
+          variant="outlined"
+        >
+          Download Git
+        </Button>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h1>What is Node.js?</h1>
+        <br />
+        <Image
+          src="/images/week01/nodejs.png"
+          alt="Node.js"
+          href="https://en.wikipedia.org/wiki/Nodejs#"
+          caption={"Node.js - Wikipedia"}
+        />
+        <br />
+        <Button
+          size="large"
+          color="inherit"
+          href="https://nodejs.org/en/download"
+          variant="outlined"
+        >
+          Download Node js
+        </Button>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
         <h1>What is GitHub?</h1>
         <br />
         <Image
