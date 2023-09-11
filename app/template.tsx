@@ -12,7 +12,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider theme={theme}>
       <main
-        className={`absolute flex flex-col overflow-x-hidden ${
+        className={`absolute flex flex-col overflow-x-hidden w-full h-full ${
           mode === "light" ? "bg-light text-dark" : "bg-dark text-light"
         }`}
       >
