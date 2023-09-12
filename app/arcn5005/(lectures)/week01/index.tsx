@@ -2,10 +2,10 @@ import { Toc } from "../../../../types/types";
 
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
-import { Button } from "@mui/material";
 
 import CartesianPlane from "../../../../components/CartesianPlane";
 import TOC from "../../(main)/toc/page";
+import SimpleButton from "../../../../components/Common/SimpleButton";
 
 export const content: Toc = [
   {
@@ -606,14 +606,10 @@ export const content: Toc = [
           caption={"Git - Wikipedia"}
         />
         <br />
-        <Button
-          size="large"
-          color="inherit"
+        <SimpleButton
+          title="Download Git"
           href="https://git-scm.com/download/win"
-          variant="outlined"
-        >
-          Download Git
-        </Button>
+        />
       </>
     ),
   },
@@ -631,14 +627,10 @@ export const content: Toc = [
           caption={"Node.js - Wikipedia"}
         />
         <br />
-        <Button
-          size="large"
-          color="inherit"
+        <SimpleButton
+          title="Download Node js"
           href="https://nodejs.org/en/download"
-          variant="outlined"
-        >
-          Download Node js
-        </Button>
+        />
       </>
     ),
   },
@@ -685,14 +677,10 @@ export const content: Toc = [
         <br />
         <h3>If you don&apos;t, let&apos;s create one</h3>
         <br />
-        <Button
-          size="large"
-          color="inherit"
+        <SimpleButton
+          title="SIGN UP TO GITHUB"
           href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-          variant="outlined"
-        >
-          SIGN UP TO GITHUB
-        </Button>
+        />
       </>
     ),
   },

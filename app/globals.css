@@ -111,3 +111,8 @@ h5 {
 .uneven-grid {
   grid-template-columns: 40% 30% 30%;
 }
+
+.pixel {
+  background-color: black;
+  border-radius: 2px;
+}

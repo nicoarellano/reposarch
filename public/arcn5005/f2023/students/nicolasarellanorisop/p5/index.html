@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P5</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      .container {
+        display: block;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+  </head>
+  <body>
+    <script>
+      function setup() {
+        // var utils = new p5.Utils();
+        createCanvas(1500, 800);
+
+        // utils.enableRuler();
+      }
+
+      function draw() {
+        background(220);
+
+        rect(100, 100, 100, 100);
+
+        stroke(0, 100, 155);
+
+        rect(300, 100, 200, 200);
+
+        fill(0, 255, 0);
+
+        stroke(255, 255, 0);
+        rect(width - 100, height - 100, 50, 50);
+
+        stroke(0, 0, 255);
+        line(0, 100, 0, 100);
+
+        translate(140, 0);
+
+        let d = 70;
+        let p1 = d;
+        let p2 = p1 + d;
+        let p3 = p2 + d;
+        let p4 = p3 + d;
+
+        // Draw red box
+        stroke(255, 0, 0);
+        fill(255, 255, 0);
+        line(p3, p3, p2, p3);
+        line(p2, p3, p2, p2);
+        line(p2, p2, p3, p2);
+        line(p3, p2, p3, p3);
+
+        ellipse(50, 300, 150);
+
+        // Draw green points
+        stroke(0, 255, 100);
+
+        point(p1, p1);
+        point(p1, p3);
+        point(p2, p4);
+        point(p3, p1);
+        point(p4, p2);
+        point(p4, p4);
+      }
+
+      setup();
+
+      draw();
+    </script>
+  </body>
+</html>
