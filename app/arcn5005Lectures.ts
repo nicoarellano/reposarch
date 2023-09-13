@@ -74,7 +74,7 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
-    title: "Week 04 - Closed and Open Source Scripting",
+    title: "Week 04 - Scripting",
     id: `week04`,
     url: `week04`,
     date: initialDate.add(3, "week"),
@@ -84,11 +84,11 @@ export const arcn5005Lectures: Lectures = [
       { title: "Close-sourced scripting" },
       {
         title:
-          "Coding for efficiency and automatization or the good old ; Programming solutions for repetetive tasks",
+          "Coding for efficiency and automatization ; AKA Programming solutions for repetetive tasks",
       },
 
       {
-        title: "🖥️ LAB 4:  Close-source scripting - BIM and Dynamo / Sverchok",
+        title: "🖥️ LAB 4: Scripting - Dynamo / Grasshopper / Sverchok",
       },
     ],
   },
