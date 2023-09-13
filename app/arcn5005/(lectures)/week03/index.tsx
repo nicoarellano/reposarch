@@ -3,6 +3,7 @@ import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
 import Quote from "../../../../components/Common/Quote";
 import EmojiTitle from "../../../../components/Common/EmojiTitle";
+import PdfViewer from "../../../../components/Common/PdfViewer";
 
 export const content: Toc = [
   {
@@ -164,14 +165,48 @@ export const content: Toc = [
     ),
   },
   {
+    element: <EmojiTitle emoji={"❔"} title={"Basis of CAD"} />,
+  },
+  {
     element: (
-      <embed
-        src="/resources/may_everythingisalreadyanimage.pdf"
-        width="90%"
-        height="100%"
-        type="application/pdf"
-      ></embed>
+      <>
+        <h2>Drawing with Pixels ✏️</h2>
+        <br />
+        <iframe
+          className="w-full h-full"
+          src="https://acepixels.netlify.app/"
+        />
+      </>
     ),
+  },
+
+  {
+    element: (
+      <>
+        <h2>Drawing with Vectors ✏️</h2>
+        <br />
+        <iframe
+          className="w-full h-full"
+          src="https://editor.p5js.org/alptugan/sketches/Ob3l1fsrO"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Drawing with P5 ✏️</h2>
+        <br />
+        <iframe
+          className="w-full h-full"
+          src="/arcn5005/f2023/students/nicolasarellanorisop/p5/index.html"
+        />
+      </>
+    ),
+  },
+
+  {
+    element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
   },
   {
     element: (
@@ -350,64 +385,9 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <>
-        <h2>Drawing with Pixels</h2>
-        <br />
-        <iframe
-          className="w-full h-full"
-          src="https://acepixels.netlify.app/"
-        />
-      </>
-    ),
-  },
-  {
-    element: (
-      <>
-        <h1>💻 Lab 3</h1>
-        <br />
-        <h1>Basis of CAD</h1>
-      </>
-    ),
-  },
-  {
-    element: (
-      <>
-        <h2>Drawing with P5 ✏️</h2>
-        <br />
-        <iframe
-          className="w-full h-full"
-          src="https://editor.p5js.org/alptugan/sketches/Ob3l1fsrO"
-        />
-      </>
-    ),
-  },
-  {
-    element: (
-      <>
-        <h2>Drawing with P5 ✏️</h2>
-        <br />
-        <iframe
-          className="w-full h-full"
-          src="/arcn5005/f2023/students/nicolasarellanorisop/p5/index.html"
-        />
-      </>
-    ),
-  },
-
-  {
-    element: (
-      <>
         <h1>💻 Lab 3</h1>
         <br />
         <h1>Blender</h1>
-      </>
-    ),
-  },
-  {
-    element: (
-      <>
-        <h1>💻 Lab 3</h1>
-        <br />
-        <h1>P5</h1>
       </>
     ),
   },

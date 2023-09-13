@@ -1,6 +1,7 @@
 import { Toc } from "../../../../types/types";
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
+import PdfViewer from "../../../../components/Common/PdfViewer";
 
 export const content: Toc = [
   {
@@ -71,6 +72,11 @@ export const content: Toc = [
           designed public space, housing, interiors and competitions
         </h5>
       </>
+    ),
+  },
+  {
+    element: (
+      <PdfViewer src="/images/week02/Architectural-Photogrammetry-Intro.pdf" />
     ),
   },
   {
