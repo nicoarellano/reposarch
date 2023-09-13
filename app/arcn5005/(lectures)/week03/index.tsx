@@ -11,7 +11,7 @@ export const content: Toc = [
       <>
         <Image
           src="/images/week03/tools-of-the-imagination.jpg"
-          alt="Tools of Imagination"
+          alt="Tools of the Imagination"
           href="https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false"
         />
         <h4>
@@ -211,10 +211,37 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/tools0of-the-imagination.jpg"
-        alt="Tools of the Imagination"
-        caption={"Tools of the imagination - Susan Piedmont-Palladino (2007)"}
+        src="/images/week03/autocad.png"
+        alt={"Autodesk's AutoCad"}
+        href="https://en.wikipedia.org/wiki/AutoCAD"
+        caption={"Autodesk's AutoCad is the world's most popular CAD software"}
       />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/autocad-pricing.png"
+        alt={"Autodesk's AutoCad"}
+        href="https://www.autodesk.ca/en/products/autocad/overview?mktvar002=5656878%7CSEM%7C16183926843%7C137132251670%7Cpla-933128653804_autocad&plc=ACDIST&term=1-YEAR&support=ADVANCED&quantity=1&utm_source=GGL&utm_medium=SEM&utm_term=pla-933128653804&utm_id=5656878&utm_campaign=GGL_DEC_All-Products_AMER_CA_eComm_PLA_BR_New_NA_0000_4424459_&mkwid=s|pcrid|581813781112|pkw||pmt||pdv|c|slid||pgrid|137132251670|ptaid|pla-933128653804|pid|Autodesk%20AutoCAD%20(1%20year%20subscription)&utm_medium=cpc&utm_source=google&utm_campaign&utm_term&utm_content=s|pcrid|581813781112|pkw||pmt||pdv|c|slid||pgrid|137132251670|ptaid|pla-933128653804|&gclid=EAIaIQobChMIoovk042ogQMVP_uUCR2dig90EAYYAiABEgJY2PD_BwE&ef_id=ZQHwuAAABOyV0B@V:20230913172616:s&tab=subscription"
+        caption={
+          "Autodesk's AutoCad pricing in 2023 - CA$2575 per year per 1 user"
+        }
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Alternatives? 💸</h2>
+        <br />
+        <Image
+          src="/images/week03/brenderbim.png"
+          alt={"BlenderBIM"}
+          href="https://blenderbim.org/"
+          caption={"BlenderBIM is a free and open source alternative to Revit"}
+        />
+      </>
     ),
   },
   {
@@ -290,6 +317,16 @@ export const content: Toc = [
   {
     element: (
       <Image
+        src="/images/week03/revit.png"
+        alt={"Autodesk's Revit"}
+        href="https://en.wikipedia.org/wiki/Autodesk_Revit"
+        caption={"Autodesk's Revit is the world's most popular BIM software"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
         src="/images/week03/closed-bim.png"
         alt="Closed BIM"
         caption={
@@ -313,18 +350,31 @@ The status quo is to work with proprietary solutions and closed file formats."
   },
   {
     element: (
+      <Image
+        src="/images/week03/revit-pricing.png"
+        alt={"Autodesk's Revit 2023 price"}
+        href="https://www.autodesk.ca/en/products/revit/overview?us_oa=dotcom-us&us_si=8abb21ea-6ba6-46ac-929b-39cecb847ed0&us_st=revit&us_pt=RVT&term=1-YEAR&tab=subscription&plc=RVT"
+        caption={
+          "Autodesk's Revit pricing in 2023 - CA$3695 per year per 1 user"
+        }
+      />
+    ),
+  },
+  {
+    element: (
       <>
-        <h1>💸</h1>
+        <h2>Alternatives? 💸</h2>
         <br />
-        <h2>Proprietary software&apos;s licences are expensive!</h2>
-        <br />
-        <h3>
-          Revit standar licence for architecture products cost at least $3.000
-          USD 💵💵💵
-        </h3>
+        <Image
+          src="/images/week03/librecad.png"
+          alt={"LibreCad"}
+          href="https://wiki.librecad.org/index.php"
+          caption={"LibreCad is a free and open source alternative to AutoCad"}
+        />
       </>
     ),
   },
+
   {
     element: (
       <Image
