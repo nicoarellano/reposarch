@@ -236,10 +236,10 @@ export const content: Toc = [
         <h2>Alternatives? 💸</h2>
         <br />
         <Image
-          src="/images/week03/brenderbim.png"
-          alt={"BlenderBIM"}
-          href="https://blenderbim.org/"
-          caption={"BlenderBIM is a free and open source alternative to Revit"}
+          src="/images/week03/librecad.png"
+          alt={"LibreCad"}
+          href="https://wiki.librecad.org/index.php"
+          caption={"LibreCad is a free and open source alternative to AutoCad"}
         />
       </>
     ),
@@ -351,6 +351,20 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <Image
+        src="/images/week03/mandates.png"
+        alt="BIM Mandates"
+        caption={"By BICP Global BIM Study - Lessons For Ireland's Programme"}
+      />
+    ),
+    notes:
+      "Government BIM mandates.\
+    Countries all over the word are becoming to regulate the use of BIM. So if one wants to participate in public works and even non public projects BIM is a requirement.\
+    Which means that BIM is in many cases not an option anymore but a mandate.\
+    Knowing that BIM software are mainly controlled by a few vendors, this mean that these software companies will have a tremendous impact over our practice.",
+  },
+  {
+    element: (
+      <Image
         src="/images/week03/revit-pricing.png"
         alt={"Autodesk's Revit 2023 price"}
         href="https://www.autodesk.ca/en/products/revit/overview?us_oa=dotcom-us&us_si=8abb21ea-6ba6-46ac-929b-39cecb847ed0&us_st=revit&us_pt=RVT&term=1-YEAR&tab=subscription&plc=RVT"
@@ -366,29 +380,15 @@ The status quo is to work with proprietary solutions and closed file formats."
         <h2>Alternatives? 💸</h2>
         <br />
         <Image
-          src="/images/week03/librecad.png"
-          alt={"LibreCad"}
-          href="https://wiki.librecad.org/index.php"
-          caption={"LibreCad is a free and open source alternative to AutoCad"}
+          src="/images/week03/blenderbim.png"
+          alt={"BlenderBIM"}
+          href="https://blenderbim.org/"
+          caption={"BlenderBIM is a free and open source alternative to Revit"}
         />
       </>
     ),
   },
 
-  {
-    element: (
-      <Image
-        src="/images/week03/mandates.png"
-        alt="BIM Mandates"
-        caption={"By BICP Global BIM Study - Lessons For Ireland's Programme"}
-      />
-    ),
-    notes:
-      "Government BIM mandates.\
-    Countries all over the word are becoming to regulate the use of BIM. So if one wants to participate in public works and even non public projects BIM is a requirement.\
-    Which means that BIM is in many cases not an option anymore but a mandate.\
-    Knowing that BIM software are mainly controlled by a few vendors, this mean that these software companies will have a tremendous impact over our practice.",
-  },
   {
     element: <EmojiTitle emoji={"❔"} title={"What does scripting mean?"} />,
   },
@@ -437,7 +437,9 @@ The status quo is to work with proprietary solutions and closed file formats."
       <>
         <h1>💻 Lab 3</h1>
         <br />
-        <h1>Blender</h1>
+        <h2>LibreCad</h2>
+        <br />
+        <h2>Blender</h2>
       </>
     ),
   },
