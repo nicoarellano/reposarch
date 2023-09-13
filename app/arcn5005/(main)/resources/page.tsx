@@ -16,7 +16,7 @@ import { Articles } from "./Articles";
 
 export default function Resources() {
   return (
-    <section className="flex w-screen h-[550px] overflow-y-scroll overflow-x-hidden p-12 items-baseline text-justify justify-center">
+    <section className="flex w-full h-[550px] overflow-y-scroll overflow-x-hidden p-12 items-baseline text-justify justify-center">
       <div className="w-1/2 flex flex-col  content-center">
         <ListWithIcon list={Books} icon={<BookIcon />} subheader="📖 Books:" />
         <br />

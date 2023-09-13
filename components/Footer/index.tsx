@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, ReactElement } from "react";
+import { useState, useEffect, ReactElement, useContext } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import Stack from "@mui/material/Stack";
@@ -8,7 +8,9 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
+
 import { Slides } from "../../types/types";
+import { ThemeContext } from "../../middleware/Theme/context";
 
 interface Props {
   list: [];
@@ -22,6 +24,8 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
 
   const routerEnd = path.split("/").reverse()[0];
   const [newPath, setNewPath] = useState<string>(path);
+
+  const { mode } = useContext(ThemeContext)["state"]["theme"];
 
   useEffect(() => {
     let newPath: string = path;
@@ -64,21 +68,27 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
   }
 
   return (
-    <Stack spacing={2} visibility={list.length > 1 ? "visible" : "hidden"}>
-      <Pagination
-        className=" w-screen flex justify-center p-3 "
-        count={list.length}
-        size="large"
-        page={page}
-        onChange={handlePaginationChange}
-        renderItem={(item) => (
-          <PaginationItem
-            slots={{ previous: BackIcon, next: ForwardIcon }}
-            {...item}
-          />
-        )}
-      />
-    </Stack>
+    <footer
+      className={`bottom-0 static w-screen justify-center flex h-16 items-center z-50 ${
+        mode === "light" ? "bg-light" : "bg-dark "
+      }`}
+    >
+      <Stack spacing={2} visibility={list.length > 1 ? "visible" : "hidden"}>
+        <Pagination
+          className="  flex justify-center p-3 "
+          count={list.length}
+          size="large"
+          page={page}
+          onChange={handlePaginationChange}
+          renderItem={(item) => (
+            <PaginationItem
+              slots={{ previous: BackIcon, next: ForwardIcon }}
+              {...item}
+            />
+          )}
+        />
+      </Stack>
+    </footer>
   );
 }
 
@@ -92,6 +102,8 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
   const pathIndex = slides.findIndex((slide) => slide.url === path);
   const [index, setIndex] = useState<number>(pathIndex === -1 ? 0 : pathIndex);
   const [page, setPage] = useState(index + 1);
+
+  const { mode } = useContext(ThemeContext)["state"]["theme"];
 
   useEffect(() => {
     const index = slides.findIndex((slide) => slide.url === path);
@@ -131,20 +143,26 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
   }
 
   return (
-    <Stack spacing={2} visibility={slides.length > 1 ? "visible" : "hidden"}>
-      <Pagination
-        className=" w-screen flex justify-center"
-        count={slides.length}
-        size="large"
-        page={page}
-        onChange={handlePaginationChange}
-        renderItem={(item) => (
-          <PaginationItem
-            slots={{ previous: BackIcon, next: ForwardIcon }}
-            {...item}
-          />
-        )}
-      />
-    </Stack>
+    <footer
+      className={`bottom-0 static w-screen flex justify-center h-16 items-center z-50 ${
+        mode === "light" ? "bg-light" : "bg-dark "
+      }`}
+    >
+      <Stack spacing={2} visibility={slides.length > 1 ? "visible" : "hidden"}>
+        <Pagination
+          className="  flex justify-center"
+          count={slides.length}
+          size="large"
+          page={page}
+          onChange={handlePaginationChange}
+          renderItem={(item) => (
+            <PaginationItem
+              slots={{ previous: BackIcon, next: ForwardIcon }}
+              {...item}
+            />
+          )}
+        />
+      </Stack>
+    </footer>
   );
 }

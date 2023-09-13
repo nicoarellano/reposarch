@@ -1,6 +1,7 @@
 import { Toc } from "../../../../types/types";
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
+import PdfViewer from "../../../../components/Common/PdfViewer";
 
 export const content: Toc = [
   {
@@ -71,6 +72,11 @@ export const content: Toc = [
           designed public space, housing, interiors and competitions
         </h5>
       </>
+    ),
+  },
+  {
+    element: (
+      <PdfViewer src="/images/week02/Architectural-Photogrammetry-Intro.pdf" />
     ),
   },
   {
@@ -156,12 +162,102 @@ export const content: Toc = [
   },
   {
     element: (
-      <h1>
-        01101000 01100101 01101100 01101100 01101111 00100000 01110111 01101111
-        01110010 01101100 01100100 00100001
-      </h1>
+      <>
+        <h1>⌨️💬</h1>
+        <br />
+        <h1>Programming Languages</h1>
+      </>
     ),
-    notes: "Into machine language (binary = [0,1])",
+    notes:
+      "Programming languages (notational systems written by humans or computers and executed by computers)",
+  },
+  {
+    element: (
+      <>
+        <h1>🤖💬</h1>
+        <br />
+        <h1>Lower-level computer programming or Machine Language</h1>
+      </>
+    ),
+    notes:
+      "Low-level PLs: machine code = binary electromagnetic operations to interact with (CPU). Translated by decoders into binary code (sequences of 1s and 0s) yes, no / on, off / true, false.\
+    ",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          Every program can be expressed directly in terms of binary integers
+          that designate memory locations containing data to be operated upon,
+          together with binary integers that specify the operations (from the
+          machine&apos;s instructions set) to be performed. You can think of
+          each instrcution as the settings for a long string of switches,
+          expressed as a string of binary digits like:
+        </em>
+      </h4>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>
+          01101000 01100101 01101100 01101100 01101111 00100000 01110111
+          01101111 01110010 01101100 01100100 00100001
+        </h1>
+        <h5>
+          <br />
+          <em>Hello world! written in binary code</em>
+        </h5>
+      </>
+    ),
+    notes: "binary integers = [0,1]",
+  },
+  {
+    element: (
+      <h4>
+        <em>
+          This is called machine language programing. It is not very convinient,
+          however, to think in terms of binary numbers and elementary operantion
+          and to express programs in the cryptic binary notation. Machine
+          language programming is like trying to describe how to construct a
+          complex building by specifying the coordinates of each brick; it is
+          better, if possible, to structure your thoughts and expressions in
+          terms of higher-level, more immediately understandable constructs.
+        </em>
+        <h5>
+          <br />
+          <em>William Mitchell - The Art of Computer Graphics Programming</em>
+        </h5>
+      </h4>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>0️⃣1️⃣❔</h1>
+        <br />
+        <h1>Does anybody know how does binary code work?</h1>
+      </>
+    ),
+    notes: "Counting on binary code is like counting with 2 fingers",
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/b7pOcU1xMks?si=24wZoeuNfpph5V90&amp;start=12"
+        title="Introduction to Binary Numbers"
+        caption={"Introduction to Binary Numbers"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/Xpk67YzOn5w?si=ZBSbiG4QwRIuoZqj&amp;start=219"
+        title="Introduction to Binary Numbers"
+        caption={"Introduction to Binary Numbers"}
+      />
+    ),
   },
   {
     element: (
@@ -181,13 +277,143 @@ export const content: Toc = [
       programming languages designed to translate our operations into machine code.",
   },
   {
+    element: <h1>Programming</h1>,
+    notes:
+      "Programs Set of instructions that use syntax to systematize the logic of computer operations\
+    A ‘computer program’ is a set of instructions that tells the computer what to do in order to achieve a desirable goal.\
+    I will be using the word ‘tool’ as many architects use it when talking about the computer as a device to assist the design process.",
+  },
+
+  {
     element: (
       <>
-        <h1>0️⃣1️⃣❔</h1>
+        <h2>➡️ 🧠 ➡️ Programming logic</h2>
         <br />
-        <h1>Does anybody know how does binary code work?</h1>
+        <Image
+          src="/images/week02/input-process-output.png"
+          alt="Input ► Process ► Output"
+          caption="Input ► Process ► Output"
+        />
       </>
     ),
+    notes:
+      "The functions of many machines can be described by specifying their input, process, and output. \
+    The process transforms something that we have into something that we may want\
+    The basic functions of a computer can be described in this fashion as well.\
+    (for example, numbers typed in at a keybord)\
+    the process consist of arithmetic and logical operations applied to that (adding numbers)\
+      and the output consist of the new information that results from the operations performed upon the input",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week02/interface.png"
+        alt="Human computer interaction"
+        caption={"Our relation with the digital is mediated by interfaces"}
+      />
+    ),
+    notes:
+      "Our relation with the digital is mediated by interfaces. \
+    An interface is the bridge, the gap, and the medium throug which we interact with the computer.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week02/devices-diagram.png"
+        alt="Physical input and output hardware"
+        caption={"Physical input and output hardware"}
+      />
+    ),
+    notes:
+      "Now our dialogue with design is in part mediated by computers.\
+    This mediation occurs through multiple devices.\
+    > There are different ways to interact with computers. \
+    > Physical input hardware. translate our body expressions into digital language. \
+        > The mouse or touchscreen. \
+        > The Keyboard that allows us to type words that are then translated into machine code to get executed by the computer, that action is called programming.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week02/interaction.png"
+        alt="Human computer interaction"
+        caption={"Interfaces"}
+      />
+    ),
+    notes:
+      "> Interfaces are devices or programs that allow users to interact with the code. \
+      > Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. \
+      the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium.\
+     makes the interaction with the computer more intuitive for the designers.",
+  },
+  {
+    element: (
+      <>
+        <h1>GUI</h1>
+        <br />
+        <h1>🖱️ ➡️ 💻</h1>
+        <br />
+        <h1>Text-based user interfaces</h1>
+      </>
+    ),
+    notes:
+      "> Text-based user interfaces (TUIs) use characters, text and symbols.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week01/sutherland.png"
+        alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
+        caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
+      />
+    ),
+    notes:
+      "In 1973, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
+       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
+       GUIs made computer more accessible for non-programmers, including architects.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week02/mac.png"
+        alt="First Macintosh (1984)"
+        caption={"First Macintosh (1984)"}
+      />
+    ),
+    notes:
+      "On January 24, 1984, former Apple CEO Steve Jobs introduced the first Macintosh at Apple's annual shareholder's meeting in Cupertino, \
+      California, debuting the new computer equipped with a 9-inch black and white display, an 8MHz Motorola 68000 processor, 128KB of RAM, a 3.5-inch floppy drive, \
+      and a price tag of $2,495. \
+      This computer revolutionized the market with its GUI and mouse",
+  },
+  {
+    element: (
+      <>
+        <h1>TUI</h1>
+        <br />
+        <h1>⌨️ ➡️ 💻</h1>
+        <br />
+        <h1>Text-based user interfaces</h1>
+      </>
+    ),
+    notes:
+      "> Text-based user interfaces (TUIs) use characters, text and symbols.",
+  },
+  {
+    element: (
+      <>
+        <h1>🗣️ 🔤 💻</h1>
+        <br />
+        <h1>High-level computer programming</h1>
+      </>
+    ),
+    notes:
+      "Any computer program is written in some particular language. \
+      The language (unlike a natural language such as English) has a precisly specified vocabulary and syntax that must be followed rigorously\
+      The semantic properties are also well defined; any syntactically correct statement causes the computer to perform some specific action. \
+      Thus a programming language provides a very precise means of communication and requires you to express yourself exactly; \
+      there is no latitude for vagueness , incompleteness, ambiguities, and errors that we tolerate in everyday speech",
   },
   {
     element: (
@@ -199,8 +425,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "There are thousands of programming languages\
-      All early computer languages were created in the second half of the twentieth century.\
+      "High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code.       All early computer languages were created in the second half of the twentieth century.\
       Usually, artificial languages are not created from scratch, but rather they evolve throughout long periods of time and are the result of multiple socio-cultural events that are hard to explain.\
       However, in the case of computer languages, not only did the language itself had to be quickly invented artificially,\
       but because this was a totally new phenomenon, \
@@ -210,60 +435,45 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h1>❔</h1>
+        <h1>🔤 ➡️ 0️⃣1️⃣</h1>
         <br />
-        <h1>What is your preferred programming language and why?</h1>
+        <h1>What is a compiler?</h1>
       </>
     ),
-  },
-  {
-    element: <h1>Programming</h1>,
     notes:
-      "Programs Set of instructions that use syntax to systematize the logic of computer operations\
-    A ‘computer program’ is a set of instructions that tells the computer what to do in order to achieve a desirable goal.\
-    I will be using the word ‘tool’ as many architects use it when talking about the computer as a device to assist the design process.",
-  },
-  {
-    element: <h1>Software</h1>,
-    notes:
-      "While a ‘software’ is a set of programs combined by a programmer to address74 a more specific problem.\
-      Software, (which is also the plural of software) are sets of programs that have a specific function. ",
+      "Ultimately, of course, a computer can only excecute instructions expressed in its own machine language (which have unambiguous meaning in terms of its own instruction set). \
+    So a program written  in high-level algorithmic language must always be translated into the machine language of the particular computer on which it is to run",
   },
   {
     element: (
-      <Image
-        src="/images/week02/change-of-medium.png"
-        alt="Change of medium"
-        caption="Change of medium"
-      />
+      <h4>
+        <em>
+          A compiler is a special type of program that accepts as input a source
+          program written in high-level language and produces as output an
+          object program expressed in the appropiate machine language 🤖💬 or
+          binary code 0️⃣1️⃣
+        </em>
+        <h5>
+          <br />
+          <em>William Mitchell - The Art of Computer Graphics Programming</em>
+        </h5>
+      </h4>
     ),
-    notes:
-      "We have been using analogue tools for centuries to express our creativity. This allows a particular relationship with the object.\
-      Since the seventies, the creative process has been progressively incorporating a digital process.\
-      Within this new medium, the relationship with the object and process drastically changes.",
+    notes: "",
   },
   {
     element: (
       <>
-        <h4>The Second Digital Turn by Mario Carpo ... Thoughts?</h4>
+        <h1>❔</h1>
         <br />
-        <Video
-          src="https://www.youtube.com/embed/UVerq5DSdKU?si=GmIUk9y3PpRTwK2w"
-          title="The Second Digital Turn | Mario Carpo | Talks at Google"
-          caption="The Second Digital Turn | Mario Carpo | Talks at Google"
-        />
+        <h1>Has anyone used any high-level programming language?</h1>
       </>
     ),
+    notes:
+      "Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
+    and mathematically. So it is much easier to write, read, and understand programs in these languages.",
   },
-  {
-    element: (
-      <Image
-        src="/images/week01/process-with-gui.png"
-        alt="Digital Creative Process"
-        caption={"Digital creative process with GUI"}
-      />
-    ),
-  },
+
   {
     element: (
       <h4>
@@ -284,22 +494,22 @@ export const content: Toc = [
       </h4>
     ),
   },
-  /*
-Now our dialogue with design is in part mediated by computers.
-This mediation occurs through multiple devices.
-> There are different ways to interact with computers. 
-> Physical input hardware. translate our body expressions into digital language.   
-    > The mouse or touchscreen.
-    > The Keyboard that allows us to type words that are then translated into machine code to get executed by the computer, that action is called programming. 
-> Programming languages (notational systems written by humans or computers and executed by computers):
-    > Low-level PLs: machine code = binary electromagnetic operations to interact with (CPU). Translated by decoders into binary code (sequences of 1s and 0s) yes, no / on, off / true, false. 
-    > High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code. 
-> The mediators are called Interfaces.
-  > Interfaces device or program that allow users to interact with the code. 
-    > Text-based user interfaces (TUIs) use characters, text and symbols.
-    > Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.
-
-  */
+  {
+    element: (
+      <>
+        <h1>Software</h1>
+        <br />
+        <h4>
+          Software is a set of programs combined by a programmer to address a
+          more specific problem. Software, (which is also the plural of
+          software) are sets of programs that have a specific function.
+        </h4>
+      </>
+    ),
+    notes:
+      "Software is a set of programs combined by a programmer to address a more specific problem.\
+      Software, (which is also the plural of software) are sets of programs that have a specific function. ",
+  },
   {
     element: (
       <>

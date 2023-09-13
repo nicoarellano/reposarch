@@ -62,6 +62,7 @@ export default function Page({ params }): ReactElement<Props> {
   useEffect(() => {
     if (content.length > 0) {
       const currentContent = content[currentSlideNumber - 1];
+      console.clear();
       if (currentContent?.notes) {
         // 🎶 Speaker notes as console log
         console.log(
@@ -75,14 +76,14 @@ export default function Page({ params }): ReactElement<Props> {
   }, [content, currentSlideNumber]);
 
   return (
-    <main className="flex flex-col w-screen h-screen justify-between">
-      <nav className="top-0 flex flex-row w-screen h-24 ">
+    <main className="flex flex-col w-full h-screen justify-between">
+      <header className="top-0 flex flex-row w-full h-24 ">
         <Header title={lecture?.title} />
-      </nav>
-      <section className=" flex flex-col items-center justify-center slides w-screen h-3/4 ">
+      </header>
+      <section className=" flex flex-col items-center justify-center slides w-full h-3/4 ">
         {currentSlideElement}
       </section>
-      <nav className="w-screen flex h-16 items-center">
+      <nav className="w-full flex justify-center h-16 items-center">
         <Footer list={content} currentPage={currentSlideNumber} />
       </nav>
     </main>

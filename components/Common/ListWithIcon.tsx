@@ -22,8 +22,6 @@ export default function ListWithIcon({
   return (
     <List
       sx={{
-        width: "100%",
-        maxHeight: "80%",
         bgcolor: "background.paper",
         overflowY: "auto",
         overflowX: "hidden",

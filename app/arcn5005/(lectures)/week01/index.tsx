@@ -2,10 +2,10 @@ import { Toc } from "../../../../types/types";
 
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
-import { Button } from "@mui/material";
 
 import CartesianPlane from "../../../../components/CartesianPlane";
 import TOC from "../../(main)/toc/page";
+import SimpleButton from "../../../../components/Common/SimpleButton";
 
 export const content: Toc = [
   {
@@ -597,6 +597,48 @@ export const content: Toc = [
       <>
         <h1>❔</h1>
         <br />
+        <h1>What is Git?</h1>
+        <br />
+        <Image
+          src="/images/week01/git.png"
+          alt="Git"
+          href="https://en.wikipedia.org/wiki/Git"
+          caption={"Git - Wikipedia"}
+        />
+        <br />
+        <SimpleButton
+          title="Download Git"
+          href="https://git-scm.com/download/win"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
+        <h1>What is Node.js?</h1>
+        <br />
+        <Image
+          src="/images/week01/nodejs.png"
+          alt="Node.js"
+          href="https://en.wikipedia.org/wiki/Nodejs#"
+          caption={"Node.js - Wikipedia"}
+        />
+        <br />
+        <SimpleButton
+          title="Download Node js"
+          href="https://nodejs.org/en/download"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>❔</h1>
+        <br />
         <h1>What is GitHub?</h1>
         <br />
         <Image
@@ -635,14 +677,10 @@ export const content: Toc = [
         <br />
         <h3>If you don&apos;t, let&apos;s create one</h3>
         <br />
-        <Button
-          size="large"
-          color="inherit"
+        <SimpleButton
+          title="SIGN UP TO GITHUB"
           href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"
-          variant="outlined"
-        >
-          SIGN UP TO GITHUB
-        </Button>
+        />
       </>
     ),
   },

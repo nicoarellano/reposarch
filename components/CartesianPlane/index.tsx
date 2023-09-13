@@ -26,7 +26,7 @@ export default function CartesianPlane() {
   const { mode } = useContext(ThemeContext)["state"]["theme"];
 
   return (
-    <section className="w-screen overflow-hidden grow flex flex-col">
+    <section className="w-full overflow-hidden grow flex flex-col">
       <h4 className="absolute m-8">Cartesian Plane:</h4>
       <div className="flex flex-col absolute right-10 border-2 p-5 z-20 rounded-md shadow-md">
         <h5>

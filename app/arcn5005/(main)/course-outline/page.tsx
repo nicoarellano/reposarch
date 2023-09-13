@@ -1,11 +1,7 @@
-"use client";
+import PdfViewer from "../../../../components/Common/PdfViewer";
+
 export default function CourseDescription() {
   return (
-    <embed
-      src="/arcn5005/f2023/ASAU ARCN5005 f2023- Course Outline.pdf"
-      width="90%"
-      height="100%"
-      type="application/pdf"
-    ></embed>
+    <PdfViewer src="/arcn5005/f2023/ASAU ARCN5005 f2023- Course Outline.pdf" />
   );
 }

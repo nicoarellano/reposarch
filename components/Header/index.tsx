@@ -15,8 +15,10 @@ export function Header({ title }): ReactElement<Props> {
 
   return (
     <nav>
-      <header className="flex flex-row justify-between w-screen z-40 p-6">
-        <Logo />
+      <header className="flex flex-row justify-center w-screen z-40 h-24">
+        <nav className="absolute left-5">
+          <Logo />
+        </nav>
         <h1
           className="flex items-center hover:cursor-pointer"
           onClick={() => router.back()}
@@ -42,8 +44,10 @@ export function HeaderOfSlide({ slides }): ReactElement<SlidesProps> {
 
   return (
     <nav>
-      <header className="flex flex-row justify-between w-screen z-40 p-6">
-        <Logo />
+      <header className="flex flex-row justify-center w-screen z-40 h-24">
+        <nav className="absolute left-5">
+          <Logo />
+        </nav>
         <h2 className="flex items-center">{slideTitle}</h2>
         <nav className="w-90px z-50">
           <LeftSpeedDial />

@@ -22,8 +22,8 @@ export default function NestedTemplate({
   const username = params.student[0];
   const assignment = params.student[1];
   return (
-    <main className="flex flex-col w-screen h-screen justify-between">
-      <nav className="top-0 flex flex-row w-screen h-24 ">
+    <main className="flex flex-col w-screen h-screen ">
+      <nav className="top-0 flex flex-row w-full h-24 ">
         <Header
           title={`${
             student
@@ -33,13 +33,15 @@ export default function NestedTemplate({
         />
       </nav>
       {Boolean(student || assignment) ? (
-        <section className="flex justify-center grow">{children}</section>
+        <section className="flex justify-center w-full h-full">
+          {children}
+        </section>
       ) : (
-        <section className="flex justify-center grow items-center">
+        <section className="flex justify-center items-center w-full">
           <ReturnButton />
         </section>
       )}
-      <footer className="m-4 flex flex-row-reverse absolute z-20 bottom-0 right-0">
+      <footer className="m-4 flex flex-row absolute z-20 bottom-0 right-0">
         <IconButton onClick={() => router.back()} title={"Back"}>
           <Avatar
             src={`/arcn5005/f2023/students/${username}/avatar.jpg`}

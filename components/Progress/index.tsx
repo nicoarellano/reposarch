@@ -19,15 +19,15 @@ const announcements = Announcements.reverse();
 
 export default function Progress() {
   return (
-    <section className="grid grid-row-2 divide-y h-11/12 p-6 gap-4">
-      <div className="max-h-[250px] min-h-[200px] overflow-y-auto overflow-x-hidden">
+    <section className="grid grid-row-2 divide-y h-[450px] gap-8 overflow-hidden p-2">
+      <div className=" overflow-y-auto overflow-x-hidden flex align-middle">
         <ListWithIcon
           list={announcements}
           icon={<AnnouncementsdIcon />}
           subheader="📢 Announcements:"
         />
       </div>
-      <div className="max-h-[250px] min-h-[200px] overflow-y-auto overflow-x-hidden">
+      <div className="  overflow-y-auto overflow-x-hidden">
         <ListWithIcon
           list={currentLectures}
           icon={<SlideshowIcon />}
