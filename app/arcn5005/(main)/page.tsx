@@ -9,7 +9,7 @@ export default function Arcn5005() {
   const title = "reposarch";
   return (
     <section className=" flex flex-col items-center justify-between w-full m-5">
-      <section className="grid grid-cols-3 uneven-grid divide-x gap-5 flex items-center">
+      <section className="grid grid-cols-3 uneven-grid divide-x gap-5">
         <div className=" flex items-center justify-center ">
           <ProgressPage />
         </div>
