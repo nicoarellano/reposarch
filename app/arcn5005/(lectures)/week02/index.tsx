@@ -2,6 +2,7 @@ import { Toc } from "../../../../types/types";
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
 import PdfViewer from "../../../../components/Common/PdfViewer";
+import Photogrammetry from "./photogrammetry.mdx";
 
 export const content: Toc = [
   {
@@ -569,6 +570,7 @@ export const content: Toc = [
       </>
     ),
   },
+  { element: <Photogrammetry /> },
   {
     element: (
       <Video
