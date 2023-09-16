@@ -12,7 +12,7 @@ arcn5005Lectures.map((lecture) => (lecture["url"] = lecture.id));
 
 const currentLectures = arcn5005Lectures.filter(
   (lecture) =>
-    lecture.date < dayjs("2023/09/08") || lecture.date < dayjs().add(6, "days")
+    lecture.date < dayjs("2023/09/08") || lecture.date < dayjs().add(1, "days")
 );
 
 const announcements = Announcements.reverse();

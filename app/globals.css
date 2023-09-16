@@ -62,11 +62,7 @@ h5 {
   line-height: 38px;
 }
 
-.slides ul {
-  list-style-type: square;
-  margin-left: 3rem;
-  text-align: left;
-}
+
 
 .slides {
   text-align: center;
@@ -90,6 +86,10 @@ h5 {
   line-height: 70px;
 }
 
+
+
+
+
 .slides h3 {
   font-size: 40px;
   font-weight: 400;
@@ -106,6 +106,29 @@ h5 {
   font-size: 20px;
   font-weight: 300;
   line-height: 40px;
+}
+
+.slides li {
+  text-align: left;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.slides ol {
+  list-style-type: decimal;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.slides ul {
+  list-style-type: square;
+  margin-left: 3rem;
+}
+
+.slides a {
+  color: blue;
+  font-weight: 600;
 }
 
 .uneven-grid {

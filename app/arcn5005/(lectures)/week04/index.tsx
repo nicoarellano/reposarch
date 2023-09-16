@@ -50,4 +50,21 @@ export const content: Toc = [
       />
     ),
   },
+  {
+    element: (
+      <Quote
+        quote={
+          "          Although the first courses in computer programming were introduced in \
+          some architecture schools like Harvard or MIT in the late 1980s and \
+          early 1990s, scripting has developed only in the past years, fostered \
+          by the growing computer literacy of young architectural students and \
+          architects who are now able to write code instead of relying only on \
+          the predefined software functions. Scripting does open new \
+          perspectives on the evolution of design: it even raises some questions \
+          that are not fully answered yet."
+        }
+        author={"Antoine Picon - Digital Turns in Architecture"}
+      />
+    ),
+  },
 ];

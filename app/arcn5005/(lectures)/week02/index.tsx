@@ -2,6 +2,7 @@ import { Toc } from "../../../../types/types";
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
 import PdfViewer from "../../../../components/Common/PdfViewer";
+import Photogrammetry from "./photogrammetry.mdx";
 
 export const content: Toc = [
   {
@@ -19,19 +20,42 @@ export const content: Toc = [
         <h2>There are multiple tools to do this:</h2>
         <ul>
           <li>
-            <h3>Surveying</h3>
+            <h3>
+              <a href="https://en.wikipedia.org/wiki/Surveying">Surveying</a>
+            </h3>
           </li>
           <li>
-            <h3>Digital Photography</h3>
+            <h3>
+              {" "}
+              <a href="https://en.wikipedia.org/wiki/Digital_photography">
+                Digital Photography
+              </a>
+            </h3>
           </li>
           <li>
-            <h3>3D Scanning</h3>
+            <h3>
+              <a href="https://en.wikipedia.org/wiki/3d_scanning">
+                3D Scanning
+              </a>
+            </h3>
+          </li>
+          <li>
+            <h3>
+              <a href="https://en.wikipedia.org/wiki/Motion_capture">
+                Motion capture
+              </a>
+            </h3>
           </li>
         </ul>
         <br />
-        <h2>
-          Today we will talk about one of them called <b>Photogrametry</b>
-        </h2>
+        <h3>
+          Today we will talk about one of them called{" "}
+          <b>
+            <a href="https://en.wikipedia.org/wiki/Photogrammetry">
+              Photogrammetry
+            </a>
+          </b>
+        </h3>
       </>
     ),
   },
@@ -81,11 +105,30 @@ export const content: Toc = [
   },
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG"
+        title="Miquel Reina Ortiz - Photogrammetry"
+        caption={"Miquel Reina Ortiz - Photogrammetry"}
+      />
+    ),
+  },
+
+  {
+    element: (
       <>
         <h1>❔</h1>
         <br />
         <h2>Thoughts about photogrametry?</h2>
       </>
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v"
+        title="Class 2 - Programming"
+        caption={"Class 2 - Programming"}
+      />
     ),
   },
   {
@@ -191,7 +234,7 @@ export const content: Toc = [
           that designate memory locations containing data to be operated upon,
           together with binary integers that specify the operations (from the
           machine&apos;s instructions set) to be performed. You can think of
-          each instrcution as the settings for a long string of switches,
+          each instruction as the settings for a long string of switches,
           expressed as a string of binary digits like:
         </em>
       </h4>
@@ -473,27 +516,6 @@ export const content: Toc = [
       "Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
     and mathematically. So it is much easier to write, read, and understand programs in these languages.",
   },
-
-  {
-    element: (
-      <h4>
-        <em>
-          Although the first courses in computer programming were introduced in
-          some architecture schools like Harvard or MIT in the late 1980s and
-          early 1990s, scripting has developed only in the past years, fostered
-          by the growing computer literacy of young architectural students and
-          architects who are now able to write code instead of relying only on
-          the predefined software functions. Scripting does open new
-          perspectives on the evolution of design: it even raises some questions
-          that are not fully answered yet.
-        </em>
-        <h5>
-          <br />
-          <em>Antoine Picon - Digital Turns in Architecture</em>
-        </h5>
-      </h4>
-    ),
-  },
   {
     element: (
       <>
@@ -569,6 +591,7 @@ export const content: Toc = [
       </>
     ),
   },
+  { element: <Photogrammetry /> },
   {
     element: (
       <Video
