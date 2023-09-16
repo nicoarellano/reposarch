@@ -353,7 +353,7 @@ export const content: Toc = [
         <br />
         <h1>🖱️ ➡️ 💻</h1>
         <br />
-        <h1>Text-based user interfaces</h1>
+        <h1>Graphical user interface</h1>
       </>
     ),
     notes:
@@ -394,7 +394,7 @@ export const content: Toc = [
         <br />
         <h1>⌨️ ➡️ 💻</h1>
         <br />
-        <h1>Text-based user interfaces</h1>
+        <h1>Text-based user interface</h1>
       </>
     ),
     notes:
