@@ -4,6 +4,16 @@ import Video from "../../../../components/Common/Video";
 import Quote from "../../../../components/Common/Quote";
 import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
+import Weygant from "./weygant.mdx";
+import Weygant2 from "./weygant2.mdx";
+import Bim from "./bim.mdx";
+import BimLevels from "./bimLevels.mdx";
+import Csg from "./csg.mdx";
+import Boolean from "./boolean.mdx";
+import Brep from "./brep.mdx";
+import Benefits from "./benefits.mdx";
+import Cons from "./cons.mdx";
+import BimDrivers from "./bimDrivers.mdx";
 
 export const content: Toc = [
   {
@@ -55,11 +65,20 @@ export const content: Toc = [
       />
     ),
     notes:
-      "In 1973, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+      "In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
        With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
        GUIs made computer more accessible for non-programmers, including architects.\
        Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.",
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/6orsmFndx_o?si=kTjsHWqd1tDjfhuj"
+        title="Sketchpad by Ivan Sutherland"
+        caption={"Sketchpad by Ivan Sutherland"}
+      />
+    ),
   },
   {
     element: (
@@ -77,31 +96,19 @@ export const content: Toc = [
       </h4>
     ),
   },
-  {
-    element: (
-      <h4>
-        <em>
-          GUIs quickly became “the only computer use that most people had ever
-          known”
-        </em>
-        <h5>
-          <br />
-          <em>Mario Carpo - Digital Turn</em>
-        </h5>
-      </h4>
-    ),
-  },
+
   {
     element: (
       <Quote
         quote={
-          "GUIs have profoundly changed the way in which architects interact with computers. \
-          the graphical user interface, which makes computers so easy to use, \
-          also makes them hard to use powerfully."
+          "GUIs quickly became 'the only computer use that most people had ever known'"
         }
-        author={"Robert Woodbury - Elements of Parametric Design"}
+        author={"Mario Carpo - Digital Turn"}
       />
     ),
+  },
+  {
+    element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
   },
   {
     element: (
@@ -181,9 +188,8 @@ export const content: Toc = [
     ),
   },
   {
-    element: <EmojiTitle emoji={"❔"} title={"Basis of CAD"} />,
+    element: <EmojiTitle emoji={"✏️📐💻"} title={"Basis of CAD"} />,
   },
-
   {
     element: (
       <>
@@ -196,11 +202,50 @@ export const content: Toc = [
       </>
     ),
   },
-
+  { element: <EmojiTitle emoji={"👾"} title="What is a raster image?" /> },
   {
     element: (
       <>
-        <h2>Drawing with Vectors ✏️</h2>
+        <h2>Raster image 👾</h2>
+        <br />
+        <h4>
+          Raster (or bitmap) images are compiled using pixels, containing unique
+          color and tonal information that come together to create the image.
+          They are resolution dependent. The number of pixels that make up an
+          image as well as how many of those pixels are displayed per inch, both
+          determine the quality of an image. The more pixels in the image and
+          the higher the resolution is, the higher quality the image will be.
+          For example, if we scale a raster image to enlarge it, without
+          changing resolution, it will lose quality and look blurry or
+          pixilated. This is because we are stretching the pixels over a larger
+          area, thus making them look less sharp.
+        </h4>
+      </>
+    ),
+  },
+
+  { element: <EmojiTitle emoji={"♾️"} title="What is a vector image?" /> },
+  {
+    element: (
+      <>
+        <h2>Vector images ♾️</h2>
+        <br />
+        <h4>
+          Instead of trying to keep track of the millions of tiny pixels in a
+          raster image, vector images keep track of points and the equations for
+          the lines that connect them. they are made up of paths or line art
+          that can infinitely scalable because they work based on algorithms
+          rather than pixels. They can be re-sized infinitely larger or smaller,
+          and they will still print out just as clearly, with no increase (or
+          decrease) in file size.
+        </h4>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Drawing with code ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -212,7 +257,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Drawing with P5 ✏️</h2>
+        <h2>Drawing with vectors (P5) ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -221,9 +266,327 @@ export const content: Toc = [
       </>
     ),
   },
+  {
+    element: (
+      <>
+        <h2>3D Modelling 🫖💻</h2>
+        <br />
+        <h4>
+          3D modeling is the process of developing a mathematical
+          coordinate-based representation of and object with a specialized
+          software by manipulated edges, vertices, and polygons in a simulated
+          3D space <br />
+          Most of the time 3d models are displayed in flat screens, but the
+          graphic card simulates the geometry to give the illusion of depth.
+          This process is called 3d rendering.
+        </h4>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>3D CAD 🫖✏️💻</h2>
+        <br />
+        <h4>3d CAD is using a computer to draw 3d models to assist design</h4>
+        <br />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Why do we make 3d models? 🫖❔</h2>
+        <br />
+        <ul>
+          <li>3D models are easier to interpret</li>
+          <li>Less expensive than building a physical model</li>
+          <li>Safer than a physical model</li>
+          <li>
+            3D models can be used to perform building performance analysis
+          </li>
+          <li>
+            3D models can be used directly in manufacturing, Computer Numerical
+            Control (CNC).
+          </li>
+          <li>Can be used for presentations and marketing.</li>
+        </ul>
+        <br />
+        <p>
+          <em>
+            source:
+            https://www.slideshare.net/shambhoo416/introduction-to-solid-modeling
+          </em>
+        </p>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>3 types of 3d models</h2>
+        <br />
+        <ul>
+          <li>Wireframe modeling 🩻</li>
+          <li>Surface modeling 🐚</li>
+          <li>Solid modeling 🪨</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Geometry vs Topology</h2>
+        <br />
+        <table id="simple-table">
+          <thead>
+            <th>Geometry </th>
+            <th>Topology </th>
+          </thead>
+          <tr>
+            <td>Space </td>
+            <td>Shell </td>
+          </tr>
+          <tr>
+            <td>Surface </td>
+            <td>Face </td>
+          </tr>
+          <tr>
+            <td>Line </td>
+            <td>Edge </td>
+          </tr>
+          <tr>
+            <td>Point</td>
+            <td>Vertex</td>
+          </tr>
+        </table>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Wireframe model 🩻</h2>
+        <br />
+        <ul>
+          <li>
+            Contains information about the locations of all the points
+            (vertices) and edges in space coordinates.
+          </li>
+          <li>Each vertex is defined by x, y, z coordinate</li>
+          <li>Edges are defined by a pair of vertices</li>
+          <li>Faces are defined as three or more edges</li>
+          <li>
+            Wireframe is a collection of edges, there is no skin defining the
+            area between the edges
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/wireframe.png"
+        alt={"Wireframe 3d models"}
+        href="https://en.wikipedia.org/wiki/Wire-frame_model"
+        caption={"Wireframe 3d models"}
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Surface 3d model 🐚</h2>
+        <br />
+        <ul>
+          <li>
+            Represents the skin of an object, these skins have no thickness or
+            material type
+          </li>
+          <li>Define the surface features, as well as the edges of objects</li>
+          <li>A mathematical funcition describes the path of a curve</li>
+          <li>Surfaces are edited as single entities</li>
+          <li>Better visualization, objects appear more realistic</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Surface 3d model 🐚</h2>
+        <br />
+        <ul>
+          <li>
+            Visual representation of an object’s exterior and its contours.
+          </li>
+          <li>
+            Can be geometrically and physically incorrect - with no properties
+            of mass defined and no thickness. This gives the designer the unique
+            ability to modify the model in ways that solid models are incapable.
+          </li>
+          <li>Cannot be sliced open like their solid counterparts → hollow</li>
+          <li>
+            Uses NURBS, B-splines and Beizer equations in order to define the
+            features of your solid appearing object
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/surface.png"
+        alt={"Surface 3d model"}
+        caption={"Surface 3d model"}
+      />
+    ),
+  },
 
   {
-    element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
+    element: (
+      <>
+        <h2>Solid 3d model 🪨</h2>
+        <br />
+        <ul>
+          <li>
+            The solid definitions include vertices (nodes), edges, surfaces,
+            weight, and volume.
+          </li>
+          <li>
+            The model is a complete and unambiguous representation of a
+            precisely enclosed and filled volume
+          </li>
+          <li>
+            Can easily be exported to different Finite Element Methods programs
+            for analysis
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>How to represent solids 🪨❔</h2>
+        <br />
+        <ul>
+          <li>
+            Decomposition models: a fixed collection of primitive object types,
+            combined with a single gluing operation (Octrees)
+          </li>
+          <li>
+            Constructive models: A point set as a combination of primitive point
+            sets, typically by set-theoretic operations
+          </li>
+          <li>Boundary models: a point set in terms of its boundary</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/voxel.png"
+        alt={"Decomposition models"}
+        caption={"Decomposition models - Octrees"}
+      />
+    ),
+  },
+  { element: <Csg /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/primitive-solids.png"
+        alt={"Primitive Solids"}
+        caption={"Primitive Solids "}
+      />
+    ),
+  },
+
+  { element: <Boolean /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/boolean-operations.png"
+        alt={"Boolean Operations"}
+        caption={"Constructive Models - Boolean Operations "}
+      />
+    ),
+  },
+  { element: <Brep /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/brep.png"
+        alt={"Boundary models"}
+        caption={"Boundary models - B-rep"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/euler.png"
+        alt={"Euler Poincare Formula"}
+        caption={"Euler Poincare Formula"}
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Comparition of solid modelling methods</h2>
+        <br />
+        <table id="simple-table">
+          <thead>
+            <td></td>
+            <th>Octrees</th>
+            <th>CSG</th>
+            <th>B-Reps</th>
+          </thead>
+          <tr>
+            <th>Expressiveness</th>
+            <td>Approximate</td>
+            <td>Accurate</td>
+            <td>Most expressive</td>
+          </tr>
+          <tr>
+            <th>Validity</th>
+            <td>Always valid</td>
+            <td>Always valid</td>
+            <td>Not always valid</td>
+          </tr>
+          <tr>
+            <th>Unambiguity</th>
+            <td>Ambiguous</td>
+            <td>Always unambiguous</td>
+            <td>Valid b-reps are unambiguous.</td>
+          </tr>
+          <tr>
+            <th>Conciseness</th>
+            <td>Large</td>
+            <td>Very concise</td>
+            <td>Large</td>
+          </tr>
+        </table>
+      </>
+    ),
+  },
+  { element: <Benefits /> },
+  { element: <Cons /> },
+  {
+    element: (
+      <Quote
+        quote={
+          "Needless to say, it’s clear to see why CAD was adopted across so many industries. Virtually everything in the modern world is created using CAD technology, because its design process is so sleek and so powerful. Obviously, the pros and cons of CAD are susceptible to change. CAD is still evolving, and with it, so too will its advantages and disadvantages. A decade down the line, who’s to say what CAD will or won’t be capable of? "
+        }
+        author={"https://www.scan2cad.com/blog/cad/cad-evolved-since-1982/"}
+      />
+    ),
   },
   {
     element: (
@@ -299,12 +662,88 @@ export const content: Toc = [
     notes:
       "Weygnant’s definition is a good baseline for tool-oriented people; Saxon’s explanation is for client/business-oriented people; Eastman is considered the father of BIM, and has the most technically correct definition",
   },
+  { element: <Weygant /> },
+  { element: <Weygant2 /> },
+  {
+    element: (
+      <Quote
+        quote={
+          "For estate-holding clients, BIM offers not just the possibility of faster, cheaper and better quality construction but also a database of operation and maintenance information to support the life cycle. Clients who have preferred or required standards for their properties can hold these standards in a BIM library of model elements and provide them to design-build teams to incorporate into projects."
+        }
+        author={"Saxon"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Quote
+        quote={
+          "The arrival of BIM marks a switch for the construction industry from considering buildings as projects to considering them as assets. The circular model of the asset life cycle replaces the linear model of a project"
+        }
+        author={"Saxon"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Quote
+        quote={
+          "BIM consists of a digital database of a particular building that contains information about its objects. This may include its geometry (generally defined by parametric rules), its performance, its planning, its construction and later its operation. A Revit® model and a Digital Project® model of a building are examples of building models. “Building model” can be considered the next generation replacement for “construction drawings”, or “architectural drawings”. Downstream in the process, the term “fabrication model” is already in common use as a replacement for “shop drawings”."
+        }
+        author={"Eastman"}
+      />
+    ),
+  },
+  { element: <Bim /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/macleamy.png"
+        alt="BIM Books"
+        caption={"MacLeamy Curve"}
+      />
+    ),
+    notes: "",
+  },
+  { element: <BimLevels /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/lod.png"
+        alt="Levels of detail"
+        caption={"Levels of detail"}
+      />
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/lod2.png"
+        alt="Levels of detail"
+        caption={"Levels of detail"}
+      />
+    ),
+    notes:
+      "Moving from conception → to aproximate geometry → to Precise geometry → to fabrication → to as-built",
+  },
   {
     element: (
       <Image
         src="/images/week03/levels.png"
         alt="BIM Maturity Levels"
         caption={"BIM Maturity Levels"}
+      />
+    ),
+    notes: "",
+  },
+  { element: <BimDrivers /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/bim-ecosystem.png"
+        alt="Traditional BIM Ecosystem"
+        caption={"Traditional BIM Ecosystem"}
       />
     ),
     notes: "",
