@@ -165,8 +165,25 @@ export const content: Toc = [
     ),
   },
   {
+    element: (
+      <>
+        <h2>CAD ✏️💻</h2>
+        <br />
+        <h4>
+          <b>A CAD system</b> is a combination of hardware and software that
+          allows three-dimensional modeling of physical artifacts, enabling
+          engineers and architects to design artifacts from simple parts to
+          complex systems. <br />
+          for example: Construction Detail → building element → space → building
+          → site → neibourhood → city
+        </h4>
+      </>
+    ),
+  },
+  {
     element: <EmojiTitle emoji={"❔"} title={"Basis of CAD"} />,
   },
+
   {
     element: (
       <>
@@ -398,5 +415,8 @@ The status quo is to work with proprietary solutions and closed file formats."
         <h2>Blender</h2>
       </>
     ),
+  },
+  {
+    element: <PdfViewer src="/resources/Blender+2.9+Shortcuts+v1.1.pdf" />,
   },
 ];

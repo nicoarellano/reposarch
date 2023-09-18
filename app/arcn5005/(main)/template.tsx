@@ -21,7 +21,7 @@ export default function NestedTemplate({
       >
         <HeaderOfSlide slides={slides} />
       </header>
-      <section className="top-24 flex justify-center items-center grow max-h-[450px]">
+      <section className="top-24 flex justify-center items-center grow ">
         {children}
       </section>
       <footer

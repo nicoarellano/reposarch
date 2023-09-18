@@ -26,7 +26,6 @@ export const content: Toc = [
           </li>
           <li>
             <h3>
-              {" "}
               <a href="https://en.wikipedia.org/wiki/Digital_photography">
                 Digital Photography
               </a>
@@ -100,7 +99,7 @@ export const content: Toc = [
   },
   {
     element: (
-      <PdfViewer src="/images/week02/Architectural-Photogrammetry-Intro.pdf" />
+      <PdfViewer src="/resources/Architectural-Photogrammetry-Intro.pdf" />
     ),
   },
   {
