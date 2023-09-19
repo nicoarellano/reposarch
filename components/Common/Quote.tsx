@@ -6,7 +6,7 @@ interface Props {
 }
 
 export default function Quote({ quote, author }): ReactElement<Props> {
-  console.log(`%c${quote}`, "font-size: 35px; color: #00f");
+  console.log(`%c QUOTE: "${quote}"`, "font-size: 35px; color: #00f");
   return (
     <div>
       <h4>

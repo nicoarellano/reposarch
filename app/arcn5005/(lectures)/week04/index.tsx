@@ -51,6 +51,7 @@ export const content: Toc = [
         author={"Mark Burry - Scripting Cultures"}
       />
     ),
+    notes: "testing notes and quote console.log",
   },
   {
     element: (
