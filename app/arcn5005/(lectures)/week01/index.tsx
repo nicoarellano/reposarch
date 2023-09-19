@@ -213,7 +213,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "In 1973, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+      "In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
        With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
        GUIs made computer more accessible for non-programmers, including architects.\

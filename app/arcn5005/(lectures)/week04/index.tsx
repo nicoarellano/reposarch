@@ -8,6 +8,18 @@ import PdfViewer from "../../../../components/Common/PdfViewer";
 
 export const content: Toc = [
   {
+    element: (
+      <Quote
+        quote={
+          "GUIs have profoundly changed the way in which architects interact with computers. \
+          the graphical user interface, which makes computers so easy to use, \
+          also makes them hard to use powerfully."
+        }
+        author={"Robert Woodbury - Elements of Parametric Design"}
+      />
+    ),
+  },
+  {
     element: <EmojiTitle emoji={"❔"} title={"What does scripting mean?"} />,
   },
   {
