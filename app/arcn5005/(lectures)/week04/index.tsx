@@ -66,6 +66,16 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
+          "Software modified by the designer through scripting, however, provides a range of possibilities for creative speculation that is simply not possible using the software only as the manufacturers intended it to be used."
+        }
+        author={"Mark Burry - Scripting Cultures"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Quote
+        quote={
           "          Although the first courses in computer programming were introduced in \
           some architecture schools like Harvard or MIT in the late 1980s and \
           early 1990s, scripting has developed only in the past years, fostered \
