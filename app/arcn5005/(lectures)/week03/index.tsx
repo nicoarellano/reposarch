@@ -15,6 +15,7 @@ import Bim from "./bim.mdx";
 import BimLevels from "./bimLevels.mdx";
 import Csg from "./csg.mdx";
 import Boolean from "./boolean.mdx";
+import SolidBoolean from "./solidBoolean.mdx";
 import Brep from "./brep.mdx";
 import Benefits from "./benefits.mdx";
 import Cons from "./cons.mdx";
@@ -229,7 +230,37 @@ export const content: Toc = [
       </>
     ),
   },
-
+  {
+    element: <EmojiTitle emoji={"Points ⚫  ⚫  ⚫"} title="What's a Point?" />,
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/points.png"
+        href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
+        alt="Points"
+        caption={
+          "A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates [X,Y,Z].- Dynamo Primer"
+        }
+      />
+    ),
+    notes:
+      "A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates [X,Y,Z]. ",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/points2.png"
+        href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
+        alt="Points"
+        caption={
+          "Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using [X,Y] on a Plane or [U,V] if we are on a surface. - Dynamo Primer"
+        }
+      />
+    ),
+    notes:
+      "Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using [X,Y] on a Plane or [U,V] if we are on a surface. ",
+  },
   { element: <EmojiTitle emoji={"♾️"} title="What is a vector image?" /> },
   {
     element: (
@@ -575,7 +606,61 @@ export const content: Toc = [
       />
     ),
   },
-
+  {
+    element: (
+      <div>
+        <div className="flex">
+          <div className="flex flex-col items-start">
+            <h2 className="text-left">Surfaces 🐚</h2>
+            <em>Source: Dynamo Primer</em>
+            <ol className="flex flex-col w-[300px] ">
+              <li>Surface</li>
+              <li>U Isocurve</li>
+              <li>V Isocurve</li>
+              <li>UV Coordinate</li>
+              <li>Perpendicular Plane</li>
+              <li>Normal Vector</li>
+            </ol>
+          </div>
+          <div className="w-[1000px]">
+            <Image
+              src="/images/week03/surface-parts.png"
+              alt="Curve types"
+              href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-5_surfaces.html"
+            />
+          </div>
+        </div>
+      </div>
+    ),
+    notes:
+      "A Surface is a mathematical shape defined by a function and two parameters, Instead of t for Curves, we use U and V to describe the corresponding parameter space. This means we have more geometrical data to draw from when working with this type of Geometry. For example, Curves have tangent vectors and normal planes (which can rotate or twist along the curve's length), whereas Surfaces have normal vectors and tangent planes that will be consistent in their orientation.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/surface-domain.png"
+        alt={"Surface Domanin"}
+        caption={
+          "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max)."
+        }
+      />
+    ),
+    notes:
+      "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/nurbs-surfaces.png"
+        alt={"Surface Domanin"}
+        caption={
+          "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface."
+        }
+      />
+    ),
+    notes:
+      "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.",
+  },
   {
     element: (
       <>
@@ -647,6 +732,19 @@ export const content: Toc = [
       />
     ),
   },
+  { element: <SolidBoolean /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/solid-boolean.png"
+        alt={"Solid Boolean Operations"}
+        caption={
+          "There are three Solid Boolean operations that distinguish which parts of the geometry are kept. 1. Union: Remove the overlapping portions of the Solids and join them into a single Solid. 2. Difference: Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume. 3. Intersection: Keep only the intersecting volume of the two Solids. - Source: Dynamo Primer"
+        }
+      />
+    ),
+  },
+
   { element: <Brep /> },
   {
     element: (
@@ -969,7 +1067,9 @@ The status quo is to work with proprietary solutions and closed file formats."
           src="/images/week03/blenderbim.png"
           alt={"BlenderBIM"}
           href="https://blenderbim.org/"
-          caption={"BlenderBIM is a free and open source alternative to Revit"}
+          caption={
+            "BlenderBIM is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BlenderBIM"
+          }
         />
       </>
     ),
