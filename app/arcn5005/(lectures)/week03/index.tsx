@@ -1,9 +1,14 @@
 import { Toc } from "../../../../types/types";
 import Image from "../../../../components/Common/Image";
+// import Image as NextImage from "next/image";
+
 import Video from "../../../../components/Common/Video";
 import Quote from "../../../../components/Common/Quote";
 import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
+
+import Degree from "./degree.mdx";
+import Curves from "./curves.mdx";
 import Weygant from "./weygant.mdx";
 import Weygant2 from "./weygant2.mdx";
 import Bim from "./bim.mdx";
@@ -268,6 +273,114 @@ export const content: Toc = [
   },
   {
     element: (
+      <div>
+        <div className="flex">
+          <div className="flex flex-col items-start">
+            <h2 className="text-left">Curve Types ➰</h2>
+            <em>Source: Dynamo Primer</em>
+            <ol className="flex flex-col w-[300px] ">
+              <li>Line</li>
+              <li>Polyline</li>
+              <li>Arc</li>
+              <li>Circle</li>
+              <li>Elipse</li>
+              <li>Nurbs</li>
+              <li>Polycurve</li>
+            </ol>
+          </div>
+          <div className="w-[1000px]">
+            <Image
+              src="/images/week03/curve-types.png"
+              alt="Curve types"
+              href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-4_curves.html"
+            />
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/curve.png"
+        alt="Curve"
+        caption={
+          "A curve or curved line, may be the trace left by moving a point. It has no width nor depth"
+        }
+      />
+    ),
+    notes:
+      "A curve or curved line, may be the trace left by moving a point. It has no width nor depth",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/line.png"
+        alt="Line"
+        caption={
+          "Lines are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions."
+        }
+      />
+    ),
+    notes:
+      "Lines are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/polyline.png"
+        alt="Polyline"
+        caption={
+          "When we connect two Lines together, we have a Polyline. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular."
+        }
+      />
+    ),
+    notes:
+      "When we connect two Lines together, we have a Polyline. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/arcs.png"
+        alt="Arcs, Circles, Ellipse Arcs, and Ellipses"
+        caption={
+          "As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an Arc, Circle, Ellipse Arc, or Ellipse by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed."
+        }
+      />
+    ),
+    notes:
+      "As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an Arc, Circle, Ellipse Arc, or Ellipse by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/nurbs.png"
+        alt="NURBS"
+        caption={
+          "NURBS (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing."
+        }
+      />
+    ),
+    notes:
+      "NURBS (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.",
+  },
+  { element: <Degree /> },
+  {
+    element: (
+      <Image
+        src="/images/week03/degrees.png"
+        alt="NURBS"
+        caption={
+          "1 Degree, 2 Degree, 3 Degree - The higher the degree value, the more Control Points are used to interpolate the resulting Curve."
+        }
+      />
+    ),
+    notes:
+      "1 Degree, 2 Degree, 3 Degree - The higher the degree value, the more Control Points are used to interpolate the resulting Curve.",
+  },
+  { element: <Curves /> },
+  {
+    element: (
       <>
         <h2>3D Modelling 🫖💻</h2>
         <br />
@@ -282,6 +395,14 @@ export const content: Toc = [
         </h4>
       </>
     ),
+    notes:
+      " 3D modeling is the process of developing a mathematical \
+    coordinate-based representation of and object with a specialized \
+    software by manipulated edges, vertices, and polygons in a simulated \
+    3D space \
+    Most of the time 3d models are displayed in flat screens, but the \
+    graphic card simulates the geometry to give the illusion of depth. \
+    This process is called 3d rendering.",
   },
   {
     element: (
