@@ -121,8 +121,14 @@ h5 {
 }
 
 .slides a {
-  color: #333;
+  color: dimgray;
   font-weight: 600;
+}
+
+.slides a:hover {
+  color: gray;
+  -webkit-text-stroke-color: gray;
+  -webkit-text-stroke-width: 1px;
 }
 
 .uneven-grid {

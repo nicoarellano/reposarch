@@ -17,6 +17,13 @@ export default function CustomImage({
   href = "",
   ...props
 }: Props) {
+  if (caption) {
+    console.log(
+      `%c Caption: ==================================`,
+      "color: red; font-size: 30px"
+    );
+    console.log(`%c "${caption}"`, "font-size: 35px; color: #00f");
+  }
   return (
     <>
       <div className="flex justify-center col-span-6 md:col-span-4 lg:col-span-3 aspect-video w-full relative">
