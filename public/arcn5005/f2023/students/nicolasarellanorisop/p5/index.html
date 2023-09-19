@@ -10,10 +10,7 @@
   <body id="p5">
     <script>
       function setup() {
-        // var utils = new p5.Utils();
         createCanvas(1300, 400);
-
-        // utils.enableRuler();
       }
 
       function draw() {
@@ -22,18 +19,19 @@
         fill(255, 0, 128);
         rect(100, 100, 100, 100);
 
-        stroke(0, 100, 155);
+        stroke(255, 255, 255);
         fill(0, 0, 255);
         ellipse(150, 300, 150);
 
         fill(255, 255, 0);
+        stroke(240, 50, 255);
         rect(300, 100, 200, 200);
 
         stroke(255, 255, 0);
         fill(0, 255, 0);
         rect(width - 100, height - 100, 50, 50);
 
-        stroke(0, 0, 255);
+        stroke(0, 255, 255);
         line(0, 100, 0, 100);
 
         translate(440, 50);
@@ -44,26 +42,17 @@
         let p3 = p2 + d;
         let p4 = p3 + d;
 
-        // Draw red box
         stroke(255, 0, 0);
         strokeWeight(4);
         fill(255, 255, 0, 10);
 
         line(p3, p3, p2, p3);
         line(p2, p3, p2, p2);
+        line(p2, p2, p3, p3);
         line(p2, p2, p3, p2);
         line(p3, p2, p3, p3);
 
-        // Draw green points
         stroke(0, 255, 100);
-
-        point(p1, p1);
-        point(p1, p3);
-        point(p2, p4);
-        point(p3, p1);
-        point(p4, p2);
-        point(p4, p4);
-        fill(255, 0, 0);
 
         translate(300, 50);
         fill(255, 0, 255);

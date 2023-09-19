@@ -19,6 +19,7 @@ import Brep from "./brep.mdx";
 import Benefits from "./benefits.mdx";
 import Cons from "./cons.mdx";
 import BimDrivers from "./bimDrivers.mdx";
+import SimpleButton from "../../../../components/Common/SimpleButton";
 
 export const content: Toc = [
   {
@@ -262,15 +263,23 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Drawing with vectors (P5) ✏️</h2>
+        <h2>Drawing with code (P5) ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
           src="/arcn5005/f2023/students/nicolasarellanorisop/p5/index.html"
         />
+        <br />
+        <SimpleButton
+          title={"See Code"}
+          href={
+            "https://raw.githubusercontent.com/nicoarellano/reposarch/dev/public/arcn5005/f2023/students/nicolasarellanorisop/p5/sketch.js"
+          }
+        />
       </>
     ),
   },
+
   {
     element: (
       <div>
