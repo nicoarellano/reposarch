@@ -10,6 +10,8 @@ import Scripting from "./Scripting.mdx";
 import RepetetiveTasks from "./RepetetiveTasks.mdx";
 import DynamoBenefits from "./DynamoBenefits.mdx";
 import Ternary from "./Ternary.mdx";
+import DynamoNecesary from "./DynamoNecesary.mdx";
+import DynamoConsiderations from "./DynamoConsiderations.mdx";
 
 export const content: Toc = [
   {
@@ -289,5 +291,259 @@ export const content: Toc = [
         }
       />
     ),
+  },
+  { element: <DynamoNecesary /> },
+  {
+    element: <DynamoConsiderations />,
+    notes:
+      "It is important to understand the problem well and learn how to instruct Dynamo how to do it for us. \
+    Normally our supervisor will give us a straightforward instruction that we have to understand and follow. \
+    When the instruction is too robotic it is when we have to learn how to program the same instruction for the computer to do it.",
+  },
+  {
+    element: (
+      <>
+        <h2>Examples of automation of repetetive taks 🔂</h2>
+        <ol className="long-list">
+          <li>ROOM NUMBERING</li>
+          <li>DOOR NUMBERING</li>
+          <li>INTERIOR fIT-UP CALCULATIONS</li>
+          <li>TITLEBLOCK AND PRINTING SETS</li>
+          <li>ROOM OUTLINES TO MODEL LINES</li>
+          <li>QUANTIFYING MATERIALS</li>
+          <li>BIM TO VR</li>
+          <li>MODEL VERSION COMPARATION</li>
+          <li>WORKSETS</li>
+          <li>IMPORTING AND EXPORTING DATA</li>
+          <li>CAD TO REVIT</li>
+          <li>REAL-TIME SIMULATIONS</li>
+        </ol>
+      </>
+    ),
+    notes:
+      "Unfortunately I won’t have time today to talk about best practices \
+  Neither this will be tutorial of how to make scripts that I am about to show, you can research them in your own time, and there are thousands of tutorials in YouTube and the Dynamo forum is really active and useful. \
+   I encourage you to check it out \
+  What I want to do is to show some examples that an amateur at Dynamo (such myself for the last couple of years) can start creating pretty easily.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/room-number.png"
+        alt="1. Automatic Room numbers"
+        caption={"1. Automatic Room numbers (manual process)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/room-number2.png"
+        alt="1. Automatic Room numbers"
+        caption={"1. Automatic Room numbers (manual process)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/room-number3.png"
+        alt="1. Automatic Room numbers"
+        caption={"1. Automatic Room numbers (automation script)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/room-number4.png"
+        alt="1. Automatic Room numbers"
+        caption={"1. Automatic Room numbers (automation script)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/door-numbers.png"
+        alt="2. Automatic Door numbers"
+        caption={"2. Automatic Door numbers (manual process)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/door-numbers2.png"
+        alt="2. Automatic Door numbers"
+        caption={"2. Automatic Door numbers (manual process)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/door-numbers3.png"
+        alt="2. Automatic Door numbers"
+        caption={"2. Automatic Door numbers (automation script)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/door-numbers4.png"
+        alt="2. Automatic Door numbers"
+        caption={"2. Automatic Door numbers (automation script)"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/interior-fitup1.png"
+        alt="3. Interior fit-up Calculations"
+        caption={"3. Interior fit-up calculations (manual process)"}
+      />
+    ),
+    notes:
+      "Elements from different Categories had to be compared, ie. Furniture, Rooms and Areas. \
+    When something changed (for example the size of the room) all the other elements had to be updated manually. \
+    Finally the information exported to excel to be shared with the client. \
+    To do the whole process manually was very time consuming and monotonous.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/interior-fitup2.png"
+        alt="3. Interior fit-up Calculations"
+        caption={"3. Interior fit-up calculations (automation script)"}
+      />
+    ),
+    notes:
+      "This spaghetti code looks very complicated because I was just learning how to use Dynamo, the more one uses it, the simpler and cleaner the script becomes",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/interior-fitup3.png"
+        alt="3. Interior fit-up Calculations"
+        caption={"3. Interior fit-up calculations (automation script)"}
+      />
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/interior-fitup4.png"
+        alt="3. Interior fit-up Calculations"
+        caption={
+          "3. Interior fit-up calculations (automation script - zoom to calculations and output)"
+        }
+      />
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/interior-fitup5.png"
+        alt="3. Interior fit-up Calculations"
+        caption={
+          "3. Interior fit-up calculations (automation script - zoom to calculations and output)"
+        }
+      />
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/titleblock.png"
+        alt="4. Titleblock and printing"
+        caption={"4. Titleblock and printing (manual process)"}
+      />
+    ),
+    notes:
+      "Before every submission we had to make sure the Titleblock contained the right information and set the printing set one by one. \
+    There were always too many things to check, and for something that we were updating every week the automatic process helped a lot.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/titleblock2.png"
+        alt="4. Titleblock and printing"
+        caption={"4. Titleblock and printing (automation script)"}
+      />
+    ),
+    notes:
+      "This kind of tasks are the ones that one do without too much energy and distracted, so mistakes are easily made. \
+      With this solution you just input the desired information (on the green boxes) and Dynamo automatically does everything else for you. \
+      Hundreds of sheets got the titleblock updated in seconds and without mistakes. \
+      And the printing set is also automatically updated, so one could go ahead and print felling 100% sure.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/titleblock3.png"
+        alt="4. Titleblock and printing"
+        caption={"4. Titleblock and printing (automation script)"}
+      />
+    ),
+    notes:
+      "This kind of tasks are the ones that one do without too much energy and distracted, so mistakes are easily made. \
+      With this solution you just input the desired information (on the green boxes) and Dynamo automatically does everything else for you. \
+      Hundreds of sheets got the titleblock updated in seconds and without mistakes. \
+      And the printing set is also automatically updated, so one could go ahead and print felling 100% sure.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/room-outlines1.png"
+        alt="5. Room Outlines"
+        caption={"5. Room Outlines (manual process)"}
+      />
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/room-outlines2.png"
+        alt="5. Room Outlines"
+        caption={"5. Room Outlines (automation script)"}
+      />
+    ),
+    notes:
+      "I created this script that automatically created the lines with the right colour",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/material-quantities1.png"
+        alt="6. Automatic Material Quantities and Diagrams in real-time"
+        caption={
+          "6. Automatic Material Quantities and Diagrams in real-time (automation script)"
+        }
+      />
+    ),
+    notes:
+      "Here the client was asking us to generate quick diagrams based on different materials.\
+    We were able to test multiple design options and the diagrams were produced in real time with all the information about square meters, cost, etc.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/material-quantities2.png"
+        alt="6. Automatic Material Quantities and Diagrams in real-time"
+        caption={
+          "6. Automatic Material Quantities and Diagrams in real-time (automation script)"
+        }
+      />
+    ),
+    notes:
+      "Here the client was asking us to generate quick diagrams based on different materials.\
+    We were able to test multiple design options and the diagrams were produced in real time with all the information about square meters, cost, etc.",
   },
 ];

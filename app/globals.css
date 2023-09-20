@@ -109,6 +109,13 @@ h5 {
   line-height: 60px;
 }
 
+.long-list li {
+  text-align: left;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
 .slides ol {
   list-style-type: decimal;
   margin-top: 2rem;
