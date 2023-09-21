@@ -1,18 +1,25 @@
 import { ReactElement } from "react";
 
 interface Props {
-  emoji: string;
-  title: string;
+  quote: string;
+  author: string;
 }
 
 export default function Quote({ quote, author }): ReactElement<Props> {
+  console.log(
+    `%c Quote: ==================================`,
+    "color: red; font-size: 30px"
+  );
+  console.log(`%c "${quote}"`, "font-size: 35px; color: #00f");
   return (
-    <h4>
-      <em>{quote}</em>
+    <div>
+      <h4>
+        <em>{quote}</em>
+      </h4>
       <h5>
         <br />
         <em>{author}</em>
       </h5>
-    </h4>
+    </div>
   );
 }

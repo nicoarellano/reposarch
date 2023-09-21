@@ -31,36 +31,31 @@ export const content: Toc = [
           alt="Tools of the Imagination"
           href="https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false"
         />
-        <h4>
-          <em>
-            The architect needs the right tools for the job. [...] The newest
-            tool, the computer, is really an entirely new toolbox full of
-            software to solve old and new problems.
-          </em>
-          <h5>
-            <br />
-            <em>Susan Piedmont Palladino - Tools of the imagination .</em>
-          </h5>
-        </h4>
+        <Quote
+          quote={
+            "The architect needs the right tools for the job. [...] The newest \
+            tool, the computer, is really an entirely new toolbox full of \
+            software to solve old and new problems."
+          }
+          author={"Susan Piedmont Palladino - Tools of the imagination"}
+        />
       </>
     ),
   },
+
   {
     element: (
-      <h4>
-        <em>
-          It is through the mastery of the full range of tools that the images
-          in the architect’s mind are translated into drawings and models, and
-          from the drawings and the models into buildings. Whether a simple
-          pencil or computer software, these tools give form to the wishes and
-          the instructions of the architect, but they are also active shapers of
-          what is possible.
-        </em>
-        <h5>
-          <br />
-          <em>Susan Piedmont Palladino - Tools of the imagination .</em>
-        </h5>
-      </h4>
+      <Quote
+        quote={
+          "          It is through the mastery of the full range of tools that the images \
+          in the architect’s mind are translated into drawings and models, and \
+          from the drawings and the models into buildings. Whether a simple \
+          pencil or computer software, these tools give form to the wishes and \
+          the instructions of the architect, but they are also active shapers of \
+          what is possible."
+        }
+        author={"Susan Piedmont Palladino - Tools of the imagination"}
+      />
     ),
   },
   {
@@ -89,21 +84,17 @@ export const content: Toc = [
   },
   {
     element: (
-      <h4>
-        <em>
-          Sketchpad pioneered the graphical user interface (GUI), which allows
-          interaction with the virtual world without typing in long strings of
-          coded commands. Instead, the user points, clicks, and double-clicks on
-          displays of icons, the virtual tools on the screen.
-        </em>
-        <h5>
-          <br />
-          <em>Susan Piedmont Palladino - Tools of the imagination .</em>
-        </h5>
-      </h4>
+      <Quote
+        quote={
+          "Sketchpad pioneered the graphical user interface (GUI), which allows \
+          interaction with the virtual world without typing in long strings of \
+          coded commands. Instead, the user points, clicks, and double-clicks on \
+          displays of icons, the virtual tools on the screen."
+        }
+        author={"Susan Piedmont Palladino - Tools of the imagination"}
+      />
     ),
   },
-
   {
     element: (
       <Quote
@@ -145,53 +136,54 @@ export const content: Toc = [
   },
   {
     element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h2>Do you know what CAD stands for?</h2>
-      </>
+      <EmojiTitle emoji={"❔"} title={"Do you know what CAD stands for?"} />
     ),
   },
   {
     element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h2>
-          Computer Aided <b>Design</b> or Computer Aided <b>Drafting</b>?
-        </h2>
-      </>
+      <EmojiTitle
+        emoji={"❔"}
+        title={
+          <h2>
+            Computer Aided <b>Design</b> or Computer Aided <b>Drafting</b>?
+          </h2>
+        }
+      />
     ),
   },
   {
     element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h2>
-          <b>CADD</b> : Computer Aided Design and Drafting
-        </h2>
-        <br />
-        <h2>
-          <b>CAAD</b> : Computer Aided Architectural Desing
-        </h2>
-      </>
+      <EmojiTitle
+        emoji={"❔"}
+        title={
+          <>
+            <h2>
+              <b>CADD</b> : Computer Aided Design and Drafting
+            </h2>
+            <br />
+            <h2>
+              <b>CAAD</b> : Computer Aided Architectural Design
+            </h2>
+          </>
+        }
+      />
     ),
   },
   {
     element: (
-      <>
-        <h2>CAD ✏️💻</h2>
-        <br />
-        <h4>
-          <b>A CAD system</b> is a combination of hardware and software that
-          allows three-dimensional modeling of physical artifacts, enabling
-          engineers and architects to design artifacts from simple parts to
-          complex systems. <br />
-          for example: Construction Detail → building element → space → building
-          → site → neibourhood → city
-        </h4>
-      </>
+      <EmojiTitle
+        emoji={"CAD ✏️💻"}
+        title={
+          <h4>
+            <b>A CAD system</b> is a combination of hardware and software that
+            allows three-dimensional modeling of physical artifacts, enabling
+            engineers and architects to design artifacts from simple parts to
+            complex systems. <br />
+            for example: Construction Detail → building element → space →
+            building → site → neibourhood → city
+          </h4>
+        }
+      />
     ),
   },
   {
@@ -212,22 +204,23 @@ export const content: Toc = [
   { element: <EmojiTitle emoji={"👾"} title="What is a raster image?" /> },
   {
     element: (
-      <>
-        <h2>Raster image 👾</h2>
-        <br />
-        <h4>
-          Raster (or bitmap) images are compiled using pixels, containing unique
-          color and tonal information that come together to create the image.
-          They are resolution dependent. The number of pixels that make up an
-          image as well as how many of those pixels are displayed per inch, both
-          determine the quality of an image. The more pixels in the image and
-          the higher the resolution is, the higher quality the image will be.
-          For example, if we scale a raster image to enlarge it, without
-          changing resolution, it will lose quality and look blurry or
-          pixilated. This is because we are stretching the pixels over a larger
-          area, thus making them look less sharp.
-        </h4>
-      </>
+      <EmojiTitle
+        emoji={"Raster image 👾"}
+        title={
+          <h4>
+            Raster (or bitmap) images are compiled using pixels, containing
+            unique color and tonal information that come together to create the
+            image. They are resolution dependent. The number of pixels that make
+            up an image as well as how many of those pixels are displayed per
+            inch, both determine the quality of an image. The more pixels in the
+            image and the higher the resolution is, the higher quality the image
+            will be. For example, if we scale a raster image to enlarge it,
+            without changing resolution, it will lose quality and look blurry or
+            pixilated. This is because we are stretching the pixels over a
+            larger area, thus making them look less sharp.
+          </h4>
+        }
+      />
     ),
   },
   {
@@ -244,8 +237,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates [X,Y,Z]. ",
   },
   {
     element: (
@@ -258,37 +249,24 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using [X,Y] on a Plane or [U,V] if we are on a surface. ",
   },
   { element: <EmojiTitle emoji={"♾️"} title="What is a vector image?" /> },
   {
     element: (
-      <>
-        <h2>Vector images ♾️</h2>
-        <br />
-        <h4>
-          Instead of trying to keep track of the millions of tiny pixels in a
-          raster image, vector images keep track of points and the equations for
-          the lines that connect them. they are made up of paths or line art
-          that can infinitely scalable because they work based on algorithms
-          rather than pixels. They can be re-sized infinitely larger or smaller,
-          and they will still print out just as clearly, with no increase (or
-          decrease) in file size.
-        </h4>
-      </>
-    ),
-  },
-  {
-    element: (
-      <>
-        <h2>Drawing with code ✏️</h2>
-        <br />
-        <iframe
-          className="w-full h-full"
-          src="https://editor.p5js.org/alptugan/sketches/Ob3l1fsrO"
-        />
-      </>
+      <EmojiTitle
+        emoji={"Vector images ♾️"}
+        title={
+          <h4>
+            Instead of trying to keep track of the millions of tiny pixels in a
+            raster image, vector images keep track of points and the equations
+            for the lines that connect them. they are made up of paths or line
+            art that can infinitely scalable because they work based on
+            algorithms rather than pixels. They can be re-sized infinitely
+            larger or smaller, and they will still print out just as clearly,
+            with no increase (or decrease) in file size.
+          </h4>
+        }
+      />
     ),
   },
   {
@@ -310,7 +288,18 @@ export const content: Toc = [
       </>
     ),
   },
-
+  {
+    element: (
+      <>
+        <h2>Drawing with code ✏️</h2>
+        <br />
+        <iframe
+          className="w-full h-full"
+          src="https://editor.p5js.org/alptugan/sketches/Ob3l1fsrO"
+        />
+      </>
+    ),
+  },
   {
     element: (
       <div>
@@ -323,7 +312,7 @@ export const content: Toc = [
               <li>Polyline</li>
               <li>Arc</li>
               <li>Circle</li>
-              <li>Elipse</li>
+              <li>Ellipse</li>
               <li>Nurbs</li>
               <li>Polycurve</li>
             </ol>
@@ -349,8 +338,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "A curve or curved line, may be the trace left by moving a point. It has no width nor depth",
   },
   {
     element: (
@@ -362,8 +349,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "Lines are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.",
   },
   {
     element: (
@@ -375,8 +360,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "When we connect two Lines together, we have a Polyline. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular.",
   },
   {
     element: (
@@ -388,8 +371,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an Arc, Circle, Ellipse Arc, or Ellipse by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.",
   },
   {
     element: (
@@ -401,8 +382,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "NURBS (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.",
   },
   { element: <Degree /> },
   {
@@ -415,43 +394,32 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "1 Degree, 2 Degree, 3 Degree - The higher the degree value, the more Control Points are used to interpolate the resulting Curve.",
   },
   { element: <Curves /> },
   {
     element: (
-      <>
-        <h2>3D Modelling 🫖💻</h2>
-        <br />
-        <h4>
-          3D modeling is the process of developing a mathematical
-          coordinate-based representation of and object with a specialized
-          software by manipulated edges, vertices, and polygons in a simulated
-          3D space <br />
-          Most of the time 3d models are displayed in flat screens, but the
-          graphic card simulates the geometry to give the illusion of depth.
-          This process is called 3d rendering.
-        </h4>
-      </>
+      <EmojiTitle
+        emoji={"3D Modelling 🫖💻"}
+        title={
+          <h4>
+            3D modeling is the process of developing a mathematical
+            coordinate-based representation of and object with a specialized
+            software by manipulated edges, vertices, and polygons in a simulated
+            3D space <br />
+            Most of the time 3d models are displayed in flat screens, but the
+            graphic card simulates the geometry to give the illusion of depth.
+            This process is called 3d rendering.
+          </h4>
+        }
+      />
     ),
-    notes:
-      " 3D modeling is the process of developing a mathematical \
-    coordinate-based representation of and object with a specialized \
-    software by manipulated edges, vertices, and polygons in a simulated \
-    3D space \
-    Most of the time 3d models are displayed in flat screens, but the \
-    graphic card simulates the geometry to give the illusion of depth. \
-    This process is called 3d rendering.",
   },
   {
     element: (
-      <>
-        <h2>3D CAD 🫖✏️💻</h2>
-        <br />
-        <h4>3d CAD is using a computer to draw 3d models to assist design</h4>
-        <br />
-      </>
+      <EmojiTitle
+        emoji={"3D CAD 🫖✏️💻"}
+        title={"3d CAD is using a computer to draw 3d models to assist design"}
+      />
     ),
   },
   {
@@ -567,7 +535,7 @@ export const content: Toc = [
             material type
           </li>
           <li>Define the surface features, as well as the edges of objects</li>
-          <li>A mathematical funcition describes the path of a curve</li>
+          <li>A mathematical function describes the path of a curve</li>
           <li>Surfaces are edited as single entities</li>
           <li>Better visualization, objects appear more realistic</li>
         </ul>
@@ -639,27 +607,34 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/week03/surface-domain.png"
-        alt={"Surface Domanin"}
+        alt={"Surface Domain"}
         caption={
-          "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max)."
+          "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max). - Source: Dynamo Primer"
         }
       />
     ),
-    notes:
-      "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).",
   },
   {
     element: (
       <Image
         src="/images/week03/nurbs-surfaces.png"
-        alt={"Surface Domanin"}
+        alt={"Nurbs Surfaces"}
         caption={
-          "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface."
+          "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface. - Source: Dynamo Primer"
         }
       />
     ),
-    notes:
-      "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week03/polysurface.png"
+        alt={"Polysurfaces"}
+        caption={
+          "Polysurfaces are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology. Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface. - Source: Dynamo Primer"
+        }
+      />
+    ),
   },
   {
     element: (
@@ -767,7 +742,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Comparition of solid modelling methods</h2>
+        <h2>Comparison of solid modelling methods</h2>
         <br />
         <table id="simple-table">
           <thead>
@@ -841,7 +816,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Alternatives? 💸</h2>
+        <h2>Open-source Alternatives? 💸</h2>
         <br />
         <Image
           src="/images/week03/librecad.png"
@@ -866,7 +841,7 @@ export const content: Toc = [
       <>
         <h1>Building Information Model or Building Information Modelling</h1>
         <br />
-        <h5>... definitelly not a great acronym</h5>
+        <h5>... definitely not a great acronym</h5>
       </>
     ),
   },
@@ -931,7 +906,6 @@ export const content: Toc = [
         caption={"MacLeamy Curve"}
       />
     ),
-    notes: "",
   },
   { element: <BimLevels /> },
   {
@@ -942,7 +916,6 @@ export const content: Toc = [
         caption={"Levels of detail"}
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -953,7 +926,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "Moving from conception → to aproximate geometry → to Precise geometry → to fabrication → to as-built",
+      "Moving from conception → to approximate geometry → to Precise geometry → to fabrication → to as-built",
   },
   {
     element: (
@@ -963,7 +936,6 @@ export const content: Toc = [
         caption={"BIM Maturity Levels"}
       />
     ),
-    notes: "",
   },
   { element: <BimDrivers /> },
   {
@@ -974,7 +946,6 @@ export const content: Toc = [
         caption={"Traditional BIM Ecosystem"}
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -982,11 +953,10 @@ export const content: Toc = [
         src="/images/week03/revitorarchicad.png"
         alt="Revit or Archicad?"
         caption={
-          "BIM authoring tools have been fighting to become the starndard tool in the industry. Who is winning?"
+          "BIM authoring tools have been fighting to become the standard tool in the industry. Who is winning?"
         }
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -996,7 +966,6 @@ export const content: Toc = [
         caption={"Revit has become the most popular BIM software in the world"}
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -1021,7 +990,6 @@ The status quo is to work with proprietary solutions and closed file formats."
         }
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -1061,7 +1029,7 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <>
-        <h2>Alternatives? 💸</h2>
+        <h2>Open-source Alternatives? 💸</h2>
         <br />
         <Image
           src="/images/week03/blenderbim.png"

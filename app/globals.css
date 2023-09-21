@@ -109,6 +109,13 @@ h5 {
   line-height: 60px;
 }
 
+.long-list li {
+  text-align: left;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
 .slides ol {
   list-style-type: decimal;
   margin-top: 2rem;
@@ -121,8 +128,14 @@ h5 {
 }
 
 .slides a {
-  color: #333;
+  color: dimgray;
   font-weight: 600;
+}
+
+.slides a:hover {
+  color: gray;
+  -webkit-text-stroke-color: gray;
+  -webkit-text-stroke-width: 1px;
 }
 
 .uneven-grid {
