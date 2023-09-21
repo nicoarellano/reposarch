@@ -38,7 +38,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "The Art of Computer graphics", url: "/arcn5005/week01" },
       {
         title:
-          "🖥️ LAB 1: Dowloading software, installing an IDE (Visual studio code), creating Github account, forking repo",
+          "🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), creating Github account, forking repo",
       },
     ],
   },
@@ -50,7 +50,7 @@ export const arcn5005Lectures: Lectures = [
     content: week02,
     toc: [
       { title: "Digitalization of the physical wold" },
-      { title: "Photogrametry - Guess lecturer: Miguel Reina Ortiz" },
+      { title: "Photogrammetry - Guess lecturer: Miguel Reina Ortiz" },
       { title: "Introduction to digital tools" },
       { title: "Digital turns" },
       { title: "Coding, programming, scripting" },
@@ -84,11 +84,12 @@ export const arcn5005Lectures: Lectures = [
       { title: "Close-sourced scripting" },
       {
         title:
-          "Coding for efficiency and automatization ; AKA Programming solutions for repetetive tasks",
+          "Coding for efficiency and automatization ; AKA Programming solutions for repetitive tasks",
       },
 
       {
-        title: "🖥️ LAB 4: Scripting - Dynamo / Grasshopper / Sverchok",
+        title:
+          "🖥️ LAB 4: Scripting - Dynamo / Grasshopper / Blender Geometry Nodes",
       },
     ],
   },
@@ -178,7 +179,7 @@ export const arcn5005Lectures: Lectures = [
     content: week09,
     toc: [
       { title: "🟡 Quiz 2" },
-      // { title: "BlenderBIM - Guess lecturer: Antonio Gonzales Viegas (That Open Company)" },
+      { title: "BlenderBIM - Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },
       { title: "IFC.js" },
       { title: "🖥️ LAB 9: IFC.js and OpenBIM Components" },
@@ -229,7 +230,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "Svelte" },
       { title: "Angular" },
       { title: " React.js" },
-      { title: "Typescrip" },
+      { title: "Typescript" },
       { title: "Next.js" },
       { title: "🖥️ LAB 12 : Web based BIM GIS software" },
     ],

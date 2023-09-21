@@ -173,7 +173,7 @@ export const content: Toc = [
         </h2>
         <br />
         <h2>
-          <b>CAAD</b> : Computer Aided Architectural Desing
+          <b>CAAD</b> : Computer Aided Architectural Design
         </h2>
       </>
     ),
@@ -323,7 +323,7 @@ export const content: Toc = [
               <li>Polyline</li>
               <li>Arc</li>
               <li>Circle</li>
-              <li>Elipse</li>
+              <li>Ellipse</li>
               <li>Nurbs</li>
               <li>Polycurve</li>
             </ol>
@@ -567,7 +567,7 @@ export const content: Toc = [
             material type
           </li>
           <li>Define the surface features, as well as the edges of objects</li>
-          <li>A mathematical funcition describes the path of a curve</li>
+          <li>A mathematical function describes the path of a curve</li>
           <li>Surfaces are edited as single entities</li>
           <li>Better visualization, objects appear more realistic</li>
         </ul>
@@ -780,7 +780,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Comparition of solid modelling methods</h2>
+        <h2>Comparison of solid modelling methods</h2>
         <br />
         <table id="simple-table">
           <thead>
@@ -854,7 +854,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Alternatives? 💸</h2>
+        <h2>Open-source Alternatives? 💸</h2>
         <br />
         <Image
           src="/images/week03/librecad.png"
@@ -879,7 +879,7 @@ export const content: Toc = [
       <>
         <h1>Building Information Model or Building Information Modelling</h1>
         <br />
-        <h5>... definitelly not a great acronym</h5>
+        <h5>... definitely not a great acronym</h5>
       </>
     ),
   },
@@ -966,7 +966,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "Moving from conception → to aproximate geometry → to Precise geometry → to fabrication → to as-built",
+      "Moving from conception → to approximate geometry → to Precise geometry → to fabrication → to as-built",
   },
   {
     element: (
@@ -995,7 +995,7 @@ export const content: Toc = [
         src="/images/week03/revitorarchicad.png"
         alt="Revit or Archicad?"
         caption={
-          "BIM authoring tools have been fighting to become the starndard tool in the industry. Who is winning?"
+          "BIM authoring tools have been fighting to become the standard tool in the industry. Who is winning?"
         }
       />
     ),
@@ -1074,7 +1074,7 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <>
-        <h2>Alternatives? 💸</h2>
+        <h2>Open-source Alternatives? 💸</h2>
         <br />
         <Image
           src="/images/week03/blenderbim.png"

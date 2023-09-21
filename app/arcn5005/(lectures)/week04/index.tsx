@@ -7,10 +7,10 @@ import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 
 import Scripting from "./Scripting.mdx";
-import RepetetiveTasks from "./RepetetiveTasks.mdx";
+import RepetitiveTasks from "./RepetitiveTasks.mdx";
 import DynamoBenefits from "./DynamoBenefits.mdx";
 import Ternary from "./Ternary.mdx";
-import DynamoNecesary from "./DynamoNecesary.mdx";
+import DynamoNecessary from "./DynamoNecessary.mdx";
 import DynamoConsiderations from "./DynamoConsiderations.mdx";
 
 export const content: Toc = [
@@ -43,7 +43,7 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "Scripting is the capability offered by almost all design software packages that allows the user to adapt, customise or completely reconfigure software around their own predilections and modes of working"
+          "Scripting is the capability offered by almost all design software packages that allows the user to adapt, customize or completely reconfigure software around their own predilections and modes of working"
         }
         author={"Mark Burry - Scripting Cultures"}
       />
@@ -53,7 +53,7 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "Authoritative customisation of the ‘black box’ affords the designer opportunities to escape the strictures inherent in any software by definition in ways not thought of by the makers"
+          "Authoritative customization of the ‘black box’ affords the designer opportunities to escape the strictures inherent in any software by definition in ways not thought of by the makers"
         }
         author={"Mark Burry - Scripting Cultures"}
       />
@@ -100,6 +100,49 @@ export const content: Toc = [
   { element: <Scripting /> },
   {
     element: (
+      <EmojiTitle emoji={"🦗"} title={"CAD and 3D CAD Proprietary Scripting"} />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/grasshopper.png"
+        alt="Grasshopper"
+        href="https://www.grasshopper3d.com/"
+        caption={
+          "For designers who are exploring new shapes using generative algorithms, Grasshopper® is a graphical algorithm editor tightly integrated with Rhino’s 3-D modeling tools. Unlike RhinoScript, Grasshopper requires no knowledge of programming or scripting, but still allows designers to build form generators from the simple to the awe-inspiring. "
+        }
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/grasshopper_v6_included.png"
+        alt="Out of the box Grasshopper "
+        href="https://www.grasshopper3d.com/"
+        caption={"Out of the box Grasshopper that comes with Rhinoceros v6+"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/grasshopper-ghpython.png"
+        alt="GhPython"
+        caption={
+          "For designers who want to use the same flexible language everywhere, \
+            GhPython is the Python interpreter component for Grasshopper that allows to execute dynamic scripts of any type. \
+            Unlike other scripting components, GhPython allows to use the 'rhinoscriptsyntax' to start scripting without needing to be a programmer. \
+            Once on-board and with some practice, you can also get the most of external Python and .Net modules and libraries. \
+            This component is open-source, and works in Rhino 5 +. "
+        }
+      />
+    ),
+  },
+  { element: <EmojiTitle emoji={"🦗"} title={"BIM Proprietary Scripting"} /> },
+  {
+    element: (
       <Image
         src="/images/week04/dynamo.png"
         alt="Dynamo"
@@ -109,7 +152,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "Is a that AutoDesk acquired a couple of year ago, that one can access throught Revit (since 2019). designers, engineers or construction professionals without any computer-related background or who do not know how to write code can access to basic but powerful scripting. (which is a type of coding used to automate processes) Dyanmo provides flexibility to explore inaccessible places inside the general functionalities of Revit (such as its API (application programming interface) and to manipulate large amounts of data and complex geometry with precision. ",
+      "Is a that AutoDesk acquired a couple of year ago, that one can access through Revit (since 2019). designers, engineers or construction professionals without any computer-related background or who do not know how to write code can access to basic but powerful scripting. (which is a type of coding used to automate processes) Dynamo provides flexibility to explore inaccessible places inside the general functionalities of Revit (such as its API (application programming interface) and to manipulate large amounts of data and complex geometry with precision. ",
   },
   {
     element: (
@@ -120,12 +163,12 @@ export const content: Toc = [
       />
     ),
   },
-  { element: <RepetetiveTasks /> },
+  { element: <RepetitiveTasks /> },
   {
     element: (
       <Image
         src="/images/week04/carleton-dynamo.png"
-        alt="Carleton Dyamo"
+        alt="Carleton Dynamo"
         caption={
           'Dynamo BIM by Autodesk: “Dynamo is a visual programming tool that aims to be accessible to both non-programmers and programmers alike. It gives users the ability to visually script behavior, define custom pieces of logic, and script using textual programming languages (ie. Python)."'
         }
@@ -286,13 +329,13 @@ export const content: Toc = [
         caption={
           "Dynamo and python: \
           people with some coding expertise can go even further due to Dynamo’s compatibility with Python (which is a high-level programming language, and one of the most popular among programmers). \
-          With Python one can access the Revit API (Aplication program interface), which is the program that works behind the scenes allowing users to interact with the functions of the software and allows programs to communicate between each other. \
+          With Python one can access the Revit API (Application program interface), which is the program that works behind the scenes allowing users to interact with the functions of the software and allows programs to communicate between each other. \
           Knowing how to access the API is useful to customize the experience by creating special functionalities within Dynamo that one wouldn’t be able to access."
         }
       />
     ),
   },
-  { element: <DynamoNecesary /> },
+  { element: <DynamoNecessary /> },
   {
     element: <DynamoConsiderations />,
     notes:
@@ -303,7 +346,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Examples of automation of repetetive taks 🔂</h2>
+        <h2>Examples of automation of repetitive tasks 🔂</h2>
         <ol className="long-list">
           <li>ROOM NUMBERING</li>
           <li>DOOR NUMBERING</li>
@@ -312,8 +355,8 @@ export const content: Toc = [
           <li>ROOM OUTLINES TO MODEL LINES</li>
           <li>QUANTIFYING MATERIALS</li>
           <li>BIM TO VR</li>
-          <li>MODEL VERSION COMPARATION</li>
-          <li>WORKSETS</li>
+          <li>COMPARING MODEL VERSION</li>
+          <li>CATEGORIZATION OF ELEMENTS</li>
           <li>IMPORTING AND EXPORTING DATA</li>
           <li>CAD TO REVIT</li>
           <li>REAL-TIME SIMULATIONS</li>
@@ -545,5 +588,159 @@ export const content: Toc = [
     notes:
       "Here the client was asking us to generate quick diagrams based on different materials.\
     We were able to test multiple design options and the diagrams were produced in real time with all the information about square meters, cost, etc.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/worksets1.png"
+        alt="7. Automatic Categorization of elements"
+        caption={"7. Automatic Categorization of elements"}
+      />
+    ),
+    notes:
+      "Set Elements by Category and Level into the right Workset. \
+Automating this process saves a lot of time and keeps all the elements in the right place. \
+For collaborating in big projects, such as the Carleton Digital Campus, or the Parliament Rehabilitation Project \
+ with many actor it is really useful.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/worksets2.png"
+        alt="7. Automatic Categorization of elements"
+        caption={"7. Automatic Categorization of elements"}
+      />
+    ),
+    notes:
+      "Set Elements by Category and Level into the right Workset. \
+Automating this process saves a lot of time and keeps all the elements in the right place. \
+For collaborating in big projects, such as the Carleton Digital Campus, or the Parliament Rehabilitation Project \
+ with many actor it is really useful.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/vr1.png"
+        alt="8. Semi-automatic BIM to VR"
+        caption={"8. Semi-automatic BIM to VR"}
+      />
+    ),
+    notes:
+      "You can use Dynamo to categorize groups of elements together \
+      In this case we use a script to automate the process of turning a BIM model into VR for the Library of Parliament.  \
+      That process was done manually and was very time consuming \
+      It consisted in identifying Elements by Geometry Levels for the polycount (the amount of triangles or faces to generate a mesh) \
+      A script was created to speed up the filtering process, reduce time, and decrease the risk of error.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/vr2.png"
+        alt="8. Semi-automatic BIM to VR"
+        caption={"8. Semi-automatic BIM to VR"}
+      />
+    ),
+    notes:
+      "The script automated the process allowing for a quick filtering \
+      and exporting process. \
+      The script collected all the required elements from Revit.  \
+      Elements were automatically grouped based on their Revit family category and assigned a geometry level. \
+      The elements were easily isolated for exporting from Revit ready to be exported to a VR environment.  \
+      The script decreased the pre-filtering and exporting to an average reduction of eighty percent.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/vr3.png"
+        alt="8. Semi-automatic BIM to VR"
+        caption={"8. Semi-automatic BIM to VR"}
+      />
+    ),
+    notes:
+      "In the Fall last year, this example was published on the TAD journal. ",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/comparing-elements.png"
+        alt="9. Version control - Comparing elements from different files"
+        caption={"9. Version control - Comparing elements from different files"}
+      />
+    ),
+    notes:
+      "You can use dynamo to Import and export data from different models and compare that that using external software such as excel.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/excel.png"
+        alt="10. Importing and exporting Excel to Revit and vice versa"
+        caption={"10. Importing and exporting Excel to Revit and vice versa"}
+      />
+    ),
+    notes:
+      "Automatically generation of DFH (Doors, Frames, and Hardware) packages coming from the doors schedule and being imported and exported into and from Excel to be share with the DFH provider. \
+      Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/excel.png"
+        alt="11. Importing and exporting Excel to Revit and vice versa"
+        caption={"10. Importing and exporting Excel to Revit and vice versa"}
+      />
+    ),
+    notes:
+      "Automatically generation of DFH (Doors, Frames, and Hardware) packages coming from the doors schedule and being imported and exported into and from Excel to be share with the DFH provider. \
+      Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
+  },
+
+  // OPEN SOURCE SCRIPTING - BLENDER GEOMETRY NODES
+
+  {
+    element: (
+      <EmojiTitle
+        emoji={"🤬‼️"}
+        title={"This course is about Open-source tools for architects!"}
+      />
+    ),
+  },
+  {
+    element: (
+      <EmojiTitle
+        emoji={"🧑‍🏫💻💘"}
+        title={
+          "Proprietary scripting is a good way of getting familiarized with the logic of programming. \
+        Proprietary scripting can also free you from the limitations of GUIs and they help you to interact with TUIs and APIs"
+        }
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Open-source Alternatives? 💸</h2>
+        <br />
+        <Image
+          src="/images/week04/blender-geometry-nodes.png"
+          alt={"Blender - Geometry Nodes"}
+          href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/introduction.html"
+          caption={
+            "Blender's Geometry Nodes is a free and open source alternative to Grasshopper and potentially Dynamo"
+          }
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/aO0eUnu0hO0?si=YGXrufwgp8b4l1bj"
+        title="Blender - Geometry Nodes"
+        caption={"Blender - Geometry Nodes"}
+      />
+    ),
   },
 ];

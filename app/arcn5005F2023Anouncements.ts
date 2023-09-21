@@ -15,7 +15,7 @@ export const Announcements: Resources = [
   },
   {
     title:
-      "2023/09/05: All meetings will be at the School of architecture in room AA-435 at 1:35 pm to 4:35 pm but they will also be recorded in case you miss it or you want to rewatch it.\
+      "2023/09/05: All meetings will be at the School of architecture in room AA-435 at 1:35 pm to 4:35 pm but they will also be recorded in case you miss it or you want to re-watch it.\
   The Zoom link is https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09 -\
   Meeting ID: 931 4954 9185\
   Passcode: arcn5005",
@@ -26,6 +26,23 @@ export const Announcements: Resources = [
       "2023/09/08: It was a pleasure to finally meeting you all, I hope that you like the course and you learn a lot. \
       Please remember that next class will be at 13:35 instead of 14:35. I have booked the room one hour earlier. \
       Have a great weekend and see you next week.",
+    url: "",
+  },
+  {
+    title:
+      "2023/09/21: Hi all, I asked and they told me that it wont be possible to change the room. Sorry about that. We would have to be patient.",
+    url: "",
+  },
+  {
+    title:
+      "2023/09/21: Hi all, someone noticed that MeshRoom is not available for Mac OS. \
+      It is a shame that they have not developed a version for Mac. They explain that it has something to do with the graphics engine. \
+But don't worry, it is not going to be an issue for the rest of the term. This is the only time we are going to use a photogrammetric software, and it could be any. \
+1. Partner with someone that has Windows or Linux OS and just process your photos there, or \
+2. You can use the 1-month free trial of Agisoft Metashape that does the same: https://www.agisoft.com/downloads/installer/ \
+Here is an example of using Metashape with Blender: https://youtu.be/rc4pUHolxgA?si=uhBv7dlkNm4RYgRz \
+3. Whatever software works for you. Just do the research. I don't really care about the software, I just want you to be able to get a mesh. \
+Please let me know if you have further questions.",
     url: "",
   },
 ];
