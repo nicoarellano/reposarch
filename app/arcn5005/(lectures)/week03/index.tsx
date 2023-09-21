@@ -237,8 +237,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates [X,Y,Z]. ",
   },
   {
     element: (
@@ -251,8 +249,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using [X,Y] on a Plane or [U,V] if we are on a surface. ",
   },
   { element: <EmojiTitle emoji={"♾️"} title="What is a vector image?" /> },
   {
@@ -342,8 +338,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "A curve or curved line, may be the trace left by moving a point. It has no width nor depth",
   },
   {
     element: (
@@ -355,8 +349,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "Lines are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.",
   },
   {
     element: (
@@ -368,8 +360,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "When we connect two Lines together, we have a Polyline. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular.",
   },
   {
     element: (
@@ -381,8 +371,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an Arc, Circle, Ellipse Arc, or Ellipse by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.",
   },
   {
     element: (
@@ -394,8 +382,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "NURBS (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.",
   },
   { element: <Degree /> },
   {
@@ -408,8 +394,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "1 Degree, 2 Degree, 3 Degree - The higher the degree value, the more Control Points are used to interpolate the resulting Curve.",
   },
   { element: <Curves /> },
   {
@@ -428,14 +412,6 @@ export const content: Toc = [
         </h4>
       </>
     ),
-    notes:
-      " 3D modeling is the process of developing a mathematical \
-    coordinate-based representation of and object with a specialized \
-    software by manipulated edges, vertices, and polygons in a simulated \
-    3D space \
-    Most of the time 3d models are displayed in flat screens, but the \
-    graphic card simulates the geometry to give the illusion of depth. \
-    This process is called 3d rendering.",
   },
   {
     element: (
@@ -638,8 +614,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max).",
   },
   {
     element: (
@@ -651,8 +625,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface.",
   },
   {
     element: (
@@ -664,8 +636,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "Polysurfaces are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology. Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface.",
   },
   {
     element: (
@@ -937,7 +907,6 @@ export const content: Toc = [
         caption={"MacLeamy Curve"}
       />
     ),
-    notes: "",
   },
   { element: <BimLevels /> },
   {
@@ -948,7 +917,6 @@ export const content: Toc = [
         caption={"Levels of detail"}
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -969,7 +937,6 @@ export const content: Toc = [
         caption={"BIM Maturity Levels"}
       />
     ),
-    notes: "",
   },
   { element: <BimDrivers /> },
   {
@@ -980,7 +947,6 @@ export const content: Toc = [
         caption={"Traditional BIM Ecosystem"}
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -992,7 +958,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -1002,7 +967,6 @@ export const content: Toc = [
         caption={"Revit has become the most popular BIM software in the world"}
       />
     ),
-    notes: "",
   },
   {
     element: (
@@ -1027,7 +991,6 @@ The status quo is to work with proprietary solutions and closed file formats."
         }
       />
     ),
-    notes: "",
   },
   {
     element: (
