@@ -226,9 +226,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "🟡 Quiz 3" },
       { title: "Frontend framework" },
-      { title: "Vue" },
-      { title: "Svelte" },
-      { title: "Angular" },
+      { title: "Tailwind CSS" },
       { title: " React.js" },
       { title: "Typescript" },
       { title: "Next.js" },

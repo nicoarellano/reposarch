@@ -31,36 +31,31 @@ export const content: Toc = [
           alt="Tools of the Imagination"
           href="https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false"
         />
-        <h4>
-          <em>
-            The architect needs the right tools for the job. [...] The newest
-            tool, the computer, is really an entirely new toolbox full of
-            software to solve old and new problems.
-          </em>
-          <h5>
-            <br />
-            <em>Susan Piedmont Palladino - Tools of the imagination .</em>
-          </h5>
-        </h4>
+        <Quote
+          quote={
+            "The architect needs the right tools for the job. [...] The newest \
+            tool, the computer, is really an entirely new toolbox full of \
+            software to solve old and new problems."
+          }
+          author={"Susan Piedmont Palladino - Tools of the imagination"}
+        />
       </>
     ),
   },
+
   {
     element: (
-      <h4>
-        <em>
-          It is through the mastery of the full range of tools that the images
-          in the architect’s mind are translated into drawings and models, and
-          from the drawings and the models into buildings. Whether a simple
-          pencil or computer software, these tools give form to the wishes and
-          the instructions of the architect, but they are also active shapers of
-          what is possible.
-        </em>
-        <h5>
-          <br />
-          <em>Susan Piedmont Palladino - Tools of the imagination .</em>
-        </h5>
-      </h4>
+      <Quote
+        quote={
+          "          It is through the mastery of the full range of tools that the images \
+          in the architect’s mind are translated into drawings and models, and \
+          from the drawings and the models into buildings. Whether a simple \
+          pencil or computer software, these tools give form to the wishes and \
+          the instructions of the architect, but they are also active shapers of \
+          what is possible."
+        }
+        author={"Susan Piedmont Palladino - Tools of the imagination"}
+      />
     ),
   },
   {
@@ -89,21 +84,17 @@ export const content: Toc = [
   },
   {
     element: (
-      <h4>
-        <em>
-          Sketchpad pioneered the graphical user interface (GUI), which allows
-          interaction with the virtual world without typing in long strings of
-          coded commands. Instead, the user points, clicks, and double-clicks on
-          displays of icons, the virtual tools on the screen.
-        </em>
-        <h5>
-          <br />
-          <em>Susan Piedmont Palladino - Tools of the imagination .</em>
-        </h5>
-      </h4>
+      <Quote
+        quote={
+          "Sketchpad pioneered the graphical user interface (GUI), which allows \
+          interaction with the virtual world without typing in long strings of \
+          coded commands. Instead, the user points, clicks, and double-clicks on \
+          displays of icons, the virtual tools on the screen."
+        }
+        author={"Susan Piedmont Palladino - Tools of the imagination"}
+      />
     ),
   },
-
   {
     element: (
       <Quote
@@ -145,53 +136,54 @@ export const content: Toc = [
   },
   {
     element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h2>Do you know what CAD stands for?</h2>
-      </>
+      <EmojiTitle emoji={"❔"} title={"Do you know what CAD stands for?"} />
     ),
   },
   {
     element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h2>
-          Computer Aided <b>Design</b> or Computer Aided <b>Drafting</b>?
-        </h2>
-      </>
+      <EmojiTitle
+        emoji={"❔"}
+        title={
+          <h2>
+            Computer Aided <b>Design</b> or Computer Aided <b>Drafting</b>?
+          </h2>
+        }
+      />
     ),
   },
   {
     element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h2>
-          <b>CADD</b> : Computer Aided Design and Drafting
-        </h2>
-        <br />
-        <h2>
-          <b>CAAD</b> : Computer Aided Architectural Design
-        </h2>
-      </>
+      <EmojiTitle
+        emoji={"❔"}
+        title={
+          <>
+            <h2>
+              <b>CADD</b> : Computer Aided Design and Drafting
+            </h2>
+            <br />
+            <h2>
+              <b>CAAD</b> : Computer Aided Architectural Design
+            </h2>
+          </>
+        }
+      />
     ),
   },
   {
     element: (
-      <>
-        <h2>CAD ✏️💻</h2>
-        <br />
-        <h4>
-          <b>A CAD system</b> is a combination of hardware and software that
-          allows three-dimensional modeling of physical artifacts, enabling
-          engineers and architects to design artifacts from simple parts to
-          complex systems. <br />
-          for example: Construction Detail → building element → space → building
-          → site → neibourhood → city
-        </h4>
-      </>
+      <EmojiTitle
+        emoji={"CAD ✏️💻"}
+        title={
+          <h4>
+            <b>A CAD system</b> is a combination of hardware and software that
+            allows three-dimensional modeling of physical artifacts, enabling
+            engineers and architects to design artifacts from simple parts to
+            complex systems. <br />
+            for example: Construction Detail → building element → space →
+            building → site → neibourhood → city
+          </h4>
+        }
+      />
     ),
   },
   {
@@ -212,22 +204,23 @@ export const content: Toc = [
   { element: <EmojiTitle emoji={"👾"} title="What is a raster image?" /> },
   {
     element: (
-      <>
-        <h2>Raster image 👾</h2>
-        <br />
-        <h4>
-          Raster (or bitmap) images are compiled using pixels, containing unique
-          color and tonal information that come together to create the image.
-          They are resolution dependent. The number of pixels that make up an
-          image as well as how many of those pixels are displayed per inch, both
-          determine the quality of an image. The more pixels in the image and
-          the higher the resolution is, the higher quality the image will be.
-          For example, if we scale a raster image to enlarge it, without
-          changing resolution, it will lose quality and look blurry or
-          pixilated. This is because we are stretching the pixels over a larger
-          area, thus making them look less sharp.
-        </h4>
-      </>
+      <EmojiTitle
+        emoji={"Raster image 👾"}
+        title={
+          <h4>
+            Raster (or bitmap) images are compiled using pixels, containing
+            unique color and tonal information that come together to create the
+            image. They are resolution dependent. The number of pixels that make
+            up an image as well as how many of those pixels are displayed per
+            inch, both determine the quality of an image. The more pixels in the
+            image and the higher the resolution is, the higher quality the image
+            will be. For example, if we scale a raster image to enlarge it,
+            without changing resolution, it will lose quality and look blurry or
+            pixilated. This is because we are stretching the pixels over a
+            larger area, thus making them look less sharp.
+          </h4>
+        }
+      />
     ),
   },
   {
