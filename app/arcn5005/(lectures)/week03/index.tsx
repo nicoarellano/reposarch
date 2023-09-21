@@ -253,31 +253,20 @@ export const content: Toc = [
   { element: <EmojiTitle emoji={"♾️"} title="What is a vector image?" /> },
   {
     element: (
-      <>
-        <h2>Vector images ♾️</h2>
-        <br />
-        <h4>
-          Instead of trying to keep track of the millions of tiny pixels in a
-          raster image, vector images keep track of points and the equations for
-          the lines that connect them. they are made up of paths or line art
-          that can infinitely scalable because they work based on algorithms
-          rather than pixels. They can be re-sized infinitely larger or smaller,
-          and they will still print out just as clearly, with no increase (or
-          decrease) in file size.
-        </h4>
-      </>
-    ),
-  },
-  {
-    element: (
-      <>
-        <h2>Drawing with code ✏️</h2>
-        <br />
-        <iframe
-          className="w-full h-full"
-          src="https://editor.p5js.org/alptugan/sketches/Ob3l1fsrO"
-        />
-      </>
+      <EmojiTitle
+        emoji={"Vector images ♾️"}
+        title={
+          <h4>
+            Instead of trying to keep track of the millions of tiny pixels in a
+            raster image, vector images keep track of points and the equations
+            for the lines that connect them. they are made up of paths or line
+            art that can infinitely scalable because they work based on
+            algorithms rather than pixels. They can be re-sized infinitely
+            larger or smaller, and they will still print out just as clearly,
+            with no increase (or decrease) in file size.
+          </h4>
+        }
+      />
     ),
   },
   {
@@ -299,7 +288,18 @@ export const content: Toc = [
       </>
     ),
   },
-
+  {
+    element: (
+      <>
+        <h2>Drawing with code ✏️</h2>
+        <br />
+        <iframe
+          className="w-full h-full"
+          src="https://editor.p5js.org/alptugan/sketches/Ob3l1fsrO"
+        />
+      </>
+    ),
+  },
   {
     element: (
       <div>
@@ -398,29 +398,28 @@ export const content: Toc = [
   { element: <Curves /> },
   {
     element: (
-      <>
-        <h2>3D Modelling 🫖💻</h2>
-        <br />
-        <h4>
-          3D modeling is the process of developing a mathematical
-          coordinate-based representation of and object with a specialized
-          software by manipulated edges, vertices, and polygons in a simulated
-          3D space <br />
-          Most of the time 3d models are displayed in flat screens, but the
-          graphic card simulates the geometry to give the illusion of depth.
-          This process is called 3d rendering.
-        </h4>
-      </>
+      <EmojiTitle
+        emoji={"3D Modelling 🫖💻"}
+        title={
+          <h4>
+            3D modeling is the process of developing a mathematical
+            coordinate-based representation of and object with a specialized
+            software by manipulated edges, vertices, and polygons in a simulated
+            3D space <br />
+            Most of the time 3d models are displayed in flat screens, but the
+            graphic card simulates the geometry to give the illusion of depth.
+            This process is called 3d rendering.
+          </h4>
+        }
+      />
     ),
   },
   {
     element: (
-      <>
-        <h2>3D CAD 🫖✏️💻</h2>
-        <br />
-        <h4>3d CAD is using a computer to draw 3d models to assist design</h4>
-        <br />
-      </>
+      <EmojiTitle
+        emoji={"3D CAD 🫖✏️💻"}
+        title={"3d CAD is using a computer to draw 3d models to assist design"}
+      />
     ),
   },
   {
