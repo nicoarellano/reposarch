@@ -6,9 +6,11 @@ import { arcn5005Lectures } from "../../../arcn5005Lectures";
 import { Lecture, Toc } from "../../../../types/types";
 import { Header } from "../../../../components/Header";
 import { Footer } from "../../../../components/Footer";
+import { useRouter } from "next/navigation";
+
 import ListWithIcon from "../../../../components/Common/ListWithIcon";
 import ArrowRightIcon from "@mui/icons-material/ArrowRightRounded";
-import { useRouter } from "next/navigation";
+import VideoIcon from "@mui/icons-material/OndemandVideoRounded";
 
 interface Props {
   params: { number: string };
@@ -25,6 +27,17 @@ export default function Page({ params }): ReactElement<Props> {
 
   const router = useRouter();
 
+  const recordings: { title: string; url?: string }[] = [];
+  if (lecture?.recordings)
+    lecture?.recordings.map((recording) => {
+      if (recording) {
+        recordings.push({
+          title: `${recording.title} (${recording.date.format("YY/MM/DD")})`,
+          url: recording.url,
+        });
+      }
+    });
+
   useEffect(() => {
     if (lecture?.content) {
       if (!params.number[1]) router.push("1");
@@ -34,13 +47,24 @@ export default function Page({ params }): ReactElement<Props> {
         const fullContent = [
           {
             element: (
-              <nav className="w-2/5 flex items-center">
-                <ListWithIcon
-                  list={lecture.toc as { title: string }[]}
-                  subheader="Table of Content"
-                  icon={<ArrowRightIcon />}
-                />
-              </nav>
+              <div className="flex gap-4 items-start">
+                <div>
+                  <ListWithIcon
+                    list={lecture.toc as { title: string }[]}
+                    subheader="Table of Content"
+                    icon={<ArrowRightIcon />}
+                  />
+                </div>
+                {lecture.recordings && (
+                  <div>
+                    <ListWithIcon
+                      list={recordings}
+                      subheader="Class Recordings 📽️"
+                      icon={<VideoIcon />}
+                    />
+                  </div>
+                )}
+              </div>
             ),
           },
           ...lecture?.content,

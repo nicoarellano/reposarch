@@ -14,6 +14,7 @@ import { content as week11 } from "./arcn5005/(lectures)/week11/";
 import { content as week12 } from "./arcn5005/(lectures)/week12/";
 import { content as week13 } from "./arcn5005/(lectures)/week13/";
 import { content as final } from "./arcn5005/(lectures)/final";
+import { content as maplibre } from "./arcn5005/(lectures)/maplibre";
 
 const initialDate = dayjs("2023-09-07");
 
@@ -38,7 +39,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "The Art of Computer graphics", url: "/arcn5005/week01" },
       {
         title:
-          "🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), creating Github account, forking repo",
+          "🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), Github",
       },
     ],
   },
@@ -56,6 +57,18 @@ export const arcn5005Lectures: Lectures = [
       { title: "Coding, programming, scripting" },
       { title: "🖥️ LAB 2: MeshRoom to Blender" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG",
+        title: "Photogrammetry - Miquel Reina Ortiz",
+        date: dayjs("2023/09/14"),
+      },
+      {
+        url: "https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v",
+        title: "Programming",
+        date: dayjs("2023/09/14"),
+      },
+    ],
   },
 
   {
@@ -71,6 +84,13 @@ export const arcn5005Lectures: Lectures = [
       { title: "Proprietary software" },
 
       { title: "🖥️ LAB 3: P5, LibreCad, and Blender " },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz",
+        title: "CAD, 3D CAD, and BIM",
+        date: dayjs("2023/09/21"),
+      },
     ],
   },
   {
@@ -187,7 +207,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 10 - OS GIS",
+    title: "Week 10 - Open Source GIS",
     id: `week10`,
     url: `week10`,
     date: initialDate.add(10, "week"),
@@ -252,5 +272,21 @@ export const arcn5005Lectures: Lectures = [
     date: dayjs("2023-12-18"),
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
+  },
+  {
+    title: "🗺️ Open Source Web-based Mapping",
+    id: `maplibre`,
+    url: `maplibre`,
+    date: dayjs("2023-09-25"),
+    content: maplibre,
+    toc: [
+      { title: "History of Mapping" },
+      { title: "Digital Maps" },
+      { title: "Coordination Systems" },
+      { title: "Geospatial Information Systems" },
+      { title: "Proprietary web GIS - Cesium and Mapbox" },
+      { title: "Open Source web GIS - Leaflet and Maplibre" },
+      { title: "🖥️ LAB : Maplibre" },
+    ],
   },
 ];
