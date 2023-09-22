@@ -84,32 +84,6 @@ export const content: Toc = [
   {
     element: (
       <Image
-        alt="Map"
-        src="/images/week10/world-map-1526.jpg"
-        href="https://en.wikipedia.org/wiki/Map"
-        caption={"Early World Map (1570) - Wikipedia"}
-      />
-    ),
-    notes:
-      "The history of cartography traces the development of cartography, or \
-      mapmaking technology, in human history. Maps have been one of the most \
-      important human inventions for millennia, allowing humans to explain \
-      and navigate their way through the world. The earliest surviving maps \
-      include cave paintings and etchings on tusk and stone, followed by \
-      extensive maps produced by ancient Babylon, Greece and Rome, China, \
-      and India. In their most simple form maps are two dimensional \
-      constructs, however since the age of Classical Greece maps have also \
-      been projected onto a three-dimensional sphere known as a globe. The \
-      Mercator Projection, developed by Flemish geographer Gerardus \
-      Mercator, was widely used as the standard two-dimensional projection \
-      of the earth for world maps until the late 20th century, when more \
-      accurate projections were formulated. Mercator was also the first to \
-      use and popularise the concept of the atlas as a collection of maps.",
-  },
-
-  {
-    element: (
-      <Image
         src="/images/week01/rome-maps.png"
         alt="Maps of rome"
         caption={
@@ -209,6 +183,129 @@ export const content: Toc = [
     notes:
       "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
   },
+
+  {
+    element: <EmojiTitle emoji={"🌎⛵🗺️"} title={"World mapping"} />,
+  },
+  {
+    element: (
+      <Image
+        alt="Map"
+        src="/images/week10/world-map-1526.jpg"
+        href="https://en.wikipedia.org/wiki/Map"
+        caption={"Early World Map (1570) - Wikipedia"}
+      />
+    ),
+    notes:
+      "The history of cartography traces the development of cartography, or \
+      mapmaking technology, in human history. Maps have been one of the most \
+      important human inventions for millennia, allowing humans to explain \
+      and navigate their way through the world. The earliest surviving maps \
+      include cave paintings and etchings on tusk and stone, followed by \
+      extensive maps produced by ancient Babylon, Greece and Rome, China, \
+      and India. In their most simple form maps are two dimensional \
+      constructs, however since the age of Classical Greece maps have also \
+      been projected onto a three-dimensional sphere known as a globe.",
+  },
+  {
+    element: (
+      <Image
+        alt="Mercator projection"
+        src="/images/week10/mercator.png"
+        href="https://en.wikipedia.org/wiki/Mercator_projection"
+        caption={"Mercator 1569 world map - Wikipedia"}
+      />
+    ),
+    notes:
+      "The Mercator Projection, developed by Flemish geographer Gerardus \
+      Mercator, was widely used as the standard two-dimensional projection \
+      of the earth for world maps until the late 20th century, when more \
+      accurate projections were formulated. Mercator was also the first to \
+      use and popularise the concept of the atlas as a collection of maps.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week10/mercator2.png"
+        alt="Mercator projection"
+        caption={"Mercator projection"}
+      />
+    ),
+    notes:
+      "The Mercator projection is a cylindrical map projection presented by Flemish geographer and cartographer Gerardus Mercator in 1569. It became the standard map projection for navigation because it is unique in representing north as up and south as down everywhere while preserving local directions and shapes. The map is thereby conformal. As a side effect, the Mercator projection inflates the size of objects away from the equator. This inflation is very small near the equator but accelerates with increasing latitude to become infinite at the poles. As a result, landmasses such as Greenland, Antarctica, Canada and Russia appear far larger than they actually are relative to landmasses near the equator, such as Central Africa.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week10/mercator-cylinder.png"
+        alt="Mercator projection"
+        caption={"Mercator projection"}
+        href="https://cdn.britannica.com/55/109155-050-9FE4B08C/simple-cylindrical-projection-earth-map-globe-mercator.jpg"
+      />
+    ),
+    notes:
+      "As on all map projections, shapes or sizes are distortions of the true layout of the Earth's surface. \
+      The Mercator projection exaggerates areas far from the equator. \
+      Examples of size distortion \
+      Greenland appears the same size as Africa, when in reality Africa's area is 14 times as large. \
+      Greenland's real area is comparable to the Democratic Republic of the Congo's alone. \
+      Africa appears to be roughly the same size as South America, when in reality Africa is over one and a half times as large. \
+      Alaska appears to be the same size as Australia, although Australia is actually 4.5 times as large. \
+      Alaska also takes as much area on the map as Brazil, whereas Brazil's area is nearly 5 times that of Alaska. \
+      Madagascar and Great Britain look about the same size, while Madagascar is actually more than twice as large as Great Britain.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/orange.jpg"
+        alt="orange"
+        caption={
+          "The globe on the quarter-spherical or orange peel projection - Norman Leventhal 1919"
+        }
+        href="https://commons.wikimedia.org/wiki/File:The_official_map_of_the_world_-_showing_the_four_quarters_of_the_globe_on_the_quarter-spherical_or_orange_peel_projection_%2814533479258%29.jpg"
+      />
+    ),
+    notes:
+      "It is called Orange Peel because of its resemblance to the flattened rind of a hand-peeled orange.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week10/goode.png"
+        alt="Dymaxion map"
+        caption={"Goode homolosine projection 1923"}
+      />
+    ),
+    notes:
+      "The projection was developed in 1923 by John Paul Goode to provide an alternative to the Mercator projection for portraying global areal relationships. Goode offered variations of the interruption scheme for emphasizing the world’s land and the world’s oceans.  \
+      It is sometimes called the 'homolographic projection' (meaning, equal-area map) it is also often called an 'orange-peel map'",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week10/dymaxion.png"
+        alt="Dymaxion map"
+        caption={"Dymaxion map"}
+        href="https://en.wikipedia.org/wiki/Dymaxion_map"
+      />
+    ),
+    notes:
+      "The Dymaxion map or Fuller map is a projection of a world map onto the surface of an icosahedron, which can be unfolded and flattened to two dimensions. The flat map is heavily interrupted in order to preserve shapes and sizes.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/dymaxion.jpg"
+        alt="Dymaxion map"
+        caption={"Dymaxion map"}
+      />
+    ),
+    notes:
+      "The projection was invented by Buckminster Fuller. The March 1, 1943, edition of Life magazine included a photographic essay titled 'Life Presents R. Buckminster Fuller's Dymaxion World'. The article included several examples of its use together with a pull-out section that could be assembled as a 'three-dimensional approximation of a globe or laid out as a flat map, with which the world may be fitted together and rearranged to illuminate special aspects of its geography'. Fuller applied for a patent in the United States in February 1944, showing a projection onto a cuboctahedron, which he called 'dymaxion'. The patent was issued in January 1946.",
+  },
+
   {
     element: (
       <Image
