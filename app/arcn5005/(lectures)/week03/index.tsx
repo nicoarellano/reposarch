@@ -25,6 +25,15 @@ import SimpleButton from "../../../../components/Common/SimpleButton";
 export const content: Toc = [
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz"
+        title="Class 3  - Representation tools and processes for architects"
+        caption={"Class 3  - Representation tools and processes for architects"}
+      />
+    ),
+  },
+  {
+    element: (
       <>
         <Image
           src="/images/week03/tools-of-the-imagination.jpg"
