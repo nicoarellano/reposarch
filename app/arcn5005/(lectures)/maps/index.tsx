@@ -168,20 +168,10 @@ export const content: Toc = [
       "In the fifteenth century,  Albrecht Durer revolutionized drawing by adding precision and science to the process.",
   },
   {
-    element: (
-      <Video
-        src="https://www.youtube.com/embed/bgfS3A_u27c?si=7oIAX8KQUBAJ3Gu_"
-        title="Decartes Coordinate System"
-        caption={"Rene Descartes' Coordinate System - Cartesian Plane"}
-      />
-    ),
-    notes:
-      "The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637",
-  },
-  {
     element: <CartesianPlane />,
     notes:
-      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
+      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'\
+      The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637",
   },
 
   {
@@ -191,8 +181,6 @@ export const content: Toc = [
   // POTATO
 
   // Flat earth
-
-  // maybe a three js model of the earth download from sketchfab
 
   {
     element: (
@@ -279,7 +267,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/goode.jpg"
+        src="/images/week10/goode.png"
         alt="Dymaxion map"
         caption={"Goode homolosine projection 1923"}
       />
@@ -313,6 +301,16 @@ export const content: Toc = [
       "The projection was invented by Buckminster Fuller. The March 1, 1943, edition of Life magazine included a photographic essay titled 'Life Presents R. Buckminster Fuller's Dymaxion World'. The article included several examples of its use together with a pull-out section that could be assembled as a 'three-dimensional approximation of a globe or laid out as a flat map, with which the world may be fitted together and rearranged to illuminate special aspects of its geography'. Fuller applied for a patent in the United States in February 1944, showing a projection onto a cuboctahedron, which he called 'dymaxion'. The patent was issued in January 1946.",
   },
 
+  // projections:
+  {
+    element: (
+      <iframe
+        className="w-full h-full"
+        src="https://en.m.wikipedia.org/wiki/List_of_map_projections#Table_of_projections"
+      />
+    ),
+  },
+
   {
     element: (
       <Image
@@ -325,8 +323,101 @@ export const content: Toc = [
       "Alberti's dream remained technically impossible for 500 years until the creation of the modern computers.",
   },
 
-  //  Coordinate system
-  // WGS vs North American Datum of 1983 (NAD 83)
+  {
+    element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
+  },
+
+  {
+    element: (
+      <EmojiTitle
+        emoji={"🌎💻🗺️❔"}
+        title={"Does anybody knows what GIS stands for?"}
+      />
+    ),
+  },
+
+  {
+    element: (
+      <EmojiTitle
+        emoji={"🌎💻🗺️"}
+        title={"Geodetic reference systems - NAD83 vs WGS84"}
+      />
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <table id="simple-table">
+          <thead>
+            <tr>
+              <th>Characteristics</th>
+              <th>WGS84</th>
+              <th>NAD83 </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Definition</th>
+              <td>WGS84 is a worldwide reference frame system.</td>
+              <td>
+                NAD83 (North American Datum 1983) is a geodetic reference system
+                used in North America for mapping and surveying.{" "}
+              </td>
+            </tr>
+            <tr>
+              <th>Stands for</th>
+              <td>World Geodetic System</td>
+              <td>North American Datum </td>
+            </tr>
+            <tr>
+              <th>Ellipsoid</th>
+              <td>
+                Oblate spheroid with a semi-major axis of 6,378,137m and
+                flattening of 1/298.257223563
+              </td>
+              <td>
+                It is quite similar to WGS84 but slightly has different shapes
+                that take into account local variations in gravity.{" "}
+              </td>
+            </tr>
+            <tr>
+              <th>Usage</th>
+              <td>It is used by the United States Department of Defence.</td>
+              <td>
+                It is used in the U.S., Canada, Central America, and Mexico.{" "}
+              </td>
+            </tr>
+            <tr>
+              <th>Applications</th>
+              <td>
+                It is suitable for global navigation and mapping, including GPS,
+                GLONASS, Galileo, and other global positioning systems.
+              </td>
+              <td>
+                It is widely used in North America for navigation, mapping,
+                surveying, and other geospatial applications that include
+                land-use planning, environmental monitoring, and emergency
+                response.{" "}
+              </td>
+            </tr>
+            <tr>
+              <th>Compatibility</th>
+              <td>
+                WGS-84 is compatible with many of the global positioning systems
+                and mapping software.
+              </td>
+              <td>
+                NAD83 is not compatible with WGS84 and may cause problems when
+                integrating data from different sources or using different
+                mapping software.{" "}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </>
+    ),
+  },
 
   {
     element: (
@@ -835,6 +926,16 @@ export const content: Toc = [
         alt="npm maplibre"
         caption={"Npm example - Installing Maplibre-gl"}
       />
+    ),
+  },
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/maplibre.html"
+        title="Maplibre"
+      ></iframe>
     ),
   },
   {

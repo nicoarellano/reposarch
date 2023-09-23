@@ -29,7 +29,7 @@ function initCesium() {
   });
 
   // Fly the camera to the Canada.
-  flyTo(viewer, -98.74, 56.415, 5000000, -90.0, 0);
+  flyTo(viewer, -98.74, 56.415, 25000000, -90.0, 0);
   // GET LOCATION CANDA🔍
   //    GET PROVINCE 🗺️
   const pNames = [];
@@ -156,7 +156,7 @@ function initCesium() {
       this.setAttribute("title", "Go to site");
       document.getElementById("go-to-icon").setAttribute("d", icons.goToIcon);
       // Fly to Canada
-      flyTo(viewer, -98.74, 56.415, 5000000, -90.0, 0);
+      flyTo(viewer, -98.74, 56.415, 25000000, -90.0, 0);
       pMenu.style.display = "inline-block";
       cMenu.style.display = "none";
       sMenu.style.display = "none";

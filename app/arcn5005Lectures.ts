@@ -14,7 +14,7 @@ import { content as week11 } from "./arcn5005/(lectures)/week11/";
 import { content as week12 } from "./arcn5005/(lectures)/week12/";
 import { content as week13 } from "./arcn5005/(lectures)/week13/";
 import { content as final } from "./arcn5005/(lectures)/final";
-import { content as maplibre } from "./arcn5005/(lectures)/maplibre";
+import { content as maps } from "./arcn5005/(lectures)/maps";
 
 const initialDate = dayjs("2023-09-07");
 
@@ -274,15 +274,16 @@ export const arcn5005Lectures: Lectures = [
     toc: [{ title: "🏁 Final presentations" }],
   },
   {
-    title: "🗺️ Open Source Web-based Mapping",
-    id: `maplibre`,
-    url: `maplibre`,
+    title: "🗺️ Maps and GIS 🌎",
+    id: `maps`,
+    url: `maps`,
     date: dayjs("2023-09-25"),
-    content: maplibre,
+    content: maps,
     toc: [
       { title: "History of Mapping" },
+      { title: "Map Projections" },
+      { title: "Geodetic reference systems - NAD83 vs WGS84" },
       { title: "Digital Maps" },
-      { title: "Coordination Systems" },
       { title: "Geospatial Information Systems" },
       { title: "Proprietary web GIS - Cesium and Mapbox" },
       { title: "Open Source web GIS - Leaflet and Maplibre" },
