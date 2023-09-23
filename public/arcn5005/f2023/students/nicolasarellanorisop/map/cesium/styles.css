@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+
+    --border-radius: 1rem;
+    --primary-color: white;
+    --primary-color-transp1: rgba(255, 255, 255, 0.6);
+    --primary-color-transp2: rgba(255, 255, 255, 0.4);
+    --primary-dark: black;
+    --secondary-color: #555;
+    --blue-color: #1ca6f4;
+    --shadow: 0.4rem 0.4rem 0.6rem #00000040;
+    --header-heigt: 72px
+}
+
+#file-input {
+  z-index: 1;
+  position: absolute;
+}
+
+hide-overflow {
+  overflow: hidden;
+
+}
+
+header {
+  z-index: 1;
+  background-color: var(--primary-dark);
+    color: white;
+    padding: 0.5rem 0.3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+    border-bottom: 1px solid gray;
+}
+
+header *:first-child {
+  margin-right: auto;
+}
+
+header img {
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0.7rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin: 1rem;
+    text-decoration: none;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+}
+
+.canvas {
+  z-index: -1;
+  position: fixed;
+  top: var(--header-heigt);
+  left: 0;
+  outline: none;
+}
+
+.header-button svg{
+  margin: 0.5rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: var(--secondary-color);
+}
+
+.header-button:hover > svg{
+  fill: var(--primary-color);
+}
+
+.bottom {
+  z-index: 1;
+  bottom: 1rem;
+}
+
+.model-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+    width: 10rem;
+    height: 15rem;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    border: var(--primary-dark) 0.2rem solid;
+    transition: all 0.15s ease-in;
+    box-shadow: var(--shadow);
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+   
+   .card:hover {
+    color: var(--primary-dark);
+    transform: translateY(-0.5rem);
+    fill: var(--secondary-color);
+    transition: all 0.2s ease 0s;
+   }
+
+   .card svg {
+    fill: var(--secondary-color);
+    width: 4rem;
+    height: 4rem;
+
+  }
+
+   .card:hover svg {
+    fill: var(--primary-dark);
+    width: 4.2rem;
+    height: 4.2rem;
+    transition: all 0.2s ease 0s;
+  }
+
+  .toolbar {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .toolbar a {
+    margin: 0.5rem;
+  }
+
+  .button {
+    z-index: 1;
+    padding: 0.7rem;
+    margin: 0.3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .circular {
+    color: var(--primary-dark);
+    background: var(--primary-color-transp1);
+    backdrop-filter: var(--blur-filter);
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+  }
+  .circular:hover {
+    box-shadow: var(--shadow);
+    background: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-7px);
+  }
+  
+  .circular:active {
+    transform: translateY(-1px);
+  }
+
+  .circular svg{
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--secondary-color);
+  }
+
+  .circular:hover > svg{
+    width: 1.9rem;
+    height: 1.9rem;
+    fill: var(--primary-dark);
+  }
+
+  .simple-card-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.nav-bar {
+  z-index: 1;
+  overflow:auto;
+  top: var(--header-heigt);
+  padding: 0.8rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primary-color-transp2); 
+  transition: all 0.15s ease-in;
+  justify-content: end;
+  align-items: center;
+}
+
+  .close svg{
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--primary-dark);
+    
+  }
+  
+  .nav-bar *:first-child {
+  margin-right: auto;
+}
+
+.top {
+  left: 0px;
+  border-radius: 0 0 var(--border-radius) 0 ;
+}
+
+/* CESIUM CSS ####################################################################################################################################### */ 
+
+.cesium-widget canvas {
+  width: 100vw;
+  height: 100vh;
+  touch-action: none;
+}
+
+.cesium-infoBox {
+  display: block;
+  position: absolute;
+  font-size: 18px;
+  width: 45vw;
+  max-height: 50vh;
+  bottom: 0px;
+  left: 0;
+  background: var(--primary-color-transp3);
+  border: 1px solid #444;
+  border-right: none;
+  border-top-right-radius: var(--border-radius);
+  box-shadow: 0 0 10px 1px #000;
+  transform: translate(0, 100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.2s, opacity 0.2s ease-in, transform 0.2s ease-in;
+}
+.cesium-infoBox-visible {
+  transform: translate(0, 0);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+.cesium-infoBox-title {
+  display: block;
+  font-size: 18px;
+  padding: 5px 30px 5px 25px;
+  background: black;
+  color: var(--primary-color);
+  border-top-right-radius: var(--border-radius);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+.cesium-infoBox-bodyless .cesium-infoBox-title {
+  border-bottom-left-radius: var(--border-radius);
+}
+button.cesium-infoBox-camera {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  background: 0 0;
+  border-color: transparent;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin: 0;
+}
+button.cesium-infoBox-close {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 18px;
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0 5px;
+  margin: 0;
+  color: #edffff;
+}
+button.cesium-infoBox-close:focus {
+  background: var(--primary-color-transp3);
+  outline: 0;
+}
+button.cesium-infoBox-close:hover {
+  background: var(--primary-color-transp3);
+  color: #000;
+}
+button.cesium-infoBox-close:active {
+  background: #a00;
+  color: #000;
+}
+.cesium-infoBox-bodyless .cesium-infoBox-iframe {
+  display: none;
+  max-height: 10vh;
+}
+.cesium-infoBox-iframe {
+  border: none;
+  max-height: 80% !important;
+  width: 100%;
+  width: calc(100% - 2px);
+}

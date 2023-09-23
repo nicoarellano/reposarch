@@ -187,6 +187,13 @@ export const content: Toc = [
   {
     element: <EmojiTitle emoji={"🌎⛵🗺️"} title={"World mapping"} />,
   },
+
+  // POTATO
+
+  // Flat earth
+
+  // maybe a three js model of the earth download from sketchfab
+
   {
     element: (
       <Image
@@ -272,7 +279,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/goode.png"
+        src="/images/week10/goode.jpg"
         alt="Dymaxion map"
         caption={"Goode homolosine projection 1923"}
       />
@@ -317,6 +324,10 @@ export const content: Toc = [
     notes:
       "Alberti's dream remained technically impossible for 500 years until the creation of the modern computers.",
   },
+
+  //  Coordinate system
+  // WGS vs North American Datum of 1983 (NAD 83)
+
   {
     element: (
       <iframe
@@ -732,6 +743,18 @@ export const content: Toc = [
       On top of these features, Cesium also maintains the usual set of GIS features that you’d expect from a mapping library and can present a 2D view if preferred. \
       Look into Resium, for use in React.",
   },
+
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/cesium/cesium.html"
+        title="Cesium Js gl"
+      ></iframe>
+    ),
+  },
+
   {
     element: (
       <Image
@@ -744,6 +767,18 @@ export const content: Toc = [
     notes:
       "Mapbox GL JS is a client-side JavaScript library for building web maps and web applications with Mapbox's modern mapping technology. You can use Mapbox GL JS to display Mapbox maps in a web browser or client, add user interactivity, and customize the map experience in your application.",
   },
+
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/mapbox/mapbox.html"
+        title="Mapbox JS GL"
+      ></iframe>
+    ),
+  },
+
   {
     element: (
       <EmojiTitle emoji={"🌎"} title={"Open source web-based map renderers"} />
@@ -800,6 +835,16 @@ export const content: Toc = [
         alt="npm maplibre"
         caption={"Npm example - Installing Maplibre-gl"}
       />
+    ),
+  },
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="/images/week01/map of rome.html"
+        title="Maplibre - Map of Rome"
+      ></iframe>
     ),
   },
 ];
