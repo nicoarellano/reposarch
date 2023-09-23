@@ -52,7 +52,6 @@ function initMapbox() {
       map.setStyle("mapbox://styles/mapbox/streets-v11");
     } else {
       const mapIcon = document.getElementById("map-icon");
-      style = 0;
       this.setAttribute("title", "Map view");
       mapIcon.setAttribute("d", icons.mapIcon);
       map.setStyle("mapbox://styles/mapbox/satellite-streets-v11");
