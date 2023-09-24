@@ -302,6 +302,44 @@ export const content: Toc = [
   },
 
   // projections:
+
+  {
+    element: (
+      <Image
+        src="/images/week10/ProjectionCylindrical.png"
+        alt="Cylindrical Projection "
+        caption={
+          "Cylindrical projections are used for areas near the equator and for the entire earth but with very large distortions. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+        }
+      />
+    ),
+    notes: "Example: Mercator",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/ProjectionConic.png"
+        alt="Conic Projection "
+        caption={
+          "Conical projections are good for areas near the mid-latitudes. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+        }
+      />
+    ),
+    notes: "Example: North and South hemispheres",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/ProjectionPlanar.png"
+        alt="Planar Projection "
+        caption={
+          "Planar - Azimuthal (or planar) are good for areas near the pole - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+        }
+      />
+    ),
+  },
   {
     element: (
       <iframe
@@ -309,8 +347,12 @@ export const content: Toc = [
         src="https://en.m.wikipedia.org/wiki/List_of_map_projections#Table_of_projections"
       />
     ),
+    notes:
+      "There are a number projection families and a large number of projection methods available based on these families. Each projection methods has trade-offs in how they distort the data as it is projected. All projection methods contain some distortion but they vary in how much distortion they create between: \
+    Area, \
+    Form (shape or angles) \
+    Distance",
   },
-
   {
     element: (
       <Image
@@ -325,6 +367,10 @@ export const content: Toc = [
 
   {
     element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
+    notes:
+      "A geographic information system (GIS) consists of integrated computer hardware and software that store, manage, analyze, edit, output, and visualize geographic data. Usually within a spatial database, \
+      Geographic information systems are utilized in multiple technologies, processes, techniques and methods. They are attached to various operations and numerous applications, that relate to: engineering, planning, management, transport/logistics, insurance, telecommunications, and business \
+      GIS provides the capability to relate previously unrelated information, through the use of location as the 'key index variable'. Locations and extents that are found in the Earth's spacetime are able to be recorded through the date and time of occurrence, along with x, y, and z coordinates; representing, longitude (x), latitude (y), and elevation (z).",
   },
 
   {
@@ -347,6 +393,25 @@ export const content: Toc = [
 
   {
     element: (
+      <Image
+        src="/images/week10/latlong.png"
+        alt="WGS84"
+        caption={"WGS84: World Geodetic System"}
+      />
+    ),
+    notes:
+      "NAD83 (North American Datum 1983) is a geodetic reference system used in North America for mapping and surveying. It is the primary reference system for all mapping and surveying activities in Canada, the United States, and Mexico and is based on a network of survey markers. \
+      NAD83 is based on a survey marker network that was developed across North America between 1984 and 1991. These markers were used to create a geodetic reference frame that accounts for the flaws in the Earth's form caused by local variations in gravity and tectonic plate movement. As a result, NAD83 is more accurate in North America than the WGS84 system. \
+      ==================================================================== \
+      WGS 84 determines the Earth's orientation in space by describing its rotation and position relative to the celestial sphere with a set of parameters. The rotational velocity of the Earth, its orientation relative to a fixed reference frame, and the position of the Earth's centre of mass are among these factors. \
+      WGS 84 contains a global network of ground control points that offer constant and accurate measurements of the earth's surface. These ground control points are used to precisely locate a GPS receiver and calculate the coordinates of features on the earth's surface. \
+      WGS84 is the standard reference system for many mapping and navigation applications, such as aviation, maritime navigation, and surveying. GPS satellites use WGS-84 as the reference system for their orbital features and clock corrections, allowing GPS receivers to identify their position on the Earth's surface with pinpoint accuracy. \
+      The WGS 84 ellipsoid is the mathematical model of the Earth's shape that is used as a reference surface for geographic coordinates. The semi-major axis and flattening of an ellipsoid are both measured in metres. The semi-major axis represents the ellipsoid's equatorial radius, whereas the flattening represents the difference between the polar and equatorial radii divided by the equatorial radius. \
+      Overall, WGS-84 is important in enabling accurate and dependable navigation and mapping around the world. It is constantly maintained and updated to account for changes in the Earth's shape and mass distribution, ensuring that it remains a reliable reference system for many years to come.",
+  },
+
+  {
+    element: (
       <>
         <table id="simple-table">
           <thead>
@@ -362,7 +427,7 @@ export const content: Toc = [
               <td>WGS84 is a worldwide reference frame system.</td>
               <td>
                 NAD83 (North American Datum 1983) is a geodetic reference system
-                used in North America for mapping and surveying.{" "}
+                used in North America for mapping and surveying.
               </td>
             </tr>
             <tr>
@@ -378,14 +443,14 @@ export const content: Toc = [
               </td>
               <td>
                 It is quite similar to WGS84 but slightly has different shapes
-                that take into account local variations in gravity.{" "}
+                that take into account local variations in gravity.
               </td>
             </tr>
             <tr>
               <th>Usage</th>
               <td>It is used by the United States Department of Defence.</td>
               <td>
-                It is used in the U.S., Canada, Central America, and Mexico.{" "}
+                It is used in the U.S., Canada, Central America, and Mexico.
               </td>
             </tr>
             <tr>
@@ -398,7 +463,7 @@ export const content: Toc = [
                 It is widely used in North America for navigation, mapping,
                 surveying, and other geospatial applications that include
                 land-use planning, environmental monitoring, and emergency
-                response.{" "}
+                response.
               </td>
             </tr>
             <tr>
@@ -410,12 +475,140 @@ export const content: Toc = [
               <td>
                 NAD83 is not compatible with WGS84 and may cause problems when
                 integrating data from different sources or using different
-                mapping software.{" "}
+                mapping software.
               </td>
             </tr>
           </tbody>
         </table>
+        <br />
+        <em>
+          https://www.tutorialspoint.com/difference-between-wgs84-and-nad83#:~:text=In%20conclusion%2C%20WGS84%20and%20NAD83,a%20network%20of%20survey%20markers.
+        </em>
       </>
+    ),
+  },
+
+  {
+    element: <EmojiTitle emoji={"🌎"} title={"Web-based map renderers"} />,
+  },
+  {
+    element: (
+      <Image
+        src="/images/week10/cesium.png"
+        alt="cesium"
+        href="https://cesium.com/platform/cesiumjs/"
+        caption={"Cesium-gl-js"}
+      />
+    ),
+    notes:
+      "If you need 3D, then Cesium is the place to start. True, MapLibre can provide some basic 3D terrain, but Cesium can give you full control of camera angles and allow users to spin around the location in view. It does a great job rendering topography (including 3D building cityscapes) and they’ve even started work on VR support.\
+      Cesium is also great for its timing features. A built in clock control allows you start and stop playback of recorded data, as well fast forward, rewind, or slide across a timeline. You can even automate this by assigning availability times to features. In fact, Cesium takes it ones step further by including the positions of the sun and other celestial objects based on your timestamps. This can all be done through the JavaScript API, or by defining everything in a CZML file. If you want realistic 3D playback of position data, then Cesium is likely your best choice. \
+      On top of these features, Cesium also maintains the usual set of GIS features that you’d expect from a mapping library and can present a 2D view if preferred. \
+      Look into Resium, for use in React.",
+  },
+
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/cesium/cesium.html"
+        title="Cesium Js gl"
+      ></iframe>
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/mapbox.png"
+        alt="mapbox"
+        href="https://docs.mapbox.com/mapbox-gl-js/guides/"
+        caption={"Mapbox-gl-js"}
+      />
+    ),
+    notes:
+      "Mapbox GL JS is a client-side JavaScript library for building web maps and web applications with Mapbox's modern mapping technology. You can use Mapbox GL JS to display Mapbox maps in a web browser or client, add user interactivity, and customize the map experience in your application.",
+  },
+
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/mapbox/mapbox.html"
+        title="Mapbox JS GL"
+      ></iframe>
+    ),
+  },
+
+  {
+    element: (
+      <EmojiTitle emoji={"🌎"} title={"Open source web-based map renderers"} />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/leaflet.png"
+        alt="leaflet"
+        href=""
+        caption={"Leaflet"}
+      />
+    ),
+    notes:
+      "Almost any web map project could start by considering Leaflet. It is easy to use and very popular. This mean it is easy to find help online and well as a large set of robust open source plugins. While the core Leaflet API handles the basic 2D map needs with ease, it may not address all the latest GIS technologies. This is where the plugins and extension from third party developers come in handy. There are plugins for vector tiles, Cloud Optimized GeoTiffs (COG), drawing ad hoc geometries, overlaying heat maps and so much more.\
+      What this all means in practice is that you can start with Leaflet quickly and easily and if you find that your needs grow, there are likely to be plugins to help Leaflet grow with you. If quick and flexible development are your goals, then Leaflet is a great choice. If you know that you have specific needs for newer technologies and want a library with native support for those requirements then you may also want to consider one of the following options in the your search. \
+      React developers may want to use Leaflet with the React Leaflet project.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/osm.png"
+        alt="osm"
+        href="https://www.openstreetmap.org/"
+        caption={"OpenStreetMap"}
+      />
+    ),
+    notes:
+      "OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/maplibre.png"
+        alt="maplibre"
+        href=""
+        caption={"Maplibre-gl-js"}
+      />
+    ),
+    notes:
+      "MapLibre GL JS \
+    MapLibre is the open source fork of MapBox GL. MapBox developers (including Leaflet creator Vlad Agafonkin) spent several years leading the open source charge in the web GIS world and still have many useful projects on GitHub. This is especially true when it comes to creating, styling, or serving vector tiles. However, their flagship web map library recently moved into a more commercial role, so MapLibre was born to continue serving the open source community. \
+    As you might guess, it specializes in many of the technologies that MapBox has championed over the years, including vector tiles. It also provides a pseudo-3D tilted camera view. I’ve even seen video overlays on this platform. If you want to see the bleeding edge, you will often find it from the folks at MapBox and/or MapLibre. \
+    React developers can use MapLibre with react-map-gl.",
+  },
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/maplibre.html"
+        title="Maplibre JS GL"
+      ></iframe>
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/npm-maplibre.gif"
+        alt="npm maplibre"
+        caption={"Npm example - Installing Maplibre-gl"}
+      />
     ),
   },
 
@@ -815,127 +1008,22 @@ export const content: Toc = [
       </>
     ),
   },
-
-  {
-    element: <EmojiTitle emoji={"🌎"} title={"Web-based map renderers"} />,
-  },
   {
     element: (
-      <Image
-        src="/images/week10/cesium.png"
-        alt="cesium"
-        href="https://cesium.com/platform/cesiumjs/"
-        caption={"Cesium-gl-js"}
-      />
-    ),
-    notes:
-      "If you need 3D, then Cesium is the place to start. True, MapLibre can provide some basic 3D terrain, but Cesium can give you full control of camera angles and allow users to spin around the location in view. It does a great job rendering topography (including 3D building cityscapes) and they’ve even started work on VR support.\
-      Cesium is also great for its timing features. A built in clock control allows you start and stop playback of recorded data, as well fast forward, rewind, or slide across a timeline. You can even automate this by assigning availability times to features. In fact, Cesium takes it ones step further by including the positions of the sun and other celestial objects based on your timestamps. This can all be done through the JavaScript API, or by defining everything in a CZML file. If you want realistic 3D playback of position data, then Cesium is likely your best choice. \
-      On top of these features, Cesium also maintains the usual set of GIS features that you’d expect from a mapping library and can present a 2D view if preferred. \
-      Look into Resium, for use in React.",
-  },
-
-  {
-    element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/cesium/cesium.html"
-        title="Cesium Js gl"
-      ></iframe>
-    ),
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/mapbox.png"
-        alt="mapbox"
-        href="https://docs.mapbox.com/mapbox-gl-js/guides/"
-        caption={"Mapbox-gl-js"}
-      />
-    ),
-    notes:
-      "Mapbox GL JS is a client-side JavaScript library for building web maps and web applications with Mapbox's modern mapping technology. You can use Mapbox GL JS to display Mapbox maps in a web browser or client, add user interactivity, and customize the map experience in your application.",
-  },
-
-  {
-    element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/mapbox/mapbox.html"
-        title="Mapbox JS GL"
-      ></iframe>
-    ),
-  },
-
-  {
-    element: (
-      <EmojiTitle emoji={"🌎"} title={"Open source web-based map renderers"} />
-    ),
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/leaflet.png"
-        alt="leaflet"
-        href=""
-        caption={"Leaflet"}
-      />
-    ),
-    notes:
-      "Almost any web map project could start by considering Leaflet. It is easy to use and very popular. This mean it is easy to find help online and well as a large set of robust open source plugins. While the core Leaflet API handles the basic 2D map needs with ease, it may not address all the latest GIS technologies. This is where the plugins and extension from third party developers come in handy. There are plugins for vector tiles, Cloud Optimized GeoTiffs (COG), drawing ad hoc geometries, overlaying heat maps and so much more.\
-      What this all means in practice is that you can start with Leaflet quickly and easily and if you find that your needs grow, there are likely to be plugins to help Leaflet grow with you. If quick and flexible development are your goals, then Leaflet is a great choice. If you know that you have specific needs for newer technologies and want a library with native support for those requirements then you may also want to consider one of the following options in the your search. \
-      React developers may want to use Leaflet with the React Leaflet project.",
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/osm.png"
-        alt="osm"
-        href="https://www.openstreetmap.org/"
-        caption={"OpenStreetMap"}
-      />
-    ),
-    notes:
-      "OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.",
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/maplibre.png"
-        alt="maplibre"
-        href=""
-        caption={"Maplibre-gl-js"}
-      />
-    ),
-    notes:
-      "MapLibre GL JS \
-    MapLibre is the open source fork of MapBox GL. MapBox developers (including Leaflet creator Vlad Agafonkin) spent several years leading the open source charge in the web GIS world and still have many useful projects on GitHub. This is especially true when it comes to creating, styling, or serving vector tiles. However, their flagship web map library recently moved into a more commercial role, so MapLibre was born to continue serving the open source community. \
-    As you might guess, it specializes in many of the technologies that MapBox has championed over the years, including vector tiles. It also provides a pseudo-3D tilted camera view. I’ve even seen video overlays on this platform. If you want to see the bleeding edge, you will often find it from the folks at MapBox and/or MapLibre. \
-    React developers can use MapLibre with react-map-gl.",
-  },
-  {
-    element: (
-      <Image
-        src="/images/week10/npm-maplibre.gif"
-        alt="npm maplibre"
-        caption={"Npm example - Installing Maplibre-gl"}
+      <EmojiTitle
+        emoji={"Lab 💻🌎"}
+        title={
+          "Exercise: use Maplibre to create your custom map - Map GeoJson features"
+        }
       />
     ),
   },
   {
     element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/maplibre.html"
-        title="Maplibre"
-      ></iframe>
+      <EmojiTitle
+        emoji={"GeoJSON 🧊📄❔"}
+        title={"What is GeoJson? How to add it to your map?"}
+      />
     ),
   },
   {
