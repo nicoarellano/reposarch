@@ -614,17 +614,6 @@ export const content: Toc = [
     ),
   },
 
-  {
-    element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/openLayers/index.html"
-        title="Leaflet"
-      ></iframe>
-    ),
-  },
-
   // {
   //   element: (
   //     <Image
