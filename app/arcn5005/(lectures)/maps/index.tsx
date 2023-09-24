@@ -614,19 +614,7 @@ export const content: Toc = [
     ),
   },
 
-  {
-    element: (
-      <Image
-        src="/images/week01/analog-process.png"
-        alt="Analog Process"
-        caption={"Analog creative process"}
-      />
-    ),
-    notes:
-      "We have been using analogue tools for centuries to express our creativity.\
-    This allows a particular relationship with the object.",
-  },
-
+ 
   {
     element: (
       <>
