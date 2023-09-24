@@ -25,7 +25,7 @@ export const content: Toc = [
       </div>
     ),
   },
-  { element: <EmojiTitle emoji={"🌎🗺️❔"} title={"What is a map"} /> },
+  { element: <EmojiTitle emoji={"🗺️❔"} title={"What is a map?"} /> },
   {
     element: (
       <Image
@@ -50,7 +50,7 @@ export const content: Toc = [
         world.",
   },
   {
-    element: <EmojiTitle emoji={"🗺️❔"} title={"What is Carthography"} />,
+    element: <EmojiTitle emoji={"🗺️❔"} title={"What is Cartography"} />,
   },
   {
     element: (
@@ -91,6 +91,8 @@ export const content: Toc = [
         }
       />
     ),
+    notes:
+      "Pre-renaissance maps were pre-scientific, symbolic. They didn't have the right proportions. They were not efficient navigation tools. non-precise ",
   },
   {
     element: (
@@ -175,7 +177,7 @@ export const content: Toc = [
   },
 
   {
-    element: <EmojiTitle emoji={"🌎⛵🗺️"} title={"World mapping"} />,
+    element: <EmojiTitle emoji={"⛵🗺️"} title={"World mapping"} />,
   },
 
   {
@@ -188,15 +190,13 @@ export const content: Toc = [
       />
     ),
     notes:
-      "The history of cartography traces the development of cartography, or \
-      mapmaking technology, in human history. Maps have been one of the most \
+      " \
+      History of Cartography, or map-making. \
+      Maps have been one of the most \
       important human inventions for millennia, allowing humans to explain \
       and navigate their way through the world. The earliest surviving maps \
-      include cave paintings and etchings on tusk and stone, followed by \
-      extensive maps produced by ancient Babylon, Greece and Rome, China, \
-      and India. In their most simple form maps are two dimensional \
-      constructs, however since the age of Classical Greece maps have also \
-      been projected onto a three-dimensional sphere known as a globe.",
+      include cave paintings followed by \
+      extensive maps produced by ancient Babylon, Greece and Rome, China, and India.",
   },
   // projections:
   {
@@ -207,7 +207,7 @@ export const content: Toc = [
         caption={"Traditional maps are 2 dimensional"}
       />
     ),
-    notes: "",
+    notes: " In their most simple form maps are two dimensional constructs",
   },
 
   {
@@ -218,7 +218,9 @@ export const content: Toc = [
         caption={"World globes, spherical interpretation of the earth"}
       />
     ),
-    notes: "",
+    notes:
+      "However since the age of Classical Greece maps have also \
+    been projected onto a three-dimensional sphere known as a globe.",
   },
 
   {
@@ -235,7 +237,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes: "Example: Mercator",
   },
 
   {
@@ -248,7 +249,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes: "Example: North and South hemispheres",
   },
 
   {
@@ -270,10 +270,10 @@ export const content: Toc = [
       />
     ),
     notes:
-      "There are a number projection families and a large number of projection methods available based on these families. Each projection methods has trade-offs in how they distort the data as it is projected. All projection methods contain some distortion but they vary in how much distortion they create between: \
-    Area, \
-    Form (shape or angles) \
-    Distance",
+      "There are a number projection families and a large number of projection methods available based on these families. \
+    Each projection methods has trade-offs in how they distort the data as it is projected. \
+    All projection methods contain some distortion but they vary in how much distortion they create between: \
+    Area, Form (shape or angles), Distance",
   },
 
   {
@@ -286,11 +286,9 @@ export const content: Toc = [
       />
     ),
     notes:
-      "The Mercator Projection, developed by Flemish geographer Gerardus \
-      Mercator, was widely used as the standard two-dimensional projection \
-      of the earth for world maps until the late 20th century, when more \
-      accurate projections were formulated. Mercator was also the first to \
-      use and popularise the concept of the atlas as a collection of maps.",
+      "The Mercator projection is a cylindrical map projection presented by Flemish geographer and cartographer Gerardus Mercator in 1569. \
+      It became the standard map projection for navigation because it is unique in representing north as up and south as down everywhere while preserving local directions and shapes. \
+      ",
   },
   {
     element: (
@@ -301,7 +299,9 @@ export const content: Toc = [
       />
     ),
     notes:
-      "The Mercator projection is a cylindrical map projection presented by Flemish geographer and cartographer Gerardus Mercator in 1569. It became the standard map projection for navigation because it is unique in representing north as up and south as down everywhere while preserving local directions and shapes. The map is thereby conformal. As a side effect, the Mercator projection inflates the size of objects away from the equator. This inflation is very small near the equator but accelerates with increasing latitude to become infinite at the poles. As a result, landmasses such as Greenland, Antarctica, Canada and Russia appear far larger than they actually are relative to landmasses near the equator, such as Central Africa.",
+      "It was widely used as the standard two-dimensional projection \
+      of the earth for world maps until the late 20th century, when more \
+      accurate projections were formulated. ",
   },
   {
     element: (
@@ -314,14 +314,7 @@ export const content: Toc = [
     ),
     notes:
       "As on all map projections, shapes or sizes are distortions of the true layout of the Earth's surface. \
-      The Mercator projection exaggerates areas far from the equator. \
-      Examples of size distortion \
-      Greenland appears the same size as Africa, when in reality Africa's area is 14 times as large. \
-      Greenland's real area is comparable to the Democratic Republic of the Congo's alone. \
-      Africa appears to be roughly the same size as South America, when in reality Africa is over one and a half times as large. \
-      Alaska appears to be the same size as Australia, although Australia is actually 4.5 times as large. \
-      Alaska also takes as much area on the map as Brazil, whereas Brazil's area is nearly 5 times that of Alaska. \
-      Madagascar and Great Britain look about the same size, while Madagascar is actually more than twice as large as Great Britain.",
+      As a side effect, the Mercator projection inflates the size of objects away from the equator. This inflation is very small near the equator but accelerates with increasing latitude to become infinite at the poles. As a result, landmasses such as Greenland, Antarctica, Canada and Russia appear far larger than they actually are relative to landmasses near the equator, such as Central Africa.",
   },
 
   {
@@ -376,6 +369,9 @@ export const content: Toc = [
   },
 
   {
+    element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
+  },
+  {
     element: (
       <Image
         src="/images/week01/computer.jpg"
@@ -386,11 +382,6 @@ export const content: Toc = [
     notes:
       "Alberti's dream remained technically impossible for 500 years until the creation of the modern computers.",
   },
-
-  {
-    element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
-  },
-
   {
     element: (
       <EmojiTitle
@@ -408,7 +399,7 @@ export const content: Toc = [
         src="/images/week10/geoid.png"
         alt="geoid"
         caption={
-          "The Geoid surface is irregular, unlike the reference ellipsoid (which is a mathematical idealized representation of the physical Earth as an ellipsoid), but is considerably smoother than Earth's physical surface. - By Wikimedia"
+          "The Geoid surface is irregular, unlike the reference ellipsoid (which is a mathematical idealized representation of the physical Earth as an ellipsoid), but is considerably smoother than Earth's physical surface. - By Wikipedia"
         }
       />
     ),
@@ -497,7 +488,7 @@ export const content: Toc = [
             </tr>
             <tr>
               <th>Usage</th>
-              <td>It is used by the United States Department of Defence.</td>
+              <td>It is used by the United States Department of Defense.</td>
               <td>
                 It is used in the U.S., Canada, Central America, and Mexico.
               </td>
@@ -553,7 +544,7 @@ export const content: Toc = [
       "If you need 3D, then Cesium is the place to start. True, MapLibre can provide some basic 3D terrain, but Cesium can give you full control of camera angles and allow users to spin around the location in view. It does a great job rendering topography (including 3D building cityscapes) and they’ve even started work on VR support.\
       Cesium is also great for its timing features. A built in clock control allows you start and stop playback of recorded data, as well fast forward, rewind, or slide across a timeline. You can even automate this by assigning availability times to features. In fact, Cesium takes it ones step further by including the positions of the sun and other celestial objects based on your timestamps. This can all be done through the JavaScript API, or by defining everything in a CZML file. If you want realistic 3D playback of position data, then Cesium is likely your best choice. \
       On top of these features, Cesium also maintains the usual set of GIS features that you’d expect from a mapping library and can present a 2D view if preferred. \
-      Look into Resium, for use in React.",
+      Look into Resium, for use in React. Source: https://javascript.plainenglish.io/5-javascript-mapping-libraries-when-to-use-them-961ff6366d0b",
   },
 
   {
@@ -561,7 +552,7 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/cesium/cesium.html"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/cesium/index.html"
         title="Cesium Js gl"
       ></iframe>
     ),
@@ -585,7 +576,7 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/mapbox/mapbox.html"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/mapbox/index.html"
         title="Mapbox JS GL"
       ></iframe>
     ),
@@ -614,15 +605,13 @@ export const content: Toc = [
 
   {
     element: (
-      <Image
-        src="/images/week10/osm.png"
-        alt="osm"
-        href="https://www.openstreetmap.org/"
-        caption={"OpenStreetMap"}
-      />
+      <iframe
+        width="100%"
+        height="100%"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/leaflet/index.html"
+        title="Leaflet"
+      ></iframe>
     ),
-    notes:
-      "OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.",
   },
 
   {
@@ -630,11 +619,24 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="https://www.openstreetmap.org/#map=15/45.3862/-75.6911"
-        title="OpenStreetMap.org - OSM"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/openLayers/index.html"
+        title="Leaflet"
       ></iframe>
     ),
   },
+
+  // {
+  //   element: (
+  //     <Image
+  //       src="/images/week10/osm.png"
+  //       alt="osm"
+  //       href="https://www.openstreetmap.org/"
+  //       caption={"OpenStreetMap"}
+  //     />
+  //   ),
+  //   notes:
+  //     "OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.",
+  // },
 
   {
     element: (
@@ -656,19 +658,8 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/maplibre.html"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/index.html"
         title="Maplibre JS GL"
-      ></iframe>
-    ),
-  },
-
-  {
-    element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/images/week01/map of rome.html"
-        title="Maplibre - Map of Rome"
       ></iframe>
     ),
   },
@@ -830,7 +821,7 @@ export const content: Toc = [
     ),
     notes:
       "Any computer program is written in some particular language. \
-      The language (unlike a natural language such as English) has a precisly specified vocabulary and syntax that must be followed rigorously\
+      The language (unlike a natural language such as English) has a precisely specified vocabulary and syntax that must be followed rigorously\
       The semantic properties are also well defined; any syntactically correct statement causes the computer to perform some specific action. \
       Thus a programming language provides a very precise means of communication and requires you to express yourself exactly; \
       there is no latitude for vagueness , incompleteness, ambiguities, and errors that we tolerate in everyday speech",
@@ -1066,11 +1057,41 @@ export const content: Toc = [
       />
     ),
   },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/json.png"
+        alt="json"
+        caption={"JSON - JavaScript Object Notation"}
+        href="https://www.json.org/json-en.html"
+      />
+    ),
+    notes:
+      "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/geojson.png"
+        alt="geojson"
+        caption={
+          "GeoJSON - GeoJSON is the Json format for encoding a variety of geographic data structures."
+        }
+        href="https://geojson.org/"
+      />
+    ),
+    notes:
+      "GeoJSON is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. It is based on the JSON format. \
+    it supports the following geometry types: Point, LineString, Polygon, MultiPoint, MultiLineString, and MultiPolygon. Geometric objects with additional properties are Feature objects. Sets of features are contained by FeatureCollection objects.",
+  },
+
   {
     element: (
       <EmojiTitle
-        emoji={"GeoJSON 🧊📄❔"}
-        title={"What is GeoJson? How to add it to your map?"}
+        emoji={"JSON and GeoJSON 🧊📄❔"}
+        title={"What are they? How to add them to your map?"}
       />
     ),
   },

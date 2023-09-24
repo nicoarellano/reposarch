@@ -38,14 +38,6 @@ h3 {
   align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: var(--primary-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .canvas {
   z-index: -1;
   position: absolute;
@@ -225,108 +217,7 @@ nav {
 /* CESIUM CSS ####################################################################################################################################### */
 
 .cesium-widget canvas {
-  width: 100vw;
-  height: 100vh;
-  touch-action: none;
-}
-
-.cesium-infoBox {
-  display: block;
-  position: absolute;
-  font-size: 18px;
-  width: 45vw;
-  max-height: 50vh;
-  bottom: 0px;
-  left: 0;
-  background: var(--primary-color-transp3);
-  border: 1px solid #444;
-  border-right: none;
-  border-top-right-radius: var(--border-radius);
-  box-shadow: 0 0 10px 1px #000;
-  transform: translate(0, 100%);
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.2s, opacity 0.2s ease-in, transform 0.2s ease-in;
-}
-
-.cesium-infoBox-visible {
-  transform: translate(0, 0);
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-}
-
-.cesium-infoBox-title {
-  display: block;
-  font-size: 18px;
-  padding: 5px 30px 5px 25px;
-  background: black;
-  color: var(--primary-color);
-  border-top-right-radius: var(--border-radius);
-  text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  box-sizing: content-box;
-}
-
-.cesium-infoBox-bodyless .cesium-infoBox-title {
-  border-bottom-left-radius: var(--border-radius);
-}
-
-button.cesium-infoBox-camera {
-  display: block;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 22px;
-  height: 22px;
-  background: 0 0;
-  border-color: transparent;
-  border-radius: 3px;
-  padding: 0 5px;
-  margin: 0;
-}
-
-button.cesium-infoBox-close {
-  display: block;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  height: 18px;
-  background: 0 0;
-  border: none;
-  border-radius: 2px;
-  font-weight: 700;
-  font-size: 1rem;
-  padding: 0 5px;
-  margin: 0;
-  color: #edffff;
-}
-
-button.cesium-infoBox-close:focus {
-  background: var(--primary-color-transp3);
-  outline: 0;
-}
-
-button.cesium-infoBox-close:hover {
-  background: var(--primary-color-transp3);
-  color: #000;
-}
-
-button.cesium-infoBox-close:active {
-  background: #a00;
-  color: #000;
-}
-
-.cesium-infoBox-bodyless .cesium-infoBox-iframe {
-  display: none;
-  max-height: 10vh;
-}
-
-.cesium-infoBox-iframe {
-  border: none;
-  max-height: 80% !important;
   width: 100%;
-  width: calc(100% - 2px);
+  height: 100%;
+  touch-action: none;
 }
