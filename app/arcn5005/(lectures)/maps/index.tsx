@@ -625,57 +625,7 @@ export const content: Toc = [
     ),
   },
 
-  {
-    element: (
-      <>
-        <h1>🖐️</h1>
-        <br />
-        <h1>Rise your hand if you have never coded</h1>
-      </>
-    ),
-    notes: "False, anybody literate person has coded",
-  },
-  {
-    element: (
-      <>
-        <h3>🅰️ Coding</h3>
-        <br />
-        <Image
-          src="/images/week02/hieroglyphs.png"
-          alt="Codes: Hieroglyphs"
-          href="https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"
-          caption="By Wikipedia"
-        />
-      </>
-    ),
-    notes:
-      " Code is a technology humans have created to systematize artificial language into abstract symbols.\
-      Such symbols are conventions that lacked meaning until we combine them\
-      Then, they allow us to create and to communicate ideas",
-  },
-  {
-    element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
-    notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-    They are used to communicate with computers and with people through computers.",
-  },
-  {
-    element: (
-      <>
-        <h3>⌨️ Computer coding</h3>
-        <br />
-        <Image
-          src="/images/week02/computer-coding.png"
-          alt="Computer coding"
-          caption="Javascript"
-        />
-      </>
-    ),
-    notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-      They are used to communicate with computers and with people through computers.",
-  },
-
+  
   {
     element: (
       <Image
@@ -761,6 +711,58 @@ export const content: Toc = [
     notes:
       "> Text-based user interfaces (TUIs) use characters, text and symbols.",
   },
+
+{
+    element: (
+      <>
+        <h1>🖐️</h1>
+        <br />
+        <h1>Rise your hand if you have never coded</h1>
+      </>
+    ),
+    notes: "False, anybody literate person has coded",
+  },
+  {
+    element: (
+      <>
+        <h3>🅰️ Coding</h3>
+        <br />
+        <Image
+          src="/images/week02/hieroglyphs.png"
+          alt="Codes: Hieroglyphs"
+          href="https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"
+          caption="By Wikipedia"
+        />
+      </>
+    ),
+    notes:
+      " Code is a technology humans have created to systematize artificial language into abstract symbols.\
+      Such symbols are conventions that lacked meaning until we combine them\
+      Then, they allow us to create and to communicate ideas",
+  },
+  {
+    element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
+    notes:
+      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
+    They are used to communicate with computers and with people through computers.",
+  },
+  {
+    element: (
+      <>
+        <h3>⌨️ Computer coding</h3>
+        <br />
+        <Image
+          src="/images/week02/computer-coding.png"
+          alt="Computer coding"
+          caption="Javascript"
+        />
+      </>
+    ),
+    notes:
+      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
+      They are used to communicate with computers and with people through computers.",
+  },
+
   {
     element: (
       <>
@@ -1020,8 +1022,8 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/images/week01/map of rome.html"
-        title="Maplibre - Map of Rome"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/map/index.html"
+        title="Maplibre - Airports in Canada"
       ></iframe>
     ),
   },
