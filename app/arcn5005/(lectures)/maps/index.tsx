@@ -178,10 +178,6 @@ export const content: Toc = [
     element: <EmojiTitle emoji={"🌎⛵🗺️"} title={"World mapping"} />,
   },
 
-  // POTATO
-
-  // Flat earth
-
   {
     element: (
       <Image
@@ -203,6 +199,31 @@ export const content: Toc = [
       been projected onto a three-dimensional sphere known as a globe.",
   },
   // projections:
+  {
+    element: (
+      <Image
+        src="/images/week10/flatearth.jpg"
+        alt="Flat Earth"
+        caption={"Traditional maps are 2 dimensional"}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/globe.png"
+        alt="Spherical Earth"
+        caption={"World globes, spherical interpretation of the earth"}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: <EmojiTitle emoji={"🌎➡️🗺️"} title={"World map projections"} />,
+  },
 
   {
     element: (
@@ -368,10 +389,33 @@ export const content: Toc = [
 
   {
     element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
+  },
+
+  {
+    element: (
+      <EmojiTitle
+        emoji={"🌎🗺️🥔❔"}
+        title={"Do you think the earth is flat or spherical?"}
+      />
+    ),
     notes:
-      "A geographic information system (GIS) consists of integrated computer hardware and software that store, manage, analyze, edit, output, and visualize geographic data. Usually within a spatial database, \
-      Geographic information systems are utilized in multiple technologies, processes, techniques and methods. They are attached to various operations and numerous applications, that relate to: engineering, planning, management, transport/logistics, insurance, telecommunications, and business \
-      GIS provides the capability to relate previously unrelated information, through the use of location as the 'key index variable'. Locations and extents that are found in the Earth's spacetime are able to be recorded through the date and time of occurrence, along with x, y, and z coordinates; representing, longitude (x), latitude (y), and elevation (z).",
+      "none of the above, it is a Geoid, closer to an oblate spheroid or an ellipsoid",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/geoid.png"
+        alt="geoid"
+        caption={
+          "The Geoid surface is irregular, unlike the reference ellipsoid (which is a mathematical idealized representation of the physical Earth as an ellipsoid), but is considerably smoother than Earth's physical surface. - By Wikimedia"
+        }
+      />
+    ),
+    notes:
+      "The Pythagorean concept of a spherical Earth offers a simple surface that is easy to deal with mathematically. Many astronomical and navigational computations use a sphere to model the Earth as a close approximation. However, a more accurate figure is needed for measuring distances and areas on the scale beyond the purely local. Better approximations can be made by modeling the entire surface as an oblate spheroid, using spherical harmonics to approximate the geoid, or modeling a region with a best-fit reference ellipsoid. \
+      For surveys of small areas, a planar (flat) model of Earth's surface suffices because the local topography overwhelms the curvature. Plane-table surveys are made for relatively small areas without considering the size and shape of the entire Earth. A survey of a city, for example, might be conducted this way. \
+      The geoid surface is irregular, unlike the reference ellipsoid (which is a mathematical idealized representation of the physical Earth as an ellipsoid), but is considerably smoother than Earth's physical surface.",
   },
 
   {
@@ -381,6 +425,10 @@ export const content: Toc = [
         title={"Does anybody knows what GIS stands for?"}
       />
     ),
+    notes:
+      "A geographic information system (GIS) consists of integrated computer hardware and software that store, manage, analyze, edit, output, and visualize geographic data. Usually within a spatial database, \
+      Geographic information systems are utilized in multiple technologies, processes, techniques and methods. They are attached to various operations and numerous applications, that relate to: engineering, planning, management, transport/logistics, insurance, telecommunications, and business \
+      GIS provides the capability to relate previously unrelated information, through the use of location as the 'key index variable'. Locations and extents that are found in the Earth's spacetime are able to be recorded through the date and time of occurrence, along with x, y, and z coordinates; representing, longitude (x), latitude (y), and elevation (z).",
   },
 
   {
@@ -579,6 +627,17 @@ export const content: Toc = [
 
   {
     element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.openstreetmap.org/#map=15/45.3862/-75.6911"
+        title="OpenStreetMap.org - OSM"
+      ></iframe>
+    ),
+  },
+
+  {
+    element: (
       <Image
         src="/images/week10/maplibre.png"
         alt="maplibre"
@@ -614,7 +673,6 @@ export const content: Toc = [
     ),
   },
 
- 
   {
     element: (
       <>
@@ -625,7 +683,6 @@ export const content: Toc = [
     ),
   },
 
-  
   {
     element: (
       <Image
@@ -712,7 +769,7 @@ export const content: Toc = [
       "> Text-based user interfaces (TUIs) use characters, text and symbols.",
   },
 
-{
+  {
     element: (
       <>
         <h1>🖐️</h1>
