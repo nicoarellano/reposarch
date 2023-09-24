@@ -3,6 +3,7 @@ import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 import Photogrammetry from "./photogrammetry.mdx";
+import EmojiTitle from "../../../../components/Common/EmojiTitle";
 
 export const content: Toc = [
   {
@@ -151,7 +152,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h1>❔</h1>
+        <h1>🖐️</h1>
         <br />
         <h1>Rise your hand if you have never coded</h1>
       </>
@@ -399,7 +400,7 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "> Text-based user interfaces (TUIs) use characters, text and symbols.",
+      "Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.",
   },
   {
     element: (
@@ -515,22 +516,19 @@ export const content: Toc = [
       "Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
     and mathematically. So it is much easier to write, read, and understand programs in these languages.",
   },
+
   {
-    element: (
-      <>
-        <h1>Software</h1>
-        <br />
-        <h4>
-          Software is a set of programs combined by a programmer to address a
-          more specific problem. Software, (which is also the plural of
-          software) are sets of programs that have a specific function.
-        </h4>
-      </>
-    ),
+    element: <EmojiTitle emoji={"📃 💬 💻"} title={"Program"} />,
     notes:
-      "Software is a set of programs combined by a programmer to address a more specific problem.\
-      Software, (which is also the plural of software) are sets of programs that have a specific function. ",
+      "a computer Programs is a Set of instructions written in a programming language that use syntax to systematize the logic of computer operations",
   },
+
+  {
+    element: <EmojiTitle emoji={"📃📃📃 💬 💻"} title={"Software"} />,
+    notes:
+      "Software (which is also the plural of software) is a set of programs combined by a programmer to address a more specific problem.",
+  },
+
   {
     element: (
       <>
@@ -590,7 +588,13 @@ export const content: Toc = [
       </>
     ),
   },
-  { element: <Photogrammetry /> },
+  {
+    element: (
+      <div className="long-list">
+        <Photogrammetry />
+      </div>
+    ),
+  },
   {
     element: (
       <Video
