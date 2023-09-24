@@ -202,6 +202,59 @@ export const content: Toc = [
       constructs, however since the age of Classical Greece maps have also \
       been projected onto a three-dimensional sphere known as a globe.",
   },
+  // projections:
+
+  {
+    element: (
+      <Image
+        src="/images/week10/ProjectionCylindrical.png"
+        alt="Cylindrical Projection "
+        caption={
+          "Cylindrical projections are used for areas near the equator and for the entire earth but with very large distortions. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+        }
+      />
+    ),
+    notes: "Example: Mercator",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/ProjectionConic.png"
+        alt="Conic Projection "
+        caption={
+          "Conical projections are good for areas near the mid-latitudes. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+        }
+      />
+    ),
+    notes: "Example: North and South hemispheres",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/ProjectionPlanar.png"
+        alt="Planar Projection "
+        caption={
+          "Planar - Azimuthal (or planar) are good for areas near the pole - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+        }
+      />
+    ),
+  },
+  {
+    element: (
+      <iframe
+        className="w-full h-full"
+        src="https://en.m.wikipedia.org/wiki/List_of_map_projections#Table_of_projections"
+      />
+    ),
+    notes:
+      "There are a number projection families and a large number of projection methods available based on these families. Each projection methods has trade-offs in how they distort the data as it is projected. All projection methods contain some distortion but they vary in how much distortion they create between: \
+    Area, \
+    Form (shape or angles) \
+    Distance",
+  },
+
   {
     element: (
       <Image
@@ -301,58 +354,6 @@ export const content: Toc = [
       "The projection was invented by Buckminster Fuller. The March 1, 1943, edition of Life magazine included a photographic essay titled 'Life Presents R. Buckminster Fuller's Dymaxion World'. The article included several examples of its use together with a pull-out section that could be assembled as a 'three-dimensional approximation of a globe or laid out as a flat map, with which the world may be fitted together and rearranged to illuminate special aspects of its geography'. Fuller applied for a patent in the United States in February 1944, showing a projection onto a cuboctahedron, which he called 'dymaxion'. The patent was issued in January 1946.",
   },
 
-  // projections:
-
-  {
-    element: (
-      <Image
-        src="/images/week10/ProjectionCylindrical.png"
-        alt="Cylindrical Projection "
-        caption={
-          "Cylindrical projections are used for areas near the equator and for the entire earth but with very large distortions. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
-        }
-      />
-    ),
-    notes: "Example: Mercator",
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/ProjectionConic.png"
-        alt="Conic Projection "
-        caption={
-          "Conical projections are good for areas near the mid-latitudes. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
-        }
-      />
-    ),
-    notes: "Example: North and South hemispheres",
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/ProjectionPlanar.png"
-        alt="Planar Projection "
-        caption={
-          "Planar - Azimuthal (or planar) are good for areas near the pole - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
-        }
-      />
-    ),
-  },
-  {
-    element: (
-      <iframe
-        className="w-full h-full"
-        src="https://en.m.wikipedia.org/wiki/List_of_map_projections#Table_of_projections"
-      />
-    ),
-    notes:
-      "There are a number projection families and a large number of projection methods available based on these families. Each projection methods has trade-offs in how they distort the data as it is projected. All projection methods contain some distortion but they vary in how much distortion they create between: \
-    Area, \
-    Form (shape or angles) \
-    Distance",
-  },
   {
     element: (
       <Image
@@ -599,16 +600,6 @@ export const content: Toc = [
         src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/maplibre.html"
         title="Maplibre JS GL"
       ></iframe>
-    ),
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/npm-maplibre.gif"
-        alt="npm maplibre"
-        caption={"Npm example - Installing Maplibre-gl"}
-      />
     ),
   },
 
@@ -1006,6 +997,16 @@ export const content: Toc = [
           href="https://nodejs.org/en/download"
         />
       </>
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/npm-maplibre.gif"
+        alt="npm maplibre"
+        caption={"Npm example - Installing Maplibre-gl"}
+      />
     ),
   },
   {
