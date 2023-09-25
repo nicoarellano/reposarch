@@ -9,6 +9,7 @@ import CartesianPlane from "../../../../components/CartesianPlane";
 
 import Cartography from "../week10/Cartography.mdx";
 import SimpleButton from "../../../../components/Common/SimpleButton";
+import CodeButton from "../../../../components/Common/CodeButton";
 
 export const content: Toc = [
   {
@@ -105,17 +106,7 @@ export const content: Toc = [
       />
     ),
   },
-  {
-    element: (
-      <Image
-        src="/images/week01/rome-maps2.png"
-        alt="Maps of rome"
-        caption={
-          "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
-        }
-      />
-    ),
-  },
+
   {
     element: (
       <Image
@@ -348,7 +339,7 @@ export const content: Toc = [
       <Image
         src="/images/week10/dymaxion.png"
         alt="Dymaxion map"
-        caption={"Dymaxion map"}
+        caption={"Buckminster Fuller - Dymaxion map (1943)"}
         href="https://en.wikipedia.org/wiki/Dymaxion_map"
       />
     ),
@@ -361,7 +352,7 @@ export const content: Toc = [
       <Image
         src="/images/week10/dymaxion.jpg"
         alt="Dymaxion map"
-        caption={"Dymaxion map"}
+        caption={"Buckminster Fuller - Dymaxion map (1943)"}
       />
     ),
     notes:
@@ -1046,7 +1037,14 @@ export const content: Toc = [
       />
     ),
   },
-
+  {
+    element: (
+      <EmojiTitle
+        emoji={"JSON and GeoJSON 🧊📄❔"}
+        title={"What are they? How to add them to your map?"}
+      />
+    ),
+  },
   {
     element: (
       <Image
@@ -1058,6 +1056,18 @@ export const content: Toc = [
     ),
     notes:
       "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/json-example.png"
+        alt="json"
+        caption={"JSON - JavaScript Object Notation"}
+        href="https://www.json.org/json-en.html"
+      />
+    ),
+    notes: "JSON (JavaScript Object Notation) - Example",
   },
 
   {
@@ -1078,20 +1088,61 @@ export const content: Toc = [
 
   {
     element: (
-      <EmojiTitle
-        emoji={"JSON and GeoJSON 🧊📄❔"}
-        title={"What are they? How to add them to your map?"}
+      <Image
+        src="/images/week10/geojson-types.png"
+        alt="geojson"
+        caption={"GeoJSON - Types"}
+      />
+    ),
+    notes:
+      "GeoJSON: A format for encoding a variety of geographic data structures. \
+      It is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. \
+      It is based on JSON, the JavaScript Object Notation. The features include points, line strings, polygons, and multi-part collections of these types",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/geojson-example.png"
+        alt="geojson"
+        caption={"GeoJSON - Example"}
       />
     ),
   },
+
   {
     element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/index.html"
-        title="Maplibre - Airports in Canada"
-      ></iframe>
+      <>
+        <iframe
+          width="100%"
+          height="100%"
+          src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/airports/index.html"
+          title="Maplibre - Airports in Canada"
+        ></iframe>
+        <CodeButton
+          href={
+            "https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/airports"
+          }
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://maplibre.org/maplibre-gl-js/docs/examples/"
+          title="Maplibre - Examples"
+        ></iframe>
+        <br />
+        <SimpleButton
+          title={"Maplibre Examples"}
+          href={"https://maplibre.org/maplibre-gl-js/docs/examples/"}
+        />
+      </>
     ),
   },
 ];

@@ -3,7 +3,7 @@ import { icons } from "../../assets/icons.js";
 initLeaflet();
 
 function initLeaflet() {
-  let map = L.map("map").setView([56.415, -98.74], 5);
+  let map = L.map("map").setView([56.415, -98.74], 4);
 
   let satellite = L.tileLayer(
     "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
