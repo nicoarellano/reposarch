@@ -15,7 +15,7 @@ export default function CodeButton({ href }): ReactElement<Props> {
       <IconButton
         className="bg-white pointer-events-auto"
         aria-label="See code"
-        href="href"
+        href={href}
       >
         <CodeIcon />
       </IconButton>
