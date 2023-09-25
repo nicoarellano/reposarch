@@ -105,17 +105,7 @@ export const content: Toc = [
       />
     ),
   },
-  {
-    element: (
-      <Image
-        src="/images/week01/rome-maps2.png"
-        alt="Maps of rome"
-        caption={
-          "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
-        }
-      />
-    ),
-  },
+  
   {
     element: (
       <Image
