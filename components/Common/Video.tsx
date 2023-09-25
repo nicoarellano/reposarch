@@ -14,7 +14,7 @@ export default function Video({ src, title, caption = null, ...props }: Props) {
         height="100%"
         src={src}
         title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; autoplay=true; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         {...props}
       ></iframe>
       {caption && (

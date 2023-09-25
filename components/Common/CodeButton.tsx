@@ -11,9 +11,9 @@ interface Props {
 
 export default function CodeButton({ href }): ReactElement<Props> {
   return (
-    <div className="absolute w-11/12 h-11/12 flex justify-end pointer-events-none">
+    <div className="absolute bottom-20 w-11/12 h-11/12 flex justify-end pointer-events-none">
       <IconButton
-        className="bg-white pointer-events-auto"
+        className="bg-white pointer-events-auto mx-5"
         aria-label="See code"
         href={href}
       >

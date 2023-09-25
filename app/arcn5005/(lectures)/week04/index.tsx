@@ -167,7 +167,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/carleton-dynamo.png"
+        src="/images/week04/dynamo-bim.png"
         alt="Carleton Dynamo"
         caption={
           'Dynamo BIM by Autodesk: “Dynamo is a visual programming tool that aims to be accessible to both non-programmers and programmers alike. It gives users the ability to visually script behavior, define custom pieces of logic, and script using textual programming languages (ie. Python)."'
@@ -175,9 +175,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "In this example we are using Dynamo to create a “Digital Twin” or a dynamic copy of Carleton University’s campus. \
-      For this project at CIMS, we use Dynamo to read an URL (web domain address) and based on that, make periodic changes to the model in real-time. \
-      Basically, dynamo is a great tool to program solutions to everyday problems.",
+      "Dynamo is a great tool for experimentation and speculative design, but it is also great to program solutions to everyday problems.",
   },
   {
     element: <DynamoBenefits />,
@@ -359,7 +357,7 @@ export const content: Toc = [
           <li>CATEGORIZATION OF ELEMENTS</li>
           <li>IMPORTING AND EXPORTING DATA</li>
           <li>CAD TO REVIT</li>
-          <li>REAL-TIME SIMULATIONS</li>
+          <li>REAL-TIME SIMULATIONS - DIGITAL TWIN</li>
         </ol>
       </>
     ),
@@ -696,7 +694,83 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
       Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
   },
 
-  // OPEN SOURCE SCRIPTING - BLENDER GEOMETRY NODES
+  {
+    element: (
+      <Image
+        src="/images/week04/excel.png"
+        alt="11. Importing and exporting Excel to Revit and vice versa"
+        caption={"10. Importing and exporting Excel to Revit and vice versa"}
+      />
+    ),
+    notes:
+      "Automatically generation of DFH (Doors, Frames, and Hardware) packages coming from the doors schedule and being imported and exported into and from Excel to be share with the DFH provider. \
+      Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/carleton-dynamo.png"
+        alt="Carleton Dynamo"
+        caption={
+          '12. Real-time simulations or Digital Twin of Carleton University"'
+        }
+      />
+    ),
+    notes:
+      "In this example we are using Dynamo to create a “Digital Twin” or a dynamic copy of Carleton University’s campus. \
+      For this project at CIMS, we use Dynamo to read an URL (web domain address) and based on that, make periodic changes to the model in real-time. \
+      Basically, dynamo is a great tool to program solutions to everyday problems.",
+  },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/P0VdmEIJ65c?si=sjo2Qk3Y1NKr_H9C&amp;start=130"
+        title="Digital Twin of Carleton University"
+        caption={"Digital Twin of Carleton University"}
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/occupancy.gif"
+        alt="Carleton Occupancy"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Occupancy"'
+        }
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/parking.gif"
+        alt="Carleton Parking"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Parking"'
+        }
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/sunlight.gif"
+        alt="Carleton Parking"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Sunlight analysis"'
+        }
+      />
+    ),
+    notes: "",
+  },
 
   {
     element: (
