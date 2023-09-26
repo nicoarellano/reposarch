@@ -70,33 +70,6 @@ export const content: Toc = [
       />
     ),
   },
-  {
-    element: (
-      <Quote
-        quote={
-          "Software modified by the designer through scripting, however, provides a range of possibilities for creative speculation that is simply not possible using the software only as the manufacturers intended it to be used."
-        }
-        author={"Mark Burry - Scripting Cultures"}
-      />
-    ),
-  },
-  {
-    element: (
-      <Quote
-        quote={
-          "Although the first courses in computer programming were introduced in \
-          some architecture schools like Harvard or MIT in the late 1980s and \
-          early 1990s, scripting has developed only in the past years, fostered \
-          by the growing computer literacy of young architectural students and \
-          architects who are now able to write code instead of relying only on \
-          the predefined software functions. Scripting does open new \
-          perspectives on the evolution of design: it even raises some questions \
-          that are not fully answered yet."
-        }
-        author={"Antoine Picon - Digital Turns in Architecture"}
-      />
-    ),
-  },
   { element: <Scripting /> },
   {
     element: (
@@ -357,7 +330,7 @@ export const content: Toc = [
           <li>CATEGORIZATION OF ELEMENTS</li>
           <li>IMPORTING AND EXPORTING DATA</li>
           <li>CAD TO REVIT</li>
-          <li>REAL-TIME SIMULATIONS - DIGITAL TWIN</li>
+          <li>CARLETON DIGITAL TWIN</li>
         </ol>
       </>
     ),
@@ -712,9 +685,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
       <Image
         src="/images/week04/carleton-dynamo.png"
         alt="Carleton Dynamo"
-        caption={
-          '12. Real-time simulations or Digital Twin of Carleton University"'
-        }
+        caption={'12. Digital Twin of Carleton University"'}
       />
     ),
     notes:
@@ -726,7 +697,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/P0VdmEIJ65c?si=sjo2Qk3Y1NKr_H9C&amp;start=130"
+        src="https://www.youtube.com/embed/P0VdmEIJ65c?si=sjo2Qk3Y1NKr_H9C&amp;start=130&&autoplay=1"
         title="Digital Twin of Carleton University"
         caption={"Digital Twin of Carleton University"}
       />
@@ -736,16 +707,76 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/occupancy.gif"
-        alt="Carleton Occupancy"
-        caption={
-          'Real-time simulations or Digital Twin of Carleton University - Occupancy"'
-        }
+        src="/images/week04/federating.png"
+        alt="CAD to Revit"
+        caption={"Federating Carleton University archives"}
       />
     ),
     notes: "",
   },
 
+  {
+    element: (
+      <Image
+        src="/images/week04/landscaping.jpg"
+        alt="Landscaping"
+        caption={"Carleton University - Landscaping"}
+      />
+    ),
+    notes:
+      "We have use Algorithms to federate all exterior zones and landscaping, including: Trees and greenery, Roads, , Signage, Site elements, and much more.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/infrastructure.jpg"
+        alt="Infrastructure"
+        caption={"Carleton University - Infrastructure"}
+      />
+    ),
+    notes:
+      "We also modelled infrastructure services such as: Electrical, Water, And gas networks. \
+      Here we can see every lighting fixture on campus, and because this is a BIM model, we have all the metadata of every instance.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/cad-to-revit1.png"
+        alt="CAD to Revit"
+        caption={"CAD to Revit - Room data"}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/cad-to-revit2.png"
+        alt="CAD to Revit"
+        caption={'CAD to Revit - Room data"'}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: <EmojiTitle emoji={"⌚5D"} title={"Real-time simulations"} />,
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/energy-consumption.jpg"
+        alt="Energy Consumption"
+        caption={"Carleton University - Energy Consumption"}
+      />
+    ),
+    notes:
+      "With these techniques, we have linked dynamic data, such as energy consumption sensors, to understand building performance and manage their energy use accordingly.",
+  },
   {
     element: (
       <Image
@@ -756,7 +787,23 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
         }
       />
     ),
-    notes: "",
+    notes:
+      "To increase efficiency of facility management and operations we have used algorithms to visualize complex datasets in real-time. \
+    Fore example, here we can see a script that we use to simulate and visualize parking availability on campus",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/occupancy.gif"
+        alt="Carleton Occupancy"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Occupancy"'
+        }
+      />
+    ),
+    notes:
+      "This one is a simulation for building occupancy in order to operate buildings accordingly to their actual use \
+    Imagine if the HVAC systems where able to be controlled depending on each room occupancy rate.",
   },
 
   {
@@ -793,6 +840,16 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   },
   {
     element: (
+      <Quote
+        quote={
+          "Software modified by the designer through scripting, provides a range of possibilities for creative speculation that is simply not possible using the software only as the manufacturers intended it to be used."
+        }
+        author={"Mark Burry - Scripting Cultures"}
+      />
+    ),
+  },
+  {
+    element: (
       <>
         <h2>Open-source Alternatives? 💸</h2>
         <br />
@@ -808,6 +865,34 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
     ),
   },
 
+  {
+    element: (
+      <Quote
+        quote={
+          "Although the first courses in computer programming were introduced in \
+          some architecture schools like Harvard or MIT in the late 1980s and \
+          early 1990s, scripting has developed only in the past years, fostered \
+          by the growing computer literacy of young architectural students and \
+          architects who are now able to write code instead of relying only on \
+          the predefined software functions. Scripting does open new \
+          perspectives on the evolution of design: it even raises some questions \
+          that are not fully answered yet."
+        }
+        author={"Antoine Picon - Digital Turns in Architecture"}
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>💻 Lab 4</h1>
+        <br />
+        <h2>Blender</h2>
+        <br />
+        <h2>Geometry Nodes</h2>
+      </>
+    ),
+  },
   {
     element: (
       <Video
