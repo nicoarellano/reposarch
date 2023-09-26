@@ -8,11 +8,10 @@ import EmojiTitle from "../../../../components/Common/EmojiTitle";
 export const content: Toc = [
   {
     element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h2>How to bring physical objects to the digital world</h2>
-      </>
+      <EmojiTitle
+        emoji={"🌎→💻❔"}
+        title={"How to bring physical objects to the digital world?"}
+      />
     ),
   },
   {
@@ -64,7 +63,7 @@ export const content: Toc = [
       <Image
         src="/images/week02/Miquel_Reina_Ortiz_BW.jpg"
         alt="Miquel Reina Ortiz"
-        caption="Miquel Reina Ortiz - Arquitect, Ph.D Candidate"
+        caption="Miquel Reina Ortiz - Architect, Ph.D Candidate"
       />
     ),
     notes:

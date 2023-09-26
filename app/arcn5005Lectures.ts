@@ -122,19 +122,23 @@ export const arcn5005Lectures: Lectures = [
     content: week05,
     toc: [
       { title: "🟡 Quiz 1" },
-      // { title: "History of internet - Guess lecturer: (?)" },
-      { title: "History of Hackerdom" },
-      { title: "Backend and fronted" },
-      { title: "Git and Github" },
-      { title: "Open source. History of open-source" },
       {
         title:
-          "FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
+          "History of internet and Hackerdom - Guess lecturer: Julie Ivanoff",
+      },
+      {
+        title:
+          "Open source. History of open-source and the free software society",
       },
       {
         title:
           "OSI: Erik Raymond - The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary (1999)",
       },
+      {
+        title:
+          "FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
+      },
+      { title: "Git and Github" },
       { title: "How does a website work? Structure, style, logic" },
       { title: "🖥️ LAB 5: GitHub and HTML" },
     ],
