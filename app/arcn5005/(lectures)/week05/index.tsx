@@ -100,18 +100,6 @@ export const content: Toc = [
       there weren’t even terms to define the emerging actors that constituted this new ‘computer science’.\
       The way in which programmers were naming things had to be invented as well",
   },
-  {
-    element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h1>Has anyone used any high-level programming language?</h1>
-      </>
-    ),
-    notes:
-      "Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
-    and mathematically. So it is much easier to write, read, and understand programs in these languages.",
-  },
 
   {
     element: <EmojiTitle emoji={"📃 💬 💻"} title={"Program"} />,
