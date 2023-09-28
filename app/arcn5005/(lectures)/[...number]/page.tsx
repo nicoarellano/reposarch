@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import ListWithIcon from "../../../../components/Common/ListWithIcon";
 import ArrowRightIcon from "@mui/icons-material/ArrowRightRounded";
 import VideoIcon from "@mui/icons-material/OndemandVideoRounded";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 interface Props {
   params: { number: string };
@@ -26,6 +27,8 @@ export default function Page({ params }): ReactElement<Props> {
   const [currentSlideNumber, setCurrentSlideNumber] = useState(0);
 
   const router = useRouter();
+
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   const recordings: { title: string; url?: string }[] = [];
   if (lecture?.recordings)
@@ -102,7 +105,7 @@ export default function Page({ params }): ReactElement<Props> {
   return (
     <main className="flex flex-col w-full h-screen justify-between">
       <header className="top-0 flex flex-row w-full h-24 ">
-        <Header title={lecture?.title} />
+        <Header title={isMobile ? lecture?.id.toUpperCase() : lecture?.title} />
       </header>
       <section className=" flex flex-col items-center justify-center slides w-full h-3/4 ">
         {currentSlideElement}

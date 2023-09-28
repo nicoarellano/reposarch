@@ -43,7 +43,7 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
     setPage(currentPage);
   }, [currentPage]);
 
-  const handlers = useSwipeable({
+  const hanldeTouch = useSwipeable({
     onSwipedLeft: () => setPage(Math.min(page + 1, list.length)),
     onSwipedRight: () => setPage(Math.max(page - 1, 1)),
   });
@@ -89,6 +89,7 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
           size={isMobile ? "medium" : "large"}
           page={page}
           onChange={handlePaginationChange}
+          onTouchStart={() => hanldeTouch}
           renderItem={(item) => (
             <PaginationItem
               slots={{ previous: BackIcon, next: ForwardIcon }}
