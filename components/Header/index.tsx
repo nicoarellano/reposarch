@@ -25,7 +25,7 @@ export function Header({ title }): ReactElement<Props> {
           className="flex items-center hover:cursor-pointer"
           onClick={() => router.back()}
         >
-          {isMobile ? "test" : title}
+          {isMobile ? "ARCN5005" : title}
         </h1>
         <nav className="w-90px z-50">
           <LeftSpeedDial />
