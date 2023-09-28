@@ -25,7 +25,7 @@ export function Header({ title }): ReactElement<Props> {
           className="flex items-center hover:cursor-pointer"
           onClick={() => router.back()}
         >
-          {isMobile ? "ARCN5005" : title}
+          {isMobile ? "test" : title}
         </h1>
         <nav className="w-90px z-50">
           <LeftSpeedDial />
@@ -42,9 +42,10 @@ export function HeaderOfSlide({ slides }): ReactElement<SlidesProps> {
   const path = usePathname();
 
   const currentSlide = slides.find((slide: Slide) => path.endsWith(slide.id));
-  const slideTitle: string = currentSlide?.title;
 
-  const isMobile = useMediaQuery("(max-width: 600px)");
+const isMobile = useMediaQuery("(max-width: 600px)");
+
+  const slideTitle: string = isMobile ? currentSlide?.id.toUpperCase() : currentSlide?.title;
 
   return (
     <nav>
@@ -53,7 +54,7 @@ export function HeaderOfSlide({ slides }): ReactElement<SlidesProps> {
           <Logo />
         </nav>
         <h2 className="flex items-center">
-          {isMobile ? "ARCN5005" : slideTitle}
+        {slideTitle}
         </h2>
         <nav className="w-90px z-50">
           <LeftSpeedDial />
