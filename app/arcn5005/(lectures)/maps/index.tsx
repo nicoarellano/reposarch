@@ -14,6 +14,15 @@ import CodeButton from "../../../../components/Common/CodeButton";
 export const content: Toc = [
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv"
+        title="Maps, GIS and Map renderers"
+        caption={"Maps, GIS and Map renderers"}
+      />
+    ),
+  },
+  {
+    element: (
       <div>
         <br />
         <h3>From the Renaissance to the Computer Era</h3>
@@ -1143,6 +1152,15 @@ export const content: Toc = [
           href={"https://maplibre.org/maplibre-gl-js/docs/examples/"}
         />
       </>
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS"
+        title="Maplibre - Tutorial 1"
+        caption={"Maplibre - Tutorial 1"}
+      />
     ),
   },
 ];

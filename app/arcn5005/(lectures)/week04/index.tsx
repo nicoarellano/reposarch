@@ -70,33 +70,6 @@ export const content: Toc = [
       />
     ),
   },
-  {
-    element: (
-      <Quote
-        quote={
-          "Software modified by the designer through scripting, however, provides a range of possibilities for creative speculation that is simply not possible using the software only as the manufacturers intended it to be used."
-        }
-        author={"Mark Burry - Scripting Cultures"}
-      />
-    ),
-  },
-  {
-    element: (
-      <Quote
-        quote={
-          "Although the first courses in computer programming were introduced in \
-          some architecture schools like Harvard or MIT in the late 1980s and \
-          early 1990s, scripting has developed only in the past years, fostered \
-          by the growing computer literacy of young architectural students and \
-          architects who are now able to write code instead of relying only on \
-          the predefined software functions. Scripting does open new \
-          perspectives on the evolution of design: it even raises some questions \
-          that are not fully answered yet."
-        }
-        author={"Antoine Picon - Digital Turns in Architecture"}
-      />
-    ),
-  },
   { element: <Scripting /> },
   {
     element: (
@@ -167,7 +140,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/carleton-dynamo.png"
+        src="/images/week04/dynamo-bim.png"
         alt="Carleton Dynamo"
         caption={
           'Dynamo BIM by Autodesk: “Dynamo is a visual programming tool that aims to be accessible to both non-programmers and programmers alike. It gives users the ability to visually script behavior, define custom pieces of logic, and script using textual programming languages (ie. Python)."'
@@ -175,9 +148,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "In this example we are using Dynamo to create a “Digital Twin” or a dynamic copy of Carleton University’s campus. \
-      For this project at CIMS, we use Dynamo to read an URL (web domain address) and based on that, make periodic changes to the model in real-time. \
-      Basically, dynamo is a great tool to program solutions to everyday problems.",
+      "Dynamo is a great tool for experimentation and speculative design, but it is also great to program solutions to everyday problems.",
   },
   {
     element: <DynamoBenefits />,
@@ -359,7 +330,7 @@ export const content: Toc = [
           <li>CATEGORIZATION OF ELEMENTS</li>
           <li>IMPORTING AND EXPORTING DATA</li>
           <li>CAD TO REVIT</li>
-          <li>REAL-TIME SIMULATIONS</li>
+          <li>CARLETON DIGITAL TWIN</li>
         </ol>
       </>
     ),
@@ -696,7 +667,157 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
       Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
   },
 
-  // OPEN SOURCE SCRIPTING - BLENDER GEOMETRY NODES
+  {
+    element: (
+      <Image
+        src="/images/week04/excel.png"
+        alt="11. Importing and exporting Excel to Revit and vice versa"
+        caption={"10. Importing and exporting Excel to Revit and vice versa"}
+      />
+    ),
+    notes:
+      "Automatically generation of DFH (Doors, Frames, and Hardware) packages coming from the doors schedule and being imported and exported into and from Excel to be share with the DFH provider. \
+      Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/carleton-dynamo.png"
+        alt="Carleton Dynamo"
+        caption={'12. Digital Twin of Carleton University"'}
+      />
+    ),
+    notes:
+      "In this example we are using Dynamo to create a “Digital Twin” or a dynamic copy of Carleton University’s campus. \
+      For this project at CIMS, we use Dynamo to read an URL (web domain address) and based on that, make periodic changes to the model in real-time. \
+      Basically, dynamo is a great tool to program solutions to everyday problems.",
+  },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/P0VdmEIJ65c?si=sjo2Qk3Y1NKr_H9C&amp;start=130&&autoplay=1"
+        title="Digital Twin of Carleton University"
+        caption={"Digital Twin of Carleton University"}
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/federating.png"
+        alt="CAD to Revit"
+        caption={"Federating Carleton University archives"}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/landscaping.jpg"
+        alt="Landscaping"
+        caption={"Carleton University - Landscaping"}
+      />
+    ),
+    notes:
+      "We have use Algorithms to federate all exterior zones and landscaping, including: Trees and greenery, Roads, , Signage, Site elements, and much more.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/infrastructure.jpg"
+        alt="Infrastructure"
+        caption={"Carleton University - Infrastructure"}
+      />
+    ),
+    notes:
+      "We also modelled infrastructure services such as: Electrical, Water, And gas networks. \
+      Here we can see every lighting fixture on campus, and because this is a BIM model, we have all the metadata of every instance.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/cad-to-revit1.png"
+        alt="CAD to Revit"
+        caption={"CAD to Revit - Room data"}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/cad-to-revit2.png"
+        alt="CAD to Revit"
+        caption={'CAD to Revit - Room data"'}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: <EmojiTitle emoji={"⌚5D"} title={"Real-time simulations"} />,
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/energy-consumption.jpg"
+        alt="Energy Consumption"
+        caption={"Carleton University - Energy Consumption"}
+      />
+    ),
+    notes:
+      "With these techniques, we have linked dynamic data, such as energy consumption sensors, to understand building performance and manage their energy use accordingly.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/parking.gif"
+        alt="Carleton Parking"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Parking"'
+        }
+      />
+    ),
+    notes:
+      "To increase efficiency of facility management and operations we have used algorithms to visualize complex datasets in real-time. \
+    Fore example, here we can see a script that we use to simulate and visualize parking availability on campus",
+  },
+  {
+    element: (
+      <Image
+        src="/images/week04/occupancy.gif"
+        alt="Carleton Occupancy"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Occupancy"'
+        }
+      />
+    ),
+    notes:
+      "This one is a simulation for building occupancy in order to operate buildings accordingly to their actual use \
+    Imagine if the HVAC systems where able to be controlled depending on each room occupancy rate.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week04/sunlight.gif"
+        alt="Carleton Parking"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Sunlight analysis"'
+        }
+      />
+    ),
+    notes: "",
+  },
 
   {
     element: (
@@ -719,6 +840,16 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   },
   {
     element: (
+      <Quote
+        quote={
+          "Software modified by the designer through scripting, provides a range of possibilities for creative speculation that is simply not possible using the software only as the manufacturers intended it to be used."
+        }
+        author={"Mark Burry - Scripting Cultures"}
+      />
+    ),
+  },
+  {
+    element: (
       <>
         <h2>Open-source Alternatives? 💸</h2>
         <br />
@@ -734,6 +865,34 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
     ),
   },
 
+  {
+    element: (
+      <Quote
+        quote={
+          "Although the first courses in computer programming were introduced in \
+          some architecture schools like Harvard or MIT in the late 1980s and \
+          early 1990s, scripting has developed only in the past years, fostered \
+          by the growing computer literacy of young architectural students and \
+          architects who are now able to write code instead of relying only on \
+          the predefined software functions. Scripting does open new \
+          perspectives on the evolution of design: it even raises some questions \
+          that are not fully answered yet."
+        }
+        author={"Antoine Picon - Digital Turns in Architecture"}
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>💻 Lab 4</h1>
+        <br />
+        <h2>Blender</h2>
+        <br />
+        <h2>Geometry Nodes</h2>
+      </>
+    ),
+  },
   {
     element: (
       <Video

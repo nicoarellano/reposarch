@@ -4,16 +4,28 @@ import Calendar from "../../../components/Common/Calendar";
 import ProgressPage from "../../../components/Progress";
 import CalendarLegend from "./calendar/calendarLegend";
 
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 export default function Arcn5005() {
   const photo = "/images/reposarch.png";
   const title = "reposarch";
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
   return (
     <section className=" flex flex-col items-center justify-between w-full m-5">
-      <section className="grid grid-cols-3 uneven-grid divide-x gap-5">
+      <section
+        className={
+          isMobile ? "" : "grid grid-cols-3 uneven-grid divide-x gap-5"
+        }
+      >
         <div className=" flex items-center justify-center ">
           <ProgressPage />
         </div>
-        <div className=" flex items-center justify-center flex-col">
+        <div
+          className={
+            isMobile ? "hidden" : "flex items-center justify-center flex-col"
+          }
+        >
           <h3 className="text-center">
             <em>
               Open source digital tools for <b>Architects</b>
@@ -23,7 +35,7 @@ export default function Arcn5005() {
         </div>
         <div className=" flex items-center justify-center flex-col">
           <Calendar />
-          <CalendarLegend />
+          {!isMobile && <CalendarLegend />}
         </div>
       </section>
     </section>

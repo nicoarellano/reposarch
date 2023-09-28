@@ -29,7 +29,7 @@ export const Arcn5005F2023Evaluations = [
     week: "week09",
     date: dayjs("November 9"),
     description:
-      "Week 5: Online quiz (Brightspace) 20 minutes at the beginning of the class - It will cover contents of 7 first weeks",
+      "Week 9: Online quiz (Brightspace) 20 minutes at the beginning of the class - It will cover contents of 8 first weeks",
   },
   {
     evaluation: "🔴 Assignment 2",
@@ -44,7 +44,7 @@ export const Arcn5005F2023Evaluations = [
     week: "week12",
     date: dayjs(" November 30"),
     description:
-      "Week 5: Online quiz (Brightspace) 20 minutes at the beginning of the class - It will cover contents of 11 first weeks",
+      "Week 12: Online quiz (Brightspace) 20 minutes at the beginning of the class - It will cover contents of 11 first weeks",
   },
   {
     evaluation: "🔴 Assignment 3",

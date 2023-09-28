@@ -9,8 +9,18 @@ import CartesianPlane from "../../../../components/CartesianPlane";
 
 import Cartography from "../week10/Cartography.mdx";
 import SimpleButton from "../../../../components/Common/SimpleButton";
+import CodeButton from "../../../../components/Common/CodeButton";
 
 export const content: Toc = [
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv"
+        title="Maps, GIS and Map renderers"
+        caption={"Maps, GIS and Map renderers"}
+      />
+    ),
+  },
   {
     element: (
       <div>
@@ -25,7 +35,7 @@ export const content: Toc = [
       </div>
     ),
   },
-  { element: <EmojiTitle emoji={"🌎🗺️❔"} title={"What is a map"} /> },
+  { element: <EmojiTitle emoji={"🗺️❔"} title={"What is a map?"} /> },
   {
     element: (
       <Image
@@ -91,6 +101,8 @@ export const content: Toc = [
         }
       />
     ),
+    notes:
+      "Pre-renaissance maps were pre-scientific, symbolic. They didn't have the right proportions. They were not efficient navigation tools. non-precise ",
   },
   {
     element: (
@@ -103,17 +115,7 @@ export const content: Toc = [
       />
     ),
   },
-  {
-    element: (
-      <Image
-        src="/images/week01/rome-maps2.png"
-        alt="Maps of rome"
-        caption={
-          "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
-        }
-      />
-    ),
-  },
+
   {
     element: (
       <Image
@@ -175,7 +177,7 @@ export const content: Toc = [
   },
 
   {
-    element: <EmojiTitle emoji={"🌎⛵🗺️"} title={"World mapping"} />,
+    element: <EmojiTitle emoji={"⛵🗺️"} title={"World mapping"} />,
   },
 
   {
@@ -188,15 +190,13 @@ export const content: Toc = [
       />
     ),
     notes:
-      "The history of cartography traces the development of cartography, or \
-      mapmaking technology, in human history. Maps have been one of the most \
+      " \
+      History of Cartography, or map-making. \
+      Maps have been one of the most \
       important human inventions for millennia, allowing humans to explain \
       and navigate their way through the world. The earliest surviving maps \
-      include cave paintings and etchings on tusk and stone, followed by \
-      extensive maps produced by ancient Babylon, Greece and Rome, China, \
-      and India. In their most simple form maps are two dimensional \
-      constructs, however since the age of Classical Greece maps have also \
-      been projected onto a three-dimensional sphere known as a globe.",
+      include cave paintings followed by \
+      extensive maps produced by ancient Babylon, Greece and Rome, China, and India.",
   },
   // projections:
   {
@@ -207,7 +207,7 @@ export const content: Toc = [
         caption={"Traditional maps are 2 dimensional"}
       />
     ),
-    notes: "",
+    notes: " In their most simple form maps are two dimensional constructs",
   },
 
   {
@@ -218,7 +218,9 @@ export const content: Toc = [
         caption={"World globes, spherical interpretation of the earth"}
       />
     ),
-    notes: "",
+    notes:
+      "However since the age of Classical Greece maps have also \
+    been projected onto a three-dimensional sphere known as a globe.",
   },
 
   {
@@ -235,7 +237,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes: "Example: Mercator",
   },
 
   {
@@ -248,7 +249,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes: "Example: North and South hemispheres",
   },
 
   {
@@ -270,10 +270,10 @@ export const content: Toc = [
       />
     ),
     notes:
-      "There are a number projection families and a large number of projection methods available based on these families. Each projection methods has trade-offs in how they distort the data as it is projected. All projection methods contain some distortion but they vary in how much distortion they create between: \
-    Area, \
-    Form (shape or angles) \
-    Distance",
+      "There are a number projection families and a large number of projection methods available based on these families. \
+    Each projection methods has trade-offs in how they distort the data as it is projected. \
+    All projection methods contain some distortion but they vary in how much distortion they create between: \
+    Area, Form (shape or angles), Distance",
   },
 
   {
@@ -286,11 +286,9 @@ export const content: Toc = [
       />
     ),
     notes:
-      "The Mercator Projection, developed by Flemish geographer Gerardus \
-      Mercator, was widely used as the standard two-dimensional projection \
-      of the earth for world maps until the late 20th century, when more \
-      accurate projections were formulated. Mercator was also the first to \
-      use and popularise the concept of the atlas as a collection of maps.",
+      "The Mercator projection is a cylindrical map projection presented by Flemish geographer and cartographer Gerardus Mercator in 1569. \
+      It became the standard map projection for navigation because it is unique in representing north as up and south as down everywhere while preserving local directions and shapes. \
+      ",
   },
   {
     element: (
@@ -301,7 +299,9 @@ export const content: Toc = [
       />
     ),
     notes:
-      "The Mercator projection is a cylindrical map projection presented by Flemish geographer and cartographer Gerardus Mercator in 1569. It became the standard map projection for navigation because it is unique in representing north as up and south as down everywhere while preserving local directions and shapes. The map is thereby conformal. As a side effect, the Mercator projection inflates the size of objects away from the equator. This inflation is very small near the equator but accelerates with increasing latitude to become infinite at the poles. As a result, landmasses such as Greenland, Antarctica, Canada and Russia appear far larger than they actually are relative to landmasses near the equator, such as Central Africa.",
+      "It was widely used as the standard two-dimensional projection \
+      of the earth for world maps until the late 20th century, when more \
+      accurate projections were formulated. ",
   },
   {
     element: (
@@ -314,14 +314,7 @@ export const content: Toc = [
     ),
     notes:
       "As on all map projections, shapes or sizes are distortions of the true layout of the Earth's surface. \
-      The Mercator projection exaggerates areas far from the equator. \
-      Examples of size distortion \
-      Greenland appears the same size as Africa, when in reality Africa's area is 14 times as large. \
-      Greenland's real area is comparable to the Democratic Republic of the Congo's alone. \
-      Africa appears to be roughly the same size as South America, when in reality Africa is over one and a half times as large. \
-      Alaska appears to be the same size as Australia, although Australia is actually 4.5 times as large. \
-      Alaska also takes as much area on the map as Brazil, whereas Brazil's area is nearly 5 times that of Alaska. \
-      Madagascar and Great Britain look about the same size, while Madagascar is actually more than twice as large as Great Britain.",
+      As a side effect, the Mercator projection inflates the size of objects away from the equator. This inflation is very small near the equator but accelerates with increasing latitude to become infinite at the poles. As a result, landmasses such as Greenland, Antarctica, Canada and Russia appear far larger than they actually are relative to landmasses near the equator, such as Central Africa.",
   },
 
   {
@@ -355,7 +348,7 @@ export const content: Toc = [
       <Image
         src="/images/week10/dymaxion.png"
         alt="Dymaxion map"
-        caption={"Dymaxion map"}
+        caption={"Buckminster Fuller - Dymaxion map (1943)"}
         href="https://en.wikipedia.org/wiki/Dymaxion_map"
       />
     ),
@@ -368,13 +361,16 @@ export const content: Toc = [
       <Image
         src="/images/week10/dymaxion.jpg"
         alt="Dymaxion map"
-        caption={"Dymaxion map"}
+        caption={"Buckminster Fuller - Dymaxion map (1943)"}
       />
     ),
     notes:
       "The projection was invented by Buckminster Fuller. The March 1, 1943, edition of Life magazine included a photographic essay titled 'Life Presents R. Buckminster Fuller's Dymaxion World'. The article included several examples of its use together with a pull-out section that could be assembled as a 'three-dimensional approximation of a globe or laid out as a flat map, with which the world may be fitted together and rearranged to illuminate special aspects of its geography'. Fuller applied for a patent in the United States in February 1944, showing a projection onto a cuboctahedron, which he called 'dymaxion'. The patent was issued in January 1946.",
   },
 
+  {
+    element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
+  },
   {
     element: (
       <Image
@@ -386,11 +382,6 @@ export const content: Toc = [
     notes:
       "Alberti's dream remained technically impossible for 500 years until the creation of the modern computers.",
   },
-
-  {
-    element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
-  },
-
   {
     element: (
       <EmojiTitle
@@ -625,27 +616,16 @@ export const content: Toc = [
 
   {
     element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/openLayers/index.html"
-        title="Leaflet"
-      ></iframe>
+      <Image
+        src="/images/week10/osm.png"
+        alt="osm"
+        href="https://www.openstreetmap.org/"
+        caption={"OpenStreetMap"}
+      />
     ),
+    notes:
+      "OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.",
   },
-
-  // {
-  //   element: (
-  //     <Image
-  //       src="/images/week10/osm.png"
-  //       alt="osm"
-  //       href="https://www.openstreetmap.org/"
-  //       caption={"OpenStreetMap"}
-  //     />
-  //   ),
-  //   notes:
-  //     "OpenStreetMap is built by a community of mappers that contribute and maintain data about roads, trails, cafés, railway stations, and much more, all over the world.",
-  // },
 
   {
     element: (
@@ -670,16 +650,6 @@ export const content: Toc = [
         src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/index.html"
         title="Maplibre JS GL"
       ></iframe>
-    ),
-  },
-
-  {
-    element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h1>How do we interact with computers?</h1>
-      </>
     ),
   },
 
@@ -726,34 +696,6 @@ export const content: Toc = [
     notes:
       "Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.",
   },
-  {
-    element: (
-      <Image
-        src="/images/week01/sutherland.png"
-        alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
-        caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
-      />
-    ),
-    notes:
-      "In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
-       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
-       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
-       GUIs made computer more accessible for non-programmers, including architects.",
-  },
-  {
-    element: (
-      <Image
-        src="/images/week02/mac.png"
-        alt="First Macintosh (1984)"
-        caption={"First Macintosh (1984)"}
-      />
-    ),
-    notes:
-      "On January 24, 1984, former Apple CEO Steve Jobs introduced the first Macintosh at Apple's annual shareholder's meeting in Cupertino, \
-      California, debuting the new computer equipped with a 9-inch black and white display, an 8MHz Motorola 68000 processor, 128KB of RAM, a 3.5-inch floppy drive, \
-      and a price tag of $2,495. \
-      This computer revolutionized the market with its GUI and mouse",
-  },
 
   {
     element: (
@@ -769,235 +711,6 @@ export const content: Toc = [
       "> Text-based user interfaces (TUIs) use characters, text and symbols.",
   },
 
-  {
-    element: (
-      <>
-        <h1>🖐️</h1>
-        <br />
-        <h1>Rise your hand if you have never coded</h1>
-      </>
-    ),
-    notes: "False, anybody literate person has coded",
-  },
-  {
-    element: (
-      <>
-        <h3>🅰️ Coding</h3>
-        <br />
-        <Image
-          src="/images/week02/hieroglyphs.png"
-          alt="Codes: Hieroglyphs"
-          href="https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"
-          caption="By Wikipedia"
-        />
-      </>
-    ),
-    notes:
-      " Code is a technology humans have created to systematize artificial language into abstract symbols.\
-      Such symbols are conventions that lacked meaning until we combine them\
-      Then, they allow us to create and to communicate ideas",
-  },
-  {
-    element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
-    notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-    They are used to communicate with computers and with people through computers.",
-  },
-  {
-    element: (
-      <>
-        <h3>⌨️ Computer coding</h3>
-        <br />
-        <Image
-          src="/images/week02/computer-coding.png"
-          alt="Computer coding"
-          caption="Javascript"
-        />
-      </>
-    ),
-    notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-      They are used to communicate with computers and with people through computers.",
-  },
-
-  {
-    element: (
-      <>
-        <h1>🗣️ 🔤 💻</h1>
-        <br />
-        <h1>High-level computer programming</h1>
-      </>
-    ),
-    notes:
-      "Any computer program is written in some particular language. \
-      The language (unlike a natural language such as English) has a precisely specified vocabulary and syntax that must be followed rigorously\
-      The semantic properties are also well defined; any syntactically correct statement causes the computer to perform some specific action. \
-      Thus a programming language provides a very precise means of communication and requires you to express yourself exactly; \
-      there is no latitude for vagueness , incompleteness, ambiguities, and errors that we tolerate in everyday speech",
-  },
-  {
-    element: (
-      <Image
-        src="/images/week02/top-programming-languages.png"
-        alt="Top programming languages"
-        href="https://gowithcode.com/top-programming-languages"
-        caption="Top programming languages: https://gowithcode.com/top-programming-languages"
-      />
-    ),
-    notes:
-      "High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code.       All early computer languages were created in the second half of the twentieth century.\
-      Usually, artificial languages are not created from scratch, but rather they evolve throughout long periods of time and are the result of multiple socio-cultural events that are hard to explain.\
-      However, in the case of computer languages, not only did the language itself had to be quickly invented artificially,\
-      but because this was a totally new phenomenon, \
-      there weren’t even terms to define the emerging actors that constituted this new ‘computer science’.\
-      The way in which programmers were naming things had to be invented as well",
-  },
-  {
-    element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h1>Has anyone used any high-level programming language?</h1>
-      </>
-    ),
-    notes:
-      "Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
-    and mathematically. So it is much easier to write, read, and understand programs in these languages.",
-  },
-
-  {
-    element: <EmojiTitle emoji={"📃 💬 💻"} title={"Program"} />,
-    notes:
-      "a computer Programs is a Set of instructions written in a programming language that use syntax to systematize the logic of computer operations",
-  },
-
-  {
-    element: <EmojiTitle emoji={"📃📃📃 💬 💻"} title={"Software"} />,
-    notes:
-      "Software (which is also the plural of software) is a set of programs combined by a programmer to address a more specific problem.",
-  },
-
-  {
-    element: (
-      <EmojiTitle
-        emoji={"💻🥇❔"}
-        title={"What is the most popular type of software in the world?"}
-      />
-    ),
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/internet-usage.png"
-        alt="WORLD INTERNET USAGE AND POPULATION STATISTICS"
-        href="https://en.wikipedia.org/wiki/Web_browser"
-        caption={
-          "WORLD INTERNET USAGE AND POPULATION STATISTICS - 2023 Year Estimates"
-        }
-      />
-    ),
-  },
-  {
-    element: (
-      <Image
-        src="/images/week10/web-browsers.png"
-        alt="Web Browsers"
-        href="https://en.wikipedia.org/wiki/Web_browser"
-        caption={
-          "Most popular web browsers - Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, and Safari"
-        }
-      />
-    ),
-  },
-
-  {
-    element: (
-      <>
-        <h2>Which language to use?</h2>
-        <br />
-        <h4>All modern web browsers are based on 3 technologies</h4>
-        <br />
-        <Image
-          src="/images/week10/html-css-js.png"
-          alt="JavaScript"
-          caption={"Technology behind web browsers: HTML - CSS - JS"}
-        />
-      </>
-    ),
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/html.png"
-        alt="JavaScript"
-        href="https://www.w3schools.com/html/html_intro.asp"
-        caption={
-          "Hyper Text Markup Language (HTML) describes the structure of a Web page"
-        }
-      />
-    ),
-    notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/week10/css.png"
-        alt="JavaScript"
-        href="https://www.w3schools.com/css/css_intro.asp"
-        caption={
-          "Cascading Style Sheets (CSS) is the language we use to style an HTML document"
-        }
-      />
-    ),
-    notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
-  },
-
-  {
-    element: (
-      <>
-        <Image
-          src="/images/week01/js.png"
-          alt="JavaScript"
-          href="https://www.w3schools.com/js/default.asp"
-          caption={"JavaScript is the programming language of the Web"}
-        />
-      </>
-    ),
-    notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
-  },
-
-  {
-    element: (
-      <>
-        <h1>❔</h1>
-        <br />
-        <h1>What is an IDE?</h1>
-        <br />
-        <h3>Integrated Development Environment</h3>
-      </>
-    ),
-    notes:
-      " What is an IDE?\
-    Code is nothing more than text, so we could do this with any text editing tool (like Word or the Notepad),\
-    but writing code with notepad would not be too comfortable for a number of reasons (e.g. no syntax highlighting, no code checking, no code formatter, etc).\
-    Instead, people usually use IDEs:  a text editor with some extra tools to make the programmer's life easier.",
-  },
-  {
-    element: (
-      <EmojiTitle
-        emoji={"Lab 💻🌎"}
-        title={
-          "Installing an IDE and some extensions and creating a free map platform"
-        }
-      />
-    ),
-  },
   {
     element: (
       <Image
@@ -1066,7 +779,14 @@ export const content: Toc = [
       />
     ),
   },
-
+  {
+    element: (
+      <EmojiTitle
+        emoji={"JSON and GeoJSON 🧊📄❔"}
+        title={"What are they? How to add them to your map?"}
+      />
+    ),
+  },
   {
     element: (
       <Image
@@ -1078,6 +798,18 @@ export const content: Toc = [
     ),
     notes:
       "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/json-example.png"
+        alt="json"
+        caption={"JSON - JavaScript Object Notation"}
+        href="https://www.json.org/json-en.html"
+      />
+    ),
+    notes: "JSON (JavaScript Object Notation) - Example",
   },
 
   {
@@ -1098,20 +830,61 @@ export const content: Toc = [
 
   {
     element: (
-      <EmojiTitle
-        emoji={"JSON and GeoJSON 🧊📄❔"}
-        title={"What are they? How to add them to your map?"}
+      <Image
+        src="/images/week10/geojson-types.png"
+        alt="geojson"
+        caption={"GeoJSON - Types"}
+      />
+    ),
+    notes:
+      "GeoJSON: A format for encoding a variety of geographic data structures. \
+      It is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. \
+      It is based on JSON, the JavaScript Object Notation. The features include points, line strings, polygons, and multi-part collections of these types",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/week10/geojson-example.png"
+        alt="geojson"
+        caption={"GeoJSON - Example"}
       />
     ),
   },
+
   {
     element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/index.html"
-        title="Maplibre - Airports in Canada"
-      ></iframe>
+      <>
+        <iframe
+          width="100%"
+          height="100%"
+          src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/airports/index.html"
+          title="Maplibre - Airports in Canada"
+        ></iframe>
+        <CodeButton
+          href={
+            "https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/airports"
+          }
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://maplibre.org/maplibre-gl-js/docs/examples/"
+          title="Maplibre - Examples"
+        ></iframe>
+        <br />
+        <SimpleButton
+          title={"Maplibre Examples"}
+          href={"https://maplibre.org/maplibre-gl-js/docs/examples/"}
+        />
+      </>
     ),
   },
 ];
