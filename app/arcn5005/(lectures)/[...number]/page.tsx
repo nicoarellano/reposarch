@@ -58,11 +58,11 @@ export default function Page({ params }): ReactElement<Props> {
                     icon={<ArrowRightIcon />}
                   />
                 </div>
-                {lecture.recordings && (
+                {!isMobile && lecture.recordings && (
                   <div>
                     <ListWithIcon
                       list={recordings}
-                      subheader="Class Recordings 📽️"
+                      subheader="Class Recordings"
                       icon={<VideoIcon />}
                     />
                   </div>
