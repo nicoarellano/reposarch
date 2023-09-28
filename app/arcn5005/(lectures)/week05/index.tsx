@@ -260,10 +260,8 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"Lab 💻🌎"}
-        title={
-          "Installing an IDE and some extensions and creating a free map platform"
-        }
+        emoji={"Lab 5 💻😺🐙"}
+        title={"Begin the creation of our first website"}
       />
     ),
   },
