@@ -112,6 +112,13 @@ export const arcn5005Lectures: Lectures = [
           "🖥️ LAB 4: Scripting - Dynamo / Grasshopper / Blender Geometry Nodes",
       },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu",
+        title: "Scripting and Visual Programming",
+        date: dayjs("2023/09/28"),
+      },
+    ],
   },
 
   {
