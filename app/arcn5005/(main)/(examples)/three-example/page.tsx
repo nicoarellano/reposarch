@@ -1,9 +1,5 @@
+import Three from "../../../../../components/Common/Three";
+
 export default function ThreeExample() {
-  // return <iframe src="/examples/ThreeExample/three.html" className="grow" />;
-  return (
-    <iframe
-      src="/arcn5005/f2023/students/nicolasarellanorisop/three/index.html"
-      className="h-full grow"
-    />
-  );
+  return <Three />;
 }
