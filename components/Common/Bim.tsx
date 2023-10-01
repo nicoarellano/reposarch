@@ -23,15 +23,7 @@ export default function BimExample() {
 
       components.init();
 
-      //   if (components) {
-
-      //   bimHandler.start(container);
-
       const scene = components.scene.get();
-      const camera = components.camera.get();
-      const renderer = components.renderer.get();
-
-      //   camera.controls.setLookAt(10, 10, 10, 0, 0, 0);
 
       const grid = new OBC.SimpleGrid(components);
       components.tools.add("grid", grid);
@@ -40,16 +32,8 @@ export default function BimExample() {
       const greenMaterial = new THREE.MeshStandardMaterial({
         color: "#BCF124",
       });
-      const boxGeometry = new THREE.BoxGeometry(3, 3, 3);
-      const cube1 = new THREE.Mesh(boxGeometry, cubeMaterial);
-      const cube2 = new THREE.Mesh(boxGeometry, cubeMaterial);
-      const cube3 = new THREE.Mesh(boxGeometry, cubeMaterial);
 
-      cube2.position.x = 5;
-      cube3.position.x = -5;
-
-      scene.add(cube1, cube2, cube3);
-      const models = [cube1, cube2, cube3];
+      const models = [];
 
       //Creates the lights of the scene
       const lightColor = 0xffffff;
@@ -72,7 +56,7 @@ export default function BimExample() {
       fragmentIfcLoader.settings.webIfc.COORDINATE_TO_ORIGIN = true;
       fragmentIfcLoader.settings.webIfc.OPTIMIZE_PROFILES = true;
 
-      const model = loadIfcAsFragments(scene, fragmentIfcLoader, models);
+      loadIfcAsFragments(scene, fragmentIfcLoader, models);
 
       let previousSelection;
       window.onmousemove = () => {

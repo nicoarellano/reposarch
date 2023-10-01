@@ -7,6 +7,10 @@ import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 import SimpleButton from "../../../../components/Common/SimpleButton";
 
+import Freedoms from "./Freedoms";
+import OsiCriteria from "./Osi";
+import Lessons from "./ProgramerLessons";
+
 export const content: Toc = [
   {
     element: (
@@ -60,7 +64,19 @@ export const content: Toc = [
       />
     ),
   },
-
+  {
+    element: (
+      <Image
+        src="/images/internet/fsf.png"
+        alt="FSF"
+        href="https://www.fsf.org/"
+        caption={"Free Software Foundation"}
+      />
+    ),
+    notes:
+      "The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom. We defend the rights of all software users. \
+    ",
+  },
   {
     element: (
       <>
@@ -72,7 +88,192 @@ export const content: Toc = [
       </>
     ),
   },
+  {
+    element: (
+      <Quote
+        quote={
+          "A computer programmer writes software, or computer programs. A program \
+    is more or less a recipe with commands to tell the computer what to do in order \
+    to carry out certain tasks. You are more than likely familiar with many different \
+    programs: your Web browser, your word processor, your email client, and the like. \
+    A program usually starts out as source code. This higher-level set of commands \
+    is written in a programming language such as C or Java. After that, a tool known as \
+    a compiler translates this to a lower-level language known as assembly language. \
+    Another tool known as an assembler breaks the assembly code down to the final \
+    stage of machine language—the lowest level—which the computer understands \
+    natively."
+        }
+        author={
+          "Richard Stallman - Free Software, Free Society, Selected Essays (2002)"
+        }
+      />
+    ),
+    notes: "",
+  },
 
+  {
+    element: (
+      <Quote
+        quote={
+          "Another important concept is understanding what an operating system is. An \
+          operating system is the software that handles input and output, memory allocation, \
+          and task scheduling. Generally one considers common or useful programs such \
+          as the Graphical User Interface (GUI) to be a part of the operating system. \
+          [...] The kernel handles low-level tasks that applications depend \
+          upon such as input/output and task scheduling."
+        }
+        author={
+          "Richard Stallman - Free Software, Free Society, Selected Essays (2002)"
+        }
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Quote
+        quote={
+          "It is important to understand that even if you cannot change the source code for \
+          a given program, or directly use all these tools, it is relatively easy to find someone \
+          who can. Therefore, by having the source code to a program you are usually given \
+          the power to change, fix, customize, and learn about a program—this is a power \
+          that you do not have if you are not given the source code. Source code is one of the \
+          requirements that makes a piece of software free."
+        }
+        author={
+          "Richard Stallman - Free Software, Free Society, Selected Essays (2002)"
+        }
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Quote
+        quote={
+          "“Code” is the technology that makes computers run. Whether inscribed in software \
+          or burned in hardware, it is the collection of instructions, first written in \
+          words, that directs the functionality of machines. These machines—computers— \
+          increasingly define and control our life. They determine how phones connect, and \
+          what runs on TV. They decide whether video can be streamed across a broadband \
+          link to a computer. They control what a computer reports."
+        }
+        author={
+          "Richard Stallman - Free Software, Free Society, Selected Essays (2002)"
+        }
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Quote
+        quote={
+          "“Code” is the technology that makes computers run. Whether inscribed in software \
+          or burned in hardware, it is the collection of instructions, first written in \
+          words, that directs the functionality of machines. These machines—computers— \
+          increasingly define and control our life. They determine how phones connect, and \
+          what runs on TV. They decide whether video can be streamed across a broadband \
+          link to a computer. They control what a computer reports back to its manufacturer. \
+          These machines run us. Code runs these machines."
+        }
+        author={
+          "Richard Stallman - Free Software, Free Society, Selected Essays (2002)"
+        }
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/d74Lg-0j3n8?si=biC0tc_1wvgbjbW7"
+        title="Patent Absurdity"
+        caption={"Patent Absurdity: How software patents broke the system"}
+      />
+    ),
+    notes:
+      "Patent Absurdity: How software patents broke the system is a half-hour film about software patents. It explores the case of software patents and the history of judicial activism that led to their rise, as well as the harm being done to software developers and the wider economy. The film is based on a series of interviews conducted during the US Supreme Court's review of in Re Bilski — a case that could have had profound implications for the patenting of software.",
+  },
+  // {
+  //   element: (
+  //     <Image
+  //       src="/images/internet/rms.png"
+  //       alt="RMS"
+  //       href="https://en.wikipedia.org/wiki/Richard_Stallman"
+  //       caption={
+  //         "Richard M. Stallman, American free software movement activist and programmer. Founder of the Free Software Foundation"
+  //       }
+  //     />
+  //   ),
+  //   notes:
+  //     "The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom. We defend the rights of all software users. \
+  //   ",
+  // },
+  {
+    element: (
+      <Quote
+        quote={
+          "These questions have been the challenge of Stallman’s life. Through his works \
+          and his words, he has pushed us to see the importance of keeping code “free.” Not \
+          free in the sense that code writers don’t get paid, but free in the sense that the \
+          control coders build be transparent to all, and that anyone have the right to take that \
+          control, and modify it as he or she sees fit. This is “free software”; “free software” \
+          is one answer to a world built in code."
+        }
+        author={
+          "Richard Stallman - Free Software, Free Society, Selected Essays (2002)"
+        }
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/internet/gnu-linux.png"
+        alt="FSF"
+        href="https://www.fsf.org/"
+        caption={
+          "Free software means that the software's users have freedom. Free as free speech not as free beer (The issue is not about price.) We developed the GNU operating system so that users can have freedom in their computing. \
+        Specifically, free software means users have the four essential freedoms:"
+        }
+      />
+    ),
+    notes:
+      "The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom. We defend the rights of all software users. \
+    ",
+  },
+  {
+    element: <Freedoms />,
+    notes:
+      "Specifically, free software means users have the four essential freedoms: \
+(0) to run the program, \
+(1) to study and change the program in source code form, \
+(2) to redistribute exact copies, and \
+(3) to distribute modified versions.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/internet/osi.png"
+        alt="OSI"
+        href="https://opensource.org/"
+        caption={"Open Source Initiative"}
+      />
+    ),
+    notes:
+      "founded in 1998. Actively involved in Open Source community-building, education, and public advocacy to promote awareness and the importance of non-proprietary software. OSI participates in Open Source conferences and events, to meet with open source developers and users, and to discuss with executives from the public and private sectors about how Open Source technologies, licenses, and models of development can provide economic and strategic advantages. \
+    ",
+  },
+  {
+    element: <OsiCriteria />,
+  },
   {
     element: (
       <>
@@ -82,7 +283,9 @@ export const content: Toc = [
       </>
     ),
   },
-
+  {
+    element: <Lessons />,
+  },
   {
     element: (
       <Image
@@ -174,23 +377,19 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
   },
 
   {
     element: (
       <Image
         src="/images/week10/css.png"
-        alt="JavaScript"
+        alt="Html"
         href="https://www.w3schools.com/css/css_intro.asp"
         caption={
           "Cascading Style Sheets (CSS) is the language we use to style an HTML document"
         }
       />
     ),
-    notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
   },
 
   {
@@ -264,5 +463,62 @@ export const content: Toc = [
         title={"Begin the creation of our first website"}
       />
     ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/week10/html.png"
+        alt="Html"
+        href="https://www.w3schools.com/html/html_intro.asp"
+        caption={
+          "Hyper Text Markup Language (HTML) describes the structure of a Web page"
+        }
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Structure</h2>
+        <br />
+        <Image
+          src="/images/internet/html-structure.png"
+          alt="Html-structure"
+          caption={"HTML Structure"}
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Semantics</h2>
+        <br />
+        <Image
+          src="/images/internet/semantics.png"
+          alt="Html-semantics"
+          caption={"HTML Semantics"}
+        />
+      </>
+    ),
+  },
+
+  {
+    element: <EmojiTitle emoji={"Elements"} title={""} />,
+  },
+  {
+    element: (
+      <iframe
+        className="w-full h-full"
+        src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+        title="Dynamo Primer"
+      />
+    ),
+  },
+  {
+    element: <EmojiTitle emoji={"Attributes"} title={""} />,
+  },
+  {
+    element: <EmojiTitle emoji={"Semantics"} title={""} />,
   },
 ];

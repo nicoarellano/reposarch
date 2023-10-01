@@ -138,14 +138,11 @@ export const arcn5005Lectures: Lectures = [
           "Open source. History of open-source and the free software society",
       },
       {
-        title:
-          "OSI: Erik Raymond - The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary (1999)",
+        title: "FSF: Free Software Foundation",
       },
       {
-        title:
-          "FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
+        title: "OSI: Open Software Initiative",
       },
-      { title: "Git and Github" },
       { title: "How does a website work? Structure, style, logic" },
       { title: "🖥️ LAB 5: GitHub and HTML" },
     ],
@@ -161,6 +158,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "Coding as a Language, as a tools and as an apparatus." },
       { title: "OS Libraries / Packages" },
       { title: "OSArch" },
+      { title: "Post 2020 milestones" },
       { title: "🖥️ LAB 6: CSS and JavaScript" },
     ],
   },
@@ -176,7 +174,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "Open vs Closed BIM" },
       { title: "File formats - .rvt vs .ifc" },
       { title: "BuildingSmart International and IFC" },
-      { title: "Post 2020 milestones" },
+
       { title: "🖥️ LAB 7: BlenderBIM" },
     ],
   },
