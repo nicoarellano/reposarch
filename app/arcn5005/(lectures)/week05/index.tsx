@@ -149,25 +149,7 @@ export const content: Toc = [
     notes: "",
   },
 
-  {
-    element: (
-      <Quote
-        quote={
-          "“Code” is the technology that makes computers run. Whether inscribed in software \
-          or burned in hardware, it is the collection of instructions, first written in \
-          words, that directs the functionality of machines. These machines—computers— \
-          increasingly define and control our life. They determine how phones connect, and \
-          what runs on TV. They decide whether video can be streamed across a broadband \
-          link to a computer. They control what a computer reports."
-        }
-        author={
-          "Richard Stallman - Free Software, Free Society, Selected Essays (2002)"
-        }
-      />
-    ),
-    notes: "",
-  },
-
+ 
   {
     element: (
       <Quote
@@ -506,19 +488,9 @@ export const content: Toc = [
   {
     element: <EmojiTitle emoji={"Elements"} title={""} />,
   },
-  {
-    element: (
-      <iframe
-        className="w-full h-full"
-        src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
-        title="Dynamo Primer"
-      />
-    ),
-  },
+ 
   {
     element: <EmojiTitle emoji={"Attributes"} title={""} />,
   },
-  {
-    element: <EmojiTitle emoji={"Semantics"} title={""} />,
-  },
+  
 ];
