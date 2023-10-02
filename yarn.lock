@@ -297,6 +297,11 @@
   resolved "https://registry.npmjs.org/@mapbox/jsonlint-lines-primitives/-/jsonlint-lines-primitives-2.0.2.tgz"
   integrity sha512-rY0o9A5ECsTQRVhv7tL/OyDpGAoUB4tTvLiW1DSzQGq4bvTPhNw1VpSNjDJc5GFZ2XuyOtSWSVN05qOtcD71qQ==
 
+"@mapbox/mapbox-gl-supported@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-supported/-/mapbox-gl-supported-2.0.1.tgz#c15367178d8bfe4765e6b47b542fe821ce259c7b"
+  integrity sha512-HP6XvfNIzfoMVfyGjBckjiAOQK9WfX0ywdLubuPMPv+Vqf5fj0uCbgBQYpiqcWZT6cbyyRnTSXDheT1ugvF6UQ==
+
 "@mapbox/point-geometry@0.1.0", "@mapbox/point-geometry@^0.1.0", "@mapbox/point-geometry@~0.1.0":
   version "0.1.0"
   resolved "https://registry.npmjs.org/@mapbox/point-geometry/-/point-geometry-0.1.0.tgz"
@@ -569,9 +574,9 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@popperjs/core@^2.11.8":
+"@popperjs/core@^2.11.8", "@popperjs/core@latest":
   version "2.11.8"
-  resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.8.tgz"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
 "@react-spring/animated@~9.6.1":
@@ -1145,6 +1150,15 @@ bidi-js@^1.0.2:
   dependencies:
     require-from-string "^2.0.2"
 
+bim-fragment@1.0.22, bim-fragment@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/bim-fragment/-/bim-fragment-1.0.22.tgz#f79ab4e51db23f3ddc3e3d6be232975b63ab68dc"
+  integrity sha512-dNR+ONlmC3zEf4Om5u4LLIC6+f+lbbu4RB1R7rDr/1OfMnvKzwr/o4VmkTcwQXwdEppZQdkmMF8rFx6Uo+Z1qA==
+  dependencies:
+    flatbuffers "^23.3.3"
+    three "0.152.2"
+    three-mesh-bvh "0.6.0"
+
 binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
@@ -1214,6 +1228,11 @@ camelcase-css@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/camelcase-css/-/camelcase-css-2.0.1.tgz"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
+
+camera-controls@^1.36.0:
+  version "1.38.2"
+  resolved "https://registry.yarnpkg.com/camera-controls/-/camera-controls-1.38.2.tgz#3289013e6de05cee51dc98af87d3fc7c1a7df585"
+  integrity sha512-EfzbovxLssyWpJVG9uKcazSDDIEcd1hUsPhPF/OWWnICsKY9WbLY/2S4UPW73HHbvnVeR/Z9wsWaQKtANy/2Yg==
 
 camera-controls@^2.4.2:
   version "2.7.2"
@@ -1363,6 +1382,11 @@ cross-spawn@^7.0.1, cross-spawn@^7.0.2:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+csscolorparser@~1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/csscolorparser/-/csscolorparser-1.0.3.tgz#b34f391eea4da8f3e98231e2ccd8df9c041f171b"
+  integrity sha512-umPSgYwZkdFoUrH5hIq5kf0wPSXiro51nPw0j2K/c83KflkPSTBGMz6NJvMB+07VlL0y7VPo6QJcDjcgKTTm3w==
+
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
@@ -1434,6 +1458,11 @@ detect-gpu@^5.0.28:
   dependencies:
     webgl-constants "^1.1.1"
 
+dexie@^3.2.3:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.4.tgz#b22a9729be1102acb2eee16102ea6e2bc76454cf"
+  integrity sha512-VKoTQRSv7+RnffpOJ3Dh6ozknBqzWw/F3iqMdsZg958R0AS8AnY9x9d1lbwENr0gzeGJHXKcGhAMRaqys6SxqA==
+
 didyoumean@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.2.tgz"
@@ -1482,6 +1511,11 @@ draco3d@^1.4.1:
   version "1.5.6"
   resolved "https://registry.npmjs.org/draco3d/-/draco3d-1.5.6.tgz"
   integrity sha512-+3NaRjWktb5r61ZFoDejlykPEFKT5N/LkbXsaddlw6xNSXBanUYpFc2AXXpbJDilPHazcSreU/DpQIaxfX0NfQ==
+
+dxf-writer@^1.18.4:
+  version "1.18.4"
+  resolved "https://registry.yarnpkg.com/dxf-writer/-/dxf-writer-1.18.4.tgz#7e064b5550f6dfa8a6e95e7a7489b32c49d31c75"
+  integrity sha512-JdLOyP+1UyeB30yPowJLJKK0bPROq/dX+QTWcLSplQoepcyo/YMlU0Z27T7mIPxgwiPb+CQWwUIlbcRRfns+ng==
 
 earcut@^2.2.4:
   version "2.2.4"
@@ -1962,6 +1996,11 @@ flat-cache@^3.0.4:
     flatted "^3.1.0"
     rimraf "^3.0.2"
 
+flatbuffers@^23.3.3:
+  version "23.5.26"
+  resolved "https://registry.yarnpkg.com/flatbuffers/-/flatbuffers-23.5.26.tgz#01358e272a61239f0faf3bfbe4e014f3ace9d746"
+  integrity sha512-vE+SI9vrJDwi1oETtTIFldC/o9GsVKRM+s6EL0nQgxXlYV1Vc4Tk30hj4xGICftInKQKj1F3up2n8UbIVobISQ==
+
 flatted@^3.1.0:
   version "3.2.7"
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.7.tgz"
@@ -2153,6 +2192,11 @@ graphemer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/graphemer/-/graphemer-1.4.0.tgz"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
+
+grid-index@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/grid-index/-/grid-index-1.1.0.tgz#97f8221edec1026c8377b86446a7c71e79522ea7"
+  integrity sha512-HZRwumpOGUrHyxO5bqKZL0B0GlUpwtCAzZ42sgxUPniu33R1LSFH5yrIcBCHjkctCAh3mtWKcKd9J4vDDdeVHA==
 
 hamburger-react@^2.5.0:
   version "2.5.0"
@@ -2615,7 +2659,7 @@ json5@^1.0.2:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
-kdbush@^4.0.2:
+kdbush@^4.0.1, kdbush@^4.0.2:
   version "4.0.2"
   resolved "https://registry.npmjs.org/kdbush/-/kdbush-4.0.2.tgz"
   integrity sha512-WbCVYJ27Sz8zi9Q7Q0xHC+05iwkm3Znipc2XTlrnJbsHMYktW4hPhXUE8Ys1engBrvffoSCqbil1JQAa7clRpA==
@@ -2725,6 +2769,34 @@ maath@^0.9.0:
   version "0.9.0"
   resolved "https://registry.npmjs.org/maath/-/maath-0.9.0.tgz"
   integrity sha512-aAR8hoUqPxlsU8VOxkS9y37jhUzdUxM017NpCuxFU1Gk+nMaZASZxymZrV8LRSHzRk/watlbfyNKu6XPUhCFrQ==
+
+mapbox-gl@^2.15.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-2.15.0.tgz#9439828d0bae1e7b464ae08b30cb2e65a7e2256d"
+  integrity sha512-fjv+aYrd5TIHiL7wRa+W7KjtUqKWziJMZUkK5hm8TvJ3OLeNPx4NmW/DgfYhd/jHej8wWL+QJBDbdMMAKvNC0A==
+  dependencies:
+    "@mapbox/geojson-rewind" "^0.5.2"
+    "@mapbox/jsonlint-lines-primitives" "^2.0.2"
+    "@mapbox/mapbox-gl-supported" "^2.0.1"
+    "@mapbox/point-geometry" "^0.1.0"
+    "@mapbox/tiny-sdf" "^2.0.6"
+    "@mapbox/unitbezier" "^0.0.1"
+    "@mapbox/vector-tile" "^1.3.1"
+    "@mapbox/whoots-js" "^3.1.0"
+    csscolorparser "~1.0.3"
+    earcut "^2.2.4"
+    geojson-vt "^3.2.1"
+    gl-matrix "^3.4.3"
+    grid-index "^1.1.0"
+    kdbush "^4.0.1"
+    murmurhash-js "^1.0.0"
+    pbf "^3.2.1"
+    potpack "^2.0.0"
+    quickselect "^2.0.0"
+    rw "^1.3.3"
+    supercluster "^8.0.0"
+    tinyqueue "^2.0.3"
+    vt-pbf "^3.1.3"
 
 maplibre-gl@^3.3.1:
   version "3.3.1"
@@ -3235,6 +3307,11 @@ mz@^2.7.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
+n8ao@^1.5.1:
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/n8ao/-/n8ao-1.6.8.tgz#93195eb7c29de962c24ddbbed7d04b72f7ee0d1c"
+  integrity sha512-3xaBaoMIplgPdBK+9mZefa8stWEoA2673h2734wYMxm/hUkMLENMhzymDe+WZueFQq93ly4xpl5s1NJrQBzFOQ==
+
 nanoid@^3.3.4, nanoid@^3.3.6:
   version "3.3.6"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.6.tgz"
@@ -3382,6 +3459,58 @@ once@^1.3.0:
   integrity sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==
   dependencies:
     wrappy "1"
+
+openbim-clay@0.0.3, openbim-clay@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/openbim-clay/-/openbim-clay-0.0.3.tgz#b1e95a31a06df9fabb506bddb7981acbb0171c8d"
+  integrity sha512-luOb2xK+60gZw3z+uilu32B+fOTSlNYv/D3URxxPWQY/8VWn5e8yGTCrlYQ7TDB1Z0VvMGh0jW6jbdly2Aa5Xg==
+  dependencies:
+    earcut "^2.2.4"
+    openbim-components "1.0.0-alpha.102"
+    three "0.152.2"
+
+openbim-components@1.0.0-alpha.102:
+  version "1.0.0-alpha.102"
+  resolved "https://registry.yarnpkg.com/openbim-components/-/openbim-components-1.0.0-alpha.102.tgz#490a1dc795d6d120d28cd00c91ddababa6d1c255"
+  integrity sha512-lrK8vXlo3HMIsCFfftmrKOxTPaBAJelovubTGOULoaUizn2ZIX76oXCqF2AnLrNyNFViCDRWmUgWDNjNiuQ6Sg==
+  dependencies:
+    "@popperjs/core" latest
+    bim-fragment "1.0.22"
+    camera-controls "^1.36.0"
+    dexie "^3.2.3"
+    dxf-writer "^1.18.4"
+    earcut "^2.2.4"
+    mapbox-gl "^2.15.0"
+    n8ao "^1.5.1"
+    postprocessing "^6.31.0"
+    stats.js "^0.17.0"
+    tailwindcss "^3.3.2"
+    three "0.152.2"
+    three-mesh-bvh "0.6.0"
+    top-tool-package-reader "0.0.3"
+    web-ifc "0.0.42"
+
+openbim-components@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/openbim-components/-/openbim-components-1.1.0.tgz#3cf797ac60d984d76eb906c1f587e52682722e97"
+  integrity sha512-CsVS7tewnY0fWTmQtJML+Jcx8Omi3pXpTMBnqDK+6ucbcDo2eez9VluiQuo6RKD9l95lINrYPjxZpNGrYcZnnw==
+  dependencies:
+    "@popperjs/core" latest
+    bim-fragment "1.0.22"
+    camera-controls "^1.36.0"
+    dexie "^3.2.3"
+    dxf-writer "^1.18.4"
+    earcut "^2.2.4"
+    mapbox-gl "^2.15.0"
+    n8ao "^1.5.1"
+    openbim-clay "0.0.3"
+    postprocessing "^6.31.0"
+    stats.js "^0.17.0"
+    tailwindcss "^3.3.2"
+    three "0.152.2"
+    three-mesh-bvh "0.6.0"
+    top-tool-package-reader "0.0.3"
+    web-ifc "0.0.43"
 
 opencollective-postinstall@2.0.2:
   version "2.0.2"
@@ -3594,6 +3723,11 @@ postcss@8.4.28, postcss@^8.4.23:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+postprocessing@^6.31.0:
+  version "6.33.1"
+  resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.33.1.tgz#a38df0efa75f0111282487d6058e1c8d783efdd5"
+  integrity sha512-dUxDGNgBzkTYjzkDVDBIFqZ6zLbzeaqwk8r3ZCMrv08MBX1c68goS8CKvwYvZtltacKnSSBv5f66HQgSSEOEBQ==
 
 potpack@^1.0.1:
   version "1.0.2"
@@ -4114,7 +4248,7 @@ sucrase@^3.32.0:
     pirates "^4.0.1"
     ts-interface-checker "^0.1.9"
 
-supercluster@^8.0.1:
+supercluster@^8.0.0, supercluster@^8.0.1:
   version "8.0.1"
   resolved "https://registry.npmjs.org/supercluster/-/supercluster-8.0.1.tgz"
   integrity sha512-IiOea5kJ9iqzD2t7QJq/cREyLHTtSmUT6gQsweojg9WH2sYJqZK9SswTu6jrscO6D1G5v5vYZ9ru/eq85lXeZQ==
@@ -4145,7 +4279,7 @@ suspend-react@^0.1.3:
   resolved "https://registry.npmjs.org/suspend-react/-/suspend-react-0.1.3.tgz"
   integrity sha512-aqldKgX9aZqpoDp3e8/BZ8Dm7x1pJl+qI3ZKxDN0i/IQTWUwBx/ManmlVJ3wowqbno6c2bmiIfs+Um6LbsjJyQ==
 
-tailwindcss@3.3.3:
+tailwindcss@3.3.3, tailwindcss@^3.3.2:
   version "3.3.3"
   resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.3.3.tgz"
   integrity sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==
@@ -4197,6 +4331,11 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
+three-mesh-bvh@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.6.0.tgz#15523c335383df658dc60063a783fdd52d045dc5"
+  integrity sha512-4/oXeqVMLuN9/P0M3L5ezIVrFiXQXKvjVTErkiSYMjSaPoWfNPAwqulSgLf4bIUPn8/Lq3rmIJwxbCuD8qDobA==
+
 three-mesh-bvh@^0.6.0:
   version "0.6.7"
   resolved "https://registry.npmjs.org/three-mesh-bvh/-/three-mesh-bvh-0.6.7.tgz"
@@ -4217,6 +4356,11 @@ three-stdlib@^2.25.0, three-stdlib@^2.25.1:
     opentype.js "^1.3.3"
     potpack "^1.0.1"
     zstddec "^0.0.2"
+
+three@0.152.2:
+  version "0.152.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.152.2.tgz#2ee0f2c504d31a4bc29b45495c12bded9fda7bfc"
+  integrity sha512-Ff9zIpSfkkqcBcpdiFo2f35vA9ZucO+N8TNacJOqaEE6DrB0eufItVMib8bK8Pcju/ZNT6a7blE1GhTpkdsILw==
 
 three@^0.155.0:
   version "0.155.0"
@@ -4244,6 +4388,11 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+top-tool-package-reader@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/top-tool-package-reader/-/top-tool-package-reader-0.0.3.tgz#e1daa765bae65e4833328f2c25487cd1c4b03fa6"
+  integrity sha512-nEFZyW3qJGtMAFHjOsQnW4/NEUWVWfz0dFKPXSkOutDSefMX2PwAjjfexYr/gzY82W8qYMBmeel/wMRC7sV6AQ==
 
 trim-lines@^3.0.0:
   version "3.0.1"
@@ -4528,6 +4677,16 @@ watchpack@2.4.0:
   dependencies:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
+
+web-ifc@0.0.42:
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/web-ifc/-/web-ifc-0.0.42.tgz#4251edaff6a1df6fee6b5aae7154b263187f69cc"
+  integrity sha512-cATk4WPi8xGbxqTO80Qh1T+EDf2s9SFXoBWRqqve3F1TLF++nMWCg0vKkjzxJZQL2InDC5trr8aca7eMsjxKnA==
+
+web-ifc@0.0.43:
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/web-ifc/-/web-ifc-0.0.43.tgz#3ffc8adb8badb7f84c8609adecf39950c7364044"
+  integrity sha512-83rMzZTCZmlACjWYuZRci4GlaWh0hfoTJu/7VKSTOiTm+gAT06fLkIrAqyeOlZnZt/AyY4+IQkPm5RYs6PZPNA==
 
 webgl-constants@^1.1.1:
   version "1.1.1"

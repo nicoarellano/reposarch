@@ -16,6 +16,15 @@ import DynamoConsiderations from "./DynamoConsiderations.mdx";
 export const content: Toc = [
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu"
+        title="Class 4  - Scripting and Visual Programming"
+        caption={"Class 4  - Scripting and Visual Programming"}
+      />
+    ),
+  },
+  {
+    element: (
       <Quote
         quote={
           "GUIs have profoundly changed the way in which architects interact with computers. \

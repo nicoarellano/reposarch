@@ -45,4 +45,9 @@ Here is an example of using Metashape with Blender: https://youtu.be/rc4pUHolxgA
 Please let me know if you have further questions.",
     url: "",
   },
+  {
+    title: `2023/10/02: I made a small change to the evaluations. Assignment 1 will be your about page, it will be an exercise that we will begin on Thursday (October 5th) in our HTML tutorial. \
+    The mesh/Three.js Assignment becomes Assignment 2 replacing quiz 2. Which means that we have 2 quizzes and 4 assignments worth 10 points each (click here to see the new evaluations schedule)`,
+    url: "https://reposarch.vercel.app/arcn5005/evaluations",
+  },
 ];
