@@ -446,14 +446,6 @@ export const content: Toc = [
 
   {
     element: (
-      <EmojiTitle
-        emoji={"Lab 5 💻😺🐙"}
-        title={"Begin the creation of our first website"}
-      />
-    ),
-  },
-  {
-    element: (
       <Image
         src="/images/week10/html.png"
         alt="Html"
@@ -539,5 +531,25 @@ export const content: Toc = [
   {
     element: <Attributes />,
     notes: "",
+  },
+  {
+    element: (
+      <EmojiTitle
+        emoji={"Lab 5 💻😺🐙"}
+        title={"Begin the creation of our first website"}
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>HTML Editor</h2>
+        <br />
+        <iframe
+          className="w-full h-full"
+          src="https://www.tutorialspoint.com/online_html_editor.php"
+        />
+      </>
+    ),
   },
 ];
