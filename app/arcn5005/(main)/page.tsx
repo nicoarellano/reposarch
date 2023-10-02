@@ -5,6 +5,8 @@ import ProgressPage from "../../../components/Progress";
 import CalendarLegend from "./calendar/calendarLegend";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Button, IconButton } from "@mui/material";
 
 export default function Arcn5005() {
   const photo = "/images/reposarch.png";
@@ -32,6 +34,14 @@ export default function Arcn5005() {
             </em>
           </h3>
           <Image priority src={photo} height={400} width={350} alt={title} />
+          <Button
+            className="px-5"
+            aria-label="Go To Github"
+            href={"https://github.com/nicoarellano/reposarch"}
+            color="inherit"
+          >
+            <GitHubIcon /> &nbsp; Go To Github
+          </Button>
         </div>
         <div className=" flex items-center justify-center flex-col">
           <Calendar />

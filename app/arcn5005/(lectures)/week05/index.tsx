@@ -12,6 +12,7 @@ import OsiCriteria from "./Osi";
 import Lessons from "./ProgramerLessons";
 import Tags from "./Tags";
 import Elements from "./Elements";
+import Attributes from "./Attributes.mdx";
 
 export const content: Toc = [
   {
@@ -490,7 +491,18 @@ export const content: Toc = [
     ),
   },
   {
-    element: <EmojiTitle emoji={"Tags"} title={""} />,
+    element: (
+      <EmojiTitle
+        emoji={"HTML Tags"}
+        title={
+          "Keywords used in HTML to display web-pages with certain properties, they define the HTML Elements"
+        }
+      />
+    ),
+    notes:
+      "HTML tags are keywords used in HTML to display web-pages with certain properties. They are further used for defining HTML elements. \
+      An HTML element consists of a starting tag, some content, and an ending tag. The web browser reads the HTML document from top to bottom, left to right. \
+      Each HTML tag defines a new property that helps in rendering the website.",
   },
   {
     element: <Tags />,
@@ -500,16 +512,32 @@ export const content: Toc = [
       Each HTML tag defines a new property that helps in rendering the website.",
   },
   {
-    element: <EmojiTitle emoji={"Elements"} title={""} />,
+    element: (
+      <EmojiTitle
+        emoji={"HTML Element"}
+        title={"Defined by a start tag '<', some content, and an end tag '/>'"}
+      />
+    ),
   },
   {
     element: <Elements />,
     notes: "",
   },
   {
-    element: <EmojiTitle emoji={"Attributes"} title={""} />,
+    element: (
+      <EmojiTitle
+        emoji={"Attributes"}
+        title={
+          "Provide additional information about HTML elements <elementName attributes> content </elementName>"
+        }
+      />
+    ),
     notes:
-      "An HTML attribute is a piece of markup language used to adjust the behavior or display of an HTML element. \
+      "An HTML attributes is a piece of markup language used to adjust the behavior or display of an HTML element. \
       For example, attributes can be used to change the color, size, or functionality of HTML elements.",
+  },
+  {
+    element: <Attributes />,
+    notes: "",
   },
 ];
