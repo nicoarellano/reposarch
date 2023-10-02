@@ -100,7 +100,7 @@ export default function Freedoms() {
     },
   ];
   return (
-    <div className="overflow-y-auto">
+    <div className=" overflow-y-auto px-8">
       <h2>19 good programmers lessons</h2>
       <br />
       <SimpleAccordion list={osiList} />

@@ -10,6 +10,8 @@ import SimpleButton from "../../../../components/Common/SimpleButton";
 import Freedoms from "./Freedoms";
 import OsiCriteria from "./Osi";
 import Lessons from "./ProgramerLessons";
+import Tags from "./Tags";
+import Elements from "./Elements";
 
 export const content: Toc = [
   {
@@ -149,7 +151,6 @@ export const content: Toc = [
     notes: "",
   },
 
- 
   {
     element: (
       <Quote
@@ -254,7 +255,11 @@ export const content: Toc = [
     ",
   },
   {
-    element: <OsiCriteria />,
+    element: (
+      <div className="h-[500px] overflow-y-auto">
+        <OsiCriteria />
+      </div>
+    ),
   },
   {
     element: (
@@ -484,13 +489,27 @@ export const content: Toc = [
       </>
     ),
   },
-
+  {
+    element: <EmojiTitle emoji={"Tags"} title={""} />,
+  },
+  {
+    element: <Tags />,
+    notes:
+      "HTML tags are keywords used in HTML to display web-pages with certain properties. They are further used for defining HTML elements. \
+      An HTML element consists of a starting tag, some content, and an ending tag. The web browser reads the HTML document from top to bottom, left to right. \
+      Each HTML tag defines a new property that helps in rendering the website.",
+  },
   {
     element: <EmojiTitle emoji={"Elements"} title={""} />,
   },
- 
+  {
+    element: <Elements />,
+    notes: "",
+  },
   {
     element: <EmojiTitle emoji={"Attributes"} title={""} />,
+    notes:
+      "An HTML attribute is a piece of markup language used to adjust the behavior or display of an HTML element. \
+      For example, attributes can be used to change the color, size, or functionality of HTML elements.",
   },
-  
 ];

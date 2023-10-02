@@ -54,7 +54,7 @@ export default function OsiCriteria() {
     },
   ];
   return (
-    <div>
+    <div className=" overflow-y-auto px-8">
       <SimpleAccordion list={osiList} />
     </div>
   );

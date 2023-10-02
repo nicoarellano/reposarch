@@ -24,7 +24,7 @@ export default function Freedoms() {
     },
   ];
   return (
-    <div>
+    <div className=" overflow-y-auto px-8">
       <h2>The four essential freedoms</h2>
       <h5>
         A program is free software if the program’s users have the four
