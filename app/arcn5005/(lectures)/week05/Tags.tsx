@@ -3,35 +3,35 @@ import SimpleAccordion from "../../../../components/Common/SimpleAccordion";
 export default function Tags() {
   const tagsList = [
     {
-      title: "Head tags:",
+      title: "Head tags",
       description: "<title>,<style>,<script>,<link>,<meta> and <base>.",
     },
 
     {
-      title: "Text-formatting tags:",
+      title: "Text-formatting tags",
       description:
         "<h>,<b>,<strong>,<small>,<pre>,<i>,<em>,<sub>,<sup>,<ins>,<dfn>,<del>,<div> and <span>.",
     },
 
-    { title: "Link tags:", description: "<a>, <base>." },
+    { title: "Link tags", description: "<a>, <base>." },
 
-    { title: "List tags:", description: "<ul>, <ol>, <li>, <dl>, <dd>" },
+    { title: "List tags", description: "<ul>, <ol>, <li>, <dl>, <dd>" },
 
     {
-      title: "Table tags:",
+      title: "Table tags",
       description: "table> ,<tr> , <td>, <th>, <thead>, <tbody>, <tfoot>.",
     },
 
     {
-      title: "Form tags:",
+      title: "Form tags",
       description:
         "<form>, <input>, <select>, <option>, <button>, <label>, <fieldset>, <textarea>.",
     },
 
-    { title: "Scripting tags:", description: "<script>, <noscript>" },
+    { title: "Scripting tags", description: "<script>, <noscript>" },
 
     {
-      title: "Image and Object tags:",
+      title: "Image and Object tags",
       description: "<img>, <figure>, <figcaption>, <area>, <map>, <object>.",
     },
   ];
