@@ -546,7 +546,7 @@ export const content: Toc = [
         <h2>HTML Editor</h2>
         <br />
         <iframe
-          className="w-full h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md"
+          className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
           src="https://htmledit.squarefree.com/"
         />
       </>
