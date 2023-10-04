@@ -25,6 +25,15 @@ import SimpleButton from "../../../../components/Common/SimpleButton";
 export const content: Toc = [
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz"
+        title="Class 3  - Representation tools and processes for architects"
+        caption={"Class 3  - Representation tools and processes for architects"}
+      />
+    ),
+  },
+  {
+    element: (
       <>
         <Image
           src="/images/week03/tools-of-the-imagination.jpg"
@@ -47,7 +56,7 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "          It is through the mastery of the full range of tools that the images \
+          "It is through the mastery of the full range of tools that the images \
           in the architect’s mind are translated into drawings and models, and \
           from the drawings and the models into buildings. Whether a simple \
           pencil or computer software, these tools give form to the wishes and \
@@ -233,7 +242,7 @@ export const content: Toc = [
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Points"
         caption={
-          "A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in Dynamo exists in our three-dimensional World Coordinate System and has three coordinates [X,Y,Z].- Dynamo Primer"
+          "A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in CAD software exists in our two-dimensional coordinate systems (X,Y) or three-dimensional (X,Y,Z).- Dynamo Primer"
         }
       />
     ),

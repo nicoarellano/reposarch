@@ -11,6 +11,9 @@ import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
 import { Slides } from "../../types/types";
 import { ThemeContext } from "../../middleware/Theme/context";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+import { useSwipeable } from "react-swipeable";
 
 interface Props {
   list: [];
@@ -21,6 +24,7 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
   const router = useRouter();
   const path = usePathname();
   const [page, setPage] = useState(1);
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   const routerEnd = path.split("/").reverse()[0];
   const [newPath, setNewPath] = useState<string>(path);
@@ -38,6 +42,11 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
   useEffect(() => {
     setPage(currentPage);
   }, [currentPage]);
+
+  const hanldeTouch = useSwipeable({
+    onSwipedLeft: () => setPage(Math.min(page + 1, list.length)),
+    onSwipedRight: () => setPage(Math.max(page - 1, 1)),
+  });
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -75,11 +84,12 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
     >
       <Stack spacing={2} visibility={list.length > 1 ? "visible" : "hidden"}>
         <Pagination
-          className="  flex justify-center p-3 "
+          className="  flex justify-center p-3 small"
           count={list.length}
-          size="large"
+          size={isMobile ? "medium" : "large"}
           page={page}
           onChange={handlePaginationChange}
+          onTouchStart={() => hanldeTouch}
           renderItem={(item) => (
             <PaginationItem
               slots={{ previous: BackIcon, next: ForwardIcon }}
@@ -102,6 +112,7 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
   const pathIndex = slides.findIndex((slide) => slide.url === path);
   const [index, setIndex] = useState<number>(pathIndex === -1 ? 0 : pathIndex);
   const [page, setPage] = useState(index + 1);
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   const { mode } = useContext(ThemeContext)["state"]["theme"];
 
@@ -109,6 +120,11 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
     const index = slides.findIndex((slide) => slide.url === path);
     setIndex(index === 0 ? 1 : index);
   }, [path]);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setPage(Math.min(page + 1, slides.length)),
+    onSwipedRight: () => setPage(Math.max(page - 1, 1)),
+  });
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
@@ -150,9 +166,9 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
     >
       <Stack spacing={2} visibility={slides.length > 1 ? "visible" : "hidden"}>
         <Pagination
-          className="  flex justify-center"
+          className="  flex justify-center small"
           count={slides.length}
-          size="large"
+          size={isMobile ? "medium" : "large"}
           page={page}
           onChange={handlePaginationChange}
           renderItem={(item) => (

@@ -122,7 +122,7 @@ export const content: Toc = [
         src="/images/week01/durers-window.jpg"
         alt="Durer's Window"
         caption={
-          "Albrech Durer's window 'Instruction on Measurement with Compass and Ruller' 1525"
+          "Albrecht Durer's window 'Instruction on Measurement with Compass and Ruller' 1525"
         }
       />
     ),
@@ -168,7 +168,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "Alberti's dream remained technically impossible for 500 years untill the creation of the modern computers.",
+      "Alberti's dream remained technically impossible for 500 years until the creation of the modern computers.",
   },
   {
     element: (
@@ -180,8 +180,6 @@ export const content: Toc = [
         }
       />
     ),
-    notes:
-      "Alberti's dream remained technically impossible for 500 years untill the creation of the modern computers.",
   },
   {
     element: (
@@ -414,7 +412,7 @@ export const content: Toc = [
     notes:
       "to describe a system that can be understood only in\
     terms of its inputs and outputs, but which process is not accessible or even visible to users. To\
-    'de-blackbox' is to understand the process, parts, and connection of the system.",
+    'de-black box' is to understand the process, parts, and connection of the system.",
   },
   {
     element: (
@@ -440,7 +438,7 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Two conditions must be met before architects can fully de-blackbox the digital toolbox.\
+      "Two conditions must be met before architects can fully de-black box the digital toolbox.\
     Firstly, architects must have a working knowledge of computer programming. Secondly, the\
     source code—the list of human-readable instructions that define a computer program—of the\
     software that they use must be accessible for modification by the user.",
