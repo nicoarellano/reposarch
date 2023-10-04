@@ -546,8 +546,8 @@ export const content: Toc = [
         <h2>HTML Editor</h2>
         <br />
         <iframe
-          className="w-full h-full"
-          src="https://www.tutorialspoint.com/online_html_editor.php"
+          className="w-full h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md"
+          src="https://htmledit.squarefree.com/"
         />
       </>
     ),
