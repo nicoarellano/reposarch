@@ -50,4 +50,8 @@ Please let me know if you have further questions.",
     The mesh/Three.js Assignment becomes Assignment 2 replacing quiz 2. Which means that we have 2 quizzes and 4 assignments worth 10 points each (click here to see the new evaluations schedule)`,
     url: "https://reposarch.vercel.app/arcn5005/evaluations",
   },
+  {
+    title: `2023/10/05: Today (Thursday, October 5th) we have our first quiz at 13:30 pm it is open book and covers all the content until today. The password is 'q1'. Good luck!. At 2:00 pm we have our guess lecture Julie Ivanoff.`,
+    url: "https://brightspace.carleton.ca/d2l/lms/quizzing/user/quizzes_list.d2l?ou=207080",
+  },
 ];
