@@ -371,7 +371,7 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/week10/css.png"
-        alt="Html"
+        alt="css"
         href="https://www.w3schools.com/css/css_intro.asp"
         caption={
           "Cascading Style Sheets (CSS) is the language we use to style an HTML document"
@@ -547,7 +547,7 @@ export const content: Toc = [
         <br />
         <iframe
           className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
-          src="/arcn5005/f2023/students/nicolasarellanorisop/html-editor/index.html"
+          src="/arcn5005/f2023/students/nicolasarellanorisop/code-editors/html.html"
         />
       </>
     ),
