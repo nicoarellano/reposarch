@@ -5,6 +5,7 @@ import LeftSpeedDial from "../SpeedDial";
 import { usePathname } from "next/navigation";
 import { Slides, Slide } from "../../types/types";
 import { useRouter } from "next/navigation";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 interface Props {
   title: string;
@@ -12,6 +13,7 @@ interface Props {
 
 export function Header({ title }): ReactElement<Props> {
   const router = useRouter();
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
     <nav>
@@ -40,7 +42,10 @@ export function HeaderOfSlide({ slides }): ReactElement<SlidesProps> {
   const path = usePathname();
 
   const currentSlide = slides.find((slide: Slide) => path.endsWith(slide.id));
-  const slideTitle: string = currentSlide?.title;
+
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
+  const slideTitle: string = isMobile ? "ARCN5005" : currentSlide?.title;
 
   return (
     <nav>
