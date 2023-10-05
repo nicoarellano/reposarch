@@ -14,12 +14,13 @@ import { content as week11 } from "./arcn5005/(lectures)/week11/";
 import { content as week12 } from "./arcn5005/(lectures)/week12/";
 import { content as week13 } from "./arcn5005/(lectures)/week13/";
 import { content as final } from "./arcn5005/(lectures)/final";
+import { content as maps } from "./arcn5005/(lectures)/maps";
 
 const initialDate = dayjs("2023-09-07");
 
 export const arcn5005Lectures: Lectures = [
   {
-    title: "Week 01 - The art of computer graphics",
+    title: "The art of computer graphics",
     id: `week01`,
     url: `week01`,
     date: initialDate,
@@ -38,12 +39,12 @@ export const arcn5005Lectures: Lectures = [
       { title: "The Art of Computer graphics", url: "/arcn5005/week01" },
       {
         title:
-          "🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), creating Github account, forking repo",
+          "🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), Github",
       },
     ],
   },
   {
-    title: "Week 02 - Programming and digitalization of the physical world",
+    title: "Programming and digitalization of the physical world",
     id: `week02`,
     url: `week02`,
     date: initialDate.add(1, "week"),
@@ -56,10 +57,22 @@ export const arcn5005Lectures: Lectures = [
       { title: "Coding, programming, scripting" },
       { title: "🖥️ LAB 2: MeshRoom to Blender" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG",
+        title: "Photogrammetry - Miquel Reina Ortiz",
+        date: dayjs("2023/09/14"),
+      },
+      {
+        url: "https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v",
+        title: "Programming",
+        date: dayjs("2023/09/14"),
+      },
+    ],
   },
 
   {
-    title: "Week 03 - Representation tools and processes for architects",
+    title: "Representation tools and processes for architects",
     id: `week03`,
     url: `week03`,
     date: initialDate.add(2, "week"),
@@ -72,9 +85,16 @@ export const arcn5005Lectures: Lectures = [
 
       { title: "🖥️ LAB 3: P5, LibreCad, and Blender " },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz",
+        title: "CAD, 3D CAD, and BIM",
+        date: dayjs("2023/09/21"),
+      },
+    ],
   },
   {
-    title: "Week 04 - Scripting",
+    title: "Scripting",
     id: `week04`,
     url: `week04`,
     date: initialDate.add(3, "week"),
@@ -92,35 +112,43 @@ export const arcn5005Lectures: Lectures = [
           "🖥️ LAB 4: Scripting - Dynamo / Grasshopper / Blender Geometry Nodes",
       },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu",
+        title: "Scripting and Visual Programming",
+        date: dayjs("2023/09/28"),
+      },
+    ],
   },
 
   {
-    title: "Week 05 - Internet, Collaboration and the Open source movement",
+    title: "Internet, Collaboration and the Open source movement",
     id: `week05`,
     url: `week05`,
     date: initialDate.add(4, "week"),
     content: week05,
     toc: [
       { title: "🟡 Quiz 1" },
-      // { title: "History of internet - Guess lecturer: (?)" },
-      { title: "History of Hackerdom" },
-      { title: "Backend and fronted" },
-      { title: "Git and Github" },
-      { title: "Open source. History of open-source" },
       {
         title:
-          "FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
+          "History of internet and Hackerdom - Guess lecturer: Julie Ivanoff",
       },
       {
         title:
-          "OSI: Erik Raymond - The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary (1999)",
+          "Open source. History of open-source and the free software society",
+      },
+      {
+        title: "FSF: Free Software Foundation",
+      },
+      {
+        title: "OSI: Open Software Initiative",
       },
       { title: "How does a website work? Structure, style, logic" },
       { title: "🖥️ LAB 5: GitHub and HTML" },
     ],
   },
   {
-    title: "Week 06 - Open source software for architects",
+    title: "Open source software for architects",
     id: `week06`,
     url: `week06`,
     date: initialDate.add(5, "week"),
@@ -130,11 +158,12 @@ export const arcn5005Lectures: Lectures = [
       { title: "Coding as a Language, as a tools and as an apparatus." },
       { title: "OS Libraries / Packages" },
       { title: "OSArch" },
+      { title: "Post 2020 milestones" },
       { title: "🖥️ LAB 6: CSS and JavaScript" },
     ],
   },
   {
-    title: "Week 07 - OpenBIM",
+    title: "OpenBIM",
     id: `week07`,
     url: `week07`,
     date: initialDate.add(6, "week"),
@@ -145,7 +174,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "Open vs Closed BIM" },
       { title: "File formats - .rvt vs .ifc" },
       { title: "BuildingSmart International and IFC" },
-      { title: "Post 2020 milestones" },
+
       { title: "🖥️ LAB 7: BlenderBIM" },
     ],
   },
@@ -157,7 +186,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [],
   },
   {
-    title: "Week 08 - Web based 3D graphics",
+    title: "Web based 3D graphics",
     id: `week08`,
     url: `week08`,
     date: initialDate.add(8, "week"),
@@ -172,7 +201,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 09 - IFC to the browser",
+    title: "IFC to the browser",
     id: `week09`,
     url: `week09`,
     date: initialDate.add(9, "week"),
@@ -187,7 +216,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 10 - OS GIS",
+    title: "Open Source GIS",
     id: `week10`,
     url: `week10`,
     date: initialDate.add(10, "week"),
@@ -204,7 +233,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 11 - Going online “hello world”",
+    title: "Going online “hello world”",
     id: `week11`,
     url: `week11`,
     date: initialDate.add(11, "week"),
@@ -218,7 +247,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 12 - Scalability and maintainability",
+    title: "Scalability and maintainability",
     id: `week12`,
     url: `week12`,
     date: initialDate.add(12, "week"),
@@ -233,9 +262,8 @@ export const arcn5005Lectures: Lectures = [
       { title: "🖥️ LAB 12 : Web based BIM GIS software" },
     ],
   },
-
   {
-    title: "Week 13",
+    title: "Final assignment workshop and Presentations",
     id: `week13`,
     url: `week13`,
     date: initialDate.add(13, "week"),
@@ -252,5 +280,34 @@ export const arcn5005Lectures: Lectures = [
     date: dayjs("2023-12-18"),
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
+  },
+  {
+    title: "🗺️ Maps and GIS 🌎",
+    id: `maps`,
+    url: `maps`,
+    date: dayjs("2023-09-25"),
+    content: maps,
+    toc: [
+      { title: "History of Mapping" },
+      { title: "Map Projections" },
+      { title: "Geodetic reference systems - NAD83 vs WGS84" },
+      { title: "Digital Maps" },
+      { title: "Geospatial Information Systems" },
+      { title: "Proprietary web GIS - Cesium and Mapbox" },
+      { title: "Open Source web GIS - Leaflet and Maplibre" },
+      { title: "🖥️ LAB : Maplibre" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
+        title: "Maps, GIS and Map renderers",
+        date: dayjs("2023/09/25"),
+      },
+      {
+        url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
+        title: "Maplibre - Tutorial 1",
+        date: dayjs("2023/09/25"),
+      },
+    ],
   },
 ];

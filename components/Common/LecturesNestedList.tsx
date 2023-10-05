@@ -21,7 +21,7 @@ interface Props {
 
 type OpenArray = boolean[];
 
-export default function LencutesNestedList({ list }: Props) {
+export default function LecturesNestedList({ list }: Props) {
   const [open, setOpen] = useState<OpenArray>([]);
 
   const handleClick = (index: number) => {
@@ -60,7 +60,7 @@ export default function LencutesNestedList({ list }: Props) {
               }`}
             />
             <Link
-              hidden={item.date > dayjs().add(1, "days")}
+              hidden={item.date >= dayjs()}
               href={item.url ? item.url : item.id}
               title={item.title}
             >
