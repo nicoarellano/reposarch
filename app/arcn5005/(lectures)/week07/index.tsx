@@ -8,20 +8,29 @@ import PdfViewer from "../../../../components/Common/PdfViewer";
 
 export const content: Toc = [
   {
+    element: <EmojiTitle emoji={"🏗️💻"} title={"Open Source BIM"} />,
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/internet/Raphael.jpg"
+        alt="Raphaël Vouilloz"
+        caption="Guess lecturer: Raphaël Vouilloz"
+      />
+    ),
+    notes: "",
+  },
+  {
     element: (
       <>
-        <h2>Which language to use?</h2>
+        <h3>Raphaël Vouilloz</h3>
         <br />
-        <h4>All modern web browsers are based on 3 technologies</h4>
-        <br />
-        <Image
-          src="/images/week10/html-css-js.png"
-          alt="JavaScript"
-          caption={"Technology behind web browsers: HTML - CSS - JS"}
-        />
+        <h5></h5>
       </>
     ),
   },
+
   {
     element: (
       <>
