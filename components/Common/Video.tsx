@@ -12,9 +12,10 @@ export default function Video({ src, title, caption = null, ...props }: Props) {
       <iframe
         width="100%"
         height="100%"
-        src={src}
+        src={`${src}&&autoplay=1&&loop=1`}
         title={title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; autoplay; loop"
+        allowFullScreen
         {...props}
       ></iframe>
       {caption && (
