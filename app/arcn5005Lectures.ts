@@ -167,10 +167,11 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(5, "week"),
     content: week06,
     toc: [
-      { title: "Programming and architecture" },
-      { title: "Coding as a Language, as a tools and as an apparatus." },
-      { title: "OS Libraries / Packages" },
+      { title: "Open vs Closed BIM" },
+      { title: "BuildingSmart International and IFC" },
+      { title: "File formats - .rvt vs .ifc" },
       { title: "OSArch" },
+      { title: "OS Libraries / Packages" },
       { title: "Post 2020 milestones" },
       { title: "🖥️ LAB 6: CSS and JavaScript" },
     ],
@@ -184,9 +185,6 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
       { title: "🔴 Assignment 1 - presentation" },
-      { title: "Open vs Closed BIM" },
-      { title: "File formats - .rvt vs .ifc" },
-      { title: "BuildingSmart International and IFC" },
 
       { title: "🖥️ LAB 7: BlenderBIM" },
     ],
