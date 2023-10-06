@@ -59,6 +59,18 @@ export const content: Toc = [
   {
     element: (
       <Video
+        src="https://www.youtube.com/embed/qEGt81c3DTM?si=6K_swhkQAz6OUtUM"
+        title="Imagine Canada's Digital Twin by Julie Ivanoff (CIMS)"
+        caption={
+          "Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge"
+        }
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Video
         src="https://www.youtube.com/embed/8S1xgigeiz8?si=ZAKCacK-YaRxKiMn"
         title="Imagine Canada's Digital Twin by Julie Ivanoff (CIMS)"
         caption={
@@ -183,21 +195,7 @@ export const content: Toc = [
     notes:
       "Patent Absurdity: How software patents broke the system is a half-hour film about software patents. It explores the case of software patents and the history of judicial activism that led to their rise, as well as the harm being done to software developers and the wider economy. The film is based on a series of interviews conducted during the US Supreme Court's review of in Re Bilski — a case that could have had profound implications for the patenting of software.",
   },
-  // {
-  //   element: (
-  //     <Image
-  //       src="/images/internet/rms.png"
-  //       alt="RMS"
-  //       href="https://en.wikipedia.org/wiki/Richard_Stallman"
-  //       caption={
-  //         "Richard M. Stallman, American free software movement activist and programmer. Founder of the Free Software Foundation"
-  //       }
-  //     />
-  //   ),
-  //   notes:
-  //     "The Free Software Foundation (FSF) is a nonprofit with a worldwide mission to promote computer user freedom. We defend the rights of all software users. \
-  //   ",
-  // },
+
   {
     element: (
       <Quote
@@ -456,6 +454,17 @@ export const content: Toc = [
       />
     ),
   },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/qqNEEniAkf8?si=qOMLrngQ-Ek70xSE"
+        title="Imagine Canada's Digital Twin by Julie Ivanoff (CIMS)"
+        caption={"Intro to HTML and Assignment 1"}
+      />
+    ),
+  },
+
   {
     element: (
       <>
