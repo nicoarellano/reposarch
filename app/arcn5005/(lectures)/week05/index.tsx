@@ -55,7 +55,13 @@ export const content: Toc = [
       </>
     ),
   },
-
+  {
+    element: (
+      <>
+        <PdfViewer src="/resources/Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge.pdf" />
+      </>
+    ),
+  },
   {
     element: (
       <Video
