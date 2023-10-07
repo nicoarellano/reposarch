@@ -287,8 +287,7 @@ it is very hard to achieve openBIM",
               style definitions.
               <br />
               Look at the following CSS code (the h1, h2, and p elements have
-              the same style definitions): To select an element with a specific
-              id, write a hash (#) character, followed by the id of the element.{" "}
+              the same style definitions)
               <br /> example:
               <b className="text-red">h1 {"{color: red;}"}</b>
               <br /> example:
