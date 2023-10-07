@@ -131,7 +131,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "🟡 Quiz 1" },
       {
         title:
-          "History of internet and Hackerdom - Guess lecturer: Julie Ivanoff",
+          "Guess lecturer: Julie Ivanoff: Brief history of the computers, the internet, and the domocratization of knowledge",
       },
       {
         title:
@@ -146,6 +146,19 @@ export const arcn5005Lectures: Lectures = [
       { title: "How does a website work? Structure, style, logic" },
       { title: "🖥️ LAB 5: GitHub and HTML" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/qEGt81c3DTM?si=6K_swhkQAz6OUtUM",
+        title:
+          "Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge ",
+        date: dayjs("2023/10/05"),
+      },
+      {
+        url: "https://www.youtube.com/embed/qqNEEniAkf8?si=qOMLrngQ-Ek70xSE",
+        title: "Intro to HTML",
+        date: dayjs("2023/10/05"),
+      },
+    ],
   },
   {
     title: "Open source software for architects",
@@ -154,10 +167,11 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(5, "week"),
     content: week06,
     toc: [
-      { title: "Programming and architecture" },
-      { title: "Coding as a Language, as a tools and as an apparatus." },
-      { title: "OS Libraries / Packages" },
+      { title: "Open vs Closed BIM" },
+      { title: "BuildingSmart International and IFC" },
+      { title: "File formats - .rvt vs .ifc" },
       { title: "OSArch" },
+      { title: "OS Libraries / Packages" },
       { title: "Post 2020 milestones" },
       { title: "🖥️ LAB 6: CSS and JavaScript" },
     ],
@@ -171,9 +185,6 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
       { title: "🔴 Assignment 1 - presentation" },
-      { title: "Open vs Closed BIM" },
-      { title: "File formats - .rvt vs .ifc" },
-      { title: "BuildingSmart International and IFC" },
 
       { title: "🖥️ LAB 7: BlenderBIM" },
     ],
