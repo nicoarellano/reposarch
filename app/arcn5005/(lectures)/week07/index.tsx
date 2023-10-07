@@ -14,7 +14,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/internet/raphael.jpg"
+        src="/images/blenderbim/raphael.jpg"
         alt="Raphaël Vouilloz"
         caption="Guess lecturer: Raphaël Vouilloz"
       />
@@ -52,17 +52,12 @@ export const content: Toc = [
   },
   {
     element: (
-      <>
-        <Image
-          src="/images/week01/js.png"
-          alt="JavaScript"
-          href="https://www.w3schools.com/js/default.asp"
-          caption={"JavaScript is the programming language of the Web"}
-        />
-      </>
+      <Video
+        src="https://youtu.be/kmPPR0fWOrI?si=RuTD7hGKwsIlP1o-"
+        title="Import DXF Files in Blender"
+        caption={"Import DXF Files in Blender"}
+      />
     ),
-    notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
   },
   {
     element: <EmojiTitle emoji={"Lab 7 🏗️"} title={"BlenderBIM"} />,

@@ -6,6 +6,7 @@ import Quote from "../../../../components/Common/Quote";
 import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 import ClosedBim from "./ClosedBim";
+import Selectors from "./Selectors";
 
 export const content: Toc = [
   {
@@ -189,6 +190,7 @@ it is very hard to achieve openBIM",
       </>
     ),
   },
+  // CSS CONTENT
   {
     element: (
       <Image
@@ -200,9 +202,106 @@ it is very hard to achieve openBIM",
         }
       />
     ),
+    notes:
+      "CSS is the language we use to style an HTML document. \n\
+    CSS describes how HTML elements should be displayed. \n\
+    This tutorial will teach you CSS from basic to advanced.",
+  },
+  {
+    element: (
+      <>
+        <Image
+          src="/images/osarch/css-diagram.png"
+          alt="css"
+          href="https://www.w3schools.com/js/default.asp"
+          caption={"JavaScript is the programming language of the Web"}
+        />
+      </>
+    ),
+    notes:
+      "Cascading Style Sheets (CSS), is a simple design language intended to transform the presentation of a Web Pages as well as many ostensibly nonweb environments. \n\
+    CSS handles the look and feel part of a web page. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, \n\
+    how columns are sized and laid out, what background images or colors are used, layout designs, \n\
+    variations in display for different devices and screen sizes as well as a variety of other effects. \n\
+    CSS is easy to learn and understand but it provides powerful control over the presentation of an HTML document. Most commonly, CSS is combined with the markup languages HTML or XHTML.",
+  },
+  {
+    element: (
+      <>
+        <h2>How to use CSS?</h2>
+        <br />
+        <Image src="/images/osarch/css-types.png" alt="types" />
+      </>
+    ),
+    notes:
+      "The third option generally is the cleanest and the standard due to the separation of concerns it’s much better to separate the structure of the application from its style. \n\
+    Generally the styles are contained in a separate file which by convention is called `styles.css` ****or something similar. This is where the CSS code will be contained. \n\
+    Making one or several CSS files depends on the project. \n\
+    *** A single CSS file usually is more than enough for simple projects, but we’ll see some cases in which we’ll want to separate them (e.g. when creating responsive styles) \n\
+    The CSS files must be linked to the HTML by inserting a `<link>` element in the `<head>` section as follows:",
   },
 
-  // CSS CONTENT
+  {
+    element: (
+      <div className=" overflow-y-auto px-8">
+        <h2>CSS Selectors</h2>
+        <h4>
+          CSS selectors are used to “find” (or select) the HTML elements you
+          want to style.
+        </h4>
+        <br />
+        <ol>
+          <li>
+            <h3>Universal selectors</h3>
+            <h5>
+              The universal selector (*) selects all HTML elements on the page.
+              <br /> example:
+              <b className="text-red">* {"{color: red;}"}</b>
+            </h5>
+          </li>
+          <li>
+            <h3>ID selectors</h3>
+            <h5>
+              The id selector uses the id attribute of an HTML element to select
+              a specific element. <br /> The id of an element is unique within a
+              page, so the id selector is used to select one unique element!
+              <br />
+              To select an element with a specific id, write a hash (#)
+              character, followed by the id of the element. <br /> example:
+              <b className="text-red">#page-title {"{color: red;}"}</b>
+            </h5>
+          </li>
+          <li>
+            <h3>Class selectors</h3>
+            <h5>
+              The class selector selects HTML elements with a specific class
+              attribute. <br />
+              To select elements with a specific class, write a period (.)
+              character, followed by the class name. <br /> example:
+              <b className="text-red">.pages {"{color: red;}"}</b>
+            </h5>
+          </li>
+          <li>
+            <h3>HTML Group selectors</h3>
+            <h5>
+              The grouping selector selects all the HTML elements with the same
+              style definitions.
+              <br />
+              Look at the following CSS code (the h1, h2, and p elements have
+              the same style definitions): To select an element with a specific
+              id, write a hash (#) character, followed by the id of the element.{" "}
+              <br /> example:
+              <b className="text-red">h1 {"{color: red;}"}</b>
+              <br /> example:
+              <b className="text-blue">h2 {"{color: blue;}"}</b>
+              <br /> example:
+              <b className="text-green">p {"{color: green;}"}</b>
+            </h5>
+          </li>
+        </ol>
+      </div>
+    ),
+  },
 
   {
     element: (
