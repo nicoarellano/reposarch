@@ -6,7 +6,6 @@ import Quote from "../../../../components/Common/Quote";
 import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 import ClosedBim from "./ClosedBim";
-import Selectors from "./Selectors";
 
 export const content: Toc = [
   {
