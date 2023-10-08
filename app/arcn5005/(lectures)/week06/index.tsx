@@ -255,7 +255,7 @@ it is very hard to achieve openBIM",
             <h5>
               The universal selector (*) selects all HTML elements on the page.
               <br /> example:
-              <b className="text-red">* {"{color: red;}"}</b>
+              <b className="text-red-500">* {"{color: red;}"}</b>
             </h5>
           </li>
           <li>
@@ -267,7 +267,7 @@ it is very hard to achieve openBIM",
               <br />
               To select an element with a specific id, write a hash (#)
               character, followed by the id of the element. <br /> example:
-              <b className="text-red">#page-title {"{color: red;}"}</b>
+              <b className="text-red-500">#page-title {"{color: red;}"}</b>
             </h5>
           </li>
           <li>
@@ -277,7 +277,7 @@ it is very hard to achieve openBIM",
               attribute. <br />
               To select elements with a specific class, write a period (.)
               character, followed by the class name. <br /> example:
-              <b className="text-red">.pages {"{color: red;}"}</b>
+              <b className="text-red-500">.pages {"{color: red;}"}</b>
             </h5>
           </li>
           <li>
@@ -289,18 +289,43 @@ it is very hard to achieve openBIM",
               Look at the following CSS code (the h1, h2, and p elements have
               the same style definitions)
               <br /> example:
-              <b className="text-red">h1 {"{color: red;}"}</b>
+              <b className="text-red-500">h1 {"{color: red;}"}</b>
               <br /> example:
-              <b className="text-blue">h2 {"{color: blue;}"}</b>
+              <b className="text-blue-500">h2 {"{color: blue;}"}</b>
               <br /> example:
-              <b className="text-green">p {"{color: green;}"}</b>
+              <b className="text-green-500">p {"{color: green;}"}</b>
             </h5>
           </li>
         </ol>
       </div>
     ),
   },
-
+  {
+    element: (
+      <>
+        <Image
+          src="/images/osarch/colors.png"
+          alt="CSS Colors"
+          href="https://color-hex.org/blog/color-wiki"
+          caption={"CSS Colors: Names, RGB+a, HEX, RGB+a"}
+        />
+      </>
+    ),
+    notes:
+      "1. BY NAME: Browsers support some colors by their name. Table 1 shows names, hexadecimal code, values in RGB, HSL formats and description. \n\n\
+      2. RGB+a: The color can be defined by using red, green, and blue components in decimal value. Each of three color components takes value from 0 to 255. It is also possible to set the color percentagewise with 100% corresponding to the number 255. At first the rgb keyword to be indicated, and then color components within the brackets and separated by a comma, for example rgb (255, 128, 128) or rgb (100%, 50%, 50%). \
+      The RGBA format is similar to RGB in syntax, but includes the alpha channel that specifies the transparency of the element. The value 0 corresponds to full transparency, the value 1 to opacity, and the intermediate value like 0.5 to translucency. \n\n\
+      3. HEX: s based, as the term implies, on the number 16. The numbers are as follows: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. \
+      Numbers from 10 to 15 are replaced by Latin letters. Numbers which are greater than 15 in the hexadecimal system are formed by combining two numbers into one. \
+      For example, the number 255 in the decimal system corresponds to FF value in the hexadecimal system. \
+      In order to avoid confusion in the definition of the number system, the hexadecimal number is preceded by octothorp, for example # 666999. \
+      Each of three colors - red, green and blue - can take the value from 00 to FF. \
+      Thus, color representation is divided into three #rrggbb components, where the first two characters represent the red component of the color, two others in the middle represent green, and the last two represent blue. \
+      It is acceptable to use the abbreviated form of #rgb coding type, where each character has to be doubled. Thus, the code # fe0 is to be considered as # ffee00.\n\n\
+      4. HSL+a: The name of the HSL format is formed from the combination of the first letters of words Hue, Saturate and Lightness. Hue is the color value on the color wheel (fig. 1) and is measured in degrees. 0 ° corresponds to red, 120 ° to green, and 240 ° to blue. The hue value can vary from 0 to 359. \
+      Saturation is the intensity of the color, measured in percentages from 0% to 100%. The value of 0% means the absence of the color and the shade of gray, the value of 100% means the maximum value of saturation. \
+      Lightness specifies how bright the color is and is measured in percentages from 0% to 100%. Small values make the color darker, and high values make the color lighter, values of 0% and 100% correspond to black and white.",
+  },
   {
     element: (
       <>

@@ -53,7 +53,7 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://youtu.be/kmPPR0fWOrI?si=RuTD7hGKwsIlP1o-"
+        src="https://www.youtube.com/embed/kmPPR0fWOrI?si=Z4gWdJ1Y0aa51h2G"
         title="Import DXF Files in Blender"
         caption={"Import DXF Files in Blender"}
       />
