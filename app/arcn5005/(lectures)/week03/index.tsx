@@ -477,7 +477,7 @@ export const content: Toc = [
       <>
         <h2>Geometry vs Topology</h2>
         <br />
-        <table id="simple-table">
+        <table className="simple-table">
           <thead>
             <th>Geometry </th>
             <th>Topology </th>
@@ -753,7 +753,7 @@ export const content: Toc = [
       <>
         <h2>Comparison of solid modelling methods</h2>
         <br />
-        <table id="simple-table">
+        <table className="simple-table">
           <thead>
             <td></td>
             <th>Octrees</th>

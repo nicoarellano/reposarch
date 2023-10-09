@@ -453,7 +453,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <table id="simple-table">
+        <table className="simple-table">
           <thead>
             <tr>
               <th>Characteristics</th>
