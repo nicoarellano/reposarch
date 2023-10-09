@@ -210,7 +210,7 @@ it is very hard to achieve openBIM",
     element: (
       <>
         <Image
-          src="/images/osarch/css-diagram.png"
+          src="/images/css/css-diagram.png"
           alt="css"
           href="https://www.w3schools.com/js/default.asp"
           caption={"JavaScript is the programming language of the Web"}
@@ -229,7 +229,7 @@ it is very hard to achieve openBIM",
       <>
         <h2>How to use CSS?</h2>
         <br />
-        <Image src="/images/osarch/css-types.png" alt="types" />
+        <Image src="/images/css/css-types.png" alt="types" />
       </>
     ),
     notes:
@@ -304,7 +304,7 @@ it is very hard to achieve openBIM",
     element: (
       <>
         <Image
-          src="/images/osarch/colors.png"
+          src="/images/css/colors.png"
           alt="CSS Colors"
           href="https://color-hex.org/blog/color-wiki"
           caption={"CSS Colors: Names, HEX,  RGB+a, RGB+a"}
@@ -339,7 +339,7 @@ it is very hard to achieve openBIM",
         </h4>
         <br />
         <Image
-          src="/images/osarch/css-units.png"
+          src="/images/css/css-units.png"
           alt="CSS Units"
           caption={"CSS Units"}
         />
