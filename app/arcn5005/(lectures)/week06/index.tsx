@@ -304,7 +304,7 @@ it is very hard to achieve openBIM",
     element: (
       <>
         <Image
-          src="/images/css/colors.png"
+          src="/images/css/css-colors.png"
           alt="CSS Colors"
           href="https://color-hex.org/blog/color-wiki"
           caption={"CSS Colors: Names, HEX,  RGB+a, RGB+a"}
