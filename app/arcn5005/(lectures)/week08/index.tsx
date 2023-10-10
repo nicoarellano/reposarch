@@ -64,24 +64,6 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
       → 3D: creating three-dimensional charts and cool animations.",
   },
 
-  // Three js
-  {
-    element: (
-      <>
-        <Image
-          src="/images/three/three-js-logo.png"
-          alt="Three js"
-          href="https://threejs.org/"
-          caption={
-            "Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage"
-          }
-        />
-      </>
-    ),
-    notes:
-      "Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage. \n\
-      Three.js is often confused with WebGL since more often than not, but not always, three.js uses WebGL to draw 3D.",
-  },
   {
     element: (
       <>
@@ -132,12 +114,73 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
   },
   {
     element: (
+      <>
+        <Image
+          src="/images/three/gltf-jpeg-of-3d.jpg"
+          alt="GLTF"
+          href="https://www.khronos.org/gltf/"
+          caption={"glTF is the 'JPEG of 3D'"}
+        />
+      </>
+    ),
+    notes: "",
+  },
+  {
+    element: (
+      <>
+        <Image
+          src="/images/three/gltf-ecosystem.png"
+          alt="GLTF"
+          href="https://www.khronos.org/gltf/"
+          caption={"glTF Ecosystem'"}
+        />
+      </>
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
       <Video
         src="https://www.youtube.com/embed/tonSNnEj-ow?si=h7M704Svi3SpAvN3"
         title="Gltf"
         caption={"What is GLTF"}
       />
     ),
+  },
+  {
+    element: (
+      <>
+        <h3>How does WebGL looks like?</h3>
+        <br />
+        <Image
+          src="/images/three/webgl-vertex-shader.png"
+          alt="WebGL shaders"
+          caption={"WebGL shaders are hard to use"}
+        />
+      </>
+    ),
+    notes:
+      "To do anything useful with WebGL generally requires quite a bit of code and that is where three.js comes in. \
+    It handles stuff like scenes, lights, shadows, materials, textures, 3d math, all things that you'd have to write yourself if you were to use WebGL directly.",
+  },
+  // Three js
+  {
+    element: (
+      <>
+        <Image
+          src="/images/three/three-js-logo.png"
+          alt="Three js"
+          href="https://threejs.org/"
+          caption={
+            "Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage"
+          }
+        />
+      </>
+    ),
+    notes:
+      "Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage. \n\
+      Three.js is often confused with WebGL since more often than not, but not always, three.js uses WebGL to draw 3D.",
   },
   {
     element: (
