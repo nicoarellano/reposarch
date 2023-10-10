@@ -221,7 +221,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       {
         title:
-          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software (MeshRoom or Metashape) and Three.js",
+          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
       },
       { title: "Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },
