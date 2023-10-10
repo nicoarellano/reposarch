@@ -548,7 +548,7 @@ export const content: Toc = [
         </h4>
         <br />
         <Image
-          src="/images/computer-graphics/js.png"
+          src="/images/javascript/js.png"
           alt="JavaScript"
           href="https://gowithcode.com/top-programming-languages#javascript"
         />

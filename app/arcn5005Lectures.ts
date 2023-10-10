@@ -173,7 +173,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "OSArch" },
       { title: "OS Libraries / Packages" },
       { title: "Post 2020 milestones" },
-      { title: "🖥️ LAB 6: CSS and JavaScript" },
+      { title: "🖥️ LAB 6: HTML and CSS" },
     ],
   },
   {
@@ -185,7 +185,6 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
       { title: "🔴 Assignment 1 - presentation" },
-
       { title: "🖥️ LAB 7: BlenderBIM" },
     ],
   },
@@ -203,11 +202,10 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
-      { title: "Web based 3D graphics" },
-      { title: "WebGL" },
+      { title: "WebGL - Web based 3D graphics" },
       { title: "GLTF" },
-      { title: "Tree.js" },
-      { title: "🖥️ LAB 8: Three.js" },
+      { title: "Tree.js, intro to ifc.js" },
+      { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
     ],
   },
 
@@ -218,8 +216,8 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
-      { title: "🟡 Quiz 2" },
-      { title: "BlenderBIM - Guess lecturer: That Open Company" },
+      { title: "🔴 Assignment 2 - presentation" },
+      { title: "Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },
       { title: "IFC.js" },
       { title: "🖥️ LAB 9: IFC.js and OpenBIM Components" },
@@ -250,7 +248,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
-      { title: "🔴 Assignment 2 - presentation" },
+      { title: "🔴 Assignment 3 - presentation" },
       { title: "Deploy your software" },
       { title: "Github pages" },
       { title: "🖥️ LAB 11: Web based BIM GIS software" },
@@ -280,7 +278,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(13, "week"),
     content: week13,
     toc: [
-      { title: "🔴 Assignment 3 - presentation" },
+      { title: "🔴 Assignment 4 - presentation" },
       { title: "🖥️ LAB 13 Final assignment workshop" },
     ],
   },
