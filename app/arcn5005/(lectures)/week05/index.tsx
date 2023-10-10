@@ -281,7 +281,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/top-programming-languages.png"
+        src="/images/coding/top-programming-languages.png"
         alt="Top programming languages"
         href="https://gowithcode.com/top-programming-languages"
         caption="Top programming languages: https://gowithcode.com/top-programming-languages"
@@ -320,7 +320,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/internet-usage.png"
+        src="/images/maps/internet-usage.png"
         alt="WORLD INTERNET USAGE AND POPULATION STATISTICS"
         href="https://en.wikipedia.org/wiki/Web_browser"
         caption={
@@ -332,7 +332,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/web-browsers.png"
+        src="/images/maps/web-browsers.png"
         alt="Web Browsers"
         href="https://en.wikipedia.org/wiki/Web_browser"
         caption={
@@ -350,7 +350,7 @@ export const content: Toc = [
         <h4>All modern web browsers are based on 3 technologies</h4>
         <br />
         <Image
-          src="/images/week10/html-css-js.png"
+          src="/images/html-css-js.png"
           alt="JavaScript"
           caption={"Technology behind web browsers: HTML - CSS - JS"}
         />
@@ -361,7 +361,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/html.png"
+        src="/images/html/html.png"
         alt="JavaScript"
         href="https://www.w3schools.com/html/html_intro.asp"
         caption={
@@ -374,7 +374,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/css.png"
+        src="/images/css/css.png"
         alt="css"
         href="https://www.w3schools.com/css/css_intro.asp"
         caption={
@@ -388,7 +388,7 @@ export const content: Toc = [
     element: (
       <>
         <Image
-          src="/images/week01/js.png"
+          src="/images/javascript/js.png"
           alt="JavaScript"
           href="https://www.w3schools.com/js/default.asp"
           caption={"JavaScript is the programming language of the Web"}
@@ -402,7 +402,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/vsCode.png"
+        src="/images/computer-graphics/vsCode.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={"Visual Studio Code, free IDE from Microsoft."}
@@ -414,7 +414,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/extensions.png"
+        src="/images/computer-graphics/extensions.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={
@@ -434,7 +434,7 @@ export const content: Toc = [
         <h1>What is Node.js?</h1>
         <br />
         <Image
-          src="/images/week01/nodejs.png"
+          src="/images/computer-graphics/nodejs.png"
           alt="Node.js"
           href="https://en.wikipedia.org/wiki/Nodejs#"
           caption={"Node.js - Wikipedia"}
@@ -451,7 +451,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/html.png"
+        src="/images/html/html.png"
         alt="Html"
         href="https://www.w3schools.com/html/html_intro.asp"
         caption={

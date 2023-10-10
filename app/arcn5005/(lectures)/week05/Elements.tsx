@@ -5,7 +5,7 @@ export default function Elements() {
       <h4>{`<elementName attributes> content </elementName>`}</h4>
       <br />
       <div className="flex justify-center">
-        <table id="simple-table">
+        <table className="simple-table">
           <tbody>
             <tr>
               <th>Tag name</th>

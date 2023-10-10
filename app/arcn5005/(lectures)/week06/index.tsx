@@ -182,7 +182,7 @@ it is very hard to achieve openBIM",
         <h4>All modern web browsers are based on 3 technologies</h4>
         <br />
         <Image
-          src="/images/week10/html-css-js.png"
+          src="/images/html-css-js.png"
           alt="JavaScript"
           caption={"Technology behind web browsers: HTML - CSS - JS"}
         />
@@ -193,7 +193,7 @@ it is very hard to achieve openBIM",
   {
     element: (
       <Image
-        src="/images/week10/css.png"
+        src="/images/css/css.png"
         alt="css"
         href="https://www.w3schools.com/css/css_intro.asp"
         caption={
@@ -210,7 +210,7 @@ it is very hard to achieve openBIM",
     element: (
       <>
         <Image
-          src="/images/osarch/css-diagram.png"
+          src="/images/css/css-diagram.png"
           alt="css"
           href="https://www.w3schools.com/js/default.asp"
           caption={"JavaScript is the programming language of the Web"}
@@ -229,12 +229,12 @@ it is very hard to achieve openBIM",
       <>
         <h2>How to use CSS?</h2>
         <br />
-        <Image src="/images/osarch/css-types.png" alt="types" />
+        <Image src="/images/css/css-types.png" alt="types" />
       </>
     ),
     notes:
       "The third option generally is the cleanest and the standard due to the separation of concerns it’s much better to separate the structure of the application from its style. \n\
-    Generally the styles are contained in a separate file which by convention is called `styles.css` ****or something similar. This is where the CSS code will be contained. \n\
+    Generally the styles are contained in a separate file which by convention is called `styles.css` *or something similar. This is where the CSS code will be contained. \n\
     Making one or several CSS files depends on the project. \n\
     *** A single CSS file usually is more than enough for simple projects, but we’ll see some cases in which we’ll want to separate them (e.g. when creating responsive styles) \n\
     The CSS files must be linked to the HTML by inserting a `<link>` element in the `<head>` section as follows:",
@@ -255,7 +255,7 @@ it is very hard to achieve openBIM",
             <h5>
               The universal selector (*) selects all HTML elements on the page.
               <br /> example:
-              <b className="text-red">* {"{color: red;}"}</b>
+              <b className="text-red-500">* {"{color: red;}"}</b>
             </h5>
           </li>
           <li>
@@ -267,7 +267,7 @@ it is very hard to achieve openBIM",
               <br />
               To select an element with a specific id, write a hash (#)
               character, followed by the id of the element. <br /> example:
-              <b className="text-red">#page-title {"{color: red;}"}</b>
+              <b className="text-red-500">#page-title {"{color: red;}"}</b>
             </h5>
           </li>
           <li>
@@ -277,7 +277,7 @@ it is very hard to achieve openBIM",
               attribute. <br />
               To select elements with a specific class, write a period (.)
               character, followed by the class name. <br /> example:
-              <b className="text-red">.pages {"{color: red;}"}</b>
+              <b className="text-red-500">.pages {"{color: red;}"}</b>
             </h5>
           </li>
           <li>
@@ -287,56 +287,211 @@ it is very hard to achieve openBIM",
               style definitions.
               <br />
               Look at the following CSS code (the h1, h2, and p elements have
-              the same style definitions): To select an element with a specific
-              id, write a hash (#) character, followed by the id of the element.{" "}
+              the same style definitions)
               <br /> example:
-              <b className="text-red">h1 {"{color: red;}"}</b>
+              <b className="text-red-500">h1 {"{color: red;}"}</b>
               <br /> example:
-              <b className="text-blue">h2 {"{color: blue;}"}</b>
+              <b className="text-blue-500">h2 {"{color: blue;}"}</b>
               <br /> example:
-              <b className="text-green">p {"{color: green;}"}</b>
+              <b className="text-green-500">p {"{color: green;}"}</b>
             </h5>
           </li>
         </ol>
       </div>
     ),
   },
-
   {
     element: (
       <>
         <Image
-          src="/images/week01/js.png"
-          alt="JavaScript"
-          href="https://www.w3schools.com/js/default.asp"
-          caption={"JavaScript is the programming language of the Web"}
+          src="/images/css/css-colors.png"
+          alt="CSS Colors"
+          href="https://color-hex.org/blog/color-wiki"
+          caption={"CSS Colors: Names, HEX,  RGB+a, RGB+a"}
         />
       </>
     ),
     notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
+      "1. BY NAME: Browsers support some colors by their name. Table shows names, hexadecimal code, values in RGB, HSL formats and description. \n\n\
+      2. HEX: Hexadecimal colors are based, on the number 16. The numbers are as follows: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. \
+      Numbers from 10 to 15 are replaced by Latin letters. Numbers which are greater than 15 in the hexadecimal system are formed by combining two numbers into one. \
+      For example, the number 255 in the decimal system corresponds to FF value in the hexadecimal system. \
+      In order to avoid confusion in the definition of the number system, the hexadecimal number is preceded by octothorp, for example # 666999 or 0x... in JavaScript. \
+      Each of three colors - red, green and blue - can take the value from 00 to FF. \
+      Thus, color representation is divided into three #rrggbb components, where the first two characters represent the red component of the color, two others in the middle represent green, and the last two represent blue. \
+      It is acceptable to use the abbreviated form of #rgb coding type, where each character has to be doubled. Thus, the code # fe0 is to be considered as # ffee00.\n\n\
+      3. RGB+a: The color can be defined by using red, green, and blue components in decimal value. Each of three color components takes value from 0 to 255. It is also possible to set the color percentagewise with 100% corresponding to the number 255. At first the rgb keyword to be indicated, \
+      and then color components within the brackets and separated by a comma, for example rgb (255, 128, 128) or rgb (100%, 50%, 50%). \
+      The RGBA format is similar to RGB in syntax, but includes the alpha channel that specifies the transparency of the element. The value 0 corresponds to full transparency, the value 1 to opacity, and the intermediate value like 0.5 to translucency. \n\n\
+      4. HSL+a: Hue, Saturate and Lightness. Hue is the color value on the color wheel and is measured in degrees. 0° corresponds to red, 120 ° to green, and 240 ° to blue. The hue value can vary from 0 to 359. \
+      Saturation is the intensity of the color, measured in percentages from 0% to 100%. The value of 0% means the absence of the color and the shade of gray, the value of 100% means the maximum value of saturation. \
+      Lightness specifies how bright the color is and is measured in percentages from 0% to 100%. Small values make the color darker, and high values make the color lighter, values of 0% and 100% correspond to black and white.",
   },
 
-  // JAVASCRIPT CONTENT
+  {
+    element: (
+      <>
+        <h2>CSS Units 📏</h2>
+        <br />
+        <h4>
+          Many CSS properties take <em>length</em> values, such as width,
+          margin, padding, font-size, etc.
+        </h4>
+        <br />
+        <Image
+          src="/images/css/css-units.png"
+          alt="CSS Units"
+          caption={"CSS Units"}
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Absolute Lengths</h2>
+        <h5>
+          The absolute length units are fixed and a length expressed in any of
+          these will appear as exactly that size. Absolute length units are not
+          recommended for use on screen, because screen sizes vary so much.
+          However, they can be used if the output medium is known, such as for
+          print layout.
+        </h5>
+        <br />
+        <table className="simple-table  text-left">
+          <tbody>
+            <tr>
+              <th>Unit</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>cm</td>
+              <td>centimeters</td>
+            </tr>
+            <tr>
+              <td>mm</td>
+              <td>millimeters</td>
+            </tr>
+            <tr>
+              <td>in</td>
+              <td>inches (1in = 96px = 2.54cm)</td>
+            </tr>
+            <tr>
+              <td>px *</td>
+              <td>pixels (1px = 1/96th of 1in)</td>
+            </tr>
+            <tr>
+              <td>pt</td>
+              <td>points (1pt = 1/72 of 1in)</td>
+            </tr>
+            <tr>
+              <td>pc</td>
+              <td>picas (1pc = 12 pt)</td>
+            </tr>
+          </tbody>
+        </table>
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Relative Lengths</h2>
+        <h5>
+          Relative length units specify a length relative to another length
+          property. Relative length units scale better between different
+          rendering mediums.
+        </h5>
+        <br />
+        <table className="simple-table  text-left">
+          <tbody>
+            <tr>
+              <th>Unit</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>em</td>
+              <td>
+                Relative to the font-size of the element (2em means 2 times the
+                size of the current font)
+              </td>
+            </tr>
+            <tr>
+              <td>ex</td>
+              <td>
+                Relative to the x-height of the current font (rarely used)
+              </td>
+            </tr>
+            <tr>
+              <td>ch</td>
+              <td>Relative to width of the 0 (zero)</td>
+            </tr>
+            <tr>
+              <td>rem</td>
+              <td>Relative to font-size of the root element</td>
+            </tr>
+            <tr>
+              <td>vw</td>
+              <td>Relative to 1% of the width of the viewport*</td>
+            </tr>
+            <tr>
+              <td>vh</td>
+              <td>Relative to 1% of the height of the viewport*</td>
+            </tr>
+            <tr>
+              <td>vmin</td>
+              <td>Relative to 1% of viewport`s* smaller dimension</td>
+            </tr>
+            <tr>
+              <td>vmax</td>
+              <td>Relative to 1% of viewport`s* larger dimension</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>Relative to the parent element</td>
+            </tr>
+          </tbody>
+        </table>
+      </>
+    ),
+  },
 
+  {
+    element: (
+      <>
+        <h2>CSS Box Model 📏</h2>
+        <br />
+        <h4>
+          In CSS, the term <em>box model</em> is used when talking about design
+          and layout. The CSS box model is essentially a box that wraps around
+          every HTML element. It consists of: margins, borders, padding, and the
+          actual content. The image below illustrates the box model:
+        </h4>
+        <br />
+        <Image
+          src="/images/css/css-box-model.png"
+          alt="CSS Box Model"
+          caption={"CSS Box Model"}
+        />
+      </>
+    ),
+  },
   {
     element: (
       <EmojiTitle
         emoji={"Lab 6 💻😺🐙"}
-        title={
-          "Continue the creation of our website using HTML + CSS + JavaScript"
-        }
+        title={"Continue the creation of our website using HTML + CSS"}
       />
     ),
   },
   {
     element: (
       <>
-        <h2>HTML + CSS + JavaScript Editor</h2>
+        <h2>HTML + CSS </h2>
         <br />
         <iframe
           className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
-          src="/arcn5005/f2023/students/nicolasarellanorisop/code-editors/html-css-js.html"
+          src="/arcn5005/f2023/students/nicolasarellanorisop/code-editors/html-css.html"
         />
       </>
     ),
