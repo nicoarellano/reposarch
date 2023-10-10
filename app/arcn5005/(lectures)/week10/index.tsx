@@ -29,7 +29,7 @@ export const content: Toc = [
         <h4>Brief history of mapping</h4>
         <br />
         <Image
-          src="/images/week01/from-the-renaissance.jpg"
+          src="/images/computer-graphics/from-the-renaissance.jpg"
           alt="Medieval hacker"
         />
       </div>
@@ -40,7 +40,7 @@ export const content: Toc = [
     element: (
       <Image
         alt="Map"
-        src="/images/week10/world-map-1570.jpg"
+        src="/images/maps/world-map-1570.jpg"
         href="https://en.wikipedia.org/wiki/Map"
         caption={"Early World Map (1570) - Wikipedia"}
       />
@@ -66,7 +66,7 @@ export const content: Toc = [
     element: (
       <Image
         alt="Cartography"
-        src="/images/week10/cartography.jpg"
+        src="/images/maps/cartography.jpg"
         href="https://en.wikipedia.org/wiki/Cartography"
         caption={
           "A medieval depiction of the Ecumene (inhabited world) (1482) - Wikipedia"
@@ -94,7 +94,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/rome-maps.png"
+        src="/images/computer-graphics/rome-maps.png"
         alt="Maps of rome"
         caption={
           "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
@@ -107,7 +107,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/rome-maps2.png"
+        src="/images/computer-graphics/rome-maps2.png"
         alt="Maps of rome"
         caption={
           "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
@@ -119,7 +119,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/albertis-device.png"
+        src="/images/computer-graphics/albertis-device.png"
         alt="Alberti's device"
         caption={
           "Leon Battista Alberti’s device for the topographical survey of the city of Rome (1450)"
@@ -134,7 +134,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/albertis-grid.png"
+        src="/images/computer-graphics/albertis-grid.png"
         alt="Alberti's grid"
         caption={
           "Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)"
@@ -145,7 +145,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/durers-window.jpg"
+        src="/images/computer-graphics/durers-window.jpg"
         alt="Durer's Window"
         caption={
           "Albrecht Durer's window 'Instruction on Measurement with Compass and Ruller' 1525"
@@ -159,7 +159,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/durers-window2.jpg"
+        src="/images/computer-graphics/durers-window2.jpg"
         alt="Durer's Window"
         caption={
           "Albrech Durer's window 'Instruction on Measurement with Compass and Ruller' 1525"
@@ -184,7 +184,7 @@ export const content: Toc = [
     element: (
       <Image
         alt="Map"
-        src="/images/week10/world-map-1526.jpg"
+        src="/images/maps/world-map-1526.jpg"
         href="https://en.wikipedia.org/wiki/Map"
         caption={"Early World Map (1570) - Wikipedia"}
       />
@@ -202,7 +202,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/flatearth.jpg"
+        src="/images/maps/flatearth.jpg"
         alt="Flat Earth"
         caption={"Traditional maps are 2 dimensional"}
       />
@@ -213,7 +213,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/globe.png"
+        src="/images/maps/globe.png"
         alt="Spherical Earth"
         caption={"World globes, spherical interpretation of the earth"}
       />
@@ -230,7 +230,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/ProjectionCylindrical.png"
+        src="/images/maps/ProjectionCylindrical.png"
         alt="Cylindrical Projection "
         caption={
           "Cylindrical projections are used for areas near the equator and for the entire earth but with very large distortions. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
@@ -242,7 +242,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/ProjectionConic.png"
+        src="/images/maps/ProjectionConic.png"
         alt="Conic Projection "
         caption={
           "Conical projections are good for areas near the mid-latitudes. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
@@ -254,7 +254,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/ProjectionPlanar.png"
+        src="/images/maps/ProjectionPlanar.png"
         alt="Planar Projection "
         caption={
           "Planar - Azimuthal (or planar) are good for areas near the pole - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
@@ -280,7 +280,7 @@ export const content: Toc = [
     element: (
       <Image
         alt="Mercator projection"
-        src="/images/week10/mercator.png"
+        src="/images/maps/mercator.png"
         href="https://en.wikipedia.org/wiki/Mercator_projection"
         caption={"Mercator 1569 world map - Wikipedia"}
       />
@@ -293,7 +293,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/mercator2.png"
+        src="/images/maps/mercator2.png"
         alt="Mercator projection"
         caption={"Mercator projection"}
       />
@@ -306,7 +306,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/mercator-cylinder.png"
+        src="/images/maps/mercator-cylinder.png"
         alt="Mercator projection"
         caption={"Mercator projection"}
         href="https://cdn.britannica.com/55/109155-050-9FE4B08C/simple-cylindrical-projection-earth-map-globe-mercator.jpg"
@@ -320,7 +320,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/orange.jpg"
+        src="/images/maps/orange.jpg"
         alt="orange"
         caption={
           "The globe on the quarter-spherical or orange peel projection - Norman Leventhal 1919"
@@ -334,7 +334,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/goode.png"
+        src="/images/maps/goode.png"
         alt="Dymaxion map"
         caption={"Goode homolosine projection 1923"}
       />
@@ -346,7 +346,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/dymaxion.png"
+        src="/images/maps/dymaxion.png"
         alt="Dymaxion map"
         caption={"Buckminster Fuller - Dymaxion map (1943)"}
         href="https://en.wikipedia.org/wiki/Dymaxion_map"
@@ -359,7 +359,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/dymaxion.jpg"
+        src="/images/maps/dymaxion.jpg"
         alt="Dymaxion map"
         caption={"Buckminster Fuller - Dymaxion map (1943)"}
       />
@@ -374,7 +374,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/computer.jpg"
+        src="/images/computer-graphics/computer.jpg"
         alt="Turin's Computer 1950s"
         caption={"One of the first computers of the modern era - By Wikimedia"}
       />
@@ -396,7 +396,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/geoid.png"
+        src="/images/maps/geoid.png"
         alt="geoid"
         caption={
           "The Geoid surface is irregular, unlike the reference ellipsoid (which is a mathematical idealized representation of the physical Earth as an ellipsoid), but is considerably smoother than Earth's physical surface. - By Wikipedia"
@@ -434,7 +434,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/latlong.png"
+        src="/images/maps/latlong.png"
         alt="WGS84"
         caption={"WGS84: World Geodetic System"}
       />
@@ -534,7 +534,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/cesium.png"
+        src="/images/maps/cesium.png"
         alt="cesium"
         href="https://cesium.com/platform/cesiumjs/"
         caption={"Cesium-gl-js"}
@@ -561,7 +561,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/mapbox.png"
+        src="/images/maps/mapbox.png"
         alt="mapbox"
         href="https://docs.mapbox.com/mapbox-gl-js/guides/"
         caption={"Mapbox-gl-js"}
@@ -591,7 +591,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/leaflet.png"
+        src="/images/maps/leaflet.png"
         alt="leaflet"
         href=""
         caption={"Leaflet"}
@@ -617,7 +617,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/osm.png"
+        src="/images/maps/osm.png"
         alt="osm"
         href="https://www.openstreetmap.org/"
         caption={"OpenStreetMap"}
@@ -630,7 +630,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/maplibre.png"
+        src="/images/maps/maplibre.png"
         alt="maplibre"
         href=""
         caption={"Maplibre-gl-js"}
@@ -656,7 +656,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/devices-diagram.png"
+        src="/images/coding/devices-diagram.png"
         alt="Physical input and output hardware"
         caption={"Physical input and output hardware"}
       />
@@ -672,7 +672,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/interaction.png"
+        src="/images/coding/interaction.png"
         alt="Human computer interaction"
         caption={"Interfaces"}
       />
@@ -714,7 +714,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/vsCode.png"
+        src="/images/computer-graphics/vsCode.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={"Visual Studio Code, free IDE from Microsoft."}
@@ -726,7 +726,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/extensions.png"
+        src="/images/computer-graphics/extensions.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={
@@ -746,7 +746,7 @@ export const content: Toc = [
         <h1>What is Node.js?</h1>
         <br />
         <Image
-          src="/images/week01/nodejs.png"
+          src="/images/computer-graphics/nodejs.png"
           alt="Node.js"
           href="https://en.wikipedia.org/wiki/Nodejs#"
           caption={"Node.js - Wikipedia"}
@@ -763,7 +763,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/npm-maplibre.gif"
+        src="/images/maps/npm-maplibre.gif"
         alt="npm maplibre"
         caption={"Npm example - Installing Maplibre-gl"}
       />
@@ -790,7 +790,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/json.png"
+        src="/images/maps/json.png"
         alt="json"
         caption={"JSON - JavaScript Object Notation"}
         href="https://www.json.org/json-en.html"
@@ -803,7 +803,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/json-example.png"
+        src="/images/maps/json-example.png"
         alt="json"
         caption={"JSON - JavaScript Object Notation"}
         href="https://www.json.org/json-en.html"
@@ -815,7 +815,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/geojson.png"
+        src="/images/maps/geojson.png"
         alt="geojson"
         caption={
           "GeoJSON - GeoJSON is the Json format for encoding a variety of geographic data structures."
@@ -831,7 +831,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/geojson-types.png"
+        src="/images/maps/geojson-types.png"
         alt="geojson"
         caption={"GeoJSON - Types"}
       />
@@ -845,7 +845,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week10/geojson-example.png"
+        src="/images/maps/geojson-example.png"
         alt="geojson"
         caption={"GeoJSON - Example"}
       />

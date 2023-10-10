@@ -12,7 +12,7 @@ export const content: Toc = [
     element: (
       <>
         <Image
-          src="/images/week01/js.png"
+          src="/images/computer-graphics/js.png"
           alt="JavaScript"
           href="https://www.w3schools.com/js/default.asp"
           caption={"JavaScript is the programming language of the Web"}

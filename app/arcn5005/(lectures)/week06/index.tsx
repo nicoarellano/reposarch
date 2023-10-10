@@ -182,7 +182,7 @@ it is very hard to achieve openBIM",
         <h4>All modern web browsers are based on 3 technologies</h4>
         <br />
         <Image
-          src="/images/week10/html-css-js.png"
+          src="/images/html-css-js.png"
           alt="JavaScript"
           caption={"Technology behind web browsers: HTML - CSS - JS"}
         />
@@ -193,7 +193,7 @@ it is very hard to achieve openBIM",
   {
     element: (
       <Image
-        src="/images/week10/css.png"
+        src="/images/css/css.png"
         alt="css"
         href="https://www.w3schools.com/css/css_intro.asp"
         caption={
