@@ -184,7 +184,10 @@ export const arcn5005Lectures: Lectures = [
     content: week07,
     toc: [
       { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
-      { title: "🔴 Assignment 1 - presentation" },
+      {
+        title:
+          "🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal",
+      },
       { title: "🖥️ LAB 7: BlenderBIM" },
     ],
   },
@@ -216,7 +219,10 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
-      { title: "🔴 Assignment 2 - presentation" },
+      {
+        title:
+          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software (MeshRoom or Metashape) and Three.js",
+      },
       { title: "Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },
       { title: "IFC.js" },
@@ -248,7 +254,10 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
-      { title: "🔴 Assignment 3 - presentation" },
+      {
+        title:
+          "🔴 Assignment 3 presentation - BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
+      },
       { title: "Deploy your software" },
       { title: "Github pages" },
       { title: "🖥️ LAB 11: Web based BIM GIS software" },
@@ -278,7 +287,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(13, "week"),
     content: week13,
     toc: [
-      { title: "🔴 Assignment 4 - presentation" },
+      { title: "🔴 Assignment 4 presentation - Custom map using maplibre" },
       { title: "🖥️ LAB 13 Final assignment workshop" },
     ],
   },
