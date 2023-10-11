@@ -177,7 +177,7 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
-    title: "OpenBIM",
+    title: "OS BIM Software: BlenderBIM",
     id: `week07`,
     url: `week07`,
     date: initialDate.add(6, "week"),
@@ -188,7 +188,8 @@ export const arcn5005Lectures: Lectures = [
         title:
           "🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal",
       },
-      { title: "🖥️ LAB 7: BlenderBIM" },
+      { title: "Native IFC" },
+      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
     ],
   },
   {
