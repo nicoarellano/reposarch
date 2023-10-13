@@ -84,15 +84,6 @@ export const content: Toc = [
   },
   {
     element: (
-      <iframe
-        src="https://the-nordic-letter.com/"
-        title="NORDIC LETTER TO AUTODESK"
-      />
-    ),
-  },
-
-  {
-    element: (
       <Video
         src="https://www.youtube.com/embed/DK4zmfkp_pw?si=MWZZzjmOa4O9jB-B"
         title="Free / libre & Open Source software in AEC, and how it impacts OpenBIM"
