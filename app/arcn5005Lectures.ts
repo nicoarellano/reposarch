@@ -189,7 +189,7 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
-    title: "OpenBIM",
+    title: "OS BIM Software: BlenderBIM",
     id: `week07`,
     url: `week07`,
     date: initialDate.add(6, "week"),
@@ -200,7 +200,8 @@ export const arcn5005Lectures: Lectures = [
         title:
           "🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal",
       },
-      { title: "🖥️ LAB 7: BlenderBIM" },
+      { title: "Native IFC" },
+      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
     ],
   },
   {
@@ -233,7 +234,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       {
         title:
-          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software (MeshRoom or Metashape) and Three.js",
+          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
       },
       { title: "Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },

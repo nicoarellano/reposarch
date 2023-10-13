@@ -122,7 +122,7 @@ export const content: Toc = [
       <Image
         src="/images/osarch/openbim.png"
         alt="openbim"
-        href="https://www.buildingsmart.org/about/openbim/openbim-definition/"
+        href="https://www.buildingsmart.org/about/osarch/openbim-definition/"
         caption={"BuildingSmart International - OpenBIM (?)"}
       />
     ),
@@ -196,6 +196,35 @@ it is very hard to achieve openBIM",
   },
 
   // IFC
+
+  {
+    element: (
+      <Image
+        src="/images/osarch/ifc.png"
+        alt="IFC"
+        href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/"
+        caption="Industry Foundation Classes (IFC)"
+      />
+    ),
+    notes:
+      "At its core, buildingSMART enables the entire built asset industry to improve the sharing of information throughout the lifecycle of project or asset. \n\
+    By breaking down the silos of information, end users can better collaborate and cooperate regardless of which software application they are using. \n\
+    buildingSMART’s technical core is based around Industry Foundation Classes (IFC) which was ISO certified in 2013. \n\
+    IFC is a standardized, digital description of the built asset industry. \n\
+    It is an open, international standard (ISO 16739-1:2018) and promotes vendor-neutral, or agnostic, and usable capabilities across a wide range of hardware devices, \
+    software platforms, and interfaces for many different use cases. More about IFC, its uses and adoption may be found here.",
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/9YgXXbdohOQ?si=iv5Iq_VxtjHtACTQ"
+        title="What is IFC (Industry Foundation Classes)?"
+        caption={
+          "What is IFC (Industry Foundation Classes)? - archive file approach"
+        }
+      />
+    ),
+  },
 
   {
     element: (
