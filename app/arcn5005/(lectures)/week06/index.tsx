@@ -68,19 +68,21 @@ export const content: Toc = [
       → This is what I am trying to do with the epistemic object.",
   },
   {
-    element: <PdfViewer src={"letter-to-autodesk.pdf"} />,
+    element: <PdfViewer src={"/resources/letter-to-autodesk.pdf"} />,
   },
   {
     element: (
       <PdfViewer
         src={
-          "A Reply To Our Customers’ Open Letter On Autodesk Revit _ Autodesk News.pdf"
+          "/resources/A Reply To Our Customers’ Open Letter On Autodesk Revit _ Autodesk News.pdf"
         }
       />
     ),
   },
   {
-    element: <PdfViewer src={"Nordic OPEN LETTER TO AUTODESK.pdf"} />,
+    element: (
+      <PdfViewer src={"/resources/Nordic OPEN LETTER TO AUTODESK.pdf"} />
+    ),
   },
   {
     element: (
