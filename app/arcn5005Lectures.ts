@@ -171,9 +171,21 @@ export const arcn5005Lectures: Lectures = [
       { title: "BuildingSmart International and IFC" },
       { title: "File formats - .rvt vs .ifc" },
       { title: "OSArch" },
-      { title: "OS Libraries / Packages" },
       { title: "Post 2020 milestones" },
+      { title: "CSS - Cascading Style Sheets" },
       { title: "🖥️ LAB 6: HTML and CSS" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3",
+        title: "OSArch - Open source for architects community",
+        date: dayjs("2023/10/12"),
+      },
+      {
+        url: "https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg",
+        title: "Introduction to CSS",
+        date: dayjs("2023/10/12"),
+      },
     ],
   },
   {

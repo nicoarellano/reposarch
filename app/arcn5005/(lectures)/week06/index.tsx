@@ -16,6 +16,15 @@ export const content: Toc = [
   },
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3"
+        title="OSArch - Open source for architects community"
+        caption={"OSArch - Open source for architects community"}
+      />
+    ),
+  },
+  {
+    element: (
       <Image
         src="/images/osarch/osarch-software.png"
         alt="Osarch software"
@@ -58,6 +67,30 @@ export const content: Toc = [
       → In my opinion, instead of writing letters to the vendors we as sector need to keep taking action with our own hands. \n\
       → This is what I am trying to do with the epistemic object.",
   },
+  {
+    element: <PdfViewer src={"letter-to-autodesk.pdf"} />,
+  },
+  {
+    element: (
+      <PdfViewer
+        src={
+          "A Reply To Our Customers’ Open Letter On Autodesk Revit _ Autodesk News.pdf"
+        }
+      />
+    ),
+  },
+  {
+    element: <PdfViewer src={"Nordic OPEN LETTER TO AUTODESK.pdf"} />,
+  },
+  {
+    element: (
+      <iframe
+        src="https://the-nordic-letter.com/"
+        title="NORDIC LETTER TO AUTODESK"
+      />
+    ),
+  },
+
   {
     element: (
       <Video
@@ -183,7 +216,7 @@ it is very hard to achieve openBIM",
         <br />
         <Image
           src="/images/html-css-js.png"
-          alt="JavaScript"
+          alt="html-css-js"
           caption={"Technology behind web browsers: HTML - CSS - JS"}
         />
       </>
@@ -208,17 +241,26 @@ it is very hard to achieve openBIM",
   },
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg"
+        title="OSArch - Open source for architects community"
+        caption={"Introduction to CSS"}
+      />
+    ),
+  },
+  {
+    element: (
       <>
         <Image
           src="/images/css/css-diagram.png"
           alt="css"
           href="https://www.w3schools.com/js/default.asp"
-          caption={"JavaScript is the programming language of the Web"}
+          caption={"CSS syntax"}
         />
       </>
     ),
     notes:
-      "Cascading Style Sheets (CSS), is a simple design language intended to transform the presentation of a Web Pages as well as many ostensibly nonweb environments. \n\
+      "Cascading Style Sheets (CSS), is a simple design language intended to transform the presentation of a Web Pages as well as many ostensibly non-web environments. \n\
     CSS handles the look and feel part of a web page. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, \n\
     how columns are sized and laid out, what background images or colors are used, layout designs, \n\
     variations in display for different devices and screen sizes as well as a variety of other effects. \n\
