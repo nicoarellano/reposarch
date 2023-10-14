@@ -218,9 +218,11 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
+      { title: "JavaScript (js)" },
       { title: "WebGL - Web based 3D graphics" },
       { title: "GLTF" },
       { title: "Tree.js, intro to ifc.js" },
+      { title: "Intro to ifc.js" },
       { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
     ],
   },

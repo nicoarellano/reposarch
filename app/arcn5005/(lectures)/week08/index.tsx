@@ -6,6 +6,7 @@ import Quote from "../../../../components/Common/Quote";
 import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 import Gltf from "./Gltf";
+import { title } from "process";
 
 export const content: Toc = [
   // JAVASCRIPT CONTENT
@@ -21,8 +22,28 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Do not confuse with Java, Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
+      "Do not confuse with Java, Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world \n\
+      JavaScript and Java are completely different languages, both in concept and design. \n\
+JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. \n\
+ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.",
   },
+  {
+    element: (
+      <>
+        <Image
+          src="/images/javascript/compiled-vs-interpreted-languages.png"
+          alt="Compiled vs Interpreted"
+          href="https://www.linkedin.com/pulse/what-difference-between-compiled-interpreted-programming-language/"
+          caption={"Compiled vs Interpreted"}
+        />
+      </>
+    ),
+    notes:
+      "Programming languages can be broadly categorized into two types based on how they are processed: compiled and interpreted. \n\
+      In Compiled langugages, the source code is passed through a program called a compiler, which translates it into machine (low-level language) code that the machine understands and can execute (.exe or .dll files) \n\
+      In contrast, JavaScript has no compilation step. Instead, an interpreter in the browser reads over the JavaScript code, interprets each line, and runs it.",
+  },
+
   {
     element: (
       <>
@@ -65,6 +86,118 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
   },
 
   {
+    element: <EmojiTitle emoji={"👋🌎"} title="printing: 'Hello world!'" />,
+  },
+
+  {
+    element: (
+      <>
+        <h3>{"<script> console.log(`Hello world!`) </script>"}</h3>
+        <br />
+        <Image
+          src="/images/javascript/html-hello-world.png"
+          alt="Script Hello world"
+          caption={
+            "Using JavaScript into HTML. Hello world within a script HTML element → the output will be rendered in the web browser Console (F12)"
+          }
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <h3>{'<script src="./main.js" ></script>'}</h3>
+        <br />
+        <Image
+          src="/images/javascript/hello-world.png"
+          alt="Hello world"
+          caption={
+            "Adding a JavaScript external file to our HTML file. By convention we will call it main.js, app.js, or index.js → the output will be rendered in the web browser Console (F12)"
+          }
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <EmojiTitle
+        emoji={"JavaScript Variables 🗃️"}
+        title="Variables or constants are containers that will eventually be declared with values"
+      />
+    ),
+    notes:
+      "Variables or constants are containers that will eventually be declared with values \n\
+      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.",
+  },
+
+  {
+    element: (
+      <>
+        <h1>Var, let or const 🗃️❔</h1>
+        <br />
+        <h3>
+          ℹ️The <em>var</em> keyword was used in all JS code from 1995 to 2015
+        </h3>
+        <h3>
+          ℹ️The <em>let</em> and <em>const</em> keywords were added to JS in
+          2015
+        </h3>
+        <h3>
+          ⚠️The <em>var</em> keyword should only be used in code written for
+          older browsers
+        </h3>
+      </>
+    ),
+    notes:
+      " \n\
+      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.",
+  },
+  {
+    element: (
+      <div>
+        <h2>When to Use var, let, or const?</h2>
+        <ol>
+          <li>Always declare variables</li>
+          <li>
+            Always use <strong>const</strong> if the value should not be changed
+          </li>
+          <li>
+            Always use <strong>const</strong> if the type should not be changed
+            (Arrays and Objects)
+          </li>
+          <li>
+            Only use <strong>let</strong> if you can`t use
+            <strong>const</strong>
+          </li>
+          <li>
+            Only use <strong>var</strong> if you MUST support old browsers.
+          </li>
+        </ol>
+      </div>
+    ),
+    notes:
+      " \n\
+      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.",
+  },
+  {
+    element: (
+      <>
+        <h2>HTML + CSS + JS </h2>
+        <br />
+        <iframe
+          className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
+          src="/arcn5005/f2023/students/nicolasarellanorisop/code-editors/html-css-js.html"
+        />
+      </>
+    ),
+  },
+
+  // 3D graphics
+
+  {
     element: (
       <>
         <Image
@@ -83,27 +216,14 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
       It handles stuff like scenes, lights, shadows, materials, textures, 3d math, all things that you'd have to write yourself if you were to use WebGL directly.",
   },
 
-  // {
-  //   element: (
-  //     <>
-  //       <Image
-  //         src="/images/three/gltf.png"
-  //         alt="Gltf and Glb"
-  //         href="https://www.khronos.org/gltf/"
-  //         caption={"Gltf and Glb"}
-  //       />
-  //     </>
-  //   ),
-  //   notes: "",
-  // },
-
   {
     element: (
       <>
+        <Gltf />
+
         <a href="https://en.wikipedia.org/wiki/GlTF">
-          <Gltf />
+          <em>GLTF: Graphics Library Transmission Format</em>{" "}
         </a>
-        <em>GLTF: Graphics Library Transmission Format</em>
       </>
     ),
     notes:
