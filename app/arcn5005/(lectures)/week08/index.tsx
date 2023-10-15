@@ -45,47 +45,6 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
   },
 
   {
-    element: (
-      <>
-        <Image
-          src="/images/javascript/js-cloud.png"
-          alt="JavaScript libraries"
-          caption={"JavaScript libraries"}
-        />
-      </>
-    ),
-    notes:
-      "Javascript libraries include pre-written JavaScript code that simplifies the completion of common and complicated tasks \n\
-      Active Communities \n\
-The most widely used libraries have active communities and forums where you may obtain help getting started with them. \
-The library developer site is frequently used to get JavaScript libraries. \n\
-Many library creators make both development and production versions of their libraries available. \
-Comments and tips, as well as other non-minified code, are included in the development versions. \
-Production versions are frequently minified and compressed for usage on live sites. \n\
-Some libraries are even accessible via content delivery networks (CDNs), including cdnjs, Google Hosted Libraries, jsDelivr, and Microsoft Ajax Content Delivery Network, to name a few.",
-  },
-  {
-    element: (
-      <>
-        <Image
-          src="/images/javascript/js-libraries.png"
-          alt="JavaScript visual libraries"
-          href="https://en.wikipedia.org/wiki/List_of_JavaScript_libraries"
-          caption={
-            "JavaScript visual libraries - source: https://isquared.digital/blog/2020-03-24-viz-tools-pt2-1"
-          }
-        />
-      </>
-    ),
-    notes:
-      "There are plenty of JavaScript Visualization tools. Based on their functionality, we can cluster them into 4 main categories: \n\
-      → Charting: to produce the most common DataViz plots;\n\
-      → Graphs: representing and analyzing graph-based data;\n\
-      → Maps: for representing data that has geo-features and\n\
-      → 3D: creating three-dimensional charts and cool animations.",
-  },
-
-  {
     element: <EmojiTitle emoji={"👋🌎"} title="printing: 'Hello world!'" />,
   },
 
@@ -139,15 +98,16 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
         <h1>Var, let or const 🗃️❔</h1>
         <br />
         <h3>
-          ℹ️The <em>var</em> keyword was used in all JS code from 1995 to 2015
+          ℹ️The <b>var</b> keyword was used in all JS code from 1995 to 2015
         </h3>
         <h3>
-          ℹ️The <em>let</em> and <em>const</em> keywords were added to JS in
-          2015
+          ℹ️The <a href="https://www.w3schools.com/JS/let.asp">let</a> and
+          <a href="https://www.w3schools.com/JS/js_const.asp"> const </a>
+          keywords were added to JS in 2015
         </h3>
         <h3>
-          ⚠️The <em>var</em> keyword should only be used in code written for
-          older browsers
+          ⚠️The <b>var</b> keyword should only be used in code written for older
+          browsers
         </h3>
       </>
     ),
@@ -170,7 +130,7 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
           </li>
           <li>
             Only use <strong>let</strong> if you can`t use
-            <strong>const</strong>
+            <strong> const</strong>
           </li>
           <li>
             Only use <strong>var</strong> if you MUST support old browsers.
@@ -182,6 +142,243 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
       " \n\
       In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.",
   },
+
+  {
+    element: (
+      <>
+        <h2>JavaScript Arithmetic Operators</h2>
+        <h5>Arithmetic Operators are used to perform arithmetic on numbers:</h5>
+        <br />
+        <table className="simple-table  text-left">
+          <tbody>
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>Addition</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Subtraction</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>Multiplication</td>
+            </tr>
+            <tr>
+              <td>**</td>
+              <td>Exponentiation</td>
+            </tr>
+            <tr>
+              <td>/</td>
+              <td>Division</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>Modulus (Division Remainder)</td>
+            </tr>
+            <tr>
+              <td>++</td>
+              <td>Increment</td>
+            </tr>
+            <tr>
+              <td>--</td>
+              <td>Decrement</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <a href="https://www.w3schools.com/js/js_arithmetic.asp">
+          source: https://www.w3schools.com/js/js_arithmetic.asp
+        </a>
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <h2>JavaScript Assignment Operators</h2>
+        <h5>Assignment operators assign values to JavaScript variables.</h5>
+        <br />
+        <table className="simple-table  text-left">
+          <tbody>
+            <tr>
+              <th>Operator</th>
+              <th>Example</th>
+              <th>Same As</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>=</td>
+              <td>x = y</td>
+              <td>x = y</td>
+              <td>
+                The Simple Assignment Operator assigns a value to a variable.
+              </td>
+            </tr>
+            <tr>
+              <td>+=</td>
+              <td>x += y</td>
+              <td>x = x + y</td>
+              <td>
+                The Addition Assignment Operator adds a value to a variable.
+              </td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>x -= y</td>
+              <td>x = x - y</td>
+              <td>
+                The Subtraction Assignment Operator subtracts a value from a
+                variable.
+              </td>
+            </tr>
+            <tr>
+              <td>*=</td>
+              <td>x *= y</td>
+              <td>x = x * y</td>
+              <td>
+                The Multiplication Assignment Operator multiplies a variable.
+              </td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>x /= y</td>
+              <td>x = x / y</td>
+              <td>The Division Assignment Operator divides a variable.</td>
+            </tr>
+            <tr>
+              <td>%=</td>
+              <td>x %= y</td>
+              <td>x = x % y</td>
+              <td>
+                The Remainder Assignment Operator assigns a remainder to a
+                variable.
+              </td>
+            </tr>
+            <tr>
+              <td>**=</td>
+              <td>x **= y</td>
+              <td>x = x ** y</td>
+              <td>
+                The Exponentiation Assignment Operator raises a variable to the
+                power of the operand.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <a href="https://www.w3schools.com/js/js_assignment.asp">
+          source: https://www.w3schools.com/js/js_assignment.asp
+        </a>
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <h2>JavaScript Data Types</h2>
+        <br />
+        <div className="overflow-auto flex justify-center">
+          <table className="simple-table text-left overflow-auto">
+            <tbody>
+              <tr>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>String</td>
+                <td>
+                  A string (or a text string) is a series of characters like
+                  `hey`, Strings are written with quotes. You can use single or
+                  double quotes <br />
+                  You can use quotes inside a string, as long as they don`t
+                  match the quotes surrounding the string
+                </td>
+              </tr>
+              <tr>
+                <td>Number</td>
+                <td>
+                  All JavaScript numbers are stored as decimal numbers (floating
+                  point). Numbers can be written with, or without decimals{" "}
+                  <br />
+                  Extra large or extra small numbers can be written with
+                  scientific (exponential) notation ie: 123e5 (12300000) or
+                  123e-5 (0.00123)
+                </td>
+              </tr>
+              <tr>
+                <td>Bigint</td>
+                <td>
+                  JavaScript BigInt is a new datatype (2020) that can be used to
+                  store integer values that are too big to be represented by a
+                  normal JavaScript Number. ie:
+                  123456789012345678901234567890123456789
+                </td>
+              </tr>
+              <tr>
+                <td>Boolean</td>
+                <td>Booleans can only have two values: true or false.</td>
+              </tr>
+              <tr>
+                <td>Arrays</td>
+                <td>
+                  JavaScript arrays are written with square brackets. Array
+                  items are separated by commas: <br />
+                  {"[1, 'two', 3+5 , false, [1, 2, 3], {name: value}]"}. <br />
+                  Array indexes are zero-based, which means the first item is
+                  [0], second is [1], and so on.
+                </td>
+              </tr>
+              <tr>
+                <td>Objects</td>
+                <td>
+                  JavaScript objects are written with curly braces {"{...}"}.
+                  Object properties are written as name:value pairs, separated
+                  by commas: <br />
+                  {
+                    "{name: 'John', lastname: 'Lennon', children: ['Julian', 'Sean'], born: 1940, alive: false, died: 1980}}"
+                  }
+                </td>
+              </tr>
+              <tr>
+                <td>Undefined</td>
+                <td>
+                  In JavaScript, a variable without a value, has the value
+                  undefined. The type is also undefined.
+                </td>
+              </tr>
+              <tr>
+                <td>Null</td>
+                <td>
+                  The null value represents the intentional absence of any
+                  object value. It is one of JavaScript`s primitive values and
+                  is treated as falsy for boolean operations.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <a href="https://www.w3schools.com/js/js_arithmetic.asp">
+          source: https://www.w3schools.com/js/js_arithmetic.asp
+        </a>
+      </>
+    ),
+    notes:
+      "In programming, data types is an important concept. \n\
+    To be able to operate on variables, it is important to know something about the type.     \n\
+    Without data types, a computer cannot safely solve this \n\
+    JavaScript is not too strict in relation to data types like other languages, but that could lead to errors and bugs. \n\
+    ie: When adding a number and a string, JavaScript will treat the number as a string. \n\
+    JavaScript has dynamic types. This means that the same variable can be used to hold different data types \n\
+     In a couple of weeks we are going to learn a framework called Typescript that was developed by Facebook to solve Type issues in Javascript",
+  },
+
   {
     element: (
       <>
@@ -193,6 +390,48 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
         />
       </>
     ),
+  },
+
+  // JS Libraries
+  {
+    element: (
+      <>
+        <Image
+          src="/images/javascript/js-cloud.png"
+          alt="JavaScript libraries"
+          caption={"JavaScript libraries"}
+        />
+      </>
+    ),
+    notes:
+      "Javascript libraries include pre-written JavaScript code that simplifies the completion of common and complicated tasks \n\
+      Active Communities \n\
+The most widely used libraries have active communities and forums where you may obtain help getting started with them. \
+The library developer site is frequently used to get JavaScript libraries. \n\
+Many library creators make both development and production versions of their libraries available. \
+Comments and tips, as well as other non-minified code, are included in the development versions. \
+Production versions are frequently minified and compressed for usage on live sites. \n\
+Some libraries are even accessible via content delivery networks (CDNs), including cdnjs, Google Hosted Libraries, jsDelivr, and Microsoft Ajax Content Delivery Network, to name a few.",
+  },
+  {
+    element: (
+      <>
+        <Image
+          src="/images/javascript/js-libraries.png"
+          alt="JavaScript visual libraries"
+          href="https://en.wikipedia.org/wiki/List_of_JavaScript_libraries"
+          caption={
+            "JavaScript visual libraries - source: https://isquared.digital/blog/2020-03-24-viz-tools-pt2-1"
+          }
+        />
+      </>
+    ),
+    notes:
+      "There are plenty of JavaScript Visualization tools. Based on their functionality, we can cluster them into 4 main categories: \n\
+      → Charting: to produce the most common DataViz plots;\n\
+      → Graphs: representing and analyzing graph-based data;\n\
+      → Maps: for representing data that has geo-features and\n\
+      → 3D: creating three-dimensional charts and cool animations.",
   },
 
   // 3D graphics
