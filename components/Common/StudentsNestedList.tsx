@@ -58,7 +58,7 @@ export default function StudentsNestedList({ students }: Props) {
               <ListItemIcon>
                 <IconButton>
                   <Avatar
-                    src={`/arcn5005/f2023/students/${student.username}/photo.jpg`}
+                    src={`/arcn5005/f2023/students/${student.username}/avatar.jpg`}
                     sx={{ width: 30, height: 30 }}
                   />
                 </IconButton>

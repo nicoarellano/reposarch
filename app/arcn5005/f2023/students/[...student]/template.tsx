@@ -46,7 +46,7 @@ export default function NestedTemplate({
       <footer className="m-4 flex flex-row absolute z-20 bottom-0 right-0">
         <IconButton onClick={() => router.back()} title={"Back"}>
           <Avatar
-            src={`/arcn5005/f2023/students/${username}/photo.jpg`}
+            src={`/arcn5005/f2023/students/${username}/avatar.jpg`}
             sx={{ width: 45, height: 45 }}
           />
         </IconButton>
