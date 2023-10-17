@@ -9,7 +9,7 @@ import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
-import { IconButton } from "@mui/material";
+import { Avatar, IconButton } from "@mui/material";
 import { Students, Student } from "../../types/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -54,16 +54,19 @@ export default function StudentsNestedList({ students }: Props) {
             onClick={() => handleClick(index)}
             sx={{ borderBottom: 1, borderTop: 1, borderColor: "#ddd" }}
           >
-            <ListItemText
-              primary={`${student.firstName} ${student.lastName}`}
-            />
             <Link href={`${path}/${student.username}`} title={student.username}>
               <ListItemIcon>
                 <IconButton>
-                  <StudentPageIcon />
+                  <Avatar
+                    src={`/arcn5005/f2023/students/${student.username}/photo.jpg`}
+                    sx={{ width: 30, height: 30 }}
+                  />
                 </IconButton>
               </ListItemIcon>
             </Link>
+            <ListItemText
+              primary={`${student.firstName} ${student.lastName}`}
+            />
             {open[index] ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={open[index]} timeout="auto" unmountOnExit>
