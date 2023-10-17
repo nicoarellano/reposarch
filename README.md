@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://cims.carleton.ca/#/home">CIMS lab</a>
   |
-  <a href=https://reposarch.vercel.app>REPOSARCH</a>
+  <a href=https://reposarch.vercel.app/arcn5005>REPOSARCH</a>
   |
   <a href=https://nicoarellano.github.io/reposarch/></a>
 </p>
@@ -9,23 +9,27 @@
 <img src="public/images/webbased.png" align="center" width="250">
 <h1><img src="public/images/favicon.ico" width="40">Open Source Architectural Representation Course</h1>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [React.js](https://react.dev/) and [Next.js](https://nextjs.org/) project bootstrapped with [`npx create-next-app next-tailwind-typescript-starter`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
