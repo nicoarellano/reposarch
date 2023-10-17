@@ -34,6 +34,12 @@ export interface Content {
 
 export type Toc = Content[];
 
+export interface Recording {
+  url: string;
+  title: string;
+  date: Dayjs;
+}
+
 export interface Lecture {
   title: string;
   id: string;
@@ -43,6 +49,7 @@ export interface Lecture {
   slides?: string[];
   date: Dayjs;
   toc: Toc;
+  recordings?: Recording[];
 }
 export type Lectures = Lecture[];
 

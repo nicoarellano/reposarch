@@ -19,18 +19,11 @@ export default function Page({ params }): ReactElement<Props> {
           <StudentIframe username={username} assignment={assignment} />
         </section>
       ) : (
-        <div className="flex flex-col justify-center items-center w-full">
-          <div className="w-1/4 h-[360px] ">
-            <ListWithIcon
-              list={Assignments}
-              subheader="Assignments"
-              icon={<LinkIcon />}
-            />
-          </div>
-          <div className="h-fit w-full">
+        <div className="flex flex-col justify-center items-center w-full h-full">
+          <div className="h-full w-full">
             <iframe
               src={`/arcn5005/f2023/students/${username}/about.html`}
-              className="grow h-[260px] w-full"
+              className="grow h-full w-full"
             />
           </div>
         </div>

@@ -9,9 +9,10 @@ import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
 import { arcn5005Lectures } from "../../app/arcn5005Lectures";
 
 const classDays = arcn5005Lectures.map((lecture) => lecture.date);
-const quizes = [dayjs("2023-10-05"), dayjs("2023-11-09"), dayjs("2023-11-30")];
+const quizes = [dayjs("2023-10-05"), dayjs("2023-11-30")];
 const assignments = [
   dayjs("2023-10-19"),
+  dayjs("2023-11-09"),
   dayjs("2023-11-23"),
   dayjs("2023-12-07"),
 ];
