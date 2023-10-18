@@ -6,6 +6,7 @@ import { IconButton } from "@mui/material";
 import { useRouter } from "next/navigation";
 import ReturnButton from "../../../../../components/Common/ReturnButton";
 import Avatar from "@mui/material/Avatar";
+import { useEffect, useState } from "react";
 
 export default function NestedTemplate({
   children,
@@ -21,6 +22,7 @@ export default function NestedTemplate({
 
   const username = params.student[0];
   const assignment = params.student[1];
+
   return (
     <main className="flex flex-col w-screen h-screen ">
       <nav className="top-0 flex flex-row w-full h-24 ">
