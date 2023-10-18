@@ -18,16 +18,17 @@ const nextConfig = {
   // Configure pageExtensions to include md and mdx
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   // Optionally, add any other Next.js config below
-  reactStrictMode: true,
+  reactStrictMode: false,
 };
 
 const withTM = require("next-transpile-modules")([
   // "web-ifc-three",
   // "web-ifc",
-  // "openbim-components",
-  // "bim-fragment",
+  "openbim-clay",
+  "openbim-components",
+  "bim-fragment",
   "three",
-  // "@popperjs/core",
+  "@popperjs/core",
 ]);
 
 // Merge MDX config with Next.js config
