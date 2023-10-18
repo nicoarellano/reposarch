@@ -11,19 +11,20 @@ button {
    
    button:hover {
     letter-spacing: 3px;
-    background-color: hsl(220, 80%, 48%);
+    background-color: rgb(30, 65, 116);
     color: hsl(0, 0%, 100%);
-    box-shadow: rgb(24, 53, 220) 0px 7px 29px 0px;
+    box-shadow: rgb(30, 65, 116) 0px 7px 29px 0px;
    }
    
    button:active {
     letter-spacing: 3px;
-    background-color: hsl(241, 80%, 48%);
+    background-color: rgb(30, 65, 116);
     color: hsl(0, 0%, 100%);
-    box-shadow: rgb(31, 24, 220) 0px 0px 0px 0px;
+    box-shadow: rgb(30, 65, 116) 0px 0px 0px 0px;
     transform: translateY(10px);
     transition: 100ms;
    }
+
 *{
     background-color: rgb(221, 169, 75);
 } 
@@ -34,10 +35,11 @@ button {
     height: 100%;
     background-image: linear-gradient(45deg, var(--color2) 25%, transparent 25%, transparent 75%, var(--color2) 75%, var(--color2)), 
                       linear-gradient(135deg, var(--color2) 25%, var(--color1) 25%, var(--color1) 75%, var(--color2) 75%, var(--color2));
-    background-size: 200px 100px;
+    background-size: 200px 106px;
     background-position: 0 0, 235px 135px;
   };}
+
 img{
-    border: 1px solid rgb(0, 0, 0);
+    border: 3px solid rgb(30, 65, 116);
     border-radius: 2px;
     }
