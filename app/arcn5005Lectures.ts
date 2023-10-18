@@ -72,14 +72,14 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Representation tools and processes for architects",
+    title: "Representation tools and processes for the AEC",
     id: `week03`,
     url: `week03`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
-      { title: "Digital tools for architects" },
+      { title: "Digital tools for AEC" },
       { title: "Representation Processes: CAD, 3D CAD, BIM" },
       { title: "Proprietary software" },
 
