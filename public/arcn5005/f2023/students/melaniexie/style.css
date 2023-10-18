@@ -1,4 +1,7 @@
-*{background-color: rgb(40, 181, 181);}
+*{
+    background-color: rgb(40, 181, 181);
+    text-align: center;
+}
 header{
     color: beige;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -15,8 +18,10 @@ h1{
     padding:5px;
 }
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    font-weight: 300;
 }
 ul{
     list-style-type: none;
@@ -24,8 +29,9 @@ ul{
 img{
     width: 200px;
     height: 200px;
+    padding: 20px;
     border-radius: 50px;
-    opacity: 0.8
+    opacity: 1
 }
 
 #bottone5 {
@@ -39,8 +45,8 @@ img{
     cursor: pointer;
     display: inline-flex;
     font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     justify-content: center;
     line-height: 1.25;
     min-height: 3rem;
