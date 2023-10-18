@@ -1,9 +1,9 @@
 const evilButton = document.getElementById('evil-button')
-const OFFSET = 500
+const OFFSET = 300
 
 evilButton.addEventListener('click', () => {
-  alert('Nice Try')
-  window.close()
+  alert('You did it! Here is your prize!')
+  window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
 })
 
 document.addEventListener('mousemove', (e) => {
@@ -42,7 +42,6 @@ function setButtonPosition(left, top) {
   evilButton.style.left = `${left}px`
   evilButton.style.top = `${top}px`
 }
-
 function distanceFromCenter(boxPosition, mousePosition, boxSize) {
   return boxPosition - mousePosition + boxSize / 2
 }
