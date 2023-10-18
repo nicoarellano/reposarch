@@ -3,7 +3,7 @@ const OFFSET = 300
 
 evilButton.addEventListener('click', () => {
   alert('You did it! Here is your prize!')
-  window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+  window.location.href = 'https://www.youtube.com/watch?v=BBJa32lCaaY&t=3s'
 })
 
 document.addEventListener('mousemove', (e) => {
