@@ -36,7 +36,7 @@ export const content: Toc = [
     element: (
       <>
         <Image
-          src="/images/week03/tools-of-the-imagination.jpg"
+          src="/images/cad-bim/tools-of-the-imagination.jpg"
           alt="Tools of the Imagination"
           href="https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false"
         />
@@ -70,7 +70,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/sutherland.png"
+        src="/images/computer-graphics/sutherland.png"
         alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
         caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
       />
@@ -120,7 +120,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/vendors.png"
+        src="/images/computer-graphics/vendors.png"
         alt="AECO's main CAD/BIM Vendors"
         caption={"AECO's main CAD/BIM Vendors"}
       />
@@ -133,7 +133,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/process-with-gui.png"
+        src="/images/computer-graphics/process-with-gui.png"
         alt="Digital Creative Process"
         caption={"Digital creative process with GUI"}
       />
@@ -238,7 +238,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/points.png"
+        src="/images/cad-bim/points.png"
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Points"
         caption={
@@ -250,7 +250,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/points2.png"
+        src="/images/cad-bim/points2.png"
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Points"
         caption={
@@ -328,7 +328,7 @@ export const content: Toc = [
           </div>
           <div className="w-[1000px]">
             <Image
-              src="/images/week03/curve-types.png"
+              src="/images/cad-bim/curve-types.png"
               alt="Curve types"
               href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-4_curves.html"
             />
@@ -340,7 +340,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/curve.png"
+        src="/images/cad-bim/curve.png"
         alt="Curve"
         caption={
           "A curve or curved line, may be the trace left by moving a point. It has no width nor depth"
@@ -351,7 +351,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/line.png"
+        src="/images/cad-bim/line.png"
         alt="Line"
         caption={
           "Lines are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions."
@@ -362,7 +362,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/polyline.png"
+        src="/images/cad-bim/polyline.png"
         alt="Polyline"
         caption={
           "When we connect two Lines together, we have a Polyline. Here we have a straightforward representation of what a Control Point is. Editing any of these point locations will change the shape of the Polyline. If the Polyline is closed, we have a Polygon. If the Polygon's edge lengths are all equal, it is described as regular."
@@ -373,7 +373,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/arcs.png"
+        src="/images/cad-bim/arcs.png"
         alt="Arcs, Circles, Ellipse Arcs, and Ellipses"
         caption={
           "As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an Arc, Circle, Ellipse Arc, or Ellipse by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed."
@@ -384,7 +384,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/nurbs.png"
+        src="/images/cad-bim/nurbs.png"
         alt="NURBS"
         caption={
           "NURBS (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing."
@@ -396,7 +396,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/degrees.png"
+        src="/images/cad-bim/degrees.png"
         alt="NURBS"
         caption={
           "1 Degree, 2 Degree, 3 Degree - The higher the degree value, the more Control Points are used to interpolate the resulting Curve."
@@ -477,7 +477,7 @@ export const content: Toc = [
       <>
         <h2>Geometry vs Topology</h2>
         <br />
-        <table id="simple-table">
+        <table className="simple-table">
           <thead>
             <th>Geometry </th>
             <th>Topology </th>
@@ -526,7 +526,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/wireframe.png"
+        src="/images/cad-bim/wireframe.png"
         alt={"Wireframe 3d models"}
         href="https://en.wikipedia.org/wiki/Wire-frame_model"
         caption={"Wireframe 3d models"}
@@ -577,7 +577,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/surface.png"
+        src="/images/cad-bim/surface.png"
         alt={"Surface 3d model"}
         caption={"Surface 3d model"}
       />
@@ -601,7 +601,7 @@ export const content: Toc = [
           </div>
           <div className="w-[1000px]">
             <Image
-              src="/images/week03/surface-parts.png"
+              src="/images/cad-bim/surface-parts.png"
               alt="Curve types"
               href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-5_surfaces.html"
             />
@@ -615,7 +615,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/surface-domain.png"
+        src="/images/cad-bim/surface-domain.png"
         alt={"Surface Domain"}
         caption={
           "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max). - Source: Dynamo Primer"
@@ -626,7 +626,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/nurbs-surfaces.png"
+        src="/images/cad-bim/nurbs-surfaces.png"
         alt={"Nurbs Surfaces"}
         caption={
           "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface. - Source: Dynamo Primer"
@@ -637,7 +637,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/polysurface.png"
+        src="/images/cad-bim/polysurface.png"
         alt={"Polysurfaces"}
         caption={
           "Polysurfaces are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology. Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface. - Source: Dynamo Primer"
@@ -689,7 +689,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/voxel.png"
+        src="/images/cad-bim/voxel.png"
         alt={"Decomposition models"}
         caption={"Decomposition models - Octrees"}
       />
@@ -699,7 +699,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/primitive-solids.png"
+        src="/images/cad-bim/primitive-solids.png"
         alt={"Primitive Solids"}
         caption={"Primitive Solids "}
       />
@@ -710,7 +710,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/boolean-operations.png"
+        src="/images/cad-bim/boolean-operations.png"
         alt={"Boolean Operations"}
         caption={"Constructive Models - Boolean Operations "}
       />
@@ -720,7 +720,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/solid-boolean.png"
+        src="/images/cad-bim/solid-boolean.png"
         alt={"Solid Boolean Operations"}
         caption={
           "There are three Solid Boolean operations that distinguish which parts of the geometry are kept. 1. Union: Remove the overlapping portions of the Solids and join them into a single Solid. 2. Difference: Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume. 3. Intersection: Keep only the intersecting volume of the two Solids. - Source: Dynamo Primer"
@@ -733,7 +733,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/brep.png"
+        src="/images/cad-bim/brep.png"
         alt={"Boundary models"}
         caption={"Boundary models - B-rep"}
       />
@@ -742,7 +742,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/euler.png"
+        src="/images/cad-bim/euler.png"
         alt={"Euler Poincare Formula"}
         caption={"Euler Poincare Formula"}
       />
@@ -753,7 +753,7 @@ export const content: Toc = [
       <>
         <h2>Comparison of solid modelling methods</h2>
         <br />
-        <table id="simple-table">
+        <table className="simple-table">
           <thead>
             <td></td>
             <th>Octrees</th>
@@ -803,7 +803,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/autocad.png"
+        src="/images/cad-bim/autocad.png"
         alt={"Autodesk's AutoCad"}
         href="https://en.wikipedia.org/wiki/AutoCAD"
         caption={"Autodesk's AutoCad is the world's most popular CAD software"}
@@ -813,7 +813,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/autocad-pricing.png"
+        src="/images/cad-bim/autocad-pricing.png"
         alt={"Autodesk's AutoCad"}
         href="https://www.autodesk.ca/en/products/autocad/overview?mktvar002=5656878%7CSEM%7C16183926843%7C137132251670%7Cpla-933128653804_autocad&plc=ACDIST&term=1-YEAR&support=ADVANCED&quantity=1&utm_source=GGL&utm_medium=SEM&utm_term=pla-933128653804&utm_id=5656878&utm_campaign=GGL_DEC_All-Products_AMER_CA_eComm_PLA_BR_New_NA_0000_4424459_&mkwid=s|pcrid|581813781112|pkw||pmt||pdv|c|slid||pgrid|137132251670|ptaid|pla-933128653804|pid|Autodesk%20AutoCAD%20(1%20year%20subscription)&utm_medium=cpc&utm_source=google&utm_campaign&utm_term&utm_content=s|pcrid|581813781112|pkw||pmt||pdv|c|slid||pgrid|137132251670|ptaid|pla-933128653804|&gclid=EAIaIQobChMIoovk042ogQMVP_uUCR2dig90EAYYAiABEgJY2PD_BwE&ef_id=ZQHwuAAABOyV0B@V:20230913172616:s&tab=subscription"
         caption={
@@ -825,13 +825,30 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Open-source Alternatives? 💸</h2>
+        <h2>Open-source CAD Alternatives? 💸</h2>
         <br />
         <Image
-          src="/images/week03/librecad.png"
+          src="/images/cad-bim/librecad.png"
           alt={"LibreCad"}
           href="https://wiki.librecad.org/index.php"
           caption={"LibreCad is a free and open source alternative to AutoCad"}
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <h2>Open-source 3D CAD Alternatives? 💸</h2>
+        <br />
+        <Image
+          src="/images/coding/blender.png"
+          alt="Blender"
+          caption={
+            "Blender - Open-Source 3d creative suite - 3D CAD, BIM and much more..."
+          }
+          href="https://www.blender.org/download/"
         />
       </>
     ),
@@ -866,7 +883,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/bim-books.png"
+        src="/images/cad-bim/bim-books.png"
         alt="BIM Books"
         caption={"Three fundamental BIM books: Weygnant’s, Saxon’s, Eastman’s"}
       />
@@ -910,7 +927,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/macleamy.png"
+        src="/images/cad-bim/macleamy.png"
         alt="BIM Books"
         caption={"MacLeamy Curve"}
       />
@@ -920,7 +937,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/lod.png"
+        src="/images/cad-bim/lod.png"
         alt="Levels of detail"
         caption={"Levels of detail"}
       />
@@ -929,7 +946,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/lod2.png"
+        src="/images/cad-bim/lod2.png"
         alt="Levels of detail"
         caption={"Levels of detail"}
       />
@@ -940,7 +957,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/levels.png"
+        src="/images/cad-bim/levels.png"
         alt="BIM Maturity Levels"
         caption={"BIM Maturity Levels"}
       />
@@ -950,7 +967,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/bim-ecosystem.png"
+        src="/images/cad-bim/bim-ecosystem.png"
         alt="Traditional BIM Ecosystem"
         caption={"Traditional BIM Ecosystem"}
       />
@@ -959,7 +976,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/revitorarchicad.png"
+        src="/images/cad-bim/revitorarchicad.png"
         alt="Revit or Archicad?"
         caption={
           "BIM authoring tools have been fighting to become the standard tool in the industry. Who is winning?"
@@ -979,7 +996,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/revit.png"
+        src="/images/cad-bim/revit.png"
         alt={"Autodesk's Revit"}
         href="https://en.wikipedia.org/wiki/Autodesk_Revit"
         caption={"Autodesk's Revit is the world's most popular BIM software"}
@@ -989,7 +1006,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/closed-bim.png"
+        src="/images/cad-bim/closed-bim.png"
         alt="Closed BIM"
         caption={
           "Proprietary BIM authoring tools and formats turn BIM into a closed process\
@@ -1012,7 +1029,7 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <Image
-        src="/images/week03/mandates.png"
+        src="/images/cad-bim/mandates.png"
         alt="BIM Mandates"
         caption={"By BICP Global BIM Study - Lessons For Ireland's Programme"}
       />
@@ -1026,7 +1043,7 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <Image
-        src="/images/week03/revit-pricing.png"
+        src="/images/cad-bim/revit-pricing.png"
         alt={"Autodesk's Revit 2023 price"}
         href="https://www.autodesk.ca/en/products/revit/overview?us_oa=dotcom-us&us_si=8abb21ea-6ba6-46ac-929b-39cecb847ed0&us_st=revit&us_pt=RVT&term=1-YEAR&tab=subscription&plc=RVT"
         caption={
@@ -1041,7 +1058,7 @@ The status quo is to work with proprietary solutions and closed file formats."
         <h2>Open-source Alternatives? 💸</h2>
         <br />
         <Image
-          src="/images/week03/blenderbim.png"
+          src="/images/cad-bim/blenderbim.png"
           alt={"BlenderBIM"}
           href="https://blenderbim.org/"
           caption={
@@ -1054,9 +1071,7 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <>
-        <h1>💻 Lab 3</h1>
-        <br />
-        <h2>LibreCad</h2>
+        <h1>💻 Lab </h1>
         <br />
         <h2>Blender</h2>
       </>
