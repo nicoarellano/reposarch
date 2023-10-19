@@ -1,28 +1,166 @@
-<style>
-  .vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-  }
-</style>
-<section
-  style="
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  "
->
-  <div className="flex items-center justify-center grow">
-    <img src="./photo.png" alt="Student" height="200" />
-  </div>
-  <div class="vl"></div>
-  <div className="flex items-center justify-center ">
-    <ul>
-      <li>one</li>
-      <li>two</li>
-      <li>three</li>
-      <li>four</li>
-    </ul>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@300&display=swap">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+      color: #333;
+      text-align: center;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1e90ff, #ff6347, #ffc700, #00d7c3);
+      background-size: 200% 200%;
+      animation: gradientBG 8s infinite;
+      color: #fff;
+      padding: 100px 0;
+    }
+
+    .header h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+    }
+
+    .profile-photo:hover {
+      transform: rotate(360deg);
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .facts {
+      flex: 1;
+      text-align: left;
+    }
+
+    .facts h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 36px;
+      color: #1e90ff;
+      margin: 40px 0;
+    }
+
+    .facts ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facts li {
+      margin: 20px 0;
+      font-size: 20px;
+      color: #555;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      flex: 1;
+      text-align: right;
+    }
+
+    .buttons h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 32px;
+      color: #1e90ff;
+      margin: 40px 0;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .button {
+      padding: 15px 30px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      background: linear-gradient(135deg, #1e90ff, #ff6347, #ffc700, #00d7c3);
+      background-size: 200% 200%;
+      animation: gradientButtonBG 8s infinite;
+      border: none;
+      color: #fff;
+      border-radius: 10px;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, #00d7c3, #ffc700, #ff6347, #1e90ff);
+      transform: scale(1.05);
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes gradientButtonBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Hello, I'm Bryanna</h1>
+    <img src="brypic.jpg" alt="Your Photo" class="profile-photo">
+  </header>
+  <main class="content">
+    <section class="facts">
+      <h2>About Me</h2>
+      <ul>
+        <li><strong>Fact 1:</strong> I can't snap my fingers</li>
+        <li><strong>Fact 2:</strong> I'm from Winnipeg, MB</li>
+        <li><strong>Fact 3:</strong> Background in Interior Design</li>
+        <li><strong>Fact 4:</strong> I love spicy food</li>
+      </ul>
+    </section>
+    <section class "buttons">
+      <h2> My Work</h2>
+      <div class="button-container">
+        <button class="button button1">Three JS</button>
+        <button class="button button2">IFC</button>
+        <button class="button button3">Map</button>
+        <button class="button button4">Final</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
