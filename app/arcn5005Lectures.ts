@@ -72,14 +72,14 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Representation tools and processes for architects",
+    title: "Representation tools and processes for the AEC",
     id: `week03`,
     url: `week03`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
-      { title: "Digital tools for architects" },
+      { title: "Digital tools for AEC" },
       { title: "Representation Processes: CAD, 3D CAD, BIM" },
       { title: "Proprietary software" },
 
@@ -131,7 +131,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "🟡 Quiz 1" },
       {
         title:
-          "History of internet and Hackerdom - Guess lecturer: Julie Ivanoff",
+          "Guess lecturer: Julie Ivanoff: Brief history of the computers, the internet, and the domocratization of knowledge",
       },
       {
         title:
@@ -146,6 +146,19 @@ export const arcn5005Lectures: Lectures = [
       { title: "How does a website work? Structure, style, logic" },
       { title: "🖥️ LAB 5: GitHub and HTML" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/qEGt81c3DTM?si=6K_swhkQAz6OUtUM",
+        title:
+          "Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge ",
+        date: dayjs("2023/10/05"),
+      },
+      {
+        url: "https://www.youtube.com/embed/qqNEEniAkf8?si=qOMLrngQ-Ek70xSE",
+        title: "Intro to HTML",
+        date: dayjs("2023/10/05"),
+      },
+    ],
   },
   {
     title: "Open source software for architects",
@@ -154,28 +167,41 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(5, "week"),
     content: week06,
     toc: [
-      { title: "Programming and architecture" },
-      { title: "Coding as a Language, as a tools and as an apparatus." },
-      { title: "OS Libraries / Packages" },
+      { title: "Open vs Closed BIM" },
+      { title: "BuildingSmart International and IFC" },
+      { title: "File formats - .rvt vs .ifc" },
       { title: "OSArch" },
       { title: "Post 2020 milestones" },
-      { title: "🖥️ LAB 6: CSS and JavaScript" },
+      { title: "CSS - Cascading Style Sheets" },
+      { title: "🖥️ LAB 6: HTML and CSS" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3",
+        title: "OSArch - Open source for architects community",
+        date: dayjs("2023/10/12"),
+      },
+      {
+        url: "https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg",
+        title: "Introduction to CSS",
+        date: dayjs("2023/10/12"),
+      },
     ],
   },
   {
-    title: "OpenBIM",
+    title: "OS BIM Software: BlenderBIM",
     id: `week07`,
     url: `week07`,
     date: initialDate.add(6, "week"),
     content: week07,
     toc: [
       { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
-      { title: "🔴 Assignment 1 - presentation" },
-      { title: "Open vs Closed BIM" },
-      { title: "File formats - .rvt vs .ifc" },
-      { title: "BuildingSmart International and IFC" },
-
-      { title: "🖥️ LAB 7: BlenderBIM" },
+      {
+        title:
+          "🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal",
+      },
+      { title: "Native IFC" },
+      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
     ],
   },
   {
@@ -192,11 +218,12 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
-      { title: "Web based 3D graphics" },
-      { title: "WebGL" },
+      { title: "JavaScript (js)" },
+      { title: "WebGL - Web based 3D graphics" },
       { title: "GLTF" },
-      { title: "Tree.js" },
-      { title: "🖥️ LAB 8: Three.js" },
+      { title: "Tree.js, intro to ifc.js" },
+      { title: "Intro to ifc.js" },
+      { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
     ],
   },
 
@@ -207,8 +234,11 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
-      { title: "🟡 Quiz 2" },
-      { title: "BlenderBIM - Guess lecturer: That Open Company" },
+      {
+        title:
+          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
+      },
+      { title: "Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },
       { title: "IFC.js" },
       { title: "🖥️ LAB 9: IFC.js and OpenBIM Components" },
@@ -239,7 +269,10 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
-      { title: "🔴 Assignment 2 - presentation" },
+      {
+        title:
+          "🔴 Assignment 3 presentation - BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
+      },
       { title: "Deploy your software" },
       { title: "Github pages" },
       { title: "🖥️ LAB 11: Web based BIM GIS software" },
@@ -269,7 +302,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(13, "week"),
     content: week13,
     toc: [
-      { title: "🔴 Assignment 3 - presentation" },
+      { title: "🔴 Assignment 4 presentation - Custom map using maplibre" },
       { title: "🖥️ LAB 13 Final assignment workshop" },
     ],
   },

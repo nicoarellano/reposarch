@@ -20,13 +20,6 @@ export default function Page({ params }): ReactElement<Props> {
         </section>
       ) : (
         <div className="flex flex-col justify-center items-center w-full h-full">
-          {/* <div className="w-1/4 h-[360px] ">
-            <ListWithIcon
-              list={Assignments}
-              subheader="Assignments"
-              icon={<LinkIcon />}
-            />
-          </div> */}
           <div className="h-full w-full">
             <iframe
               src={`/arcn5005/f2023/students/${username}/about.html`}

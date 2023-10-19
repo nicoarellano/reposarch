@@ -61,7 +61,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/Miquel_Reina_Ortiz_BW.jpg"
+        src="/images/coding/Miquel_Reina_Ortiz_BW.jpg"
         alt="Miquel Reina Ortiz"
         caption="Miquel Reina Ortiz - Architect, Ph.D Candidate"
       />
@@ -164,7 +164,7 @@ export const content: Toc = [
         <h3>🅰️ Coding</h3>
         <br />
         <Image
-          src="/images/week02/hieroglyphs.png"
+          src="/images/coding/hieroglyphs.png"
           alt="Codes: Hieroglyphs"
           href="https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"
           caption="By Wikipedia"
@@ -188,7 +188,7 @@ export const content: Toc = [
         <h3>⌨️ Computer coding</h3>
         <br />
         <Image
-          src="/images/week02/computer-coding.png"
+          src="/images/coding/computer-coding.png"
           alt="Computer coding"
           caption="Javascript"
         />
@@ -304,7 +304,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/binary.png"
+        src="/images/coding/binary.png"
         alt="Binary code"
         href="https://knowthecode.io/labs/basics-of-digitizing-data/episode-13"
         caption="Binary code by https://knowthecode.io/labs/basics-of-digitizing-data/episode-13"
@@ -332,7 +332,7 @@ export const content: Toc = [
         <h2>➡️ 🧠 ➡️ Programming logic</h2>
         <br />
         <Image
-          src="/images/week02/input-process-output.png"
+          src="/images/coding/input-process-output.png"
           alt="Input ► Process ► Output"
           caption="Input ► Process ► Output"
         />
@@ -349,7 +349,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/interface.png"
+        src="/images/coding/interface.png"
         alt="Human computer interaction"
         caption={"Our relation with the digital is mediated by interfaces"}
       />
@@ -361,7 +361,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/devices-diagram.png"
+        src="/images/coding/devices-diagram.png"
         alt="Physical input and output hardware"
         caption={"Physical input and output hardware"}
       />
@@ -377,7 +377,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/interaction.png"
+        src="/images/coding/interaction.png"
         alt="Human computer interaction"
         caption={"Interfaces"}
       />
@@ -404,7 +404,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/sutherland.png"
+        src="/images/computer-graphics/sutherland.png"
         alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
         caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
       />
@@ -418,7 +418,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/mac.png"
+        src="/images/coding/mac.png"
         alt="First Macintosh (1984)"
         caption={"First Macintosh (1984)"}
       />
@@ -460,7 +460,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week02/top-programming-languages.png"
+        src="/images/coding/top-programming-languages.png"
         alt="Top programming languages"
         href="https://gowithcode.com/top-programming-languages"
         caption="Top programming languages: https://gowithcode.com/top-programming-languages"
@@ -543,7 +543,7 @@ export const content: Toc = [
         <h2>Download Meshroom</h2>
         <br />
         <Image
-          src="/images/week02/logo-meshroom.png"
+          src="/images/coding/logo-meshroom.png"
           alt="Meshroom"
           caption={"Meshroom - Open-Source photogrametry software"}
           href="https://alicevision.org/#meshroom"
@@ -557,7 +557,7 @@ export const content: Toc = [
         <h2>Download Bleder</h2>
         <br />
         <Image
-          src="/images/week02/blender.png"
+          src="/images/coding/blender.png"
           alt="Blender"
           caption={
             "Blender - Open-Source 3d creative suite - 3D CAD, BIM and much more..."
