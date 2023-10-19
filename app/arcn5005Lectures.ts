@@ -14,12 +14,13 @@ import { content as week11 } from "./arcn5005/(lectures)/week11/";
 import { content as week12 } from "./arcn5005/(lectures)/week12/";
 import { content as week13 } from "./arcn5005/(lectures)/week13/";
 import { content as final } from "./arcn5005/(lectures)/final";
+import { content as maps } from "./arcn5005/(lectures)/maps";
 
 const initialDate = dayjs("2023-09-07");
 
 export const arcn5005Lectures: Lectures = [
   {
-    title: "Week 01 - The art of computer graphics",
+    title: "The art of computer graphics",
     id: `week01`,
     url: `week01`,
     date: initialDate,
@@ -38,12 +39,12 @@ export const arcn5005Lectures: Lectures = [
       { title: "The Art of Computer graphics", url: "/arcn5005/week01" },
       {
         title:
-          "🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), creating Github account, forking repo",
+          "🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), Github",
       },
     ],
   },
   {
-    title: "Week 02 - Programming and digitalization of the physical world",
+    title: "Programming and digitalization of the physical world",
     id: `week02`,
     url: `week02`,
     date: initialDate.add(1, "week"),
@@ -56,25 +57,44 @@ export const arcn5005Lectures: Lectures = [
       { title: "Coding, programming, scripting" },
       { title: "🖥️ LAB 2: MeshRoom to Blender" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG",
+        title: "Photogrammetry - Miquel Reina Ortiz",
+        date: dayjs("2023/09/14"),
+      },
+      {
+        url: "https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v",
+        title: "Programming",
+        date: dayjs("2023/09/14"),
+      },
+    ],
   },
 
   {
-    title: "Week 03 - Representation tools and processes for architects",
+    title: "Representation tools and processes for the AEC",
     id: `week03`,
     url: `week03`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
-      { title: "Digital tools for architects" },
+      { title: "Digital tools for AEC" },
       { title: "Representation Processes: CAD, 3D CAD, BIM" },
       { title: "Proprietary software" },
 
       { title: "🖥️ LAB 3: P5, LibreCad, and Blender " },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz",
+        title: "CAD, 3D CAD, and BIM",
+        date: dayjs("2023/09/21"),
+      },
+    ],
   },
   {
-    title: "Week 04 - Scripting",
+    title: "Scripting",
     id: `week04`,
     url: `week04`,
     date: initialDate.add(3, "week"),
@@ -92,61 +112,96 @@ export const arcn5005Lectures: Lectures = [
           "🖥️ LAB 4: Scripting - Dynamo / Grasshopper / Blender Geometry Nodes",
       },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu",
+        title: "Scripting and Visual Programming",
+        date: dayjs("2023/09/28"),
+      },
+    ],
   },
 
   {
-    title: "Week 05 - Internet, Collaboration and the Open source movement",
+    title: "Internet, Collaboration and the Open source movement",
     id: `week05`,
     url: `week05`,
     date: initialDate.add(4, "week"),
     content: week05,
     toc: [
       { title: "🟡 Quiz 1" },
-      // { title: "History of internet - Guess lecturer: (?)" },
-      { title: "History of Hackerdom" },
-      { title: "Backend and fronted" },
-      { title: "Git and Github" },
-      { title: "Open source. History of open-source" },
       {
         title:
-          "FSF: Richard Stallman - Free Software, Free Society, Selected Essays (2002)",
+          "Guess lecturer: Julie Ivanoff: Brief history of the computers, the internet, and the domocratization of knowledge",
       },
       {
         title:
-          "OSI: Erik Raymond - The Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary (1999)",
+          "Open source. History of open-source and the free software society",
+      },
+      {
+        title: "FSF: Free Software Foundation",
+      },
+      {
+        title: "OSI: Open Software Initiative",
       },
       { title: "How does a website work? Structure, style, logic" },
       { title: "🖥️ LAB 5: GitHub and HTML" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/qEGt81c3DTM?si=6K_swhkQAz6OUtUM",
+        title:
+          "Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge ",
+        date: dayjs("2023/10/05"),
+      },
+      {
+        url: "https://www.youtube.com/embed/qqNEEniAkf8?si=qOMLrngQ-Ek70xSE",
+        title: "Intro to HTML",
+        date: dayjs("2023/10/05"),
+      },
+    ],
   },
   {
-    title: "Week 06 - Open source software for architects",
+    title: "Open source software for architects",
     id: `week06`,
     url: `week06`,
     date: initialDate.add(5, "week"),
     content: week06,
     toc: [
-      { title: "Programming and architecture" },
-      { title: "Coding as a Language, as a tools and as an apparatus." },
-      { title: "OS Libraries / Packages" },
+      { title: "Open vs Closed BIM" },
+      { title: "BuildingSmart International and IFC" },
+      { title: "File formats - .rvt vs .ifc" },
       { title: "OSArch" },
-      { title: "🖥️ LAB 6: CSS and JavaScript" },
+      { title: "Post 2020 milestones" },
+      { title: "CSS - Cascading Style Sheets" },
+      { title: "🖥️ LAB 6: HTML and CSS" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3",
+        title: "OSArch - Open source for architects community",
+        date: dayjs("2023/10/12"),
+      },
+      {
+        url: "https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg",
+        title: "Introduction to CSS",
+        date: dayjs("2023/10/12"),
+      },
     ],
   },
   {
-    title: "Week 07 - OpenBIM",
+    title: "OS BIM Software: BlenderBIM",
     id: `week07`,
     url: `week07`,
     date: initialDate.add(6, "week"),
     content: week07,
     toc: [
       { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
-      { title: "🔴 Assignment 1 - presentation" },
-      { title: "Open vs Closed BIM" },
-      { title: "File formats - .rvt vs .ifc" },
-      { title: "BuildingSmart International and IFC" },
-      { title: "Post 2020 milestones" },
-      { title: "🖥️ LAB 7: BlenderBIM" },
+      {
+        title:
+          "🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal",
+      },
+      { title: "Native IFC" },
+      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
     ],
   },
   {
@@ -157,29 +212,33 @@ export const arcn5005Lectures: Lectures = [
     toc: [],
   },
   {
-    title: "Week 08 - Web based 3D graphics",
+    title: "Web based 3D graphics",
     id: `week08`,
     url: `week08`,
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
-      { title: "Web based 3D graphics" },
-      { title: "WebGL" },
+      { title: "JavaScript (js)" },
+      { title: "WebGL - Web based 3D graphics" },
       { title: "GLTF" },
-      { title: "Tree.js" },
-      { title: "🖥️ LAB 8: Three.js" },
+      { title: "Tree.js, intro to ifc.js" },
+      { title: "Intro to ifc.js" },
+      { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
     ],
   },
 
   {
-    title: "Week 09 - IFC to the browser",
+    title: "IFC to the browser",
     id: `week09`,
     url: `week09`,
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
-      { title: "🟡 Quiz 2" },
-      { title: "BlenderBIM - Guess lecturer: That Open Company" },
+      {
+        title:
+          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
+      },
+      { title: "Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },
       { title: "IFC.js" },
       { title: "🖥️ LAB 9: IFC.js and OpenBIM Components" },
@@ -187,7 +246,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 10 - OS GIS",
+    title: "Open Source GIS",
     id: `week10`,
     url: `week10`,
     date: initialDate.add(10, "week"),
@@ -204,13 +263,16 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 11 - Going online “hello world”",
+    title: "Going online “hello world”",
     id: `week11`,
     url: `week11`,
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
-      { title: "🔴 Assignment 2 - presentation" },
+      {
+        title:
+          "🔴 Assignment 3 presentation - BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
+      },
       { title: "Deploy your software" },
       { title: "Github pages" },
       { title: "🖥️ LAB 11: Web based BIM GIS software" },
@@ -218,7 +280,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Week 12 - Scalability and maintainability",
+    title: "Scalability and maintainability",
     id: `week12`,
     url: `week12`,
     date: initialDate.add(12, "week"),
@@ -233,15 +295,14 @@ export const arcn5005Lectures: Lectures = [
       { title: "🖥️ LAB 12 : Web based BIM GIS software" },
     ],
   },
-
   {
-    title: "Week 13",
+    title: "Final assignment workshop and Presentations",
     id: `week13`,
     url: `week13`,
     date: initialDate.add(13, "week"),
     content: week13,
     toc: [
-      { title: "🔴 Assignment 3 - presentation" },
+      { title: "🔴 Assignment 4 presentation - Custom map using maplibre" },
       { title: "🖥️ LAB 13 Final assignment workshop" },
     ],
   },
@@ -252,5 +313,34 @@ export const arcn5005Lectures: Lectures = [
     date: dayjs("2023-12-18"),
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
+  },
+  {
+    title: "🗺️ Maps and GIS 🌎",
+    id: `maps`,
+    url: `maps`,
+    date: dayjs("2023-09-25"),
+    content: maps,
+    toc: [
+      { title: "History of Mapping" },
+      { title: "Map Projections" },
+      { title: "Geodetic reference systems - NAD83 vs WGS84" },
+      { title: "Digital Maps" },
+      { title: "Geospatial Information Systems" },
+      { title: "Proprietary web GIS - Cesium and Mapbox" },
+      { title: "Open Source web GIS - Leaflet and Maplibre" },
+      { title: "🖥️ LAB : Maplibre" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
+        title: "Maps, GIS and Map renderers",
+        date: dayjs("2023/09/25"),
+      },
+      {
+        url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
+        title: "Maplibre - Tutorial 1",
+        date: dayjs("2023/09/25"),
+      },
+    ],
   },
 ];
