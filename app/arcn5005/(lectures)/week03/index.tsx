@@ -825,13 +825,30 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Open-source Alternatives? 💸</h2>
+        <h2>Open-source CAD Alternatives? 💸</h2>
         <br />
         <Image
           src="/images/cad-bim/librecad.png"
           alt={"LibreCad"}
           href="https://wiki.librecad.org/index.php"
           caption={"LibreCad is a free and open source alternative to AutoCad"}
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <h2>Open-source 3D CAD Alternatives? 💸</h2>
+        <br />
+        <Image
+          src="/images/coding/blender.png"
+          alt="Blender"
+          caption={
+            "Blender - Open-Source 3d creative suite - 3D CAD, BIM and much more..."
+          }
+          href="https://www.blender.org/download/"
         />
       </>
     ),
@@ -1054,9 +1071,7 @@ The status quo is to work with proprietary solutions and closed file formats."
   {
     element: (
       <>
-        <h1>💻 Lab 3</h1>
-        <br />
-        <h2>LibreCad</h2>
+        <h1>💻 Lab </h1>
         <br />
         <h2>Blender</h2>
       </>

@@ -72,14 +72,14 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Representation tools and processes for architects",
+    title: "Representation tools and processes for the AEC",
     id: `week03`,
     url: `week03`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
-      { title: "Digital tools for architects" },
+      { title: "Digital tools for AEC" },
       { title: "Representation Processes: CAD, 3D CAD, BIM" },
       { title: "Proprietary software" },
 
@@ -171,13 +171,25 @@ export const arcn5005Lectures: Lectures = [
       { title: "BuildingSmart International and IFC" },
       { title: "File formats - .rvt vs .ifc" },
       { title: "OSArch" },
-      { title: "OS Libraries / Packages" },
       { title: "Post 2020 milestones" },
+      { title: "CSS - Cascading Style Sheets" },
       { title: "🖥️ LAB 6: HTML and CSS" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3",
+        title: "OSArch - Open source for architects community",
+        date: dayjs("2023/10/12"),
+      },
+      {
+        url: "https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg",
+        title: "Introduction to CSS",
+        date: dayjs("2023/10/12"),
+      },
     ],
   },
   {
-    title: "OpenBIM",
+    title: "OS BIM Software: BlenderBIM",
     id: `week07`,
     url: `week07`,
     date: initialDate.add(6, "week"),
@@ -188,7 +200,8 @@ export const arcn5005Lectures: Lectures = [
         title:
           "🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal",
       },
-      { title: "🖥️ LAB 7: BlenderBIM" },
+      { title: "Native IFC" },
+      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
     ],
   },
   {
@@ -205,9 +218,11 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
+      { title: "JavaScript (js)" },
       { title: "WebGL - Web based 3D graphics" },
       { title: "GLTF" },
       { title: "Tree.js, intro to ifc.js" },
+      { title: "Intro to ifc.js" },
       { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
     ],
   },
@@ -221,7 +236,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       {
         title:
-          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software (MeshRoom or Metashape) and Three.js",
+          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
       },
       { title: "Guess lecturer: That Open Company" },
       { title: "Introduction to web-based open source tools for architects" },

@@ -16,6 +16,15 @@ export const content: Toc = [
   },
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3"
+        title="OSArch - Open source for architects community"
+        caption={"OSArch - Open source for architects community"}
+      />
+    ),
+  },
+  {
+    element: (
       <Image
         src="/images/osarch/osarch-software.png"
         alt="Osarch software"
@@ -59,6 +68,23 @@ export const content: Toc = [
       → This is what I am trying to do with the epistemic object.",
   },
   {
+    element: <PdfViewer src={"/resources/letter-to-autodesk.pdf"} />,
+  },
+  {
+    element: (
+      <PdfViewer
+        src={
+          "/resources/A Reply To Our Customers’ Open Letter On Autodesk Revit _ Autodesk News.pdf"
+        }
+      />
+    ),
+  },
+  {
+    element: (
+      <PdfViewer src={"/resources/Nordic OPEN LETTER TO AUTODESK.pdf"} />
+    ),
+  },
+  {
     element: (
       <Video
         src="https://www.youtube.com/embed/DK4zmfkp_pw?si=MWZZzjmOa4O9jB-B"
@@ -89,7 +115,7 @@ export const content: Toc = [
       <Image
         src="/images/osarch/openbim.png"
         alt="openbim"
-        href="https://www.buildingsmart.org/about/openbim/openbim-definition/"
+        href="https://www.buildingsmart.org/about/osarch/openbim-definition/"
         caption={"BuildingSmart International - OpenBIM (?)"}
       />
     ),
@@ -166,6 +192,35 @@ it is very hard to achieve openBIM",
 
   {
     element: (
+      <Image
+        src="/images/osarch/ifc.png"
+        alt="IFC"
+        href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/"
+        caption="Industry Foundation Classes (IFC)"
+      />
+    ),
+    notes:
+      "At its core, buildingSMART enables the entire built asset industry to improve the sharing of information throughout the lifecycle of project or asset. \n\
+    By breaking down the silos of information, end users can better collaborate and cooperate regardless of which software application they are using. \n\
+    buildingSMART’s technical core is based around Industry Foundation Classes (IFC) which was ISO certified in 2013. \n\
+    IFC is a standardized, digital description of the built asset industry. \n\
+    It is an open, international standard (ISO 16739-1:2018) and promotes vendor-neutral, or agnostic, and usable capabilities across a wide range of hardware devices, \
+    software platforms, and interfaces for many different use cases. More about IFC, its uses and adoption may be found here.",
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/9YgXXbdohOQ?si=iv5Iq_VxtjHtACTQ"
+        title="What is IFC (Industry Foundation Classes)?"
+        caption={
+          "What is IFC (Industry Foundation Classes)? - archive file approach"
+        }
+      />
+    ),
+  },
+
+  {
+    element: (
       <Video
         src="https://www.youtube.com/embed/h2Rv9iu7yDk?si=JoqYT8H4xzmxrXZm"
         title="Introduction to OpenBIM, Native IFC, and Open Source AEC"
@@ -183,7 +238,7 @@ it is very hard to achieve openBIM",
         <br />
         <Image
           src="/images/html-css-js.png"
-          alt="JavaScript"
+          alt="html-css-js"
           caption={"Technology behind web browsers: HTML - CSS - JS"}
         />
       </>
@@ -203,8 +258,16 @@ it is very hard to achieve openBIM",
     ),
     notes:
       "CSS is the language we use to style an HTML document. \n\
-    CSS describes how HTML elements should be displayed. \n\
-    This tutorial will teach you CSS from basic to advanced.",
+    CSS describes how HTML elements should be displayed.",
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg"
+        title="OSArch - Open source for architects community"
+        caption={"Introduction to CSS"}
+      />
+    ),
   },
   {
     element: (
@@ -213,12 +276,12 @@ it is very hard to achieve openBIM",
           src="/images/css/css-diagram.png"
           alt="css"
           href="https://www.w3schools.com/js/default.asp"
-          caption={"JavaScript is the programming language of the Web"}
+          caption={"CSS syntax"}
         />
       </>
     ),
     notes:
-      "Cascading Style Sheets (CSS), is a simple design language intended to transform the presentation of a Web Pages as well as many ostensibly nonweb environments. \n\
+      "Cascading Style Sheets (CSS), is a simple design language intended to transform the presentation of a Web Pages as well as many ostensibly non-web environments. \n\
     CSS handles the look and feel part of a web page. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, \n\
     how columns are sized and laid out, what background images or colors are used, layout designs, \n\
     variations in display for different devices and screen sizes as well as a variety of other effects. \n\
