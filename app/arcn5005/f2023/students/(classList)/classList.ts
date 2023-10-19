@@ -149,6 +149,13 @@ export const classListf2023: Students = [
     email: "MuQuJenniferLiu@cmail.carleton.ca",
   },
   {
+    id: "#101316473",
+    username: "nicoarellano",
+    lastName: "Arellano (test)",
+    firstName: "Nicolas",
+    email: "NicolasArellanoRisop@cmail.carleton.ca",
+  },
+  {
     id: "#101111524",
     username: "oskarkalm",
     lastName: "Kalm",
