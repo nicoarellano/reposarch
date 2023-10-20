@@ -134,14 +134,14 @@ code {
 }
 
 .slides a {
-  color: dimgray;
+  color: rgb(46, 46, 46);
   font-weight: 600;
 }
 
 .slides a:hover {
   color: gray;
   -webkit-text-stroke-color: gray;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.5px;
 }
 
 .uneven-grid {

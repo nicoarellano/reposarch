@@ -72,14 +72,14 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Representation tools and processes for architects",
+    title: "Representation tools and processes for the AEC",
     id: `week03`,
     url: `week03`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
       { title: "Sharing Blender experience" },
-      { title: "Digital tools for architects" },
+      { title: "Digital tools for AEC" },
       { title: "Representation Processes: CAD, 3D CAD, BIM" },
       { title: "Proprietary software" },
 
@@ -203,6 +203,13 @@ export const arcn5005Lectures: Lectures = [
       { title: "Native IFC" },
       { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7",
+        title: "Raphael Vouilloz - BlenderBIM",
+        date: dayjs("2023/10/19"),
+      },
+    ],
   },
   {
     title: "🍂 FALL BREAK 🍂",
@@ -218,9 +225,12 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
+      { title: "JavaScript (js)" },
       { title: "WebGL - Web based 3D graphics" },
       { title: "GLTF" },
       { title: "Tree.js, intro to ifc.js" },
+      { title: "Intro to ifc.js" },
+      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
       { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
     ],
   },
