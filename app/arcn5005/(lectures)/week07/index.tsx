@@ -5,6 +5,7 @@ import Video from "../../../../components/Common/Video";
 import Quote from "../../../../components/Common/Quote";
 import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
+import AudioPlayer from "../../../../components/Common/AudioPlayer";
 
 export const content: Toc = [
   {
@@ -50,12 +51,55 @@ export const content: Toc = [
 
   {
     element: (
-      <Image
-        src="/images/blenderbim/native-ifc.png"
-        alt="Native IFC"
-        href="https://github.com/brunopostle/ifcmerge/blob/main/docs/whitepaper.rst"
-        caption="Native IFC"
+      <Video
+        src="https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7"
+        title="Raphael Vouilloz - BlenderBIM"
+        caption={"Raphael Vouilloz - BlenderBIM"}
       />
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <h2>List of links provided by Raphael</h2>
+        <br />
+        <ol>
+          <li>
+            <a href="https://blenderbim.org/">BlenderBIM</a>
+          </li>
+          <li>
+            <a href="https://osarch.org">OSArch</a>
+          </li>
+          <li>
+            <a href="https://mediaspace.epfl.ch/media/04+Dion+Moult/0_6p3ydrvh/33141">
+              Dion Moult - The Open-Source Architecture Community. Towards
+              BlenderBIM, a free & IFC-native Software for Architects (must
+              watch!)
+            </a>
+          </li>
+          <li>
+            <a href="https://enac-cnpa.github.io/BlenderBIM-Tutoriel-Villa-Le-Sextant/1_introduction.html">
+              EPFL BlenderBIM
+            </a>
+          </li>
+        </ol>
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <Image
+          src="/images/blenderbim/native-ifc.png"
+          alt="Native IFC"
+          href="https://github.com/brunopostle/ifcmerge/blob/main/docs/whitepaper.rst"
+          caption="Native IFC"
+        />
+        <br />
+        <AudioPlayer src={"/resources/native-ifc.m4a"} />
+      </>
     ),
     notes:
       "A simple to implement set of protocols for reading and writing BIM data, known as *Native IFC*, enables robust multi-user collaborative BIM workflows.\n\
