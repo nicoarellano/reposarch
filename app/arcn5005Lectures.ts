@@ -203,6 +203,13 @@ export const arcn5005Lectures: Lectures = [
       { title: "Native IFC" },
       { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7",
+        title: "Raphael Vouilloz - BlenderBIM",
+        date: dayjs("2023/10/19"),
+      },
+    ],
   },
   {
     title: "🍂 FALL BREAK 🍂",
@@ -223,6 +230,7 @@ export const arcn5005Lectures: Lectures = [
       { title: "GLTF" },
       { title: "Tree.js, intro to ifc.js" },
       { title: "Intro to ifc.js" },
+      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
       { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
     ],
   },
