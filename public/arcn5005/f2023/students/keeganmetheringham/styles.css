@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     background-color: #CDAA7D;
 }
@@ -38,4 +39,46 @@ button {
     box-shadow: none;
     transform: translate(3px, 3px);
   }
+=======
+body{
+    background-color: #CDAA7D;
+}
+header{background-color: #EEC591;
+color: white;
+}
+img {border: 10px solid #ffd39b; 
+    border-radius: 10px;
+}
+
+#title {color: #8B7355;}
+h2 {color: #8B7355;}
+h1 {color: #ffd39b;}
+
+
+
+.subtitle {
+        border: 2px solid #8B7355;
+        margin: 20px;
+        padding-right: 20px
+}
+
+button {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #ffd39b;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #ffd39b;
+    background: #8B7355;
+    box-shadow: 3px 3px #ffd39b;
+    cursor: pointer;
+    margin: 35px 0;
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
+>>>>>>> 436afb368d86a45c8e0019c905aed6e8c0afe95e
   .p {font-family: Arial, Helvetica, sans-serif}
