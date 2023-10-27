@@ -54,4 +54,18 @@ Please let me know if you have further questions.",
     title: `2023/10/05: Today (Thursday, October 5th) we have our first quiz at 13:30 pm it is open book and covers all the content until today. The password is 'q1'. Good luck!. At 2:00 pm we have our guess lecture Julie Ivanoff.`,
     url: "https://brightspace.carleton.ca/d2l/lms/quizzing/user/quizzes_list.d2l?ou=207080",
   },
+  {
+    title: `Hi All, First of all, thanks to all of you who have submitted your assignment 1. 
+    I am really enjoying them. Most of them are very creative and fun. I hope you also enjoyed creating them.
+ I will be accepting submissions until the end of the day today (Friday, October 20th), there are still 5 students who have not submitted yet. Please submit ASAP.
+ If you are still unsure how to submit it, please&nbsp;review again the video where I explain 4 different ways of submitting, or ask your classmates.
+ Please review what I have received so far here:
+ https://reposarch.vercel.app/arcn5005/f2023/students
+ What you see on that link is all I have so far, so if you are not satisfied with the result or if you are missing an image or something (for example the avatar.jpg) you have until the end of the day (Friday, October 20th at 11:59 pm) to upload it.
+ I gave you some feedback yesterday that you have to address if you want a full mark, but also try to improve based on your classmates' submissions.
+ Any submission after tonight will be penalized. However, you can keep improving your page until the end of the term. If the improvement is substantial, I may consider giving you some extra points.
+ I hope the first part of the class was interesting to all of you.&nbsp;
+ Enjoy your break and see you in 2 weeks!`,
+    url: "https://reposarch.vercel.app/arcn5005/f2023/students",
+  },
 ];

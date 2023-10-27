@@ -11,13 +11,14 @@ body {
 
 }
 section{
-  margin-left: 38em;
+  text-align: center;
   height: fit-content;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 .btn {
  width: 6.5em;
  height: 2.3em;
- margin: 40em;
+ margin: 42em;
  background: rgb(63, 83, 12);
  color: white;
  border: none;
@@ -53,14 +54,15 @@ button:hover:after {
  transition: all 0.5s;
 }
 .card {
-    width: 210px;
+    width: 310px;
     height: 254px;
     border-radius: 4px;
-    background: rgb(239, 233, 223);
+    background: rgba(235, 231, 225, 0.114);
     display: flex;
     gap: 5px;
     padding: .4em;
-    margin-left: 40em;
+    margin-left: 37.5em;
+    align-items: center;
   }
   
   .card p {
@@ -70,7 +72,7 @@ button:hover:after {
     cursor: pointer;
     border-radius: 2px;
     transition: all .5s;
-    background: #212121;
+    background: #8faf87dd;
     border: 1px solid #ff5a91;
     display: flex;
     justify-content: center;
@@ -88,7 +90,7 @@ button:hover:after {
     transform: rotate(-90deg);
     transition: all .5s;
     text-transform: uppercase;
-    color: #64a94dd8;
+    color: #102b07d8;
     letter-spacing: .1em;
   }
   
