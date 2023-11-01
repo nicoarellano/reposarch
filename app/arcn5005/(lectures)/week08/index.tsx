@@ -378,6 +378,188 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
     JavaScript has dynamic types. This means that the same variable can be used to hold different data types \n\
      In a couple of weeks we are going to learn a framework called Typescript that was developed by Facebook to solve Type issues in Javascript",
   },
+  // Objects
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-object-parts.png"
+        alt="JavaScript object"
+        caption="A Javascript object is a collection of properties, and a property is an association between a name (or key) and a value. "
+      />
+    ),
+    notes:
+      "An object is a collection of properties, and a property is an association between a name (or key) and a value. \n\
+    A property's value can be a function, in which case the property is known as a method. \n\
+    Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-object-example.png"
+        alt="JavaScript object"
+        caption="Objects in JavaScript, can be compared to objects in real life"
+      />
+    ),
+    notes:
+      "Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life \n\
+      In JavaScript, an object is a standalone entity, with properties and type. \n\
+      Compare it with a cup, for example. A cup is an object, with properties. \n\
+      A cup has a color, a design, weight, a material it is made of, etc. \n\
+      The same way, JavaScript objects can have properties, which define their characteristics.",
+  },
+  // functions
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-function.png"
+        alt="JavaScript functions"
+        caption="A JavaScript function is a block of code designed to perform a particular task. It is is executed when `something` invokes it (calls it)."
+      />
+    ),
+    notes:
+      "A JavaScript function is a block of code designed to perform a particular task.\n\
+    A JavaScript function is executed when `something` invokes it (calls it).",
+  },
+
+  // Conditionals
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-conditionals.png"
+        alt="JavaScript functions"
+        caption="A JavaScript function is a block of code designed to perform a particular task. It is is executed when `something` invokes it (calls it)."
+      />
+    ),
+    notes:
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+  },
+
+  // loops
+  {
+    element: <EmojiTitle emoji={"Loops ♻️"} title={" "} />,
+    notes:
+      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+  },
+
+  // reserved words
+  {
+    element: (
+      <>
+        <h2>Reserved words 🚫</h2>
+        <br />
+        <div className="overflow-y-auto w-full flex justify-center">
+          <table className="simple-table">
+            <tbody>
+              <tr>
+                <td>abstract</td>
+                <td>arguments</td>
+                <td>await*</td>
+                <td>boolean</td>
+              </tr>
+              <tr>
+                <td>break</td>
+                <td>byte</td>
+                <td>case</td>
+                <td>catch</td>
+              </tr>
+              <tr>
+                <td>char</td>
+                <td>class*</td>
+                <td>const</td>
+                <td>continue</td>
+              </tr>
+              <tr>
+                <td>debugger</td>
+                <td>default</td>
+                <td>delete</td>
+                <td>do</td>
+              </tr>
+              <tr>
+                <td>double</td>
+                <td>else</td>
+                <td>enum*</td>
+                <td>eval</td>
+              </tr>
+              <tr>
+                <td>export*</td>
+                <td>extends*</td>
+                <td>false</td>
+                <td>final</td>
+              </tr>
+              <tr>
+                <td>finally</td>
+                <td>float</td>
+                <td>for</td>
+                <td>function</td>
+              </tr>
+              <tr>
+                <td>goto</td>
+                <td>if</td>
+                <td>implements</td>
+                <td>import*</td>
+              </tr>
+              <tr>
+                <td>in</td>
+                <td>instanceof</td>
+                <td>int</td>
+                <td>interface</td>
+              </tr>
+              <tr>
+                <td>let*</td>
+                <td>long</td>
+                <td>native</td>
+                <td>new</td>
+              </tr>
+              <tr>
+                <td>null</td>
+                <td>package</td>
+                <td>private</td>
+                <td>protected</td>
+              </tr>
+              <tr>
+                <td>public</td>
+                <td>return</td>
+                <td>short</td>
+                <td>static</td>
+              </tr>
+              <tr>
+                <td>super*</td>
+                <td>switch</td>
+                <td>synchronized</td>
+                <td>this</td>
+              </tr>
+              <tr>
+                <td>throw</td>
+                <td>throws</td>
+                <td>transient</td>
+                <td>true</td>
+              </tr>
+              <tr>
+                <td>try</td>
+                <td>typeof</td>
+                <td>var</td>
+                <td>void</td>
+              </tr>
+              <tr>
+                <td>volatile</td>
+                <td>while</td>
+                <td>with</td>
+                <td>yield</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        <a href="https://www.w3schools.com/js/js_reserved.asp">
+          <h4>More reserved words ...</h4>
+        </a>
+      </>
+    ),
+    notes:
+      "In any programming language, a reserved word or a reserved identifier is a word that cannot be used as an identifier, such as the name of a variable, function, or label. \n\
+    Thus, it is reserved and cannot be used for defining any of these.",
+  },
 
   {
     element: (
