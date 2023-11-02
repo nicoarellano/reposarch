@@ -7,6 +7,8 @@ import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 import Gltf from "./Gltf";
 import { title } from "process";
+import Conditionals from "./Conditionals.mdx";
+import Loops from "./Loops.mdx";
 
 export const content: Toc = [
   // JAVASCRIPT CONTENT
@@ -40,7 +42,7 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
     ),
     notes:
       "Programming languages can be broadly categorized into two types based on how they are processed: compiled and interpreted. \n\
-      In Compiled langugages, the source code is passed through a program called a compiler, which translates it into machine (low-level language) code that the machine understands and can execute (.exe or .dll files) \n\
+      In Compiled languages, the source code is passed through a program called a compiler, which translates it into machine (low-level language) code that the machine understands and can execute (.exe or .dll files) \n\
       In contrast, JavaScript has no compilation step. Instead, an interpreter in the browser reads over the JavaScript code, interprets each line, and runs it.",
   },
 
@@ -419,27 +421,240 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
     ),
     notes:
       "A JavaScript function is a block of code designed to perform a particular task.\n\
-    A JavaScript function is executed when `something` invokes it (calls it).",
+    A JavaScript function is executed when `something` invokes it (calls it)",
   },
 
   // Conditionals
   {
     element: (
+      <>
+        <h2>Conditional Statements ✔️✖️❔</h2>
+        <br />
+        <Image
+          src="/images/javascript/js-conditionals.png"
+          alt="JavaScript conditionals"
+          caption="Conditional statements are used to perform different actions based on different conditions."
+        />
+      </>
+    ),
+  },
+  {
+    element: <Conditionals />,
+  },
+
+  {
+    element: (
       <Image
-        src="/images/javascript/js-conditionals.png"
-        alt="JavaScript functions"
-        caption="A JavaScript function is a block of code designed to perform a particular task. It is is executed when `something` invokes it (calls it)."
+        src="/images/javascript/js-if.png"
+        alt="if"
+        caption="If statement"
+        href="https://www.w3schools.com/js/js_if_else.asp"
       />
     ),
-    notes:
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-if-else.png"
+        alt="if else"
+        caption="If else statement"
+        href="https://www.w3schools.com/js/js_if_else.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-if-else-example.png"
+        alt="if else example"
+        caption="If else example"
+        href="https://www.w3schools.com/js/js_if_else.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-switch.png"
+        alt="switch"
+        caption="switch statement"
+        href="https://www.w3schools.com/js/js_switch.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-switch-example.png"
+        alt="switch example"
+        caption="switch example"
+        href="https://www.w3schools.com/js/js_switch.asp"
+      />
+    ),
   },
 
   // loops
   {
-    element: <EmojiTitle emoji={"Loops ♻️"} title={" "} />,
+    element: (
+      <EmojiTitle
+        emoji={"Loops 🔄️"}
+        title={
+          "Loops are ways JavaScript has to do something repeatedly🔁. They are a great way to automate processes 🤖"
+        }
+      />
+    ),
     notes:
-      "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration",
+      "Loops offer a quick and easy way to do something repeatedly. \n\
+      You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another.",
+  },
+
+  {
+    element: <Loops />,
+    notes:
+      "There are many different kinds of loops, but they all essentially do the same thing: they repeat an action some number of times. \n\
+      (Note that it's possible that number could be zero!) \n\
+    The various loop mechanisms offer different ways to determine the start and end points of the loop. \n\
+    There are various situations that are more easily served by one type of loop over the others.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-for-loop-example.png"
+        alt="for loop example"
+        caption="for → loops through a block of code a number of times"
+        href="https://www.w3schools.com/js/js_switch.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-for-in.png"
+        alt="forEach loop example"
+        caption="for/in → loops through the properties of an object"
+        href="https://www.w3schools.com/js/js_loop_forin.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-foreach-example.png"
+        alt="forEach loop example"
+        caption="forEach → calls a function (a callback function) once for each array element"
+        href="https://www.w3schools.com/js/js_loop_forin.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-for-of.png"
+        alt="for of loop example"
+        caption="for/of → loops through the values of an iterable object"
+        href="https://www.w3schools.com/js/js_loop_forof.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-while.png"
+        alt="while loop example"
+        caption="while → loops through a block of code while a specified condition is true"
+        href="https://www.w3schools.com/js/js_loop_while.asp"
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-do-while.png"
+        alt="do while loop example"
+        caption="do/while → also loops through a block of code while a specified condition is true"
+        href="https://www.w3schools.com/js/js_loop_while.asp"
+      />
+    ),
+  },
+
+  // events
+  {
+    element: (
+      <EmojiTitle
+        emoji={"Events 👂"}
+        title={
+          "Events are actions assigned to HTML elements. JavaScript listens 👂 to javascript 'events' and reacts 🎬"
+        }
+      />
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <a href="https://www.w3schools.com/js/js_events.asp">
+          <h2>Common HTML Events 👂</h2>
+        </a>
+        <br />
+        <table className="simple-table">
+          <tbody>
+            <tr>
+              <th>Event</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>onchange</td>
+              <td>An HTML element has been changed</td>
+            </tr>
+            <tr>
+              <td>onclick</td>
+              <td>The user clicks an HTML element</td>
+            </tr>
+            <tr>
+              <td>onmouseover</td>
+              <td>The user moves the mouse over an HTML element</td>
+            </tr>
+            <tr>
+              <td>onmouseout</td>
+              <td>The user moves the mouse away from an HTML element</td>
+            </tr>
+            <tr>
+              <td>onkeydown</td>
+              <td>The user pushes a keyboard key</td>
+            </tr>
+            <tr>
+              <td>onload</td>
+              <td>The browser has finished loading the page</td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">
+          Here is the complete list of HTML events
+        </a>
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/javascript/js-onclick-event.png"
+        alt="onClick event example"
+        caption="onClick event example"
+        href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick1"
+      />
+    ),
   },
 
   // reserved words
@@ -664,7 +879,6 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
         />
       </>
     ),
-    notes: "",
   },
   {
     element: (
@@ -677,7 +891,6 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
         />
       </>
     ),
-    notes: "",
   },
 
   {
