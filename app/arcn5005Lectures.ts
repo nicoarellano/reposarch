@@ -261,7 +261,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "Guess lecturer: Antonio Gonzalez Viegas (That Open Company)" },
       { title: "Introduction to web-based open source tools for architects" },
-      { title: "IFC.js" },
+      { title: "OpenBIM Components (formerly IFC.js)" },
       { title: "🖥️ LAB 9: IFC.js and OpenBIM Components" },
     ],
   },

@@ -27,9 +27,7 @@ h1 {
 
 .assignment2 {
     width: 95%;
-    z-index: 99;
-    pointer-events: all;
-    height: 95%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -57,7 +55,7 @@ h1 {
 #three-canvas {
     position: fixed;
     /* top: 0; */
-    left: 0;
+    left: 220;
     bottom: 100;
     outline: none;
 }

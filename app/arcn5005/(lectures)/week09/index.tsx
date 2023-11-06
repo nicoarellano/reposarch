@@ -53,6 +53,28 @@ export const content: Toc = [
   {
     element: (
       <Image
+        src="/images/osarch/timeline.png"
+        alt="OS timeline"
+        caption={"OSArch - timeline"}
+      />
+    ),
+    notes:
+      "However, before the end of 2019 to imagine an alternative to proprietary software for the AEC industry was challenging.\n\
+      The industry was (and still is) too dependant on the main vendor’s solutions.\n\
+      But then, a chain of events started to open the door to alternatives\n\
+      → In October 2019 Dion Moult releases BlenderBIM\n\
+      → In February 2020, the OS Arch is created: OSArch,, is an online community that promotes that the built environment can be designed, constructed, operated, and recycled with free/libre and open-source software.\n\
+      → In July 2020, several leading UK and international AEC firms wrote an open letter to Autodesk’ demanding changes related to costs, licensing & business practices\n\
+      → In December 2020 the IFC.js library is released. The first FLOSS online library to work with BIM and IFC.\n\
+      → In September 2022 there is a follow-up letter by the Nordic Architectural Associations endorsed by  the Architects’ council of Europe. \n\
+      → We don’t know about 2023 but I believe this is the year for CIMS…\n\
+      → In my opinion, instead of writing letters to the vendors we as sector need to keep taking action with our own hands. \n\
+      → This is what I am trying to do with the epistemic object.",
+  },
+
+  {
+    element: (
+      <Image
         src="/images/obc/thatopencompany.png"
         alt="That Open Company - Welcome to the AECOsystem."
         caption={"That Open Company - Welcome to the AECOsystem."}
@@ -66,5 +88,14 @@ export const content: Toc = [
     Open Services: Processing, storage, and analytics services developed by That Open Company to help developers create and release software. \n\
     That People Community: Meet other members, forums, chats, and meetings every six weeks within That Open Company's team to find out what's happening exclusively things while sharing opinions. \n\
     Open University: A new(? rebranded) platform built by That Open Company to create a path from zero knowledge about programming to becoming a software developer in less time than possible, with teachers supporting students in their career paths.",
+  },
+
+  {
+    element: (
+      <EmojiTitle
+        emoji={"Lab 9 💻"}
+        title={"Working on Assignment 2 and exploring OpenBIM components"}
+      />
+    ),
   },
 ];

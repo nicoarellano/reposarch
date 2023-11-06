@@ -106,9 +106,15 @@ createText("- Research team lead at CIMS", 2, "0XFF0000");
 createText("- PhD candidate at ASAU", 1, "0XFF0000");
 createText("- Amateur programmer", 0, "0XFF0000");
 
-camera.position.z = 8;
-camera.position.x = 8;
-camera.position.y = 5;
+camera.position.z = 13;
+camera.position.x = 5;
+camera.position.y = 2;
+
+scene.position.x = -5;
+scene.position.z = 5;
+scene.position.y = -3;
+
+console.log(camera);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
