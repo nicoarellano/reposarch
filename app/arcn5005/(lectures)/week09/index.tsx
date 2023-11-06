@@ -53,7 +53,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/osarch/timeline.png"
+        src="/images/obc/timeline.png"
         alt="OS timeline"
         caption={"OSArch - timeline"}
       />
