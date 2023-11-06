@@ -657,13 +657,24 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
     ),
   },
 
+  // {
+  //   element: (
+  //     <Image
+  //       src="/images/javascript/js-onclick-event.png"
+  //       alt="onClick event example"
+  //       caption="onClick event example"
+  //       href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick1"
+  //     />
+  //   ),
+  // },
+
   {
     element: (
       <Image
-        src="/images/javascript/js-onclick-event.png"
+        src="/images/javascript/js-addeventlistener.png"
         alt="onClick event example"
         caption="onClick event example"
-        href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick1"
+        href="https://www.w3schools.com/jsref/met_document_addeventlistener.asp"
       />
     ),
   },
