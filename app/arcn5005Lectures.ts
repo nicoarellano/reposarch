@@ -264,6 +264,23 @@ export const arcn5005Lectures: Lectures = [
       { title: "OpenBIM Components (formerly IFC.js)" },
       { title: "🖥️ LAB 9: IFC.js and OpenBIM Components" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/rLE9pdzEBsw?si=3ZuwNi6pz6lcC8Dq",
+        title: "Antonio Gonzales Viegas - That Open Company",
+        date: dayjs("2023/11/09"),
+      },
+      {
+        url: "https://www.youtube.com/embed/bLUMHQRJJyU?si=_xGYMzcMDfPZndRU",
+        title: "Three js - Assignment 2 - 1/2",
+        date: dayjs("2023/11/09"),
+      },
+      {
+        url: "https://www.youtube.com/embed/bLUMHQRJJyU?si=EGpp1l5QnUQcQmV3",
+        title: "Three js - Assignment 2 - 2/2",
+        date: dayjs("2023/11/09"),
+      },
+    ],
   },
 
   {
