@@ -271,7 +271,7 @@ export const arcn5005Lectures: Lectures = [
         date: dayjs("2023/11/09"),
       },
       {
-        url: "https://www.youtube.com/embed/bLUMHQRJJyU?si=_xGYMzcMDfPZndRU",
+        url: "https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4",
         title: "Three js - Assignment 2 - 1/2",
         date: dayjs("2023/11/09"),
       },

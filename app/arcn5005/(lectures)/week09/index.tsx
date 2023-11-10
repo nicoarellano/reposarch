@@ -101,7 +101,7 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/bLUMHQRJJyU?si=_xGYMzcMDfPZndRU"
+        src="https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4"
         title="Three js - Assignment 2 - 1/2"
         caption={"Three js - Assignment 2 - 1/2"}
       />
