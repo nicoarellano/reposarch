@@ -34,9 +34,9 @@ export const slides: Slides = [
     url: "/arcn5005/three-example",
   },
   {
-    id: "ifcjs-example",
-    title: "IFC.js Example ",
-    url: "/arcn5005/ifcjs-example",
+    id: "bim-example",
+    title: "BIM Example ",
+    url: "/arcn5005/bim-example",
   },
   {
     id: "map-example",

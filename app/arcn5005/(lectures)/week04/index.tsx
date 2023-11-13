@@ -16,6 +16,15 @@ import DynamoConsiderations from "./DynamoConsiderations.mdx";
 export const content: Toc = [
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu"
+        title="Class 4  - Scripting and Visual Programming"
+        caption={"Class 4  - Scripting and Visual Programming"}
+      />
+    ),
+  },
+  {
+    element: (
       <Quote
         quote={
           "GUIs have profoundly changed the way in which architects interact with computers. \
@@ -32,7 +41,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week03/scripting-cultures.jpg"
+        src="/images/cad-bim/scripting-cultures.jpg"
         alt="Mark Burry - Scripting Cultures"
         caption={"Mark Burry - Scripting Cultures"}
       />
@@ -70,33 +79,6 @@ export const content: Toc = [
       />
     ),
   },
-  {
-    element: (
-      <Quote
-        quote={
-          "Software modified by the designer through scripting, however, provides a range of possibilities for creative speculation that is simply not possible using the software only as the manufacturers intended it to be used."
-        }
-        author={"Mark Burry - Scripting Cultures"}
-      />
-    ),
-  },
-  {
-    element: (
-      <Quote
-        quote={
-          "Although the first courses in computer programming were introduced in \
-          some architecture schools like Harvard or MIT in the late 1980s and \
-          early 1990s, scripting has developed only in the past years, fostered \
-          by the growing computer literacy of young architectural students and \
-          architects who are now able to write code instead of relying only on \
-          the predefined software functions. Scripting does open new \
-          perspectives on the evolution of design: it even raises some questions \
-          that are not fully answered yet."
-        }
-        author={"Antoine Picon - Digital Turns in Architecture"}
-      />
-    ),
-  },
   { element: <Scripting /> },
   {
     element: (
@@ -106,7 +88,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/grasshopper.png"
+        src="/images/scripting/grasshopper.png"
         alt="Grasshopper"
         href="https://www.grasshopper3d.com/"
         caption={
@@ -118,7 +100,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/grasshopper_v6_included.png"
+        src="/images/scripting/grasshopper_v6_included.png"
         alt="Out of the box Grasshopper "
         href="https://www.grasshopper3d.com/"
         caption={"Out of the box Grasshopper that comes with Rhinoceros v6+"}
@@ -128,7 +110,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/grasshopper-ghpython.png"
+        src="/images/scripting/grasshopper-ghpython.png"
         alt="GhPython"
         caption={
           "For designers who want to use the same flexible language everywhere, \
@@ -144,7 +126,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/dynamo.png"
+        src="/images/scripting/dynamo.png"
         alt="Dynamo"
         caption={
           'Dynamo BIM by Autodesk: “Dynamo is a visual programming tool that aims to be accessible to both non-programmers and programmers alike. It gives users the ability to visually script behavior, define custom pieces of logic, and script using textual programming languages (ie. Python)."'
@@ -167,7 +149,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/carleton-dynamo.png"
+        src="/images/scripting/dynamo-bim.png"
         alt="Carleton Dynamo"
         caption={
           'Dynamo BIM by Autodesk: “Dynamo is a visual programming tool that aims to be accessible to both non-programmers and programmers alike. It gives users the ability to visually script behavior, define custom pieces of logic, and script using textual programming languages (ie. Python)."'
@@ -175,9 +157,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "In this example we are using Dynamo to create a “Digital Twin” or a dynamic copy of Carleton University’s campus. \
-      For this project at CIMS, we use Dynamo to read an URL (web domain address) and based on that, make periodic changes to the model in real-time. \
-      Basically, dynamo is a great tool to program solutions to everyday problems.",
+      "Dynamo is a great tool for experimentation and speculative design, but it is also great to program solutions to everyday problems.",
   },
   {
     element: <DynamoBenefits />,
@@ -190,7 +170,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/node.png"
+        src="/images/scripting/node.png"
         alt="Dynamo node"
         caption={
           "The most elemental objects in Dynamo are the Nodes.\
@@ -207,7 +187,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/process-diagram.png"
+        src="/images/scripting/process-diagram.png"
         alt="Process diagram"
         caption={
           "The designer is being part of this digital process: \
@@ -222,7 +202,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/nodes.png"
+        src="/images/scripting/nodes.png"
         alt="Nodes"
         caption={
           "There are nodes for many different things:\
@@ -237,7 +217,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/geometry-nodes.png"
+        src="/images/scripting/geometry-nodes.png"
         alt="Geometry nodes"
         caption={
           "And also we can use nodes to create geometry. \
@@ -250,7 +230,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/code-block.png"
+        src="/images/scripting/code-block.png"
         alt="Code Blocks"
         caption={
           "The code block is a unique feature in Dynamo that dynamically links a visual programming environment with a text-based one. \
@@ -262,7 +242,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/code-block2.png"
+        src="/images/scripting/code-block2.png"
         alt="Code Blocks"
         caption={"Code block is almost like programming"}
       />
@@ -277,7 +257,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/dynamo-logic.png"
+        src="/images/scripting/dynamo-logic.png"
         alt="Dynamo Logic"
         caption={
           'In this image, the boolean is set to true, which means that the result is a string reading: "this is the result if true". The three Nodes creating the If statement are working identically here. - Source: Dynamo Primer'
@@ -291,7 +271,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/dynamo-logic-false.png"
+        src="/images/scripting/dynamo-logic-false.png"
         alt="Dynamo Logic"
         caption={
           "Again, the Nodes are working identically. If the boolean is changed to false, our result is the number Pi, as defined in the original If statement. - Source: Dynamo Primer"
@@ -303,7 +283,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/conditional.png"
+        src="/images/scripting/conditional.png"
         alt="Conditional statements"
         caption={
           "The conditional statement nodes are based on boolean operations: \
@@ -324,7 +304,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/python.png"
+        src="/images/scripting/python.png"
         alt="Dynamo and python"
         caption={
           "Dynamo and python: \
@@ -359,7 +339,7 @@ export const content: Toc = [
           <li>CATEGORIZATION OF ELEMENTS</li>
           <li>IMPORTING AND EXPORTING DATA</li>
           <li>CAD TO REVIT</li>
-          <li>REAL-TIME SIMULATIONS</li>
+          <li>CARLETON DIGITAL TWIN</li>
         </ol>
       </>
     ),
@@ -372,7 +352,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/room-number.png"
+        src="/images/scripting/room-number.png"
         alt="1. Automatic Room numbers"
         caption={"1. Automatic Room numbers (manual process)"}
       />
@@ -381,7 +361,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/room-number2.png"
+        src="/images/scripting/room-number2.png"
         alt="1. Automatic Room numbers"
         caption={"1. Automatic Room numbers (manual process)"}
       />
@@ -390,7 +370,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/room-number3.png"
+        src="/images/scripting/room-number3.png"
         alt="1. Automatic Room numbers"
         caption={"1. Automatic Room numbers (automation script)"}
       />
@@ -399,7 +379,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/room-number4.png"
+        src="/images/scripting/room-number4.png"
         alt="1. Automatic Room numbers"
         caption={"1. Automatic Room numbers (automation script)"}
       />
@@ -408,7 +388,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/door-numbers.png"
+        src="/images/scripting/door-numbers.png"
         alt="2. Automatic Door numbers"
         caption={"2. Automatic Door numbers (manual process)"}
       />
@@ -417,7 +397,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/door-numbers2.png"
+        src="/images/scripting/door-numbers2.png"
         alt="2. Automatic Door numbers"
         caption={"2. Automatic Door numbers (manual process)"}
       />
@@ -426,7 +406,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/door-numbers3.png"
+        src="/images/scripting/door-numbers3.png"
         alt="2. Automatic Door numbers"
         caption={"2. Automatic Door numbers (automation script)"}
       />
@@ -435,7 +415,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/door-numbers4.png"
+        src="/images/scripting/door-numbers4.png"
         alt="2. Automatic Door numbers"
         caption={"2. Automatic Door numbers (automation script)"}
       />
@@ -444,7 +424,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/interior-fitup1.png"
+        src="/images/scripting/interior-fitup1.png"
         alt="3. Interior fit-up Calculations"
         caption={"3. Interior fit-up calculations (manual process)"}
       />
@@ -458,7 +438,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/interior-fitup2.png"
+        src="/images/scripting/interior-fitup2.png"
         alt="3. Interior fit-up Calculations"
         caption={"3. Interior fit-up calculations (automation script)"}
       />
@@ -469,7 +449,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/interior-fitup3.png"
+        src="/images/scripting/interior-fitup3.png"
         alt="3. Interior fit-up Calculations"
         caption={"3. Interior fit-up calculations (automation script)"}
       />
@@ -479,7 +459,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/interior-fitup4.png"
+        src="/images/scripting/interior-fitup4.png"
         alt="3. Interior fit-up Calculations"
         caption={
           "3. Interior fit-up calculations (automation script - zoom to calculations and output)"
@@ -491,7 +471,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/interior-fitup5.png"
+        src="/images/scripting/interior-fitup5.png"
         alt="3. Interior fit-up Calculations"
         caption={
           "3. Interior fit-up calculations (automation script - zoom to calculations and output)"
@@ -503,7 +483,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/titleblock.png"
+        src="/images/scripting/titleblock.png"
         alt="4. Titleblock and printing"
         caption={"4. Titleblock and printing (manual process)"}
       />
@@ -515,7 +495,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/titleblock2.png"
+        src="/images/scripting/titleblock2.png"
         alt="4. Titleblock and printing"
         caption={"4. Titleblock and printing (automation script)"}
       />
@@ -529,7 +509,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/titleblock3.png"
+        src="/images/scripting/titleblock3.png"
         alt="4. Titleblock and printing"
         caption={"4. Titleblock and printing (automation script)"}
       />
@@ -543,7 +523,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/room-outlines1.png"
+        src="/images/scripting/room-outlines1.png"
         alt="5. Room Outlines"
         caption={"5. Room Outlines (manual process)"}
       />
@@ -553,7 +533,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/room-outlines2.png"
+        src="/images/scripting/room-outlines2.png"
         alt="5. Room Outlines"
         caption={"5. Room Outlines (automation script)"}
       />
@@ -564,7 +544,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/material-quantities1.png"
+        src="/images/scripting/material-quantities1.png"
         alt="6. Automatic Material Quantities and Diagrams in real-time"
         caption={
           "6. Automatic Material Quantities and Diagrams in real-time (automation script)"
@@ -578,7 +558,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/material-quantities2.png"
+        src="/images/scripting/material-quantities2.png"
         alt="6. Automatic Material Quantities and Diagrams in real-time"
         caption={
           "6. Automatic Material Quantities and Diagrams in real-time (automation script)"
@@ -592,7 +572,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week04/worksets1.png"
+        src="/images/scripting/worksets1.png"
         alt="7. Automatic Categorization of elements"
         caption={"7. Automatic Categorization of elements"}
       />
@@ -606,7 +586,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/worksets2.png"
+        src="/images/scripting/worksets2.png"
         alt="7. Automatic Categorization of elements"
         caption={"7. Automatic Categorization of elements"}
       />
@@ -621,7 +601,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/vr1.png"
+        src="/images/scripting/vr1.png"
         alt="8. Semi-automatic BIM to VR"
         caption={"8. Semi-automatic BIM to VR"}
       />
@@ -636,7 +616,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/vr2.png"
+        src="/images/scripting/vr2.png"
         alt="8. Semi-automatic BIM to VR"
         caption={"8. Semi-automatic BIM to VR"}
       />
@@ -652,7 +632,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/vr3.png"
+        src="/images/scripting/vr3.png"
         alt="8. Semi-automatic BIM to VR"
         caption={"8. Semi-automatic BIM to VR"}
       />
@@ -663,7 +643,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/comparing-elements.png"
+        src="/images/scripting/comparing-elements.png"
         alt="9. Version control - Comparing elements from different files"
         caption={"9. Version control - Comparing elements from different files"}
       />
@@ -674,7 +654,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/excel.png"
+        src="/images/scripting/excel.png"
         alt="10. Importing and exporting Excel to Revit and vice versa"
         caption={"10. Importing and exporting Excel to Revit and vice versa"}
       />
@@ -686,7 +666,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   {
     element: (
       <Image
-        src="/images/week04/excel.png"
+        src="/images/scripting/excel.png"
         alt="11. Importing and exporting Excel to Revit and vice versa"
         caption={"10. Importing and exporting Excel to Revit and vice versa"}
       />
@@ -696,7 +676,157 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
       Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
   },
 
-  // OPEN SOURCE SCRIPTING - BLENDER GEOMETRY NODES
+  {
+    element: (
+      <Image
+        src="/images/scripting/excel.png"
+        alt="11. Importing and exporting Excel to Revit and vice versa"
+        caption={"10. Importing and exporting Excel to Revit and vice versa"}
+      />
+    ),
+    notes:
+      "Automatically generation of DFH (Doors, Frames, and Hardware) packages coming from the doors schedule and being imported and exported into and from Excel to be share with the DFH provider. \
+      Some disciplines do not use Revit yet and with this tool makes it easier to communicate and collaborate with them.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/carleton-dynamo.png"
+        alt="Carleton Dynamo"
+        caption={'12. Digital Twin of Carleton University"'}
+      />
+    ),
+    notes:
+      "In this example we are using Dynamo to create a “Digital Twin” or a dynamic copy of Carleton University’s campus. \
+      For this project at CIMS, we use Dynamo to read an URL (web domain address) and based on that, make periodic changes to the model in real-time. \
+      Basically, dynamo is a great tool to program solutions to everyday problems.",
+  },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/P0VdmEIJ65c?si=sjo2Qk3Y1NKr_H9C&amp;start=130&&autoplay=1"
+        title="Digital Twin of Carleton University"
+        caption={"Digital Twin of Carleton University"}
+      />
+    ),
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/federating.png"
+        alt="CAD to Revit"
+        caption={"Federating Carleton University archives"}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/landscaping.jpg"
+        alt="Landscaping"
+        caption={"Carleton University - Landscaping"}
+      />
+    ),
+    notes:
+      "We have use Algorithms to federate all exterior zones and landscaping, including: Trees and greenery, Roads, , Signage, Site elements, and much more.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/infrastructure.jpg"
+        alt="Infrastructure"
+        caption={"Carleton University - Infrastructure"}
+      />
+    ),
+    notes:
+      "We also modelled infrastructure services such as: Electrical, Water, And gas networks. \
+      Here we can see every lighting fixture on campus, and because this is a BIM model, we have all the metadata of every instance.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/cad-to-revit1.png"
+        alt="CAD to Revit"
+        caption={"CAD to Revit - Room data"}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/cad-to-revit2.png"
+        alt="CAD to Revit"
+        caption={'CAD to Revit - Room data"'}
+      />
+    ),
+    notes: "",
+  },
+
+  {
+    element: <EmojiTitle emoji={"⌚5D"} title={"Real-time simulations"} />,
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/energy-consumption.jpg"
+        alt="Energy Consumption"
+        caption={"Carleton University - Energy Consumption"}
+      />
+    ),
+    notes:
+      "With these techniques, we have linked dynamic data, such as energy consumption sensors, to understand building performance and manage their energy use accordingly.",
+  },
+  {
+    element: (
+      <Image
+        src="/images/scripting/parking.gif"
+        alt="Carleton Parking"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Parking"'
+        }
+      />
+    ),
+    notes:
+      "To increase efficiency of facility management and operations we have used algorithms to visualize complex datasets in real-time. \
+    Fore example, here we can see a script that we use to simulate and visualize parking availability on campus",
+  },
+  {
+    element: (
+      <Image
+        src="/images/scripting/occupancy.gif"
+        alt="Carleton Occupancy"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Occupancy"'
+        }
+      />
+    ),
+    notes:
+      "This one is a simulation for building occupancy in order to operate buildings accordingly to their actual use \
+    Imagine if the HVAC systems where able to be controlled depending on each room occupancy rate.",
+  },
+
+  {
+    element: (
+      <Image
+        src="/images/scripting/sunlight.gif"
+        alt="Carleton Parking"
+        caption={
+          'Real-time simulations or Digital Twin of Carleton University - Sunlight analysis"'
+        }
+      />
+    ),
+    notes: "",
+  },
 
   {
     element: (
@@ -719,11 +849,21 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
   },
   {
     element: (
+      <Quote
+        quote={
+          "Software modified by the designer through scripting, provides a range of possibilities for creative speculation that is simply not possible using the software only as the manufacturers intended it to be used."
+        }
+        author={"Mark Burry - Scripting Cultures"}
+      />
+    ),
+  },
+  {
+    element: (
       <>
         <h2>Open-source Alternatives? 💸</h2>
         <br />
         <Image
-          src="/images/week04/blender-geometry-nodes.png"
+          src="/images/scripting/blender-geometry-nodes.png"
           alt={"Blender - Geometry Nodes"}
           href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/introduction.html"
           caption={
@@ -734,6 +874,34 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
     ),
   },
 
+  {
+    element: (
+      <Quote
+        quote={
+          "Although the first courses in computer programming were introduced in \
+          some architecture schools like Harvard or MIT in the late 1980s and \
+          early 1990s, scripting has developed only in the past years, fostered \
+          by the growing computer literacy of young architectural students and \
+          architects who are now able to write code instead of relying only on \
+          the predefined software functions. Scripting does open new \
+          perspectives on the evolution of design: it even raises some questions \
+          that are not fully answered yet."
+        }
+        author={"Antoine Picon - Digital Turns in Architecture"}
+      />
+    ),
+  },
+  {
+    element: (
+      <>
+        <h1>💻 Lab 4</h1>
+        <br />
+        <h2>Blender</h2>
+        <br />
+        <h2>Geometry Nodes</h2>
+      </>
+    ),
+  },
   {
     element: (
       <Video

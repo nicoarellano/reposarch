@@ -26,7 +26,10 @@ export const content: Toc = [
     element: (
       <section className=" grid grid-cols-2 divide-x grow max-h-1/4 w-full overflow-x-auto">
         <div className="flex items-center justify-center grow">
-          <Image src="/images/week01/Nico.png" alt="Medieval hacker" />
+          <Image
+            src="/images/computer-graphics/Nico.png"
+            alt="Medieval hacker"
+          />
         </div>
         <div className="flex items-center justify-center ">
           <ul>
@@ -62,7 +65,7 @@ export const content: Toc = [
         <h3>From the Renaissance to the Computer Era</h3>
         <br />
         <Image
-          src="/images/week01/from-the-renaissance.jpg"
+          src="/images/computer-graphics/from-the-renaissance.jpg"
           alt="Medieval hacker"
         />
       </div>
@@ -71,7 +74,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/rome-maps.png"
+        src="/images/computer-graphics/rome-maps.png"
         alt="Maps of rome"
         caption={
           "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
@@ -82,7 +85,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/rome-maps2.png"
+        src="/images/computer-graphics/rome-maps2.png"
         alt="Maps of rome"
         caption={
           "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
@@ -93,7 +96,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/albertis-device.png"
+        src="/images/computer-graphics/albertis-device.png"
         alt="Alberti's device"
         caption={
           "Leon Battista Alberti’s device for the topographical survey of the city of Rome (1450)"
@@ -108,7 +111,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/albertis-grid.png"
+        src="/images/computer-graphics/albertis-grid.png"
         alt="Alberti's grid"
         caption={
           "Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)"
@@ -119,10 +122,10 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/durers-window.jpg"
+        src="/images/computer-graphics/durers-window.jpg"
         alt="Durer's Window"
         caption={
-          "Albrech Durer's window 'Instruction on Measurement with Compass and Ruller' 1525"
+          "Albrecht Durer's window 'Instruction on Measurement with Compass and Ruller' 1525"
         }
       />
     ),
@@ -133,7 +136,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/durers-window2.jpg"
+        src="/images/computer-graphics/durers-window2.jpg"
         alt="Durer's Window"
         caption={
           "Albrech Durer's window 'Instruction on Measurement with Compass and Ruller' 1525"
@@ -162,31 +165,29 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/computer.jpg"
+        src="/images/computer-graphics/computer.jpg"
         alt="Turin's Computer 1950s"
         caption={"One of the first computers of the modern era - By Wikimedia"}
       />
     ),
     notes:
-      "Alberti's dream remained technically impossible for 500 years untill the creation of the modern computers.",
+      "Alberti's dream remained technically impossible for 500 years until the creation of the modern computers.",
   },
   {
     element: (
       <Image
-        src="/images/week01/mitchell.jpg"
+        src="/images/computer-graphics/mitchell.jpg"
         alt="The Art of Computer Graphics Programming"
         caption={
           "The Art of Computer Graphics Programming - William J. Mitchell (1987)"
         }
       />
     ),
-    notes:
-      "Alberti's dream remained technically impossible for 500 years untill the creation of the modern computers.",
   },
   {
     element: (
       <Image
-        src="/images/week01/primitives.png"
+        src="/images/computer-graphics/primitives.png"
         alt="Primitives"
         caption={
           "Kandinsky's graphic primitives—the point, the line, and the plane—become the pixel, the vector, and the filled polygon. - WJM"
@@ -199,7 +200,7 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/images/week01/map of rome.html"
+        src="/images/computer-graphics/map of rome.html"
         title="Maplibre - Map of Rome"
       ></iframe>
     ),
@@ -207,7 +208,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/sutherland.png"
+        src="/images/computer-graphics/sutherland.png"
         alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
         caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
       />
@@ -223,7 +224,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/digital-turns.png"
+        src="/images/computer-graphics/digital-turns.png"
         alt="Digital Turns"
         caption={"Mario Carpo First and Second digital Turns in Architecture"}
         href="https://andreaarianoitcaadsaggio.files.wordpress.com/2018/06/digital-turn.pdf"
@@ -234,7 +235,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/analog-process.png"
+        src="/images/computer-graphics/analog-process.png"
         alt="Analog Process"
         caption={"Analog creative process"}
       />
@@ -246,7 +247,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/process-with-gui.png"
+        src="/images/computer-graphics/process-with-gui.png"
         alt="Digital Creative Process"
         caption={"Digital creative process with GUI"}
       />
@@ -259,7 +260,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/workplace.png"
+        src="/images/computer-graphics/workplace.png"
         alt="Change in the workplace"
         caption={"With the change of the tools, the way we work changes..."}
       />
@@ -272,7 +273,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/buildings.png"
+        src="/images/computer-graphics/buildings.png"
         alt="Change of the buildings"
         caption={"...our buildings change..."}
       />
@@ -305,7 +306,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/singapore.jpg"
+        src="/images/computer-graphics/singapore.jpg"
         alt="Change of the buildings"
         caption={"...our cities too"}
       />
@@ -335,7 +336,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/creative-process.png"
+        src="/images/computer-graphics/creative-process.png"
         alt="Digital Creative Process"
         caption={"Digital Creative Process"}
       />
@@ -365,7 +366,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/vendors.png"
+        src="/images/computer-graphics/vendors.png"
         alt="AECO's main CAD/BIM Vendors"
         caption={"AECO's main CAD/BIM Vendors"}
       />
@@ -407,14 +408,14 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/black-box-diagram.png"
+        src="/images/computer-graphics/black-box-diagram.png"
         alt="Black box diagram"
       />
     ),
     notes:
       "to describe a system that can be understood only in\
     terms of its inputs and outputs, but which process is not accessible or even visible to users. To\
-    'de-blackbox' is to understand the process, parts, and connection of the system.",
+    'de-black box' is to understand the process, parts, and connection of the system.",
   },
   {
     element: (
@@ -440,7 +441,7 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Two conditions must be met before architects can fully de-blackbox the digital toolbox.\
+      "Two conditions must be met before architects can fully de-black box the digital toolbox.\
     Firstly, architects must have a working knowledge of computer programming. Secondly, the\
     source code—the list of human-readable instructions that define a computer program—of the\
     software that they use must be accessible for modification by the user.",
@@ -523,7 +524,7 @@ export const content: Toc = [
         <h2>Which language to use?</h2>
         <br />
         <Image
-          src="/images/week02/top-programming-languages.png"
+          src="/images/coding/top-programming-languages.png"
           alt="Top programming languages"
           href="https://gowithcode.com/top-programming-languages"
           caption="Top programming languages: https://gowithcode.com/top-programming-languages"
@@ -547,7 +548,7 @@ export const content: Toc = [
         </h4>
         <br />
         <Image
-          src="/images/week01/js.png"
+          src="/images/javascript/js.png"
           alt="JavaScript"
           href="https://gowithcode.com/top-programming-languages#javascript"
         />
@@ -566,7 +567,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/vsCode.png"
+        src="/images/computer-graphics/vsCode.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={"Visual Studio Code, free IDE from Microsoft."}
@@ -578,7 +579,7 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/week01/extensions.png"
+        src="/images/computer-graphics/extensions.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={
@@ -600,7 +601,7 @@ export const content: Toc = [
         <h1>What is Git?</h1>
         <br />
         <Image
-          src="/images/week01/git.png"
+          src="/images/computer-graphics/git.png"
           alt="Git"
           href="https://en.wikipedia.org/wiki/Git"
           caption={"Git - Wikipedia"}
@@ -621,7 +622,7 @@ export const content: Toc = [
         <h1>What is Node.js?</h1>
         <br />
         <Image
-          src="/images/week01/nodejs.png"
+          src="/images/computer-graphics/nodejs.png"
           alt="Node.js"
           href="https://en.wikipedia.org/wiki/Nodejs#"
           caption={"Node.js - Wikipedia"}
@@ -642,7 +643,7 @@ export const content: Toc = [
         <h1>What is GitHub?</h1>
         <br />
         <Image
-          src="/images/week01/GitHub-logo.png"
+          src="/images/computer-graphics/GitHub-logo.png"
           alt="GitHub"
           href="https://en.wikipedia.org/wiki/GitHub#"
           caption={"GitHub - Wikipedia"}
@@ -658,7 +659,7 @@ export const content: Toc = [
         <h3>Reposarch = Open Source Architectural Representation</h3>
         <br />
         <Image
-          src="/images/week01/course-GitHub.png"
+          src="/images/computer-graphics/course-GitHub.png"
           alt="GitHub"
           href="https://github.com/nicoarellano/reposarch"
           caption={
@@ -684,14 +685,30 @@ export const content: Toc = [
       </>
     ),
   },
+  // {
+  //   element: (
+  //     <>
+  //       <h3>Fork the course GitHub repository</h3>
+  //       <br />
+  //       <Video
+  //         src="/images/computer-graphics/fork-reposarch.mp4"
+  //         title="Fork Github Repository"
+  //         caption={
+  //           "Fork Github Repository https://github.com/nicoarellano/reposarch/fork"
+  //         }
+  //       />
+  //     </>
+  //   ),
+  // },
   {
     element: (
       <>
         <h3>Fork the course GitHub repository</h3>
         <br />
-        <Video
-          src="/images/week01/fork-reposarch.mp4"
-          title="Fork Github Repository"
+        <Image
+          src="/images/computer-graphics/forking.gif"
+          alt="Fork Reposarch"
+          href="https://github.com/nicoarellano/reposarch"
           caption={
             "Fork Github Repository https://github.com/nicoarellano/reposarch/fork"
           }

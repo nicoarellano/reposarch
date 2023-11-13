@@ -52,7 +52,7 @@ scene.add(greenCube);
 
 const loader = new THREE.GLTFLoader();
 
-let guitar;
+let mesh;
 
 loader.load(
   "/arcn5005/f2023/students/nicolasarellanorisop/models/justin.glb",
@@ -61,7 +61,7 @@ loader.load(
     gltf.scene.scale.y = 3;
     gltf.scene.scale.z = 3;
 
-    guitar = gltf.scene;
+    mesh = gltf.scene;
     scene.add(gltf.scene);
   },
   undefined,
@@ -92,7 +92,7 @@ scene.add(directionalLight.target);
 function animate() {
   requestAnimationFrame(animate);
 
-  if (guitar) guitar.rotation.y += 0.01;
+  if (mesh) mesh.rotation.y += 0.01;
 
   yellowCube.rotation.x += 0.01;
   yellowCube.rotation.y += 0.01;

@@ -47,11 +47,9 @@ export default function CourseDescription() {
         describe a system that can be understood only in terms of its inputs and
         outputs, but which process is not accessible or even visible to users.
         To <q>de-blackbox</q> is to understand the process, parts, and
-        connection of the system. The historian Antoine Picon states that
-        <q>
-          it has become unavoidable to enter into the black box of programming
-          in order to make a truly creative use of the computer.
-        </q>
+        connection of the system. The historian Antoine Picon states that “it
+        has become unavoidable to enter into the black box of programming in
+        order to make a truly creative use of the computer.”
         <sup>1</sup> <br />
         However, two conditions must be met before architects can attempt to
         de-blackbox the digital toolbox. Firstly, architects must have a working
