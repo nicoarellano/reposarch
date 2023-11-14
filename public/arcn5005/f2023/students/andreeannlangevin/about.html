@@ -1,170 +1,120 @@
-
-<link rel="stylesheet" href="styles.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="./main.js"></script>
+  <title>ABOUT PAGE</title>
 
 </head>
 <body>
-
-    <h1>Andrée-Ann Langevin
-        </h1>
-
-<style>
-  .vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-    height: 340px;
-  }
-</style>
-
-<style>
-  ul {
-     list-style-type: none;
-     font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
-   };
-</style>
+  <h1>Andrée-Ann Langevin</h1>
+<div class="flex items-center justify-center">
+    <section style="display: flex; flex-direction: row; justify-content: left; align-items: left; gap: 5rem;">
+      <div class="slideshow-container">
+        <div class="flex items-center justify-center">
+          
+        
+        <div class="mySlides fade">
+          <img src="AAL.jpg" style="width:80%">
+          <div class="text">In front of MDSL, the building I work on 3 years.</div>
+        </div>
   
-<style>  
-  li::before{ 
-    content:"." ;
-    display: inline-block;
-    width: 1em;
-    color: brown;
-}
-</style>
-
-<style>
-  Button {
-    position: relative;
-    text-decoration: none;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    line-height: 48px;
-    width: 160px;
-    font-weight: bold;
-    height: 55px;
-    -webkit-box-reflect: bottom 1px linear-gradient(transparent, #0004);
-   }
-   
-   button span {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    top: 4px;
-    right: 4px;
-    bottom: 4px;
-    left: 4px;
-    text-align: center;
-    background: #2E2E2E;
-    color: rgba(255, 255, 255, 0.781);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    z-index: 1;
-   }
-   
-   button:hover span {
-    color: rgba(255,255,255,1);
-   }
-   
-   button::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-size: 400%;
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    background: linear-gradient(45deg,#91155d,#525296,#0f0,#ff0,#fb0094,#00f,#0f0,#ff0);
-    -webkit-animation: animate123 20% linear infinte;
-            animation: animate123 20% linear infinte;
-   }
-   
-   button::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-size: 400%;
-    -webkit-filter: blur(20px);
-            filter: blur(20px);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    background: linear-gradient(45deg,#91155d,#525296,#0f0,#ff0,#fb0094,#00f,#0f0,#ff0);
-    -webkit-animation: animate123 20% linear infinte;
-            animation: animate123 20% linear infinte;
-   }
-   
-   button:hover::before,
-   button:hover::after {
-    opacity: 1;
-   }
-   
-   @-webkit-keyframes animate123 {
-    0% {
-     background-position: 0 0;
-    }
-   
-    50% {
-     background-position: 300% 0;
-    }
-   
-    100% {
-     background-position: 0 0;
-    }
-   }
-   
-   @keyframes animate123 {
-    0% {
-     background-position: 0 0;
-    }
-   
-    50% {
-     background-position: 300% 0;
-    }
-   
-    100% {
-     background-position: 0 0;
-    }
-   }
-   
-   button span::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: rgba(255,255,255,0.1);
-   }
-  </style>
+        <div class="mySlides fade">
+          <img src="Mocha1.jpg" style="width:80%">
+          <div class="text">Mocha - Alias Baby booooy.</div>
+        </div>
   
+        <div class="mySlides fade">
+          <img src="wall.jpg" style="width:80%">
+          <div class="text">Little pieces of art I collect.</div>
+        </div>
   
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
   
-<section
-  style="
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-      "
->
-
-<img src="AAL.jpg" width="20%"> 
-<div className="flex items-center justify-center ">
-   <ul>
-     <li>I come from a town called Chicoutimi</li>
-     <li>I own a small jungle</li>
-     <li>Crazy cat lady in the making </li>
-     <li>Coral is my favortie color </li>
-    </ul>
+        <div style="text-align:left">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+      </div>
+      <br/>
   </div>
-</section>
+</div>
+<br>
+    <div class="flex items-center justify-center">
+      <ul>
+        <li>I come from a town called Chicoutimi 🏛️</li>
+        <li>I own a small jungle at my house 🌹 </li>
+        <li>Crazy cat lady in the making 🐱 </li>
+        <li>Halloween is my favorite holiday 🎃 </li> 
+      </ul>
+
+    </div>
+  </div>
+  <br>
+  
+    <div class=".video-container">
+          <video width="20%" controls>
+              <source src="Mocha.mp4" type="video/mp4">
+          </video>
+      </div>
+
+  </section>
+  <div> 
+    <br />
+    <h2> ASSIGNEMENTS </h2>
+    <br/>
+  </div>
+  <div class="assignments">
+    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/three-example">
+      <button id="three-button">THREE</button>
+    </a>
+    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/bim-example">
+      <button id="bim-button">BIM</button>
+    </a>
+    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/map-example">
+      <button id="map-button">MAP</button>
+    </a>
+    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/final-example">
+      <button id="final-button">FINAL</button>
+    </a>
+  </div>
+</body>
+
+</html>
+
+</div>
+</div>
+
+<br>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
