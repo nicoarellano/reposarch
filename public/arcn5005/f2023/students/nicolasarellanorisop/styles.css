@@ -25,6 +25,17 @@ h1 {
     overflow: hidden;
 }
 
+.assignment2 {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    overflow: hidden;
+    gap: 2rem;
+}
+
 .about section {
     background-color: #f1f1f1;
     width: 70%;
@@ -43,8 +54,9 @@ h1 {
 
 #three-canvas {
     position: fixed;
-    top: 0;
-    left: 0;
+    /* top: 0; */
+    left: 220;
+    bottom: 100;
     outline: none;
 }
 

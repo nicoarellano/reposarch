@@ -1,3 +1,13 @@
+.vl {
+    border: 2px solid rgb(30, 65, 116);
+    height: 150px;
+}
+
+img{
+    border: 3px solid rgb(30, 65, 116);
+    border-radius: 2px;
+    }
+
 button {
     padding: 17px 40px;
     border-radius: 50px;
@@ -28,6 +38,15 @@ button {
 *{
     background-color: rgb(221, 169, 75);
 } 
+
+#evil-button {
+    position: absolute;
+    white-space: nowrap;
+    font-style: italic;
+    font-size: .6rem;
+  
+  }
+
 *{.container {
     --color1: rgb(30, 65, 116);
     --color2: rgb(221, 169, 75);
@@ -38,8 +57,3 @@ button {
     background-size: 200px 106px;
     background-position: 0 0, 235px 135px;
   };}
-
-img{
-    border: 3px solid rgb(30, 65, 116);
-    border-radius: 2px;
-    }
