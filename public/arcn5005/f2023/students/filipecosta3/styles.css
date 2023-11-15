@@ -11,6 +11,17 @@ html {
     height: 100%;
 }
 
+#evil-button {
+    position: absolute;
+    white-space: nowrap;
+    font-style: italic;
+    font-size: .6rem;
+    overflow: visible;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    color: hsl(0, 0%, 0%);
+  }
+
 .assignment2 {
     width: 95%;
     height: 100%;
@@ -63,8 +74,8 @@ button:disabled {
 
 button:hover {
     color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    background-color:rgb(30, 65, 116);
+    box-shadow: rgba(30, 65,) 0 8px 15px;
     transform: translateY(-2px);
 }
 
