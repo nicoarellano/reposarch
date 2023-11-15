@@ -25,7 +25,7 @@ export const content: Toc = [
         <br />
         <h5>
           Antonio González Viegas is a BIM software developer and architect with
-          a work experience in open BIM, 3D graphics, 3D Math and project
+          work experience in open BIM, 3D graphics, 3D Math, and project
           management in New York, Norway, Germany, and Spain. He has a degree in
           Architecture from the University of Seville. He is currently working
           as a BIM software developer for Autility and is the CEO of That Open
@@ -33,22 +33,22 @@ export const content: Toc = [
           contributor. He has contributed to several projects on GitHub,
           including IFC.js, openbim-components, and three.js. He is passionate
           about using code to solve problems in the BIM world and has given
-          several talks on the subject. He is a very influential actor of the OS
-          BIM movement.
+          several talks on the subject. He is a very influential actor in the OS
+          AECO sector.
         </h5>
       </>
     ),
   },
 
-  // {
-  //   element: (
-  //     <Video
-  //       src="https://www.youtube.com/embed/Obil0QrOAN4?si=FnbZqcL3oYDaIDkj&amp;start=954"
-  //       title="That Open Company - Welcome to the AECOsystem."
-  //       caption={"That Open Company - Welcome to the AECOsystem."}
-  //     />
-  //   ),
-  // },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/rLE9pdzEBsw?si=3ZuwNi6pz6lcC8Dq"
+        title="Antonio Gonzales Viegas - That Open Company"
+        caption={"Antonio Gonzales Viegas - That Open Company"}
+      />
+    ),
+  },
 
   {
     element: (
@@ -95,6 +95,24 @@ export const content: Toc = [
       <EmojiTitle
         emoji={"Lab 9 💻"}
         title={"Working on Assignment 2 and exploring OpenBIM components"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4"
+        title="Three js - Assignment 2 - 1/2"
+        caption={"Three js - Assignment 2 - 1/2"}
+      />
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/bLUMHQRJJyU?si=EGpp1l5QnUQcQmV3"
+        title="Three js - Assignment 2 - 2/2"
+        caption={"Three js - Assignment 2 - 2/2"}
       />
     ),
   },

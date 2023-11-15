@@ -57,12 +57,12 @@ let mesh;
 gltfLoader.load(
   "/arcn5005/f2023/students/nicolasarellanorisop/models/justin.glb",
   function (gltf) {
-    gltf.scene.scale.x = 3;
-    gltf.scene.scale.y = 3;
-    gltf.scene.scale.z = 3;
-
     mesh = gltf.scene;
-    scene.add(gltf.scene);
+    mesh.scale.x = 3;
+    mesh.scale.y = 3;
+    mesh.scale.z = 3;
+
+    scene.add(mesh);
   },
   undefined,
   function (error) {
@@ -72,7 +72,7 @@ gltfLoader.load(
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
+function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
   fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
@@ -90,11 +90,11 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
 
     const color = new THREE.Color();
     color.setHex(textColor);
-    const textMaterial = new THREE.MeshBasicMaterial({ color: color });
+    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
     const text = new THREE.Mesh(textGeo, textMaterial);
 
     text.position.x = 2;
-    text.position.y = z;
+    text.position.y = elevation;
 
     scene.add(text);
   });
@@ -113,8 +113,6 @@ camera.position.y = 2;
 scene.position.x = -5;
 scene.position.z = 5;
 scene.position.y = -3;
-
-console.log(camera);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
