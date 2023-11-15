@@ -14,13 +14,31 @@ import CodeButton from "../../../../components/Common/CodeButton";
 export const content: Toc = [
   {
     element: (
-      <Video
-        src="https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv"
-        title="Maps, GIS and Map renderers"
-        caption={"Maps, GIS and Map renderers"}
-      />
+      <>
+        <h3>Ken Percy</h3>
+        <br />
+        <Image
+          src="/images/maps/Ken.jpg"
+          alt="Ken Percy"
+          caption="          KEN PERCY is a PhD Candidate of the PhD program in Architecture at
+        Carleton University. His research interests examine the tension
+        between the fields of architectural representation and digital
+        fabrication. While developing his dissertation Ken has been working at
+        the Carleton Immersive Media Studio (CIMS) where he has been leading
+        projects on digital documentation as well as establishing the new CNC
+        fabrication lab at the school of architecture. Highlights of his
+        projects include digital documentation of the Kasbah of Taourirt in
+        Morocco, photogrammetric recording of historic wall paintings in a
+        church in the Peruvian Andes, and laser scanning and surveying the
+        Parliament Buildings in Ottawa for rehabilitation. Further, in
+        collaboration with public works, Ken has been developing a protocol
+        for digitally milling the new doors for the Senate after relocation to
+        the Government Conference Centre on Rideau Street."
+        />
+      </>
     ),
   },
+
   {
     element: (
       <div>
