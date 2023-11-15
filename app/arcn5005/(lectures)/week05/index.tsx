@@ -477,7 +477,7 @@ export const content: Toc = [
         <h2>Structure</h2>
         <br />
         <Image
-          src="/images/internet/html-structure.png"
+          src="/images/html/html-structure.png"
           alt="Html-structure"
           caption={"HTML Structure"}
         />
@@ -490,9 +490,22 @@ export const content: Toc = [
         <h2>Semantics</h2>
         <br />
         <Image
-          src="/images/internet/semantics.png"
+          src="/images/html/html-semantics.png"
           alt="Html-semantics"
           caption={"HTML Semantics"}
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Syntax</h2>
+        <br />
+        <Image
+          src="/images/html/html-syntax.png"
+          alt="Html-syntax"
+          caption={"HTML Syntax"}
         />
       </>
     ),

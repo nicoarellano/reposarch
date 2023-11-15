@@ -68,4 +68,8 @@ Please let me know if you have further questions.",
  Enjoy your break and see you in 2 weeks!`,
     url: "https://reposarch.vercel.app/arcn5005/f2023/students",
   },
+  {
+    title:
+      "Hi All, 🎥 the recordings have been posted. ⚠️ Please review the new dates for Assignment 2 (Nov 16) and Assignment 3 (Nov 30).",
+  },
 ];
