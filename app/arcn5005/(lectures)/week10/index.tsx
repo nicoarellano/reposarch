@@ -20,20 +20,11 @@ export const content: Toc = [
         <Image
           src="/images/maps/Ken.jpg"
           alt="Ken Percy"
-          caption="          KEN PERCY is a PhD Candidate of the PhD program in Architecture at
-        Carleton University. His research interests examine the tension
-        between the fields of architectural representation and digital
-        fabrication. While developing his dissertation Ken has been working at
-        the Carleton Immersive Media Studio (CIMS) where he has been leading
-        projects on digital documentation as well as establishing the new CNC
-        fabrication lab at the school of architecture. Highlights of his
-        projects include digital documentation of the Kasbah of Taourirt in
-        Morocco, photogrammetric recording of historic wall paintings in a
-        church in the Peruvian Andes, and laser scanning and surveying the
-        Parliament Buildings in Ottawa for rehabilitation. Further, in
-        collaboration with public works, Ken has been developing a protocol
-        for digitally milling the new doors for the Senate after relocation to
-        the Government Conference Centre on Rideau Street."
+          caption="KEN PERCY is a graduate of the azrieli school of architecture and urbanism where he completed the BAS and MArch.
+
+During his masters he started working at the Carleton Immersive Media Studio (CIMS) where he has had the opportunity to lead, or contribute to a number of important projects including laser scanning Parliament Hill, digital fabrication for the Canadian Senate, and GIS software development for the Digital Twin.
+
+Ken is currently finishing up the PhD and is preparing to defend this winter."
         />
       </>
     ),
