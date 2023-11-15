@@ -58,7 +58,7 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
-      height: 0.05,
+      height: 0.2,
       curveSegments: 4,
     });
 
@@ -74,7 +74,7 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     scene.add(text);
   });
 }
-
+//Portugal Flag colour-coded
 createText("Filipe Costa", 10, "0X000000",1);
 createText("Portuguese-Canadian", 9, "0X008000");
 createText("M.Arch at Carleton University", 8, "0XFFBF00");
