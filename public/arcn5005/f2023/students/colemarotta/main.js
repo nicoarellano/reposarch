@@ -69,7 +69,7 @@ scene.add(yellowCube);
 scene.add(blueCube);
 scene.add(redCube);
 scene.add(greenCube);
-scene.add(geometry)
+scene.add(geometry);
 
 
 const gltfLoader = new THREE.GLTFLoader();
