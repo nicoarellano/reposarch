@@ -95,7 +95,7 @@ scene.background = new THREE.Color(0xD9D2E9); // Replace 0x000000 with your desi
 const loader = new THREE.GLTFLoader();
 let mesh;
 loader.load(
-  "/public/arcn5005/f2023/students/muchenge/three/Vincent.glb",
+  "/public/arcn5005/f2023/students/muchenge/Vincent.glb",
   function (gltf) {
     gltf.scene.scale.x = 3;
     gltf.scene.scale.y = 3;
@@ -113,7 +113,7 @@ loader.load(
 const loader2 = new THREE.GLTFLoader();
 let mesh2;
 loader2.load(
-  "/public/arcn5005/f2023/students/muchenge/three/Rhino Model 1 1.glb",
+  "/public/arcn5005/f2023/students/muchenge/Rhino Model 1 1.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.1;
     gltf.scene.scale.y = 0.1;
@@ -133,7 +133,7 @@ loader2.load(
 const loader3 = new THREE.GLTFLoader();
 let mesh3;
 loader3.load(
-  "/public/arcn5005/f2023/students/muchenge/three/Cat Shelter.glb",
+  "/public/arcn5005/f2023/students/muchenge/Cat Shelter.glb",
   function (gltf) {
     gltf.scene.scale.x = 1;
     gltf.scene.scale.y = 1;
@@ -153,7 +153,7 @@ loader3.load(
 const loader4 = new THREE.GLTFLoader();
 let mesh4;
 loader4.load(
-  "/public/arcn5005/f2023/students/muchenge/three/Dog Shelter.glb",
+  "/public/arcn5005/f2023/students/muchenge/Dog Shelter.glb",
   function (gltf) {
     gltf.scene.scale.x = 1;
     gltf.scene.scale.y = 1;
@@ -172,7 +172,7 @@ loader4.load(
 const loader5 = new THREE.GLTFLoader();
 let mesh5;
 loader5.load(
-  "/public/arcn5005/f2023/students/muchenge/three/Vincent Car.glb",
+  "/public/arcn5005/f2023/students/muchenge/Vincent Car.glb",
   function (gltf) {
     gltf.scene.scale.x = 1;
     gltf.scene.scale.y = 1;
