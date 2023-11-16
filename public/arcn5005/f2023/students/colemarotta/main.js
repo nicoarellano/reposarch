@@ -30,9 +30,9 @@ scene.add(axes);
 
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
 
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xFF6600 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xC0C0C0 });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
 const greenMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
 
 const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
@@ -40,15 +40,37 @@ const blueCube = new THREE.Mesh(geometry, blueMaterial);
 const redCube = new THREE.Mesh(geometry, redMaterial);
 const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
-yellowCube.position.z = -3;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
+yellowCube.position.y = -8; 
+yellowCube.position.x = 0;
+yellowCube.scale.x = 7;
+yellowCube.scale.y = 5;
+yellowCube.scale.z = 5;
+
+
+blueCube.position.x = 0;
+blueCube.position.z = 0;
+blueCube.position.y = -8; 
+blueCube.scale.x = 7;
+blueCube.scale.y = 5;
+blueCube.scale.z = 5;
+
+redCube.position.y = -8; 
+redCube.position.x = 0;
+redCube.scale.x = 7;
+redCube.scale.y = 5;
+redCube.scale.z = 5;
+
+greenCube.position.y = -8; 
+greenCube.scale.x = 7;
+greenCube.scale.x = 5;
+greenCube.scale.z = 5;
 
 scene.add(yellowCube);
 scene.add(blueCube);
-// scene.add(redCube);
+scene.add(redCube);
 scene.add(greenCube);
+scene.add(geometry);
+
 
 const gltfLoader = new THREE.GLTFLoader();
 
@@ -58,10 +80,11 @@ gltfLoader.load(
   "./models/Cole_Marotta_3dModel.gltf",
   function (gltf) {
     mesh = gltf.scene;
-    mesh.scale.x = 1;
-    mesh.scale.y = 1;
-    mesh.scale.z = 1;
-
+    mesh.scale.x = 1.4;
+    mesh.scale.y = 1.4;
+    mesh.scale.z = 1.4;
+    mesh.position.x = 1;
+    mesh.position.z = 0;
     scene.add(mesh);
   },
   undefined,
@@ -100,11 +123,11 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Cole Marotta", 5, "0XFF00FF");
-createText("- From Winnipeg", 3, "0XFF0000");
-createText("- Loves TTRPGS", 2, "0XFF0000");
-createText("- FAUM Undergrad, Carleton Masters Student", 1, "0XFF0000");
-createText("- Very Very Amateur programmer", 0, "0XFF0000");
+createText("The Evolution of Cole Marotta", 5, "0XFF00FF");
+createText("- From Winnipeg", 3, "0XFF00FF");
+createText("- Loves TTRPGS", 2, "0XFF00FF");
+createText("- FAUM Undergrad, Carleton Masters Student", 1, "0XFF00FF");
+createText("- Very Very Amateur programmer", 0, "0XFF00FF");
 
 camera.position.z = 13;
 camera.position.x = 5;
@@ -132,7 +155,7 @@ scene.add(directionalLight.target);
 function animate() {
   requestAnimationFrame(animate);
 
-  if (mesh) mesh.rotation.y += 0.01;
+  //if (mesh) mesh.rotation.y += 0.01;
 
   yellowCube.rotation.x += 0.01;
   yellowCube.rotation.y += 0.01;
@@ -144,7 +167,7 @@ function animate() {
   redCube.rotation.y -= 0.02;
 
   greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
+  greenCube.rotation.y -= 0.02;
 
   renderer.render(scene, camera);
 }
@@ -159,3 +182,108 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
+
+gltfLoader.load(
+  "./models/Cole_Marotta_3dModel.gltf",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 0.7;
+    mesh.scale.y = 0.7;
+    mesh.scale.z = 0.7;
+    mesh.position.z = 0;
+    mesh.position.x = -6.5;
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+)
+
+gltfLoader.load(
+  "./models/Cole_Marotta_3dModel.gltf",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 1.1;
+    mesh.scale.y = 1.1;
+    mesh.scale.z = 1.1;
+    mesh.position.z = 0;
+    mesh.position.x = -3;
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+)
+
+gltfLoader.load(
+  "./models/Cole_Marotta_3dModel.gltf",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 0.9;
+    mesh.scale.y = 0.9;
+    mesh.scale.z = 0.9;
+    mesh.position.z = 0;
+    mesh.position.x = -5;
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+)
+
+gltfLoader.load(
+  "./models/Cole_Marotta_3dModel.gltf",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 0.5;
+    mesh.scale.y = 0.5;
+    mesh.scale.z = 0.5;
+    mesh.position.z = 0;
+    mesh.position.x = -8;
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+)
+
+gltfLoader.load(
+  "./models/Cole_Marotta_3dModel.gltf",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 0.3;
+    mesh.scale.y = 0.3;
+    mesh.scale.z = 0.3;
+    mesh.position.z = 0;
+    mesh.position.x = -9;
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+)
+
+gltfLoader.load(
+  "./models/Cole_Marotta_3dModel.gltf",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 1.3;
+    mesh.scale.y = 1.3;
+    mesh.scale.z = 1.3;
+    mesh.position.z = 0;
+    mesh.position.x = -1;
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+)
+
+
+  
