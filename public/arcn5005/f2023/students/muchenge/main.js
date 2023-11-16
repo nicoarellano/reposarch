@@ -250,7 +250,7 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   const textSize = size;
   let textMaterial;
 
-  fontLoader.load("/public/arcn5005/f2023/students/muchenge/three/Font/helvetiker_regular.typeface.json", function (font) {
+  fontLoader.load("/public/arcn5005/f2023/students/muchenge/Font/helvetiker_regular.typeface.json", function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
