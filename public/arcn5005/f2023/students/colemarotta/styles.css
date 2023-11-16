@@ -10,19 +10,25 @@ html {
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0);
-}
-
-
-h1 {
-    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    gap: 2rem;
+    align-items: start;
 }
 
 .about {
     width: 95%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     overflow: hidden;
 }
 
@@ -34,16 +40,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.assignment2 {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: end;
-    overflow: hidden;
-    gap: 2rem;
-}
+
 
 .about section {
     background-color: #f1f1f1;
@@ -51,29 +48,26 @@ h6 {
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     gap: 5rem;
 }
+
+
 
 .vl {
     border-left: 1px solid lightgray;
     height: 150px;
 }
 
+
 #three-canvas {
     position: fixed;
-    /* top: 0; */
-    left: 220;
-    bottom: 100;
-    outline: none;
+    Top: 330;
+    outline: turquoise;
 }
 
-#map {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
+
 
 #p5 {
     display: flex;
@@ -87,13 +81,28 @@ h6 {
     display: block;
 }
 
+img {
+    border: 5px solid rgb(195, 8, 189);
+    border-radius: 10em;
+  }
+
+  button:hover {
+    color: #f5f5f5;
+    background-color: rgb(208, 11, 182);
+    box-shadow: rgba(228, 5, 217, 0.25) 15px;
+    transform: translateY(-2px);
+    background-color: fuchsia;
+    background: repeating-radial-gradient(circle, #e70485, rgb(231, 7, 231) 5px, fuchsia 6px);
+}
 button {
     appearance: none;
-    background-color: rgba(31, 186, 203, 0.491) 87%;
+    background-color: fuchsia 9%;
     border: 0.125em solid #e40781;
-    border-radius: 0.9375em;
+    border-radius: 10em;
     box-sizing: border-box;
-    color: #000000;
+    background: repeating-radial-gradient(circle, #141414, rgb(51, 1, 51) 5px, #000 6px);
+    box-shadow: 0 0 0 0 #af0f8c;
+    color: rgb(212, 15, 182);
     cursor: pointer;
     display: inline-block;
     font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -118,14 +127,46 @@ button:disabled {
     pointer-events: none;
 }
 
-button:hover {
-    color: #fff;
-    background-color: rgb(39, 39, 39);
-    box-shadow: rgba(205, 205, 205, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-}
+
 
 button:active {
     box-shadow: none;
     transform: translateY(0);
 }
+
+
+header  {
+    width: 200px;
+    height: 100px;
+    background-image: repeating-radial-gradient(circle, #e70485, rgb(231, 7, 231) 5px, fuchsia 6px);
+    background-size: 50px 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25%;
+    vertical-align: center;
+}
+
+h1 {
+    border-radius: 15px;
+    background-size: 50px 100px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    border-radius: 40px;
+  }
+  
+  
+
+  h4
+  {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    overflow: hidden;
+    gap: 2rem;
+  }
