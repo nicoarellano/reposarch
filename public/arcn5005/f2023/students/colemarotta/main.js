@@ -65,11 +65,12 @@ greenCube.scale.x = 7;
 greenCube.scale.x = 5;
 greenCube.scale.z = 5;
 
-
 scene.add(yellowCube);
 scene.add(blueCube);
 scene.add(redCube);
 scene.add(greenCube);
+scene.add(geometry)
+
 
 const gltfLoader = new THREE.GLTFLoader();
 
@@ -122,7 +123,7 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Cole Marotta", 5, "0XFF00FF");
+createText("The Evolution of Cole Marotta", 5, "0XFF00FF");
 createText("- From Winnipeg", 3, "0XFF00FF");
 createText("- Loves TTRPGS", 2, "0XFF00FF");
 createText("- FAUM Undergrad, Carleton Masters Student", 1, "0XFF00FF");
@@ -284,72 +285,5 @@ gltfLoader.load(
   }
 )
 
-class SpotLight extends Light {
 
-	constructor( color, intensity, distance = 0, angle = Math.PI / 3, penumbra = 0, decay = 2 ) {
-
-		super( color, intensity );
-
-		this.isSpotLight = true;
-
-		this.type = 'SpotLight';
-
-		this.position.copy( Object3D.DEFAULT_UP );
-		this.updateMatrix();
-
-		this.target = new Object3D();
-
-		this.distance = distance;
-		this.angle = angle;
-		this.penumbra = penumbra;
-		this.decay = decay;
-
-		this.map = null;
-
-		this.shadow = new SpotLightShadow();
-
-	}
-
-	get power() {
-
-		// compute the light's luminous power (in lumens) from its intensity (in candela)
-		// by convention for a spotlight, luminous power (lm) = π * luminous intensity (cd)
-		return this.intensity * Math.PI;
-
-	}
-
-	set power( power ) {
-
-		// set the light's intensity (in candela) from the desired luminous power (in lumens)
-		this.intensity = power / Math.PI;
-
-	}
-
-	dispose() {
-
-		this.shadow.dispose();
-
-	}
-
-	copy( source, recursive ) {
-
-		super.copy( source, recursive );
-
-		this.distance = source.distance;
-		this.angle = source.angle;
-		this.penumbra = source.penumbra;
-		this.decay = source.decay;
-
-		this.target = source.target.clone();
-
-		this.shadow = source.shadow.clone();
-
-		return this;
-
-
-    
-	}
-
-}
-
-export { SpotLight };
+  
