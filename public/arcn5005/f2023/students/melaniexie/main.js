@@ -42,7 +42,7 @@ function init(){
 
 
     const gltfLoader = new THREE.GLTFLoader();
-    const mesh ='/models/Figure2.glb';
+    const mesh ='models/Figure2.glb';
     gltfLoader.load(mesh, (gltf) => {
         const root = gltf.scene;
         root.scale.x = 10;
@@ -52,7 +52,7 @@ function init(){
 
     })
     
-    const mesh2 ='/models/Donut1.glb';
+    const mesh2 ='models/Donut1.glb';
     gltfLoader.load(mesh2, (gltf) => {
         const root2 = gltf.scene;
         root2.scale.x = 25;
@@ -81,7 +81,7 @@ function init(){
     //background
     loader = new THREE.TextureLoader();
     const texture = loader.load(
-    '/images/library.jpg',
+    'images/library.jpg',
     () => {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       texture.colorSpace = THREE.SRGBColorSpace;
