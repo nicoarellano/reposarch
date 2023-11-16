@@ -62,7 +62,7 @@ h6 {
   background-size: 50px 50px;
   font-family: Arial, Helvetica, sans-serif;
 }
-a {
+button {
   margin-top:80em;; ;
   margin-bottom:80em;
   background: repeating-radial-gradient(circle, #141414, #494949 5px, #000 6px);
@@ -79,12 +79,12 @@ a {
   box-shadow: 0 0 0 0 #1d1d1d;
 }
 
-a:hover {
+button:hover {
   transform: translateY(-4px) translateX(-2px);
   box-shadow: 2px 5px 0 0 rgb(159, 159, 159);
 };
 
-a:active {
+button:active {
   transform: translateY(2px) translateX(1px);
   box-shadow: 0 0 0 0 rgb(138, 138, 138);
 };
@@ -99,6 +99,7 @@ body {
   /* Add your background pattern here */
   background: repeating-radial-gradient(circle, #fff, #ededed 5px, #aeaeae 6px);
   background-size: 50px 100px;
+  
 }
 
 h5  {
