@@ -14,7 +14,12 @@ h1 {
     color: rgb(44, 75, 186); /* This color will be used as you've defined it later */
     border-style: double;
 }
-
+#three-canvas {
+    position: fixed;
+    /* top: 0; */
+    left: 220;
+    bottom: 100;
+    outline: none;
 button {
     position: relative; /* Added for the pseudo-element positioning */
     background: transparent;
