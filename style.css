@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.assignment-text {
+    position: fixed;
+    z-index: 2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    right: 31%;
+    bottom: 60%;
+    transform: translate(-31%, -60%);
+}
+
+.assignment-subtext {
+    position: fixed;
+    z-index: 5;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    right: 30.5%;
+    bottom: 58%;
+    transform: translate(-30.5%, -58%);
+}
+
+.main-js {
+    min-height: 100rem;
+    display: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+
+}
+
+#three-canvas {
+    position: fixed;
+    /* top: 0; */
+    left: 220;
+    bottom: 100;
+    outline: none;
+}
