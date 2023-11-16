@@ -1,126 +1,81 @@
-<!DOCTYPE html>
-<html Lang="en">
+<html>
 
-    <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=divice">
-            <title>Document
-            </title>
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>About</title>
+</head>
 
-            <link rel="stylesheet" href="styles.css">
-        
-    </head>
+<body>
+  <div class="assignment2">
 
-    <body>
+    <img src="./DaphnePNG.png" alt="Daphne Stams" height="230"/>
+    
+    <a href="https://github.com/daphnestams/reposarch"><button id:"three-button">GitHub</button></a>
 
-        <h1>Daphne Stams
-            </h1>
+    <button> Assingment 1 </button>
+    <button> Assingment 2 </button>
+    <button> Assingment 3 </button>
+    <button> Final Project </button>
 
-        <h3>Reposarch 2023
-            </h3>
+    <br>
 
-          <br>
+    <div class= "slidescontainer">
 
-        <div class="container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="Vancouver.png" style="width:100%">
+        <div class="text">Vancouver, B.C.</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="Map.png" style="width:100%">
+        <div class="text">Background in Geography.</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="OliveGreen.png" style="width:100%">
+        <div class="text">My Favourite Color.</div>
+      </div>
 
-            <div class="image">
-              <img src="./Daphne.jpg" alt="Daphne Stams" height="200" />
-            </div> 
-
-            <div class="description">
-              <ul>
-                  <li>From Vancouver, B.C. ⛰️</li>
-                  <li>Background in Geography. 🗺️</li>
-                  <li>Favourite color is olive green. 📗</li>
-                  <li>Big fan of volcanoes. 🌋</li>
-              </ul>
-            </div>
-
+      <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="Volcano.png" style="width:100%">
+          <div class="text">Fire of Love directed by Sara Dosa.</div>
         </div>
+      
+      <a class="prev" onclick="plusSlides(-1)"></a>
+      <a class="next" onclick="plusSlides(1)"></a>
+      
+      <br>
+      
+      <div style="text-align:left">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+      </div>
 
-          <br>
-          <br>
-        
-        <div class="slideshow-container">
+    </div>
+    
+  </div>
 
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 4</div>
-              <img src="Vancouver.png" style="width:100%">
-              <div class="text">Vancouver, B.C.</div>
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 4</div>
-              <img src="Map.png" style="width:100%">
-              <div class="text">Background in Geography.</div>
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 4</div>
-              <img src="OliveGreen.png" style="width:100%">
-              <div class="text">My Favourite Color.</div>
-            </div>
+ </body>
 
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
-                <img src="Volcano.png" style="width:100%">
-                <div class="text">Fire of Love directed by Sara Dosa.</div>
-              </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
-            </div>
 
-            <br>
-            
-            <div style="text-align:left">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-              <span class="dot" onclick="currentSlide(4)"></span> 
-        </div>
+  <script src="./main.js"></script>
 
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
-        </script>
-
-        <br>
-
-        <div class="buttonbox">
-
-          <button> Assingment 1 </button>
-          <button> Assingment 2 </button>
-          <button> Assingment 3 </button>
-          <button> Final Project</button>
-
-        </div>
-
-    </body>
+  <!-- Three js Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  <script type="module" src="./main.js"></script>
+  <canvas id="three-canvas"></canvas>
 
 </html>
