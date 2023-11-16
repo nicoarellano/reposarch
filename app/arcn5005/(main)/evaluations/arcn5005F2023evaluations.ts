@@ -28,8 +28,8 @@ export const Arcn5005F2023Evaluations = [
   {
     evaluation: "🔴 Assignment 2",
     weight: "10%",
-    week: "week09",
-    date: dayjs("November 9"),
+    week: "week10",
+    date: dayjs("November 16"),
     type: "assignment",
     description:
       "3d model using Blender, a photogrammetry software (MeshRoom or Metashape) and Three.js",
@@ -37,8 +37,8 @@ export const Arcn5005F2023Evaluations = [
   {
     evaluation: "🔴 Assignment 3",
     weight: "10%",
-    week: "week11",
-    date: dayjs(" November 23"),
+    week: "week12",
+    date: dayjs(" November 30"),
     type: "assignment",
     description:
       "BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
