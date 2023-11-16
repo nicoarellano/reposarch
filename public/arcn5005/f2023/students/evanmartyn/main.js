@@ -28,6 +28,13 @@ axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
+//geometry
+const knotgeometry = new THREE.TorusKnotGeometry( 30, 3, 100, 16 ); 
+const knotmaterial = new THREE.MeshBasicMaterial( { color: 0X3D85C6 } ); 
+const torusKnot = new THREE.Mesh( knotgeometry, knotmaterial ); 
+
+scene.add( torusKnot );
+
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 187 });
@@ -71,6 +78,14 @@ gltfLoader.load(
   }
 );
 
+const loader = new THREE.TextureLoader();
+  const texture = loader.load(
+    'background.jpg',
+    () => {
+      texture.mapping = THREE.EquirectangularReflectionMapping;
+      texture.colorSpace = THREE.SRGBColorSpace;
+      scene.background = texture;
+    });
 
 const fontLoader = new THREE.FontLoader();
 
@@ -148,6 +163,10 @@ function animate() {
 
   greenCube.rotation.x += 0.00;
   greenCube.rotation.y -= 0.10;
+
+  torusKnot.rotation.x += 0.02
+  torusKnot.rotation.y -= 0.02
+
 
   renderer.render(scene, camera);
 }
