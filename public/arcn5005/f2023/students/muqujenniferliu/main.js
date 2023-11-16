@@ -55,7 +55,7 @@ const loader = new THREE.GLTFLoader();
 
 let mesh;
 loader.load(
-"/public/arcn5005/f2023/students/muqujenniferliu/three/models/Jennifermesh.gltf",
+"./three/models/Jennifermesh.gltf",
     function (gltf) {
     gltf.scene.scale.x = 2;
     gltf.scene.scale.y = 2;
@@ -74,7 +74,7 @@ const loader2 = new THREE.GLTFLoader();
 
 let mesh2;
 loader2.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/Table1.glb",
+  "./three/models/Table1.glb",
   function (gltf) {
     gltf.scene.scale.x = 5;
     gltf.scene.scale.y = 5;
@@ -93,7 +93,7 @@ const loader3 = new THREE.GLTFLoader();
 
 let mesh3;
 loader3.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/Coffee_Vendor.glb",
+  "./three/models/Coffee_Vendor.glb",
   function (gltf) {
     gltf.scene.scale.x = 1.5;
     gltf.scene.scale.y = 1.5;
@@ -112,7 +112,7 @@ const loader4 = new THREE.GLTFLoader();
 
 let mesh4;
 loader4.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/Vaso.glb",
+  "./three/models/Vaso.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.05;
     gltf.scene.scale.y = 0.05;
@@ -132,7 +132,7 @@ const loader5 = new THREE.GLTFLoader();
 
 let mesh5;
 loader5.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/COFFEE.glb",
+  "./three/models/COFFEE.glb",
   function (gltf) {
     gltf.scene.scale.x = 5;
     gltf.scene.scale.y = 5;
@@ -152,7 +152,7 @@ const loader6 = new THREE.GLTFLoader();
 
 let mesh6;
 loader6.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/espresso_machine.glb",
+  "./three/models/espresso_machine.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.5;
     gltf.scene.scale.y = 0.5;
@@ -172,7 +172,7 @@ const loader7 = new THREE.GLTFLoader();
 
 let mesh7;
 loader7.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/tree.glb",
+  "./three/models/tree.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.5;
     gltf.scene.scale.y = 0.5;
@@ -191,7 +191,7 @@ const loader8 = new THREE.GLTFLoader();
 
 let mesh8;
 loader8.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/tree.glb",
+  "./three/models/tree.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.5;
     gltf.scene.scale.y = 0.5;
