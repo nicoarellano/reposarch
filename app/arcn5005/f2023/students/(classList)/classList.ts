@@ -4,7 +4,7 @@ export const classListf2023: Students = [
   {
     id: "#101316473",
     username: "nicolasarellanorisop",
-    lastName: "Arellano (example)",
+    lastName: "Arellano (Assignment 2 example)",
     firstName: "Nicolas",
     email: "NicolasArellanoRisop@cmail.carleton.ca",
   },
@@ -147,13 +147,6 @@ export const classListf2023: Students = [
     lastName: "Liu",
     firstName: "Mu Qu Jennifer",
     email: "MuQuJenniferLiu@cmail.carleton.ca",
-  },
-  {
-    id: "#101316473",
-    username: "nicoarellano",
-    lastName: "Arellano (test)",
-    firstName: "Nicolas",
-    email: "NicolasArellanoRisop@cmail.carleton.ca",
   },
   {
     id: "#101111524",

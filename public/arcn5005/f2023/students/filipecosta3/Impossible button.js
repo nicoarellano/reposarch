@@ -1,9 +1,10 @@
 const evilButton = document.getElementById('evil-button')
-const OFFSET = 300
+const OFFSET = 100
 
 evilButton.addEventListener('click', () => {
   alert('You did it! Here is your prize!')
-  window.location.href = 'https://www.youtube.com/watch?v=BBJa32lCaaY&t=3s'
+var win = window.open();
+  win.document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/BBJa32lCaaY?si=3p9NLhE4IINZQROC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
 })
 
 document.addEventListener('mousemove', (e) => {

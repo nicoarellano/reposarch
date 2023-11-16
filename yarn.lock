@@ -1295,7 +1295,20 @@ bidi-js@^1.0.2:
   dependencies:
     require-from-string "^2.0.2"
 
+<<<<<<< HEAD
+bim-fragment@^1.0.22:
+  version "1.0.23"
+  resolved "https://registry.npmjs.org/bim-fragment/-/bim-fragment-1.0.23.tgz"
+  integrity sha512-/nOw0eEoQHhMEumjT84K4F38dGN2Bn2ruXn2sapESyUQqhp83HYSqakHjN++YRJLRECtWTrvTdWI1Ps0dTndFQ==
+  dependencies:
+    flatbuffers "^23.3.3"
+    three "0.152.2"
+    three-mesh-bvh "0.6.0"
+
+bim-fragment@1.0.22:
+=======
 bim-fragment@^1.0.22, bim-fragment@1.0.22:
+>>>>>>> f61c057e2d1867252413262c6b6defdd9c2812f0
   version "1.0.22"
   resolved "https://registry.npmjs.org/bim-fragment/-/bim-fragment-1.0.22.tgz"
   integrity sha512-dNR+ONlmC3zEf4Om5u4LLIC6+f+lbbu4RB1R7rDr/1OfMnvKzwr/o4VmkTcwQXwdEppZQdkmMF8rFx6Uo+Z1qA==
