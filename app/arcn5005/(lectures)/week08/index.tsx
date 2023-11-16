@@ -29,6 +29,17 @@ export const content: Toc = [
 JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. \n\
 ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.",
   },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/W4OTcU1AB-A?si=oSW7CwZueWjG0rUf"
+        title="Introduction to JavaScript"
+        caption={"Introduction to JavaScript"}
+      />
+    ),
+  },
+
   {
     element: (
       <>
@@ -343,7 +354,7 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
                   Object properties are written as name:value pairs, separated
                   by commas: <br />
                   {
-                    "{name: 'John', lastname: 'Lennon', children: ['Julian', 'Sean'], born: 1940, alive: false, died: 1980}}"
+                    "{name: 'John', lastname: 'Lennon', children: ['Julian', 'Sean'], born: 1940, alive: false, died: 1980}"
                   }
                 </td>
               </tr>
@@ -386,7 +397,7 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
       <Image
         src="/images/javascript/js-object-parts.png"
         alt="JavaScript object"
-        caption="A Javascript object is a collection of properties, and a property is an association between a name (or key) and a value. "
+        caption="A JavaScript object is a collection of properties, and a property is an association between a name (or key) and a value. "
       />
     ),
     notes:
@@ -646,13 +657,24 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
     ),
   },
 
+  // {
+  //   element: (
+  //     <Image
+  //       src="/images/javascript/js-onclick-event.png"
+  //       alt="onClick event example"
+  //       caption="onClick event example"
+  //       href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick1"
+  //     />
+  //   ),
+  // },
+
   {
     element: (
       <Image
-        src="/images/javascript/js-onclick-event.png"
+        src="/images/javascript/js-addeventlistener.png"
         alt="onClick event example"
         caption="onClick event example"
-        href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick1"
+        href="https://www.w3schools.com/jsref/met_document_addeventlistener.asp"
       />
     ),
   },
@@ -854,6 +876,34 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
 
   {
     element: (
+      <Video
+        src="https://www.youtube.com/embed/3wsFKrYhAHc?si=3KKtMe2XpZpR6eix"
+        title="Introduction to WebGL, GLTF and Three.js"
+        caption={
+          "Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js"
+        }
+      />
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <h3>How does WebGL looks like?</h3>
+        <br />
+        <Image
+          src="/images/three/webgl-vertex-shader.png"
+          alt="WebGL shaders"
+          caption={"WebGL shaders are hard to use"}
+        />
+      </>
+    ),
+    notes:
+      "To do anything useful with WebGL generally requires quite a bit of code and that is where three.js comes in. \
+    It handles stuff like scenes, lights, shadows, materials, textures, 3d math, all things that you'd have to write yourself if you were to use WebGL directly.",
+  },
+  {
+    element: (
       <>
         <Gltf />
 
@@ -902,22 +952,7 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
       />
     ),
   },
-  {
-    element: (
-      <>
-        <h3>How does WebGL looks like?</h3>
-        <br />
-        <Image
-          src="/images/three/webgl-vertex-shader.png"
-          alt="WebGL shaders"
-          caption={"WebGL shaders are hard to use"}
-        />
-      </>
-    ),
-    notes:
-      "To do anything useful with WebGL generally requires quite a bit of code and that is where three.js comes in. \
-    It handles stuff like scenes, lights, shadows, materials, textures, 3d math, all things that you'd have to write yourself if you were to use WebGL directly.",
-  },
+
   // Three js
   {
     element: (
