@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent's About Page</title>
 <link rel="stylesheet" href="styles.css">
@@ -21,20 +22,7 @@
     <li>Always give people a chance</li>
     <li>Warning : Can be a potato head</li>
  </ul>
-<div class="button-container">
-    <a href="TBD"></a><button>
-        <span class="button_top">Assignment 1</span>
-    </button>
-    <a href="TBD"></a><button>
-        <span class="button_top">Assignment 2</span>
-    </button>
-    <a href="TBD"></a><button>
-        <span class="button_top">Assignment 3</span>
-    </button>
-    <a href="TBD"></a><button>
-        <span class="button_top">Final Assignment</span>
-    </button>
-</div>
+
 
 <div class="slideshow-container">
 
@@ -81,7 +69,31 @@
     <span class="dot" onclick="currentSlide(6)"></span>
 </div>
 
-  <script src="Script.js"></script
+<div class="button-container">
+    <a href="TBD"></a><button id="Assignement 2">
+        <span class="button_top">Assignment 2</span>
+    </button>
+    <a href="TBD"></a><button id="Assignement 3">
+        <span class="button_top">Assignment 3</span>
+    </button>
+    <a href="TBD"></a><button id="Assignement 4">
+        <span class="button_top">Assignment 4</span>
+    </button>
+    <a href="TBD"></a><button>
+        <span class="button_top">Final Assignment</span>
+    </button>
+</div>
+
+<canvas id="three-canvas"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/RGBELoader.js"></script>
+
+<script type="module" src="./Slides.js"></script>
+<script type="module" src="./main.js"></script>
+
+
 
 </body>
 
