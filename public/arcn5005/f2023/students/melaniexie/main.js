@@ -97,7 +97,7 @@ function init(){
     scene.add( ground );
 
     const textureLoader = new THREE.TextureLoader();
-    textureLoader.load( 'textures/concrete.png', function ( map ) {
+    textureLoader.load('textures/Concrete.png', function ( map ) {
 
         map.wrapS = THREE.RepeatWrapping;
         map.wrapT = THREE.RepeatWrapping;
