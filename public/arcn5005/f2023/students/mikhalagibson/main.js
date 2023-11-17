@@ -108,13 +108,12 @@ meshes.forEach((mesh) => {
 
   testbgreentorusknot.scale.set(0.7, 0.7, 0.7);
 
-
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
 gltfLoader.load(
-  "/src/models/mini mel bl.glb",
+  "./models/mini mel bl.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 0.5;
@@ -131,7 +130,7 @@ gltfLoader.load(
 );
 
 gltfLoader.load(
-    "/src/models/mini me bl.glb",
+    "./models/mini me bl.glb",
     function (gltf) {
       mesh = gltf.scene;
       mesh.scale.x = 0.5;
