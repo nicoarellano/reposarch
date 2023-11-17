@@ -62,12 +62,6 @@ h5 {
   line-height: 38px;
 }
 
-code {
-  text-align: left;
-  background-color: white;
-  padding: 2rem;
-}
-
 .slides {
   text-align: center;
   max-width: 90%;
@@ -166,11 +160,12 @@ code {
 }
 
 .simple-table tr:nth-child(even) {
-  background-color: #eee;
+  background-color: #bbb;
 }
 
 .simple-table tr:hover {
-  background-color: #ddd;
+  background-color: #888;
+  color: white;
 }
 
 .simple-table th {
