@@ -55,8 +55,8 @@ const loader = new THREE.GLTFLoader();
 
 let mesh;
 loader.load(
-"/public/arcn5005/f2023/students/muqujenniferliu/three/models/Jennifermesh.gltf",
-    function (gltf) {
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/Jennifermesh.gltf",
+  function (gltf) {
     gltf.scene.scale.x = 2;
     gltf.scene.scale.y = 2;
     gltf.scene.scale.z = 2;
@@ -74,13 +74,13 @@ const loader2 = new THREE.GLTFLoader();
 
 let mesh2;
 loader2.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/Table1.glb",
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/Table1.glb",
   function (gltf) {
     gltf.scene.scale.x = 5;
     gltf.scene.scale.y = 5;
     gltf.scene.scale.z = 3;
     mesh2 = gltf.scene;
-    mesh2.position.z = -7;  // Adjust the position as needed
+    mesh2.position.z = -7; // Adjust the position as needed
     scene.add(gltf.scene);
   },
   undefined,
@@ -93,13 +93,13 @@ const loader3 = new THREE.GLTFLoader();
 
 let mesh3;
 loader3.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/Coffee_Vendor.glb",
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/Coffee_Vendor.glb",
   function (gltf) {
     gltf.scene.scale.x = 1.5;
     gltf.scene.scale.y = 1.5;
     gltf.scene.scale.z = 1.5;
     mesh3 = gltf.scene;
-    mesh3.position.z = 10;  // Adjust the position as needed
+    mesh3.position.z = 10; // Adjust the position as needed
     scene.add(gltf.scene);
   },
   undefined,
@@ -112,14 +112,14 @@ const loader4 = new THREE.GLTFLoader();
 
 let mesh4;
 loader4.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/Vaso.glb",
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/Vaso.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.05;
     gltf.scene.scale.y = 0.05;
     gltf.scene.scale.z = 0.05;
     mesh4 = gltf.scene;
-    mesh4.position.z = -5.5;  // Adjust the position as needed
-    mesh4.position.y = 1.5;  // Adjust the position as needed
+    mesh4.position.z = -5.5; // Adjust the position as needed
+    mesh4.position.y = 1.5; // Adjust the position as needed
     scene.add(gltf.scene);
   },
   undefined,
@@ -132,14 +132,14 @@ const loader5 = new THREE.GLTFLoader();
 
 let mesh5;
 loader5.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/COFFEE.glb",
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/COFFEE.glb",
   function (gltf) {
     gltf.scene.scale.x = 5;
     gltf.scene.scale.y = 5;
     gltf.scene.scale.z = 5;
     mesh5 = gltf.scene;
-    mesh5.position.z = -6.2;  // Adjust the position as needed
-    mesh5.position.y = 1.7;  // Adjust the position as needed
+    mesh5.position.z = -6.2; // Adjust the position as needed
+    mesh5.position.y = 1.7; // Adjust the position as needed
     scene.add(gltf.scene);
   },
   undefined,
@@ -152,14 +152,14 @@ const loader6 = new THREE.GLTFLoader();
 
 let mesh6;
 loader6.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/espresso_machine.glb",
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/espresso_machine.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.5;
     gltf.scene.scale.y = 0.5;
     gltf.scene.scale.z = 0.5;
     mesh6 = gltf.scene;
-    mesh6.position.z = -8.2;  // Adjust the position as needed
-    mesh6.position.y = 1.7;  // Adjust the position as needed
+    mesh6.position.z = -8.2; // Adjust the position as needed
+    mesh6.position.y = 1.7; // Adjust the position as needed
     scene.add(gltf.scene);
   },
   undefined,
@@ -172,13 +172,13 @@ const loader7 = new THREE.GLTFLoader();
 
 let mesh7;
 loader7.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/tree.glb",
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/tree.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.5;
     gltf.scene.scale.y = 0.5;
     gltf.scene.scale.z = 0.5;
     mesh7 = gltf.scene;
-    mesh7.position.z = -15;  // Adjust the position as needed
+    mesh7.position.z = -15; // Adjust the position as needed
     scene.add(gltf.scene);
   },
   undefined,
@@ -191,14 +191,14 @@ const loader8 = new THREE.GLTFLoader();
 
 let mesh8;
 loader8.load(
-  "/public/arcn5005/f2023/students/muqujenniferliu/three/models/tree.glb",
+  "/arcn5005/f2023/students/muqujenniferliu/three/models/tree.glb",
   function (gltf) {
     gltf.scene.scale.x = 0.5;
     gltf.scene.scale.y = 0.5;
     gltf.scene.scale.z = 0.5;
     mesh8 = gltf.scene;
-    mesh8.position.z = 5;  // Adjust the position as needed
-    mesh8.position.x = -5;  // Adjust the position as needed
+    mesh8.position.z = 5; // Adjust the position as needed
+    mesh8.position.x = -5; // Adjust the position as needed
     scene.add(gltf.scene);
   },
   undefined,
@@ -207,15 +207,12 @@ loader8.load(
   }
 );
 
-
-
 const fontLoader = new THREE.FontLoader();
-		
+
 function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
   fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
-
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -226,7 +223,6 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
       bevelSize: 0.0,
       bevelOffset: 0,
       bevelSegments: 5,
-
     });
 
     const color = new THREE.Color();
@@ -240,17 +236,22 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     text.position.z = 0;
 
     scene.add(text);
-
   });
-
 }
 
 createText("Jennifer Liu", 5, "0X1f400a");
-createText("- Graduated from University of Manitoba with B. Env. Design", 3, "0X000000");
+createText(
+  "- Graduated from University of Manitoba with B. Env. Design",
+  3,
+  "0X000000"
+);
 createText("- Looooves matcha", 2, "0X000000");
-createText("- Favourite colours are white and brown (green occasionally)", 1, "0X000000");
+createText(
+  "- Favourite colours are white and brown (green occasionally)",
+  1,
+  "0X000000"
+);
 createText("- Loves photography and art", 0, "0X000000");
-
 
 camera.position.z = 7;
 camera.position.x = 4;
@@ -283,7 +284,6 @@ function animate() {
   if (mesh7) mesh7.rotation.y += 0.01;
   if (mesh8) mesh8.rotation.y += 0.01;
 
-
   yellowCube.rotation.x += 0.01;
   yellowCube.rotation.y += 0.01;
 
@@ -309,5 +309,3 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
-
-
