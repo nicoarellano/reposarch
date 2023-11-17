@@ -42,7 +42,7 @@ gltfLoader.load(
 
 const loader = new THREE.TextureLoader();
   const texture = loader.load(
-    'Super_Mario_Bros_Background.jpg',
+    'Super_Mario.jpg',
     () => {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       texture.colorSpace = THREE.SRGBColorSpace;
@@ -58,7 +58,7 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
-      height: 0.05,
+      height: 0.2,
       curveSegments: 4,
     });
 
@@ -67,7 +67,7 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     const textMaterial = new THREE.MeshBasicMaterial({ color: color });
     const text = new THREE.Mesh(textGeo, textMaterial);
 
-    text.position.x = -3;
+    text.position.x = -4;
     text.position.y = z;
 
 
@@ -75,11 +75,12 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Filipe Costa", 10, "0X000000",1);
-createText("Portuguese-Canadian", 9, "0X008000");
+//Mario colour-coded
+createText("  Filipe Costa", 10, "0X000000", 1);
+createText("      Portuguese-Canadian", 9, "0X049CD8");
 createText("M.Arch at Carleton University", 8, "0XFFBF00");
-createText("Undergrad at UofT", 7, "0XD2042D");
-createText("Design Enthusiast", 6, "0XD2042D");
+createText("       Undergrad at UofT", 7, "0XE52521");
+createText("       Design Enthusiast", 6, "0X43B047");
 
 camera.position.z = 18;
 camera.position.x = 0;

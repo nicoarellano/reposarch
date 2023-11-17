@@ -200,3 +200,11 @@ button:active .button_top {
   to {opacity: 1}
 }
 
+#three-canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 15%;
+  margin-right: 15;
+  display: block;
+  width: 800px;
+}
