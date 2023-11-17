@@ -47,6 +47,16 @@ scene.add(yellowCube);
 scene.add(blueCube);
 scene.add(greenCube);
 
+for (let i = 0; i < 1000; i++) {
+  const starGeometry = new THREE.SphereGeometry(0.05, 24, 24);
+  const starMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const star = new THREE.Mesh(starGeometry, starMaterial);
+
+  const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+  star.position.set(x, y, z);
+  scene.add(star);
+}
+
 const GLTFLoader = new THREE.GLTFLoader();
 
 let mesh;
