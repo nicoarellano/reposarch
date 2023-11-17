@@ -258,7 +258,7 @@ function animate() {
 
  
 
-  if (mesh) mesh.rotation.y += 00;
+  if (mesh) mesh.rotation.y += 10;
 
  
 
