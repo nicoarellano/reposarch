@@ -1,27 +1,31 @@
-
+// Create a scene
 const scene = new THREE.Scene();
 
+// Set up the size and aspect ratio
 const size = {
   width: window.innerWidth,
   height: window.innerHeight,
 };
-
 const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
-//Sets up the renderer, fetching the canvas of the HTML
+// Create a camera
+const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+camera.position.z = 13;
+camera.position.x = 5;
+camera.position.y = 2;
+
+// Set up the renderer
 const threeCanvas = document.getElementById("three-canvas");
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
   alpha: true,
 });
-
 renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-//Creates grids and axes in the scene
-const grid = new THREE.GridHelper(10, 10);
+// Create grids and axes in the scene
+const grid = new THREE.GridHelper(1, 1);
 scene.add(grid);
 
 const axes = new THREE.AxesHelper();
@@ -29,64 +33,53 @@ axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+// Create a spherical ground plane
+const groundGeometry = new THREE.SphereGeometry(10, 32, 32);
+const groundMaterial = new THREE.MeshBasicMaterial({
+  color: 0xffffff,
+  wireframe: true,
+});
+const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+scene.add(ground);
 
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
-
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
-
-yellowCube.position.z = -3;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
-
-scene.add(yellowCube);
-scene.add(blueCube);
-// scene.add(redCube);
-scene.add(greenCube);
-
-
+// Load 3D model using GLTFLoader
 const GLTFLoader = new THREE.GLTFLoader();
-
 let mesh;
 
-function loadGLB(path,scale,x,z){
+function loadGLB(path, scale, x, z) {
   GLTFLoader.load(
     path,
     function (gltf) {
       mesh = gltf.scene;
-      mesh.scale.x = scale;
-      mesh.scale.y = scale;
-      mesh.scale.z = scale;
-        mesh.position.x = x
-        mesh.position.z = z
+      mesh.scale.set(scale, scale, scale);
+      mesh.position.x = x;
+      mesh.position.z = z;
       scene.add(mesh);
     },
-      undefined,
-      function (error) {
-        console.error(error);
-      }
-
+    undefined,
+    function (error) {
+      console.error(error);
+    }
   );
 }
 
 loadGLB("./Models/From Blender.glb", 0.3, 0, 0);
 
+// Update ground rotation function
+function updateGroundRotation() {
+  if (ground) {
+    ground.rotation.y += 0.01; // Rotate in a circle
+  }
+}
+
+// Load font and create text
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
-  const textValue = text;
-  const textSize = size;
+function createText(text, elevation = 0, textColor = "0x100000", size = 0.3) {
   fontLoader.load("./Fonts/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
+    const textGeo = new THREE.TextGeometry(text, {
       font: font,
-      size: textSize,
+      size: size,
       height: 0.1,
       curveSegments: 4,
       bevelEnabled: true,
@@ -97,37 +90,29 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
     });
 
     const color = new THREE.Color();
-    color.setHex(textColor);
+    // Gradually change the color every 10 seconds
+    color.setHex(
+      `0x${Math.floor(Math.random() * 16777215).toString(16)}`
+    );
     const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
+    const textMesh = new THREE.Mesh(textGeo, textMaterial);
 
-    text.position.x = 2;
-    text.position.y = elevation;
+    textMesh.position.x = 2;
+    textMesh.position.y = elevation;
 
-    scene.add(text);
+    scene.add(textMesh);
   });
 }
 
-createText("Simon Martignago", 5, "0XFF00FF");
+// Create text elements
+createText("Simon Martignago", 5, "0XFF0000");
 createText("- Aspiring Architect", 3, "0XFF0000");
-createText("- Not on the research team at CIMS", 2, "0XFF0000");
-createText("- Master of Architecture", 1, "0XFF0000");
-createText("- Very Amateur programmer", 0, "0XFF0000");
+createText("- Not on the research team at CIMS", 2.5, "0XFF0000");
+createText("- Master of Architecture", 2, "0XFF0000");
+createText("- Very Amateur programmer", 1.5, "0XFF0000");
 
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
-
-scene.position.x = -5;
-scene.position.z = 5;
-scene.position.y = -3;
-
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-
-//Creates the lights of the scene
+// Set up lights
 const lightColor = 0xffffff;
-
 const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
 scene.add(ambientLight);
 
@@ -137,29 +122,33 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
+// Set up controls
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+// Animation loop
 function animate() {
   requestAnimationFrame(animate);
 
   if (mesh) mesh.rotation.y += 0.01;
 
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
+  // Update ground rotation
+  updateGroundRotation();
 
-  blueCube.rotation.x += 0.02;
-  blueCube.rotation.y -= 0.01;
-
-  redCube.rotation.x -= 0.01;
-  redCube.rotation.y -= 0.02;
-
-  greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
-
+  // Render the scene
   renderer.render(scene, camera);
 }
 
-animate();
+// Gradually change ground color every 10 seconds
+function changeGroundColor() {
+  setInterval(() => {
+    groundMaterial.color.setHex(
+      `0x${Math.floor(Math.random() * 16777215).toString(16)}`
+    );
+  }, 1000);
+}
 
-//Adjust the viewport to the size of the browser
+// Handle window resize
 window.addEventListener("resize", () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
@@ -167,5 +156,8 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
-//Add more code here
-//Add more code here
+
+// Start the animation loop
+animate();
+// Start the color change interval
+changeGroundColor();
