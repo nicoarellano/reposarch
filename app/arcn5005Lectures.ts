@@ -302,6 +302,13 @@ export const arcn5005Lectures: Lectures = [
       { title: "Open Source web GIS - Leaflet and Maplibre" },
       { title: "🖥️ LAB 10: Maplibre" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd",
+        title: "Ken Percy - Open-source GIS",
+        date: dayjs("2023/11/16"),
+      },
+    ],
   },
 
   {
