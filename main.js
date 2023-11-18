@@ -159,4 +159,4 @@ const texture = loader.load(
         texture.mapping = THREE.EquirectangularReflectionMapping;
         texture.colorSpace = THREE.SRGBColorSpace;
         scene.background = texture;
-    });
+    }); 
