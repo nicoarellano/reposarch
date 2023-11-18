@@ -19,15 +19,6 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-//Creates grids and axes in the scene
-const grid = new THREE.GridHelper(10, 10);
-scene.add(grid);
-
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
-
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0x1000000 });
@@ -82,7 +73,7 @@ function loadGLB(path,scale,x,z){
       );
 }
 loadGLB("./models/JerMesh1.glb",3, 0, 0)
-loadGLB("./models/Building1.glb",15, 5, 4)
+loadGLB("./models/Building1.glb",20, 5, 4)
 
 const fontLoader = new THREE.FontLoader();
 
@@ -114,7 +105,7 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Look Inside!", 60, "0XD14F33", 5);
+createText("Look Inside!", 80, "0XD14F33", 10);
 createText("Jeremie Lafleche", 6, "D14F33");
 createText("- From Montreal, QC", 4, "0XD14F33");
 createText("- Background in History and Theory of Architecture", 3, "0XD14F33");
@@ -122,9 +113,9 @@ createText("- I have a turtle named Flash", 2, "0XD14F33");
 createText("- My favourite architect is Moshe Safdie", 1, "0XD14F33");
 
 
-camera.position.z = 90;
-camera.position.x = 60;
-camera.position.y = 50;
+camera.position.z = 160;
+camera.position.x = 40;
+camera.position.y = 40;
 
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
