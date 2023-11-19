@@ -45,10 +45,13 @@ scene.add(rock3);
 scene.add(rock4);
 
 //Plane Geometry
-const planegeometry = new THREE.PlaneGeometry (20,20);
-const planematerial = new THREE.MeshBasicMaterial ({color:0x475E1C, side: THREE.DoubleSide});
-const plane = new THREE.Mesh (planegeometry, planematerial)
-plane.rotation.x = Math.PI/2;
+const planegeometry = new THREE.PlaneGeometry(20, 20);
+const planematerial = new THREE.MeshBasicMaterial({
+  color: 0x475e1c,
+  side: THREE.DoubleSide,
+});
+const plane = new THREE.Mesh(planegeometry, planematerial);
+plane.rotation.x = Math.PI / 2;
 plane.position.x = 2;
 plane.position.z = 4;
 plane.position.y = 0;
@@ -61,7 +64,7 @@ const fontLoader = new THREE.FontLoader();
 function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load(".\fonts\helvetiker_bold.typeface.json", function (font) {
+  fontLoader.load("helvetiker_regular.typeface.json", function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -77,7 +80,6 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     text.position.x = -4;
     text.position.y = z;
 
-
     scene.add(text);
   });
 }
@@ -89,27 +91,27 @@ const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
-function loadGLB(path,scale,x,z){
+function loadGLB(path, scale, x, z) {
   gltfLoader.load(
-         path,
-            function (gltf) {
-              mesh = gltf.scene;
-              mesh.scale.x = scale;
-              mesh.scale.y = scale;
-              mesh.scale.z = scale;
-                mesh.position.x = x
-                mesh.position.z = z
-          scene.add(mesh);
-        },
-          undefined, 
-          function (error) {
-          console.error(error);
-          }
+    path,
+    function (gltf) {
+      mesh = gltf.scene;
+      mesh.scale.x = scale;
+      mesh.scale.y = scale;
+      mesh.scale.z = scale;
+      mesh.position.x = x;
+      mesh.position.z = z;
+      scene.add(mesh);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
   );
 }
 
-loadGLB("/arcn5005/f2023/students/dylanjozkow/models/dylan.gltf",3,3,3)
-loadGLB("/arcn5005/f2023/students/dylanjozkow/models/tree.gltf", 1, 1, 1);
+loadGLB("./models/dylan.gltf", 3, 3, 3);
+loadGLB("./models/tree.gltf", 1, 1, 1);
 
 //camera position
 camera.position.z = 7;
@@ -133,13 +135,11 @@ scene.add(directionalLight.target);
 
 //Adding in Texture
 const loader = new THREE.TextureLoader();
-  const texture = loader.load(
-    'trees.jpg',
-    () => {
-      texture.mapping = THREE.EquirectangularReflectionMapping;
-      texture.colorSpace = THREE.SRGBColorSpace;
-      scene.background = texture;
-    });
+const texture = loader.load("trees.jpg", () => {
+  texture.mapping = THREE.EquirectangularReflectionMapping;
+  texture.colorSpace = THREE.SRGBColorSpace;
+  scene.background = texture;
+});
 
 //animate
 function animate() {
