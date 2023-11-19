@@ -26,10 +26,10 @@ scene.add(axes);
 
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5, 1.5);
 
-const yellowMaterial = new THREE.MeshToonMaterial({ color: 0x1A5F77 });
-const blueMaterial = new THREE.MeshToonMaterial({ color: 0x1A5F77 });
-const redMaterial = new THREE.MeshToonMaterial({ color: 0x1A5F77 });
-const greenMaterial = new THREE.MeshToonMaterial({ color: 0x1A5F77 });
+const yellowMaterial = new THREE.MeshToonMaterial({ color: 0x1a5f77 });
+const blueMaterial = new THREE.MeshToonMaterial({ color: 0x1a5f77 });
+const redMaterial = new THREE.MeshToonMaterial({ color: 0x1a5f77 });
+const greenMaterial = new THREE.MeshToonMaterial({ color: 0x1a5f77 });
 
 const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
 const blueCube = new THREE.Mesh(geometry, blueMaterial);
@@ -51,38 +51,36 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-    //"/arcn5005/f2023/students/lillianelkadri/model5.glb",
-    "./model5.glb",
-    function (gltf) {
-      mesh = gltf.scene;
-      mesh.scale.x = 0.1;
-      mesh.scale.y = 0.2;
-      mesh.scale.z = 0.1;
-      mesh.position.y = -1;
-  
-      scene.add(mesh);
-    },
-    undefined,
-    function (error) {
-      console.error(error);
-    }
-  );
+  //"/arcn5005/f2023/students/lillianelkadri/model5.glb",
+  "./model5.glb",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 0.1;
+    mesh.scale.y = 0.2;
+    mesh.scale.z = 0.1;
+    mesh.position.y = -1;
 
-  const loader = new THREE.TextureLoader();
-  const texture = loader.load(
-    '26313.jpg',
-    () => {
-      texture.mapping = THREE.EquirectangularReflectionMapping;
-      texture.colorSpace = THREE.SRGBColorSpace;
-      scene.background = texture;
-    });
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
+
+const loader = new THREE.TextureLoader();
+const texture = loader.load("26313.jpg", () => {
+  texture.mapping = THREE.EquirectangularReflectionMapping;
+  texture.colorSpace = THREE.SRGBColorSpace;
+  scene.background = texture;
+});
 
 const fontLoader = new THREE.FontLoader();
 
 function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+  fontLoader.load("helvetiker_regular.typeface.json", function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -165,5 +163,4 @@ window.addEventListener("resize", () => {
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
-
 });
