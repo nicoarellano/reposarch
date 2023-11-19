@@ -28,7 +28,7 @@ scene.add(axes);
 
 ///GLTFS///
 const loader = new THREE.GLTFLoader();
-const models = []; 
+const models = [];
 
 function loadAndAddModel(modelPath, scale, position, behavior, rotation) {
   loader.load(
@@ -56,14 +56,31 @@ function loadAndAddModel(modelPath, scale, position, behavior, rotation) {
   );
 }
 
+loadAndAddModel(
+  "./ifc/Hemi/scene.gltf",
+  0.05,
+  new THREE.Vector3(4, 0, 2),
+  "rest"
+);
+loadAndAddModel(
+  "./ifc/Flowers/scene.gltf",
+  0.1,
+  new THREE.Vector3(-3, 0, 3),
+  "spin"
+);
+loadAndAddModel(
+  "./ifc/Bone/scene.gltf",
+  0.005,
+  new THREE.Vector3(4, 4, 4),
+  "spin"
+);
+loadAndAddModel("./ifc/AshMESH.glb", 3.0, new THREE.Vector3(0, -1, 0), "rest", {
+  x: 0,
+  y: Math.PI / 2,
+  z: 0,
+});
 
-loadAndAddModel('Hemi/scene.gltf', 0.05, new THREE.Vector3(4, 0, 2), 'rest');
-loadAndAddModel('Flowers/scene.gltf', 0.1, new THREE.Vector3(-3, 0, 3), 'spin');
-loadAndAddModel('Bone/scene.gltf', 0.005, new THREE.Vector3(4, 4, 4), 'spin'); 
-loadAndAddModel('AshMESH.glb', 3.0, new THREE.Vector3(0, -1, 0), 'rest', { x: 0, y: Math.PI / 2, z: 0 });
-
-
-document.addEventListener('mousemove', function (event) {
+document.addEventListener("mousemove", function (event) {
   const mouse = new THREE.Vector2(
     (event.clientX / window.innerWidth) * 2 - 1,
     -(event.clientY / window.innerHeight) * 2 + 1
@@ -75,9 +92,9 @@ document.addEventListener('mousemove', function (event) {
   const intersects = raycaster.intersectObject(models[0].mesh, true);
 
   if (intersects.length > 0) {
-    models[0].behavior = 'rest'; 
+    models[0].behavior = "rest";
   } else {
-    models[0].behavior = 'rest'; 
+    models[0].behavior = "rest";
   }
 });
 
@@ -85,11 +102,11 @@ function animate() {
   requestAnimationFrame(animate);
 
   models.forEach((model, index) => {
-    if (model.behavior === 'spin') {
+    if (model.behavior === "spin") {
       model.mesh.rotation.y += 0.01;
     }
 
-    if (model.behavior !== 'rest' && model.behavior !== 'spin') {
+    if (model.behavior !== "rest" && model.behavior !== "spin") {
       model.mesh.position.y -= 0.01;
     }
   });
@@ -113,65 +130,90 @@ function createPicture(path, initialPosition, width, height) {
   const textureLoader = new THREE.TextureLoader();
   const texture = textureLoader.load(path);
   const planeGeometry = new THREE.PlaneGeometry(width, height);
-  const planeMaterial = new THREE.MeshStandardMaterial({ map: texture, side: THREE.DoubleSide });
+  const planeMaterial = new THREE.MeshStandardMaterial({
+    map: texture,
+    side: THREE.DoubleSide,
+  });
   const plane = new THREE.Mesh(planeGeometry, planeMaterial);
   plane.position.copy(initialPosition);
   scene.add(plane);
   return plane;
 }
 //Picture Position//
-const picture1 = createPicture('beach.jpg', new THREE.Vector3(0, 5, -10), 10, 10);
-const picture2 = createPicture('fam.jpg', new THREE.Vector3(10, 5, -5), 10, 10);
-const picture3 = createPicture('lighthouse.jpg', new THREE.Vector3(-10, 5, -5), 10, 10);
+const picture1 = createPicture(
+  "./ifc/beach.jpg",
+  new THREE.Vector3(0, 5, -10),
+  10,
+  10
+);
+const picture2 = createPicture(
+  "./ifc/fam.jpg",
+  new THREE.Vector3(10, 5, -5),
+  10,
+  10
+);
+const picture3 = createPicture(
+  "./ifc/lighthouse.jpg",
+  new THREE.Vector3(-10, 5, -5),
+  10,
+  10
+);
 
 ///TEXT//
-const fontloader = new THREE. FontLoader();
+const fontloader = new THREE.FontLoader();
 function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
-const textValue = text;
-const textsize = size;
-fontloader. load("./Fonts/helvetiker_regular.typeface.json", function (font) {
-  const textGeo = new THREE.TextGeometry (textValue, {
-    font: font, 
-    size: textsize, 
-    height: 0.1, 
-    curveSegments: 4, 
-    bevelEnabled: true, 
-    bevelThickness: 0.1, 
-    bevelSize: 0.0, 
-    beveloffset: 0, 
-    bevelSegments: 5, 
+  const textValue = text;
+  const textsize = size;
+  fontloader.load(
+    "./ifc/Fonts/helvetiker_regular.typeface.json",
+    function (font) {
+      const textGeo = new THREE.TextGeometry(textValue, {
+        font: font,
+        size: textsize,
+        height: 0.1,
+        curveSegments: 4,
+        bevelEnabled: true,
+        bevelThickness: 0.1,
+        bevelSize: 0.0,
+        beveloffset: 0,
+        bevelSegments: 5,
+      });
 
-  });
-  
-const color = new THREE.Color();
-color.setHex (textColor);
-const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-const text = new THREE.Mesh(textGeo, textMaterial);
+      const color = new THREE.Color();
+      color.setHex(textColor);
+      const textMaterial = new THREE.MeshLambertMaterial({ color: color });
+      const text = new THREE.Mesh(textGeo, textMaterial);
 
-text.position.x = -15;
-text.position.y = elevation;
+      text.position.x = -15;
+      text.position.y = elevation;
 
-scene.add(text);
-});
+      scene.add(text);
+    }
+  );
 }
 
-createText ("Ashlynn Holman", 12, "0x71797E");
-createText ("- Hometown: Truro, Nova Scotia", 10, "0x818589");
-createText ("- I have a Golden Retriever", 9, "0x818589");
-createText ("- The beach is my happy place", 8, "0x818589"); 
-createText ("- Yellow is my favorite color", 7, "0x818589");
+createText("Ashlynn Holman", 12, "0x71797E");
+createText("- Hometown: Truro, Nova Scotia", 10, "0x818589");
+createText("- I have a Golden Retriever", 9, "0x818589");
+createText("- The beach is my happy place", 8, "0x818589");
+createText("- Yellow is my favorite color", 7, "0x818589");
 
 /////GRASS//
-const groundGeometry = new THREE.PlaneGeometry(50, 50); 
-const groundTexture = new THREE.TextureLoader().load('grass_texture_01.jpg'); 
-const groundMaterial = new THREE.MeshStandardMaterial({ map: groundTexture, side: THREE.DoubleSide });
+const groundGeometry = new THREE.PlaneGeometry(50, 50);
+const groundTexture = new THREE.TextureLoader().load(
+  "./ifc/grass_texture_01.jpg"
+);
+const groundMaterial = new THREE.MeshStandardMaterial({
+  map: groundTexture,
+  side: THREE.DoubleSide,
+});
 const groundPlane = new THREE.Mesh(groundGeometry, groundMaterial);
-groundPlane.rotation.x = -Math.PI / 2; 
+groundPlane.rotation.x = -Math.PI / 2;
 scene.add(groundPlane);
 
-grid.position.y = -0.1; 
+grid.position.y = -0.1;
 
-groundPlane.position.y = -0.2; 
+groundPlane.position.y = -0.2;
 
 renderer.shadowMap.enabled = true;
 
