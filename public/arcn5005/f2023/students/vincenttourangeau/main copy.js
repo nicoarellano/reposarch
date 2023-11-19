@@ -1,15 +1,14 @@
 const scene = new THREE.Scene();
 
-const targetHeight = 600;
-
 const size = {
-  width: window.innerWidth * 0.7,
-  height: targetHeight,
+  width: window.innerWidth,
+  height: window.innerHeight,
 };
 
 const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 4000);
+const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
+//Sets up the renderer, fetching the canvas of the HTML
 const threeCanvas = document.getElementById("three-canvas");
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
@@ -20,13 +19,9 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-const grid = new THREE.GridHelper(200, 200);
+//Creates grids and axes in the scene
+const grid = new THREE.GridHelper(10, 10);
 scene.add(grid);
-
-function changeGridScale(newScale) {
-  grid.scale.set(newScale, newScale, newScale);
-}
-changeGridScale(4);
 
 const axes = new THREE.AxesHelper();
 axes.material.depthTest = false;
@@ -63,24 +58,11 @@ function loadGLB(path, scale, x, z) {
     path,
     function (gltf) {
       mesh = gltf.scene;
-      mesh.scale.set(scale, scale, scale);
-      mesh.position.set(x, 0, z);
-
-      // Traverse the model to find and set textures
-      mesh.traverse(function (child) {
-        if (child.isMesh) {
-          // Assuming textures are JPEG files
-          child.material.map.encoding = THREE.sRGBEncoding;
-          child.material.map.anisotropy = 16;
-
-          // Check if the material has a normal map
-          if (child.material.normalMap) {
-            child.material.normalMap.encoding = THREE.sRGBEncoding;
-            child.material.normalMap.anisotropy = 16;
-          }
-        }
-      });
-
+      mesh.scale.x = scale;
+      mesh.scale.y = scale;
+      mesh.scale.z = scale;
+      mesh.position.x = x;
+      mesh.position.z = z;
       scene.add(mesh);
     },
     undefined,
@@ -90,9 +72,7 @@ function loadGLB(path, scale, x, z) {
   );
 }
 
-
 loadGLB("./models/Vincent_V2.glb", 5, 0, 0);
-loadGLB("./models/scene.gltf", 100, 0, 0);
 
 
 const fontLoader = new THREE.FontLoader();
@@ -145,7 +125,7 @@ controls.enableDamping = true;
 //Creates the lights of the scene
 const lightColor = 0xffffff;
 
-const ambientLight = new THREE.AmbientLight(lightColor, 1);
+const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(lightColor, 1);
@@ -176,48 +156,76 @@ function animate() {
 
 animate();
 
+//Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
-  const targetWidth = window.innerWidth;
-  const targetHeight = 600;
-  size.width = targetWidth;
-  size.height = targetHeight;
+  size.width = window.innerWidth;
+  size.height = window.innerHeight;
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
 
-// Star particles from https://threejs.org/examples/webgl_camera.html
+// ... (previous code)
 
-const geometryStars = new THREE.BufferGeometry();
-const verticesStars = [];
-
+// Populate verticesStars array with coordinates
 for (let i = 0; i < 10000; i++) {
-  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
-  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
-  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); // x
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); // y
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); // z
 }
 
 geometryStars.setAttribute('position', new THREE.Float32BufferAttribute(verticesStars, 3));
 
-const particlesStars = new THREE.Points(geometryStars, new THREE.PointsMaterial({ color: 0x999999 }));
+const particlesStars = new THREE.Points(geometryStars, new THREE.PointsMaterial({ color: 0x888888 }));
 scene.add(particlesStars);
 
-const geometryOtherParticles = new THREE.BufferGeometry();
-const verticesOtherParticles = [];
-
+// Populate verticesOtherParticles array with coordinates
 for (let i = 0; i < 10000; i++) {
-  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
-  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
-  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(2000)); // x
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(2000)); // y
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(2000)); // z
 }
 
 geometryOtherParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesOtherParticles, 3));
 
-const particlesOther = new THREE.Points(geometryOtherParticles, new THREE.PointsMaterial({ color: 0x999999 }));
+const particlesOther = new THREE.Points(geometryOtherParticles, new THREE.PointsMaterial({ color: 0xff0000 }));
 scene.add(particlesOther);
 
+function animateStars() {
+requestAnimationFrame(animateStars);
 
+// Update the position of the first set of particles (stars)
+particlesStars.position.x = 700 * Math.cos(r);
+particlesStars.position.z = 700 * Math.sin(r);
+particlesStars.position.y = 700 * Math.sin(r);
 
+// Update the position of the second set of particles
+particlesOther.position.x = 700 * Math.cos(r);
+particlesOther.position.z = 700 * Math.sin(r);
+particlesOther.position.y = 700 * Math.sin(r);
 
+// Render each set of particles with the perspective camera
+renderer.clear();
+renderer.render(scene, cameraPerspective);
 
+// Render the main scene with the original camera
+renderer.clearDepth();
+renderer.render(scene, camera);
+}
 
+animate();
+animateStars();
+
+const geometry = new THREE.BufferGeometry();
+const vertices = [];
+
+for (let i = 0; i < 10000; i++) {
+    vertices.push(THREE.MathUtils.randFloatSpread(2000)); // x
+    vertices.push(THREE.MathUtils.randFloatSpread(2000)); // y
+    vertices.push(THREE.MathUtils.randFloatSpread(2000)); // z
+}
+
+geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+const particles = new THREE.Points(geometry, new THREE.PointsMaterial({ color: 0x888888 }));
+scene.add(particles);
