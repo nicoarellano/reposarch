@@ -1,56 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" />
-  <script src="./main.js"></script>
-  <title>ABOUT PAGE</title>
-
-</head>
-<body>
-  <h1>Andrée-Ann Langevin</h1>
-  <section style="display: flex; flex-direction: row; justify-content: left; align-items: left; gap: 5rem;">
-    <img src="AAL.jpg" width="20%"> 
-
-
-    <div class="flex items-center justify-center">
-      <ul>
-        <li>I come from a town called Chicoutimi 🏛️</li>
-        <li>I own a small jungle at my house 🌹 </li>
-        <li>Crazy cat lady in the making 🐱 </li>
-        <li>Halloween is my favorite holiday 🎃 </li> 
-      </ul>
-
-    </div>
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-          <video width="50%" controls>
-              <source src="mocha.mp4" type="video/mp4">
-              
-          </video>
-      </div>
-
-  </section>
-  <div> 
-    <br />
-    <h2> ASSIGNEMENTS </h2>
-    <br/>
-  </div>
-  <div class="assignments">
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/three-example">
-      <button id="three-button">THREE</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/bim-example">
-      <button id="bim-button">BIM</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/map-example">
-      <button id="map-button">MAP</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/final-example">
-      <button id="final-button">FINAL</button>
-    </a>
-  </div>
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sweet Party</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script type="module" src="./three/main.js" defer></script>
+    <canvas id="three-canvas"></canvas>
+  </body>
 </html>

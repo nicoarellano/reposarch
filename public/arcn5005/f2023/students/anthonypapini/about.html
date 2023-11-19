@@ -1,275 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anthony Papini</title>
-
-    <!-- ⚠️ Anthony, remember that you need to style your page using CSS not using the style HTML element. Please correct -->
-
-    <style>
-      body {
-        background-image: url(pim-myten-m41k1lTzjVM-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: white;
-        font-family: "Montserrat", sans-serif;
-        margin: 0;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
-        position: relative;
-      }
-
-      .black-overlay {
-        background-color: rgba(0, 0, 0, 0.55);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-
-      .profile-pic {
-        margin-bottom: 1rem;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-
-      .profile-pic img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-      }
-
-      .header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-      }
-
-      .tagline {
-        font-style: italic;
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .profile-info {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-      }
-
-      .menu {
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 0.7rem 2rem;
-        border-radius: 20px;
-      }
-
-      .menu ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        gap: 1rem;
-      }
-
-      .menu ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .menu ul li a:hover {
-        text-decoration: underline;
-      }
-
-      .music-player {
-        margin-top: 2rem;
-        display: flex;
-        align-items: center;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: white;
-      }
-
-      .music-player audio {
-        margin-left: 1rem;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 0.5rem;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-      }
-
-      .spotify-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-      }
-
-      .spotify-link img {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        margin-bottom: 0.5rem;
-      }
-
-      .spotify-link a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .about-me {
-        background-image: url(1-8.jpeg);
-        background-size: cover;
-        background-position: center;
-        color: white;
-        text-align: center;
-        padding: 400px 0;
-        position: relative;
-      }
-
-      .about-me-content {
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 20px;
-        border-radius: 10px;
-      }
-
-      .scroll-down-arrow {
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .to-lounge-text {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .scroll-up-arrow {
-        position: absolute;
-        top: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="black-overlay">
-        <div class="profile-pic">
-          <img src="profilepic.jpg" alt="Student" />
-        </div>
-        <div class="header">Anthony Papini</div>
-        <div class="tagline">
-          <i>House music connoisseur</i>
-        </div>
-        <div class="profile-info">
-          Carleton University M.Arch<br />
-          Greystone Design Group Intermediate Architectural Associate
-        </div>
-        <div class="menu">
-          <ul>
-            <li>
-              <a
-                href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204562&grpid=0&isprv=0&bp=0&ou=207080"
-                >THREE</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204564&grpid=0&isprv=0&bp=0&ou=207080"
-                >BIM</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204566&grpid=0&isprv=0&bp=0&ou=207080"
-                >MAP</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204567&grpid=0&isprv=0&bp=0&ou=207080"
-                >FINAL</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="music-player">
-          Background Music:
-          <audio controls autoplay loop>
-            <source
-              src="Schak ft. Kim English - Moving All Around (Jumpin') (John Summit Remix).mp3"
-              type="audio/mpeg"
-            />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <div class="spotify-link">
-          <img src="Spotify_App_Logo.svg.png" alt="Spotify Logo" />
-          <a href="https://spotify.link/GPX4mQrcZDb" target="_blank"
-            >House Playlist</a
-          >
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anthony Papini</title>
+  <link rel="stylesheet" href="stylesA1.css"> 
+</head>
+<body>
+  <div class="container">
+    <div class="black-overlay">
+      <div class="profile-pic">
+        <img src="profilepic.jpg" alt="Student" />
       </div>
-
-      <div class="scroll-down-arrow">
-        <div class="to-lounge-text">To Lounge</div>
-        &#8595;
+      <div class="header">Anthony Papini</div>
+      <div class="tagline">
+        <i>House music connoisseur</i>
+      </div>
+      <div class="profile-info">
+        Carleton University M.Arch<br />
+        Greystone Design Group Intermediate Architectural Associate
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204562&grpid=0&isprv=0&bp=0&ou=207080">THREE</a></li>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204564&grpid=0&isprv=0&bp=0&ou=207080">BIM</a></li>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204566&grpid=0&isprv=0&bp=0&ou=207080">MAP</a></li>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204567&grpid=0&isprv=0&bp=0&ou=207080">FINAL</a></li>
+        </ul>
+      </div>
+      <div class="music-player">
+        Background Music:
+        <audio controls autoplay loop>
+          <source src="Schak ft. Kim English - Moving All Around (Jumpin') (John Summit Remix).mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="spotify-link">
+        <img src="Spotify_App_Logo.svg.png" alt="Spotify Logo" />
+        <a href="https://spotify.link/GPX4mQrcZDb" target="_blank">House Playlist</a>
       </div>
     </div>
-
-    <div class="about-me">
-      <div class="about-me-content">
-        <h2>About Me</h2>
-        <p>
-          I enjoy cool music and cool-looking things. I hope to one day do
-          something pretty cool.
-        </p>
-      </div>
-      <div class="scroll-up-arrow">&#8593;</div>
+    <div class="scroll-down-arrow">
+      <div class="to-lounge-text">To Lounge</div>
+      &#8595;
     </div>
+  </div>
 
-    <script>
-      document
-        .querySelector(".scroll-down-arrow")
-        .addEventListener("click", function () {
-          document
-            .querySelector(".about-me")
-            .scrollIntoView({ behavior: "smooth" });
-        });
+  <div class="about-me">
+    <div class="about-me-content">
+      <h2>About Me</h2>
+      <p>I enjoy cool music and cool-looking things. I hope to one day do something pretty cool.</p>
+    </div>
+    <div class="scroll-up-arrow">&#8593;</div>
 
-      document
-        .querySelector(".scroll-up-arrow")
-        .addEventListener("click", function () {
-          document
-            .querySelector(".container")
-            .scrollIntoView({ behavior: "smooth" });
-        });
-    </script>
-  </body>
+    <div class="to-3d-realm-text">To the 3D Realm</div>
+    <div class="scroll-down-arrow-3d">&#8595;</div>
+  </div>
+
+  <div class="assignment2">
+    <img src="./avatar.jpg" alt="Anthony Papini" height="300" />
+    <a href="https://github.com/nicoarellano/reposarch"><button id="three-button">GitHub</button></a>  
+  </div>
+
+  <canvas id="three-canvas"></canvas>
+
+  <script src="./main.js"></script>
+  <!-- Three js Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  <script type="module" src="./main.js"></script>
+
+  <script>
+    document.querySelector(".scroll-down-arrow").addEventListener("click", function () {
+      document.querySelector(".about-me").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".scroll-up-arrow").addEventListener("click", function () {
+      document.querySelector(".container").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".scroll-down-arrow-3d").addEventListener("click", function () {
+      document.querySelector(".assignment2").scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
 </html>

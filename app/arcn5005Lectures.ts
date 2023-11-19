@@ -230,8 +230,25 @@ export const arcn5005Lectures: Lectures = [
       { title: "GLTF" },
       { title: "Tree.js, intro to ifc.js" },
       { title: "Intro to ifc.js" },
-      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
       { title: "🖥️ LAB 8: Javascript and Three.js, uploading mesh" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/fi_36W2oZfA?si=02doFd78VBxNBQba",
+        title: "Assignment 2",
+        date: dayjs("2023/11/02"),
+      },
+      {
+        url: "https://www.youtube.com/embed/W4OTcU1AB-A?si=oSW7CwZueWjG0rUf",
+        title: "Introduction to JavaScript",
+        date: dayjs("2023/11/02"),
+      },
+      {
+        url: "https://www.youtube.com/embed/3wsFKrYhAHc?si=3KKtMe2XpZpR6eix",
+        title:
+          "Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js",
+        date: dayjs("2023/11/02"),
+      },
     ],
   },
 
@@ -242,14 +259,27 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
-      {
-        title:
-          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
-      },
-      { title: "Guess lecturer: That Open Company" },
+      { title: "Guess lecturer: Antonio Gonzalez Viegas (That Open Company)" },
       { title: "Introduction to web-based open source tools for architects" },
-      { title: "IFC.js" },
+      { title: "OpenBIM Components (formerly IFC.js)" },
       { title: "🖥️ LAB 9: IFC.js and OpenBIM Components" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/rLE9pdzEBsw?si=3ZuwNi6pz6lcC8Dq",
+        title: "Antonio Gonzales Viegas - That Open Company",
+        date: dayjs("2023/11/09"),
+      },
+      {
+        url: "https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4",
+        title: "Three js - Assignment 2 - 1/2",
+        date: dayjs("2023/11/09"),
+      },
+      {
+        url: "https://www.youtube.com/embed/bLUMHQRJJyU?si=EGpp1l5QnUQcQmV3",
+        title: "Three js - Assignment 2 - 2/2",
+        date: dayjs("2023/11/09"),
+      },
     ],
   },
 
@@ -260,6 +290,10 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(10, "week"),
     content: week10,
     toc: [
+      {
+        title:
+          "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
+      },
       { title: "Geospatial Information Systems" },
       { title: "Coordination Systems" },
       { title: "Proprietary GIS (Arc GIS)" },
@@ -267,6 +301,13 @@ export const arcn5005Lectures: Lectures = [
       { title: "Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)" },
       { title: "Open Source web GIS - Leaflet and Maplibre" },
       { title: "🖥️ LAB 10: Maplibre" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd",
+        title: "Ken Percy - Open-source GIS",
+        date: dayjs("2023/11/16"),
+      },
     ],
   },
 
@@ -277,10 +318,6 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
-      {
-        title:
-          "🔴 Assignment 3 presentation - BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
-      },
       { title: "Deploy your software" },
       { title: "Github pages" },
       { title: "🖥️ LAB 11: Web based BIM GIS software" },
@@ -295,6 +332,10 @@ export const arcn5005Lectures: Lectures = [
     content: week12,
     toc: [
       { title: "🟡 Quiz 3" },
+      {
+        title:
+          "🔴 Assignment 3 presentation - BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
+      },
       { title: "Frontend framework" },
       { title: "Tailwind CSS" },
       { title: " React.js" },
@@ -322,33 +363,33 @@ export const arcn5005Lectures: Lectures = [
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
   },
-  {
-    title: "🗺️ Maps and GIS 🌎",
-    id: `maps`,
-    url: `maps`,
-    date: dayjs("2023-09-25"),
-    content: maps,
-    toc: [
-      { title: "History of Mapping" },
-      { title: "Map Projections" },
-      { title: "Geodetic reference systems - NAD83 vs WGS84" },
-      { title: "Digital Maps" },
-      { title: "Geospatial Information Systems" },
-      { title: "Proprietary web GIS - Cesium and Mapbox" },
-      { title: "Open Source web GIS - Leaflet and Maplibre" },
-      { title: "🖥️ LAB : Maplibre" },
-    ],
-    recordings: [
-      {
-        url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
-        title: "Maps, GIS and Map renderers",
-        date: dayjs("2023/09/25"),
-      },
-      {
-        url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
-        title: "Maplibre - Tutorial 1",
-        date: dayjs("2023/09/25"),
-      },
-    ],
-  },
+  // {
+  //   title: "🗺️ Maps and GIS 🌎",
+  //   id: `maps`,
+  //   url: `maps`,
+  //   date: dayjs("2023-09-25"),
+  //   content: maps,
+  //   toc: [
+  //     { title: "History of Mapping" },
+  //     { title: "Map Projections" },
+  //     { title: "Geodetic reference systems - NAD83 vs WGS84" },
+  //     { title: "Digital Maps" },
+  //     { title: "Geospatial Information Systems" },
+  //     { title: "Proprietary web GIS - Cesium and Mapbox" },
+  //     { title: "Open Source web GIS - Leaflet and Maplibre" },
+  //     { title: "🖥️ LAB : Maplibre" },
+  //   ],
+  //   recordings: [
+  //     {
+  //       url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
+  //       title: "Maps, GIS and Map renderers",
+  //       date: dayjs("2023/09/25"),
+  //     },
+  //     {
+  //       url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
+  //       title: "Maplibre - Tutorial 1",
+  //       date: dayjs("2023/09/25"),
+  //     },
+  //   ],
+  // },
 ];
