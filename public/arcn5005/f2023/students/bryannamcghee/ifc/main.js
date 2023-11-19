@@ -79,7 +79,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "./blendermodel.glb",
+  "./ifc/blendermodel.glb",
 
   function (gltf) {
     mesh = gltf.scene;
@@ -107,7 +107,7 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
 
   const textSize = size;
 
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+  fontLoader.load("helvetiker_regular.typeface.json", function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
 
