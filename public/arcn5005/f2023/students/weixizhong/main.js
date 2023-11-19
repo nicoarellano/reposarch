@@ -106,7 +106,7 @@ carLoader.load(
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = 0x000000, size = 0.5) {
+function createText(text, elevation = 0, textColor = 0x000000, size = 0.8) {
   const textValue = text;
   const textSize = size;
   fontLoader.load("helvetiker_regular.typeface.json", function (font) {
@@ -133,10 +133,10 @@ function createText(text, elevation = 0, textColor = 0x000000, size = 0.5) {
   });
 }
 
-createText("Weixi Zhong", 4, 0x727FA6);
-createText("- Background in Environmental Design", 3, 0x729FA6);
-createText("- MArch Student at CU", 1, 0x729FA6);
-createText("- Love Drawing", 2, 0x729FA6);
+createText("Weixi Zhong", 6, 0x354FA9);
+createText("- Background in Environmental Design", 4, 0x729FA6);
+createText("- MArch Student at CU", 2.5, 0x729FA6);
+createText("- Love Drawing", 1, 0x729FA6);
 
 camera.position.z = 30;
 camera.position.x = 0;
@@ -151,7 +151,7 @@ controls.enableDamping = true;
 
 const lightColor = 0xffffff;
 
-const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
+const ambientLight = new THREE.AmbientLight(lightColor, 0.7);
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(lightColor, 1);

@@ -55,8 +55,9 @@ h1 {
 #three-canvas {
     position: fixed;
     /* top: 0; */
-    left: 350;
+    left: 340;
     bottom: 0;
+    margin: 10;
     outline: none;
 }
 
@@ -142,14 +143,5 @@ audio {
     display: flex;
 }
 
-
-body {
-    background-image: url(./image/me.JPG);
-    background-size: auto 100%;
-    background-position: top left;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
 
 
