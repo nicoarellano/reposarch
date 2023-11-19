@@ -66,14 +66,11 @@ function loadGLB(path, scale, x, z) {
       mesh.scale.set(scale, scale, scale);
       mesh.position.set(x, 0, z);
 
-      // Traverse the model to find and set textures
       mesh.traverse(function (child) {
         if (child.isMesh) {
-          // Assuming textures are JPEG files
           child.material.map.encoding = THREE.sRGBEncoding;
           child.material.map.anisotropy = 16;
 
-          // Check if the material has a normal map
           if (child.material.normalMap) {
             child.material.normalMap.encoding = THREE.sRGBEncoding;
             child.material.normalMap.anisotropy = 16;
@@ -94,13 +91,20 @@ function loadGLB(path, scale, x, z) {
 loadGLB("./models/Vincent_V2.glb", 5, 0, 0);
 loadGLB("./models/scene.gltf", 100, 0, 0);
 
+// Text from https://threejs.org/examples/webgl_loader_ttf.html
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0xFF0000", size = 0.5) {
+const group = new THREE.Group();
+scene.add(group);
+
+function createText(text, elevation = 0, textColor = 0xff0000, size = 3) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+
+  const fontPath = "./fonts/helvetiker_regular.typeface.json";
+
+  fontLoader.load(fontPath, function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -113,23 +117,28 @@ function createText(text, elevation = 0, textColor = "0xFF0000", size = 0.5) {
       bevelSegments: 5,
     });
 
-    const color = new THREE.Color();
-    color.setHex(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
+    textGeo.computeBoundingBox();
+    textGeo.computeVertexNormals();
 
-    text.position.x = 2;
-    text.position.y = elevation;
+    const textMaterial = new THREE.MeshLambertMaterial({ color: textColor });
+    const textMesh = new THREE.Mesh(textGeo, textMaterial);
 
-    scene.add(text);
+    const centerOffset = -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
+
+    textMesh.position.x = centerOffset;
+    textMesh.position.y = elevation;
+    textMesh.position.z = 0;
+
+    textMesh.rotation.x = 0;
+    textMesh.rotation.y = Math.PI * 2;
+
+    scene.add(textMesh);
   });
 }
 
-createText("Nicolas Arellano", 5, "0XFF00FF");
-createText("- Architect from PUC", 3, "0XFF0000");
-createText("- Research team lead at CIMS", 2, "0XFF0000");
-createText("- PhD candidate at ASAU", 1, "0XFF0000");
-createText("- Amateur programmer", 0, "0XFF0000");
+createText("Space is the Place", 8, 0xff00ff);
+
+
 
 camera.position.z = 13;
 camera.position.x = 5;
@@ -142,7 +151,6 @@ scene.position.y = -3;
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-//Creates the lights of the scene
 const lightColor = 0xffffff;
 
 const ambientLight = new THREE.AmbientLight(lightColor, 1);
