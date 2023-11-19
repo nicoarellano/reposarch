@@ -28,11 +28,14 @@ scene.add(axes);
 
 // Load background texture
 const textureLoader = new THREE.TextureLoader();
-const backgroundImage = textureLoader.load ('public/arcn5005/f2023/students/andreeannlangevin/wall.jpg'); // Replace with the path to your background image
+const backgroundImage = textureLoader.load("wall.jpg"); // Replace with the path to your background image
 
 // Create a plane geometry that covers the entire scene
 const backgroundGeometry = new THREE.PlaneGeometry(100, 100, 1, 1);
-const backgroundMaterial = new THREE.MeshBasicMaterial({ map: backgroundImage, side: THREE.DoubleSide });
+const backgroundMaterial = new THREE.MeshBasicMaterial({
+  map: backgroundImage,
+  side: THREE.DoubleSide,
+});
 const backgroundMesh = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
 scene.add(backgroundMesh);
 
@@ -41,7 +44,23 @@ let mesh;
 const loader = new THREE.GLTFLoader();
 
 loader.load(
-  "./public/arcn5005/f2023/students/andreeannlangevin/models/wDonut2.glb",
+  "./models/wDonut2.glb",
+  function (gltf) {
+    gltf.scene.scale.x = 3;
+    gltf.scene.scale.y = 3;
+    gltf.scene.scale.z = 3;
+
+    mesh = gltf.scene;
+    scene.add(gltf.scene);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
+
+loader.load(
+  "./models/Candy2.glb",
   function (gltf) {
     gltf.scene.scale.x = 3;
     gltf.scene.scale.y = 3;
