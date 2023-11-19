@@ -1,14 +1,15 @@
 const scene = new THREE.Scene();
 
+const targetHeight = 600;
+
 const size = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: window.innerWidth * 0.7,
+  height: targetHeight,
 };
 
 const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 4000);
 
-//Sets up the renderer, fetching the canvas of the HTML
 const threeCanvas = document.getElementById("three-canvas");
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
@@ -19,9 +20,13 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-//Creates grids and axes in the scene
-const grid = new THREE.GridHelper(10, 10);
+const grid = new THREE.GridHelper(200, 200);
 scene.add(grid);
+
+function changeGridScale(newScale) {
+  grid.scale.set(newScale, newScale, newScale);
+}
+changeGridScale(4);
 
 const axes = new THREE.AxesHelper();
 axes.material.depthTest = false;
@@ -44,26 +49,38 @@ yellowCube.position.z = -3;
 blueCube.position.x = -3;
 redCube.position.x = 3;
 greenCube.position.z = 3;
-
 scene.add(yellowCube);
 scene.add(blueCube);
 scene.add(redCube);
 scene.add(greenCube);
 
-const loader = new THREE.GLTFLoader(); // Instantiate the loader
+const loader = new THREE.GLTFLoader(); 
 
 let mesh;
 
 function loadGLB(path, scale, x, z) {
-  loader.load( // Use the loader instance (loader.load instead of GLTFLoader.load)
+  loader.load(
     path,
     function (gltf) {
       mesh = gltf.scene;
-      mesh.scale.x = scale;
-      mesh.scale.y = scale;
-      mesh.scale.z = scale;
-      mesh.position.x = x;
-      mesh.position.z = z;
+      mesh.scale.set(scale, scale, scale);
+      mesh.position.set(x, 0, z);
+
+      // Traverse the model to find and set textures
+      mesh.traverse(function (child) {
+        if (child.isMesh) {
+          // Assuming textures are JPEG files
+          child.material.map.encoding = THREE.sRGBEncoding;
+          child.material.map.anisotropy = 16;
+
+          // Check if the material has a normal map
+          if (child.material.normalMap) {
+            child.material.normalMap.encoding = THREE.sRGBEncoding;
+            child.material.normalMap.anisotropy = 16;
+          }
+        }
+      });
+
       scene.add(mesh);
     },
     undefined,
@@ -73,12 +90,14 @@ function loadGLB(path, scale, x, z) {
   );
 }
 
-loadGLB("reposarch/public/arcn5005/f2023/students/vincenttourangeau/models/Vincent_V2.glb", 0.3, 0, 0);
+
+loadGLB("./models/Vincent_V2.glb", 5, 0, 0);
+loadGLB("./models/scene.gltf", 100, 0, 0);
 
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
+function createText(text, elevation = 0, textColor = "0xFF0000", size = 0.5) {
   const textValue = text;
   const textSize = size;
   fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
@@ -126,7 +145,7 @@ controls.enableDamping = true;
 //Creates the lights of the scene
 const lightColor = 0xffffff;
 
-const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
+const ambientLight = new THREE.AmbientLight(lightColor, 1);
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(lightColor, 1);
@@ -157,11 +176,48 @@ function animate() {
 
 animate();
 
-//Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
-  size.width = window.innerWidth;
-  size.height = window.innerHeight;
+  const targetWidth = window.innerWidth;
+  const targetHeight = 600;
+  size.width = targetWidth;
+  size.height = targetHeight;
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
+
+// Star particles from https://threejs.org/examples/webgl_camera.html
+
+const geometryStars = new THREE.BufferGeometry();
+const verticesStars = [];
+
+for (let i = 0; i < 10000; i++) {
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
+}
+
+geometryStars.setAttribute('position', new THREE.Float32BufferAttribute(verticesStars, 3));
+
+const particlesStars = new THREE.Points(geometryStars, new THREE.PointsMaterial({ color: 0x999999 }));
+scene.add(particlesStars);
+
+const geometryOtherParticles = new THREE.BufferGeometry();
+const verticesOtherParticles = [];
+
+for (let i = 0; i < 10000; i++) {
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
+}
+
+geometryOtherParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesOtherParticles, 3));
+
+const particlesOther = new THREE.Points(geometryOtherParticles, new THREE.PointsMaterial({ color: 0x999999 }));
+scene.add(particlesOther);
+
+
+
+
+
+
