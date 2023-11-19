@@ -51,8 +51,8 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-    //"/arcn5005/f2023/students/lillianelkadri/model4.glb",
-    "./model4.glb",
+    //"/arcn5005/f2023/students/lillianelkadri/model5.glb",
+    "./model5.glb",
     function (gltf) {
       mesh = gltf.scene;
       mesh.scale.x = 0.1;
