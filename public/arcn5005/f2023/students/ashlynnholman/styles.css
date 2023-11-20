@@ -99,11 +99,11 @@ p {
 }   
 .rectangle {
   width: 200px; 
+  height: 700px;
   background-color: rgba(240, 240, 240, 0.466); 
   padding: 10px; 
   border-radius: 10px; 
   position: absolute;
-  bottom: 0;
   left: 0;
   top: 10px;
 }
