@@ -2,10 +2,12 @@ const scene = new THREE.Scene();
 
 const targetHeight = 600;
 
-const size = {
-  width: window.innerWidth * 0.7,
-  height: targetHeight,
-};
+document.addEventListener('DOMContentLoaded', function () {
+
+  const size = {
+      width: window.innerWidth * 0.7,
+      height: targetHeight,
+  };
 
 const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 4000);
@@ -20,35 +22,33 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-const grid = new THREE.GridHelper(200, 200);
+const grid = new THREE.GridHelper(1000, 1000);
+grid.material.color.set(0xFFFFFF);
+grid.material.transparent = true;
+grid.material.opacity = 0.35;
 scene.add(grid);
 
 function changeGridScale(newScale) {
   grid.scale.set(newScale, newScale, newScale);
 }
-changeGridScale(4);
-
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
+changeGridScale(2);
 
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
 
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
+const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xFF9F9F });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xFFFCDC });
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0xFFFFFF });
+const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x94EFFF });
 
 const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
 const blueCube = new THREE.Mesh(geometry, blueMaterial);
 const redCube = new THREE.Mesh(geometry, redMaterial);
 const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
-yellowCube.position.z = -3;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
+yellowCube.position.z = -25;
+blueCube.position.x = -25;
+redCube.position.x = 25;
+greenCube.position.z = 25;
 scene.add(yellowCube);
 scene.add(blueCube);
 scene.add(redCube);
@@ -57,29 +57,36 @@ scene.add(greenCube);
 const loader = new THREE.GLTFLoader(); 
 
 let mesh;
+let mixer;
 
 function loadGLB(path, scale, x, z) {
   loader.load(
-    path,
+    path, 
     function (gltf) {
       mesh = gltf.scene;
       mesh.scale.set(scale, scale, scale);
       mesh.position.set(x, 0, z);
 
-      // Traverse the model to find and set textures
       mesh.traverse(function (child) {
-        if (child.isMesh) {
-          // Assuming textures are JPEG files
+        if (child.isMesh && child.material && child.material.map) {
+      
           child.material.map.encoding = THREE.sRGBEncoding;
           child.material.map.anisotropy = 16;
-
-          // Check if the material has a normal map
+      
           if (child.material.normalMap) {
             child.material.normalMap.encoding = THREE.sRGBEncoding;
             child.material.normalMap.anisotropy = 16;
           }
         }
       });
+      
+      mixer = new THREE.AnimationMixer(mesh);
+      const animations = gltf.animations;
+
+      if (animations && animations.length) {
+        const animationAction = mixer.clipAction(animations[0]);
+        animationAction.play();
+      }
 
       scene.add(mesh);
     },
@@ -90,17 +97,28 @@ function loadGLB(path, scale, x, z) {
   );
 }
 
+loadGLB("./models/Vincent_V2.glb", 10, 0, 0);
+loadGLB("./models/scene.gltf", 0.5, 0, 0);
 
-loadGLB("./models/Vincent_V2.glb", 5, 0, 0);
-loadGLB("./models/scene.gltf", 100, 0, 0);
-
+// Text from https://threejs.org/examples/webgl_loader_ttf.html
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0xFF0000", size = 0.5) {
+const group = new THREE.Group();
+scene.add(group);
+
+let textMesh;
+
+const textGroup = new THREE.Group();
+scene.add(textGroup);
+
+function createText(text, elevation = 0, textColor = 0xff0000, size = 3) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+
+  const fontPath = "./fonts/Roboto_Regular.json";
+
+  fontLoader.load(fontPath, function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -113,23 +131,27 @@ function createText(text, elevation = 0, textColor = "0xFF0000", size = 0.5) {
       bevelSegments: 5,
     });
 
-    const color = new THREE.Color();
-    color.setHex(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
+    textGeo.computeBoundingBox();
+    textGeo.computeVertexNormals();
 
-    text.position.x = 2;
-    text.position.y = elevation;
+    const textMaterial = new THREE.MeshLambertMaterial({ color: textColor });
+    const textMesh = new THREE.Mesh(textGeo, textMaterial);
 
-    scene.add(text);
+    const centerOffset = -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
+
+    textMesh.position.x = centerOffset;
+    textMesh.position.y = elevation;
+    textMesh.position.z = 0;
+
+    textMesh.rotation.x = 0;
+    textMesh.rotation.y = Math.PI * 2;
+
+    textGroup.add(textMesh);
   });
 }
 
-createText("Nicolas Arellano", 5, "0XFF00FF");
-createText("- Architect from PUC", 3, "0XFF0000");
-createText("- Research team lead at CIMS", 2, "0XFF0000");
-createText("- PhD candidate at ASAU", 1, "0XFF0000");
-createText("- Amateur programmer", 0, "0XFF0000");
+
+createText("Space is the Place", 8, 0xffffff);
 
 camera.position.z = 13;
 camera.position.x = 5;
@@ -142,7 +164,6 @@ scene.position.y = -3;
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-//Creates the lights of the scene
 const lightColor = 0xffffff;
 
 const ambientLight = new THREE.AmbientLight(lightColor, 1);
@@ -157,11 +178,14 @@ scene.add(directionalLight.target);
 function animate() {
   requestAnimationFrame(animate);
 
+  if (mixer) {
+    mixer.update(0.016); // Pass the delta time (time since the last frame)
+  }
+
   if (mesh) mesh.rotation.y += 0.01;
 
   yellowCube.rotation.x += 0.01;
   yellowCube.rotation.y += 0.01;
-
   blueCube.rotation.x += 0.02;
   blueCube.rotation.y -= 0.01;
 
@@ -170,6 +194,10 @@ function animate() {
 
   greenCube.rotation.x += 0.02;
   greenCube.rotation.y -= 0.01;
+
+  if (textGroup) {
+    textGroup.rotation.y += 0.01;
+  }
 
   renderer.render(scene, camera);
 }
@@ -191,7 +219,7 @@ window.addEventListener("resize", () => {
 const geometryStars = new THREE.BufferGeometry();
 const verticesStars = [];
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 40000; i++) {
   verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
   verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
   verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
@@ -199,13 +227,13 @@ for (let i = 0; i < 10000; i++) {
 
 geometryStars.setAttribute('position', new THREE.Float32BufferAttribute(verticesStars, 3));
 
-const particlesStars = new THREE.Points(geometryStars, new THREE.PointsMaterial({ color: 0x999999 }));
+const particlesStars = new THREE.Points(geometryStars, new THREE.PointsMaterial({ color: 0x94EFFF }));
 scene.add(particlesStars);
 
 const geometryOtherParticles = new THREE.BufferGeometry();
 const verticesOtherParticles = [];
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 40000; i++) {
   verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
   verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
   verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
@@ -213,11 +241,39 @@ for (let i = 0; i < 10000; i++) {
 
 geometryOtherParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesOtherParticles, 3));
 
-const particlesOther = new THREE.Points(geometryOtherParticles, new THREE.PointsMaterial({ color: 0x999999 }));
+const particlesOther = new THREE.Points(geometryOtherParticles, new THREE.PointsMaterial({ color: 0xFF9F9F }));
 scene.add(particlesOther);
 
 
+const geometryMidParticles = new THREE.BufferGeometry();
+const verticesMidParticles = [];
+
+for (let i = 0; i < 5000; i++) {
+  verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800)); 
+  verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
+  verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800)); 
+}
+
+geometryMidParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesMidParticles, 3));
+
+const particlesMid = new THREE.Points(geometryMidParticles, new THREE.PointsMaterial({ color: 0xFFFCDC }));
+scene.add(particlesMid);
+
+const geometryCloseParticles = new THREE.BufferGeometry();
+const verticesCloseParticles = [];
+
+for (let i = 0; i < 5000; i++) {
+  verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600)); 
+  verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
+  verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600)); 
+}
+
+geometryCloseParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesCloseParticles, 3));
+
+const particlesClose = new THREE.Points(geometryCloseParticles, new THREE.PointsMaterial({ color: 0xFFFFFF }));
+scene.add(particlesClose);
 
 
 
 
+});
