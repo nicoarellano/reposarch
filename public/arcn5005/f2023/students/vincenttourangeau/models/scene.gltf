@@ -3191,37 +3191,37 @@
   ],
   "images": [
     {
-      "uri": "textures/mercury_baseColor.jpeg"
+      "uri": "./textures/mercury_baseColor.jpeg"
     },
     {
-      "uri": "textures/venus_baseColor.jpeg"
+      "uri": "./textures/venus_baseColor.jpeg"
     },
     {
-      "uri": "textures/earth_baseColor.jpeg"
+      "uri": "./textures/earth_baseColor.jpeg"
     },
     {
-      "uri": "textures/mars_baseColor.jpeg"
+      "uri": "./textures/mars_baseColor.jpeg"
     },
     {
-      "uri": "textures/jupiter_baseColor.jpeg"
+      "uri": "./textures/jupiter_baseColor.jpeg"
     },
     {
-      "uri": "textures/saturn_baseColor.jpeg"
+      "uri": "./textures/saturn_baseColor.jpeg"
     },
     {
-      "uri": "textures/saturn_ring_baseColor.png"
+      "uri": "./textures/saturn_ring_baseColor.png"
     },
     {
-      "uri": "textures/uranus_baseColor.jpeg"
+      "uri": "./textures/uranus_baseColor.jpeg"
     },
     {
-      "uri": "textures/neptune_baseColor.jpeg"
+      "uri": "./textures/neptune_baseColor.jpeg"
     },
     {
-      "uri": "textures/moon_baseColor.jpeg"
+      "uri": "./textures/moon_baseColor.jpeg"
     },
     {
-      "uri": "textures/material_baseColor.jpeg"
+      "uri": "./textures/material_baseColor.jpeg"
     }
   ],
   "materials": [
