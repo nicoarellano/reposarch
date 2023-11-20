@@ -363,33 +363,33 @@ export const arcn5005Lectures: Lectures = [
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
   },
-  // {
-  //   title: "🗺️ Maps and GIS 🌎",
-  //   id: `maps`,
-  //   url: `maps`,
-  //   date: dayjs("2023-09-25"),
-  //   content: maps,
-  //   toc: [
-  //     { title: "History of Mapping" },
-  //     { title: "Map Projections" },
-  //     { title: "Geodetic reference systems - NAD83 vs WGS84" },
-  //     { title: "Digital Maps" },
-  //     { title: "Geospatial Information Systems" },
-  //     { title: "Proprietary web GIS - Cesium and Mapbox" },
-  //     { title: "Open Source web GIS - Leaflet and Maplibre" },
-  //     { title: "🖥️ LAB : Maplibre" },
-  //   ],
-  //   recordings: [
-  //     {
-  //       url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
-  //       title: "Maps, GIS and Map renderers",
-  //       date: dayjs("2023/09/25"),
-  //     },
-  //     {
-  //       url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
-  //       title: "Maplibre - Tutorial 1",
-  //       date: dayjs("2023/09/25"),
-  //     },
-  //   ],
-  // },
+   {
+     title: "🗺️ Maps and GIS 🌎",
+    id: `maps`,
+     url: `maps`,
+     date: dayjs("2023-09-25"),
+    content: maps,
+     toc: [
+       { title: "History of Mapping" },
+       { title: "Map Projections" },
+       { title: "Geodetic reference systems - NAD83 vs WGS84" },
+       { title: "Digital Maps" },
+      { title: "Geospatial Information Systems" },
+       { title: "Proprietary web GIS - Cesium and Mapbox" },
+       { title: "Open Source web GIS - Leaflet and Maplibre" },
+       { title: "🖥️ LAB : Maplibre" },
+    ],
+     recordings: [
+       {
+         url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
+        title: "Maps, GIS and Map renderers",
+         date: dayjs("2023/09/25"),
+       },
+      {
+         url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
+         title: "Maplibre - Tutorial 1",
+         date: dayjs("2023/09/25"),
+       },
+     ],
+   },
 ];
