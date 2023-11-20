@@ -19,74 +19,101 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-//Creates grids and axes in the scene
-const grid = new THREE.GridHelper(50, 30);
-scene.add(grid);
-
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
-
+//rock geometry
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x009900 });
+const rockMaterial = new THREE.MeshLambertMaterial({ color: 0x717674 });
 
-const greencube1 = new THREE.Mesh(geometry, greenMaterial);
-const greencube2 = new THREE.Mesh(geometry, greenMaterial);
-const greencube3 = new THREE.Mesh(geometry, greenMaterial);
-const greencube4 = new THREE.Mesh(geometry, greenMaterial);
+const rock1 = new THREE.Mesh(geometry, rockMaterial);
+const rock2 = new THREE.Mesh(geometry, rockMaterial);
+const rock3 = new THREE.Mesh(geometry, rockMaterial);
+const rock4 = new THREE.Mesh(geometry, rockMaterial);
 
-greencube1.position.z = -3;
-greencube1.position.y = 1;
-greencube2.position.z = -3;
-greencube3.position.z = -2;
-greencube3.position.y = 1;
-greencube4.position.z = 3;
+rock1.position.z = -3;
+rock1.position.y = 1;
 
-scene.add(greencube1);
-scene.add(greencube2);
-scene.add(greencube3);
-scene.add(greencube4);
+rock2.position.z = -3;
 
+rock3.position.z = -2;
+
+rock4.position.z = 3;
+rock4.position.x = 2;
+
+scene.add(rock1);
+scene.add(rock2);
+scene.add(rock3);
+scene.add(rock4);
+
+//Plane Geometry
+const planegeometry = new THREE.PlaneGeometry(20, 20);
+const planematerial = new THREE.MeshBasicMaterial({
+  color: 0x475e1c,
+  side: THREE.DoubleSide,
+});
+const plane = new THREE.Mesh(planegeometry, planematerial);
+plane.rotation.x = Math.PI / 2;
+plane.position.x = 2;
+plane.position.z = 4;
+plane.position.y = 0;
+scene.add(plane);
+
+//Fonts
+
+const fontLoader = new THREE.FontLoader();
+
+function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
+  const textValue = text;
+  const textSize = size;
+  fontLoader.load("helvetiker_regular.typeface.json", function (font) {
+    const textGeo = new THREE.TextGeometry(textValue, {
+      font: font,
+      size: textSize,
+      height: 0.2,
+      curveSegments: 4,
+    });
+
+    const color = new THREE.Color();
+    color.setHex(textColor);
+    const textMaterial = new THREE.MeshBasicMaterial({ color: color });
+    const text = new THREE.Mesh(textGeo, textMaterial);
+
+    text.position.x = -4;
+    text.position.y = z;
+
+    scene.add(text);
+  });
+}
+
+createText("Dylan Jozkow in his natural habitat", 10, "0XFAF0F2", 1);
+
+//models
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
-gltfLoader.load(
-  "./models/dylan.gltf",
-  function (gltf) {
-    mesh = gltf.scene;
-    mesh.scale.x = 1.4;
-    mesh.scale.y = 1.4;
-    mesh.scale.z = 1.4;
-    mesh.position.x = 1;
-    mesh.position.z = 0;
-    scene.add(mesh);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
+function loadGLB(path, scale, x, z) {
+  gltfLoader.load(
+    path,
+    function (gltf) {
+      mesh = gltf.scene;
+      mesh.scale.x = scale;
+      mesh.scale.y = scale;
+      mesh.scale.z = scale;
+      mesh.position.x = x;
+      mesh.position.z = z;
+      scene.add(mesh);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+}
 
-gltfLoader.load(
-  "./models/tree.gltf",
-  function (gltf) {
-    mesh = gltf.scene;
-    mesh.scale.x = 1.4;
-    mesh.scale.y = 1.4;
-    mesh.scale.z = 1.4;
-    mesh.position.x = 6;
-    mesh.position.z = 0;
-    scene.add(mesh);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
+loadGLB("./models/dylan.gltf", 3, 3, 3);
+loadGLB("./models/tree.gltf", 1, 1, 1);
 
+//camera position
 camera.position.z = 7;
 camera.position.x = 4;
 camera.position.y = 6;
@@ -106,6 +133,15 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
+//Adding in Texture
+const loader = new THREE.TextureLoader();
+const texture = loader.load("trees.jpg", () => {
+  texture.mapping = THREE.EquirectangularReflectionMapping;
+  texture.colorSpace = THREE.SRGBColorSpace;
+  scene.background = texture;
+});
+
+//animate
 function animate() {
   requestAnimationFrame(animate);
 
