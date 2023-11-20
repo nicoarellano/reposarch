@@ -37,8 +37,8 @@ p {
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 387px;
+  left: 13px;
 }
 
 .button {
@@ -86,7 +86,7 @@ p {
   height: 160px;
   position: absolute;
   top: 200px; 
-  left: 25px; 
+  left: 33px; 
   border-radius: 70%;
   overflow: hidden;
 }
