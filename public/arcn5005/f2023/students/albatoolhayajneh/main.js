@@ -53,9 +53,8 @@ scene.add(greenCube);
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
-
 gltfLoader.load(
-  "/arcn5005/f2023/students/nicolasarellanorisop/models/justin.glb",
+  "resources/Duck.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 3;
@@ -75,7 +74,7 @@ const fontLoader = new THREE.FontLoader();
 function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+  fontLoader.load("resources/helvetiker_regular.typeface.json", function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -100,11 +99,11 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Batool Hayajneh", 5, "0XFF00FF");
-createText("- Architect from JUST", 3, "0XFF0000");
-createText("- Mother of two angels", 2, "0XFF0000");
-createText("- Interested in cutlture science", 1, "0XFF0000");
-createText("- painter and a photographer", 0, "0XFF0000");
+createText("Architect from JUST, Middle east", 5, "0XFF00FF");
+createText("- Hobbies: Painting, Traveling, and cooking", 3, "0XFF0000");
+createText("- A mother of a joyful 18 month boy and a newborn girl", 2, "0XFF0000");
+createText("- Interests: Childhood education and culture science", 1, "0XFF0000");
+
 
 camera.position.z = 13;
 camera.position.x = 5;
@@ -159,3 +158,4 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
+
