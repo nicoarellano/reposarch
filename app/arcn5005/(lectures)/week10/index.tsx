@@ -80,4 +80,17 @@ Ken is currently finishing up the PhD and is preparing to defend this winter."
       </>
     ),
   },
+
+  {
+    element: (
+      <>
+        <Image
+          src="/images/maps/qgis.png"
+          alt="QGIS"
+          caption="Download QGIS"
+          href="https://www.qgis.org/en/site/forusers/download.html"
+        />
+      </>
+    ),
+  },
 ];

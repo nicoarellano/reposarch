@@ -295,6 +295,7 @@ export const arcn5005Lectures: Lectures = [
           "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
       },
       { title: "Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)" },
+      { title: "Q GIS" },
       { title: "🖥️ LAB 10: Three js continuation" },
     ],
     recordings: [
@@ -307,7 +308,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Going online “hello world”",
+    title: "Web based OS mapping and GIS",
     id: `week11`,
     url: `week11`,
     date: initialDate.add(11, "week"),
@@ -315,7 +316,6 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "Geospatial Information Systems" },
       { title: "Coordination Systems" },
-      { title: "Proprietary GIS (Arc GIS)" },
       { title: "Proprietary web GIS - Cesium and Mapbox" },
       { title: "Open Source web GIS - Leaflet and Maplibre" },
       { title: "🖥️ LAB 11: Web based GIS software" },
@@ -323,7 +323,7 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Scalability and maintainability",
+    title: "Going online, scalability and maintainability",
     id: `week12`,
     url: `week12`,
     date: initialDate.add(12, "week"),
