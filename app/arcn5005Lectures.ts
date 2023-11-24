@@ -335,21 +335,23 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Going online, scalability and maintainability",
+    title: "Advanced Toolbox - Going online, scalability and maintainability",
     id: `week12`,
     url: `week12`,
     date: initialDate.add(12, "week"),
     content: week12,
     toc: [
       { title: "🟡 Quiz 2" },
-      { title: "Frontend framework" },
+      { title: "Frontend frameworks" },
       { title: "Tailwind CSS" },
-      { title: " React.js" },
       { title: "Typescript" },
+      { title: "React.js" },
       { title: "Next.js" },
-      { title: "Deploy your software" },
-      { title: "Github pages" },
-      { title: "🖥️ LAB 12 : Deploying a web based BIM software" },
+      { title: "Deploy your software - Github pages" },
+      {
+        title:
+          "🖥️ LAB 12 : Deploying a web based BIM software and Assignment 3",
+      },
     ],
   },
   {
