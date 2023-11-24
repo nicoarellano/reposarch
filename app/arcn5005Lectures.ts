@@ -320,6 +320,18 @@ export const arcn5005Lectures: Lectures = [
       { title: "Open Source web GIS - Leaflet and Maplibre" },
       { title: "🖥️ LAB 11: Web based GIS software" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/vSejvs1PBNc?si=qAIK45kWVdSQtW-g",
+        title: "New calendar and Assignment 2 feedback",
+        date: dayjs("2023/11/23"),
+      },
+      {
+        url: "https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m",
+        title: "Web based mapping and Assignment 3",
+        date: dayjs("2023/11/23"),
+      },
+    ],
   },
 
   {
