@@ -343,10 +343,10 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "🟡 Quiz 2" },
       { title: "Frontend frameworks" },
-      { title: "Tailwind CSS" },
-      { title: "Typescript" },
       { title: "React.js" },
       { title: "Next.js" },
+      { title: "Typescript" },
+      { title: "Tailwind CSS" },
       { title: "Deploy your software - Github pages" },
       {
         title:
