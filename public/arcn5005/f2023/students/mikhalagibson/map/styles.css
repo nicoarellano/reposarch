@@ -1,8 +1,11 @@
+h1{
+    text-align: center;
+}
 .filter-group {
-    font: 18px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-weight: 600;
     position: absolute;
-    top: 600px;
+    top: 100px;
     right: 25px;
     z-index: 1;
     border-radius: 3px;
@@ -27,7 +30,7 @@
     background-color: #3386c0;
     display: block;
     cursor: pointer;
-    padding: 19px;
+    padding: 15px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
