@@ -97,6 +97,78 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Cultural',
+                'description': 
+                '<h2>The cultural landscape of Gedeo country</h2> <p>Significance: cultural properties</p><p>Country: Ethiopia</p><p>Criterion: (iii)(v)</p>'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [38.1716, 6.1456]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'icon': 'Cultural',
+                'description': 
+                '<h2>Deer Stone Monuments and Associated Bronze Age Sites</h2>  <p>Significance: cultural properties</p><p>Country: Mongolia</p><p>Criterion: (i)(iii)</p>'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [101.1333, 47.4434]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'icon': 'Cultural',
+                'description': 
+                '<h2>Santiniketan</h2> <p>Significance: cultural properties</p><p>Country: India</p><p>Criterion: (iv)(vi)</p>'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [87.4159, 23.4049]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'icon': 'Cultural',
+                'description': 
+                '<h2>Gaya Tumuli</h2> <p>Significance: cultural properties</p><p>Country: Republic of Korea</p><p>Criterion: (iii)</p>'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [128.522541, 35.141415]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'icon': 'Cultural',
+                'description': 
+                '<h2>Kuldīga Old Town</h2> <p>Significance: cultural properties</p><p>Country: Latvia</p><p>Criterion: (v)</p>'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [21.58175, 56.5839]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'icon': 'Cultural',
+                'description': 
+                '<h2>Žatec and the Saaz hop landscape</h2> <p>Significance: cultural properties</p><p>Country: Czechia</p><p>Criterion: (iii)(iv)(v)</p>'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [13.3712, 50.1913]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'icon': 'Cultural',
                 'description': "<h2>Tak'alik Ab'aj National Archaeological Park</h2> <p>Significance: cultural properties</p> <p>Country: Guatemala</p><p>Criterion: (ii)(iii)</p>"
             },
             'geometry': {
