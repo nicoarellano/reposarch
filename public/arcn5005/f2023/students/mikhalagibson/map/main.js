@@ -363,8 +363,8 @@ map.on('load', () => {
             map.on('mouseleave', layerID, () => {
                 map.getCanvas().style.cursor = '';
                 if (popup) {
-                    popup.remove(); // Remove the popup if it exists
-                    popup = undefined; // Reset the popup variable
+                    popup.remove(); 
+                    popup = undefined; 
                 }
             });
 
@@ -382,7 +382,6 @@ map.on('load', () => {
             filterGroup.appendChild(label);
             //
             
-            // When the checkbox changes, update the visibility of the layer.
             input.addEventListener('change', (e) => {
                 map.setLayoutProperty(
                     layerID,
