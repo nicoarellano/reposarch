@@ -157,7 +157,7 @@ const places = {
             'geometry': {
                 'type': 'Point',
                 'coordinates': [14.5137, 1.208]
-            }
+            }//
         },
         {
             'type': 'Feature',
