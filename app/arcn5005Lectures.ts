@@ -353,6 +353,13 @@ export const arcn5005Lectures: Lectures = [
           "🖥️ LAB 12 : Deploying a web based BIM software and Assignment 3",
       },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt",
+        title: "Advanced toolbox",
+        date: dayjs("2023/11/30"),
+      },
+    ],
   },
   {
     title: "Final assignment workshop and Presentations",
