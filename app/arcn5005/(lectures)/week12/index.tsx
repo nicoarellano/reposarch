@@ -19,14 +19,13 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/BwjUI9U0eQw?si=xaivCtd-Eb_niL-H"
-        title="CIMS - Canada's digital Twin Platform"
-        caption={
-          "CIMS - Canada's digital Twin Platform - 100% web based free and open-source technologies"
-        }
+        src="https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt"
+        title="Advanced toolbox"
+        caption={"Advanced toolbox"}
       />
     ),
   },
+
   {
     element: (
       <EmojiTitle
@@ -286,6 +285,30 @@ TS allows you to specify the type of the data in your JS code, and will report e
     To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.",
   },
 
+  {
+    element: (
+      <Image
+        src="/images/advanced-toolbox/cdt-wireframe.png"
+        alt="CIMS - CDT Wireframe"
+        caption={"CIMS - CDT Wireframe"}
+      />
+    ),
+    notes:
+      "For example, in other traditional systems, there would be a class message-warning that would apply a yellow background color and bold text. \n\
+    To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.",
+  },
+
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/BwjUI9U0eQw?si=xaivCtd-Eb_niL-H"
+        title="CIMS - Canada's digital Twin Platform"
+        caption={
+          "CIMS - Canada's digital Twin Platform - 100% web based free and open-source technologies"
+        }
+      />
+    ),
+  },
   {
     element: <EmojiTitle emoji={"🗣️📣🌎"} title={"Go Online!"} />,
   },
