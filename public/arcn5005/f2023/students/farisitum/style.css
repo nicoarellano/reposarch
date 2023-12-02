@@ -1,0 +1,61 @@
+body {    
+    margin: 0; 
+    padding: 0; 
+}
+.country-list {
+    background-color: rgba(255, 255, 255, 0.7); /* White background with 70% opacity */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+    margin: 10px; /* Add margin to separate it from the screen edges */
+    display: inline-block; /* This makes the background only as wide as necessary */
+}
+html, body, #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+}
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10; /* Ensures header is above the map */
+    color: #333; /* Adjust for readability */
+    /* Other styles as needed */
+}
+.nav-bar {
+    /* Styles for the navigation bar */
+    background-color: transparent; /* Example background color */
+    padding: 15px;
+    text-align: center;
+}
+
+.country-list {
+    /* Styles for the country list container */
+    margin: 0 auto;
+}
+
+.country-list h3 {
+    /* Styles for the heading */
+    margin-bottom: 15px;
+}
+
+.country-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.country-list li {
+    margin-bottom: 6.5x; /* Space between list items */
+}
+
+.country-name {
+    font-weight: bold;
+    margin-right: 10px; /* Space between country name and duration */
+}
+
+.duration {
+    color: #d81212; /* Subdued color for duration */
+}
