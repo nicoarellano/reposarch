@@ -369,7 +369,7 @@ map.on('load', () => {
                         "coordinates":  [ -75.75371068,45.39162871 ]
                      },
                      "properties": {
-                     "Shop":"Equator Cofee Westboro",
+                     "Shop":"Equator Coffee Westboro",
                      "Neighbourhood":"Westboro",
                      "Hours":"7am - 5pm",
                      "Location":"412 Churchill Ave N",
@@ -958,7 +958,7 @@ map.on('load', () => {
                      },
                      "properties": {
                      "Shop":"Morning Owl",
-                     "Neighbourhood":"The Glebe",
+                     "Neighbourhood":"Little Italy",
                      "Hours":"8am - 2pm",
                      "Location":"538 Rochester St",
                      "Rating":4.5
@@ -972,7 +972,7 @@ map.on('load', () => {
                      },
                      "properties": {
                      "Shop":"Carmelito Cafe",
-                     "Neighbourhood":"The Glebe",
+                     "Neighbourhood":"Little Italy",
                      "Hours":"9am - 9pm",
                      "Location":"354 Preston St",
                      "Rating":4.3
@@ -1158,6 +1158,9 @@ map.on('load', () => {
         },
         {
           "type": "Feature",
+          "properties": {
+            "name": "Lowertown",
+          },
           "geometry": {
               "type": "Point",
               "coordinates": [-75.6841139952153, 45.432085631284124]
@@ -1299,9 +1302,18 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 1
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "The Glebe",
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.6887970504281, 45.40341373664922] 
+            }
           }
-          
-        ]
+                  ]
       }
       });
   
@@ -1314,8 +1326,20 @@ map.on('load', () => {
               'fill-color': '#4baf69',
               'fill-opacity': 0.2,
                 }
-         
       });
+
+      map.addLayer({
+        'id': 'glebe-label',
+        'type': 'symbol',
+        'source': 'TheGlebe',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
+        });
     });
 
   //Chinatown
@@ -1392,7 +1416,16 @@ map.on('load', () => {
             },
             "id": 2
           },
-          
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Chinatown",
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.70618091433677, 45.410466823396995]
+          }
+        }
         ]
       }
       });
@@ -1408,6 +1441,19 @@ map.on('load', () => {
                 }
          
       });
+
+      map.addLayer({
+        'id': 'chinatown-label',
+        'type': 'symbol',
+        'source': 'ChinaTown',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
+        });
     });
 
   //Centretown
@@ -1499,7 +1545,17 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 3
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Centretown",
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.69637912506477, 45.41486656285506]
           }
+        }
         ]
       }
       });
@@ -1515,6 +1571,19 @@ map.on('load', () => {
                 }
          
       });
+
+    map.addLayer({
+        'id': 'centretown-label',
+        'type': 'symbol',
+        'source': 'Centretown',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
+        });
     });
   
  //Overbrook
@@ -1574,7 +1643,17 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 5
+        }, 
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Overbrook",
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.65257153275758, 45.42559499401652]
         }
+      }
       ]
     }
     });
@@ -1590,10 +1669,23 @@ map.on('load', () => {
               }
        
     });
+
+    map.addLayer({
+      'id': 'overbrook-label',
+      'type': 'symbol',
+      'source': 'Overbrook',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+      });
   });
 
-//Eastway Garden
- map.on('load', () => {
+  //Eastway Garden
+  map.on('load', () => {
   map.addSource ('EastwayGarden', {
     "type": 'geojson',
     "data": {
@@ -1649,7 +1741,17 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 6
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Eastway Gardens",
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.6433860691477, 45.40980105899779] 
         }
+      }
       ]
     }
     });
@@ -1665,10 +1767,23 @@ map.on('load', () => {
               }
        
     });
+
+  map.addLayer({
+      'id': 'eastwaygarden-label',
+      'type': 'symbol',
+      'source': 'EastwayGarden',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+      });
   });
 
- //Vanier
- map.on('load', () => {
+  //Vanier
+  map.on('load', () => {
   map.addSource ('Vanier', {
     "type": 'geojson',
     "data": {
@@ -1728,7 +1843,17 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 7
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Vanier",
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.65745477889934, 45.436090917936916] 
         }
+      }
       ]
     }
     });
@@ -1742,12 +1867,24 @@ map.on('load', () => {
             'fill-color': '#f9ba34',
             'fill-opacity': 0.2,
               }
-       
     });
+
+   map.addLayer({
+      'id': 'vanier-label',
+      'type': 'symbol',
+      'source': 'Vanier',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+      });
   });
 
-//Alta Vista
- map.on('load', () => {
+  //Alta Vista
+  map.on('load', () => {
   map.addSource ('AltaVista', {
     "type": 'geojson',
     "data": {
@@ -1843,7 +1980,17 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 8
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Alta Vista",
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.6610740061239, 45.38754590138287]
         }
+      }
       ]
     }
     });
@@ -1857,11 +2004,24 @@ map.on('load', () => {
             'fill-color': '#68c0aa',
             'fill-opacity': 0.2,
               }
-       
     });
+
+    map.addLayer({
+      'id': 'AltaVista-label',
+      'type': 'symbol',
+      'source': 'AltaVista',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+      });
+
   });
 
-//New Edinburgh
+  //New Edinburgh
  map.on('load', () => {
   map.addSource ('NewEdinburgh', {
     "type": 'geojson',
@@ -1871,7 +2031,7 @@ map.on('load', () => {
         {
           "type": "Feature",
           "properties": {
-            "Neighbourhood": "NewEdinburg",
+            "Neighbourhood": "NewEdinburgh",
             "stroke": "#555555",
             "stroke-width": 2,
             "stroke-opacity": 1,
@@ -1942,13 +2102,23 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 9
-        }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "New Edinburgh",
+          },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.68196193332196, 45.44253186787012]
+      }
+    }
       ]
     }
     });
 
   map.addLayer({
-    'id': 'NewEdinburg',
+    'id': 'NewEdinburgh',
     'type': 'fill',
     'source': 'NewEdinburgh',
     'layout': {},
@@ -1956,12 +2126,24 @@ map.on('load', () => {
             'fill-color': '#6d91c0',
             'fill-opacity': 0.2,
               }
-       
     });
+
+    map.addLayer({
+      'id': 'NewEdinburgh-label',
+      'type': 'symbol',
+      'source': 'NewEdinburgh',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+      });
   });
 
-//Old Ottawa East
- map.on('load', () => {
+  //Old Ottawa East
+  map.on('load', () => {
   map.addSource ('OldOttawaEast', {
     "type": 'geojson',
     "data": {
@@ -2061,6 +2243,16 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 10
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Old Ottawa East",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.67802078349264, 45.40633603610326]
+                      }
         }
       ]
     }
@@ -2075,12 +2267,24 @@ map.on('load', () => {
             'fill-color': '#8ef358',
             'fill-opacity': 0.2,
               }
-       
     });
+
+  map.addLayer({
+      'id': 'oldottawaeast-label',
+      'type': 'symbol',
+      'source': 'OldOttawaEast',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+      });
   });
 
-//Riverside Park
- map.on('load', () => {
+  //Riverside Park
+  map.on('load', () => {
   map.addSource ('RiversidePark', {
     "type": 'geojson',
     "data": {
@@ -2176,6 +2380,16 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 11
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Riverside Park",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.68336187155674, 45.37089100765185]
+                      }
         }
       ]
     }
@@ -2190,12 +2404,25 @@ map.on('load', () => {
             'fill-color': '#e23681',
             'fill-opacity': 0.2,
               }
-       
     });
+
+  map.addLayer({
+      'id': 'riversidepark-label',
+      'type': 'symbol',
+      'source': 'RiversidePark',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+    });
+
   });
 
   //Carleton University
- map.on('load', () => {
+  map.on('load', () => {
   map.addSource ('CarletonUniversity', {
     "type": 'geojson',
     "data": {
@@ -2284,6 +2511,16 @@ map.on('load', () => {
           },
           "id": 12
         },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Carleton University",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.69613374303316, 45.386854792343904]
+                      }
+        }
       ]
     }
     });
@@ -2297,11 +2534,23 @@ map.on('load', () => {
             'fill-color': '#ffdd61',
             'fill-opacity': 0.2,
               }
-       
+    });
+
+    map.addLayer({
+      'id': 'Carletonuniversity-label',
+      'type': 'symbol',
+      'source': 'CarletonUniversity',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
     });
   });
 
-//Old Ottawa South
+  //Old Ottawa South
  map.on('load', () => {
   map.addSource ('OldOttawaSouth', {
     "type": 'geojson',
@@ -2401,6 +2650,16 @@ map.on('load', () => {
             ],
             "type": "Polygon"
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Old Ottawa South",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.68348846522554, 45.39275451434864]
+                      }
         }
       ]
     }
@@ -2415,11 +2674,24 @@ map.on('load', () => {
             'fill-color': '#9372ee',
             'fill-opacity': 0.2,
               }
-       
     });
+
+  map.addLayer({
+      'id': 'oldottawasouth-label',
+      'type': 'symbol',
+      'source': 'OldOttawaSouth',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+    });
+
   });
 
-//CivicHospital
+  //CivicHospital
  map.on('load', () => {
   map.addSource ('CivicHospital', {
     "type": 'geojson',
@@ -2488,6 +2760,16 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 14
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Civic Hospital",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.72145057640165, 45.39572920151753]
+                      }
         }
       ]
     }
@@ -2502,8 +2784,21 @@ map.on('load', () => {
             'fill-color': '#043ab9',
             'fill-opacity': 0.2,
               }
-       
     });
+
+  map.addLayer({
+      'id': 'civichospital-label',
+      'type': 'symbol',
+      'source': 'CivicHospital',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
+    });
+
   });
 
  //Little Italy
@@ -2551,7 +2846,16 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 15
-        }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "Little Italy",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.71117384486278, 45.40590420216342]}
+    }
       ]
     }
     });
@@ -2565,12 +2869,86 @@ map.on('load', () => {
             'fill-color': '#e861ea',
             'fill-opacity': 0.2,
               }
-       
+    });
+
+    map.addLayer({
+      'id': 'littleitaly-label',
+      'type': 'symbol',
+      'source': 'LittleItaly',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
     });
   });
 
-//University of Ottawa
- map.on('load', () => {
+  //Dalhousie
+  map.on('load', () => {
+  map.addSource ('Dalhousie', {
+    "type": 'geojson',
+    "data": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "Neighbourhood": "Dalhousie",
+            "stroke": "#555555",
+            "stroke-width": 2,
+            "stroke-opacity": 1,
+            "fill": "#ff5c5c",
+            "fill-opacity": 0.5
+          },
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -75.71632262858313,
+                  45.406715961607404
+                ],
+                [
+                  -75.71373583108839,
+                  45.40247741975935
+                ],
+                [
+                  -75.70707506348269,
+                  45.403909367275304
+                ],
+                [
+                  -75.7098773228204,
+                  45.40859742208994
+                ],
+                [
+                  -75.71632262858313,
+                  45.406715961607404
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "id": 19
+        },
+      ]
+    }
+    });
+
+  map.addLayer({
+    'id': 'Dalhousie',
+    'type': 'fill',
+    'source': 'Dalhousie',
+    'layout': {},
+    'paint': {
+            'fill-color': '#e861ea',
+            'fill-opacity': 0.2,
+              }
+    });
+  });
+
+  //University of Ottawa
+  map.on('load', () => {
   map.addSource ('UniversityofOttawa', {
     "type": 'geojson',
     "data": {
@@ -2662,6 +3040,16 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 16
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "University of Ottawa",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.68362633495431, 45.42316888890408]
+                      }
         }
       ]
     }
@@ -2676,12 +3064,24 @@ map.on('load', () => {
             'fill-color': '#539cea',
             'fill-opacity': 0.2,
               }
-       
+    });
+
+  map.addLayer({
+      'id': 'UniversityofOttawa-label',
+      'type': 'symbol',
+      'source': 'UniversityofOttawa',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
     });
   });
 
-//The Golden Triangle
- map.on('load', () => {
+  //The Golden Triangle
+  map.on('load', () => {
   map.addSource ('TheGoldenTriangle', {
     "type": 'geojson',
     "data": {
@@ -2769,6 +3169,16 @@ map.on('load', () => {
             "type": "Polygon"
           },
           "id": 17
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "The Golden Triangle",
+                        },
+          "geometry": {
+              "type": "Point",
+              "coordinates": [-75.68593481347288, 45.41831090961211]
+                      }
         }
       ]
     }
@@ -2783,71 +3193,21 @@ map.on('load', () => {
             'fill-color': '#ff9466',
             'fill-opacity': 0.2,
               }
-       
     });
-  });
-
-//Dalhousie
-  map.on('load', () => {
-  map.addSource ('Dalhousie', {
-    "type": 'geojson',
-    "data": {
-      "type": "FeatureCollection",
-      "features": [
-        {
-          "type": "Feature",
-          "properties": {
-            "Neighbourhood": "Dalhousie",
-            "stroke": "#555555",
-            "stroke-width": 2,
-            "stroke-opacity": 1,
-            "fill": "#ff5c5c",
-            "fill-opacity": 0.5
-          },
-          "geometry": {
-            "coordinates": [
-              [
-                [
-                  -75.71632262858313,
-                  45.406715961607404
-                ],
-                [
-                  -75.71373583108839,
-                  45.40247741975935
-                ],
-                [
-                  -75.70707506348269,
-                  45.403909367275304
-                ],
-                [
-                  -75.7098773228204,
-                  45.40859742208994
-                ],
-                [
-                  -75.71632262858313,
-                  45.406715961607404
-                ]
-              ]
-            ],
-            "type": "Polygon"
-          },
-          "id": 19
-        }
-      ]
-    }
-    });
-
+  
   map.addLayer({
-    'id': 'Dalhousie',
-    'type': 'fill',
-    'source': 'Dalhousie',
-    'layout': {},
-    'paint': {
-            'fill-color': '#48ea4b',
-            'fill-opacity': 0.2,
-              }
-       
+      'id': 'TheGoldenTriangle-label',
+      'type': 'symbol',
+      'source': 'TheGoldenTriangle',
+      'layout':  {
+        'text-field': ['get', 'name'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 0.5,
+        'text-justify': 'auto',
+          },
+        'filter': ['==', '$type', 'Point']
     });
+
   });
 
   //Hintonburgh
@@ -2915,6 +3275,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 20
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Hintonburgh",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.72469062851367, 45.403212779108216] 
+                        }
           }
         ]
       }
@@ -2929,7 +3299,19 @@ map.on('load', () => {
               'fill-color': '#fffb80',
               'fill-opacity': 0.2,
                 }
-         
+      });
+
+      map.addLayer({
+        'id': 'Hintonburgh-label',
+        'type': 'symbol',
+        'source': 'Hintonburgh',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
@@ -3058,6 +3440,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 21
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Byward Market",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.69179239540368, 45.42962812571163] 
+                        }
           }
         ]
       }
@@ -3072,7 +3464,19 @@ map.on('load', () => {
               'fill-color': '#db4da0',
               'fill-opacity': 0.2,
                 }
-         
+      });
+
+    map.addLayer({
+        'id': 'BywardMarket-label',
+        'type': 'symbol',
+        'source': 'BywardMarket',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
@@ -3149,6 +3553,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 22
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Westboro",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.74934497807031, 45.3897810451926]
+                        }
           }
         ]
       }
@@ -3163,7 +3577,18 @@ map.on('load', () => {
               'fill-color': '#5abbd3',
               'fill-opacity': 0.2,
                 }
-         
+      });
+    map.addLayer({
+        'id': 'Westboro-label',
+        'type': 'symbol',
+        'source': 'Westboro',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
@@ -3224,6 +3649,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 23
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Carlington",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.73390112627752, 45.37841527650597]
+                        }
           }
         ]
       }
@@ -3238,7 +3673,18 @@ map.on('load', () => {
               'fill-color': '#4bb961',
               'fill-opacity': 0.2,
                 }
-         
+      });
+    map.addLayer({
+        'id': 'Carlington-label',
+        'type': 'symbol',
+        'source': 'Carlington',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
@@ -3299,6 +3745,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 24
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Island Park",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.73658154810907, 45.3961583698838]
+                        }
           }
         ]
       }
@@ -3313,7 +3769,18 @@ map.on('load', () => {
               'fill-color': '#db3df0',
               'fill-opacity': 0.2,
                 }
-         
+      });
+    map.addLayer({
+        'id': 'IslandPark-label',
+        'type': 'symbol',
+        'source': 'IslandPark',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
@@ -3410,6 +3877,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 25
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Tunneys Pasture",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.73929637232614, 45.40478962970577]
+                        }
           }
         ]
       }
@@ -3424,7 +3901,19 @@ map.on('load', () => {
               'fill-color': '#e87b21',
               'fill-opacity': 0.2,
                 }
-         
+      });
+
+    map.addLayer({
+        'id': 'TunneysPasture-label',
+        'type': 'symbol',
+        'source': 'TunneysPasture',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
@@ -3501,6 +3990,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 26
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "The Glebe Annex",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.70365312794614, 45.40200111858774]
+                        }
           }
         ]
       }
@@ -3515,7 +4014,18 @@ map.on('load', () => {
               'fill-color': '#75fff6',
               'fill-opacity': 0.2,
                 }
-         
+      });
+    map.addLayer({
+        'id': 'TheGlebeAnnex-label',
+        'type': 'symbol',
+        'source': 'TheGlebeAnnex',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
@@ -3612,6 +4122,16 @@ map.on('load', () => {
               "type": "Polygon"
             },
             "id": 28
+          },
+          {
+            "type": "Feature",
+            "properties": {
+              "name": "Sandy Hill",
+                          },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.67786296588508, 45.425579839893935] 
+            }
           }
         ]
       }
@@ -3626,7 +4146,19 @@ map.on('load', () => {
               'fill-color': '#f0ea3d',
               'fill-opacity': 0.2,
                 }
-         
+      });
+    
+      map.addLayer({
+        'id': 'SandyHill-label',
+        'type': 'symbol',
+        'source': 'SandyHill',
+        'layout':  {
+          'text-field': ['get', 'name'],
+          'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+          'text-radial-offset': 0.5,
+          'text-justify': 'auto',
+            },
+          'filter': ['==', '$type', 'Point']
       });
     });
 
