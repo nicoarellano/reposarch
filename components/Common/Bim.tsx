@@ -1,91 +1,142 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import "./bim.css";
+
+import {
+  ReactElement,
+  useEffect,
+  useRef,
+  useState,
+  CSSProperties,
+} from "react";
 import * as THREE from "three";
 import * as OBC from "openbim-components";
+import BimSidebar from "./BimSidebar";
 
-export default function BimExample() {
-  const containerRef = useRef<HTMLDivElement>(null);
+interface Props {
+  ifc?: string;
+  fragment?: string;
+}
 
-  const [container, setContainer] = useState<HTMLDivElement | null>(null);
+export default function BimExample({
+  ifc = "",
+  fragment = "",
+}): ReactElement<Props> {
+  const [modelCount, setModelCount] = useState(0);
 
   useEffect(() => {
-    setContainer(containerRef.current);
-  }, [containerRef.current]);
+    const viewer = new OBC.Components();
 
-  useEffect(() => {
-    const components = new OBC.Components();
-    components.scene = new OBC.SimpleScene(components);
-    if (container) {
-      components.renderer = new OBC.SimpleRenderer(components, container);
-      components.camera = new OBC.SimpleCamera(components);
-      components.raycaster = new OBC.SimpleRaycaster(components);
+    const sceneComponent = new OBC.SimpleScene(viewer);
+    sceneComponent.setup();
+    viewer.scene = sceneComponent;
 
-      components.init();
+    const viewerContainer = document.getElementById(
+      "viewerContainer"
+    ) as HTMLDivElement;
+    const rendererComponent = new OBC.PostproductionRenderer(
+      viewer,
+      viewerContainer
+    );
+    viewer.renderer = rendererComponent;
+    const postproduction = rendererComponent.postproduction;
 
-      const scene = components.scene.get();
+    const cameraComponent = new OBC.OrthoPerspectiveCamera(viewer);
+    viewer.camera = cameraComponent;
 
-      const grid = new OBC.SimpleGrid(components);
-      components.tools.add("grid", grid);
+    const raycasterComponent = new OBC.SimpleRaycaster(viewer);
+    viewer.raycaster = raycasterComponent;
 
-      const cubeMaterial = new THREE.MeshStandardMaterial({ color: "#6528D7" });
-      const greenMaterial = new THREE.MeshStandardMaterial({
-        color: "#BCF124",
+    viewer.init();
+    cameraComponent.updateAspect();
+    postproduction.enabled = true;
+
+    const grid = new OBC.SimpleGrid(viewer, new THREE.Color(0x666666));
+    postproduction.customEffects.excludedMeshes.push(grid.get());
+
+    const fragmentManager = new OBC.FragmentManager(viewer);
+    const ifcLoader = new OBC.FragmentIfcLoader(viewer);
+
+    const highlighter = new OBC.FragmentHighlighter(viewer);
+    highlighter.setup();
+
+    const propertiesProcessor = new OBC.IfcPropertiesProcessor(viewer);
+    highlighter.events.select.onClear.add(() => {
+      propertiesProcessor.cleanPropertiesList();
+    });
+
+    ifcLoader.settings.wasm = {
+      path: "https://unpkg.com/web-ifc@0.0.43/",
+      absolute: true,
+    };
+    ifcLoader.settings.webIfc.COORDINATE_TO_ORIGIN = true;
+    ifcLoader.settings.webIfc.OPTIMIZE_PROFILES = true;
+
+    ifcLoader.onIfcLoaded.add((model) => {
+      setIfcModel(model);
+    });
+
+    const setIfcModel = (model) => {
+      setModelCount(fragmentManager.groups.length);
+      propertiesProcessor.process(model);
+      highlighter.events.select.onHighlight.add((selection) => {
+        const fragmentID = Object.keys(selection)[0];
+        const expressID = Number(Array.from(selection[fragmentID])[0]);
+        propertiesProcessor.renderProperties(model, expressID);
       });
+      highlighter.update();
+    };
 
-      const models = [];
-
-      //Creates the lights of the scene
-      const lightColor = 0xffffff;
-
-      const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
-      scene.add(ambientLight);
-
-      const directionalLight = new THREE.DirectionalLight(lightColor, 1);
-      directionalLight.position.set(5, 10, 5);
-      directionalLight.target.position.set(0, 3, 0);
-      scene.add(directionalLight);
-      scene.add(directionalLight.target);
-
-      let fragmentIfcLoader = new OBC.FragmentIfcLoader(components);
-
-      fragmentIfcLoader.settings.wasm = {
-        path: "https://unpkg.com/web-ifc@0.0.43/",
-        absolute: true,
-      };
-      fragmentIfcLoader.settings.webIfc.COORDINATE_TO_ORIGIN = true;
-      fragmentIfcLoader.settings.webIfc.OPTIMIZE_PROFILES = true;
-
-      loadIfcAsFragments(scene, fragmentIfcLoader, models);
-
-      let previousSelection;
-      window.onmousemove = () => {
-        const result = components.raycaster.castRay(models);
-        if (previousSelection) {
-          previousSelection.material = cubeMaterial;
-        }
-        if (!result) {
-          return;
-        }
-        result.object.material = greenMaterial;
-        previousSelection = result.object;
-      };
-    }
-    async function loadIfcAsFragments(scene, fragmentIfcLoader, models) {
-      const file = await fetch(
-        "/arcn5005/f2023/students/nicolasarellanorisop/ifc/parking.ifc"
-      );
+    const loadInitialIfc = async (ifc) => {
+      const file = await fetch(ifc);
       const data = await file.arrayBuffer();
       const buffer = new Uint8Array(data);
-      const model = await fragmentIfcLoader.load(buffer);
-      models.push(model);
-      scene.add(model);
+      const model = await ifcLoader.load(buffer, "ifc");
+      viewer.scene.get().add(model);
+      setIfcModel(model);
+    };
+
+    if (ifc) loadInitialIfc(ifc);
+
+    async function loadFragments() {
+      if (fragmentManager.groups.length) return;
+      const file = await fetch(fragment);
+      const data = await file.arrayBuffer();
+      const buffer = new Uint8Array(data);
+      setModelCount(fragmentManager.groups.length + 1);
+      fragmentManager.load(buffer);
     }
-  }, [container]);
+
+    if (fragment) loadFragments();
+
+    const mainToolbar = new OBC.Toolbar(viewer);
+    mainToolbar.addChild(
+      ifcLoader.uiElement.get("main"),
+      propertiesProcessor.uiElement.get("main")
+    );
+    viewer.ui.addToolbar(mainToolbar);
+  }, []);
+
+  const viewerContainerStyle: CSSProperties = {
+    width: "100%",
+    height: "100%",
+    position: "relative",
+    gridArea: "viewer",
+  };
+
+  const titleStyle: CSSProperties = {
+    position: "absolute",
+    top: "15px",
+    left: "15px",
+    color: "#F3F4F6",
+  };
 
   return (
-    <>
-      <div className="bim-container w-full h-full" ref={containerRef}></div>
-    </>
+    <div className="flex flex-row w-full h-full">
+      {/* <BimSidebar /> */}
+      <div id="viewerContainer" style={viewerContainerStyle}>
+        <h4 style={titleStyle}>Models loaded: {modelCount}</h4>
+      </div>
+    </div>
   );
 }
