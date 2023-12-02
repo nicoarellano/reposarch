@@ -5,7 +5,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Cultural',
-                'description': '<h2>Circular fortresses from the Viking Age</h2> <p>Significance: cultural properties</p> <p>Country: Denmark</p><p>Criterion: (iii)(iv)</p>'
+                'description': '<h2>Circular fortresses from the Viking Age</h2> <p>Significance: cultural properties</p> <p>Country: Denmark</p><p>Criterion: (iii)(iv)</p><p>Property: 51 ha</p>'
             },
             'geometry': {
                 'type': 'Point',
@@ -16,7 +16,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Cultural',
-                'description': '<h2>Ancient Jericho/Tell es-Sultan</h2> <p>Significance: cultural properties</p> <p>Country: State of Palestine</p><p>Criterion: (iii)(iv)</p>'
+                'description': '<h2>Ancient Jericho/Tell es-Sultan</h2> <p>Significance: cultural properties</p> <p>Country: State of Palestine</p><p>Criterion: (iii)(iv)</p><p>Property: 5.93 ha</p>'
             },
             'geometry': {
                 'type': 'Point',
@@ -407,7 +407,9 @@ map.on('load', () => {
                 'source': 'places',
                 'paint': {
                     'circle-radius': 8,
-                    'circle-color': '#FFFFFF'
+                    'circle-color': '#FFFFFF',
+                    'circle-stroke-width': 1,
+                    'circle-stroke-color': '#3386c0',
                 },
                 'filter': ['==', 'icon', symbol]
             });
