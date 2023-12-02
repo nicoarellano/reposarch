@@ -13,7 +13,7 @@ const quizes = [dayjs("2023-10-05"), dayjs("2023-11-30")];
 const assignments = [
   dayjs("2023-10-19"),
   dayjs("2023-11-16"),
-  dayjs("2023-11-30"),
+  // dayjs("2023-11-30"),
   dayjs("2023-12-07"),
 ];
 const fallBreak = [dayjs("2023-10-26")];

@@ -1,0 +1,8 @@
+Model Information:
+* title:	Bone
+* source:	https://sketchfab.com/3d-models/bone-c5b53b551b3946179c2f4b154a18e3b4
+* author:	bariacg (https://sketchfab.com/bariacg)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

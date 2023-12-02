@@ -39,10 +39,35 @@ gltfLoader.load(
   }
 );
 
+window.addEventListener("keydown", (event) => {
+  switch (event.key) {
+    case "ArrowUp":
+      // Move the camera forward
+      camera.position.z -= 2;
+      break;
+    case "ArrowDown":
+      // Move the camera backward
+      camera.position.z += 2;
+    case "ArrowLeft":
+      // Move the camera left
+      camera.position.x -= 2;
+      break;
+    case "ArrowRight":
+      // Move the camera right
+      camera.position.x += 2;
+    case "w":
+      // Move the camera up
+      camera.position.y += 2;
+      break;
+    case "s":
+      // Move the camera down
+      camera.position.y -= 2;
+  }
+});
 
 const loader = new THREE.TextureLoader();
   const texture = loader.load(
-    'Super_Mario_Bros_Background.jpg',
+    'Super_Mario.jpg',
     () => {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       texture.colorSpace = THREE.SRGBColorSpace;
@@ -67,19 +92,21 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     const textMaterial = new THREE.MeshBasicMaterial({ color: color });
     const text = new THREE.Mesh(textGeo, textMaterial);
 
-    text.position.x = -3;
+    text.position.x = -4;
     text.position.y = z;
 
 
     scene.add(text);
   });
 }
-//Portugal Flag colour-coded
-createText("Filipe Costa", 10, "0X000000",1);
-createText("Portuguese-Canadian", 9, "0X008000");
-createText("M.Arch at Carleton University", 8, "0XFFBF00");
-createText("Undergrad at UofT", 7, "0XD2042D");
-createText("Design Enthusiast", 6, "0XD2042D");
+
+//Mario colour-coded
+createText("  Filipe Costa", 11, "0X000000", 1);
+createText("      Portuguese-Canadian", 10, "0X049CD8");
+createText("M.Arch at Carleton University", 9, "0XFFBF00");
+createText("       Undergrad at UofT", 8, "0XE52521");
+createText("       Design Enthusiast", 7, "0X43B047");
+createText("Move with Arrow Keys & WS", 6, "0X000000");
 
 camera.position.z = 18;
 camera.position.x = 0;
@@ -87,7 +114,7 @@ camera.position.y = 2;
 
 scene.position.x = -5;
 scene.position.z = 5;
-scene.position.y = -3;
+scene.position.y = -5;
 
 console.log(camera);
 
