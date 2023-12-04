@@ -53,7 +53,10 @@ export const content: Toc = [
             </td>
           </tr>
           <tr>
-            <td>Bonus: outstanding overall work and/or helping classmates</td>
+            <td>
+              Bonus: outstanding overall work, page successfully deployed
+              externally (GitHub Pages), and/or helping classmates.
+            </td>
             <td>up to 5</td>
           </tr>
         </table>
