@@ -155,13 +155,19 @@ strong {
 .simple-table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 75%;
+  width: fit-content;
+  max-width: 75%;
 }
 
 .simple-table td,
-.simple-table th {
+th {
   border: 1px solid #aaa;
   padding: 8px;
+  min-width: 10rem;
+}
+
+.simple-table td:first-of-type {
+  text-align: left;
 }
 
 .simple-table tr:nth-child(even) {
@@ -176,7 +182,6 @@ strong {
 .simple-table th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: gray;
   color: white;
 }
