@@ -294,13 +294,9 @@ export const arcn5005Lectures: Lectures = [
         title:
           "🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js",
       },
-      { title: "Geospatial Information Systems" },
-      { title: "Coordination Systems" },
-      { title: "Proprietary GIS (Arc GIS)" },
-      { title: "Proprietary web GIS - Cesium and Mapbox" },
       { title: "Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)" },
-      { title: "Open Source web GIS - Leaflet and Maplibre" },
-      { title: "🖥️ LAB 10: Maplibre" },
+      { title: "Q GIS" },
+      { title: "🖥️ LAB 10: Three js continuation" },
     ],
     recordings: [
       {
@@ -312,36 +308,57 @@ export const arcn5005Lectures: Lectures = [
   },
 
   {
-    title: "Going online “hello world”",
+    title: "Web based OS mapping and GIS",
     id: `week11`,
     url: `week11`,
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
-      { title: "Deploy your software" },
-      { title: "Github pages" },
-      { title: "🖥️ LAB 11: Web based BIM GIS software" },
+      { title: "Geospatial Information Systems" },
+      { title: "Coordination Systems" },
+      { title: "Proprietary web GIS - Cesium and Mapbox" },
+      { title: "Open Source web GIS - Leaflet and Maplibre" },
+      { title: "🖥️ LAB 11: Web based GIS software" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/vSejvs1PBNc?si=qAIK45kWVdSQtW-g",
+        title: "New calendar and Assignment 2 feedback",
+        date: dayjs("2023/11/23"),
+      },
+      {
+        url: "https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m",
+        title: "Web based mapping and Assignment 3",
+        date: dayjs("2023/11/23"),
+      },
     ],
   },
 
   {
-    title: "Scalability and maintainability",
+    title: "Advanced Toolbox - Going online, scalability and maintainability",
     id: `week12`,
     url: `week12`,
     date: initialDate.add(12, "week"),
     content: week12,
     toc: [
-      { title: "🟡 Quiz 3" },
+      { title: "🟡 Quiz 2" },
+      { title: "Frontend frameworks" },
+      { title: "React.js" },
+      { title: "Next.js" },
+      { title: "Typescript" },
+      { title: "Tailwind CSS" },
+      { title: "Deploy your software - Github pages" },
       {
         title:
-          "🔴 Assignment 3 presentation - BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
+          "🖥️ LAB 12 : Deploying a web based BIM software and Assignment 3",
       },
-      { title: "Frontend framework" },
-      { title: "Tailwind CSS" },
-      { title: " React.js" },
-      { title: "Typescript" },
-      { title: "Next.js" },
-      { title: "🖥️ LAB 12 : Web based BIM GIS software" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt",
+        title: "Advanced toolbox",
+        date: dayjs("2023/11/30"),
+      },
     ],
   },
   {
@@ -351,7 +368,7 @@ export const arcn5005Lectures: Lectures = [
     date: initialDate.add(13, "week"),
     content: week13,
     toc: [
-      { title: "🔴 Assignment 4 presentation - Custom map using maplibre" },
+      { title: "🔴 Assignment 3 presentation - Custom map using maplibre" },
       { title: "🖥️ LAB 13 Final assignment workshop" },
     ],
   },
@@ -363,33 +380,33 @@ export const arcn5005Lectures: Lectures = [
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
   },
-  // {
-  //   title: "🗺️ Maps and GIS 🌎",
-  //   id: `maps`,
-  //   url: `maps`,
-  //   date: dayjs("2023-09-25"),
-  //   content: maps,
-  //   toc: [
-  //     { title: "History of Mapping" },
-  //     { title: "Map Projections" },
-  //     { title: "Geodetic reference systems - NAD83 vs WGS84" },
-  //     { title: "Digital Maps" },
-  //     { title: "Geospatial Information Systems" },
-  //     { title: "Proprietary web GIS - Cesium and Mapbox" },
-  //     { title: "Open Source web GIS - Leaflet and Maplibre" },
-  //     { title: "🖥️ LAB : Maplibre" },
-  //   ],
-  //   recordings: [
-  //     {
-  //       url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
-  //       title: "Maps, GIS and Map renderers",
-  //       date: dayjs("2023/09/25"),
-  //     },
-  //     {
-  //       url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
-  //       title: "Maplibre - Tutorial 1",
-  //       date: dayjs("2023/09/25"),
-  //     },
-  //   ],
-  // },
+  {
+    title: "🗺️ Maps and GIS 🌎",
+    id: `maps`,
+    url: `maps`,
+    date: dayjs("2023-09-25"),
+    content: maps,
+    toc: [
+      { title: "History of Mapping" },
+      { title: "Map Projections" },
+      { title: "Geodetic reference systems - NAD83 vs WGS84" },
+      { title: "Digital Maps" },
+      { title: "Geospatial Information Systems" },
+      { title: "Proprietary web GIS - Cesium and Mapbox" },
+      { title: "Open Source web GIS - Leaflet and Maplibre" },
+      { title: "🖥️ LAB : Maplibre" },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv",
+        title: "Maps, GIS and Map renderers",
+        date: dayjs("2023/09/25"),
+      },
+      {
+        url: "https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS",
+        title: "Maplibre - Tutorial 1",
+        date: dayjs("2023/09/25"),
+      },
+    ],
+  },
 ];

@@ -8,7 +8,6 @@ const size = {
 const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
-//Sets up the renderer, fetching the canvas of the HTML
 const threeCanvas = document.getElementById("three-canvas");
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
@@ -19,7 +18,6 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-//Creates grids and axes in the scene
 const grid = new THREE.GridHelper(10, 10);
 scene.add(grid);
 
@@ -47,31 +45,25 @@ greenCube.position.z = 3;
 
 scene.add(yellowCube);
 scene.add(blueCube);
-// scene.add(redCube);
 scene.add(greenCube);
-
 
 const GLTFLoader = new THREE.GLTFLoader();
 
 let mesh;
 
-function loadGLB(path,scale,x,z){
+function loadGLB(path, scale, x, z) {
   GLTFLoader.load(
     path,
     function (gltf) {
       mesh = gltf.scene;
-      mesh.scale.x = scale;
-      mesh.scale.y = scale;
-      mesh.scale.z = scale;
-        mesh.position.x = x
-        mesh.position.z = z
+      mesh.scale.set(scale, scale, scale);
+      mesh.position.set(x, 0, z);
       scene.add(mesh);
     },
-      undefined,
-      function (error) {
-        console.error(error);
-      }
-
+    undefined,
+    function (error) {
+      console.error(error);
+    }
   );
 }
 
@@ -79,13 +71,11 @@ loadGLB("./Models/From Blender.glb", 0.3, 0, 0);
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
-  const textValue = text;
-  const textSize = size;
-  fontLoader.load("./Fonts/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
+function createText(text, elevation, textColor, size) {
+  fontLoader.load('./Fonts/helvetiker_regular.typeface.json', function (font) {
+    const textGeometry = new THREE.TextGeometry(text, {
       font: font,
-      size: textSize,
+      size: size,
       height: 0.1,
       curveSegments: 4,
       bevelEnabled: true,
@@ -95,42 +85,31 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
       bevelSegments: 5,
     });
 
-    const color = new THREE.Color();
-    color.setHex(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
+    const textMaterial = new THREE.MeshLambertMaterial({ color: new THREE.Color(textColor) });
+    const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
-    text.position.x = 2;
-    text.position.y = elevation;
+    textMesh.position.set(2, elevation, 0);
 
-    scene.add(text);
+    scene.add(textMesh);
   });
 }
 
-createText("Anthony Papini", 5, "0XFF00FF");
-createText("- Guy on the left isnt me", 3, "0XFF0000");
-createText("- I enjoy cool looking things", 2, "0XFF0000");
-createText("- Master of Architecture", 1, "0XFF0000");
-createText("- I am a sentient AI", 0, "0XFF0000");
+createText("Anthony Papini", 5, 0xFF00FF, 0.5);
+createText("- Guy on the left isn't me", 3, 0xFF0000, 0.5);
+createText("- I enjoy cool looking things", 2, 0xFF0000, 0.5);
+createText("- Master of Architecture", 1, 0xFF0000, 0.5);
+createText("- I am a sentient AI", 0, 0xFF0000, 0.5);
 
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
-
-scene.position.x = -5;
-scene.position.z = 5;
-scene.position.y = -3;
+camera.position.set(5, 2, 13);
+scene.position.set(-5, -3, 5);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-//Creates the lights of the scene
-const lightColor = 0xffffff;
-
-const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(lightColor, 1);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 10, 5);
 directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
@@ -147,9 +126,6 @@ function animate() {
   blueCube.rotation.x += 0.02;
   blueCube.rotation.y -= 0.01;
 
-  redCube.rotation.x -= 0.01;
-  redCube.rotation.y -= 0.02;
-
   greenCube.rotation.x += 0.02;
   greenCube.rotation.y -= 0.01;
 
@@ -158,11 +134,22 @@ function animate() {
 
 animate();
 
-//Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
+});
+
+document.querySelector(".scroll-down-arrow").addEventListener("click", function () {
+  document.querySelector(".about-me").scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".scroll-up-arrow").addEventListener("click", function () {
+  document.querySelector(".container").scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelector(".scroll-down-arrow-3d").addEventListener("click", function () {
+  document.querySelector(".assignment2").scrollIntoView({ behavior: "smooth" });
 });

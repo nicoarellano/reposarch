@@ -9,7 +9,6 @@ const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
 //slideshow script
-
 let slideIndex = 1;
             showSlides(slideIndex);
             
@@ -67,9 +66,7 @@ plane2.position.z = -4;
 plane2.position.y = 6.5;
 scene.add(plane2);
 
-
-
-//Box Geometry
+//Sphere Geometry
 const geometry = new THREE.SphereGeometry(1, 5, 5);
 
 const sphereMaterial = new THREE.MeshLambertMaterial({ color: 0x4b3621 });
@@ -81,10 +78,13 @@ const DSphere = new THREE.Mesh(geometry, sphereMaterial);
 
 ASphere.position.x = 2;
 ASphere.position.z = 9.5;
+
 BSphere.position.x = -3;
 BSphere.position.z = 4;
+
 CSphere.position.x = 7;
 CSphere.position.z = 6;
+
 DSphere.position.z = 0.5;
 DSphere.position.x = -1;
 
@@ -125,6 +125,7 @@ loadGLB("./models/plant_island.glb", 1, -1, -0.5);
 loadGLB("./models/plant_island.glb", 1, 7, 3);
 loadGLB("./models/daphnes_lava.glb", 0.4, -1, 9.5);
 
+//Adding in Texture
 const loader = new THREE.TextureLoader();
   const texture = loader.load(
     'mapslarge.png',
@@ -134,6 +135,7 @@ const loader = new THREE.TextureLoader();
       scene.background = texture;
     });
 
+//Fonts
 const fontLoader = new THREE.FontLoader();
 
 function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
@@ -171,6 +173,7 @@ createText("Background in Geography", 6, "0X707948");
 createText("Favourite color is olive green", 5, "0X707948");
 createText("Big fan of volcanoes", 4, "0X707948");
 
+//Camera Position
 camera.position.z = 13;
 camera.position.x = 5;
 camera.position.y = 2;
@@ -196,6 +199,7 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
+//Animation
 function animate() {
   requestAnimationFrame(animate);
 

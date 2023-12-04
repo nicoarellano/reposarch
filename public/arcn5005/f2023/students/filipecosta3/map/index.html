@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<link rel="stylesheet" href="map style.css">
+
+<head>
+
+    <title>Carleton Pokespots</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+    </style>
+
+    <style>
+       .maplibregl-popup {
+       max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      }
+     </style>
+
+  <nav id="menu"></nav>
+  
+</head>
+<body>
+  <div id="map"></div>
+  <script src="./main.js"></script>
+</body>
+</html>
+
+<!-- Map Background Song -->
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maplibre exercise</title>
+     <title>Map Background Song</title>
   </head>
   <body>
-    ADD YOUR CODE HERE!
+     <embed src="Road to Viridian City.mp3" loop="true" autostart="true" width="2"
+        height="0">
   </body>
-</html>

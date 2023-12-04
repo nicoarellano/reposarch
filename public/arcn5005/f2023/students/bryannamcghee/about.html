@@ -1,35 +1,132 @@
-<<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+<html>
+
+ 
+
+<head lang="en">
+
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./ifc/style.css" />
+
+  <title>About Me</title>
+
 </head>
-<body>
-  <header class="header">
-    <h1>Hello, I'm Bryanna</h1>
-    <img src="mepicture.jpg" alt="Your Photo" class="profile-photo">
-  </header>
-  <main class="content">
-    <section class="facts">
-      <h2>About Me</h2>
-      <ul>
-        <li><strong>Fact 1:</strong> I can't snap my fingers</li>
-        <li><strong>Fact 2:</strong> I'm from Winnipeg, MB</li>
-        <li><strong>Fact 3:</strong> Background in Interior Design</li>
-        <li><strong>Fact 4:</strong> I love spicy food</li>
-      </ul>
-    </section>
-    <section class="buttons">
-      <h2>My Work</h2>
-      <div class="button-container">
-        <button class="button button1">Three JS</button>
-        <button class="button button2">IFC</button>
-        <button class="button button3">Map</button>
-        <button class="button button4">Final</button>
-      </div>
-    </section>
-  </main>
-</body>
+
+<body">
+
+  <div class="assignment2">
+
+    <img src="mepicture.jpg" alt="Bry Pic" height="250" />
+
+    <a href="https://github.com/brymcghee/reposarch"><button id="three-button">GitHub</button></a>
+<a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204561&grpid=0&isprv=0&bp=0&ou=207080"><button id="three-button-1">Assignment 1</button></a>
+<a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204562&grpid=0&isprv=0&bp=0&ou=207080"><button id="three-button-2">Assignment 2</button></a>
+    <a href=https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204564&grpid=0&isprv=0&bp=0&ou=207080><button id="three-button-3">Assignment 3</button></a>
+    <a href=https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204566&grpid=0&isprv=0&bp=0&ou=207080><button id="three-button-4">Assignment 4</button></a>
+    <a href=https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204567&grpid=0&isprv=0&bp=0&ou=207080><button id="three-button-5">Final Assignment</button></a>
+
+  </div>
+
+  </body>
+
+  <!-- Three js Modules -->
+
+  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js></script>
+
+  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js></script>
+
+  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js></script>
+
+  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js></script>
+
+  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js></script>
+
+  <script type="module" src="./ifc/main.js"></script>
+
+
+
+ 
+
+  <script type="x-shader/x-vertex" id="vertexshader">
+
+ 
+
+    attribute float size;
+
+    attribute vec3 customColor;
+
+    varying vec3 vColor;
+
+ 
+
+    void main() {
+
+ 
+
+      vColor = customColor;
+
+      vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+      gl_PointSize = size * ( 300.0 / -mvPosition.z );
+
+      gl_Position = projectionMatrix * mvPosition;
+
+ 
+
+    }
+
+ 
+
+  </script>
+
+  <script type="x-shader/x-fragment" id="fragmentshader">
+
+ 
+
+   uniform vec3 color;
+
+   uniform sampler2D pointTexture;
+
+ 
+
+   varying vec3 vColor;
+
+ 
+
+   void main() {
+
+ 
+
+     gl_FragColor = vec4( color * vColor, 1.0 );
+
+     gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+
+ 
+
+   }
+
+  </script>
+
+ 
+
+  <div id="magic"></div>
+
+  <div class="playground">
+
+    <div class="bottomPosition">  
+
+    </div>
+
+ 
+
+  <canvas id="three-canvas"></canvas>
+
+ 
+
+   
+
 </html>
