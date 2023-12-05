@@ -23,15 +23,15 @@
     }
     
     #menu a:hover {
-    background-color: #f8f8f8;
-    color: #404040;
+    background-color: rgb(30, 65, 116);
+    color: #ffffff;
     }
     
     #menu a.active {
-    background-color: #be3838;
+    background-color: #0D98BA;
     color: #ffffff;
     }
     
     #menu a.active:hover {
-    background: #8c2929;
+    background: #005473;
     }
