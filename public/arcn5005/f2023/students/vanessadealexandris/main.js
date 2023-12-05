@@ -63,7 +63,7 @@ const loader = new THREE.GLTFLoader();
 let mesh;
 
 loader.load(
-  "./three/3d vanessa.glb",
+  "./three/v x retrowave-neon-palm.glb",
   function (gltf) {
     gltf.scene.scale.x = 3;
     gltf.scene.scale.y = 3;
