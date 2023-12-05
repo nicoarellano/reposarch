@@ -1,17 +1,69 @@
-<head lang="en">
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>About</title>
+  <title>Anthony Papini</title>
+  <link rel="stylesheet" href="stylesA1.css"> 
 </head>
-<body">
-  <div class="assignment2">
-    <img src="./Avatar.jpg" alt="Nicolas Arellano" height="300" />
-    <a href="https://github.com/nicoarellano/reposarch"><button id:"three-button">GitHub</button></a>
-    
+<body>
+  <div class="container">
+    <div class="black-overlay">
+      <div class="profile-pic">
+        <img src="profilepic.jpg" alt="Student" />
+      </div>
+      <div class="header">Anthony Papini</div>
+      <div class="tagline">
+        <i>House music connoisseur</i>
+      </div>
+      <div class="profile-info">
+        Carleton University M.Arch<br />
+        Greystone Design Group Intermediate Architectural Associate
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204562&grpid=0&isprv=0&bp=0&ou=207080">THREE</a></li>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204564&grpid=0&isprv=0&bp=0&ou=207080">BIM</a></li>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204566&grpid=0&isprv=0&bp=0&ou=207080">MAP</a></li>
+          <li><a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204567&grpid=0&isprv=0&bp=0&ou=207080">FINAL</a></li>
+        </ul>
+      </div>
+      <div class="music-player">
+        Background Music:
+        <audio controls autoplay loop>
+          <source src="Schak ft. Kim English - Moving All Around (Jumpin') (John Summit Remix).mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="spotify-link">
+        <img src="Spotify_App_Logo.svg.png" alt="Spotify Logo" />
+        <a href="https://spotify.link/GPX4mQrcZDb" target="_blank">House Playlist</a>
+      </div>
+    </div>
+    <div class="scroll-down-arrow">
+      <div class="to-lounge-text">To Lounge</div>
+      &#8595;
+    </div>
   </div>
-  </body>
+
+  <div class="about-me">
+    <div class="about-me-content">
+      <h2>About Me</h2>
+      <p>I enjoy cool music and cool-looking things. I hope to one day do something pretty cool.</p>
+    </div>
+    <div class="scroll-up-arrow">&#8593;</div>
+
+    <div class="to-3d-realm-text">To the 3D Realm</div>
+    <div class="scroll-down-arrow-3d">&#8595;</div>
+  </div>
+
+  <div class="assignment2">
+    <img src="./avatar.jpg" alt="Anthony Papini" height="300" />
+    <a href="https://github.com/nicoarellano/reposarch"><button id="three-button">GitHub</button></a>  
+  </div>
+
+  <canvas id="three-canvas"></canvas>
+
   <script src="./main.js"></script>
   <!-- Three js Modules -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
@@ -20,7 +72,19 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
   <script type="module" src="./main.js"></script>
-  <canvas id="three-canvas"></canvas>
 
+  <script>
+    document.querySelector(".scroll-down-arrow").addEventListener("click", function () {
+      document.querySelector(".about-me").scrollIntoView({ behavior: "smooth" });
+    });
 
+    document.querySelector(".scroll-up-arrow").addEventListener("click", function () {
+      document.querySelector(".container").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".scroll-down-arrow-3d").addEventListener("click", function () {
+      document.querySelector(".assignment2").scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
 </html>

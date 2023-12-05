@@ -1,38 +1,40 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="assignment1.css">
-    </head>
-    <body>
-        <div id="container">
 
-            <div class="navigationBar">
-                <a class="active" href = "assignment1.html">Assignment 1</a>
-                <a href = "../assignment2/assignment2.html">Assignment 2</a>
-                <a href = "../assignment3/assignment3.html">Assignment 3</a>
-                <a href = "../finalProject/finalProject.html">Final Project</a>
-              </div>
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>About</title>
+</head>
+<body">
+  <div class="assignment2">
 
-            <h1>
-                HELLO!
-            </h1>
-            <img src = "images/coding.jpg" id = "image1">
-            <audio controls>
-              <source src="that is what falling in love feels like.mp3" type="audio/mp3">
-            </audio>
-            <h2>
-                About Me:
-            </h2>
-            <img src = "images/me.jpg" id = "image2">
-            <p id="paragraph1">
-                Hi everyone! I am Weixi Zhong, majoring in 
-                <a href = "https://architecture.carleton.ca/academic-programs/march-2" id="March">
-                    Master of Architecture
-                </a>
-                . Although this is my first time learning programming, I have always been interested in it. I hope that through this term's study, I can gain basic coding knowledge and apply it to my future projects and studies.
-            </p>
-              
-        </div>
+  <img src="./image/me.jpg" alt="name" height="611"/>
+    <!--<a href="https://github.com/nicoarellano/reposarch">--> 
+      <div class="button-container">
+        <button class="button">GitHub</button>
+        <button class="button">Assignment 1</button>
+        <button class="button">Assignment 2</button>
+        <button class="button">Assignment 3</button>
+        <button class="button">Final Project</button>
+      </div>
+      <audio controls autoplay>
+        <source src="Kina_ft_Snow_-_get_you_the_moon.mp3" type="audio/mp3">
+      </audio>
+      </body>
+  </div>
 
-    </body>
+  <script src="./main.js"></script>
 
+  <!-- Three js Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+
+  <script type="module" src="./main.js"></script>
+  <canvas id="three-canvas"></canvas>
+
+</html>
