@@ -47,7 +47,7 @@ export default function NestedTemplate({
           <ReturnButton />
         </section>
       )}
-      {Boolean(!assignment) && (
+      {
         <footer className="m-4 flex flex-row absolute z-20 bottom-0 right-0">
           <IconButton onClick={() => router.back()} title={"Back"}>
             <Avatar
@@ -56,7 +56,7 @@ export default function NestedTemplate({
             />
           </IconButton>
         </footer>
-      )}
+      }
     </main>
   );
 }
