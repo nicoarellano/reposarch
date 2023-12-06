@@ -25,19 +25,16 @@ export default function NestedTemplate({
 
   return (
     <main className="flex flex-col w-screen h-screen ">
-      {Boolean(!assignment) && (
-        <nav className="top-0 flex flex-row w-full h-24 ">
-          <Header
-            title={`${
-              student
-                ? `${student.firstName} ${student.lastName}`
-                : "Unregistered Student"
-            } ${
-              params.assignments ? `- ${params.assignments} assignment` : ""
-            }`}
-          />
-        </nav>
-      )}
+      <nav className="top-0 flex flex-row w-full h-24 ">
+        <Header
+          title={`${
+            student
+              ? `${student.firstName} ${student.lastName}`
+              : "Unregistered Student"
+          } ${params.assignments ? `- ${params.assignments} assignment` : ""}`}
+        />
+      </nav>
+
       {Boolean(student || assignment) ? (
         <section className="flex justify-center w-full h-full">
           {children}

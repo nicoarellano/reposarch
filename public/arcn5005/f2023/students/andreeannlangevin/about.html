@@ -53,9 +53,11 @@
     </script> -->
 
     <script>
-      const MAPTILER_KEY = "get_your_own_OpIi9ZULNHzrESv6T2vL"; // ANDREE-ANN, you need to get your own maptiler key otherwise this will not work on my page
+      const MAPTILER_KEY = "get_your_own_OpIi9ZULNHzrESv6T2vL";
       const map = new maplibregl.Map({
-        style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_KEY}`,
+        // style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_KEY}`,
+        style:
+          "https://api.maptiler.com/maps/470d6019-657f-4f7d-a018-6ec6ae0d0093/style.json?key=4xF6FrxAyNgBUQ4n4bUN", // ANDREE-ANN, you need to get your own maptiler key otherwise this will not work on my page (for this to work I just used one of your classmates')
         center: [-75.73116, 45.400389],
         zoom: 15.5,
         pitch: 45,

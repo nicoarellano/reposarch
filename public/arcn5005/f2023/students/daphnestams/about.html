@@ -1,81 +1,83 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Daphne Map Assingment</title>
+    <meta property="og:description" content="Daphne Map Assingment." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
 
-<head lang="en">
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>About</title>
-</head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+    </style>
 
-<body>
-  <div class="assignment2">
+    <style>
+      .maplibregl-popup {
+        max-width: 400px;
+        font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
+    </style>
 
-    <img src="./DaphnePNG.png" alt="Daphne Stams" height="230"/>
-    
-    <a href="https://github.com/daphnestams/reposarch"><button id:"three-button">GitHub</button></a>
+    <style>
+      #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        width: 120px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        font-family: "Open Sans", sans-serif;
+      }
 
-    <button> <a href="">Assingment 1</a> </button>
-    <button> <a href="./three/">Assingment 2</a> </button>
-    <button><a href="./map/">Assingment 3</a> </button>
-    <button> Final Project </button>
+      #menu a {
+        font-size: 13px;
+        color: #404040;
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        text-align: center;
+      }
 
-    <br>
+      #menu a:last-child {
+        border: none;
+      }
 
-    <div class= "slidescontainer">
+      #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+      }
 
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 4</div>
-        <img src="Vancouver.png" style="width:100%">
-        <div class="text">Vancouver, B.C.</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 4</div>
-        <img src="Map.png" style="width:100%">
-        <div class="text">Background in Geography.</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 4</div>
-        <img src="OliveGreen.png" style="width:100%">
-        <div class="text">My Favourite Color.</div>
-      </div>
+      #menu a.active {
+        background-color: black;
+        color: #ffffff;
+      }
 
-      <div class="mySlides fade">
-          <div class="numbertext">4 / 4</div>
-          <img src="Volcano.png" style="width:100%">
-          <div class="text">Fire of Love directed by Sara Dosa.</div>
-        </div>
-      
-      <a class="prev" onclick="plusSlides(-1)"></a>
-      <a class="next" onclick="plusSlides(1)"></a>
-      
-      <br>
-      
-      <div style="text-align:left">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-        <span class="dot" onclick="currentSlide(4)"></span> 
-      </div>
+      #menu a.active:hover {
+        background: #4baf69;
+      }
+    </style>
+    <nav id="menu"></nav>
+  </head>
 
-    </div>
-    
-  </div>
-
- </body>
-
-
-  <script src="./main.js"></script>
-
-  <!-- Three js Modules -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-  <script type="module" src="./main.js"></script>
-  <canvas id="three-canvas"></canvas>
-
+  <body>
+    <div id="map"></div>
+    <script src="./map/main.js"></script>
+  </body>
 </html>
