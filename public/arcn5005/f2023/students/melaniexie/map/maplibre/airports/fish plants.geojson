@@ -1,0 +1,509 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.241300,43.817300 ]
+    },
+    "properties": {
+    "_id":1,
+    "Plant Number / No. de l'usine":4001,
+    "Plant Name /  Nom de l'usine":"T & T Supermarket",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"1 AND 2-790 TAPSCOTT ROAD",
+    "City / Ville":"SCARBOROUGH",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1X 1B8",
+    "Telephone / Téléphone":"(905) 695-8113"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.296190,43.710140 ]
+    },
+    "properties": {
+    "_id":2,
+    "Plant Number / No. de l'usine":4003,
+    "Plant Name /  Nom de l'usine":"The Smoke Bloke",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"1171 VICTORIA PARK AVE.",
+    "City / Ville":"TORONTO",
+    "Province":"ON",
+    "Postal Code / Code postal":"M4B 2K5",
+    "Telephone / Téléphone":"(647) 349-6300"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.291700,43.805800 ]
+    },
+    "properties": {
+    "_id":3,
+    "Plant Number / No. de l'usine":4004,
+    "Plant Name /  Nom de l'usine":"Ding Ho Foods Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"109 - 70 SILVERSTAR BLVD",
+    "City / Ville":"SCARBOROUGH",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1V 4V9",
+    "Telephone / Téléphone":"(416) 321-2818"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.462300,43.680910 ]
+    },
+    "properties": {
+    "_id":4,
+    "Plant Number / No. de l'usine":4006,
+    "Plant Name /  Nom de l'usine":"Tradicao de Portugal Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"291 SILVERTHORNE AVENUE",
+    "City / Ville":"TORONTO",
+    "Province":"ON",
+    "Postal Code / Code postal":"M6N 3K2",
+    "Telephone / Téléphone":"(647) 532-6528"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.276614,43.786680 ]
+    },
+    "properties": {
+    "_id":5,
+    "Plant Number / No. de l'usine":4007,
+    "Plant Name /  Nom de l'usine":"Ho Ho Ho Food Products",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"52-8 GLEN WATFORD DRIVE",
+    "City / Ville":"SCARBOROUGH",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1S 2C1",
+    "Telephone / Téléphone":"(416) 332-1672"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.363410,43.842410 ]
+    },
+    "properties": {
+    "_id":6,
+    "Plant Number / No. de l'usine":4009,
+    "Plant Name /  Nom de l'usine":"Ocean King International Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"26 - 455 COCHRANE DRIVE",
+    "City / Ville":"MARKHAM",
+    "Province":"ON",
+    "Postal Code / Code postal":"L3R 9R4",
+    "Telephone / Téléphone":"(905) 513-6138"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.510900,43.452900 ]
+    },
+    "properties": {
+    "_id":7,
+    "Plant Number / No. de l'usine":4010,
+    "Plant Name /  Nom de l'usine":"T & J Seafoods",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"26 ELM STREET",
+    "City / Ville":"KITCHENER",
+    "Province":"ON",
+    "Postal Code / Code postal":"N2G 2G4",
+    "Telephone / Téléphone":"(519) 578-3080"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.293298,43.814040 ]
+    },
+    "properties": {
+    "_id":8,
+    "Plant Number / No. de l'usine":4011,
+    "Plant Name /  Nom de l'usine":"AIP Seafood Company",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"2195 MCNICOLL AVENUE",
+    "City / Ville":"SCARBOROUGH",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1V 5P3",
+    "Telephone / Téléphone":"(416) 229-9090"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.832099,45.252634 ]
+    },
+    "properties": {
+    "_id":9,
+    "Plant Number / No. de l'usine":4014,
+    "Plant Name /  Nom de l'usine":"Milford Bay SmokeHaus Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"97 AIRPORT RD",
+    "City / Ville":"SEGUIN",
+    "Province":"ON",
+    "Postal Code / Code postal":"P2A 2W8",
+    "Telephone / Téléphone":"(705) 996-0010"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.463700,42.078700 ]
+    },
+    "properties": {
+    "_id":10,
+    "Plant Number / No. de l'usine":4015,
+    "Plant Name /  Nom de l'usine":"Loop Fisheries Ltd.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"21120 ERIE STREET SOUTH",
+    "City / Ville":"WHEATLEY",
+    "Province":"ON",
+    "Postal Code / Code postal":"N0P 2P0",
+    "Telephone / Téléphone":"(519) 825-7223"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.194873,44.503004 ]
+    },
+    "properties": {
+    "_id":11,
+    "Plant Number / No. de l'usine":4017,
+    "Plant Name /  Nom de l'usine":"Ontario Fisheries Products Limited",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"2 - 22 RONELL CRES",
+    "City / Ville":"COLLINGWOOD",
+    "Province":"ON",
+    "Postal Code / Code postal":"L9Y 4J7",
+    "Telephone / Téléphone":"(705) 444-7754"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.251900,43.823900 ]
+    },
+    "properties": {
+    "_id":12,
+    "Plant Number / No. de l'usine":4020,
+    "Plant Name /  Nom de l'usine":"Nikko Foods Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"5-83 DYNAMIC DRIVE",
+    "City / Ville":"SCARBOROUGH",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1V 4C8",
+    "Telephone / Téléphone":"(416) 321-8140"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.335944,43.661778 ]
+    },
+    "properties": {
+    "_id":13,
+    "Plant Number / No. de l'usine":4021,
+    "Plant Name /  Nom de l'usine":"Kristapsons Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"1095 QUEEN STREET EAST",
+    "City / Ville":"TORONTO",
+    "Province":"ON",
+    "Postal Code / Code postal":"M4M 1K7",
+    "Telephone / Téléphone":"(416) 466-5152"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.909567,47.957170 ]
+    },
+    "properties": {
+    "_id":14,
+    "Plant Number / No. de l'usine":4024,
+    "Plant Name /  Nom de l'usine":"Anderson Fisheries",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"2 ANDERSON ROAD",
+    "City / Ville":"WAWA",
+    "Province":"ON",
+    "Postal Code / Code postal":"P0S 1K0",
+    "Telephone / Téléphone":"(705) 856-4835"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.234410,43.806690 ]
+    },
+    "properties": {
+    "_id":15,
+    "Plant Number / No. de l'usine":4025,
+    "Plant Name /  Nom de l'usine":"TFF",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"3, 4 AND 5 10 MELFORD DRIVE",
+    "City / Ville":"TORONTO",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1B 2G1",
+    "Telephone / Téléphone":"(647) 348-0100"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.512310,45.970560 ]
+    },
+    "properties": {
+    "_id":16,
+    "Plant Number / No. de l'usine":4027,
+    "Plant Name /  Nom de l'usine":"Herbert Fisheries",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"21 CHANNEL STREET",
+    "City / Ville":"KILLARNEY",
+    "Province":"ON",
+    "Postal Code / Code postal":"POM 2AO",
+    "Telephone / Téléphone":"(705) 287-2701"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.628545,42.706653 ]
+    },
+    "properties": {
+    "_id":17,
+    "Plant Number / No. de l'usine":4029,
+    "Plant Name /  Nom de l'usine":"Den Besten Trout Farm",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"244 CONCESSION ROAD 11",
+    "City / Ville":"LANGTON",
+    "Province":"ON",
+    "Postal Code / Code postal":"N0E 1G0",
+    "Telephone / Téléphone":"(519) 875-2782"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.911772,44.423792 ]
+    },
+    "properties": {
+    "_id":18,
+    "Plant Number / No. de l'usine":4030,
+    "Plant Name /  Nom de l'usine":"Williamsford Trout Farm",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"782769 SIDEROAD 3",
+    "City / Ville":"CHATSWORTH",
+    "Province":"ON",
+    "Postal Code / Code postal":"N0H 1G0",
+    "Telephone / Téléphone":"(519) 493-8008"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.401479,43.652708 ]
+    },
+    "properties": {
+    "_id":19,
+    "Plant Number / No. de l'usine":4035,
+    "Plant Name /  Nom de l'usine":"Gia Phat Co.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"155 AUGUSTA AVENUE",
+    "City / Ville":"TORONTO",
+    "Province":"ON",
+    "Postal Code / Code postal":"M5T 2L4",
+    "Telephone / Téléphone":"(416) 593-4749"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.840382,43.265714 ]
+    },
+    "properties": {
+    "_id":20,
+    "Plant Number / No. de l'usine":4036,
+    "Plant Name /  Nom de l'usine":"R. Denninger Limited",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"55 BRANT STREET",
+    "City / Ville":"HAMILTON",
+    "Province":"ON",
+    "Postal Code / Code postal":"L8L 4C7",
+    "Telephone / Téléphone":"(905) 522-2414"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.428910,45.460807 ]
+    },
+    "properties": {
+    "_id":21,
+    "Plant Number / No. de l'usine":4040,
+    "Plant Name /  Nom de l'usine":"Pêche Fumé",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"105 CONCESSION RD 7",
+    "City / Ville":"ST-EUGENE",
+    "Province":"ON",
+    "Postal Code / Code postal":"K0B 1P0",
+    "Telephone / Téléphone":"(613) 677-4331"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.340702,43.805949 ]
+    },
+    "properties": {
+    "_id":22,
+    "Plant Number / No. de l'usine":4041,
+    "Plant Name /  Nom de l'usine":"Sing Hai Seafood Co. Ltd.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"100 TEMPO AVENUE - UNIT 10",
+    "City / Ville":"NORTH YORK",
+    "Province":"ON",
+    "Postal Code / Code postal":"M2H 2N8",
+    "Telephone / Téléphone":"(416) 289-2889"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.415242,43.803923 ]
+    },
+    "properties": {
+    "_id":23,
+    "Plant Number / No. de l'usine":4042,
+    "Plant Name /  Nom de l'usine":"Elite Salads International",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"75-77 DONCASTER AVENUE",
+    "City / Ville":"THORNHILL",
+    "Province":"ON",
+    "Postal Code / Code postal":"L3T 1L6",
+    "Telephone / Téléphone":"(905) 771-9356"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.684822,43.516299 ]
+    },
+    "properties": {
+    "_id":24,
+    "Plant Number / No. de l'usine":4044,
+    "Plant Name /  Nom de l'usine":"Woodward Meat Purveyors Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"2586 BRISTOL CIRCLE",
+    "City / Ville":"OAKVILLE",
+    "Province":"ON",
+    "Postal Code / Code postal":"L6H 6Z7",
+    "Telephone / Téléphone":"(905) 847-7200"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.256350,43.785060 ]
+    },
+    "properties": {
+    "_id":25,
+    "Plant Number / No. de l'usine":4053,
+    "Plant Name /  Nom de l'usine":"Great Lake Seafood Trading Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"46 - 140 MILNER AVENUE",
+    "City / Ville":"SCARBOROUGH",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1S 3R3",
+    "Telephone / Téléphone":"(416) 292-5565"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.306591,43.716892 ]
+    },
+    "properties": {
+    "_id":26,
+    "Plant Number / No. de l'usine":4054,
+    "Plant Name /  Nom de l'usine":"Fisherfolk",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"90 NORTHLINE ROAD",
+    "City / Ville":"TORONTO",
+    "Province":"ON",
+    "Postal Code / Code postal":"M4B 3E5",
+    "Telephone / Téléphone":"(416) 562-8819"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.294258,43.804454 ]
+    },
+    "properties": {
+    "_id":27,
+    "Plant Number / No. de l'usine":4055,
+    "Plant Name /  Nom de l'usine":"Pearl River Food Company Ltd.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"B-15 - 23 MILLIKEN BLVD.",
+    "City / Ville":"SCARBOROUGH",
+    "Province":"ON",
+    "Postal Code / Code postal":"M1V 5H7",
+    "Telephone / Téléphone":"(413) 332-1676"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.967760,46.499120 ]
+    },
+    "properties": {
+    "_id":28,
+    "Plant Number / No. de l'usine":4056,
+    "Plant Name /  Nom de l'usine":"Local Jerky Plus Inc.",
+    "Operation Type":"Ontario Licensed Fish Processor",
+    "Address / Adresse":"873 KINGSWAY",
+    "City / Ville":"SUDBURY",
+    "Province":"ON",
+    "Postal Code / Code postal":"P3B 2E4",
+    "Telephone / Téléphone":"(705) 562-0397"
+    }
+  }
+]
+}
