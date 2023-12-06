@@ -1,18 +1,17 @@
+import { icons } from "../assets/icons.js";
+import { airports } from "/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/airports/airports-list.js";
+
 const map = (window.map = new maplibregl.Map({
   container: "map",
   style: "/map-styles/satellite.json",
-  center: [-75.69435, 45.38435], // Carleton
-  zoom: 15, // starting zoom
-  pitch: 42,
-  bearing: 0,
+  center: [-98.74, 56.415], // starting position [lng, lat]
+  zoom: 3, // starting zoom
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
-  maxBounds: [
-    [-75.72, 45.378],
-    [-75.67, 45.395],
-  ],
-  minZoom: 14,
   maxPitch: 70,
+  minZoom: 3,
 }));
+
+map.addControl(new maplibregl.FullscreenControl(), "top-left");
 
 // parameters to ensure the model is georeferenced correctly on the map
 const modelOrigin = [-75.69435, 45.38435];
@@ -74,6 +73,21 @@ const customLayer = {
       });
     });
 
+    loader.load(
+      "/arcn5005/f2023/students/nicolasarellanorisop/models/justin.glb",
+      (gltf) => {
+        const model = gltf.scene;
+
+        const scale = 50;
+
+        model.scale.x = scale;
+        model.scale.y = scale;
+        model.scale.z = scale;
+
+        this.scene.add(model);
+      }
+    );
+
     this.map = map;
 
     // use the MapLibre GL JS map canvas for three.js
@@ -126,4 +140,132 @@ const customLayer = {
 
 map.on("style.load", () => {
   map.addLayer(customLayer);
+  addLayers();
 });
+
+map.on("mousemove", () => {
+  const layer = map.getLayer("places");
+  if (!layer) addLayers();
+});
+
+// Go To Site 🏢
+const goTo = document.getElementById("go-to");
+let toggleGoTo = true;
+goTo.onclick = function () {
+  if (toggleGoTo) {
+    this.setAttribute("title", "Go to Canada");
+    document.getElementById("go-to-icon").setAttribute("d", icons.worldIcon);
+    // Fly to Carleton
+    flyTo(map, -75.697, 45.384, 15.6);
+  } else {
+    this.setAttribute("title", "Go to site");
+    document.getElementById("go-to-icon").setAttribute("d", icons.goToIcon);
+    // Fly to Canada
+    flyTo(map, -98.74, 56.415, 3, 0);
+  }
+  toggleGoTo = !toggleGoTo;
+};
+
+let airporsFeatureCollection = [];
+
+airports.forEach((airport) => {
+  const image =
+    airport.image === ""
+      ? "https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg"
+      : airport.image;
+
+  let airportFeature = {
+    code: `${airport.code}`,
+    type: "Feature",
+    properties: {
+      description: `<h2>${airport.name}</h2><ul><li>Code: ${airport.code}</li><li>Province: ${airport.province}</li><li>City: ${airport.city}</li></ul><img src="${image}" alt="${airport.code}" width=100px>`,
+    },
+    geometry: {
+      type: "Point",
+      coordinates: [airport.longitude, airport.latitude],
+    },
+  };
+
+  airporsFeatureCollection.push(airportFeature);
+  // Map Style
+  // Toggle Map view
+  const mapView = document.getElementById("map-view");
+  let toggleMapView = true;
+  mapView.onclick = function () {
+    if (toggleMapView) {
+      const mapIcon = document.getElementById("map-icon");
+      mapIcon.setAttribute("d", icons.satelliteIcon);
+      this.setAttribute("title", "Satellite view");
+      map.setStyle("/map-styles/streets.json");
+    } else {
+      const mapIcon = document.getElementById("map-icon");
+      this.setAttribute("title", "Map view");
+      mapIcon.setAttribute("d", icons.mapIcon);
+      map.setStyle("/map-styles/satelliteHybrid.json");
+    }
+    toggleMapView = !toggleMapView;
+  };
+});
+
+const addLayers = () => {
+  map.addSource("places", {
+    type: "geojson",
+    data: {
+      type: "FeatureCollection",
+      features: airporsFeatureCollection,
+    },
+  });
+
+  // Add a layer showing the places.
+  map.addLayer({
+    id: `places`,
+    type: "circle",
+    source: "places",
+    paint: {
+      "circle-color": "red",
+      "circle-radius": 6,
+      "circle-stroke-width": 2,
+      "circle-stroke-color": "yellow",
+    },
+  });
+
+  // Create a popup, but don't add it to the map yet.
+  const popup = new maplibregl.Popup({
+    closeButton: false,
+    closeOnClick: false,
+  });
+
+  map.on("mouseenter", "places", (e) => {
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = "pointer";
+
+    const coordinates = e.features[0].geometry.coordinates.slice();
+    const description = e.features[0].properties.description;
+
+    // Ensure that if the map is zoomed out such that multiple
+    // copies of the feature are visible, the popup appears
+    // over the copy being pointed to.
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+      coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+
+    // Populate the popup and set its coordinates based on the feature found.
+    popup.setLngLat(coordinates).setHTML(description).addTo(map);
+  });
+
+  map.on("mouseleave", "places", () => {
+    map.getCanvas().style.cursor = "";
+    popup.remove();
+  });
+};
+
+// FUNCTIONS _____________________________________________________________________________________________________
+
+function flyTo(map, lng, lat, zoom = 15, pitch = 50) {
+  map.flyTo({
+    center: [lng, lat],
+    zoom: zoom,
+    pitch: pitch,
+    duration: 2000,
+  });
+}

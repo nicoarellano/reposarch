@@ -1,8 +1,8 @@
 const scene = new THREE.Scene();
 
 const size = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: window.innerWidth * 0.6,
+  height: window.innerHeight * 0.4,
 };
 
 const aspect = size.width / size.height;
@@ -17,7 +17,8 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-document.body.appendChild(renderer.domElement);
+const threeContainer = document.getElementById("three-container");
+threeContainer.appendChild(renderer.domElement);
 
 //Creates grids and axes in the scene
 const grid = new THREE.GridHelper(10, 10);
@@ -106,12 +107,12 @@ createText("- Research team lead at CIMS", 2, "0XFF0000");
 createText("- PhD candidate at ASAU", 1, "0XFF0000");
 createText("- Amateur programmer", 0, "0XFF0000");
 
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
+camera.position.z = 8;
+camera.position.x = 2;
+camera.position.y = 8;
 
-scene.position.x = -5;
-scene.position.z = 5;
+// scene.position.x = -5;
+// scene.position.z = 5;
 scene.position.y = -3;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -151,11 +152,25 @@ function animate() {
 
 animate();
 
+const fullScreenButton = document.getElementById("full-screen");
+
+let fullScreen = false;
+
+fullScreenButton.addEventListener("click", () => {
+  fullScreen = !fullScreen;
+  resize();
+  console.log(fullScreen ? "FULL SCREEN!!" : "little screen");
+});
+
 //Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
-  size.width = window.innerWidth;
-  size.height = window.innerHeight;
+  resize();
+});
+
+const resize = () => {
+  size.width = window.innerWidth * (fullScreen ? 0.92 : 0.6);
+  size.height = window.innerHeight * (fullScreen ? 0.9 : 0.4);
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
-});
+};

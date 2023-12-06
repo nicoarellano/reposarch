@@ -1,0 +1,747 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.06,46.58 ]
+    },
+    "properties": {
+    "Name":"Adanac Ski Hill",
+    "Location":"Sudbury",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"374 m",
+    "Number-Of-Lifts":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.4,46.22 ]
+    },
+    "properties": {
+    "Name":"Antoine Mountain",
+    "Location":"Mattawa",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"192 m",
+    "Number-Of-Lifts":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.35,44.1 ]
+    },
+    "properties": {
+    "Name":"Batawa Ski Hill",
+    "Location":"Quinte West",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"762 m",
+    "Number-Of-Lifts":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.32,44.21 ]
+    },
+    "properties": {
+    "Name":"Beaver Valley Ski Club",
+    "Location":"Beaver Valley",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"155 m",
+    "Number-Of-Lifts":6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.18,44.3 ]
+    },
+    "properties": {
+    "Name":"Blue Mountain",
+    "Location":"Collingwood",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":" 220 m",
+    "Number-Of-Lifts":13
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.34,42.94 ]
+    },
+    "properties": {
+    "Name":"Boler Mountain",
+    "Location":"London",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"63 m",
+    "Number-Of-Lifts":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"Brimacombe",
+    "Location":"Port Perry",
+    "Hours":"9:00 am- 9:00pm",
+    "Vertical":"72 m",
+    "Number-Of-Lifts":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.46,45.16 ]
+    },
+    "properties": {
+    "Name":"Calabogie Peaks",
+    "Location":"Ottawa",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"232 m",
+    "Number-Of-Lifts":3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.86,43.87 ]
+    },
+    "properties": {
+    "Name":"Caledon Ski Club",
+    "Location":"Caledon",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"72 m",
+    "Number-Of-Lifts":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.42,43.43 ]
+    },
+    "properties": {
+    "Name":"Chicopee",
+    "Location":"Kitchener",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"61 m",
+    "Number-Of-Lifts":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.05,44.01 ]
+    },
+    "properties": {
+    "Name":"Dagmar",
+    "Location":"Port Perry",
+    "Hours":"9:00 am- 9:00pm",
+    "Vertical":"65 m",
+    "Number-Of-Lifts":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.38,44.54 ]
+    },
+    "properties": {
+    "Name":"Georgian Peaks Club",
+    "Location":"Thornbury",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"250 m",
+    "Number-Of-Lifts":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.56,43.3 ]
+    },
+    "properties": {
+    "Name":"Glen Eden",
+    "Location":"Milton",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"72 m",
+    "Number-Of-Lifts":6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.13,45.2 ]
+    },
+    "properties": {
+    "Name":"Hidden Valley Highlands",
+    "Location":"Huntsville",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"100 m",
+    "Number-Of-Lifts":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.05,43.98 ]
+    },
+    "properties": {
+    "Name":"Hockley Valley",
+    "Location":"Mono",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"114 m",
+    "Number-Of-Lifts":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.4,44.34 ]
+    },
+    "properties": {
+    "Name":"Horseshoe Valley",
+    "Location":"Barrie",
+    "Hours":"9:00 am- 9:00pm",
+    "Vertical":"94 m",
+    "Number-Of-Lifts":8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.04,44 ]
+    },
+    "properties": {
+    "Name":"Lakeridge Ski Resort",
+    "Location":"Port perry",
+    "Hours":"9:00 am- 9:00pm",
+    "Vertical":"80 m",
+    "Number-Of-Lifts":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.05,44.2 ]
+    },
+    "properties": {
+    "Name":"Mansfield Ski Club",
+    "Location":"Mansfield",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"130 m",
+    "Number-Of-Lifts":7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.4,44.37 ]
+    },
+    "properties": {
+    "Name":"Mount St. Louis Moonstone",
+    "Location":"Moonstone",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"168 m",
+    "Number-Of-Lifts":13
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.43,43.75 ]
+    },
+    "properties": {
+    "Name":"North York Ski Center",
+    "Location":"Toronto",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"55 m",
+    "Number-Of-Lifts":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.01,43.99 ]
+    },
+    "properties": {
+    "Name":"Skyloft Ski Country Club",
+    "Location":"Port Perry",
+    "Hours":"9:00 am- 9:00pm",
+    "Vertical":"45 m",
+    "Number-Of-Lifts":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.26,43.49 ]
+    },
+    "properties": {
+    "Name":"Uplands Ski Area",
+    "Location":"",
+    "Hours":"9:00 am- 4:00pm",
+    "Vertical":"30",
+    "Number-Of-Lifts":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "Name":"",
+    "Location":"",
+    "Hours":"",
+    "Vertical":"",
+    "Number-Of-Lifts":null
+    }
+  }
+]
+}

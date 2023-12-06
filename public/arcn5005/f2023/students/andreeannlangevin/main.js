@@ -32,7 +32,11 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff122 });
 const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0159ff });
+<<<<<<< HEAD
 const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0045});
+=======
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0045 });
+>>>>>>> d5e839c5af9084406d82421542eada4e0a716561
 const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff999 });
 
 const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
@@ -58,7 +62,11 @@ const loader = new THREE.GLTFLoader();
 let mesh;
 
 loader.load(
+<<<<<<< HEAD
   "/Donut10.glb",
+=======
+  "./Donut10.glb",
+>>>>>>> d5e839c5af9084406d82421542eada4e0a716561
   function (gltf) {
     gltf.scene.scale.x = 7;
     gltf.scene.scale.y = 7;
@@ -74,7 +82,11 @@ loader.load(
 );
 
 loader.load(
+<<<<<<< HEAD
   "/mushroom.glb",
+=======
+  "./mushroom.glb",
+>>>>>>> d5e839c5af9084406d82421542eada4e0a716561
   function (gltf) {
     gltf.scene.scale.x = 2;
     gltf.scene.scale.y = 2;
@@ -90,7 +102,11 @@ loader.load(
 );
 
 loader.load(
+<<<<<<< HEAD
   "/Candy9.glb",
+=======
+  "./Candy9.glb",
+>>>>>>> d5e839c5af9084406d82421542eada4e0a716561
   function (gltf) {
     gltf.scene.scale.x = 2;
     gltf.scene.scale.y = 2;
@@ -105,7 +121,10 @@ loader.load(
   }
 );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d5e839c5af9084406d82421542eada4e0a716561
 camera.position.z = 5;
 camera.position.x = 2;
 camera.position.y = 4;
