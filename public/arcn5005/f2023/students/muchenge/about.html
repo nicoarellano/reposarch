@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Map Assignment</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./Style.css" />
     <meta property="og:description" content="Map Assignment." />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,15 +34,15 @@
 
   <body>
     <div id="map"></div>
-    <div id="keyboard-instructions">
+    <div id="keyboard-instructions" class="on-top">
       Press 'O' to move to Ottawa, 'W' to move to Winnipeg, 'C' to move to
       China.
     </div>
-    <div id="mouse-instruction">
+    <div id="mouse-instruction" class="on-top">
       "Left Click" two places to show distance, "Right Click" an icon to show
       information.
     </div>
-    <div id="distance" class="distance-container"></div>
+    <div id="distance" class="distance-container on-top"></div>
     <script src="./map/main.js"></script>
   </body>
 </html>
