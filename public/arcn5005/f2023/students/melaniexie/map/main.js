@@ -3,8 +3,8 @@ import { plants } from "./plants.js";
 const map = new maplibregl.Map({
         container: 'map',
         style: 'https://api.maptiler.com/maps/backdrop-light/style.json?key=RGPOEN82OWm2BBbdAcht',
-        center: [-75.69, 45.38],
-        zoom: 11.2
+        center: [-79.58,43.60],
+        zoom: 7
     });
 
 let PlantsFeatureCollection = [];
@@ -20,7 +20,7 @@ let plantFeature = {
     code: `${plant.code}`,
     type: "Feature",
     properties: {
-      description: `<h1>${plant.name}</h1><ul><li>Code: ${plant.id}</li><li>Province: ${plant.address}</li><li>City: ${plant.city}</li></ul><img src="${image}" alt="${plant.code}" width=200px>`,
+      description: `<h1>${plant.Name}</h1><ul><li>Code: ${plant.id}</li><li>Province: ${plant.Address}</li><li>City: ${plant.City}</li></ul><img src="${image}" alt="${plant.id}" width=200px>`,
     },
     geometry: {
       type: "Point",
@@ -41,15 +41,17 @@ map.on("load", () => {
     });
 
     
-                // Add a layer showing the places.
-                map.addLayer({
-                    id: 'places',
-                    type: 'symbol',
-                    source: 'places',
-                    'layout': {
-                        'icon-image': 'custom-marker',
-                        'icon-overlap': 'always'
-                    }
+     // Add a layer showing the places.
+    map.addLayer({
+        id: "places",
+        type: "circle",
+        source: "places",
+        paint: {
+            "circle-color": "red",
+            "circle-radius": 15,
+            "circle-stroke-width": 2,
+            "circle-stroke-color": "yellow",
+                },
                 });
             
 
