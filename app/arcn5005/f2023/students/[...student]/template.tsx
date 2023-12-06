@@ -25,15 +25,19 @@ export default function NestedTemplate({
 
   return (
     <main className="flex flex-col w-screen h-screen ">
-      <nav className="top-0 flex flex-row w-full h-24 ">
-        <Header
-          title={`${
-            student
-              ? `${student.firstName} ${student.lastName}`
-              : "Unregistered Student"
-          } ${params.assignments ? `- ${params.assignments} assignment` : ""}`}
-        />
-      </nav>
+      {Boolean(!assignment) && (
+        <nav className="top-0 flex flex-row w-full h-24 ">
+          <Header
+            title={`${
+              student
+                ? `${student.firstName} ${student.lastName}`
+                : "Unregistered Student"
+            } ${
+              params.assignments ? `- ${params.assignments} assignment` : ""
+            }`}
+          />
+        </nav>
+      )}
       {Boolean(student || assignment) ? (
         <section className="flex justify-center w-full h-full">
           {children}
@@ -43,14 +47,16 @@ export default function NestedTemplate({
           <ReturnButton />
         </section>
       )}
-      <footer className="m-4 flex flex-row absolute z-20 bottom-0 right-0">
-        <IconButton onClick={() => router.back()} title={"Back"}>
-          <Avatar
-            src={`/arcn5005/f2023/students/${username}/avatar.jpg`}
-            sx={{ width: 45, height: 45 }}
-          />
-        </IconButton>
-      </footer>
+      {Boolean(!assignment) && (
+        <footer className="m-4 flex flex-row absolute z-20 bottom-0 right-0">
+          <IconButton onClick={() => router.back()} title={"Back"}>
+            <Avatar
+              src={`/arcn5005/f2023/students/${username}/avatar.jpg`}
+              sx={{ width: 45, height: 45 }}
+            />
+          </IconButton>
+        </footer>
+      )}
     </main>
   );
 }
