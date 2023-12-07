@@ -41,13 +41,17 @@ export default function BimExample({
     viewer.renderer = rendererComponent;
     const postproduction = rendererComponent.postproduction;
 
+    const mainToolbar = new OBC.Toolbar(viewer);
+    mainToolbar.name = "Main toolbar";
+
+    viewer.init();
     const cameraComponent = new OBC.OrthoPerspectiveCamera(viewer);
     viewer.camera = cameraComponent;
 
     const raycasterComponent = new OBC.SimpleRaycaster(viewer);
     viewer.raycaster = raycasterComponent;
 
-    viewer.init();
+    viewer.ui.addToolbar(mainToolbar);
     cameraComponent.updateAspect();
     postproduction.enabled = true;
 
@@ -109,7 +113,6 @@ export default function BimExample({
 
     if (fragment) loadFragments();
 
-    const mainToolbar = new OBC.Toolbar(viewer);
     mainToolbar.addChild(
       ifcLoader.uiElement.get("main"),
       propertiesProcessor.uiElement.get("main")

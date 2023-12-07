@@ -362,7 +362,7 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
-    title: "Final assignment workshop and Presentations",
+    title: "Final assignment workshop and assignment 3 presentations",
     id: `week13`,
     url: `week13`,
     date: initialDate.add(13, "week"),

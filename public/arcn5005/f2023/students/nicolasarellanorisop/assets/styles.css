@@ -146,6 +146,7 @@ h3 {
   backdrop-filter: var(--blur-filter);
   border-radius: 45px;
   transition: all 0.3s ease 0s;
+  pointer-events: all;
 }
 
 .circular:hover {
@@ -176,6 +177,7 @@ h3 {
   justify-content: center;
   position: absolute;
   width: 100%;
+  pointer-events: none;
 }
 
 nav {
