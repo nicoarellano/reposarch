@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <title>Jennifer's Map Assingment</title>
-    <meta property="og:description" content="Jennifer's Map Assingment." />
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
-    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
-
-    <style>
-        body { margin: 0; padding: 0; }
-        html, body, #map { height: 100%; }
-    </style>
-
-    <style>
-       .maplibregl-popup {
+.maplibregl-popup {
        max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
       }
-     </style>
-
-<style>
      
   #menu {
     background: #fff;
@@ -63,20 +42,5 @@
     }
     
     #menu a.active:hover {
-    background: rgb(83, 92, 110);
+    background: #4baf69;
     }
-
-
-  </style>
-  <nav id="menu"></nav>
-
-</head>
-
-<body>
-
-  <div id="map"></div>
-  <script src="./main.js"></script>
-
-</body>
-
-</html>
