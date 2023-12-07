@@ -1,12 +1,12 @@
 "use client";
+
 import { classListf2023 } from "../(classList)/classList";
 import { Header } from "../../../../../components/Header";
-import { useParams } from "next/navigation";
 import { IconButton } from "@mui/material";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import ReturnButton from "../../../../../components/Common/ReturnButton";
 import Avatar from "@mui/material/Avatar";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export default function NestedTemplate({
   children,
@@ -34,8 +34,9 @@ export default function NestedTemplate({
           } ${params.assignments ? `- ${params.assignments} assignment` : ""}`}
         />
       </nav>
+
       {Boolean(student || assignment) ? (
-        <section className="flex justify-center w-full h-full">
+        <section className="flex justify-center w-full h-full ">
           {children}
         </section>
       ) : (
@@ -43,14 +44,16 @@ export default function NestedTemplate({
           <ReturnButton />
         </section>
       )}
-      <footer className="m-4 flex flex-row absolute z-20 bottom-0 right-0">
-        <IconButton onClick={() => router.back()} title={"Back"}>
-          <Avatar
-            src={`/arcn5005/f2023/students/${username}/avatar.jpg`}
-            sx={{ width: 45, height: 45 }}
-          />
-        </IconButton>
-      </footer>
+      {
+        <footer className="m-4 flex flex-row absolute z-20 bottom-0 right-0">
+          <IconButton onClick={() => router.back()} title={"Back"}>
+            <Avatar
+              src={`/arcn5005/f2023/students/${username}/avatar.jpg`}
+              sx={{ width: 45, height: 45 }}
+            />
+          </IconButton>
+        </footer>
+      }
     </main>
   );
 }
