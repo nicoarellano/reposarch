@@ -47,7 +47,7 @@ map.on("load", () => {
         type: "circle",
         source: "places",
         paint: {
-            "circle-color": "red",
+            "circle-color": "blue",
             "circle-radius": 15,
             "circle-stroke-width": 2,
             "circle-stroke-color": "yellow",
