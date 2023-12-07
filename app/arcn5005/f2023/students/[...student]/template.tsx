@@ -1,12 +1,12 @@
 "use client";
+
 import { classListf2023 } from "../(classList)/classList";
 import { Header } from "../../../../../components/Header";
-import { useParams } from "next/navigation";
 import { IconButton } from "@mui/material";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import ReturnButton from "../../../../../components/Common/ReturnButton";
 import Avatar from "@mui/material/Avatar";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 export default function NestedTemplate({
   children,
@@ -36,7 +36,7 @@ export default function NestedTemplate({
       </nav>
 
       {Boolean(student || assignment) ? (
-        <section className="flex justify-center w-full h-full">
+        <section className="flex justify-center w-full h-full ">
           {children}
         </section>
       ) : (
