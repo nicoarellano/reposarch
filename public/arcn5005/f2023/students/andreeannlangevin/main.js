@@ -66,6 +66,36 @@
       );
   
 
+      ('load', () => {
+        map.addImage('pulsing-dot', pulsingDot, {pixelRatio: 2});
+
+        map.addSource('points', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-75.730931, 45.400586]
+                        }
+                    }
+                ]
+            }
+        });
+        map.addLayer({
+            'id': 'points',
+            'type': 'symbol',
+            'source': 'points',
+            'layout': {
+                'icon-image': 'pulsing-dot'
+            }
+        });
+    });
+
+
+
         map.loadImage(
             'https://maplibre.org/maplibre-gl-js/docs/assets/custom_marker.png',
             // Add an image to use as a custom marker
@@ -294,34 +324,6 @@
             return true;
         }
     };
-
-    map.on('load', () => {
-        map.addImage('pulsing-dot', pulsingDot, {pixelRatio: 2});
-
-        map.addSource('points', {
-            'type': 'geojson',
-            'data': {
-                'type': 'FeatureCollection',
-                'features': [
-                    {
-                        'type': 'Feature',
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [-75.730931, 45.400586]
-                        }
-                    }
-                ]
-            }
-        });
-        map.addLayer({
-            'id': 'points',
-            'type': 'symbol',
-            'source': 'points',
-            'layout': {
-                'icon-image': 'pulsing-dot'
-            }
-        });
-    });
 
     maplibregl.setRTLTextPlugin(
         'https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.min.js'
