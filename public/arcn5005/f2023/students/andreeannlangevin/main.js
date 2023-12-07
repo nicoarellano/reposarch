@@ -1,156 +1,361 @@
-const scene = new THREE.Scene();
 
-const size = {
-  width: window.innerWidth,
-  height: window.innerHeight,
-};
+    maplibregl.setRTLTextPlugin(
+        'https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.min.js'
+    );
 
-const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
-//Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas");
-const renderer = new THREE.WebGLRenderer({
-  canvas: threeCanvas,
-  alpha: true,
-});
+  const MAPTILER_KEY = 'oCFGyzwQ7UBV484XYhxL';
+  const map = new maplibregl.Map({
+      style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_KEY}`,
+      center: [-75.731160, 45.400389],      
+      zoom: 15.5,
+      pitch: 45,
+      bearing: -17.6,
+      container: 'map',
+      antialias: true
+  });
 
-renderer.setSize(size.width, size.height);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-document.body.appendChild(renderer.domElement);
+  // The 'building' layer in the streets vector source contains building-height
+  // data from OpenStreetMap.
+  map.on('load', () => {
+      // Insert the layer beneath any symbol layer.
+      const layers = map.getStyle().layers;
 
-//Creates grids and axes in the scene
-const grid = new THREE.GridHelper(50, 30);
-scene.add(grid);
+      let labelLayerId;
+      for (let i = 0; i < layers.length; i++) {
+          if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+              labelLayerId = layers[i].id;
+              break;
+          }
+      }
 
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
+      map.addSource('openmaptiles', {
+          url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${MAPTILER_KEY}`,
+          type: 'vector',
+      });
 
-const geometry = new THREE.BoxGeometry(1, 1, 1);
+      map.addLayer(
+          {
+              'id': '3d-buildings',
+              'source': 'openmaptiles',
+              'source-layer': 'building',
+              'type': 'fill-extrusion',
+              'minzoom': 15,
+              'paint': {
+                  'fill-extrusion-color': [
+                      'interpolate',
+                      ['linear'],
+                      ['get', 'render_height'], 0, 'lightsalmon', 30, 'lightgreen', 75, 'mediumslateblue'
+                  ],
+                  'fill-extrusion-height': [
+                      'interpolate',
+                      ['linear'],
+                      ['zoom'],
+                      15,
+                      0,
+                      16,
+                      ['get', 'render_height']
+                  ],
+                  'fill-extrusion-base': ['case',
+                      ['>=', ['get', 'zoom'], 16],
+                      ['get', 'render_min_height'], 0
+                  ]
+              }
+          },
+          labelLayerId
+      );
+  
 
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff122 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0159ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0045 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff999 });
+        map.loadImage(
+            'https://maplibre.org/maplibre-gl-js/docs/assets/custom_marker.png',
+            // Add an image to use as a custom marker
+            (error, image) => {
+                if (error) throw error;
+                map.addImage('custom-marker', image);
 
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
+                map.addSource('places', {
+                    'type': 'geojson',
+                    'data': {
+                        'type': 'FeatureCollection',
+                        'features': [
+                
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> LTC Round-About</strong><p> Site of the futur project Round-About LTC </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.730931, 45.400586]
+                                }
+                            },
 
-yellowCube.position.z = -3;
-yellowCube.position.y = 3;
-blueCube.position.x = -3;
-blueCube.position.y = 2;
-redCube.position.x = 3;
-redCube.position.y = -2;
-greenCube.position.z = 3;
+                       {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> Parkdale Market </strong><p> Plays structure, art sculptures, restroom </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.730423, 45.401655] 
+                                }
+                            },
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> **To come** Lantern Park </strong><p> Site of the futur Lantern Park </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.731329, 45.400455]
+                                }
+                            },
 
-scene.add(yellowCube);
-scene.add(blueCube);
-scene.add(redCube);
-scene.add(greenCube);
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> Irving Greenberg Theatre Centre </strong><p> Drama theather </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.7318414, 45.399944] 
+                                }
+                            },
 
-const loader = new THREE.GLTFLoader();
+                            {
+                                'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> Parc McCormick </strong><p> Park with paths </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.727224, 45.402512]  
+                                }
+                            },
 
-let mesh;
+                            {
+                              'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> Parc McCormick </strong><p> Walking paths with green space </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.7318414, 45.399944] 
+                                }
+                            },
+                            
+                            {
+                              'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> Parc Hintonburg </strong><p> Walking paths with green space with historical stone walls </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.723106, 45.403055]
+                                }
+                            },
+                            
+                            {
+                              'type': 'Feature',
+                                'properties': {
+                                    'description':
+                                        '<strong> Fisher Park Playground </strong><p> Water Playground </p>'
+                                },
+                                'geometry': {
+                                    'type': 'Point',
+                                    'coordinates': [-75.731399, 45.396413]
+                                }
+                            }
 
-loader.load(
-  "./Donut10.glb",
-  function (gltf) {
-    gltf.scene.scale.x = 7;
-    gltf.scene.scale.y = 7;
-    gltf.scene.scale.z = 7;
+                        ]
+                    }
+                });
 
-    mesh = gltf.scene;
-    scene.add(gltf.scene);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
+                // Add a layer showing the places.
+                map.addLayer({
+                    'id': 'places',
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        'icon-image': 'custom-marker',
+                        'icon-overlap': 'always'
+                    }
+                });
+            }
+        );
 
-loader.load(
-  "./mushroom.glb",
-  function (gltf) {
-    gltf.scene.scale.x = 2;
-    gltf.scene.scale.y = 2;
-    gltf.scene.scale.z = 2;
+        // Create a popup, but don't add it to the map yet.
+        const popup = new maplibregl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
 
-    mesh = gltf.scene;
-    scene.add(gltf.scene);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
+        map.on('mouseenter', 'places', (e) => {
+            // Change the cursor style as a UI indicator.
+            map.getCanvas().style.cursor = 'pointer';
 
-loader.load(
-  "./Candy9.glb",
-  function (gltf) {
-    gltf.scene.scale.x = 2;
-    gltf.scene.scale.y = 2;
-    gltf.scene.scale.z = 2;
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const description = e.features[0].properties.description;
 
-    mesh = gltf.scene;
-    scene.add(gltf.scene);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
 
-camera.position.z = 5;
-camera.position.x = 2;
-camera.position.y = 4;
+            // Populate the popup and set its coordinates
+            // based on the feature found.
+            popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        });
 
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
+        map.on('mouseleave', 'places', () => {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+        });
+    
+    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    
+    
+ 
 
-//Creates the lights of the scene
-const lightColor = 0xffffff;
+    // implementation of StyleImageInterface to draw a pulsing dot icon on the map
+    // Search for StyleImageInterface in https://maplibre.org/maplibre-gl-js/docs/API/
+    const size = 200;
+    const pulsingDot = {
+        width: size,
+        height: size,
+        data: new Uint8Array(size * size * 4),
 
-const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
-scene.add(ambientLight);
+        // get rendering context for the map canvas when layer is added to the map
+        onAdd () {
+            const canvas = document.createElement('canvas');
+            canvas.width = this.width;
+            canvas.height = this.height;
+            this.context = canvas.getContext('2d');
+        },
 
-const directionalLight = new THREE.DirectionalLight(lightColor, 1);
-directionalLight.position.set(5, 10, 5);
-directionalLight.target.position.set(0, 3, 0);
-scene.add(directionalLight);
-scene.add(directionalLight.target);
+        // called once before every frame where the icon will be used
+        render () {
+            const duration = 1000;
+            const t = (performance.now() % duration) / duration;
 
-function animate() {
-  requestAnimationFrame(animate);
+            const radius = (size / 2) * 0.3;
+            const outerRadius = (size / 2) * 0.7 * t + radius;
+            const context = this.context;
 
-  if (mesh) mesh.rotation.y += 0.01;
+            // draw outer circle
+            context.clearRect(0, 0, this.width, this.height);
+            context.beginPath();
+            context.arc(
+                this.width / 2,
+                this.height / 2,
+                outerRadius,
+                0,
+                Math.PI * 2
+            );
+            context.fillStyle = `rgba(255, 200, 200,${1 - t})`;
+            context.fill();
 
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
+            // draw inner circle
+            context.beginPath();
+            context.arc(
+                this.width / 2,
+                this.height / 2,
+                radius,
+                0,
+                Math.PI * 2
+            );
+            context.fillStyle = 'rgba(255, 100, 100, 1)';
+            context.strokeStyle = 'white';
+            context.lineWidth = 2 + 4 * (1 - t);
+            context.fill();
+            context.stroke();
 
-  blueCube.rotation.x += 0.02;
-  blueCube.rotation.y -= 0.01;
+            // update this image's data with data from the canvas
+            this.data = context.getImageData(
+                0,
+                0,
+                this.width,
+                this.height
+            ).data;
 
-  redCube.rotation.x -= 0.01;
-  redCube.rotation.y -= 0.02;
+            // continuously repaint the map, resulting in the smooth animation of the dot
+            map.triggerRepaint();
 
-  greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
+            // return `true` to let the map know that the image was updated
+            return true;
+        }
+    };
 
-  renderer.render(scene, camera);
-}
+    map.on('load', () => {
+        map.addImage('pulsing-dot', pulsingDot, {pixelRatio: 2});
 
-animate();
+        map.addSource('points', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-75.730931, 45.400586]
+                        }
+                    }
+                ]
+            }
+        });
+        map.addLayer({
+            'id': 'points',
+            'type': 'symbol',
+            'source': 'points',
+            'layout': {
+                'icon-image': 'pulsing-dot'
+            }
+        });
+    });
 
-//Adjust the viewport to the size of the browser
-window.addEventListener("resize", () => {
-  size.width = window.innerWidth;
-  size.height = window.innerHeight;
-  camera.aspect = size.width / size.height;
-  camera.updateProjectionMatrix();
-  renderer.setSize(size.width, size.height);
-});
+    maplibregl.setRTLTextPlugin(
+        'https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.min.js'
+    );
+
+        map.setLayoutProperty('label_country', 'text-field', [
+            'format',
+            ['get', 'name_en'],
+            {'font-scale': 1.2},
+            '\n',
+            {},
+            ['get', 'name'],
+            {
+                'font-scale': 0.8,
+                'text-font': [
+                    'literal',
+                    ['DIN Offc Pro Italic', 'Arial Unicode MS Regular']
+                ]
+            }
+        ]);
+        
+            map.setLayoutProperty('label_country', 'text-field', [
+                'format',
+                ['get', 'name_en'],
+                {'font-scale': 1.2},
+                '\n',
+                {},
+                ['get', 'name'],
+                {
+                    'font-scale': 0.8,
+                    'text-font': [
+                        'literal',
+                        ['DIN Offc Pro Italic', 'Arial Unicode MS Regular']
+                    ]
+                }
+            ]);
+        })
