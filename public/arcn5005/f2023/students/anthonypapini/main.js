@@ -1,155 +1,68 @@
-const scene = new THREE.Scene();
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXBhcDE5IiwiYSI6ImNscHVqYW9pODBsbHgya3A5OXkwNzF1ZHUifQ.ff_LW487F2AmIYFYA0DlFA';
 
-const size = {
-  width: window.innerWidth,
-  height: window.innerHeight,
-};
-
-const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
-
-const threeCanvas = document.getElementById("three-canvas");
-const renderer = new THREE.WebGLRenderer({
-  canvas: threeCanvas,
-  alpha: true,
+const map = new mapboxgl.Map({
+    container: 'map',
+    center: [-75.697193, 45.421530],
+    zoom: 11,
+    style: 'mapbox://styles/mapbox/streets-v11'
 });
 
-renderer.setSize(size.width, size.height);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-document.body.appendChild(renderer.domElement);
+const fireStations = [
+    { coords: [-75.74847539175906, 45.27783245864923], color: '#FF0000', name: 'Fire Hall 44' },
+    { coords: [-75.75983386950179, 45.332743904812], color: '#FFA500', name: 'Nepean Fire and Emergency Services' },
+    { coords: [-75.72206837099154, 45.34842960355928], color: '#FFFF00', name: 'Fire Hall 24' },
+    { coords: [-75.76395374206653, 45.35711519759712], color: '#008000', name: 'Fire Hall 21' },
+    { coords: [-75.78901630016881, 45.36676429426765], color: '#0000FF', name: 'Fire Hall 22' },
+    { coords: [-75.74198108838785, 45.387745397423586], color: '#4B0082', name: 'Fire Hall 23' },
+    { coords: [-75.66851002764973, 45.35301383318781], color: '#EE82EE', name: 'Fire Hall 33' },
+    { coords: [-75.69082600404215, 45.37689407464371], color: '#FFC0CB', name: 'Fire Hall 34' },
+    { coords: [-75.62400755911807, 45.372949194471616], color: '#A52A2A', name: 'Fire Hall 31' },
+    { coords: [-75.66191637084592, 45.38358393182082], color: '#D2691E', name: 'Fire Hall 35' },
+    { coords: [-75.60114767043413, 45.4160857007055], color: '#FF4500', name: 'Fire Hall 36' },
+    { coords: [-75.6538477091689, 45.422833198283904], color: '#2E8B57', name: 'Fire Hall 56' },
+    { coords: [-75.68268681831367, 45.403914068230335], color: '#1E90FF', name: 'Fire Hall 12' },
+    { coords: [-75.71324254109801, 45.40921688402337], color: '#FFD700', name: 'Fire Hall 11' },
+    { coords: [-75.68333755159276, 45.42698007944572], color: '#BC8F8F', name: 'Fire Hall 13' },
+    { coords: [-75.67020005720238, 45.445576234392156], color: '#4169E1', name: 'Fire Hall 57' },
+    { coords: [-75.62897550583948, 45.447324275675165], color: '#8B4513', name: 'Fire Hall 51' }
+];
 
-const grid = new THREE.GridHelper(10, 10);
-scene.add(grid);
+map.on('load', () => {
+    fireStations.forEach(station => {
+        
+        const el = document.createElement('div');
+        el.className = 'marker';
+        el.style.backgroundColor = station.color;
+        el.style.width = '20px';
+        el.style.height = '20px';
+        el.style.borderRadius = '50%';
+        el.style.border = '2px solid white';
 
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
-
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
-
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
-
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
-
-yellowCube.position.z = -3;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
-
-scene.add(yellowCube);
-scene.add(blueCube);
-scene.add(greenCube);
-
-const GLTFLoader = new THREE.GLTFLoader();
-
-let mesh;
-
-function loadGLB(path, scale, x, z) {
-  GLTFLoader.load(
-    path,
-    function (gltf) {
-      mesh = gltf.scene;
-      mesh.scale.set(scale, scale, scale);
-      mesh.position.set(x, 0, z);
-      scene.add(mesh);
-    },
-    undefined,
-    function (error) {
-      console.error(error);
-    }
-  );
-}
-
-loadGLB("./Models/From Blender.glb", 0.3, 0, 0);
-
-const fontLoader = new THREE.FontLoader();
-
-function createText(text, elevation, textColor, size) {
-  fontLoader.load('./Fonts/helvetiker_regular.typeface.json', function (font) {
-    const textGeometry = new THREE.TextGeometry(text, {
-      font: font,
-      size: size,
-      height: 0.1,
-      curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
+        // Add the marker to the map
+        new mapboxgl.Marker(el)
+            .setLngLat(station.coords)
+            .addTo(map);
     });
 
-    const textMaterial = new THREE.MeshLambertMaterial({ color: new THREE.Color(textColor) });
-    const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+    
+    const legendEl = document.getElementById('legend');
+    fireStations.forEach(station => {
+        const item = document.createElement('div');
+        item.style.display = 'flex';
+        item.style.alignItems = 'center';
+        item.style.marginBottom = '5px';
 
-    textMesh.position.set(2, elevation, 0);
+        const colorSwatch = document.createElement('div');
+        colorSwatch.style.backgroundColor = station.color;
+        colorSwatch.style.width = '24px';
+        colorSwatch.style.height = '24px';
+        colorSwatch.style.borderRadius = '50%';
+        colorSwatch.style.marginRight = '10px';
 
-    scene.add(textMesh);
-  });
-}
+        const stationName = document.createTextNode(station.name);
 
-createText("Anthony Papini", 5, 0xFF00FF, 0.5);
-createText("- Guy on the left isn't me", 3, 0xFF0000, 0.5);
-createText("- I enjoy cool looking things", 2, 0xFF0000, 0.5);
-createText("- Master of Architecture", 1, 0xFF0000, 0.5);
-createText("- I am a sentient AI", 0, 0xFF0000, 0.5);
-
-camera.position.set(5, 2, 13);
-scene.position.set(-5, -3, 5);
-
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-scene.add(ambientLight);
-
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(5, 10, 5);
-directionalLight.target.position.set(0, 3, 0);
-scene.add(directionalLight);
-scene.add(directionalLight.target);
-
-function animate() {
-  requestAnimationFrame(animate);
-
-  if (mesh) mesh.rotation.y += 0.01;
-
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
-
-  blueCube.rotation.x += 0.02;
-  blueCube.rotation.y -= 0.01;
-
-  greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
-
-  renderer.render(scene, camera);
-}
-
-animate();
-
-window.addEventListener("resize", () => {
-  size.width = window.innerWidth;
-  size.height = window.innerHeight;
-  camera.aspect = size.width / size.height;
-  camera.updateProjectionMatrix();
-  renderer.setSize(size.width, size.height);
-});
-
-document.querySelector(".scroll-down-arrow").addEventListener("click", function () {
-  document.querySelector(".about-me").scrollIntoView({ behavior: "smooth" });
-});
-
-document.querySelector(".scroll-up-arrow").addEventListener("click", function () {
-  document.querySelector(".container").scrollIntoView({ behavior: "smooth" });
-});
-
-document.querySelector(".scroll-down-arrow-3d").addEventListener("click", function () {
-  document.querySelector(".assignment2").scrollIntoView({ behavior: "smooth" });
+        item.appendChild(colorSwatch);
+        item.appendChild(stationName);
+        legendEl.appendChild(item);
+    });
 });
