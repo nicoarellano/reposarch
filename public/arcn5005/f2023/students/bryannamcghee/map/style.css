@@ -16,7 +16,7 @@ body {
     top: 10px;
     right: 24px;
     padding: 40px;
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     border-radius: 10px;
     font-size: 40px;
     background-color: transparent;
@@ -24,8 +24,8 @@ body {
 
 .legend-marker {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin-right: 24px;
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 #title {
-    font-size: 150px;
+    font-size: 50px;
     position: absolute;
     top: 10px;
     left: 24px;

@@ -65,45 +65,7 @@ map.on('style.load', () => {
         }
     });
 
-    // Waterway pulse animation
-    map.addLayer(
-        {
-            'id': 'waterway-animation',
-            'type': 'line',
-            'source': 'mapbox://mapbox.mapbox-streets-v8',
-            'source-layer': 'waterway',
-            'layout': {
-                'line-cap': 'round',
-                'line-join': 'round',
-                'text-field': 'Waterway',
-                'text-size': {
-                    'base': 1,
-                    'stops': [[15, 4], [22, 12]]
-                },
-                'text-padding': 4,
-                'text-allow-overlap': true,
-                'text-ignore-placement': true,
-                'text-anchor': 'top'
-            },
-            'paint': {
-                'line-color': '#FF5733',
-                'line-width': 6, // Increased line width
-                'line-opacity': 0.8,
-                'line-dasharray': [6, 3], // Adjusted dash array
-                'line-translate': [0, 0],
-                'line-animation': {
-                    'duration': 5000, // Increased duration for a slower animation
-                    'loop': 'loop',
-                    'color': 'pulse' // Use pulse animation color
-                },
-                'text-color': '#FF5733', // Set text color
-                'text-halo-color': '#fff', // Set text halo color
-                'text-halo-width': 2 // Set text halo width
-            }
-        },
-        labelLayerId
-    );
-
+ 
     // Markers
     const markers = [
         { name: 'Patterson Creek', color: '#FF5733', coordinates: [-75.68735, 45.40668] },
@@ -128,7 +90,7 @@ map.on('style.load', () => {
 
     markers.forEach((marker) => {
         // Add markers for each location
-        new mapboxgl.Marker({ color: marker.color, scale: 6 })
+        new mapboxgl.Marker({ color: marker.color, scale: 3 })
             .setLngLat(marker.coordinates)
             .setPopup(new mapboxgl.Popup().setHTML(`<div class="popup-content">${marker.name}</div>`))
             .addTo(map);
