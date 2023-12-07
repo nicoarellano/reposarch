@@ -1,120 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" />
-  <script src="./main.js"></script>
-  <title>ABOUT PAGE</title>
+  <head>
+    <title>Display buildings in 3D</title>
+    <meta
+      property="og:description"
+      content="Use extrusions to display buildings' height in 3D."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
 
-</head>
-<body>
-  <h1>Andrée-Ann Langevin</h1>
-<div class="flex items-center justify-center">
-    <section style="display: flex; flex-direction: row; justify-content: left; align-items: left; gap: 5rem;">
-      <div class="slideshow-container">
-        <div class="flex items-center justify-center">
-          
-        
-        <div class="mySlides fade">
-          <img src="AAL.jpg" style="width:80%">
-          <div class="text">In front of MDSL, the building I work on 3 years.</div>
-        </div>
-  
-        <div class="mySlides fade">
-          <img src="Mocha1.jpg" style="width:80%">
-          <div class="text">Mocha - Alias Baby booooy.</div>
-        </div>
-  
-        <div class="mySlides fade">
-          <img src="wall.jpg" style="width:80%">
-          <div class="text">Little pieces of art I collect.</div>
-        </div>
-  
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-  
-        <div style="text-align:left">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-      </div>
-      <br/>
-  </div>
-</div>
-<br>
-    <div class="flex items-center justify-center">
-      <ul>
-        <li>I come from a town called Chicoutimi 🏛️</li>
-        <li>I own a small jungle at my house 🌹 </li>
-        <li>Crazy cat lady in the making 🐱 </li>
-        <li>Halloween is my favorite holiday 🎃 </li> 
-      </ul>
+    <!-- <script>
+      maplibregl.setRTLTextPlugin(
+        "https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.min.js"
+      );
 
-    </div>
-  </div>
-  <br>
-  
-    <div class=".video-container">
-          <video width="20%" controls>
-              <source src="Mocha.mp4" type="video/mp4">
-          </video>
-      </div>
+      map.on("load", () => {
+        map.setLayoutProperty("label_country", "text-field", [
+          "format",
+          ["get", "name_en"],
+          { "font-scale": 1.2 },
+          "\n",
+          {},
+          ["get", "name"],
+          {
+            "font-scale": 0.8,
+            "text-font": [
+              "literal",
+              ["DIN Offc Pro Italic", "Arial Unicode MS Regular"],
+            ],
+          },
+        ]);
+      });
+    </script> -->
 
-  </section>
-  <div> 
-    <br />
-    <h2> ASSIGNEMENTS </h2>
-    <br/>
-  </div>
-  <div class="assignments">
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/three-example">
-      <button id="three-button">THREE</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/bim-example">
-      <button id="bim-button">BIM</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/map-example">
-      <button id="map-button">MAP</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/final-example">
-      <button id="final-button">FINAL</button>
-    </a>
-  </div>
-</body>
+    <script>
+      const MAPTILER_KEY = "get_your_own_OpIi9ZULNHzrESv6T2vL";
+      const map = new maplibregl.Map({
+        // style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_KEY}`,
+        style:
+          "https://api.maptiler.com/maps/470d6019-657f-4f7d-a018-6ec6ae0d0093/style.json?key=4xF6FrxAyNgBUQ4n4bUN", // ANDREE-ANN, you need to get your own maptiler key otherwise this will not work on my page (for this to work I just used one of your classmates')
+        center: [-75.73116, 45.400389],
+        zoom: 15.5,
+        pitch: 45,
+        bearing: -17.6,
+        container: "map",
+        antialias: true,
+      });
 
+      // The 'building' layer in the streets vector source contains building-height
+      // data from OpenStreetMap.
+      map.on("load", () => {
+        // Insert the layer beneath any symbol layer.
+        const layers = map.getStyle().layers;
+
+        let labelLayerId;
+        for (let i = 0; i < layers.length; i++) {
+          if (layers[i].type === "symbol" && layers[i].layout["text-field"]) {
+            labelLayerId = layers[i].id;
+            break;
+          }
+        }
+
+        map.addSource("openmaptiles", {
+          url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${MAPTILER_KEY}`,
+          type: "vector",
+        });
+
+        map.addLayer(
+          {
+            id: "3d-buildings",
+            source: "openmaptiles",
+            "source-layer": "building",
+            type: "fill-extrusion",
+            minzoom: 15,
+            paint: {
+              "fill-extrusion-color": [
+                "interpolate",
+                ["linear"],
+                ["get", "render_height"],
+                0,
+                "lightsalmon",
+                30,
+                "lightgreen",
+                75,
+                "mediumslateblue",
+              ],
+              "fill-extrusion-height": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                15,
+                0,
+                16,
+                ["get", "render_height"],
+              ],
+              "fill-extrusion-base": [
+                "case",
+                [">=", ["get", "zoom"], 16],
+                ["get", "render_min_height"],
+                0,
+              ],
+            },
+          },
+          labelLayerId
+        );
+      });
+    </script>
+
+    <script>
+      map.on("load", () => {
+        map.loadImage(
+          "https://maplibre.org/maplibre-gl-js/docs/assets/custom_marker.png",
+          // Add an image to use as a custom marker
+          (error, image) => {
+            if (error) throw error;
+            map.addImage("custom-marker", image);
+
+            map.addSource("places", {
+              type: "geojson",
+              data: {
+                type: "FeatureCollection",
+                features: [
+                  {
+                    type: "Feature",
+                    properties: {
+                      description:
+                        "<strong>LTCRound-About</strong><p>Site of the futur project Round-About LTC</p>",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-75.730931, 45.400586],
+                    },
+                  },
+
+                  // ]
+                  //,'features': [
+
+                  {
+                    type: "Feature",
+                    properties: {
+                      description:
+                        "<strong>Street</strong><p>Second point test </p>",
+                    },
+                    geometry: {
+                      type: "Point",
+                      coordinates: [-75.7301, 45.400586],
+                    },
+                  },
+                ],
+              },
+            });
+
+            // Add a layer showing the places.
+            map.addLayer({
+              id: "places",
+              type: "symbol",
+              source: "places",
+              layout: {
+                "icon-image": "custom-marker",
+                "icon-overlap": "always",
+              },
+            });
+          }
+        );
+
+        // Create a popup, but don't add it to the map yet.
+        const popup = new maplibregl.Popup({
+          closeButton: false,
+          closeOnClick: false,
+        });
+
+        map.on("mouseenter", "places", (e) => {
+          // Change the cursor style as a UI indicator.
+          map.getCanvas().style.cursor = "pointer";
+
+          const coordinates = e.features[0].geometry.coordinates.slice();
+          const description = e.features[0].properties.description;
+
+          // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          // Populate the popup and set its coordinates
+          // based on the feature found.
+          popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        });
+
+        map.on("mouseleave", "places", () => {
+          map.getCanvas().style.cursor = "";
+          popup.remove();
+        });
+      });
+    </script>
+
+    <script>
+      // implementation of StyleImageInterface to draw a pulsing dot icon on the map
+      // Search for StyleImageInterface in https://maplibre.org/maplibre-gl-js/docs/API/
+      const size = 200;
+      const pulsingDot = {
+        width: size,
+        height: size,
+        data: new Uint8Array(size * size * 4),
+
+        // get rendering context for the map canvas when layer is added to the map
+        onAdd() {
+          const canvas = document.createElement("canvas");
+          canvas.width = this.width;
+          canvas.height = this.height;
+          this.context = canvas.getContext("2d");
+        },
+
+        // called once before every frame where the icon will be used
+        render() {
+          const duration = 1000;
+          const t = (performance.now() % duration) / duration;
+
+          const radius = (size / 2) * 0.3;
+          const outerRadius = (size / 2) * 0.7 * t + radius;
+          const context = this.context;
+
+          // draw outer circle
+          context.clearRect(0, 0, this.width, this.height);
+          context.beginPath();
+          context.arc(
+            this.width / 2,
+            this.height / 2,
+            outerRadius,
+            0,
+            Math.PI * 2
+          );
+          context.fillStyle = `rgba(255, 200, 200,${1 - t})`;
+          context.fill();
+
+          // draw inner circle
+          context.beginPath();
+          context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+          context.fillStyle = "rgba(255, 100, 100, 1)";
+          context.strokeStyle = "white";
+          context.lineWidth = 2 + 4 * (1 - t);
+          context.fill();
+          context.stroke();
+
+          // update this image's data with data from the canvas
+          this.data = context.getImageData(0, 0, this.width, this.height).data;
+
+          // continuously repaint the map, resulting in the smooth animation of the dot
+          map.triggerRepaint();
+
+          // return `true` to let the map know that the image was updated
+          return true;
+        },
+      };
+
+      map.on("load", () => {
+        map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
+
+        map.addSource("points", {
+          type: "geojson",
+          data: {
+            type: "FeatureCollection",
+            features: [
+              {
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [-75.730931, 45.400586],
+                },
+              },
+            ],
+          },
+        });
+        map.addLayer({
+          id: "points",
+          type: "symbol",
+          source: "points",
+          layout: {
+            "icon-image": "pulsing-dot",
+          },
+        });
+      });
+    </script>
+
+    <script>
+      maplibregl.setRTLTextPlugin(
+        "https://unpkg.com/@mapbox/mapbox-gl-rtl-text@0.2.3/mapbox-gl-rtl-text.min.js"
+      );
+
+      map.on("load", () => {
+        map.setLayoutProperty("label_country", "text-field", [
+          "format",
+          ["get", "name_en"],
+          { "font-scale": 1.2 },
+          "\n",
+          {},
+          ["get", "name"],
+          {
+            "font-scale": 0.8,
+            "text-font": [
+              "literal",
+              ["DIN Offc Pro Italic", "Arial Unicode MS Regular"],
+            ],
+          },
+        ]);
+      });
+    </script>
+  </body>
 </html>
-
-</div>
-</div>
-
-<br>
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>

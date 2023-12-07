@@ -201,11 +201,13 @@ button:active .button_top {
 }
 
 #three-canvas {
-  width:75%;
-  position:relative
-  top: 0;
-  left: 0;
-  outline: none;
-  align-items: center;
-  margin-top: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 100px;
+  margin-top: 40px;
+  display: block;
+  background-color: #000;
 }
+

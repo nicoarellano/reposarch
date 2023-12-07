@@ -7,7 +7,7 @@ const map = new maplibregl.Map({
   zoom: 5,
 });
 
-var airporsFeatureCollection = [];
+let airporsFeatureCollection = [];
 
 airports.forEach((airport) => {
   const image =
@@ -15,7 +15,7 @@ airports.forEach((airport) => {
       ? "https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg"
       : airport.image;
 
-  var airportFeature = {
+  let airportFeature = {
     code: `${airport.code}`,
     type: "Feature",
     properties: {

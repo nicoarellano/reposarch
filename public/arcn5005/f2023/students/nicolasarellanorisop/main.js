@@ -1,8 +1,8 @@
 const scene = new THREE.Scene();
 
 const size = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: window.innerWidth * 0.6,
+  height: window.innerHeight * 0.4,
 };
 
 const aspect = size.width / size.height;
@@ -17,7 +17,8 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-document.body.appendChild(renderer.domElement);
+const threeContainer = document.getElementById("three-container");
+threeContainer.appendChild(renderer.domElement);
 
 //Creates grids and axes in the scene
 const grid = new THREE.GridHelper(10, 10);
@@ -55,7 +56,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "/arcn5005/f2023/students/nicolasarellanorisop/models/justin.glb",
+  "./three/models/justin.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 3;
@@ -75,29 +76,32 @@ const fontLoader = new THREE.FontLoader();
 function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
-      font: font,
-      size: textSize,
-      height: 0.1,
-      curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
-    });
+  fontLoader.load(
+    "./three/fonts/helvetiker_regular.typeface.json",
+    function (font) {
+      const textGeo = new THREE.TextGeometry(textValue, {
+        font: font,
+        size: textSize,
+        height: 0.1,
+        curveSegments: 4,
+        bevelEnabled: true,
+        bevelThickness: 0.1,
+        bevelSize: 0.0,
+        bevelOffset: 0,
+        bevelSegments: 5,
+      });
 
-    const color = new THREE.Color();
-    color.setHex(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
+      const color = new THREE.Color();
+      color.setHex(textColor);
+      const textMaterial = new THREE.MeshLambertMaterial({ color: color });
+      const text = new THREE.Mesh(textGeo, textMaterial);
 
-    text.position.x = 2;
-    text.position.y = elevation;
+      text.position.x = 2;
+      text.position.y = elevation;
 
-    scene.add(text);
-  });
+      scene.add(text);
+    }
+  );
 }
 
 createText("Nicolas Arellano", 5, "0XFF00FF");
@@ -106,12 +110,12 @@ createText("- Research team lead at CIMS", 2, "0XFF0000");
 createText("- PhD candidate at ASAU", 1, "0XFF0000");
 createText("- Amateur programmer", 0, "0XFF0000");
 
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
+camera.position.z = 8;
+camera.position.x = 2;
+camera.position.y = 8;
 
-scene.position.x = -5;
-scene.position.z = 5;
+// scene.position.x = -5;
+// scene.position.z = 5;
 scene.position.y = -3;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -151,11 +155,25 @@ function animate() {
 
 animate();
 
+const fullScreenButton = document.getElementById("full-screen");
+
+let fullScreen = false;
+
+fullScreenButton.addEventListener("click", () => {
+  fullScreen = !fullScreen;
+  resize();
+  console.log(fullScreen ? "FULL SCREEN!!" : "little screen");
+});
+
 //Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
-  size.width = window.innerWidth;
-  size.height = window.innerHeight;
+  resize();
+});
+
+const resize = () => {
+  size.width = window.innerWidth * (fullScreen ? 0.92 : 0.6);
+  size.height = window.innerHeight * (fullScreen ? 0.9 : 0.4);
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
-});
+};

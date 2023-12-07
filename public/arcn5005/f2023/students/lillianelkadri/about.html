@@ -1,87 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width = device-width" />
-        <title>Lillian's About Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="gtr.ico">
+  <head>
+    <title>Map of all Olympic Host Cities</title>
+    <meta
+      property="og:description"
+      content="Filter a set of symbols based on a property value in the data."
+    />
+    <meta
+      property="og:description"
+      content="When a user hovers over a custom marker, show a popup containing more information."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+    <link rel="stylesheet" href="map/styles.css" />
+    <link
+      href="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  </head>
+  <body>
     <style>
-        button {
-            display: inline-flex;
-            column-gap: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        h2 {
-            text-align: center;
-        }
-        .title_desc {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .cards{
-            display: inline-flex;
-            column-gap: 40px;
-            align-items: center;
-            margin-top: 100px;
-        }
+      .maplibregl-popup {
+        max-width: 400px;
+        font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
     </style>
-    </head>
-    <body>
-        <header>
-            <h1 id="title"> ABOUT ME</h1> 
-            <h2 class="subtitle"> LILLIAN EL-KADRI </h2>
-        </header>
-        <div class="container">
-            <img class="img_deg" src="LillianPIC.jpg" width="200 px" height="265px" alt="Student Picture"> </img>
-            <div class="text">
-                <ul>
-                    <li>Nationality: Lebanese/Canadian</li>
-                    <li>Undergraduate degree: Architectural History</li>
-                    <li>Current Car: 2016 Honda Civic</li>
-                    <li>Dream Car: Nissan R35 GT-R</li>
-                </ul>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="myCard">
-                <div class="innerCard">
-                    <div class="frontSide">
-                        <p class="title">CAREER BUCKETLIST</p>
-                    </div>
-                    <div class="backSide">
-                     <ul class="specs">
-                         <li> Specialize in the design and construction of buildings that are key to a city's urban fabric, such as airports and other critical infrastructure</li>
-                            <li> Further develop the concepts of prefab buildings within the scope of refugee settlements</li>
-                            <li> Develop a strong relationship between nature and modernity within residential and commercial construction </li>
-                     </ul>
-                 </div>
-                </div>
-            </div>
-            <br>
-            <div class="myCard2">
-                <div class="innerCard2">
-                    <div class="frontSide2">
-                        <p class="title2">INTERESTS</p>
-                    </div>
-                    <div class="backSide2">
-                        <ul class="specs2">
-                            <li> Home restoration / renovation </li>
-                            <li> Learning about cars (I come from a family of mechanics)</li>
-                            <li> Play video games whenever I have free time (I'm not very good at it, lol) </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>    
-        </div>
-    <header>
-        <h2 class="title_desc"> ASSIGNMENTS </h2>
-    </header>
-    <button> Assignment 2</button>
-    <button> Assignment 3</button>
-    <button> Assignment 4</button>
-    <button> Final Assignment</button>
-    </body>
+
+    <h1>Map of all Summer and Winter Olympic Host Cities</h1>
+    <div id="map"></div>
+    <nav id="filter-group" class="filter-group"></nav>
+    <script src="./map/main.js"></script>
+  </body>
 </html>

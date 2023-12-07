@@ -1,37 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Map Assignment</title>
+    <link rel="stylesheet" href="./Style.css" />
+    <meta property="og:description" content="Map Assignment." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@turf/turf@latest/turf.min.js"></script>
 
-<head lang="en">
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>About</title>
-</head>
-<body">
-  <div class="assignment2">
-    <img src="/public/arcn5005/f2023/students/muchenge/photo.jpg" alt="Muchen Ge" height="261" />
-    <a href="https://github.com/nicoarellano/reposarch">
-      <button id="three-button">GitHub</button>
-    </a>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+      button {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        z-index: 1;
+      }
+    </style>
+  </head>
 
-  </div>
-  
+  <body>
+    <div id="map"></div>
+    <div id="keyboard-instructions" class="on-top">
+      Press 'O' to move to Ottawa, 'W' to move to Winnipeg, 'C' to move to
+      China.
+    </div>
+    <div id="mouse-instruction" class="on-top">
+      "Left Click" two places to show distance, "Right Click" an icon to show
+      information.
+    </div>
+    <div id="distance" class="distance-container on-top"></div>
+    <script src="./map/main.js"></script>
   </body>
-  <script src="./main.js"></script>
-  <!-- Three js Modules -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-  <script type="module" src="./main.js"></script>
-  <canvas id="three-canvas"></canvas>
-
-  <div class="button-container">
-    <button role="button" class="button-name">THREE</button>
-    <button role="button" class="button-name">BIM</button>
-    <button role="button" class="button-name">MAP</button>
-    <button role="button" class="button-name">FINAL</button>
-  </div>
-
 </html>

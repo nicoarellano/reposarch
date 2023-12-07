@@ -1,134 +1,66 @@
-<html>
-
- 
-
-<head lang="en">
-
-  <meta charset="utf-8" />
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="styles.css" />
-
-  <title>About</title>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Countries I've Lived</title>
+    <meta property="og:description" content="Explore the countries I've Lived in on a world map." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <link rel='stylesheet' href='style.css' />
 </head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="country-list">
+                <!-- Interactive List of Countries -->
+                <h3>Countries I've Lived</h3>
+                <ul>
+                    <li>
+                        <span class="country-name">Vietnam</span>
+                        <span class="duration">Ho Chi Minh City - 9 yrs</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Canada</span>
+                        <span class="duration">Ottawa - 8 yrs</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Spain</span>
+                        <span class="duration">Lugo - 1 yr</span>
+                    </li>
+                    <li>
+                        <span class="country-name">China</span>
+                        <span class="duration">Shanghai - 1 yr</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Jordan</span>
+                        <span class="duration">Amman - 3 yrs</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Saudi Arabia</span>
+                        <span class="duration">Al Khobar - 2 yr</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Thailand</span>
+                        <span class="duration">Bangkok - 6 mo</span>
+                    </li> <li>
+                        <span class="country-name">Myanmar </span>
+                        <span class="duration">Burma - 3 mo</span>
+                    </li>
+                    <li>
+                        <span class="country-name"> United Arab Emirates </span>
+                        <span class="duration"> Dubai - 3 mo</span>
+                    </li>
+                </ul>
+                <ul>
 
-<body">
+                    
+                </ul>
 
-  <div class="assignment2">
+    </header>
 
-    <img src="Photo.jpg" alt="Faris Itum" height="150" />
-
-    <a href="https://github.com/farisitum/reposarch"><button id="three-button">GitHub</button></a>
-<a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204561&grpid=0&isprv=0&bp=0&ou=207080"><button id="three-button-1">Assignment 1</button></a>
-<a href="https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204562&grpid=0&isprv=0&bp=0&ou=207080"><button id="three-button-2">Assignment 2</button></a>
-    <a href=https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204564&grpid=0&isprv=0&bp=0&ou=207080><button id="three-button-3">Assignemnt 3</button></a>
-    <a href=https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204566&grpid=0&isprv=0&bp=0&ou=207080><button id="three-button-4">Assignment 4</button></a>
-    <a href=https://brightspace.carleton.ca/d2l/lms/dropbox/user/folder_submit_files.d2l?db=204567&grpid=0&isprv=0&bp=0&ou=207080><button id="three-button-5">Final Assignment</button></a>
-
-  </div>
-
-  </body>
-
-  <script src="./main.js"></script>
-
-  <!-- Three js Modules -->
-
-  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js></script>
-
-  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js></script>
-
-  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js></script>
-
-  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js></script>
-
-  <script src=https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js></script>
-
-  <script type="module" src="./main.js"></script>
-
-  <!--New Addition- 1. Future is Now-->
-
- 
-
-  <script type="x-shader/x-vertex" id="vertexshader">
-
- 
-
-    attribute float size;
-
-    attribute vec3 customColor;
-
-    varying vec3 vColor;
-
- 
-
-    void main() {
-
- 
-
-      vColor = customColor;
-
-      vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-
-      gl_PointSize = size * ( 300.0 / -mvPosition.z );
-
-      gl_Position = projectionMatrix * mvPosition;
-
- 
-
-    }
-
- 
-
-  </script>
-
-  <script type="x-shader/x-fragment" id="fragmentshader">
-
- 
-
-   uniform vec3 color;
-
-   uniform sampler2D pointTexture;
-
- 
-
-   varying vec3 vColor;
-
- 
-
-   void main() {
-
- 
-
-     gl_FragColor = vec4( color * vColor, 1.0 );
-
-     gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
-
- 
-
-   }
-
-  </script>
-
- 
-
-  <div id="magic"></div>
-
-  <div class="playground">
-
-    <div class="bottomPosition">  
-
-    </div>
-
- 
-
-  <canvas id="three-canvas"></canvas>
-
- 
-
-   
-
+    <div id="map"></div>
+    
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    <script src='script.js'></script>
+</body>
 </html>
