@@ -130,3 +130,12 @@ html, body, #map { height: 100%; }
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
+
+#title {
+    text-align: center;
+    font: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.25); 
+    padding: 10px;
+}
