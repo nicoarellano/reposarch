@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Martignago</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .website-content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(240, 240, 240, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(128, 112, 112, 0.9);
+      text-align: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    #map-container {
+      display: none;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    #legend {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 8px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 8px;
+    }
+
+    .legend-title {
+      grid-column: span 5;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .legend-swatch img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 4px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      color: red;
+    }
+
+    .profile-image {
+      max-width: 300px;
+      border-radius: 1000%;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .about-description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .game-section,
+    .project-section {
+      background-color: rgba(240, 240, 240, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #0077b6;
+    }
+
+    button {
+      background-color: #0077b6;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005a8e;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="website-content">
+    <h1>Simon Martignago</h1>
+    <div class="flex-container">
+      <div class="about-section">
+        <img src="Simon.gif" alt="Simon Martignago" class="profile-image">
+        <div class="about-description">
+          Hello! I'm Simon, and I'm in the M.Arch program at Carleton University. I also have an undergraduate degree in
+          Architecture and Urbanism. Fun facts about me: I was today years old when I realized that honey doesn't go bad.
+          I am a pineapple enthusiast.
+        </div>
+        <div class="about-description">
+          Take a look around and stay a while. Check out my projects or play a game of hangman below.
+        </div>
+        <div class="project-section">
+          <h2>My Projects</h2>
+          <a href="https://brightspace.carleton.ca/d2l/home/207080"><button>Assignment 1</button></a>
+          <a href="From Blender.glb"><button>Assignment 2</button></a>
+          <a href="https://www.youtube.com/watch?v=GNGH6E7-pFQ"><button>Assignment 3</button></a>
+          <!-- Add more projects as needed -->
+        </div>
+      </div>
+      <div class="canvas-section">
+        <div class="canvas-container">
+          <img src="./avatar.jpg" alt="Simon Martignago" height="300" />
+          <a href="https://github.com/MartignagoSimon/reposarch"><button id="three-button">GitHub</button></a>
+        </div>
+      </div>
+    </div>
+    <!-- Add a button to show the map -->
+    <button onclick="showMap()">Show Map</button>
+  </div>
+
+  <div id="map-container">
+    <div id="map"></div>
+    <div id="legend">
+      <div class="legend-title">Embassy Legend</div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="australia_flag.jpg" alt="Australia Flag"></span>
+        <span>1 - Australian Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="austria_flag.jpg" alt="Austria Flag"></span>
+        <span>2 - Austrian Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="china_flag.jpg" alt="China Flag"></span>
+        <span>3 - Chinese Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="france_flag.jpg" alt="France Flag"></span>
+        <span>4 - French Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="israel_flag.jpg" alt="Israel Flag"></span>
+        <span>5 - Israel Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="japan_flag.jpg" alt="Japan Flag"></span>
+        <span>6 - Japanese Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="russia_flag.jpg" alt="Russia Flag"></span>
+        <span>7 - Russian Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="south_africa_flag.jpg" alt="South Africa Flag"></span>
+        <span>8 - South African Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="uk_flag.jpg" alt="UK Flag"></span>
+        <span>9 - UK Embassy</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-swatch"><img src="us_flag.jpg" alt="US Flag"></span>
+        <span>10 - American Embassy</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2ltb25tYXJ0aWduYWdvIiwiYSI6ImNsZGFkenlpcjBobnMzb21wNWwwZDNrY3IifQ.FLGiwxF0HFz_q7stClKu0g';
+    const map = new mapboxgl.Map({
+      container: 'map',
+      center: [-75.6934, 45.4215], // Ottawa, Ontario, Canada
+      zoom: 12,
+      style: 'mapbox://styles/mapbox/light-v10'
+    });
+
+    const embassyLocations = [
+      { name: 'Australian Embassy', coordinates: [-75.6998278609583, 45.42046928493152], flag: 'australia_flag.jpg' },
+      { name: 'Austrian Embassy', coordinates: [-75.6766091012364, 45.42946130852773], flag: 'austria_flag.jpg' },
+      { name: 'Chinese Embassy', coordinates: [-75.68500583228307, 45.43635734252513], flag: 'china_flag.jpg' },
+      { name: 'French Embassy', coordinates: [-75.69475645190913, 45.44334487382583], flag: 'france_flag.jpg' },
+      { name: 'Israel Embassy', coordinates: [-75.69951805098987, 45.42060811912621], flag: 'israel_flag.jpg' },
+      { name: 'Japanese Embassy', coordinates: [-75.69880299884716, 45.433061023088925], flag: 'japan_flag.jpg' },
+      { name: 'Russian Embassy', coordinates: [-75.67338797383161, 45.42973811989557], flag: 'russia_flag.jpg' },
+      { name: 'South African Embassy', coordinates: [-75.69252866102457, 45.444026324529496], flag: 'south_africa_flag.jpg' },
+      { name: 'UK Embassy', coordinates: [-75.69484860651467, 45.4225965719816], flag: 'uk_flag.jpg' },
+      { name: 'American Embassy', coordinates: [-75.69592817829518, 45.42790358473624], flag: 'us_flag.jpg' },
+    ];
+
+    map.on('load', () => {
+      embassyLocations.forEach((embassy, index) => {
+        map.addLayer({
+          'id': `marker-${index + 1}`,
+          'type': 'circle',
+          'source': {
+            'type': 'geojson',
+            'data': {
+              'type': 'FeatureCollection',
+              'features': [
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': embassy.coordinates
+                  },
+                  'properties': {
+                    'name': embassy.name,
+                    'index': index + 1
+                  }
+                }
+              ]
+            }
+          },
+          'paint': {
+            'circle-radius': 10,
+            'circle-color': '#FF474C'
+          }
+        });
+
+        map.addLayer({
+          'id': `text-${index + 1}`,
+          'type': 'symbol',
+          'source': {
+            'type': 'geojson',
+            'data': {
+              'type': 'FeatureCollection',
+              'features': [
+                {
+                  'type': 'Feature',
+                  'geometry': {
+                    'type': 'Point',
+                    'coordinates': embassy.coordinates
+                  },
+                  'properties': {
+                    'name': embassy.name,
+                    'index': index + 1
+                  }
+                }
+              ]
+            }
+          },
+          'layout': {
+            'text-field': ['concat', ['get', 'index']],
+            'text-size': 12,
+            'text-anchor': 'center',
+            'text-allow-overlap': true
+          }
+        });
+      });
+    });
+
+    function showMap() {
+      // Hide website content and display the map container with the legend
+      document.querySelector('.website-content').style.display = 'none';
+      document.getElementById('map-container').style.display = 'block';
+      // Trigger a map resize to ensure it renders correctly
+      map.resize();
+      // Fly to a location on the map, e.g., the first embassy
+      map.flyTo({
+        center: embassyLocations[0].coordinates,
+        zoom: 14,
+        speed: 0.8,
+        curve: 1,
+      });
+    }
+  </script>
+</body>
+
+</html>
