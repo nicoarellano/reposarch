@@ -343,19 +343,26 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       { title: "🟡 Quiz 2" },
       { title: "Frontend frameworks" },
-      { title: "Tailwind CSS" },
-      { title: "Typescript" },
       { title: "React.js" },
       { title: "Next.js" },
+      { title: "Typescript" },
+      { title: "Tailwind CSS" },
       { title: "Deploy your software - Github pages" },
       {
         title:
           "🖥️ LAB 12 : Deploying a web based BIM software and Assignment 3",
       },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt",
+        title: "Advanced toolbox",
+        date: dayjs("2023/11/30"),
+      },
+    ],
   },
   {
-    title: "Final assignment workshop and Presentations",
+    title: "Final assignment workshop and assignment 3 presentations",
     id: `week13`,
     url: `week13`,
     date: initialDate.add(13, "week"),
