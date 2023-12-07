@@ -21,6 +21,7 @@ header {
     top: 0;
     width: 100%;
     background-color: transparent;
+    pointer-events: none;
     z-index: 10; /* Ensures header is above the map */
     color: #333; /* Adjust for readability */
     /* Other styles as needed */
@@ -28,6 +29,7 @@ header {
 .nav-bar {
     /* Styles for the navigation bar */
     background-color: transparent; /* Example background color */
+    pointer-events: none;
     padding: 15px;
     text-align: center;
 }
