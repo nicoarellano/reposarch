@@ -26,6 +26,16 @@ export const content: Toc = [
       </div>
     ),
   },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m"
+        title="Web based mapping and Assignment 3"
+        caption={"Web based mapping and Assignment 3"}
+      />
+    ),
+  },
+
   { element: <EmojiTitle emoji={"🗺️❔"} title={"What is a map?"} /> },
   {
     element: (

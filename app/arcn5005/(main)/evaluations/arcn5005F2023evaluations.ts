@@ -64,7 +64,7 @@ export const Arcn5005F2023Evaluations = [
     evaluation: "🏁 Final Assignment",
     weight: "35%",
     week: "week15",
-    date: dayjs("2023/12/18"),
+    date: dayjs("2023/12/20"),
     type: "final-assignment",
     description: "Combine all together into a GIS platform",
   },

@@ -320,28 +320,49 @@ export const arcn5005Lectures: Lectures = [
       { title: "Open Source web GIS - Leaflet and Maplibre" },
       { title: "🖥️ LAB 11: Web based GIS software" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/vSejvs1PBNc?si=qAIK45kWVdSQtW-g",
+        title: "New calendar and Assignment 2 feedback",
+        date: dayjs("2023/11/23"),
+      },
+      {
+        url: "https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m",
+        title: "Web based mapping and Assignment 3",
+        date: dayjs("2023/11/23"),
+      },
+    ],
   },
 
   {
-    title: "Going online, scalability and maintainability",
+    title: "Advanced Toolbox - Going online, scalability and maintainability",
     id: `week12`,
     url: `week12`,
     date: initialDate.add(12, "week"),
     content: week12,
     toc: [
       { title: "🟡 Quiz 2" },
-      { title: "Frontend framework" },
-      { title: "Tailwind CSS" },
-      { title: " React.js" },
-      { title: "Typescript" },
+      { title: "Frontend frameworks" },
+      { title: "React.js" },
       { title: "Next.js" },
-      { title: "Deploy your software" },
-      { title: "Github pages" },
-      { title: "🖥️ LAB 12 : Deploying a web based BIM software" },
+      { title: "Typescript" },
+      { title: "Tailwind CSS" },
+      { title: "Deploy your software - Github pages" },
+      {
+        title:
+          "🖥️ LAB 12 : Deploying a web based BIM software and Assignment 3",
+      },
+    ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt",
+        title: "Advanced toolbox",
+        date: dayjs("2023/11/30"),
+      },
     ],
   },
   {
-    title: "Final assignment workshop and Presentations",
+    title: "Final assignment workshop and assignment 3 presentations",
     id: `week13`,
     url: `week13`,
     date: initialDate.add(13, "week"),
@@ -350,12 +371,19 @@ export const arcn5005Lectures: Lectures = [
       { title: "🔴 Assignment 3 presentation - Custom map using maplibre" },
       { title: "🖥️ LAB 13 Final assignment workshop" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/0f1OROLez_I?si=ckR0BprKHy8rHTfT",
+        title: "Final Assignment explained",
+        date: dayjs("2023/12/07"),
+      },
+    ],
   },
   {
     title: "🏁 Final Presentation 🏁",
     id: `final`,
     url: `final`,
-    date: dayjs("2023-12-18"),
+    date: dayjs("2023-12-20"),
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
   },

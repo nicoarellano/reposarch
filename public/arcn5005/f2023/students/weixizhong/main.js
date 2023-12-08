@@ -19,14 +19,11 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load(
-  'image/Sky.jpg',
-  () => {
-    texture.mapping = THREE.EquirectangularReflectionMapping;
-    texture.colorSpace = THREE.SRGBColorSpace;
-    scene.background = texture;
-  }
-);
+const texture = loader.load("./image/Sky.jpg", () => {
+  texture.mapping = THREE.EquirectangularReflectionMapping;
+  texture.colorSpace = THREE.SRGBColorSpace;
+  scene.background = texture;
+});
 
 const grid = new THREE.GridHelper(10, 10);
 scene.add(grid);
@@ -40,9 +37,9 @@ const dodecahedronGeometry = new THREE.DodecahedronGeometry(1.5);
 const octahedronGeometry = new THREE.OctahedronGeometry(1.5);
 const torusKnotGeometry = new THREE.TorusKnotGeometry(1.5);
 
-const material1 = new THREE.MeshLambertMaterial({ color: 0xDAF7A6 });
-const material2 = new THREE.MeshLambertMaterial({ color: 0xDFAA9E });
-const material3 = new THREE.MeshLambertMaterial({ color: 0x9EA9DF });
+const material1 = new THREE.MeshLambertMaterial({ color: 0xdaf7a6 });
+const material2 = new THREE.MeshLambertMaterial({ color: 0xdfaa9e });
+const material3 = new THREE.MeshLambertMaterial({ color: 0x9ea9df });
 
 const geometry1 = new THREE.Mesh(dodecahedronGeometry, material1);
 const geometry2 = new THREE.Mesh(octahedronGeometry, material2);
@@ -68,7 +65,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "3Dmecolor.glb",
+  "./three/3Dmecolor.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.set(3, 3, 3);
@@ -77,7 +74,7 @@ gltfLoader.load(
 
     scene.add(mesh);
 
-    mesh.rotation.y -= Math.PI /2;
+    mesh.rotation.y -= Math.PI / 2;
   },
   undefined,
   function (error) {
@@ -90,7 +87,7 @@ const carLoader = new THREE.GLTFLoader();
 let carMesh;
 
 carLoader.load(
-  "car.glb",
+  "./three/car.glb",
   function (gltf) {
     carMesh = gltf.scene;
     carMesh.scale.set(2, 2, 2);
@@ -109,7 +106,7 @@ const fontLoader = new THREE.FontLoader();
 function createText(text, elevation = 0, textColor = 0x000000, size = 0.8) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("helvetiker_regular.typeface.json", function (font) {
+  fontLoader.load("./three/helvetiker_regular.typeface.json", function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -133,10 +130,10 @@ function createText(text, elevation = 0, textColor = 0x000000, size = 0.8) {
   });
 }
 
-createText("Weixi Zhong", 6, 0x354FA9);
-createText("- Background in Environmental Design", 4, 0x729FA6);
-createText("- MArch Student at CU", 2.5, 0x729FA6);
-createText("- Love Drawing", 1, 0x729FA6);
+createText("Weixi Zhong", 6, 0x354fa9);
+createText("- Background in Environmental Design", 4, 0x729fa6);
+createText("- MArch Student at CU", 2.5, 0x729fa6);
+createText("- Love Drawing", 1, 0x729fa6);
 
 camera.position.z = 30;
 camera.position.x = 0;
