@@ -55,17 +55,31 @@ body {
 }
 
 @keyframes pulse {
-    0% { color: #FF5733; }
-    25% { color: #DAF7A6; }
-    50% { color: #D4AC0D; }
-    75% { color: #7B241C; }
-    100% { color: #FF5733; }
+    0% {
+        color: #FF5733;
+    }
+
+    25% {
+        color: #DAF7A6;
+    }
+
+    50% {
+        color: #D4AC0D;
+    }
+
+    75% {
+        color: #7B241C;
+    }
+
+    100% {
+        color: #FF5733;
+    }
 }
 
-@keyframes text-pulse {
+/* @keyframes text-pulse {
     0% { font-size: 4px; }
     25% { font-size: 6px; }
     50% { font-size: 8px; }
     75% { font-size: 6px; }
     100% { font-size: 4px; }
-}
+} */
