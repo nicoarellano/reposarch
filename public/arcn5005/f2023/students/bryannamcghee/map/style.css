@@ -19,6 +19,7 @@ body {
     border: 0px solid #ccc;
     border-radius: 10px;
     font-size: 40px;
+    /* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ maybe 40 is a bit too much? maybe add a background so the text is more legible*/
     background-color: transparent;
 }
 
@@ -47,6 +48,7 @@ body {
 
 #title {
     font-size: 50px;
+    /* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ maybe 50 is a bit too much? I think the position of the title is not the best*/
     position: absolute;
     top: 10px;
     left: 24px;
