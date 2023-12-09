@@ -77,4 +77,25 @@ const geojson = {
     new maplibregl.Marker({ element: el })
       .setLngLat(marker.geometry.coordinates)
       .addTo(map);
+
+   // Add tooltip text
+   const tooltip = new maplibregl.Popup({
+    offset: 25,
+    closeButton: false,
+    closeOnClick: false
+  }).setHTML(marker.properties.message);
+
+  el.addEventListener('mouseenter', () => {
+    tooltip.setLngLat(marker.geometry.coordinates)
+      .addTo(map);
   });
+
+  el.addEventListener('mouseleave', () => {
+    tooltip.remove();
+  });
+
+  // add marker to map
+  new maplibregl.Marker({ element: el })
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
+});
