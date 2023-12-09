@@ -1,4 +1,4 @@
-const MAPTILER_KEY = 'get_your_own_OpIi9ZULNHzrESv6T2vL';
+const MAPTILER_KEY = 'yyLFvKmMAkOmBAVbj4mk';
 const map = new maplibregl.Map({
     style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_KEY}`,
     center: [12.490034032328268, 41.894390281115285],
