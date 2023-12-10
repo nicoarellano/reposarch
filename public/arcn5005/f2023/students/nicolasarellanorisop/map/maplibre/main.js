@@ -16,6 +16,10 @@ function initMaplibre() {
     maplibreLogo: true,
     // projection: "globe", // display the map as a 3D globe
   });
+  // Day sky
+  map.on("style.load", () => {
+    map.setFog({}); // Set the default atmosphere style
+  });
 
   // Go To Site 🏢
   const goTo = document.getElementById("go-to");

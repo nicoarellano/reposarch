@@ -44,7 +44,7 @@ let mesh;
 const loader = new THREE.GLTFLoader();
 
 loader.load(
-  "./models/Donut10.glb",
+  "./models/wDonut2.glb",
   function (gltf) {
     gltf.scene.scale.x = 3;
     gltf.scene.scale.y = 3;
@@ -60,7 +60,7 @@ loader.load(
 );
 
 loader.load(
-  "./models/Candy9.glb",
+  "./models/Candy2.glb",
   function (gltf) {
     gltf.scene.scale.x = 3;
     gltf.scene.scale.y = 3;

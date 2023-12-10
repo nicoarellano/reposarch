@@ -20,7 +20,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
 //Creates grids and axes in the scene
-const grid = new THREE.GridHelper(10, 10);
+const grid = new THREE.GridHelper(50, 30);
 scene.add(grid);
 
 const axes = new THREE.AxesHelper();
@@ -28,7 +28,7 @@ axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+const geometry = new THREE.BoxGeometry(1, 1, 1);
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
 const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
@@ -47,22 +47,22 @@ greenCube.position.z = 3;
 
 scene.add(yellowCube);
 scene.add(blueCube);
-// scene.add(redCube);
+scene.add(redCube);
 scene.add(greenCube);
 
-const gltfLoader = new THREE.GLTFLoader();
+const loader = new THREE.GLTFLoader();
 
 let mesh;
 
-gltfLoader.load(
-  "./models/justin.glb",
+loader.load(
+  "/arcn5005/f2023/students/nicolasarellanorisop/models/justin.glb",
   function (gltf) {
-    mesh = gltf.scene;
-    mesh.scale.x = 3;
-    mesh.scale.y = 3;
-    mesh.scale.z = 3;
+    gltf.scene.scale.x = 3;
+    gltf.scene.scale.y = 3;
+    gltf.scene.scale.z = 3;
 
-    scene.add(mesh);
+    mesh = gltf.scene;
+    scene.add(gltf.scene);
   },
   undefined,
   function (error) {
@@ -70,49 +70,9 @@ gltfLoader.load(
   }
 );
 
-const fontLoader = new THREE.FontLoader();
-
-function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
-  const textValue = text;
-  const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
-      font: font,
-      size: textSize,
-      height: 0.1,
-      curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
-    });
-
-    const color = new THREE.Color();
-    color.setHex(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
-
-    text.position.x = 2;
-    text.position.y = elevation;
-
-    scene.add(text);
-  });
-}
-
-createText("Nicolas Arellano", 5, "0XFF00FF");
-createText("- Architect from PUC", 3, "0XFF0000");
-createText("- Research team lead at CIMS", 2, "0XFF0000");
-createText("- PhD candidate at ASAU", 1, "0XFF0000");
-createText("- Amateur programmer", 0, "0XFF0000");
-
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
-
-scene.position.x = -5;
-scene.position.z = 5;
-scene.position.y = -3;
+camera.position.z = 7;
+camera.position.x = 4;
+camera.position.y = 6;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;

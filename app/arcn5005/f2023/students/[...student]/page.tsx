@@ -1,4 +1,7 @@
 import { ReactElement } from "react";
+import ListWithIcon from "../../../../../components/Common/ListWithIcon";
+import { Assignments } from "../../../assignments";
+import LinkIcon from "@mui/icons-material/InsertLinkRounded";
 import StudentIframe from "../../../../../students/StudentIframe";
 
 interface Props {
@@ -16,11 +19,11 @@ export default function Page({ params }): ReactElement<Props> {
           <StudentIframe username={username} assignment={assignment} />
         </section>
       ) : (
-        <div className="flex flex-col justify-center items-center w-full h-full ">
+        <div className="flex flex-col justify-center items-center w-full h-full">
           <div className="h-full w-full">
             <iframe
-              src={`/arcn5005/f2023/students/${username}/index.html`}
-              className="grow h-full w-full overflow-auto"
+              src={`/arcn5005/f2023/students/${username}/about.html`}
+              className="grow h-full w-full"
             />
           </div>
         </div>
