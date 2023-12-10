@@ -8,7 +8,6 @@ const size = {
 const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
-
 //Sets up the renderer, fetching the canvas of the HTML
 const threeCanvas = document.getElementById("three-canvas");
 const renderer = new THREE.WebGLRenderer({
@@ -29,13 +28,30 @@ axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
-const rgeometry = new THREE.RingGeometry( 1, 2, 6 );
+const rgeometry = new THREE.RingGeometry(1, 2, 6);
 
-const yellowMaterial = new THREE.MeshLambertMaterial( { color: 0xffff00, side: THREE.DoubleSide, wireframe: true, wireframelinewidth: 40 } );
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff, side: THREE.DoubleSide });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000, side: THREE.DoubleSide });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00, side: THREE.DoubleSide });
-const yelllowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00, side: THREE.DoubleSide });
+const yellowMaterial = new THREE.MeshLambertMaterial({
+  color: 0xffff00,
+  side: THREE.DoubleSide,
+  wireframe: true,
+  wireframelinewidth: 40,
+});
+const blueMaterial = new THREE.MeshLambertMaterial({
+  color: 0x0000ff,
+  side: THREE.DoubleSide,
+});
+const redMaterial = new THREE.MeshLambertMaterial({
+  color: 0xff0000,
+  side: THREE.DoubleSide,
+});
+const greenMaterial = new THREE.MeshLambertMaterial({
+  color: 0x00ff00,
+  side: THREE.DoubleSide,
+});
+const yelllowMaterial = new THREE.MeshLambertMaterial({
+  color: 0xffff00,
+  side: THREE.DoubleSide,
+});
 
 const yellowCube = new THREE.Mesh(rgeometry, yellowMaterial);
 const blueCube = new THREE.Mesh(rgeometry, blueMaterial);
@@ -55,17 +71,17 @@ scene.add(blueCube);
 scene.add(greenCube);
 scene.add(yelllowCube);
 
-const t1geometry = new THREE.TorusGeometry(15, 1, 16, 100); 
+const t1geometry = new THREE.TorusGeometry(15, 1, 16, 100);
 const t2geometry = new THREE.TorusGeometry(15, 1, 16, 100);
 const t3geometry = new THREE.TorusGeometry(15, 1, 16, 100);
 const t4geometry = new THREE.TorusGeometry(15, 1, 16, 100);
 
-const t1material = new THREE.MeshNormalMaterial( { color: 0xffff00 } ); 
-const t2material = new THREE.MeshNormalMaterial( { color: 0x00ff00 } );
-const t3material = new THREE.MeshNormalMaterial( { color: 0xff0000 } );
-const t4material = new THREE.MeshNormalMaterial( { color: 0xff0000 } );
+const t1material = new THREE.MeshNormalMaterial({ color: 0xffff00 });
+const t2material = new THREE.MeshNormalMaterial({ color: 0x00ff00 });
+const t3material = new THREE.MeshNormalMaterial({ color: 0xff0000 });
+const t4material = new THREE.MeshNormalMaterial({ color: 0xff0000 });
 
-const torus1 = new THREE.Mesh(t1geometry, t1material); 
+const torus1 = new THREE.Mesh(t1geometry, t1material);
 const torus2 = new THREE.Mesh(t2geometry, t2material);
 const torus3 = new THREE.Mesh(t3geometry, t3material);
 const torus4 = new THREE.Mesh(t4geometry, t4material);
@@ -75,19 +91,18 @@ scene.add(torus2);
 scene.add(torus3);
 scene.add(torus4);
 
-const knotgeometry = new THREE.TorusKnotGeometry( 5, 1, 100, 16 ); 
-const knotmaterial = new THREE.MeshLambertMaterial( { color: 0xff0000 } ); 
-const torusKnot1 = new THREE.Mesh( knotgeometry, knotmaterial ); 
+const knotgeometry = new THREE.TorusKnotGeometry(5, 1, 100, 16);
+const knotmaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+const torusKnot1 = new THREE.Mesh(knotgeometry, knotmaterial);
 torusKnot1.position.y = 30;
-scene.add( torusKnot1 );
-
+scene.add(torusKnot1);
 
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
 gltfLoader.load(
-  "/reposarch/public/arcn5005/f2023/students/farbodeinisarghin/models/cats.glb",
+  "./models/cats.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 10;
@@ -103,13 +118,11 @@ gltfLoader.load(
 );
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load(
-  'sky.jpg',
-  ()=>{
-  texture.mapping = THREE.EquirectangularReflectionMapping;
-  texture.colorSpace = THREE.SRGBColorSpace;
-  scene.background = texture;
-});
+// const texture = loader.load("sky.jpg", () => {
+//   texture.mapping = THREE.EquirectangularReflectionMapping;
+//   texture.colorSpace = THREE.SRGBColorSpace;
+//   scene.background = texture;
+// });
 
 const fontLoader = new THREE.FontLoader();
 
