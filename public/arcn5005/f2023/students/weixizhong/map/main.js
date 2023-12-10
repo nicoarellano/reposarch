@@ -197,15 +197,15 @@ function updateButtonStyle(button, imageSrc) {
   button.src = imageSrc;
 
   // Set the same size and shape
-  const size = 80; // Set the desired size in pixels
-  const borderRadius = 10; // Set the desired border radius in pixels
+  const size = 80; 
+  const borderRadius = 10; 
 
   // Additional fancy styles
   button.style.width = size + "px";
   button.style.height = size + "px";
   button.style.borderRadius = borderRadius + "px";
   button.style.transition = "transform 0.3s ease-in-out";
-  button.style.transform = "scale(3)"; // Add a scale on click
+  button.style.transform = "scale(3)"; 
 
   // Reset styles after a short delay (for the animation effect)
   setTimeout(() => {
@@ -315,9 +315,9 @@ const addLayers = () => {
     layout: {
       "icon-image": "custom-marker",
       "icon-allow-overlap": true,
-      "icon-size": 0.2, // Adjust this value to the desired size
-      "icon-offset": [0, -70], // Adjust the offset based on your icon size and desired position
-      "icon-anchor": "center", // Experiment with different values (e.g., "top", "center", "bottom") to find the right anchor point
+      "icon-size": 0.2, 
+      "icon-offset": [0, -70], 
+      "icon-anchor": "center", 
     },
   });
 
@@ -332,28 +332,22 @@ const addLayers = () => {
       closeOnClick: false,
     });
 
-    map.on("mouseenter", "places", (e) => {
+    map.on("click", "places", (e) => {
       // Change the cursor style as a UI indicator.
       map.getCanvas().style.cursor = "pointer";
-
+  
       const coordinates = e.features[0].geometry.coordinates.slice();
       const description = e.features[0].properties.description;
+  
 
-      // Ensure that if the map is zoomed out such that multiple
-      // copies of the feature are visible, the popup appears
-      // over the copy being pointed to.
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
-
+  
       // Populate the popup and set its coordinates based on the feature found.
       popup.setLngLat(coordinates).setHTML(description).addTo(map);
-    });
-
-    map.on("mouseleave", "places", () => {
-      map.getCanvas().style.cursor = "";
-      popup.remove();
-    });
+  });
+  
   });
 };
 
