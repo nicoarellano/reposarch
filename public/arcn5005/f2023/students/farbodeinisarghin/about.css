@@ -1,0 +1,460 @@
+/* global */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #101214;
+    color: #7A7C80;
+}
+
+h2,
+.white {
+    color: #fff;
+}
+
+a {
+    color: #7A7C80;
+    text-decoration: none;
+}
+
+/* section 1 */
+.section-1 {
+    padding-top: 70px;
+    text-align: center;
+}
+
+.section-1 p {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.section-1 h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-1 h1 {
+    color: #CCC;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.section-1 a {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+/* section 2 */
+.section-2 {
+    padding-top: 10vh;
+    width: 70%;
+}
+
+.section-2 h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.section-2 p {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    margin: 0;
+    line-height: 40px;
+}
+
+.section-2 a {
+    display: block;
+    padding: 5px;
+    font-size: 1.2rem;
+    padding-left: 0;
+    width: 100px;
+}
+
+.navbar {
+    background-color: #FFF;
+    color: #101214;
+    width: 100%;
+    height: 60px;
+}
+
+.navbar a {
+    float: right;
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar a:hover {
+    transition: transform .2s;
+    transform: scale(1.1);
+    color: #101214;
+}
+
+#btn {
+    background-color: #101214;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+/* animations / utilities */
+.section-2 a:hover {
+    font-size: 1.3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.section-1 a:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.white:hover {
+    position: relative;
+    padding-left: 10px;
+}
+
+/* media queres */
+@media(max-width:780px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .section-1 {
+        padding: 0;
+        padding-top: 5rem;
+    }
+
+    .section-2 {
+        padding: 0;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
+}
+
+/* .container {
+    margin: 100px;
+} */
+
+#h1 {
+    font-family: 'Poppins', sans-serif, 'arial';
+    font-weight: 600;
+    font-size: 72px;
+    color: white;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif, 'arial';
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+}
+
+/* ///// inputs /////*/
+
+input:focus~label,
+textarea:focus~label,
+input:valid~label,
+textarea:valid~label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    .styled-input {
+        width: 100%;
+    }
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+}
+
+input:focus~span,
+textarea:focus~span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    /* float: right; */
+    padding: 7px 35px;
+    margin-top: 10px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #4b8cfb;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06),
+        0 2px 10px 0 rgba(0, 0, 0, 0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(10px);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.10),
+        0 10px 10px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+    .submit-btn {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+}
+
+input[type=checkbox]+label {
+    color: #ccc;
+    font-style: italic;
+}
+
+input[type=checkbox]:checked+label {
+    color: #f00;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 940px;
+    position: relative;
+    margin: 0 50px 50px 50px;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    /*vertically in the middle*/
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    /*it can NOT be sected as a text by the user*/
+}
+
+/* Position the "previous button" to the right */
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    /* the same as #F2F2F2 */
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    /* the same as #F2F2F2 */
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dots-container {
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #BBBBBB;
+    border-radius: 50%;
+    /*It makes them disks */
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* the class active will be added by the JavaScript code to mark the active dot*/
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+/* The prefix -webkit- is for Safari browser */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+}
+
+/* the -webkit-animation fade */
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* the animation fade */
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+@media(max-width:990px) {
+    .fix {
+        position: static;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:780px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .section-1 {
+        padding: 0;
+        padding-top: 5rem;
+    }
+
+    .section-2 {
+        padding: 0;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
+
+
+}
+
+@media(max-width:489px) {
+    .navbar {
+        font-size: 10px;
+    }
+}
+
+@media(max-width:373px) {
+    .navbar {
+        font-size: 8px;
+    }
+}
