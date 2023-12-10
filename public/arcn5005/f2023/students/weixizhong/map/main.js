@@ -315,9 +315,9 @@ const addLayers = () => {
     layout: {
       "icon-image": "custom-marker",
       "icon-allow-overlap": true,
-      "icon-size": 0.2, 
-      "icon-offset": [0, -70], 
-      "icon-anchor": "center", 
+      "icon-size": 0.2,
+      "icon-offset": [0, -70],
+      "icon-anchor": "center",
     },
   });
 
@@ -326,30 +326,38 @@ const addLayers = () => {
 
     map.addImage("custom-marker", image);
 
-    // Create a popup, but don't add it to the map yet.
-    const popup = new maplibregl.Popup({
-      closeButton: false,
-      closeOnClick: false,
-    });
-
     map.on("click", "places", (e) => {
       // Change the cursor style as a UI indicator.
       map.getCanvas().style.cursor = "pointer";
-  
+
       const coordinates = e.features[0].geometry.coordinates.slice();
       const description = e.features[0].properties.description;
-  
 
       while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
-  
-      // Populate the popup and set its coordinates based on the feature found.
-      popup.setLngLat(coordinates).setHTML(description).addTo(map);
-  });
-  
+
+      // Create a popup, set its coordinates, and add to the map.
+      const popup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+      })
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map);
+
+      // Close the popup when the map is clicked.
+      map.on("click", closePopup);
+
+      function closePopup() {
+        map.getCanvas().style.cursor = "";
+        popup.remove();
+        map.off("click", closePopup);
+      }
+    });
   });
 };
+
 
 
 
