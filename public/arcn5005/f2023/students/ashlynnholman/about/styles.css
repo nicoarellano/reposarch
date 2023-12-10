@@ -1,0 +1,31 @@
+
+.text-box {
+  background-color: rgba(240, 240, 240, 0.466); 
+  padding: 10px; 
+  border-radius: 10px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  height: 40px; 
+  text-align: center; 
+}
+header {
+  font-family: Arial, sans-serif;
+  color: #212224;
+/* Style for "ARCN5005"*/
+.course-name {
+  font-weight: bold;
+  font-size: 18px; 
+}
+/* Style for "Theory & Practice of Architectural Representation"*/
+.course-description {
+  font-weight: normal;
+  font-size: 16px; 
+}
+}
+p {
+  font-family: Arial, sans-serif;
+  color: #696969;
+  font-size: 14px; 
+  text-align: center;
+}

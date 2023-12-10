@@ -78,7 +78,7 @@ gltfLoader.load(
   }
 );
 
-const loader = new THREE.TextureLoader();
+const loader = new THREE.TextureLoader();         
   const texture = loader.load(
     'background.jpg',
     () => {

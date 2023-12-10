@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maplibre exercise</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+
+<head>
+
+    <title>Ash Map Assignment</title>
+    <meta property="og:description" content="Ash Map Assignment." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+        
+        #header {
+            font-family: 'Arial', sans-serif;
+            background: rgba(255, 255, 255, 0.7); /* Adjust the alpha value for transparency */
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            font-style: italic; /* Make the text italic */
+            color: rgb(54, 52, 52); /* Set the text color to grey */
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+
+<body>
+
+  <div id="header">This summer my husband and I drove across the Country in a minivan, here are some of the places we explored...</div>
+  <div id="map"></div>
+  <script src="./main.js"></script>
+
+</body>
+
 </html>
