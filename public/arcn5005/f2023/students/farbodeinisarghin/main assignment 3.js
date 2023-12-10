@@ -173,7 +173,7 @@ map.on('load', () => {
 
     const popup1 = new maplibregl.Popup({closeOnClick: false})
     .setLngLat([50.97027823760578,43.765968094549045])
-    .setHTML('<h3>Did you know that Iran is like a cat in map!!!</h3>')
+    .setHTML('<h2>Did you know that Iran is like a cat in map!!!</h2>')
     .addTo(map)
 
         // Create a popup, but don't add it to the map yet.
@@ -190,7 +190,7 @@ map.on('load', () => {
             map.getCanvas().style.cursor = 'pointer';
 
             const coordinates = e.features[0].geometry.coordinates.slice();
-            const City = e.features[0];
+            const place = e.features[0];
 
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
@@ -203,10 +203,10 @@ map.on('load', () => {
             // based on the feature found.
             popup.setLngLat(coordinates)
             .setHTML(`
-                <h3>${City.properties.City}</h3>
-                <p>City: ${City.properties.City}</p>
-                <p>Population: ${City.properties.population}</p>
-                <p>Famous Historic Building: ${City.properties.Famous}</p>
+                <h3>${place.properties.City}</h3>
+                <p>City: ${place.properties.City}</p>
+                <p>Population: ${place.properties.population}</p>
+                <p>Famous Historic Building: ${place.properties.Famous}</p>
                 `)
                 .addTo(map);
         });
