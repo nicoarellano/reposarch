@@ -1,24 +1,57 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./ifc/styles.css" />
-    <title>Three.js example</title>
-  </head>
-  <body>
-    <div class="content-wrapper">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Three.js example</title>
+</head>
+<body>
+ <div class="content-wrapper">
       <div class="text-box">
         <header><span class="course-name">ARCN5005</span> <span class="course-description">Theory & Practice of Architectural Representation</span></li>
       </div>
-      <p>Ashlynn Holman</p>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-    <script type="module" src="./ifc/main.js"></script>
-    <canvas id="three-canvas"></canvas>
-  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  <script type="module" src="./main.js"></script>
+
+  </style>
+    <body>
+      <div id="cover-photo"></div>
+
+      <div class="rectangle"></div>
+
+      <div class="content-wrapper">
+        <div class="profile-picture-container">
+          <img src="ash.jpg" alt="Profile Picture" class="profile-picture">
+        </div>
+        <div class="photo-container">
+          <img src="lighthouse.jpg" alt="Photo" class="rectangular-photo">
+        </div>
+
+  <div class="button-container">
+      <button class="button type1">
+          <span class="btn-txt">GITHUB</span>
+      </button>
+      <button class="button type1">
+          <span class="btn-txt">ASSIGN. #1</span>
+      </button>
+      <button class="button type1">
+          <span class="btn-txt">BIM</span>
+      </button>
+      <button class="button type1">
+          <span class="btn-txt">MAP</span>
+        </button>
+        <button class="button type1">
+            <span class="btn-txt">FINAL</span>
+      </button> 
+</div>
+<div class="container">
+  <div class="three-container" id="three-container"></div>
+</body>
 </html>
