@@ -1,129 +1,179 @@
-const map = (window.map = new maplibregl.Map({
-  container: "map",
-  style: "/map-styles/satellite.json",
-  center: [-75.69435, 45.38435], // Carleton
-  zoom: 15, // starting zoom
-  pitch: 42,
-  bearing: 0,
-  antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
-  maxBounds: [
-    [-75.72, 45.378],
-    [-75.67, 45.395],
-  ],
-  minZoom: 14,
-  maxPitch: 70,
-}));
+const scene = new THREE.Scene();
 
-// parameters to ensure the model is georeferenced correctly on the map
-const modelOrigin = [-75.69435, 45.38435];
-const modelAltitude = 15;
-const modelRotate = [Math.PI / 2, 0, 0];
+const size = {
+  width: window.innerWidth * 0.6,
+  height: window.innerHeight * 0.4,
+};
 
-const modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
-  modelOrigin,
-  modelAltitude
+const aspect = size.width / size.height;
+const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+
+//Sets up the renderer, fetching the canvas of the HTML
+const threeCanvas = document.getElementById("three-canvas");
+const renderer = new THREE.WebGLRenderer({
+  canvas: threeCanvas,
+  alpha: true,
+});
+
+renderer.setSize(size.width, size.height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+const threeContainer = document.getElementById("three-container");
+threeContainer.appendChild(renderer.domElement);
+
+//Creates grids and axes in the scene
+const grid = new THREE.GridHelper(10, 10);
+scene.add(grid);
+
+const axes = new THREE.AxesHelper();
+axes.material.depthTest = false;
+axes.renderOrder = 1;
+scene.add(axes);
+
+const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+
+const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
+
+const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
+const blueCube = new THREE.Mesh(geometry, blueMaterial);
+const redCube = new THREE.Mesh(geometry, redMaterial);
+const greenCube = new THREE.Mesh(geometry, greenMaterial);
+
+yellowCube.position.z = -3;
+blueCube.position.x = -3;
+redCube.position.x = 3;
+greenCube.position.z = 3;
+
+scene.add(yellowCube);
+scene.add(blueCube);
+// scene.add(redCube);
+scene.add(greenCube);
+
+const gltfLoader = new THREE.GLTFLoader();
+
+let mesh;
+
+gltfLoader.load(
+  "./three/models/justin.glb",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 3;
+    mesh.scale.y = 3;
+    mesh.scale.z = 3;
+
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
 );
 
-// transformation parameters to position, rotate and scale the 3D model onto the map
-const modelTransform = {
-  translateX: modelAsMercatorCoordinate.x,
-  translateY: modelAsMercatorCoordinate.y,
-  translateZ: modelAsMercatorCoordinate.z,
-  rotateX: modelRotate[0],
-  rotateY: modelRotate[1],
-  rotateZ: modelRotate[2],
-  /* Since our 3D model is in real world meters, a scale transform needs to be
-   * applied since the CustomLayerInterface expects units in MercatorCoordinates.
-   */
-  scale: modelAsMercatorCoordinate.meterInMercatorCoordinateUnits(),
-};
+const fontLoader = new THREE.FontLoader();
 
-const THREE = window.THREE;
-
-// configuration of the custom layer for a 3D model per the CustomLayerInterface
-const customLayer = {
-  id: "3d-model",
-  type: "custom",
-  renderingMode: "3d",
-  onAdd(map, gl) {
-    this.camera = new THREE.Camera();
-    this.scene = new THREE.Scene();
-
-    // create two three.js lights to illuminate the model
-    const directionalLight = new THREE.DirectionalLight(0xffffff);
-    directionalLight.position.set(0, -70, 100).normalize();
-    this.scene.add(directionalLight);
-
-    const directionalLight2 = new THREE.DirectionalLight(0xffffff);
-    directionalLight2.position.set(0, 70, 100).normalize();
-    this.scene.add(directionalLight2);
-
-    // use the three.js GLTF loader to add the 3D model to the three.js scene
-    const loader = new THREE.GLTFLoader();
-
-    const buldings = [
-      "/arcn5005/f2023/students/nicolasarellanorisop/models/AA/on_ott_arc_220485353_walls.glb",
-      "/arcn5005/f2023/students/nicolasarellanorisop/models/AA/on_ott_arc_220485353_roofs.glb",
-      "/arcn5005/f2023/students/nicolasarellanorisop/models/AA/on_ott_arc_220485353_slabs.glb",
-      "/arcn5005/f2023/students/nicolasarellanorisop/models/AA/on_ott_arc_220485353_windows.glb",
-    ];
-
-    buldings.forEach((building) => {
-      loader.load(building, (gltf) => {
-        this.scene.add(gltf.scene);
+function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
+  const textValue = text;
+  const textSize = size;
+  fontLoader.load(
+    "./three/fonts/helvetiker_regular.typeface.json",
+    function (font) {
+      const textGeo = new THREE.TextGeometry(textValue, {
+        font: font,
+        size: textSize,
+        height: 0.1,
+        curveSegments: 4,
+        bevelEnabled: true,
+        bevelThickness: 0.1,
+        bevelSize: 0.0,
+        bevelOffset: 0,
+        bevelSegments: 5,
       });
-    });
 
-    this.map = map;
+      const color = new THREE.Color();
+      color.setHex(textColor);
+      const textMaterial = new THREE.MeshLambertMaterial({ color: color });
+      const text = new THREE.Mesh(textGeo, textMaterial);
 
-    // use the MapLibre GL JS map canvas for three.js
-    this.renderer = new THREE.WebGLRenderer({
-      canvas: map.getCanvas(),
-      context: gl,
-      antialias: true,
-    });
+      text.position.x = 2;
+      text.position.y = elevation;
 
-    this.renderer.autoClear = false;
-  },
-  render(gl, matrix) {
-    const rotationX = new THREE.Matrix4().makeRotationAxis(
-      new THREE.Vector3(1, 0, 0),
-      modelTransform.rotateX
-    );
-    const rotationY = new THREE.Matrix4().makeRotationAxis(
-      new THREE.Vector3(0, 1, 0),
-      modelTransform.rotateY
-    );
-    const rotationZ = new THREE.Matrix4().makeRotationAxis(
-      new THREE.Vector3(0, 0, 1),
-      modelTransform.rotateZ
-    );
+      scene.add(text);
+    }
+  );
+}
 
-    const m = new THREE.Matrix4().fromArray(matrix);
-    const l = new THREE.Matrix4()
-      .makeTranslation(
-        modelTransform.translateX,
-        modelTransform.translateY,
-        modelTransform.translateZ
-      )
-      .scale(
-        new THREE.Vector3(
-          modelTransform.scale,
-          -modelTransform.scale,
-          modelTransform.scale
-        )
-      )
-      .multiply(rotationX)
-      .multiply(rotationY)
-      .multiply(rotationZ);
+createText("Nicolas Arellano", 5, "0XFF00FF");
+createText("- Architect from PUC", 3, "0XFF0000");
+createText("- Research team lead at CIMS", 2, "0XFF0000");
+createText("- PhD candidate at ASAU", 1, "0XFF0000");
+createText("- Amateur programmer", 0, "0XFF0000");
 
-    this.camera.projectionMatrix = m.multiply(l);
-    this.renderer.resetState();
-    this.renderer.render(this.scene, this.camera);
-    this.map.triggerRepaint();
-  },
-};
+camera.position.z = 8;
+camera.position.x = 2;
+camera.position.y = 8;
 
-map.on("style.load", () => {
-  map.addLayer(customLayer);
+// scene.position.x = -5;
+// scene.position.z = 5;
+scene.position.y = -3;
+
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+//Creates the lights of the scene
+const lightColor = 0xffffff;
+
+const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(lightColor, 1);
+directionalLight.position.set(5, 10, 5);
+directionalLight.target.position.set(0, 3, 0);
+scene.add(directionalLight);
+scene.add(directionalLight.target);
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  if (mesh) mesh.rotation.y += 0.01;
+
+  yellowCube.rotation.x += 0.01;
+  yellowCube.rotation.y += 0.01;
+
+  blueCube.rotation.x += 0.02;
+  blueCube.rotation.y -= 0.01;
+
+  redCube.rotation.x -= 0.01;
+  redCube.rotation.y -= 0.02;
+
+  greenCube.rotation.x += 0.02;
+  greenCube.rotation.y -= 0.01;
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+const fullScreenButton = document.getElementById("full-screen");
+
+let fullScreen = false;
+
+fullScreenButton.addEventListener("click", () => {
+  fullScreen = !fullScreen;
+  resize();
+  console.log(fullScreen ? "FULL SCREEN!!" : "little screen");
 });
+
+//Adjust the viewport to the size of the browser
+window.addEventListener("resize", () => {
+  resize();
+});
+
+const resize = () => {
+  size.width = window.innerWidth * (fullScreen ? 0.92 : 0.6);
+  size.height = window.innerHeight * (fullScreen ? 0.9 : 0.4);
+  camera.aspect = size.width / size.height;
+  camera.updateProjectionMatrix();
+  renderer.setSize(size.width, size.height);
+};

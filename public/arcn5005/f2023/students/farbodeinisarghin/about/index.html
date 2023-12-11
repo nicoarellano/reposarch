@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Me</title>
+    <style>
+      /* Your CSS Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        margin-top: 2rem;
+      }
+      .vl {
+        border-left: 1px solid rgb(250, 191, 191);
+        height: 150px;
+      }
+      .flex {
+        display: flex;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      ul li {
+        margin: 1rem 0;
+      }
+      .profile-image {
+        border-radius: 0%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .info-container {
+        padding: 0 2rem;
+        text-align: center;
+      }
+      button {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #3498db;
+        color: white;
+        margin: 0.5rem;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="flex items-center justify-center grow">
+        <img
+          class="profile-image"
+          src="../img/photo.jpg"
+          alt="Student"
+          height="200"
+        />
+      </div>
+      <div class="vl"></div>
+      <div class="info-container">
+        <ul>
+          <li>Civil Engineering and Architecture background</li>
+          <li>I play the piano</li>
+          <li>Favorite color is yellow</li>
+          <li>Swimmer</li>
+        </ul>
+        <div>
+          <button id="btn1"><a href="about.html">Project 1</a></button>
+          <button id="btn2">Project 2</button>
+          <button id="btn3">Project 3</button>
+          <button id="btn4">Project 4</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
