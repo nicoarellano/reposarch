@@ -221,6 +221,7 @@ function setButtonPosition(button, position) {
 }
 
 
+
 const chinatownsFeatureCollection = chinatowns.map((chinatown) => {
   const image = chinatown.image || '';
   const { code, name, province, city, longitude, latitude } = chinatown;
@@ -250,8 +251,9 @@ const chinatownsFeatureCollection = chinatowns.map((chinatown) => {
 // Add a style for the popup container
 const popupStyle = `
   .popup-container {
-    max-width: 300px;
-    padding: 15px;
+    max-width: 150px;
+    max-hight: 130px;
+    padding: 3px;
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
@@ -266,8 +268,8 @@ const popupStyle = `
   }
 
   .popup-container h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 3px;
     color: #000;
   }
 
@@ -278,13 +280,13 @@ const popupStyle = `
   }
 
   .popup-container li {
-    margin-bottom: 8px;
+    margin-bottom: 3px;
   }
 
   .popup-container img {
     max-width: 100%;
     height: auto;
-    margin-top: 15px;
+    margin-top: 3px;
     border-radius: 4px;
   }
 `;
@@ -345,6 +347,9 @@ const addLayers = () => {
         .setHTML(description)
         .addTo(map);
 
+      // Update the popup style to make it smaller
+      updatePopupStyle(popup);
+
       // Close the popup when the map is clicked.
       map.on("click", closePopup);
 
@@ -356,6 +361,19 @@ const addLayers = () => {
     });
   });
 };
+
+// Function to update the style of the popup to make it smaller
+function updatePopupStyle(popup) {
+
+  const smallerMaxWidth = "150px";
+  const smallerMaxHeight = "100px";
+
+
+  const popupContainer = popup._container;
+
+  popupContainer.style.maxWidth = smallerMaxWidth;
+  popupContainer.style.maxHeight = smallerMaxHeight;
+}
 
 
 
