@@ -34,26 +34,26 @@ export const Arcn5005F2023Evaluations = [
     description:
       "3d model using Blender, a photogrammetry software (MeshRoom or Metashape) and Three.js",
   },
-  {
-    evaluation: "🔴 Assignment 3",
-    weight: "10%",
-    week: "week12",
-    date: dayjs(" November 30"),
-    type: "assignment",
-    description:
-      "BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
-  },
+  // {
+  //   evaluation: "🔴 Assignment 3",
+  //   weight: "10%",
+  //   week: "week12",
+  //   date: dayjs(" November 30"),
+  //   type: "assignment",
+  //   description:
+  //     "BIM model using Blender + Blender BIM and OpenBIM-Components (ifc.js)",
+  // },
   {
     evaluation: "🟡 Quiz 2",
-    weight: "10%",
+    weight: "15%",
     week: "week12",
     date: dayjs(" November 30"),
     type: "quiz",
     description:
-      "Week 12: Online quiz (Brightspace) 20 minutes at the beginning of the class - It will cover contents of 11 first weeks",
+      "Week 12: Online quiz (Brightspace) 30 minutes at the beginning of the class - It will all course cover contents",
   },
   {
-    evaluation: "🔴 Assignment 4",
+    evaluation: "🔴 Assignment 3",
     weight: "10%",
     week: "week13",
     date: dayjs(" December 07"),
@@ -62,10 +62,10 @@ export const Arcn5005F2023Evaluations = [
   },
   {
     evaluation: "🏁 Final Assignment",
-    weight: "30%",
+    weight: "35%",
     week: "week15",
-    date: dayjs("2023/12/18"),
+    date: dayjs("2023/12/20"),
     type: "final-assignment",
-    description: "Combine all together into a GIS/BIM platform",
+    description: "Combine all together into a GIS platform",
   },
 ];

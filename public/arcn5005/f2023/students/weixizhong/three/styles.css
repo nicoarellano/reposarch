@@ -55,8 +55,9 @@ h1 {
 #three-canvas {
     position: fixed;
     /* top: 0; */
-    left: 220;
-    bottom: 100;
+    left: 340;
+    bottom: 0;
+    margin: 10;
     outline: none;
 }
 
@@ -78,45 +79,69 @@ h1 {
     display: block;
 }
 
+.button-container {
+    position: absolute;
+    top: 90px; 
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
 button {
     appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
+    background: linear-gradient(135deg, #8b93d2, #a8c592);
+    border: none; 
+    border-radius: 2em;
     box-sizing: border-box;
-    color: #3B3B3B;
+    color: #ffffff;
     cursor: pointer;
     display: inline-block;
     font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px; 
+    font-weight: 400; 
     line-height: normal;
     margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
+    min-height: 3em; 
+    min-width: 8em; 
     outline: none;
-    padding: 1em 2.3em;
+    padding: 1em 1em;
     text-align: center;
     text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    transition: background 300ms ease-in-out, transform 150ms ease; 
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
 }
 
+
+button:hover {
+    background: linear-gradient(135deg, #a0ce7f, #ca7373); 
+    transform: rotate(5deg); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+button:active {
+    background: linear-gradient(135deg, #8b93d2, #a8c592);
+    transform: scale(0.95);
+}
+
+
+
 button:disabled {
     pointer-events: none;
 }
 
-button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
+audio {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    position: absolute;
+    top: 10px; 
+    left: 20px;
+    display: flex;
 }
 
-button:active {
-    box-shadow: none;
-    transform: translateY(0);
-}
+
+

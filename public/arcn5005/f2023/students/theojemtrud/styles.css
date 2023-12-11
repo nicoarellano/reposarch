@@ -1,3 +1,5 @@
+/* styles.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,6 @@ html {
     width: 100%;
     height: 100%;
 }
-
 
 h1 {
     color: red;
@@ -78,7 +79,7 @@ h1 {
     display: block;
 }
 
-button {
+.menu-button {
     appearance: none;
     background-color: transparent;
     border: 0.125em solid #1A1A1A;
@@ -87,7 +88,7 @@ button {
     color: #3B3B3B;
     cursor: pointer;
     display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-family: 'Afacad', sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
@@ -105,18 +106,54 @@ button {
     will-change: transform;
 }
 
-button:disabled {
+.menu-button:disabled {
     pointer-events: none;
 }
 
-button:hover {
+.menu-button:hover {
     color: #fff;
     background-color: #1A1A1A;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
 
-button:active {
+.menu-button:active {
     box-shadow: none;
     transform: translateY(0);
+}
+
+/* Additional styles from your HTML */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+
+#resto {
+    text-align: center; /* Center the text */
+    color: rgb(0, 0, 0, 1); /* Set the text color with transparency */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(-50%);
+    font-family: 'Afacad', sans-serif;
+}
+
+#map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.maplibregl-popup {
+    max-width: 400px;
+    font-family: 'Afacad', sans-serif;
+}
+
+    /*font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }

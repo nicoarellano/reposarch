@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maplibre exercise</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head>
+    <h1>Places I've Visited in Rome</h1>
+  <title>Display buildings in 3D</title>
+  <meta property="og:description" content="Use extrusions to display buildings' height in 3D." />
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='styles.css' />
+  <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+  <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+  <style>
+      body { margin: 0; padding: 0; }
+      html, body, #map { height: 100%; }
+  </style>
+      <style>
+        .maplibregl-popup {
+        max-width: 500px;
+         font: 19px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+       }
+      </style>
+</head>
+<body>
+<div id="map"></div>
+<script src="./main.js"></script>
+</body>
 </html>
+
