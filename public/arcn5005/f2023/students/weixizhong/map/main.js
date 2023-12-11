@@ -221,7 +221,6 @@ function setButtonPosition(button, position) {
 }
 
 
-
 const chinatownsFeatureCollection = chinatowns.map((chinatown) => {
   const image = chinatown.image || '';
   const { code, name, province, city, longitude, latitude } = chinatown;
