@@ -1,10 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head lang="en">
+<head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    #audio-player {
+      display: none;
+    }
+  </style>
   <title>About</title>
 </head>
 
@@ -12,12 +18,15 @@
   <section class="main-container">
     <div id="viewers">
       <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
-      <audio controls autoplay>
+      <audio controls autoplay id="audio-player">
         <source src="Kina_ft_Snow_-_get_you_the_moon.mp3" type="audio/mp3">
       </audio>
-      <div class="legend"><span class="dot"></span><p>Click the bottom left icon once to transport to Chinatown in Ottawa.
-        Click again to journey to China.
-        Click once more to return to the starting point in Canada.   Click on each location icon to get detailed information of each chinatown. </p></div>
+      <div class="legend"><span class="dot"></span>
+        <p>Click the bottom left icon once to transport to Chinatown in Ottawa.
+          Click again to journey to China.
+          Click once more to return to the starting point in Canada. Click on each location icon to get detailed
+          information of each Chinatown.</p>
+      </div>
     </div>
   </section>
 </body>
