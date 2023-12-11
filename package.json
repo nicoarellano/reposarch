@@ -31,6 +31,7 @@
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.17",
     "hamburger-react": "^2.5.0",
+    "mapbox": "^1.0.0-beta10",
     "maplibre-gl": "^3.3.1",
     "next": "13.4.17",
     "next-compose-plugins": "^2.2.1",
