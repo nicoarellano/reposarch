@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Batool Hayajneh's Page</title>
+</head>
+<body>
+    <header>
+        <h1>Batool Hayajneh</h1>
+    </header>
+
+    </header>
+    <li>I'm sharing what I love to listen to when stress: The Quran, enjoy! </li>
+    
+
+    <audio autoplay loop>
+        <source src="resources/Quran.mp3" type="audio/mpeg"> 
+        Your browser does not support the audio element.
+    </audio>
+
+    <ol class="info-list">
+    
+        <li>All human lives matter</li>
+        <li>Jordanian Canadian Architect</li>
+        <li>Comfort zone: Painting, Traveling, and Cooking</li>
+        <li>A mother of a joyful 18-month-old 'Ameer and a newborn 'Hana' </li>
+        <li>Interests: Childhood Education and Culture Science</li>
+    </ol>
+
+    <header>
+        <h2>Assignments</h2>
+    </header>
+
+    <ol class="assignments-list">
+        <li><button>Assignment 1</button></li>
+        <li><button>Assignment 2</button></li>
+        <li><button>Assignment 3</button></li>
+        <li><button>Assignment 4</button></li>
+    </ol>
+
+    <div class="image-container">
+        <img src="resources/batool.jpg" alt="Batool" class="profile-picture" id="mainImage" onclick="swapImage()">
+    </div>
+
+    <p style="margin-bottom: 5px;">Click on the image</p>
+<p style="margin-bottom: 5;">I will use my platform to raise the voice of over 20 thousand Palestinian martyrs in the last 60 days and ask to unite our prayers to them</p>
+<p style="margin-bottom: 90;" >Everyone has the right to know the truth: <a href="https://truthaboutpalestine.com/" target="_blank">https://truthaboutpalestine.com/</a></p>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var mainImage = document.getElementById('mainImage');
+            mainImage.onclick = function() {
+                if (mainImage.src.endsWith("batool.jpg")) {
+                    mainImage.src = "resources/gaza.jpg";
+                } else {
+                    mainImage.src = "resources/batool.jpg";
+                }
+            };
+        });
+    </script>
+</body>
 </html>
+

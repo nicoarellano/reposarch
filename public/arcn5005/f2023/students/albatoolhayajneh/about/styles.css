@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url('resources/background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white; 
+  font-weight: bold;
+}
+
+
+header h1 {
+  text-align: center;
+  margin-top: 300px; 
+  color: white;
+  font-weight: bold;
+}
+
+header h2 {
+  text-align: center;
+  margin-top: 40px;
+  background-color: navy;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  display: inline-block;
+}
+
+.info-list, .assignments-list {
+  padding: 20px;
+}
+
+button {
+  background-color: navy;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold; 
+  border: none;
+  padding: 10px 20px;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin: 10px;
+}
+
+
+
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.profile-picture, .gaza.jpg {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  object-fit: cover;
+  margin: 10px auto;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
