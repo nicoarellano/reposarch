@@ -28,7 +28,7 @@ map.on("load", () => {
                 Date: "2020 Sept 16-Oct 6",
                 iconSize: [40, 40],
                 thumbnail: "1",
-                expanded: "./images/Time Machine.jpg",
+                expanded: "../images/Time Machine.jpg",
                 Location: "Omlands Park",
               },
               geometry: {
@@ -43,7 +43,7 @@ map.on("load", () => {
                 Date: "2020 Oct 14-Nov 6th",
                 iconSize: [40, 40],
                 thumbnail: "2",
-                expanded: "./images/Markings.jpg",
+                expanded: "../images/Markings.jpg",
                 Location: "Legislative Map of Assiniboine",
               },
               geometry: {
@@ -58,7 +58,7 @@ map.on("load", () => {
                 Date: "2020 Nov 6th-Nov 16th",
                 iconSize: [40, 40],
                 thumbnail: "3",
-                expanded: "./images/Personalize 2.jpg",
+                expanded: "../images/Personalize 2.jpg",
                 Location: "Midtown Bridge",
               },
               geometry: {
@@ -73,7 +73,7 @@ map.on("load", () => {
                 Date: "2021 Feb 26-Mar 22",
                 iconSize: [40, 40],
                 thumbnail: "4",
-                expanded: "./images/Estrad.jpg",
+                expanded: "../images/Estrad.jpg",
                 Location: "Exchange District (Winnipeg)",
               },
               geometry: {
@@ -88,7 +88,7 @@ map.on("load", () => {
                 Date: "2021 Mar 26th-Apr 16th",
                 iconSize: [40, 40],
                 thumbnail: "5",
-                expanded: "./images/Roost.jpg",
+                expanded: "../images/Roost.jpg",
                 Location: "Exchange District (Winnipeg)",
               },
               geometry: {
@@ -103,7 +103,7 @@ map.on("load", () => {
                 Date: "2022 Jan 9-Apr 21",
                 iconSize: [40, 40],
                 thumbnail: "6",
-                expanded: "./images/Icebox.jpg",
+                expanded: "../images/Icebox.jpg",
                 Location: "Forks",
               },
               geometry: {
@@ -118,7 +118,7 @@ map.on("load", () => {
                 Date: "2022 Sept 8-Dec-19th",
                 iconSize: [40, 40],
                 thumbnail: "7",
-                expanded: "./images/Pano.jpg",
+                expanded: "../images/Pano.jpg",
                 Location: "Grindavik",
               },
               geometry: {
@@ -133,7 +133,7 @@ map.on("load", () => {
                 Date: "2023 Jan 29-Aprl 18",
                 iconSize: [40, 40],
                 thumbnail: "8",
-                expanded: "./images/Cloud.jpg",
+                expanded: "../images/Cloud.jpg",
                 Location: "Berlin",
               },
               geometry: {
@@ -148,7 +148,7 @@ map.on("load", () => {
                 Date: "2023 Sept 8-Sept 29",
                 iconSize: [40, 40],
                 thumbnail: "9",
-                expanded: "./images/Basin.jpg",
+                expanded: "../images/Basin.jpg",
                 Location: "Ottawa",
               },
               geometry: {
@@ -163,7 +163,7 @@ map.on("load", () => {
                 Date: "2023 Oct 13-Dec 18",
                 iconSize: [40, 40],
                 thumbnail: "10",
-                expanded: "./images/SOLAR 1.jpg",
+                expanded: "../images/SOLAR 1.jpg",
                 Location: "Ottawa",
               },
               geometry: {

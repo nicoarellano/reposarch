@@ -30,49 +30,32 @@ document.body.appendChild(renderer.domElement);
 
 const geometry = new THREE.SphereGeometry(0.5, 32, 16);
 
-const yellowMaterial = new THREE.MeshBasicMaterial({ color: 0xffd97d });
-const blueMaterial = new THREE.MeshBasicMaterial({ color: 0xfb4242 });
-const redMaterial = new THREE.MeshBasicMaterial({ color: 0x63250e });
+const yellowMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+const blueMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+const redMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
 const greenMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
-const AMaterial = new THREE.MeshBasicMaterial({ color: 0xffd97d });
-const BMaterial = new THREE.MeshBasicMaterial({ color: 0xfb4242 });
-const CMaterial = new THREE.MeshBasicMaterial({ color: 0x63250e });
-const DMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
 
 const yellowSphere = new THREE.Mesh(geometry, yellowMaterial);
 const blueSphere = new THREE.Mesh(geometry, blueMaterial);
 const redSphere = new THREE.Mesh(geometry, redMaterial);
 const greenSphere = new THREE.Mesh(geometry, greenMaterial);
-const ASphere = new THREE.Mesh(geometry, yellowMaterial);
-const BSphere = new THREE.Mesh(geometry, blueMaterial);
-const CSphere = new THREE.Mesh(geometry, redMaterial);
-const DSphere = new THREE.Mesh(geometry, greenMaterial);
+
 
 yellowSphere.position.z = -3;
 blueSphere.position.x = -3;
 redSphere.position.x = 3;
 greenSphere.position.z = 3;
-yellowSphere.position.y = -3;
-blueSphere.position.y = -3;
-redSphere.position.y = -3;
-greenSphere.position.y = -3;
-ASphere.position.z = 3;
-BSphere.position.x = 3;
-CSphere.position.x = -3;
-DSphere.position.z = -3;
-ASphere.position.y = 5;
-BSphere.position.y = 5;
-CSphere.position.y = 5;
-DSphere.position.y = 5;
+yellowSphere.position.y = -1;
+blueSphere.position.y = -1;
+redSphere.position.y = -1;
+greenSphere.position.y = -1;
+
 
 scene.add(yellowSphere);
 scene.add(blueSphere);
 scene.add(redSphere);
 scene.add(greenSphere);
-scene.add(ASphere);
-scene.add(BSphere);
-scene.add(CSphere);
-scene.add(DSphere);
+
 
 
 //const loader = new THREE.GLTFLoader();
@@ -119,7 +102,7 @@ function loadGLB(path,scale,x,z){
   );
 }
 
-loadGLB("./Model/cupcake.glb", 1, 0, 0);
+loadGLB("./Model/studio model.glb", 10, 0, 0);
 
 camera.position.z = 6;
 camera.position.x = 4;
