@@ -649,31 +649,23 @@ const map = new maplibregl.Map({
 });
 
 map.on("load", () => {
-  map.loadImage(
-    "./icon.png",
-    // Add an image to use as a custom marker
-    (error, image) => {
-      if (error) throw error;
-      map.addImage("custom-marker", image);
+  map.addSource("places", {
+    type: "geojson",
+    data: places,
+  });
 
-      map.addSource("places", {
-        type: "geojson",
-        data: places,
-      });
-
-      // Add a layer showing the places.
-      map.addLayer({
-        id: "places",
-        type: "symbol",
-        source: "places",
-        layout: {
-          "icon-image": "custom-marker",
-          "icon-size": 0.05,
-          "icon-overlap": "always",
-        },
-      });
-    }
-  );
+  // Add a layer showing the places with a generic marker.
+  map.addLayer({
+    id: `places`,
+    type: "circle",
+    source: "places",
+    paint: {
+      "circle-color": "red",
+      "circle-radius": 6,
+      "circle-stroke-width": 2,
+      "circle-stroke-color": "white",
+    },
+  });
 
   // Create a popup, but don't add it to the map yet.
   const popup = new maplibregl.Popup({

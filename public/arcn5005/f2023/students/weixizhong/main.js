@@ -1,13 +1,14 @@
 const scene = new THREE.Scene();
 
 const size = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: window.innerWidth * 0.6,
+  height: window.innerHeight * 0.4,
 };
 
 const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
+//Sets up the renderer, fetching the canvas of the HTML
 const threeCanvas = document.getElementById("three-canvas");
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
@@ -16,15 +17,10 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-document.body.appendChild(renderer.domElement);
+const threeContainer = document.getElementById("three-container");
+threeContainer.appendChild(renderer.domElement);
 
-const loader = new THREE.TextureLoader();
-const texture = loader.load("./image/Sky.jpg", () => {
-  texture.mapping = THREE.EquirectangularReflectionMapping;
-  texture.colorSpace = THREE.SRGBColorSpace;
-  scene.background = texture;
-});
-
+//Creates grids and axes in the scene
 const grid = new THREE.GridHelper(10, 10);
 scene.add(grid);
 
@@ -33,67 +29,41 @@ axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
-const dodecahedronGeometry = new THREE.DodecahedronGeometry(1.5);
-const octahedronGeometry = new THREE.OctahedronGeometry(1.5);
-const torusKnotGeometry = new THREE.TorusKnotGeometry(1.5);
+const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
 
-const material1 = new THREE.MeshLambertMaterial({ color: 0xdaf7a6 });
-const material2 = new THREE.MeshLambertMaterial({ color: 0xdfaa9e });
-const material3 = new THREE.MeshLambertMaterial({ color: 0x9ea9df });
+const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
 
-const geometry1 = new THREE.Mesh(dodecahedronGeometry, material1);
-const geometry2 = new THREE.Mesh(octahedronGeometry, material2);
-const geometry3 = new THREE.Mesh(torusKnotGeometry, material3);
+const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
+const blueCube = new THREE.Mesh(geometry, blueMaterial);
+const redCube = new THREE.Mesh(geometry, redMaterial);
+const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
-geometry1.position.z = -15;
-geometry1.position.y = 16;
-geometry1.position.x = -15;
-geometry2.position.x = -20;
-geometry2.position.y = -6;
-geometry3.position.x = 20;
+yellowCube.position.z = -3;
+blueCube.position.x = -3;
+redCube.position.x = 3;
+greenCube.position.z = 3;
 
-geometry1.scale.set(2, 2, 2);
-geometry2.scale.set(1.5, 1.5, 1.5);
-geometry3.scale.set(3.5, 3.5, 3.5);
-
-scene.add(geometry1);
-scene.add(geometry2);
-scene.add(geometry3);
+scene.add(yellowCube);
+scene.add(blueCube);
+// scene.add(redCube);
+scene.add(greenCube);
 
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
 gltfLoader.load(
-  "./three/3Dmecolor.glb",
+  "./three/models/justin.glb",
   function (gltf) {
     mesh = gltf.scene;
-    mesh.scale.set(3, 3, 3);
-    mesh.position.set(0, 11, 0);
-    mesh.rotation.y += 0.01;
+    mesh.scale.x = 3;
+    mesh.scale.y = 3;
+    mesh.scale.z = 3;
 
     scene.add(mesh);
-
-    mesh.rotation.y -= Math.PI / 2;
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
-
-const carLoader = new THREE.GLTFLoader();
-
-let carMesh;
-
-carLoader.load(
-  "./three/car.glb",
-  function (gltf) {
-    carMesh = gltf.scene;
-    carMesh.scale.set(2, 2, 2);
-    carMesh.rotation.y += 0.01;
-
-    scene.add(carMesh);
   },
   undefined,
   function (error) {
@@ -103,52 +73,58 @@ carLoader.load(
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = 0x000000, size = 0.8) {
+function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./three/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
-      font: font,
-      size: textSize,
-      height: 0.1,
-      curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
-    });
+  fontLoader.load(
+    "./three/fonts/helvetiker_regular.typeface.json",
+    function (font) {
+      const textGeo = new THREE.TextGeometry(textValue, {
+        font: font,
+        size: textSize,
+        height: 0.1,
+        curveSegments: 4,
+        bevelEnabled: true,
+        bevelThickness: 0.1,
+        bevelSize: 0.0,
+        bevelOffset: 0,
+        bevelSegments: 5,
+      });
 
-    const color = new THREE.Color(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const textMesh = new THREE.Mesh(textGeo, textMaterial);
+      const color = new THREE.Color();
+      color.setHex(textColor);
+      const textMaterial = new THREE.MeshLambertMaterial({ color: color });
+      const text = new THREE.Mesh(textGeo, textMaterial);
 
-    textMesh.position.x = 5;
-    textMesh.position.y = elevation + 10;
+      text.position.x = 2;
+      text.position.y = elevation;
 
-    scene.add(textMesh);
-  });
+      scene.add(text);
+    }
+  );
 }
 
-createText("Weixi Zhong", 6, 0x354fa9);
-createText("- Background in Environmental Design", 4, 0x729fa6);
-createText("- MArch Student at CU", 2.5, 0x729fa6);
-createText("- Love Drawing", 1, 0x729fa6);
+createText("Nicolas Arellano", 5, "0XFF00FF");
+createText("- Architect from PUC", 3, "0XFF0000");
+createText("- Research team lead at CIMS", 2, "0XFF0000");
+createText("- PhD candidate at ASAU", 1, "0XFF0000");
+createText("- Amateur programmer", 0, "0XFF0000");
 
-camera.position.z = 30;
-camera.position.x = 0;
+camera.position.z = 8;
+camera.position.x = 2;
 camera.position.y = 8;
 
-scene.position.x = -5;
-scene.position.z = 5;
+// scene.position.x = -5;
+// scene.position.z = 5;
 scene.position.y = -3;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
+//Creates the lights of the scene
 const lightColor = 0xffffff;
 
-const ambientLight = new THREE.AmbientLight(lightColor, 0.7);
+const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(lightColor, 1);
@@ -160,30 +136,44 @@ scene.add(directionalLight.target);
 function animate() {
   requestAnimationFrame(animate);
 
-  if (mesh) {
-    mesh.rotation.y += 0.01;
-  }
+  if (mesh) mesh.rotation.y += 0.01;
 
-  if (carMesh) {
-    carMesh.rotation.y += 0.01;
-  }
+  yellowCube.rotation.x += 0.01;
+  yellowCube.rotation.y += 0.01;
 
-  geometry1.rotation.x += 0.06;
+  blueCube.rotation.x += 0.02;
+  blueCube.rotation.y -= 0.01;
 
-  geometry2.rotation.y -= 0.01;
+  redCube.rotation.x -= 0.01;
+  redCube.rotation.y -= 0.02;
 
-  geometry3.rotation.x -= 0.01;
-  geometry3.rotation.y -= 0.02;
+  greenCube.rotation.x += 0.02;
+  greenCube.rotation.y -= 0.01;
 
   renderer.render(scene, camera);
 }
 
 animate();
 
+const fullScreenButton = document.getElementById("full-screen");
+
+let fullScreen = false;
+
+fullScreenButton.addEventListener("click", () => {
+  fullScreen = !fullScreen;
+  resize();
+  console.log(fullScreen ? "FULL SCREEN!!" : "little screen");
+});
+
+//Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
-  size.width = window.innerWidth;
-  size.height = window.innerHeight;
+  resize();
+});
+
+const resize = () => {
+  size.width = window.innerWidth * (fullScreen ? 0.92 : 0.6);
+  size.height = window.innerHeight * (fullScreen ? 0.9 : 0.4);
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
-});
+};
