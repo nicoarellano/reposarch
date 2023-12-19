@@ -26,7 +26,7 @@ const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 // Create a text sprite for instructions
-const instructionsText = createTextSprite('Press space to bounce\nUse WASD to move\nDrag to rotate');
+const instructionsText = createTextSprite('Press space to bounce\nUse WASD to move\nDrag to rotate\nPress C to shake screen');
 instructionsText.position.set(0, 3, 0); // Adjust the position as needed
 scene.add(instructionsText);
 
@@ -179,25 +179,35 @@ function animate() {
 
 animate();
 
-// Function to create a text sprite
+// Function to create a text sprite with multiple lines
 function createTextSprite(message) {
+    const lines = message.split('\n');
+    const lineHeight = 20; // Adjust the line height as needed
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
     context.font = '20px Arial';
-    const textWidth = context.measureText(message).width;
 
-    canvas.width = textWidth * 2;
-    canvas.height = 40;
+    const textWidth = Math.max(...lines.map(line => context.measureText(line).width));
+    const canvasWidth = 400; // Set a fixed canvas width
+    const canvasHeight = lines.length * lineHeight;
+
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
 
     context.font = '20px Arial';
     context.fillStyle = 'white';
-    context.fillText(message, canvas.width / 4, canvas.height / 2);
+
+    lines.forEach((line, index) => {
+        context.fillText(line, canvas.width / 4, (index + 1) * lineHeight);
+    });
 
     const texture = new THREE.CanvasTexture(canvas);
     const material = new THREE.SpriteMaterial({ map: texture });
     const sprite = new THREE.Sprite(material);
 
-    sprite.scale.set(20, 0.8, 0.2); // Adjust the scale as needed
+    // Adjust the scale based on the fixed canvas size
+    const scale = canvasWidth / canvasHeight;
+    sprite.scale.set(scale, 1, 0.2); // Adjust the scale as needed
 
     return sprite;
 }
@@ -216,3 +226,38 @@ audioLoader.load('bgm.mp3', (buffer) => {
 
 // Connect the audio listener to the camera
 camera.add(audioListener);
+
+// Handle camera shake on 'C' key press
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'c') {
+        shakeCamera();
+    }
+});
+
+// Function to shake the camera
+function shakeCamera() {
+    const intensity = 0.5; // Adjust the intensity of the shake
+    const duration = 1000; // Duration of the shake in milliseconds
+
+    const startPosition = camera.position.clone();
+    const startTime = Date.now();
+
+    function updateShake() {
+        const elapsedTime = Date.now() - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+
+        const randomOffset = new THREE.Vector3(
+            Math.random() * intensity - intensity / 2,
+            Math.random() * intensity - intensity / 2,
+            Math.random() * intensity - intensity / 2
+        );
+
+        camera.position.copy(startPosition).add(randomOffset);
+
+        if (progress < 1) {
+            requestAnimationFrame(updateShake);
+        }
+    }
+
+    updateShake();
+}
