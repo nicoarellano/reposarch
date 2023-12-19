@@ -1,121 +1,210 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body,
-html {
-    overflow: hidden;
-    width: 100%;
+
+/* Resetting some default styles */
+
+body, html {
+    font-family: 'Roboto', sans-serif;
     height: 100%;
-}
-h1 {
-    color: red;
+    color: #333;
 }
 
-.about {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
 
-.assignment2 {
-    width: 95%;
-    height: 100%;
+/* Styling for the main container */
+.main-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex;
-    align-items: start;
-    overflow: hidden;
-    gap: 2rem;
-}
-
-.about section {
-    background-color: #f1f1f1;
-    width: 70%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    padding: 100px;
+    background-color: #ffffff; /* Light background for contrast */
 }
 
-.vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-}
-
-#three-canvas {
-    position: fixed;
-    /* top: 0; */
-    left: 220;
-    bottom: 100;
-    outline: none;
-}
-
-#map {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-#p5 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-#p5-container {
-    display: block;
-}
-
-button {
-    appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
+/* Styling for the personal details section */
+.final {
     text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
-    padding: 10px;
+    margin-bottom: 20px;
 }
 
-button:disabled {
-    pointer-events: none;
+/* Styling for the list items */
+.final ul li {
+    list-style-type: none;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Green text for a funky look */
+}
+
+/* Styling for the buttons */
+button {
+    background-color: #ff6347; /* Tomato color for funkiness */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-    padding: 10px;
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-button:active {
-    box-shadow: none;
-    transform: translateY(0);
+/* Styling for the country list */
+.country-list {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.country-list h3 {
+    color: #ff6347; /* Tomato color for the title */
+}
+
+.country-list ul {
+    list-style-type: none;
+}
+
+.country-name {
+    font-weight: bold;
+}
+
+.duration {
+    font-style: italic;
+}
+
+/* Styling for the change background button */
+#change-bg-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #555;
+    color: white;
+}
+
+/* Transparent background for 'Countries I've Lived' */
+.country-list {
+    background-color: rgba(240, 240, 240, 0.8); /* Semi-transparent background */
+}
+
+    /* Custom style for the map container */
+    #map {
+        position: absolute;
+        right: 0;
+        top: 200px;
+        width: 50%;
+        height: 100vh; /* Full height of the viewport */
+        /* Add any additional styling you want for the map frame */
+    }
+    
+.main-container {
+    display: flex; /* Using Flexbox */
+    justify-content: space-between; /* Distributing space between elements */
+    align-items: start; /* Aligning items to the start of the container */
+}
+
+#map {
+    flex: 0.5; /* Allowing the map to take up the remaining space */
+    height: 80vh; /* Full height of the viewport */
+}
+
+.final, .github-button {
+    flex: 1; /* Assigning equal space to the text and picture container */
+    padding: 20px; /* Adding some padding for spacing */
+}
+
+
+
+.nav-bar {
+    position: absolute;
+    pointer-events: none;
+    top: 50px;
+    right: 0; /* Aligning with the right edge of the screen, where the map starts */
+    width: 50%; /* The nav bar will take 50% of the screen width, same as the map */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 10; /* Ensure it's above the map */
+}
+
+
+
+.change-background {
+    position: absolute;
+    left: 50%; /* Aligning with the left edge of the map */
+    bottom: 100px; /* Positioning it slightly above the bottom of the map */
+    transform: translateX(-100%); /* Adjust position to the left of the starting point */
+    z-index: 10; /* Ensure it's above the map */
+}
+
+#portfolio {
+    text-align: center;
+    padding: 20px;
+}
+
+#gallery-container {
+    width: 80%;
+    margin: auto;
+}
+
+#gallery-image {
+    width: 50%;
+    height: auto;
+    border: 2px solid #333;
+}
+
+/* Gallery container styles */
+.gallery-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-thumbnail {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.gallery-preview {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.preview-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc;
 }
