@@ -20,14 +20,15 @@ body {
 header h1 {
   text-align: center;
   margin-top: 300px; 
-  color: white;
+  color: rgb(188, 132, 132);
   font-weight: bold;
+  
 }
 
 header h2 {
   text-align: center;
   margin-top: 40px;
-  background-color: navy;
+  background-color: rgb(104, 71, 55);
   padding: 10px 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
@@ -38,9 +39,20 @@ header h2 {
   padding: 20px;
 }
 
+.assignments-list button {
+  width: 200px; 
+  height: 55px; 
+  font-size: 11px; 
+  text-align: center;
+  line-height: 50px; 
+  margin: 2px 0; 
+  cursor: pointer;
+}
+
+
 button {
-  background-color: navy;
-  color: white;
+  background-color: rgb(233, 217, 207);
+  color: rgb(35, 46, 76);
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold; 
@@ -62,7 +74,7 @@ button {
   margin: 20px 0;
 }
 
-.profile-picture, .gaza.jpg {
+.profile-picture, .name.jpg {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -74,5 +86,19 @@ button {
 p {
   text-align: center;
   margin-top: 20px;
+}
+
+.circular-image {
+  width: 200px; 
+  height: 200px; 
+  border-radius: 70%;
+  position: absolute; 
+  top: 50px; 
+  left: 50px;
+}
+
+body {
+  background-size: cover; 
+  background-repeat: no-repeat; 
 }
 
