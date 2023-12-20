@@ -1,11 +1,179 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final exercise</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEhEQAFRFNwCF1tUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQEQEQEQAAABABABABAAAAEAEAEAEBAAAREREREQEAABERERERAQAAEREREREBAAAREREREQEAABEREREREQABEREAAAAAAAEyMQAAAAAAASMhAAAAAAABEREAAAAAAAEAAQAAAAAAAQABEAAAAAABEAAAAAAAD//wAAyScAAO23AADttQAA4AUAAOAFAADgBQAA4AUAAOABAADB/wAAwf8AAMH/AADB/wAA3f8AANz/AADP/wAA" rel="icon" type="image/x-icon">
+
+    <title>Faris's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="assign2.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="nav-bar">
+        <div class="country-list">
+            <h3>Countries I've Lived</h3>
+            <ul>
+                <li><span class="country-name">Vietnam</span><span class="duration">Ho Chi Minh City - 9 yrs</span></li>
+                <li><span class="country-name">Canada</span><span class="duration">Ottawa - 8 yrs</span></li>
+                <li><span class="country-name">Spain</span><span class="duration">Lugo - 1 yr</span></li>
+                <li><span class="country-name">China</span><span class="duration">Shanghai - 1 yr</span></li>
+                <li><span class="country-name">Jordan</span><span class="duration">Amman - 3 yrs</span></li>
+                <li><span class="country-name">Saudi Arabia</span><span class="duration">Al Khobar - 2 yr</span></li>
+                <li><span class="country-name">Thailand</span><span class="duration">Bangkok - 6 mo</span></li>
+                <li><span class="country-name">Myanmar </span><span class="duration">Burma - 3 mo</span></li>
+                <li><span class="country-name"> United Arab Emirates </span><span class="duration"> Dubai - 3 mo</span></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+    <!-- Button to GitHub Repository -->
+    <a href="https://github.com/farisitum/reposarch" class="github-button" target="_blank"><button>Visit My GitHub</button></a>
+
+    <section class="main-container">
+        <div class="final">
+            <ul>
+                <li>M.arch1 @ Carleton</li>
+                <li>B.A: Arch History @ Carleton</li>
+            </ul>
+            <br />
+            <img src="SELFIE.png" alt="Faris" height="400" /> 
+        </div>
+        <div id="viewers">
+            <div>
+                <div id="full-screen"></div>
+                <div id="three-container"></div>
+            </div>
+            <div class="legend">
+                <span class="dot"></span>            </div>
+        </div>
+    </section>
+
+    <div class="integrated-assign2">
+        
+  <div class="assignment2">
+  <canvas id="three-canvas"></canvas>
+  </div>
+
+    </div>
+
+    <div class="integrated-assign3">
+        
+    <header>
+        <div class="nav-bar">
+            <div class="country-list">
+                <h3>Countries I've Lived</h3>
+                <ul>
+                    <li>
+                        <span class="country-name">Vietnam</span>
+                        <span class="duration">Ho Chi Minh City - 9 yrs</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Canada</span>
+                        <span class="duration">Ottawa - 8 yrs</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Spain</span>
+                        <span class="duration">Lugo - 1 yr</span>
+                    </li>
+                    <li>
+                        <span class="country-name">China</span>
+                        <span class="duration">Shanghai - 1 yr</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Jordan</span>
+                        <span class="duration">Amman - 3 yrs</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Saudi Arabia</span>
+                        <span class="duration">Al Khobar - 2 yr</span>
+                    </li>
+                    <li>
+                        <span class="country-name">Thailand</span>
+                        <span class="duration">Bangkok - 6 mo</span>
+                    </li> <li>
+                        <span class="country-name">Myanmar </span>
+                        <span class="duration">Burma - 3 mo</span>
+                    </li>
+                    <li>
+                        <span class="country-name"> United Arab Emirates </span>
+                        <span class="duration"> Dubai - 3 mo</span>
+                    </li>
+                </ul>
+                <ul>
+
+                    
+                </ul>
+
+    </header>
+
+    <div id="map"></div>
+    
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    <script src='assign3.js'></script>
+
+    </div>
+
+<button id="change-bg-button">Change Background Color</button>
+
+
+<script>
+document.getElementById('change-bg-button').addEventListener('click', function() {
+    // Random background color
+    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = randomColor;
+});
+</script>
+
+
+<!-- Gallery Section -->
+<div id="portfolio-gallery" class="gallery-container">
+    <div class="gallery-grid">
+        <!-- Thumbnails of the portfolio images will be added here -->
+        <!-- Example: <img src="path_to_image.jpg" alt="Portfolio Image" class="gallery-thumbnail"> -->
+    </div>
+    <div class="gallery-preview" id="gallery-preview">
+        <span class="close-btn" onclick="closeGallery()">&times;</span>
+        <img class="preview-image" id="preview-image" src="" alt="Preview Image">
+    </div>
+</div>
+
+
+<script>
+    // Function to open the gallery with the clicked image
+    function openGallery(imgSrc) {
+        document.getElementById('preview-image').src = imgSrc;
+        document.getElementById('gallery-preview').style.display = 'flex';
+    }
+
+    // Function to close the gallery
+    function closeGallery() {
+        document.getElementById('gallery-preview').style.display = 'none';
+    }
+
+    // Adding click event listeners to the gallery thumbnails
+    document.querySelectorAll('.gallery-thumbnail').forEach(item => {
+        item.addEventListener('click', event => {
+            openGallery(item.src);
+        });
+    });
+</script>
+
+</body>
+<script type="module" src="assign2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+<canvas class="viewer" id="three-canvas"></canvas>
+<script src="assign3.js"></script>
+
 </html>
+
