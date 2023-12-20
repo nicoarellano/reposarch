@@ -1,0 +1,59 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+ }
+ html, body, #map {height: 100%;}
+ 
+ h1 {
+    color: rgb(255, 230, 207);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+ }
+ 
+ .filter-group {
+   font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   position: absolute;
+   top: 100px;
+   right: 25px;
+   z-index: 1;
+   border-radius: 3px;
+   width: 250px;
+   color: #fff;
+}
+
+.filter-group input[type='checkbox']:first-child + label {
+   border-radius: 3px 3px 0 0;
+}
+
+.filter-group label:last-child {
+   border-radius: 0 0 3px 3px;
+   border: none;
+}
+
+.filter-group input[type='checkbox'] {
+   display: none;
+}
+
+.filter-group input[type='checkbox'] + label {
+   background-color: #3386c0;
+   display: block;
+   cursor: pointer;
+   padding: 15px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.filter-group input[type='checkbox'] + label {
+   background-color: #3386c0;
+   text-transform: capitalize;
+}
+
+.filter-group input[type='checkbox'] + label:hover,
+.filter-group input[type='checkbox']:checked + label {
+   background-color: #4682B4;
+}
+
+.filter-group input[type='checkbox']:checked + label:before {
+   content: '✔';
+   margin-right: 5px;
+}
