@@ -3183,7 +3183,7 @@
   "buffers": [
     {
       "byteLength": 2578952,
-      "uri": "scene.bin"
+      "uri": "./scene.bin"
     }
   ],
   "extensionsUsed": [
