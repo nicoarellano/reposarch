@@ -112,7 +112,7 @@ camera.position.z = 18;
 camera.position.x = 0;
 camera.position.y = 2;
 
-scene.position.x = -5;
+scene.position.x = -2;
 scene.position.z = 5;
 scene.position.y = -5;
 
