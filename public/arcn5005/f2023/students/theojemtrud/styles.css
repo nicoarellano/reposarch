@@ -1,141 +1,207 @@
 /* styles.css */
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body,
-html {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-h1 {
-    color: red;
-}
-
-.about {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.assignment2 {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: end;
-    overflow: hidden;
-    gap: 2rem;
-}
-
-.about section {
-    background-color: #f1f1f1;
-    width: 70%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-}
-
-.vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-}
-
-#three-canvas {
-    position: fixed;
-    /* top: 0; */
-    left: 220;
-    bottom: 100;
-    outline: none;
-}
-
-#map {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-#p5 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-#p5-container {
-    display: block;
-}
-
-.menu-button {
-    appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
+body {
     font-family: 'Afacad', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.671);
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/4 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px;
+    }
+}
+
+/* Added button styling */
+button {
+    background-color: #bcbcbc;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.menu-button:disabled {
-    pointer-events: none;
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.menu-button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
+/* Style for list items (li) */
+li {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.menu-button:active {
-    box-shadow: none;
-    transform: translateY(0);
+#viewers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    padding: 1rem;
 }
 
-/* Additional styles from your HTML */
-body {
+#full-screen {
+    width: 29px;
+    height: 29px;
+    position: relative;
+    top: 40px;
+    z-index: 99;
+    left: 8px;
+    padding: 0.3rem;
+    pointer-events: all;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.viewer {
+    right: 0;
+    border-radius: 1rem;
+    width: 800px;
+    height: 400px;
+    justify-content: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+
+/* Style for the map container */
+#map {
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
     margin: 0;
     padding: 0;
 }
 
-html,
-body,
+/* Center the map on the page */
+#map {
+    margin: auto;
+}
 
+/* Style for the restaurant text */
 #resto {
     text-align: center;
-    /* Center the text */
-    color: rgb(0, 0, 0, 1);
-    /* Set the text color with transparency */
+    color: rgba(0, 0, 0, 1);
     position: absolute;
     top: 10px;
     left: 50%;
@@ -143,20 +209,4 @@ body,
     transform: translateX(-50%);
     font-family: 'Afacad', sans-serif;
     z-index: 2;
-}
-
-#map {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.maplibregl-popup {
-    max-width: 400px;
-    font-family: 'Afacad', sans-serif;
-}
-
-/*font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }

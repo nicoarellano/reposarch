@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Daphne Final Assingment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<script src="main.js"></script>
+
+<header>
+
+  <h1 ID="line-1 anim-typewriter"> RESPOSARCH</h1>
+
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="./about/firstassignment.html">Assignment 1</a>
+    <a href="./three/secondassingment.html">Assignment 2</a>
+    <a href="./map/index.html">Assignment 3</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+  </div>
+</header>
+
+<section>
+  <nav>
+
+    <h1>Daphne Stams</h1>
+
+  <br>
+    <div class="container">
+      <div class="image">
+          <img src="./materials/Daphne.jpg" alt="Daphne Stams" height="200" />
+      </div> 
+
+        <div class="description">
+          <ul>
+              <li>From Vancouver, B.C. ⛰️</li>
+              <li>Background in Geography. 🗺️</li>
+              <li>Favourite color is olive green. 📗</li>
+              <li>Big fan of volcanoes. 🌋</li>
+          </ul>
+      </div>
+    </div>
+
+    <br>
+     
+    <div class="buttonbox">
+        <a href="https://github.com/daphnestams/reposarch"><button> Reposarch</button></a>
+        <a href="https://architecture.carleton.ca/"><button> ASAU</button></a>
+        <button onclick="myFunction()">Change Header Color</button>
+    </div>
+
+    <br>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="./materials/Vancouver.png" style="width:100%">
+        <div class="text">Vancouver, B.C.</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="./materials/Map.png" style="width:100%">
+        <div class="text">Background in Geography.</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="./materials/OliveGreen.png" style="width:100%">
+        <div class="text">My Favourite Color.</div>
+      </div>
+
+      <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="./materials/Volcano.png" style="width:100%">
+          <div class="text">Fire of Love directed by Sara Dosa.</div>
+        </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+
+      <br>
+      
+      <div style="text-align:left">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+      </div>
+
+  </nav>
+  
+  <article>
+
+    <div id="viewers">
+      <div>
+        <div id="three-container"></div>
+      </div>
+         <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
+    </div>
+
+    <script type="module" src="./three/main_Assingment2.js"></script>
+
+    <!-- Three js Modules -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+    <canvas class="viewer" id="three-canvas"></canvas>
+
+  </article>
+
+  
+</section>
+
+</body>
+
+<footer>
+  <p>Blender & Photogrammetry</p>
+</footer>
+
+<br>
+
+</html>

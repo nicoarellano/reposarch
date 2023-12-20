@@ -32,6 +32,7 @@ nav a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -69,6 +70,7 @@ footer {
     background-color: #29648a;
     font-family: inherit;
     margin: 0;
+    font-weight: bold;
 }
 
 .dropdown-content {
@@ -78,15 +80,17 @@ footer {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
+    background-image: url('dropdown.gif');
 }
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    font-weight: bold;
 }
 
 .dropdown-content a:hover {
