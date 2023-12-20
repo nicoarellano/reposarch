@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+h1 {
+    color: red;
+}
+
+.about {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.assignment2 {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.about section {
+    background-color: #f1f1f1;
+    width: 70%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.vl {
+    border-left: 1px solid lightgray;
+    height: 150px;
+}
+
+
+/*update canvas location*/
+#three-canvas {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    outline: none;
+}
+
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#p5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#p5-container {
+    display: block;
+}
+
+.button-container {
+    position: absolute;
+    top: 90px; 
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    appearance: none;
+    background: linear-gradient(135deg, #8b93d2, #a8c592);
+    border: none; 
+    border-radius: 2em;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px; 
+    font-weight: 400; 
+    line-height: normal;
+    margin: 5px;
+    min-height: 3em; 
+    min-width: 8em; 
+    outline: none;
+    padding: 1em 1em;
+    text-align: center;
+    text-decoration: none;
+    transition: background 300ms ease-in-out, transform 150ms ease; 
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+
+button:hover {
+    background: linear-gradient(135deg, #a0ce7f, #ca7373); 
+    transform: rotate(5deg); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+button:active {
+    background: linear-gradient(135deg, #8b93d2, #a8c592);
+    transform: scale(0.95);
+}
+
+
+
+button:disabled {
+    pointer-events: none;
+}
+
+audio {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    position: absolute;
+    top: 10px; 
+    left: 20px;
+    display: flex;
+}
+
+
+
