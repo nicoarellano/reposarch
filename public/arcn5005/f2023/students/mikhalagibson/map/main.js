@@ -395,7 +395,7 @@ const map = new maplibregl.Map({
     style:
         'https://api.maptiler.com/maps/satellite/style.json?key=42hWlNIdOqEy0E4oMcxo#1/0/0',
     center: [-5.07532, 22.02233],
-    zoom: 2
+    zoom: 1
 });
 
 
