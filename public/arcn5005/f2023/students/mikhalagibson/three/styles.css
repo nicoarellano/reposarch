@@ -38,7 +38,7 @@ h1 {
 
 .about section {
     background-color: #f1f1f1;
-    width: 70%;
+    width: 100%;
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
@@ -55,8 +55,8 @@ h1 {
 #three-canvas {
     position: fixed;
     /* top: 0; */
-    left: 220px;
-    bottom: 100px;
+    left: 220;
+    bottom: 100;
     outline: none;
 }
 
@@ -105,7 +105,6 @@ button:hover {
 }
 
 button:active {
-    background-color: #fcf414;
     box-shadow: none;
     transform: translateY(4px);
 }

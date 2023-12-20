@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Project</title>
+  </head>
+  <body>
+    <script src="./main2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  
+    <script type="module" src="./main2.js"></script>
+    <canvas id="three-canvas"></canvas>
+   
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Photo Background</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transition: opacity 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // JavaScript code to dynamically change the background image
+    const images = ['Last of us.jpg', 'spiderman.jpg', 'God-of-War.png.webp', 'horizon.jpg', 'last of us2.jpeg', 'spiderman2.webp', 'callisto 2.jpg', 'spiderman3.webp', 'uncharted.jpg'];
+    let currentImageIndex = 0;
+
+    function changeBackgroundImage() {
+      const imgElement = document.querySelector('img');
+      imgElement.style.opacity = 0;
+
+      // Change the background image after a brief delay
+      setTimeout(() => {
+        imgElement.src = images[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        imgElement.style.opacity = 1;
+      }, 500);
+    }
+
+    // Change background image every 5 seconds
+    setInterval(changeBackgroundImage, 5000);
+  </script>
+
+  <img src="Last of us.jpg" alt="Dynamic Background Image">
+
+
+  </body>
+</html>

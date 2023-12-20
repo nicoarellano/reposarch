@@ -63,6 +63,16 @@ function init() {
     scene.add(root2);
   });
 
+  const mesh3 = "models/mini mel bl.glb";
+  gltfLoader.load(mesh3, (gltf) => {
+    const root = gltf.scene;
+    root.scale.x = 8;
+    root.scale.y = 8;
+    root.scale.z = 8;
+    root.position.set (50,65,50);
+    scene.add(root);
+  });
+
   controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
 
@@ -132,7 +142,7 @@ function init() {
         const textMaterial = new THREE.MeshLambertMaterial({ color: color });
         const text = new THREE.Mesh(textGeo, textMaterial);
 
-        text.position.x = 20;
+        text.position.x = 50;
         text.position.y = elevation;
 
         scene.add(text);
