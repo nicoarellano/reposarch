@@ -11,10 +11,7 @@ const map = new maplibregl.Map({
 let PlantsFeatureCollection = [];
 
 plants.forEach((plant) => {
-  const image =
-    plant.image === ""
-      ? "https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg"
-      : plant.image;
+  const image = `images/${plant.code}.jpg`;
 
   let plantFeature = {
     code: `${plant.code}`,
