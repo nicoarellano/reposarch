@@ -7,7 +7,7 @@ import EmojiTitle from "../../../../components/Common/EmojiTitle";
 import PdfViewer from "../../../../components/Common/PdfViewer";
 import CartesianPlane from "../../../../components/CartesianPlane";
 
-import Cartography from "../week10/Cartography.mdx";
+import Cartography from "./Cartography.mdx";
 import SimpleButton from "../../../../components/Common/SimpleButton";
 import CodeButton from "../../../../components/Common/CodeButton";
 

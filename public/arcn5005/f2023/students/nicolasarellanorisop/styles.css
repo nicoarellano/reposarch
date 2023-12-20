@@ -1,14 +1,22 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body,
 html {
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
     width: 100%;
     height: 100%;
+}
+
+ol,
+ul {
+    list-style-type: disc;
+    margin-left: 2.5rem;
+    font-size: large;
 }
 
 
@@ -36,7 +44,29 @@ h1 {
     gap: 2rem;
 }
 
-.about section {
+.main-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.final {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.about {
     background-color: #f1f1f1;
     width: 70%;
     border-radius: 1rem;
@@ -53,11 +83,60 @@ h1 {
 }
 
 #three-canvas {
-    position: fixed;
-    /* top: 0; */
-    left: 220;
-    bottom: 100;
-    outline: none;
+    bottom: 0;
+}
+
+#viewers {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    height: 100%;
+    padding: 1rem;
+}
+
+#full-screen {
+    width: 29px;
+    height: 29px;
+    position: relative;
+    top: 40px;
+    z-index: 99;
+    left: 8px;
+    padding: 0.3rem;
+    pointer-events: all;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.viewer {
+    right: 0;
+    /* outline: 1px solid black; */
+    border-radius: 1rem;
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    outline: 3px solid yellow;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.legend {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+    height: 1rem;
 }
 
 #map {
@@ -80,14 +159,12 @@ h1 {
 
 button {
     appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 1rem;
     box-sizing: border-box;
-    color: #3B3B3B;
     cursor: pointer;
     display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
@@ -112,7 +189,7 @@ button:disabled {
 button:hover {
     color: #fff;
     background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     transform: translateY(-2px);
 }
 
