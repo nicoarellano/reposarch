@@ -6,16 +6,17 @@ body {
 }
 
 h1 {
-    color: #ffffff;
+    color: #29648a;
 }
 
 h2{
-    color: white;
+    color: #29648a;
 }
 
 header {
-    background-color: #669bbc;
-    padding: 10px;
+    background: url('header.gif') center -700px no-repeat;
+    background-size: 120% auto;
+    padding: 20px;
     text-align: center;
 }
 
