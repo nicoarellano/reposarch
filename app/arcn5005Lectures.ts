@@ -371,12 +371,19 @@ export const arcn5005Lectures: Lectures = [
       { title: "🔴 Assignment 3 presentation - Custom map using maplibre" },
       { title: "🖥️ LAB 13 Final assignment workshop" },
     ],
+    recordings: [
+      {
+        url: "https://www.youtube.com/embed/0f1OROLez_I?si=ckR0BprKHy8rHTfT",
+        title: "Final Assignment explained",
+        date: dayjs("2023/12/07"),
+      },
+    ],
   },
   {
     title: "🏁 Final Presentation 🏁",
     id: `final`,
     url: `final`,
-    date: dayjs("2023-12-18"),
+    date: dayjs("2023-12-20"),
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
   },

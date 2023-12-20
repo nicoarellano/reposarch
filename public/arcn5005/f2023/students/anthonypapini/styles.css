@@ -1,18 +1,196 @@
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-.legend {
-    position: absolute;
-    background-color: black;
+/* Reset some default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and HTML styles */
+  body, html {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url('pim-myten-m41k1lTzjVM-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 10px;
-    bottom: 40px;
-    left: 20px;
-    border-radius: 5px;
-    font-size: 12px;
-    z-index: 1;
-}
-.marker {
+  }
+  
+  /* Page 1 styles */
+  #name {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  ol, ul {
+    list-style-type: disc;
+    margin-left: 2.5rem;
+    font-size: large;
+  }
+  
+  .main-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+  }
+  
+  .final {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+  }
+  
+  #viewers {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    height: 100%;
+    padding: 1rem;
+  }
+  
+  .viewer {
+    border-radius: 1rem;
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  
+  .legend .dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
     border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .legend {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+    height: 1rem;
+  }
+  
+  .audio-container {
+    position: absolute;
+    left: 10rem;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+  
+  button:not(#reposarch-button):not(#github-button) {
+    color: red; /* Set button text color to red */
+  }
+  
+  button#reposarch-button, button#github-button {
+    color: black;
+  }
+  
+  button {
+    appearance: none;
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 1rem;
+    box-sizing: border-box;
     cursor: pointer;
-    border: 2px solid white;
-}
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 5px;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+  }
+  
+  button:disabled {
+    pointer-events: none;
+  }
+  
+  button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  /* Page 1 arrow and "To Lounge" text styles */
+  #page1 {
+    position: relative;
+  }
+  
+  .scroll-arrow {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  
+  #to-lounge {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Page 2 styles */
+  #page2 {
+    background-image: url('1-8.jpeg'); /* Retain background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust the height as needed */
+    position: relative; /* Important for positioning quiz */
+  }
+  
+  /* Additional styles for the quiz container */
+  #quiz-container {
+    background-color: white;
+    color: red; /* Set text color to red */
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
