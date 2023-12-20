@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Ottawa Bird Collisions 2023</title>
-    <meta property="og:description" content="Dylan Map Assingment." />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
-    />
-    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Jozkow Final Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      html,
-      body,
-      #map {
-        height: 100%;
-      }
-    </style>
+<header>
+    <h1 id="title">
+        Dylan Jozkow
+    </h1>
+    
+</header>
 
-    <style>
-      .maplibregl-popup {
-        max-width: 400px;
-        font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
-      }
-    </style>
+<body>
+    <div class="container 1">
+        <div class="item item 1"> <img src="./assets/Dylan_B&W.jpg" alt="Dylan Jozkow" height="200" /></div>
+        <div class="item item 2"><h2>About</h2><ul> 
+            <li>From Cambridge, ON</li>
+            <li>Undergrad in Architecture at Carleton</li>
+            <li>Co-president of Landscape Lab</li>
+            <li> Bird Advocate</li>
+         </ul></div>
+        <div class="item item 3"><img class=bird src="./assets/bird_flock.png" alt="bird flock" height="200"></div>
+    </div>
+    <hr>
+    <div class="container 2"> 
+        <div class="item map"><iframe class="viewer" src="./map/index.html" frameborder="0"></iframe></div>
+        <div class="item item 4"><h2>Bird Collision Map</h2>
+            <p>This map shows all reported bird collisions from 2023 in Ottawa.</p>
+            <p> In Canada, bird collisions result in the death of 25 million birds per year. </p>
+            <p>Each marker displays the time of collision, species of bird and the status of the bird after the collision. </p>
+            <p> All collision data was found at <a href="https://www.birdmapper.org/">birdmapper.org</a>  </p>
+            <img src="./assets/owl.png" height="350">
+              </div>
+    </div>
+    <div class="container 3">
+        <a href="https://explorer.audubon.org/home?gad_source=1&threatOverlay=expand&gclid=Cj0KCQiAm4WsBhCiARIsAEJIEzXqu7NEB2XvZt31hwZqqOCZLSSbZbPSsmwJOUozybkdrANVJjs-ASIaAnoJEALw_wcB&legend=collapse&layersPanel=expand"><button class="learn-more">
+            <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">See the Birds</span>
+        </button></a>
+        <button class="learn-more" onclick="audio.play();">
+             <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+              </span>
+             <span class="button-text">Hear the Birds</span>
+        </button>
+        <a href="https://chng.it/ws6gkdRDpm"><button class="learn-more">
+            <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Save the Birds</span>
+          </button></a>
+      </button>
+    </div>
+    <hr>
+    <div class="container 4"> 
+        <div><h2>Three.js Scene</h2>
+        <p>Photogrammetry mesh of myself created in Meshroom.</p>
+    <img src="./assets/mesh_screenshot.png" height="350"></div>
+        <div class="item three"><iframe class="viewer" src="./three/index.html" frameborder="0"></iframe></div>
+    </div>
+</body>
+<script type="text/javascript">
+    const audio = new Audio();
+    audio.src = "./assets/Bird_Noise.mp3";
+</script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
 
-    <style>
-      #menu {
-        background: #fff;
-        position: absolute;
-        z-index: 1;
-        top: 10px;
-        right: 10px;
-        border-radius: 3px;
-        width: 120px;
-        border: 1px solid rgba(0, 0, 0, 0.4);
-        font-family: "Open Sans", sans-serif;
-      }
-
-      #menu a {
-        font-size: 13px;
-        color: #404040;
-        display: block;
-        margin: 0;
-        padding: 0;
-        padding: 10px;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-        text-align: center;
-      }
-
-      #menu a:last-child {
-        border: none;
-      }
-
-      #menu a:hover {
-        background-color: #f8f8f8;
-        color: #404040;
-      }
-
-      #menu a.active {
-        background-color: #3887be;
-        color: #ffffff;
-      }
-
-      #menu a.active:hover {
-        background: #3074a4;
-      }
-    </style>
-    <nav id="menu"></nav>
-  </head>
-
-  <body>
-    <div id="map"></div>
-    <script src="./map/main.js"></script>
-  </body>
 </html>
