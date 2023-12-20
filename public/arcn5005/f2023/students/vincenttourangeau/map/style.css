@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    flex-direction: column;
+    background-color: #333; 
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 60px; 
+    bottom: 0;
+    width: 100%;
+}
