@@ -1,10 +1,14 @@
-import { observatories } from "./Astro Observatories.js";
+import { observatories } from "../map/Astro Observatories.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidmluY2V0aGVwcmluY2UiLCJhIjoiY2xwdW1rY2lrMG0zczJqb2p0OWEzbHBnaSJ9.v3S-H2FHiB-087uX72BAwQ';
 var map = new mapboxgl.Map({
 container: 'map',
 center: [0, 0],
-zoom: 1,
+zoom: 1.5,
 style: 'mapbox://styles/mapbox/streets-v12'
 });
  
@@ -87,7 +91,7 @@ observatories.forEach((observatory) => {
         ID: `${observatory.ID}`,
         type: "Feature",
         properties: {
-            description: `<h1>${observatory.Name}</h1>
+            description: `<h4>${observatory.Name}</h4>
             <ul>
             <li>ID: ${observatory.ID}</li>
             <li>Country: ${observatory.Country}</li>
@@ -97,7 +101,7 @@ observatories.forEach((observatory) => {
             <li>light_pollution: ${observatory["Light pollution"]}</li>
             <li>limiting)magnitude: ${observatory["Limiting magnitude"]}</li>
             </ul>
-            <img src="${image}" alt="${imageAlt}" width="200px">`,
+            <img src="${image}" alt="${imageAlt}" width="300px">`,
         },
         geometry: {
             type: "Point",
@@ -161,6 +165,43 @@ map.on('load', () => {
     });
 });
 
+  window.showAbout = function () {
+      document.querySelector('.slideshow-container').style.display = 'block';
+      document.querySelector('#three-canvas').style.display = 'none';
+      document.querySelector('#map').style.display = 'none';
+      document.querySelector('.dot-container').style.display = 'block';
 
+      document.querySelector('.button-container button.about').classList.add('active');
+      document.querySelector('.button-container button.threejs').classList.remove('active');
+      document.querySelector('.button-container button.observatory').classList.remove('active');
+  }
 
+  window.showThreeJS = function () {
+      document.querySelector('.slideshow-container').style.display = 'none';
+      document.querySelector('#three-canvas').style.display = 'block';
+      document.querySelector('#map').style.display = 'none';
+      document.querySelector('.dot-container').style.display = 'none';
 
+      document.querySelector('.button-container button.about').classList.remove('active');
+      document.querySelector('.button-container button.threejs').classList.add('active');
+      document.querySelector('.button-container button.observatory').classList.remove('active');
+  }
+
+  window.showObservatoryMap = function () {
+    document.querySelector('.slideshow-container').style.display = 'none';
+    document.querySelector('#three-canvas').style.display = 'none';
+    document.querySelector('#map').style.display = 'block';
+    document.querySelector('.dot-container').style.display = 'none';
+
+    document.querySelector('.button-container button.about').classList.remove('active');
+    document.querySelector('.button-container button.threejs').classList.remove('active');
+    document.querySelector('.button-container button.observatory').classList.add('active');
+
+    // Resize the map when the observatory map is shown
+    if (map) {
+      map.resize();
+    }
+}
+
+  showAbout(); // Optional: Call one of the functions by default when the page loads
+});
