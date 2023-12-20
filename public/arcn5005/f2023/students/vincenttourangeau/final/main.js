@@ -1,428 +1,207 @@
-const scene = new THREE.Scene();
-
-const targetHeight = 600;
+import { observatories } from "../map/Astro Observatories.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const size = {
-    width: window.innerWidth * 0.7,
-    height: targetHeight,
-  };
 
-  const aspect = size.width / size.height;
-  const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 4000);
 
-const threeCanvas = document.getElementById("three-canvas");
-const renderer = new THREE.WebGLRenderer({
-  canvas: threeCanvas,
-  alpha: true,
+
+mapboxgl.accessToken = 'pk.eyJ1IjoidmluY2V0aGVwcmluY2UiLCJhIjoiY2xwdW1rY2lrMG0zczJqb2p0OWEzbHBnaSJ9.v3S-H2FHiB-087uX72BAwQ';
+var map = new mapboxgl.Map({
+container: 'map',
+center: [0, 0],
+zoom: 1.5,
+style: 'mapbox://styles/mapbox/streets-v12'
+});
+ 
+const size = 100;
+ 
+const pulsingDot = {
+width: size,
+height: size,
+data: new Uint8Array(size * size * 4),
+ 
+
+onAdd: function () {
+    const canvas = document.createElement('canvas');
+    canvas.width = this.width;
+    canvas.height = this.height;
+    this.context = canvas.getContext('2d', { willReadFrequently: true }); 
+},
+
+ 
+render: function () {
+const duration = 1000;
+const t = (performance.now() % duration) / duration;
+ 
+const radius = (size / 2) * 0.3;
+const outerRadius = (size / 2) * 0.7 * t + radius;
+const context = this.context;
+ 
+context.clearRect(0, 0, this.width, this.height);
+context.beginPath();
+context.arc(
+this.width / 2,
+this.height / 2,
+outerRadius,
+0,
+Math.PI * 2
+);
+context.fillStyle = `rgba(255, 200, 200, ${1 - t})`;
+context.fill();
+ 
+context.beginPath();
+context.arc(
+this.width / 2,
+this.height / 2,
+radius,
+0,
+Math.PI * 2
+);
+context.fillStyle = 'rgba(255, 100, 100, 1)';
+context.strokeStyle = 'white';
+context.lineWidth = 2 + 4 * (1 - t);
+context.fill();
+context.stroke();
+ 
+this.data = context.getImageData(
+0,
+0,
+this.width,
+this.height
+).data;
+ 
+map.triggerRepaint();
+ 
+return true;
+}
+};
+
+const observatoriesFeatureCollection = [];
+
+observatories.forEach((observatory) => {
+    const image =
+        observatory.image && observatory.image.trim() !== ""
+            ? observatory.image
+            : "../images/Generic Observatory.jpg";
+
+    const imageAlt = observatory.image
+        ? observatory.image.replace(/\.[^/.]+$/, "")
+        : "Generic Observatory";
+
+    let observatoryFeature = {
+        ID: `${observatory.ID}`,
+        type: "Feature",
+        properties: {
+            description: `<h4>${observatory.Name}</h4>
+            <ul>
+            <li>ID: ${observatory.ID}</li>
+            <li>Country: ${observatory.Country}</li>
+            <li>latitude: ${observatory.Latitude}</li>
+            <li>longitude: ${observatory.Longitude}</li>
+            <li>Elevation_m: ${observatory.Elevation_m}</li>
+            <li>light_pollution: ${observatory["Light pollution"]}</li>
+            <li>limiting)magnitude: ${observatory["Limiting magnitude"]}</li>
+            </ul>
+            <img src="${image}" alt="${imageAlt}" width="300px">`,
+        },
+        geometry: {
+            type: "Point",
+            coordinates: [
+                parseFloat(observatory.Longitude),
+                parseFloat(observatory.Latitude),
+            ],
+        },
+    };
+    observatoriesFeatureCollection.push(observatoryFeature);
 });
 
-renderer.setSize(size.width, size.height);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-document.body.appendChild(renderer.domElement);
+console.log('Number of features:', observatoriesFeatureCollection.length);
 
-const grid = new THREE.GridHelper(1000, 1000);
-grid.material.color.set(0xFFFFFF);
-grid.material.transparent = true;
-grid.material.opacity = 0.35;
-scene.add(grid);
+map.on('load', () => {
+    observatoriesFeatureCollection.forEach((observatory) => {
+        const pulsingDotName = `${observatory.ID}-pulsing-dot`;
+        map.addImage(pulsingDotName, pulsingDot, { pixelRatio: 2, iconSize: size });
 
-function changeGridScale(newScale) {
-  grid.scale.set(newScale, newScale, newScale);
-}
-changeGridScale(2);
-
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
-
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xFF9F9F });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xFFFCDC });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xFFFFFF });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x94EFFF });
-
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
-
-yellowCube.position.z = -25;
-blueCube.position.x = -25;
-redCube.position.x = 25;
-greenCube.position.z = 25;
-scene.add(yellowCube);
-scene.add(blueCube);
-scene.add(redCube);
-scene.add(greenCube);
-
-const loader = new THREE.GLTFLoader(); 
-
-let mesh;
-let mixer;
-
-function loadGLB(path, scale, x, z) {
-  loader.load(
-    path, 
-    function (gltf) {
-      mesh = gltf.scene;
-      mesh.scale.set(scale, scale, scale);
-      mesh.position.set(x, 0, z);
-
-      mesh.traverse(function (child) {
-        if (child.isMesh && child.material && child.material.map) {
-      
-          child.material.map.encoding = THREE.sRGBEncoding;
-          child.material.map.anisotropy = 16;
-      
-          if (child.material.normalMap) {
-            child.material.normalMap.encoding = THREE.sRGBEncoding;
-            child.material.normalMap.anisotropy = 16;
-          }
-        }
-      });
-      
-      mixer = new THREE.AnimationMixer(mesh);
-      const animations = gltf.animations;
-
-      if (animations && animations.length) {
-        const animationAction = mixer.clipAction(animations[0]);
-        animationAction.play();
-      }
-
-      scene.add(mesh);
-    },
-    undefined,
-    function (error) {
-      console.error(error);
-    }
-  );
-}
-
-loadGLB("../models/Vincent_V2.glb", 10, 0, 0);
-loadGLB("../models/scene.gltf", 0.5, 0, 0);
-
-// Text from https://threejs.org/examples/webgl_loader_ttf.html
-
-const fontLoader = new THREE.FontLoader();
-
-const group = new THREE.Group();
-scene.add(group);
-
-let textMesh;
-
-const textGroup = new THREE.Group();
-scene.add(textGroup);
-
-function createText(text, elevation = 0, textColor = 0xff0000, size = 3) {
-  const textValue = text;
-  const textSize = size;
-
-  const fontPath = "../fonts/Roboto_Regular.json"; 
-
-  fontLoader.load(fontPath, function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
-      font: font,
-      size: textSize,
-      height: 0.1,
-      curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
-    });
-
-    textGeo.computeBoundingBox();
-    textGeo.computeVertexNormals();
-
-    const textMaterial = new THREE.MeshLambertMaterial({ color: textColor });
-    const textMesh = new THREE.Mesh(textGeo, textMaterial);
-
-    const centerOffset = -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
-
-    textMesh.position.x = centerOffset;
-    textMesh.position.y = elevation;
-    textMesh.position.z = 0;
-
-    textMesh.rotation.x = 0;
-    textMesh.rotation.y = Math.PI * 2;
-
-    textGroup.add(textMesh);
-  });
-
-  renderer.setSize(size.width, size.height);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  document.body.appendChild(renderer.domElement);
-
-  const grid = new THREE.GridHelper(1000, 1000);
-  grid.material.color.set(0xffffff);
-  grid.material.transparent = true;
-  grid.material.opacity = 0.35;
-  scene.add(grid);
-
-  function changeGridScale(newScale) {
-    grid.scale.set(newScale, newScale, newScale);
-  }
-  changeGridScale(2);
-
-  const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
-
-  const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xff9f9f });
-  const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xfffcdc });
-  const redMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff });
-  const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x94efff });
-
-  const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-  const blueCube = new THREE.Mesh(geometry, blueMaterial);
-  const redCube = new THREE.Mesh(geometry, redMaterial);
-  const greenCube = new THREE.Mesh(geometry, greenMaterial);
-
-  yellowCube.position.z = -25;
-  blueCube.position.x = -25;
-  redCube.position.x = 25;
-  greenCube.position.z = 25;
-  scene.add(yellowCube);
-  scene.add(blueCube);
-  scene.add(redCube);
-  scene.add(greenCube);
-
-  const loader = new THREE.GLTFLoader();
-
-  let mesh;
-  let mixer;
-
-  function loadGLB(path, scale, x, z) {
-    loader.load(
-      path,
-      function (gltf) {
-        mesh = gltf.scene;
-        mesh.scale.set(scale, scale, scale);
-        mesh.position.set(x, 0, z);
-
-        mesh.traverse(function (child) {
-          if (child.isMesh && child.material && child.material.map) {
-            child.material.map.encoding = THREE.sRGBEncoding;
-            child.material.map.anisotropy = 16;
-
-            if (child.material.normalMap) {
-              child.material.normalMap.encoding = THREE.sRGBEncoding;
-              child.material.normalMap.anisotropy = 16;
-            }
-          }
+        map.addSource(`${observatory.ID}-source`, {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features: [observatory],
+            },
         });
 
-        mixer = new THREE.AnimationMixer(mesh);
-        const animations = gltf.animations;
-
-        if (animations && animations.length) {
-          const animationAction = mixer.clipAction(animations[0]);
-          animationAction.play();
-        }
-
-        scene.add(mesh);
-      },
-      undefined,
-      function (error) {
-        console.error(error);
-      }
-    );
-  }
-
-  loadGLB("./three/models/Vincent_V2.glb", 10, 0, 0);
-  loadGLB("./three/models/scene.gltf", 0.5, 0, 0);
-
-  // Text from https://threejs.org/examples/webgl_loader_ttf.html
-
-  const fontLoader = new THREE.FontLoader();
-
-  const group = new THREE.Group();
-  scene.add(group);
-
-  let textMesh;
-
-  const textGroup = new THREE.Group();
-  scene.add(textGroup);
-
-  function createText(text, elevation = 0, textColor = 0xff0000, size = 3) {
-    const textValue = text;
-    const textSize = size;
-
-    const fontPath = "./three/fonts/Roboto_Regular.json";
-
-    fontLoader.load(fontPath, function (font) {
-      const textGeo = new THREE.TextGeometry(textValue, {
-        font: font,
-        size: textSize,
-        height: 0.1,
-        curveSegments: 4,
-        bevelEnabled: true,
-        bevelThickness: 0.1,
-        bevelSize: 0.0,
-        bevelOffset: 0,
-        bevelSegments: 5,
-      });
-
-      textGeo.computeBoundingBox();
-      textGeo.computeVertexNormals();
-
-      const textMaterial = new THREE.MeshLambertMaterial({ color: textColor });
-      const textMesh = new THREE.Mesh(textGeo, textMaterial);
-
-      const centerOffset =
-        -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
-
-      textMesh.position.x = centerOffset;
-      textMesh.position.y = elevation;
-      textMesh.position.z = 0;
-
-      textMesh.rotation.x = 0;
-      textMesh.rotation.y = Math.PI * 2;
-
-      textGroup.add(textMesh);
+        map.addLayer({
+            id: `${observatory.ID}-layer-with-pulsing-dot`,
+            type: 'symbol',
+            source: `${observatory.ID}-source`,
+            layout: {
+                'icon-image': pulsingDotName,
+                'icon-allow-overlap': true,
+            },
+        });
     });
-  }
 
-  createText("Space is the Place", 8, 0xffffff);
+    const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+    });
 
-  camera.position.z = 13;
-  camera.position.x = 5;
-  camera.position.y = 2;
+    observatoriesFeatureCollection.forEach((observatory) => {
+        map.on("mouseenter", `${observatory.ID}-layer-with-pulsing-dot`, (e) => {
+            map.getCanvas().style.cursor = "pointer";
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const description = e.features[0].properties.description;
 
-  scene.position.x = -5;
-  scene.position.z = 5;
-  scene.position.y = -3;
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
 
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true;
+            popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        });
 
-  const lightColor = 0xffffff;
-
-  const ambientLight = new THREE.AmbientLight(lightColor, 1);
-  scene.add(ambientLight);
-
-  const directionalLight = new THREE.DirectionalLight(lightColor, 1);
-  directionalLight.position.set(5, 10, 5);
-  directionalLight.target.position.set(0, 3, 0);
-  scene.add(directionalLight);
-  scene.add(directionalLight.target);
-
-  function animate() {
-    requestAnimationFrame(animate);
-
-    if (mixer) {
-      mixer.update(0.016); // Pass the delta time (time since the last frame)
-    }
-
-    if (mesh) mesh.rotation.y += 0.01;
-
-    yellowCube.rotation.x += 0.01;
-    yellowCube.rotation.y += 0.01;
-    blueCube.rotation.x += 0.02;
-    blueCube.rotation.y -= 0.01;
-
-    redCube.rotation.x -= 0.01;
-    redCube.rotation.y -= 0.02;
-
-    greenCube.rotation.x += 0.02;
-    greenCube.rotation.y -= 0.01;
-
-    if (textGroup) {
-      textGroup.rotation.y += 0.01;
-    }
-
-    renderer.render(scene, camera);
-  }
-
-  animate();
-
-  window.addEventListener("resize", () => {
-    const targetWidth = window.innerWidth;
-    const targetHeight = 600;
-    size.width = targetWidth;
-    size.height = targetHeight;
-    camera.aspect = size.width / size.height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(size.width, size.height);
-  });
-
-  // Star particles from https://threejs.org/examples/webgl_camera.html
-
-  const geometryStars = new THREE.BufferGeometry();
-  const verticesStars = [];
-
-  for (let i = 0; i < 40000; i++) {
-    verticesStars.push(THREE.MathUtils.randFloatSpread(2000));
-    verticesStars.push(THREE.MathUtils.randFloatSpread(2000));
-    verticesStars.push(THREE.MathUtils.randFloatSpread(2000));
-  }
-
-  geometryStars.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesStars, 3)
-  );
-
-  const particlesStars = new THREE.Points(
-    geometryStars,
-    new THREE.PointsMaterial({ color: 0x94efff })
-  );
-  scene.add(particlesStars);
-
-  const geometryOtherParticles = new THREE.BufferGeometry();
-  const verticesOtherParticles = [];
-
-  for (let i = 0; i < 40000; i++) {
-    verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
-    verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
-    verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
-  }
-
-  geometryOtherParticles.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesOtherParticles, 3)
-  );
-
-  const particlesOther = new THREE.Points(
-    geometryOtherParticles,
-    new THREE.PointsMaterial({ color: 0xff9f9f })
-  );
-  scene.add(particlesOther);
-
-  const geometryMidParticles = new THREE.BufferGeometry();
-  const verticesMidParticles = [];
-
-  for (let i = 0; i < 5000; i++) {
-    verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
-    verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
-    verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
-  }
-
-  geometryMidParticles.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesMidParticles, 3)
-  );
-
-  const particlesMid = new THREE.Points(
-    geometryMidParticles,
-    new THREE.PointsMaterial({ color: 0xfffcdc })
-  );
-  scene.add(particlesMid);
-
-  const geometryCloseParticles = new THREE.BufferGeometry();
-  const verticesCloseParticles = [];
-
-  for (let i = 0; i < 5000; i++) {
-    verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
-    verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
-    verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
-  }
-
-  geometryCloseParticles.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesCloseParticles, 3)
-  );
-
-  const particlesClose = new THREE.Points(
-    geometryCloseParticles,
-    new THREE.PointsMaterial({ color: 0xffffff })
-  );
-  scene.add(particlesClose);
+        map.on("mouseleave", `${observatory.ID}-layer-with-pulsing-dot`, () => {
+            map.getCanvas().style.cursor = "";
+            popup.remove();
+        });
+    });
 });
 
+  window.showAbout = function () {
+      document.querySelector('.slideshow-container').style.display = 'block';
+      document.querySelector('#three-canvas').style.display = 'none';
+      document.querySelector('#map').style.display = 'none';
+      document.querySelector('.dot-container').style.display = 'block';
+
+      document.querySelector('.button-container button.about').classList.add('active');
+      document.querySelector('.button-container button.threejs').classList.remove('active');
+      document.querySelector('.button-container button.observatory').classList.remove('active');
+  }
+
+  window.showThreeJS = function () {
+      document.querySelector('.slideshow-container').style.display = 'none';
+      document.querySelector('#three-canvas').style.display = 'block';
+      document.querySelector('#map').style.display = 'none';
+      document.querySelector('.dot-container').style.display = 'none';
+
+      document.querySelector('.button-container button.about').classList.remove('active');
+      document.querySelector('.button-container button.threejs').classList.add('active');
+      document.querySelector('.button-container button.observatory').classList.remove('active');
+  }
+
+  window.showObservatoryMap = function () {
+    document.querySelector('.slideshow-container').style.display = 'none';
+    document.querySelector('#three-canvas').style.display = 'none';
+    document.querySelector('#map').style.display = 'block';
+    document.querySelector('.dot-container').style.display = 'none';
+
+    document.querySelector('.button-container button.about').classList.remove('active');
+    document.querySelector('.button-container button.threejs').classList.remove('active');
+    document.querySelector('.button-container button.observatory').classList.add('active');
+
+    // Resize the map when the observatory map is shown
+    if (map) {
+      map.resize();
+    }
+}
+
+  showAbout(); // Optional: Call one of the functions by default when the page loads
+});

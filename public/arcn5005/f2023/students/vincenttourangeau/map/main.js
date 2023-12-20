@@ -1,7 +1,7 @@
 import { observatories } from "./Astro Observatories.js";
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidmluY2V0aGVwcmluY2UiLCJhIjoiY2xwdW1rY2lrMG0zczJqb2p0OWEzbHBnaSJ9.v3S-H2FHiB-087uX72BAwQ';
-const map = new mapboxgl.Map({
+var map = new mapboxgl.Map({
 container: 'map',
 center: [0, 0],
 zoom: 1,
