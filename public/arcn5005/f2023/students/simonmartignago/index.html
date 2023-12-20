@@ -1,241 +1,76 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Embassies in Ottawa</title>
-    <meta
-      name="viewport"
-      content="initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js"></script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
-      #legend {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(255, 255, 255, 0.8);
-        padding: 10px;
-        border-radius: 8px;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 8px;
-      }
-      .legend-title {
-        grid-column: span 5;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 8px;
-      }
-      .legend-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .legend-swatch img {
-        width: 20px;
-        height: 20px;
-        margin-bottom: 4px;
-        border-radius: 4px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <div id="legend">
-      <div class="legend-title">Embassy Legend</div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/" alt="Australia Flag"
-        /></span>
-        <span>1 - Australian Embassy</span>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>About Me</title>
+</head>
+
+<body>
+  <section class="main-container">
+    <div class="final">
+      <h1>Final About Me Page</h1>
+      <p>Hello! I'm Simon and I'm in the M.Arch program at Carleton University. I also have an undergraduate degree in
+        Architecture, Urbanism. Fun facts about me, I was today years old when I found out that honey doesn't go bad. I am a
+        pineapple enjoyer.</p>
+
+      <div class="buttons-container">
+        <a href="https://brightspace.carleton.ca/d2l/home/207080"><button class="reposarch-button">Explore Brightspace</button></a>
+        <a href="https://github.com/MartignagoSimon/reposarch"><button class="github-button">GitHub Repository</button></a>
       </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/austria_flag.jpg" alt="Austria Flag"
-        /></span>
-        <span>2 - Austrian Embassy</span>
+
+      <img id="simon-image" src="./Simon.gif" alt="Simon Martignago" height="300" />
+    </div>
+    <div id="viewers">
+      <div class="viewer-container">
+        <div id="full-screen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 24 24">
+            <path
+              d="M21.414 18.586l2.586-2.586v8h-8l2.586-2.586-5.172-5.172 2.828-2.828 5.172 5.172zm-13.656-8l2.828-2.828-5.172-5.172 2.586-2.586h-8v8l2.586-2.586 5.172 5.172zm10.828-8l-2.586-2.586h8v8l-2.586-2.586-5.172 5.172-2.828-2.828 5.172-5.172zm-8 13.656l-2.828-2.828-5.172 5.172-2.586-2.586v8h8l-2.586-2.586 5.172-5.172z" />
+          </svg>
+        </div>
+        <div id="three-container" class="viewer"></div>
       </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/china_flag.jpg" alt="China Flag"
-        /></span>
-        <span>3 - Chinese Embassy</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/france_flag.jpg" alt="France Flag"
-        /></span>
-        <span>4 - French Embassy</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/israel_flag.jpg" alt="Israel Flag"
-        /></span>
-        <span>5 - Israel Embassy</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/japan_flag.jpg" alt="Japan Flag"
-        /></span>
-        <span>6 - Japanese Embassy</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/russia_flag.jpg" alt="Russia Flag"
-        /></span>
-        <span>7 - Russian Embassy</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/south_africa_flag.jpg" alt="South Africa Flag"
-        /></span>
-        <span>8 - South African Embassy</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/uk_flag.jpg" alt="UK Flag"
-        /></span>
-        <span>9 - UK Embassy</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-swatch"
-          ><img src="./map/us_flag.jpg" alt="US Flag"
-        /></span>
-        <span>10 - American Embassy</span>
+      <div class="viewer-container">
+        <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
+        <div class="legend">
+          <span class="dot"></span>
+          <p>Canadian Embassies</p>
+        </div>
       </div>
     </div>
 
-    <script>
-      mapboxgl.accessToken =
-        "pk.eyJ1Ijoic2ltb25tYXJ0aWduYWdvIiwiYSI6ImNsZGFkenlpcjBobnMzb21wNWwwZDNrY3IifQ.FLGiwxF0HFz_q7stClKu0g";
-      const map = new mapboxgl.Map({
-        container: "map",
-        center: [-75.6934, 45.4215], // Ottawa, Ontario, Canada
-        zoom: 12,
-        style: "mapbox://styles/mapbox/light-v10",
-      });
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="color-change">Toggle Dark Mode</button>
 
-      const embassyLocations = [
-        {
-          name: "Australian Embassy",
-          coordinates: [-75.6998278609583, 45.42046928493152],
-        },
-        {
-          name: "Austrian Embassy",
-          coordinates: [-75.6766091012364, 45.42946130852773],
-        },
-        {
-          name: "Chinese Embassy",
-          coordinates: [-75.68500583228307, 45.43635734252513],
-        },
-        {
-          name: "French Embassy",
-          coordinates: [-75.69475645190913, 45.44334487382583],
-        },
-        {
-          name: "Israel Embassy",
-          coordinates: [-75.69951805098987, 45.42060811912621],
-        },
-        {
-          name: "Japanese Embassy",
-          coordinates: [-75.69880299884716, 45.433061023088925],
-        },
-        {
-          name: "Russian Embassy",
-          coordinates: [-75.67338797383161, 45.42973811989557],
-        },
-        {
-          name: "South African Embassy",
-          coordinates: [-75.69252866102457, 45.444026324529496],
-        },
-        {
-          name: "UK Embassy",
-          coordinates: [-75.69484860651467, 45.4225965719816],
-        },
-        {
-          name: "American Embassy",
-          coordinates: [-75.69592817829518, 45.42790358473624],
-        },
-      ];
+  </section>
 
-      map.on("load", () => {
-        embassyLocations.forEach((embassy, index) => {
-          map.addLayer({
-            id: `marker-${index + 1}`,
-            type: "circle",
-            source: {
-              type: "geojson",
-              data: {
-                type: "FeatureCollection",
-                features: [
-                  {
-                    type: "Feature",
-                    geometry: {
-                      type: "Point",
-                      coordinates: embassy.coordinates,
-                    },
-                    properties: {
-                      name: embassy.name,
-                      index: index + 1,
-                    },
-                  },
-                ],
-              },
-            },
-            paint: {
-              "circle-radius": 10, // Double the size of the icon
-              "circle-color": "#FF474C", // Red color for the markers
-            },
-          });
+  <!-- Move the script import to the end of the body -->
+  <script type="module" src="./final/main.js"></script>
+  <script src="game.js"></script> <!-- Include the game.js script -->
+  <script>
+    // Dark mode toggle script
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
 
-          map.addLayer({
-            id: `text-${index + 1}`,
-            type: "symbol",
-            source: {
-              type: "geojson",
-              data: {
-                type: "FeatureCollection",
-                features: [
-                  {
-                    type: "Feature",
-                    geometry: {
-                      type: "Point",
-                      coordinates: embassy.coordinates,
-                    },
-                    properties: {
-                      name: embassy.name,
-                      index: index + 1,
-                    },
-                  },
-                ],
-              },
-            },
-            layout: {
-              "text-field": ["concat", ["get", "index"]],
-              "text-size": 12,
-              "text-anchor": "center", // Center the text inside the circle
-              "text-allow-overlap": true, // Allow text to overlap features
-            },
-          });
-        });
-      });
-    </script>
-  </body>
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
+  </script>
+
+  <!-- Three js Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+  <canvas id="three-canvas"></canvas>
+
+</body>
+
 </html>

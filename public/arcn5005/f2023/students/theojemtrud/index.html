@@ -1,27 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <title>Theo Map Assingment</title>
-    <meta property="og:description" content="Theo Map Assingment." />
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
-    <link rel="stylesheet" href="./styles.css">
-    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
-  
-
-
-  <nav id="menu"></nav>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
 </head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./about/montreal.jpg" style="width: 100%" />
+            <div class="text">Montreal skyline</div>
+        </div>
 
-  <body>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./about/blue.jpg" style="width: 100%" />
+            <div class="text">Color Blue</div>
+        </div>
 
-    <div id="map"></div>
-    <script src="./map/main.js"></script>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./about/negroni.jpg" style="width: 100%" />
+            <div class="text">Negroni</div>
+        </div>
 
-  </body>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./about/the big lebowski.jpg" style="width: 100%" />
+            <div class="text">The Dude</div>
+        </div>
 
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <section
+        style="
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        "
+    >
+        <div class="flex items-center justify-center grow">
+            <img src="./about/Theo.jpg" alt="Student" height="200" />
+        </div>
+        <div class="vl"></div>
+        <div class="flex items-center justify-center">
+            <ul>
+                <li style="color: rgb(0, 0, 0); font-size: 20px">
+                    I am from Montreal
+                </li>
+                <li style="color: rgb(0, 0, 0); font-size: 20px">
+                    Favourite color: blue
+                </li>
+                <li style="color: rgb(0, 0, 0); font-size: 20px">
+                    Favourite drink: negroni
+                </li>
+                <li style="color: rgb(0, 0, 0); font-size: 20px">
+                    Favourite movie: The Big Lebowski
+                </li>
+            </ul>
+        </div>
+        <ul>
+            <a href="https://github.com/TJemerz/reposarch"
+            ><button id="three-button">GitHub</button></a
+            >
+            <a href="https://tjemerz.github.io/theojemtrud/"
+            ><button id="three-button">Personal website</button></a
+            >
+        </ul>
+    </section>
+            
+      
+  <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
+  <iframe class="viewer" src="./three/index.html" frameborder="0"></iframe>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+</body>
 </html>

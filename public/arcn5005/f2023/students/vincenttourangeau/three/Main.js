@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  loadGLB("./models/Vincent_V2.glb", 10, 0, 0);
-  loadGLB("./models/scene.gltf", 0.5, 0, 0);
+  loadGLB("../three/models/Vincent_V2.glb", 10, 0, 0);
+  loadGLB("../three/models/scene.gltf", 0.5, 0, 0);
 
   // Text from https://threejs.org/examples/webgl_loader_ttf.html
 
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const textValue = text;
     const textSize = size;
 
-    const fontPath = "./fonts/Roboto_Regular.json";
+    const fontPath = "../three/fonts/Roboto_Regular.json";
 
     fontLoader.load(fontPath, function (font) {
       const textGeo = new THREE.TextGeometry(textValue, {
@@ -151,13 +151,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   createText("Space is the Place", 8, 0xffffff);
 
-  camera.position.z = 13;
-  camera.position.x = 5;
-  camera.position.y = 2;
+  camera.position.z = 30;
+  camera.position.x = 15;
+  camera.position.y = 15
+;
 
-  scene.position.x = -5;
-  scene.position.z = 5;
-  scene.position.y = -3;
+  scene.position.x = 0;
+  scene.position.z = 0;
+  scene.position.y = 0;
 
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
@@ -212,85 +213,68 @@ document.addEventListener("DOMContentLoaded", function () {
     renderer.setSize(size.width, size.height);
   });
 
-  // Star particles from https://threejs.org/examples/webgl_camera.html
+  
 
-  const geometryStars = new THREE.BufferGeometry();
-  const verticesStars = [];
+// Star particles from https://threejs.org/examples/webgl_camera.html
 
-  for (let i = 0; i < 40000; i++) {
-    verticesStars.push(THREE.MathUtils.randFloatSpread(2000));
-    verticesStars.push(THREE.MathUtils.randFloatSpread(2000));
-    verticesStars.push(THREE.MathUtils.randFloatSpread(2000));
-  }
+const geometryStars = new THREE.BufferGeometry();
+const verticesStars = [];
 
-  geometryStars.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesStars, 3)
-  );
+for (let i = 0; i < 40000; i++) {
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
+  verticesStars.push(THREE.MathUtils.randFloatSpread(2000)); 
+}
 
-  const particlesStars = new THREE.Points(
-    geometryStars,
-    new THREE.PointsMaterial({ color: 0x94efff })
-  );
-  scene.add(particlesStars);
+geometryStars.setAttribute('position', new THREE.Float32BufferAttribute(verticesStars, 3));
 
-  const geometryOtherParticles = new THREE.BufferGeometry();
-  const verticesOtherParticles = [];
+const particlesStars = new THREE.Points(geometryStars, new THREE.PointsMaterial({ color: 0x94EFFF }));
+scene.add(particlesStars);
 
-  for (let i = 0; i < 40000; i++) {
-    verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
-    verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
-    verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
-  }
+const geometryOtherParticles = new THREE.BufferGeometry();
+const verticesOtherParticles = [];
 
-  geometryOtherParticles.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesOtherParticles, 3)
-  );
+for (let i = 0; i < 40000; i++) {
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500));
+  verticesOtherParticles.push(THREE.MathUtils.randFloatSpread(1500)); 
+}
 
-  const particlesOther = new THREE.Points(
-    geometryOtherParticles,
-    new THREE.PointsMaterial({ color: 0xff9f9f })
-  );
-  scene.add(particlesOther);
+geometryOtherParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesOtherParticles, 3));
 
-  const geometryMidParticles = new THREE.BufferGeometry();
-  const verticesMidParticles = [];
+const particlesOther = new THREE.Points(geometryOtherParticles, new THREE.PointsMaterial({ color: 0xFF9F9F }));
+scene.add(particlesOther);
 
-  for (let i = 0; i < 5000; i++) {
-    verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
-    verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
-    verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
-  }
 
-  geometryMidParticles.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesMidParticles, 3)
-  );
+const geometryMidParticles = new THREE.BufferGeometry();
+const verticesMidParticles = [];
 
-  const particlesMid = new THREE.Points(
-    geometryMidParticles,
-    new THREE.PointsMaterial({ color: 0xfffcdc })
-  );
-  scene.add(particlesMid);
+for (let i = 0; i < 5000; i++) {
+  verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800)); 
+  verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800));
+  verticesMidParticles.push(THREE.MathUtils.randFloatSpread(800)); 
+}
 
-  const geometryCloseParticles = new THREE.BufferGeometry();
-  const verticesCloseParticles = [];
+geometryMidParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesMidParticles, 3));
 
-  for (let i = 0; i < 5000; i++) {
-    verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
-    verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
-    verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
-  }
+const particlesMid = new THREE.Points(geometryMidParticles, new THREE.PointsMaterial({ color: 0xFFFCDC }));
+scene.add(particlesMid);
 
-  geometryCloseParticles.setAttribute(
-    "position",
-    new THREE.Float32BufferAttribute(verticesCloseParticles, 3)
-  );
+const geometryCloseParticles = new THREE.BufferGeometry();
+const verticesCloseParticles = [];
 
-  const particlesClose = new THREE.Points(
-    geometryCloseParticles,
-    new THREE.PointsMaterial({ color: 0xffffff })
-  );
-  scene.add(particlesClose);
+for (let i = 0; i < 5000; i++) {
+  verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600)); 
+  verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600));
+  verticesCloseParticles.push(THREE.MathUtils.randFloatSpread(600)); 
+}
+
+geometryCloseParticles.setAttribute('position', new THREE.Float32BufferAttribute(verticesCloseParticles, 3));
+
+const particlesClose = new THREE.Points(geometryCloseParticles, new THREE.PointsMaterial({ color: 0xFFFFFF }));
+scene.add(particlesClose);
+
+
+
+
 });

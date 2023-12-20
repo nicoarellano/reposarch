@@ -303,7 +303,7 @@ function getRandomHexColor() {
 
 // Add other createText calls here...
 createText("Press W S A D Q E to move Camera", 10, "0Xcc0000")
-createText("Hold C to pause rotation; Press B or T to change backround and text color", 9, "0Xcc0000")
+createText("Press C to pause rotation; Press B or T to change backround and text color", 9, "0Xcc0000")
 createText("Press G or L to toggle grid and light", 8, "0Xcc0000")
 createText("Muchen GE", 6, "0Xc27ba0");
 createText("- University of Manitoba", 4, "0X3d85c6");
