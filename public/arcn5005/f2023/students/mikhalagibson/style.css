@@ -232,6 +232,8 @@ button {
     background-color: #AEC3B0;
     border: 2px solid #000;
     transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-top: 10px;
   }
   
   
@@ -245,4 +247,8 @@ button {
   button:active {
       box-shadow: none;
       transform: translateY(4px);
+  }
+
+  audio {
+    margin: 10px;
   }
