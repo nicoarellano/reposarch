@@ -19,6 +19,15 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
+//Creates grids and axes in the scene
+const grid = new THREE.GridHelper(50, 30);
+scene.add(grid);
+
+const axes = new THREE.AxesHelper();
+axes.material.depthTest = false;
+axes.renderOrder = 1;
+scene.add(axes);
+
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 
 const yellowMaterial = new THREE.MeshLambertMaterial({
@@ -56,9 +65,9 @@ let mesh;
 loader.load(
   "./three/v x retrowave-neon-palm.glb",
   function (gltf) {
-    gltf.scene.scale.x = 5;
-    gltf.scene.scale.y = 5;
-    gltf.scene.scale.z = 5;
+    gltf.scene.scale.x = 3;
+    gltf.scene.scale.y = 3;
+    gltf.scene.scale.z = 3;
 
     mesh = gltf.scene;
     scene.add(gltf.scene);
