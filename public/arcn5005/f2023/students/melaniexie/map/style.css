@@ -4,5 +4,11 @@ body { margin: 0; padding: 0; }
         #map { height: 100%; }
 
     h1 {
+        color: rgb(40, 47, 134);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;}
+
+    h2 {
         color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;}

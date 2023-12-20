@@ -1,45 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html>
+<head lang="en">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
+  <title>About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Inline CSS for Background Image and Text Effects -->
   <style>
-    #audio-player {
+    body {
+      background-image: url('./sky.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: center; 
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 50px;
+      position: relative;
+      top: 20px; 
+    }
+    ul li {
+      color: rgb(217, 211, 255); /* Change as needed */
+      font-size: 1.2em;
+      font-weight: 200;
+      text-shadow: 2px 2px 2px #000000; /* Adds a shadow to make text more readable */
+      margin-bottom: 10px; /* Space between list items */
+    }
+
+    .instruction-text {
+      color: white;
+      padding: 2px;
+      position: absolute;
+      bottom: 85%; /* Adjust as needed */
+      left: 83%; /* Adjust as needed */
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+      border-radius: 10px;
+      font-size: 0.7rem;
+      max-width: 80%; /* Ensures text block doesn't stretch too wide */
+    }
+    audio {
       display: none;
     }
   </style>
-  <title>About</title>
 </head>
 
 <body>
-  <section class="main-container">
-    <div id="viewers">
-      <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
-      <audio controls autoplay id="audio-player">
-        <source src="Kina_ft_Snow_-_get_you_the_moon.mp3" type="audio/mp3">
-      </audio>
-      <div class="legend"><span class="dot"></span>
-        <p>Click the bottom left icon once to transport to Chinatown in Ottawa.
-          Click again to journey to China.
-          Click once more to return to the starting point in Canada. Click on each location icon to get detailed
-          information of each Chinatown.</p>
+  <section class="main-container" style="width: 100%; max-width: 100%;">
+    <div class="instruction-text">
+      press ESC to exit full screen
+    </div>
+    <div class="final">
+      <ul>
+        <li> Weixi Zhong</li>
+        <li> Background in Environmental Design</li>
+        <li> MArch Student at CU</li>
+        <li> Love Drawing</li>
+      </ul>
+      <br />
+
+      <div class="assignment2">
+        <img src="./photo.jpg" alt="Weixi Zhong" height="201"/> 
+        <div class="button-container">
+            <a href="https://github.com" target="_blank">
+              <button class="button">GitHub</button>
+            </a>
+            <a href="./assign1/about.html">
+              <button class="button">Assignment 1</button>
+            </a>
+        </div>
+        <audio controls autoplay>
+          <source src="Kina_ft_Snow_-_get_you_the_moon.mp3" type="audio/mp3">
+        </audio>
       </div>
+
+    </div>
+
+    <div class="viewer-container" style="width: 100%; max-width: 100%; margin-bottom: 20px;">
+      <!-- Viewer 1 -->
+      <iframe class="viewer" id="viewer1" src="./assign2/about.html" frameborder="0" style="width: 90%; height: 350px;"></iframe>
+      <button onclick="toggleFullScreen('viewer1')">Assignment 2</button>
+    </div>
+
+    <div class="viewer-container" style="width: 100%; max-width: 100%; margin-bottom: 20px; margin-right: 280px;">
+      <!-- Viewer 2 -->
+      <iframe class="viewer" id="viewer2" src="./assign3/about.html" frameborder="0" style="width: 100%; height: 350px;"></iframe>
+      <button onclick="toggleFullScreen('viewer2')">Assignment 3</button>
     </div>
   </section>
+
+  <script src="./main.js"></script>
+  <canvas class="viewer" id="three-canvas"></canvas>
+  
+  <!-- Three js Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  
+  <script type="module" src="./final/main.js"></script>
+
+  <script>
+    function toggleFullScreen(viewerId) {
+      var elem = document.getElementById(viewerId);
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().catch(err => {
+          alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+  </script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
-
-<canvas class="viewer" id="three-canvas"></canvas>
-
-<script type="module" src="./main.js"></script>
-
 </html>
