@@ -9,6 +9,15 @@ import PdfViewer from "../../../../components/Common/PdfViewer";
 import Final from "./Final.mdx";
 
 export const content: Toc = [
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/0f1OROLez_I?si=ckR0BprKHy8rHTfT"
+        title="Final Assignment explained"
+        caption={"Final Assignment explained"}
+      />
+    ),
+  },
   { element: <Final /> },
   {
     element: (
@@ -67,7 +76,7 @@ export const content: Toc = [
     element: (
       <iframe
         className="w-full h-full"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/about.html"
+        src="/arcn5005/f2023/students/nicolasarellanorisop/index.html"
       ></iframe>
     ),
   },

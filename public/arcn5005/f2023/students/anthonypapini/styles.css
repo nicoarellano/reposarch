@@ -1,227 +1,115 @@
+/* Reset some default styles */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}
-
-body, html {
+  }
+  
+  /* Body and HTML styles */
+  body, html {
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background-image: url(pim-myten-m41k1lTzjVM-unsplash.jpg);
+    background-image: url('pim-myten-m41k1lTzjVM-unsplash.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: white;
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    position: relative;
-}
-
-.black-overlay {
-    background-color: rgba(0, 0, 0, 0.55);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.profile-pic {
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.profile-pic img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.header {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.tagline {
-    font-style: italic;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.profile-info {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.menu {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.7rem 2rem;
-    border-radius: 20px;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-}
-
-.menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.menu ul li a:hover {
-    text-decoration: underline;
-}
-
-.music-player {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-}
-
-.music-player audio {
-    margin-left: 1rem;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5rem;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-}
-
-.spotify-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
+  
+  /* Page 1 styles */
+  #name {
     position: absolute;
     top: 1rem;
-    right: 1rem;
-}
-
-.spotify-link img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-}
-
-.spotify-link a {
-    color: white;
-    text-decoration: none;
+    left: 1rem;
+    font-size: 24px;
     font-weight: bold;
-}
-
-.about-me {
-    background-image: url(1-8.jpeg);
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 400px 0;
-    position: relative;
-}
-
-.about-me-content {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.scroll-down-arrow, .scroll-down-arrow-3d {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.to-3d-realm-text, .to-lounge-text {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.scroll-up-arrow {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.assignment2 {
+  }
+  
+  ol, ul {
+    list-style-type: disc;
+    margin-left: 2.5rem;
+    font-size: large;
+  }
+  
+  .main-container {
     width: 95%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: end;
+    justify-content: space-around;
+    align-items: center;
     overflow: hidden;
     gap: 2rem;
-}
-
-#three-canvas {
-    position: fixed;
-    left: 220;
-    bottom: 100;
-    outline: none;
-}
-
-#three-button {
+  }
+  
+  .final {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+  }
+  
+  #viewers {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    height: 100%;
+    padding: 1rem;
+  }
+  
+  .viewer {
+    border-radius: 1rem;
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  
+  .legend .dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .legend {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+    height: 1rem;
+  }
+  
+  .audio-container {
+    position: absolute;
+    left: 10rem;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+  
+  button:not(#reposarch-button):not(#github-button) {
+    color: red; /* Set button text color to red */
+  }
+  
+  button#reposarch-button, button#github-button {
+    color: black;
+  }
+  
+  button {
     appearance: none;
-    background-color: #1A1A1A;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-#three-button:hover {
-    background-color: #333;
-}
-
-button {
-    appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
+    background-color: white;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 1rem;
     box-sizing: border-box;
-    color: #3B3B3B;
     cursor: pointer;
     display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
@@ -237,20 +125,72 @@ button {
     -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
-}
-
-button:disabled {
+  }
+  
+  button:disabled {
     pointer-events: none;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     color: #fff;
     background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     transform: translateY(-2px);
-}
-
-button:active {
+  }
+  
+  button:active {
     box-shadow: none;
     transform: translateY(0);
-}
+  }
+  
+  /* Page 1 arrow and "To Lounge" text styles */
+  #page1 {
+    position: relative;
+  }
+  
+  .scroll-arrow {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  
+  #to-lounge {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Page 2 styles */
+  #page2 {
+    background-image: url('1-8.jpeg'); /* Retain background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust the height as needed */
+    position: relative; /* Important for positioning quiz */
+  }
+  
+  /* Additional styles for the quiz container */
+  #quiz-container {
+    background-color: white;
+    color: red; /* Set text color to red */
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
