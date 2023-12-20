@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikhala's Portfolio</title>
+     <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <link href='https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+    <!-- Add links to other stylesheets or libraries if required -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Add any necessary JavaScript files or libraries -->
+</head>
+<body>
+    <!-- Introduction Section -->
+    <div class="intro-section">
+        <hr class="grey-line">
+        <img src="image.jpg" width="150px" alt="profile picture">
+        <h1>About Me</h1>
+        <p1>Hi, I'm Mikhala! I am an M.Arch student at Carleton University. I also completed my bachelor 
+            in History and Theory of Architecture at Carleton. I also like studying Art History and Philosophy. 
+            Fun fact: I am currently learning how to make knitwear.</p1>
+            <a href="https://github.com/mikhalag/reposarch"><button id:'button'>GitHub</button>
+            <hr class="grey-line">
+        </div>
+    </div>
+
+    <!-- Container for Three.js Scene and Interactive Map -->
+    <div class="content">
+        <!-- Your existing content -->
+    </div>
+      <!-- Container for Three.js Scene and Interactive Map -->
+      <div class="bottom-section">
+        <div class="map-container">
+            <h1>New UNESCO Properties Registered in 2022-2023</h1>
+            <div id="map"></div>
+            <nav id="filter-group" class="filter-group"></nav>
+            <style>
+                body { margin: 0; padding: 0; }
+                html, body, #map { height: 100%; }
+            </style>
+            <!-- Content for the map goes here -->
+        </div>
+        <div class="three-container">
+            <canvas id="three-canvas"></canvas>
+        </div>
+            <!-- Content for Three.js Scene goes here -->
+        </div>
+
+    <!-- JavaScript for interaction, if necessary -->
+    <script>
+        // Add any necessary JavaScript for interaction here
+    </script>
+     <!-- JavaScript for Three.js and related libraries -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+     <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/FlyControls.js"></script>
+     <script src="combined.js"></script>
+</body>
+</html>
