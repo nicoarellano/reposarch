@@ -54,9 +54,6 @@ h1 {
 
 #three-canvas {
     position: fixed;
-    /* top: 0; */
-    left: 220;
-    bottom: 100;
     outline: none;
 }
 
