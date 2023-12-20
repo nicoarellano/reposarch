@@ -23,32 +23,31 @@ document.body.appendChild(renderer.domElement);
 const grid = new THREE.GridHelper(10, 10);
 scene.add(grid);
 
-
 const axes = new THREE.AxesHelper();
 axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0xFF00FF });
+const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xff00ff });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xff00ff });
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff00ff });
+const greenMaterial = new THREE.MeshLambertMaterial({ color: 0xff00ff });
 
 const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
 const blueCube = new THREE.Mesh(geometry, blueMaterial);
 const redCube = new THREE.Mesh(geometry, redMaterial);
 const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
-yellowCube.position.y = -7; 
+yellowCube.position.y = -7;
 yellowCube.position.x = 0;
-yellowCube.scale = 4
+yellowCube.scale.z = 4;
 blueCube.position.x = 0;
 blueCube.position.z = 0;
-blueCube.position.y = -7; 
-redCube.position.y = -7; 
-redCube.position.x = 0
-greenCube.position.y = 0; 
+blueCube.position.y = -7;
+redCube.position.y = -7;
+redCube.position.x = 0;
+greenCube.position.y = 0;
 
 scene.add(yellowCube);
 scene.add(blueCube);
@@ -124,7 +123,7 @@ const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
 //Creates the lights of the scene
-const lightColor = 0xC0C0C0;
+const lightColor = 0xc0c0c0;
 
 const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
 scene.add(ambientLight);
@@ -138,9 +137,9 @@ scene.add(directionalLight.target);
 function animate() {
   requestAnimationFrame(animate);
 
-//if (mesh) mesh.rotation.y += 0.01;
+  //if (mesh) mesh.rotation.y += 0.01;
 
-yellowCube.rotation.x += 0.01;
+  yellowCube.rotation.x += 0.01;
   yellowCube.rotation.y += 0.01;
 
   blueCube.rotation.x += 0.02;
@@ -181,7 +180,7 @@ gltfLoader.load(
   function (error) {
     console.error(error);
   }
-)
+);
 
 gltfLoader.load(
   "./models/Cole_Marotta_3dModel.gltf",
@@ -198,7 +197,7 @@ gltfLoader.load(
   function (error) {
     console.error(error);
   }
-)
+);
 
 gltfLoader.load(
   "./models/Cole_Marotta_3dModel.gltf",
@@ -215,7 +214,7 @@ gltfLoader.load(
   function (error) {
     console.error(error);
   }
-)
+);
 
 gltfLoader.load(
   "./models/Cole_Marotta_3dModel.gltf",
@@ -232,7 +231,7 @@ gltfLoader.load(
   function (error) {
     console.error(error);
   }
-)
+);
 
 gltfLoader.load(
   "./models/Cole_Marotta_3dModel.gltf",
@@ -249,5 +248,4 @@ gltfLoader.load(
   function (error) {
     console.error(error);
   }
-)
-
+);

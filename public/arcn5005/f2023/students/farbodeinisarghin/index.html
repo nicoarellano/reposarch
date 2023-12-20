@@ -1,33 +1,290 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head lang="en">
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>About</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <script>
+        (function () {
+
+            var SkillsBar = function (bars) {
+                this.bars = document.querySelectorAll(bars);
+                if (this.bars.length > 0) {
+                    this.init();
+                }
+            };
+
+            SkillsBar.prototype = {
+                init: function () {
+                    var self = this;
+                    self.index = -1;
+                    self.timer = setTimeout(function () {
+                        self.action();
+                    }, 500);
+
+
+                },
+                select: function (n) {
+                    var self = this,
+                        bar = self.bars[n];
+
+                    if (bar) {
+                        var width = bar.parentNode.dataset.percent;
+
+                        bar.style.width = width;
+                        bar.parentNode.classList.add("complete");
+                    }
+                },
+                action: function () {
+                    var self = this;
+                    self.index++;
+                    if (self.index == self.bars.length) {
+                        clearTimeout(self.timer);
+                    } else {
+                        self.select(self.index);
+                    }
+
+                    setTimeout(function () {
+                        self.action();
+                    }, 1350);
+                }
+            };
+
+            window.SkillsBar = SkillsBar;
+
+        })();
+
+        (function () {
+            document.addEventListener("DOMContentLoaded", function () {
+                var skills = new SkillsBar(".skillbar-bar");
+            });
+        })();
+        
+    </script>
+    
+    <title>Farbod Eini Sarghin</title>
 </head>
-<body">
-  <div class="assignment2">
-    <img src="./photo.jpg" alt="Farbod Eini Sarghin" height="300" />
-    <a href="https://github.com/FarbodEini/F.E"><button id:"three-button">GitHub</button></a>
-    <a href="http://127.0.0.1:5500/reposarch/public/arcn5005/f2023/students/farbodeinisarghin/about%20assignment%201.html"><button id:"three-button">Assignment 1</button></a>
-    <a href=""><button id:"three-button">Assignment 2</button></a>
-    <a href=""><button id:"three-button">Assignment 3</button></a>
-    <a href=""><button id:"three-button">Final Assignment </button></a>
 
-  </div>
-  </body>
-  <script src="./main.js"></script>
-  <!-- Three js Modules -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/objects/MarchingCubes.js"></script>
-  <script type="module" src="./main.js"></script>
-  <canvas id="three-canvas"></canvas>
+<body>
+    <nav class="navbar">
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact me</a>
+        <a href="#projects" id="btn">See my projects</a>
+        <a href="index.html">Home</a>
+    </nav>
+    <div class="grid-2">
+        <div class="section-1">
+            
+                <i class="fas fa-shapes fa-5x white"></i>
+                <br>
+                <img class="myPic" src="img\photo.jpg">
+                <h2>Farbod Eini Sarghin</h2>
+                <p>Ottawa, Canada</p>
+                <a href="#projects">Project 1</a>
+                <a href="#projects">Project 2</a>
+                
+                <a href="https://github.com/FarbodEini" target="_blank"><i class="fab fa-github"></i></a>
+            </section>
+        </div>
+        <div class="section-2">
+            <h2>About</h2>
+            <p>My name is Farbod Eini Sarghin.
+                I'm studying <strong>Master of Architecture</strong> at <i>Carleton University</i>
+                my field of interest in Architecture is housing, specifically, designing affordable housing to tackle the housing crisis of the early future.
+                I am passionate about abstract and speculative designs as well.
+                I also like playing the piano, doing Yoga, swimming and horse riding.
+                </p>
+            <p>I was born in April 8 1998, in Tehran.
+                Iran has beautiful nature as well as a rich history and architecture and has numerous amazing historical monuments. 
+                </p>
+            <div id="skills">
+                <h2>Skills</h2>
+                <p>During my studies and experiences, I developed skills such as Problem-solving and Critical thinking. 
 
+                </p>
+                <h2>My Software Skills</h2>
+                <div class="skillbar-wrapper">
+                    <div class="skillbar clearfix html5" data-percent="90%">
+                        <h4 class="skillbar-title"><span>Photoshop</span></h4>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">90%</div>
+                    </div>
+
+                    <div class="skillbar clearfix css" data-percent="80%">
+                        <h4 class="skillbar-title"><span>Rhino</span></h4>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">80%</div>
+                    </div>
+                    <div class="skillbar clearfix wordpress" data-percent="90%">
+                        <h4 class="skillbar-title"><span>AuotoCAD</span></h4>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">90%</div>
+                    </div>
+                    <div class="skillbar clearfix javascript" data-percent="70%">
+                        <h4 class="skillbar-title"><span>Revit</span></h4>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">70%</div>
+                    </div>
+
+                    <div class="skillbar clearfix cpp" data-percent="70%">
+                        <h4 class="skillbar-title"><span>Illustraitor</span></h4>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">70%</div>
+                    </div>
+
+                    <div class="skillbar clearfix cs" data-percent="60%">
+                        <h4 class="skillbar-title"><span>Indesign</span></h4>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">60%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-1">
+                <h1>Take a look at some cities of Iran</h1>
+                <div class="slideshow-container">
+    
+                    <!-- The list of slides, as the list of captions, will be defined by JavaScript  -->
+                    <!-- 
+                             The div "slideSet" will allow to add the slides BEFORE the anchors "prev" and "next".
+                             This makes the anchors visible even during animation.
+                        -->
+                    <div class="slideSet">
+                        <!--
+                            <div class="mySlides fade">
+                                <div class="numbertext"></div>
+                                <img style="width:100%">
+                                <div class="text"></div>
+                            </div>
+                            -->
+                    </div>
+    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- The "<" character -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a> <!-- The ">" character -->
+    
+                </div>
+                <br>
+    
+                <div class="dots-container">
+                    <!-- The span elements for the dots will be dynanmically added to DOM by JavaScript -->
+                    <!-- The number of dots will depend on the number of slides -->
+                </div>
+            </div>
+
+            <br>
+
+            <div class="contact" id="contact">
+                <h2>Contact</h2>
+                <p>farbodeyni@gmail.com</p>
+                <p>343-558-9809</p>
+                <p>192 Bronson Ave, Ottawa, ON</p>
+            </div>
+        </div>
+        <div id="projects">
+                  
+            <canvas id="three-canvas"></canvas>
+            <!-- Include your JS libraries and scripts here -->
+            <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/objects/MarchingCubes.js"></script>
+            <script type="module" src="./three/main.js"></script>
+        </div> 
+    </div>
+</section>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+    
+        <title>Farbod Map Assingment</title>
+        <meta property="og:description" content="Farbod Map Assingment." />
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+        <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    
+        <style>
+            body { margin: 0; padding: 0; }
+            html, body, #map { height: 100%; }
+        </style>
+    
+        <style>
+           .maplibregl-popup {
+           max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+          }
+         </style>
+    
+    <style>
+         
+      #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        width: 120px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        font-family: 'Open Sans', sans-serif;
+        }
+        
+        #menu a {
+        font-size: 13px;
+        color: #404040;
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+        text-align: center;
+        }
+        
+        #menu a:last-child {
+        border: none;
+        }
+        
+        #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+        }
+        
+        #menu a.active {
+        background-color: #3887be;
+        color: #ffffff;
+        }
+        
+        #menu a.active:hover {
+        background: #3074a4;
+        }
+      </style>
+      <nav id="menu"></nav>
+    
+    </head>
+    
+      <body>
+    
+        <div id="map"></div>
+        <script src="./map/main.js"></script>
+    
+      </body>
+    
+    </html>
+    
+        </div>
+    </section>
+
+     
+    <script src="slideshow.js"></script>
+</body>
 
 </html>

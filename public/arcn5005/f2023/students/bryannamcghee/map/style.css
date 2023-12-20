@@ -16,16 +16,17 @@ body {
     top: 10px;
     right: 24px;
     padding: 40px;
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     border-radius: 10px;
     font-size: 40px;
+    /* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ maybe 40 is a bit too much? maybe add a background so the text is more legible*/
     background-color: transparent;
 }
 
 .legend-marker {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin-right: 24px;
 }
 
@@ -46,7 +47,8 @@ body {
 }
 
 #title {
-    font-size: 150px;
+    font-size: 50px;
+    /* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️ maybe 50 is a bit too much? I think the position of the title is not the best*/
     position: absolute;
     top: 10px;
     left: 24px;
@@ -55,17 +57,31 @@ body {
 }
 
 @keyframes pulse {
-    0% { color: #FF5733; }
-    25% { color: #DAF7A6; }
-    50% { color: #D4AC0D; }
-    75% { color: #7B241C; }
-    100% { color: #FF5733; }
+    0% {
+        color: #FF5733;
+    }
+
+    25% {
+        color: #DAF7A6;
+    }
+
+    50% {
+        color: #D4AC0D;
+    }
+
+    75% {
+        color: #7B241C;
+    }
+
+    100% {
+        color: #FF5733;
+    }
 }
 
-@keyframes text-pulse {
+/* @keyframes text-pulse {
     0% { font-size: 4px; }
     25% { font-size: 6px; }
     50% { font-size: 8px; }
     75% { font-size: 6px; }
     100% { font-size: 4px; }
-}
+} */
