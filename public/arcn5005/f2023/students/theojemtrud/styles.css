@@ -88,7 +88,7 @@ h1 {
     color: #3B3B3B;
     cursor: pointer;
     display: inline-block;
-   font-family: 'Afacad', sans-serif;
+    font-family: 'Afacad', sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: normal;
@@ -132,14 +132,17 @@ html,
 body,
 
 #resto {
-    text-align: center; /* Center the text */
-    color: rgb(0, 0, 0, 1); /* Set the text color with transparency */
+    text-align: center;
+    /* Center the text */
+    color: rgb(0, 0, 0, 1);
+    /* Set the text color with transparency */
     position: absolute;
     top: 10px;
     left: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     transform: translateX(-50%);
     font-family: 'Afacad', sans-serif;
+    z-index: 2;
 }
 
 #map {
@@ -155,5 +158,5 @@ body,
     font-family: 'Afacad', sans-serif;
 }
 
-    /*font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+/*font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
