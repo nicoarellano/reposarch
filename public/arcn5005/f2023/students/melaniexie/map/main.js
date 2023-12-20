@@ -11,7 +11,7 @@ const map = new maplibregl.Map({
 let PlantsFeatureCollection = [];
 
 plants.forEach((plant) => {
-  const image = `images/${plant.code}.jpg`;
+  const image = `images/${plant.id}.jpg`;
 
   let plantFeature = {
     code: `${plant.code}`,
@@ -27,6 +27,7 @@ plants.forEach((plant) => {
   PlantsFeatureCollection.push(plantFeature);
 });
 
+
 map.on("load", () => {
   map.addSource("places", {
     type: "geojson",
@@ -37,9 +38,14 @@ map.on("load", () => {
   });
 
   // Add a layer showing the places with a custom icon.
-  map.loadImage("marker.png", (error, image) => {
-    if (error) throw error;
-    map.addImage("custom-marker", image);
+ // Load the first marker image
+ map.loadImage("marker.png", (error, image) => {
+  if (error) {
+    console.error("Error loading image:", error);
+    return;
+  }
+  map.addImage("custom-marker", image);
+
 
     map.addLayer({
       id: "places",
@@ -47,12 +53,13 @@ map.on("load", () => {
       source: "places",
       layout: {
         "icon-image": "custom-marker",
-        "icon-size": 1, // Adjust the size as needed
+        "icon-size": 0.1, // Adjust the size as needed
         "icon-allow-overlap": true,
       },
     });
   });
 
+ 
   // Create a popup, but don't add it to the map yet.
   const popup = new maplibregl.Popup({
     closeButton: false,
