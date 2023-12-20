@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidmluY2V0aGVwcmluY2UiLCJhIjoiY2xwdW1rY2lrMG0zc
 const map = new mapboxgl.Map({
 container: 'map',
 center: [0, 0],
-zoom: 2,
+zoom: 1,
 style: 'mapbox://styles/mapbox/streets-v12'
 });
  
@@ -77,7 +77,7 @@ observatories.forEach((observatory) => {
     const image =
         observatory.image && observatory.image.trim() !== ""
             ? observatory.image
-            : "./images/Generic Observatory.jpg";
+            : "../images/Generic Observatory.jpg";
 
     const imageAlt = observatory.image
         ? observatory.image.replace(/\.[^/.]+$/, "")

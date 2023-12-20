@@ -97,8 +97,8 @@ function loadGLB(path, scale, x, z) {
   );
 }
 
-loadGLB("./models/Vincent_V2.glb", 10, 0, 0);
-loadGLB("./models/scene.gltf", 0.5, 0, 0);
+loadGLB("../models/Vincent_V2.glb", 10, 0, 0);
+loadGLB("../models/scene.gltf", 0.5, 0, 0);
 
 // Text from https://threejs.org/examples/webgl_loader_ttf.html
 
@@ -116,7 +116,7 @@ function createText(text, elevation = 0, textColor = 0xff0000, size = 3) {
   const textValue = text;
   const textSize = size;
 
-  const fontPath = "./fonts/Roboto_Regular.json";
+  const fontPath = "../fonts/Roboto_Regular.json"; 
 
   fontLoader.load(fontPath, function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
