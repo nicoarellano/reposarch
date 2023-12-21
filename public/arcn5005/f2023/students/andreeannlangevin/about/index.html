@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles.css" />
   <title>ABOUT PAGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="\public\arcn5005\f2023\students\andreeannlangevin\styles.css" />
+  <script type="module" src="main.js"></script>
+  
 
 </head>
 <body>
   <h1>Andrée-Ann Langevin</h1>
+  
 <div class="flex items-center justify-center">
     <section style="display: flex; flex-direction: row; justify-content: left; align-items: left; gap: 5rem;">
       <div class="slideshow-container">
         <div class="flex items-center justify-center">
           
-        
         <div class="mySlides fade">
           <img src="AAL.jpg" style="width:80%">
           <div class="text">In front of MDSL, the building I work on 3 years.</div>
@@ -64,56 +67,17 @@
   </section>
   <div> 
     <br />
-    <h2> ASSIGNEMENTS </h2>
+    <h2> LINKS </h2>
     <br/>
   </div>
   <div class="assignments">
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/three-example">
-      <button id="three-button">THREE</button>
+    <a href="https://github.com/Ddedee25">
+      <button id="GitHub">GitHub</button>
     </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/bim-example">
-      <button id="bim-button">BIM</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/map-example">
-      <button id="map-button">MAP</button>
-    </a>
-    <a href="https://reposarch.vercel.app/arcn5005/f2023/students/andreeannlangevin/final-example">
-      <button id="final-button">FINAL</button>
-    </a>
+    <a href="https://livingatlasofquality.ca/research-sites/situated-research-projects/ottawa">
+      <button id="Research"> Research</button>
+   
   </div>
 </body>
 
 </html>
-
-</div>
-</div>
-
-<br>
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
