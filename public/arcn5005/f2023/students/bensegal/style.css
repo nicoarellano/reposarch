@@ -1,0 +1,109 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: #414141;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.final {
+    font-family: 'nunito', sans-serif;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    overflow: hidden;
+    gap: 25px;
+    color: white;
+    margin-top: 10px; /* Adjusted margin-top for the .final section */
+}
+
+.body-paragraph {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    width: 500px;
+    margin: 0 auto;
+    color: white;
+}
+
+.centered-content {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.rounded-image {
+    border-radius: 25px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.assignment-button {
+    background-color: rgb(82, 104, 45);
+    border: none;
+    color: white;
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 1s;
+}
+
+.assignment-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.assignment-button:hover {
+    background-color: #414141;
+    border-width: 1px;
+    border-color: rgb(82, 104, 45);
+    border-style: solid;
+    color: rgb(82, 104, 45);
+}
+
+.viewer {
+    position: absolute;
+    left: 100px; /* Adjusted left property for 100px padding from the left edge */
+    margin-top: -1250px; /* Adjusted margin-top as needed */
+    border-radius: 1rem;
+    padding: 20px; /* Adjusted padding as needed */
+    width: 25%;
+    height: 1000px; /* Used max-height instead of height to allow content overflow */
+    overflow: auto; /* Added overflow property to allow scrolling if content exceeds the height */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+
+.viewers {
+    position: absolute;
+    right: 100px;
+    margin-top: -1250px; /* Adjusted margin-top as needed */
+    border-radius: 1rem;
+    padding: 20px; /* Adjusted padding as needed */
+    width: 25%;
+    height: 1000px; /* Used max-height instead of height to allow content overflow */
+    overflow: auto; /* Added overflow property to allow scrolling if content exceeds the height */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
