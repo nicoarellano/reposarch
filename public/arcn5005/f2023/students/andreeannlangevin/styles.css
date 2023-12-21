@@ -1,3 +1,49 @@
+body {
+  color: rgb(75, 1, 145);
+  border: 3px;
+  margin: 0px;
+  padding: 20px;
+  font-family: Helvetica;
+  text-align: center;
+  background-color: rgb(196, 166, 224);
+}
+
+.container {
+  background-color: rgb(196, 166, 224);
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 100px;
+
+  gap: 10px ; 
+
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.content-large { grid-row-start: 2;
+  grid-row-end: span 2;
+}
+
+.content-small { grid-row-start: 3;
+  grid-row-end: span 1;
+}
+
+
+.header { 
+grid-column-start: 1;
+grid-column-end: 4;
+}
+
+.footer
+{ 
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  }
+
 h1 {
   color: rgb(75, 1, 145);
   font-family: Arial, Helvetica, sans-serif;
@@ -5,17 +51,8 @@ h1 {
 }
 
 h2 {
-  color: rgb(75, 1, 145);
+  color: rgb(107, 2, 206);
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-body {
-  color: rgb(75, 1, 145);
-  border: 3px;
-  margin: 20px;
-  padding: 20px;
-  font-family: Helvetica;
   text-align: center;
 }
 
@@ -29,35 +66,31 @@ ul {
   font-family: Arial, Helvetica, sans-serif;
   color: green;
   list-style-type: none;
-
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 li {
   content: "";
-  color: hsl(27, 68%, 48%);
+  color: rgb(75, 1, 145);;
   font-family: Impact, Haettenschweiler, "Arial Narrow", sans-serif;
 }
 
-body {
-  background-color: rgb(245, 213, 225);
-}
-
 img {
-  float: left;
+  float: relative;
   width: 20%;
 }
 
+
 .slideshow-container {
-  max-width: 475px;
-  position: center;
+  max-width: 1000px;
+  position: relative;
   margin: auto;
 
 }
 
 .video-container {
   max-width: 300px;
-  position: center;
+  position: relative;
   margin: auto;
   }
 
@@ -119,41 +152,11 @@ button::after {
       #00f,
       #0f0,
       #ff0);
-  -webkit-animation: animate123 20% linear infinte;
-  animation: animate123 20% linear infinte;
 }
 
 button:hover::before,
 button:hover::after {
   opacity: 1;
-}
-
-@-webkit-keyframes animate123 {
-  0% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 300% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
-
-@keyframes animate123 {
-  0% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 300% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
 }
 
 button span::before {
