@@ -100,6 +100,16 @@ const customLayer = {
         map.triggerRepaint();
     }
 };
+const lightColor = 0xc0c0c0;
+
+const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(lightColor, 1);
+directionalLight.position.set(5, 10, 5);
+directionalLight.target.position.set(0, 3, 0);
+scene.add(directionalLight);
+scene.add(directionalLight.target);
 
 // Add custom layer when the map style is loaded
     map.on('style.load', () => {
