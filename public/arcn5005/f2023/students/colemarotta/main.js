@@ -3,7 +3,7 @@ const MAPTILER_KEY = 'get_your_own_OpIi9ZULNHzrESv6T2vL';
 // Initialize the map
 const map = new maplibregl.Map({
     style: `https://api.maptiler.com/maps/backdrop/style.json?key=${MAPTILER_KEY}`,
-    center: [-35.631350486385614, 47.90310711396825],
+    center: [-40, 50],
     zoom: 2,
     pitch: 0,
     bearing: -17.6,
@@ -283,14 +283,6 @@ map.on('load', () => {
     });
   
   
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) 
-      {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
-  
   // Change the cursor to a pointer when the mouse is over the places layer.
   map.on('mouseenter', 'places', () => {
       map.getCanvas().style.cursor = 'pointer';
@@ -385,51 +377,18 @@ function flyTo(map, lng, lat, zoom = 15, pitch = 50) {
     duration: 2000,
   });
 }
-const scriptThree = document.createElement('script');
-scriptThree.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js';
-document.head.appendChild(scriptThree);
 
-// Load GLTFLoader
-const scriptGLTFLoader = document.createElement('script');
-scriptGLTFLoader.src = 'https://threejs.org/examples/js/loaders/GLTFLoader.js';
-document.head.appendChild(scriptGLTFLoader);
-
-// Wait for scripts to load before executing the rest of the code
-scriptThree.onload = scriptGLTFLoader.onload = () => {
-    // Your existing code
-    const map = new maplibregl.Map({
-        // ... (your map initialization code)
-    });
-
-    // Function to load models
-    function loadModel(modelPath) {
-        const loader = new THREE.GLTFLoader();
-        loader.load(modelPath, (gltf) => {
-            const model = gltf.scene;
-            
-            // Adjust the model's position, rotation, and scale
-            model.position.set(modelTransform.translateX, modelTransform.translateY, modelTransform.translateZ);
-            model.rotation.set(modelTransform.rotateX, modelTransform.rotateY, modelTransform.rotateZ);
-            model.scale.set(modelTransform.scale, modelTransform.scale, modelTransform.scale);
-
-            // Add the model to the map
-            customLayer.scene.add(model);
-        });
-    }
-
-    // Load the model
-    loadModel('./models/Cole_Marotta_3dModel.gltf');
-    
-    // Model transformation parameters
-    const modelOrigin = [-75.73086568, 45.40049213];
+               // parameters to ensure the model is georeferenced correctly on the map
+    const modelOrigin = [-75.73155367, 45.40032357];
     const modelAltitude = 0;
-    const modelRotate = [Math.PI / 2, 6, 0];
+    const modelRotate = [Math.PI / 2, 0, 0];
 
     const modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
         modelOrigin,
         modelAltitude
     );
 
+    // transformation parameters to position, rotate and scale the 3D model onto the map
     const modelTransform = {
         translateX: modelAsMercatorCoordinate.x,
         translateY: modelAsMercatorCoordinate.y,
@@ -437,46 +396,96 @@ scriptThree.onload = scriptGLTFLoader.onload = () => {
         rotateX: modelRotate[0],
         rotateY: modelRotate[1],
         rotateZ: modelRotate[2],
-        scale: modelAsMercatorCoordinate.meterInMercatorCoordinateUnits() * 12,
+        /* Since our 3D model is in real world meters, a scale transform needs to be
+        * applied since the CustomLayerInterface expects units in MercatorCoordinates.
+        */
+        scale: modelAsMercatorCoordinate.meterInMercatorCoordinateUnits()
     };
 
-    // Custom layer definition
+    const THREE = window.THREE;
+
+    // configuration of the custom layer for a 3D model per the CustomLayerInterface
     const customLayer = {
-        id: '3d-model-layer',
+        id: '3d-model',
         type: 'custom',
         renderingMode: '3d',
-        onAdd: function (map, gl) {
+        onAdd (map, gl) {
             this.camera = new THREE.Camera();
             this.scene = new THREE.Scene();
 
-            // Set up three.js renderer
+            // create two three.js lights to illuminate the model
+            const directionalLight = new THREE.DirectionalLight(0xffffff);
+            directionalLight.position.set(0, -70, 100).normalize();
+            this.scene.add(directionalLight);
+
+            const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+            directionalLight2.position.set(0, 70, 100).normalize();
+            this.scene.add(directionalLight2);
+
+            // use the three.js GLTF loader to add the 3D model to the three.js scene
+            const loader = new THREE.GLTFLoader();
+            loader.load(
+              './models/Cole_Marotta_3dModel.gltf',
+                (gltf) => {
+          
+                      const mesh = gltf.scene;
+                      const scale=10
+                      mesh.scale.x =scale;
+                      mesh.scale.y =scale;
+                      mesh.scale.z =scale;         
+                    this.scene.add(mesh);
+                }
+            );
+            this.map = map;
+
+            // use the MapLibre GL JS map canvas for three.js
             this.renderer = new THREE.WebGLRenderer({
                 canvas: map.getCanvas(),
                 context: gl,
-                antialias: true,
+                antialias: true
             });
+
             this.renderer.autoClear = false;
         },
-        render: function (gl, matrix) {
-            const rotationX = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(1, 0, 0), modelTransform.rotateX);
-            const rotationY = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(0, 1, 0), modelTransform.rotateY);
-            const rotationZ = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(0, 0, 1), modelTransform.rotateZ);
+        render (gl, matrix) {
+            const rotationX = new THREE.Matrix4().makeRotationAxis(
+                new THREE.Vector3(1, 0, 0),
+                modelTransform.rotateX
+            );
+            const rotationY = new THREE.Matrix4().makeRotationAxis(
+                new THREE.Vector3(0, 1, 0),
+                modelTransform.rotateY
+            );
+            const rotationZ = new THREE.Matrix4().makeRotationAxis(
+                new THREE.Vector3(0, 0, 1),
+                modelTransform.rotateZ
+            );
 
             const m = new THREE.Matrix4().fromArray(matrix);
-            const l = new THREE.Matrix4().makeTranslation(modelTransform.translateX, modelTransform.translateY, modelTransform.translateZ)
-                .scale(new THREE.Vector3(modelTransform.scale, -modelTransform.scale, modelTransform.scale))
+            const l = new THREE.Matrix4()
+                .makeTranslation(
+                    modelTransform.translateX,
+                    modelTransform.translateY,
+                    modelTransform.translateZ
+                )
+                .scale(
+                    new THREE.Vector3(
+                        modelTransform.scale,
+                        -modelTransform.scale,
+                        modelTransform.scale
+                    )
+                )
                 .multiply(rotationX)
                 .multiply(rotationY)
                 .multiply(rotationZ);
 
             this.camera.projectionMatrix = m.multiply(l);
-            this.renderer.state.reset();
+            this.renderer.resetState();
             this.renderer.render(this.scene, this.camera);
-            map.triggerRepaint();
-        },
+            this.map.triggerRepaint();
+        }
     };
 
     map.on('style.load', () => {
         map.addLayer(customLayer);
     });
-};
