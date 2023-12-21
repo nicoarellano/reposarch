@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melanie's About</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="../images/pizza2.ico" />
+  </head>
+  <body>
+    <section class="main-container">
+      <div class="final">
+      <h1 id="title">ABOUT PAGE</h1>
+      <h2 class="subtitle">ARCN5005 F2023</h2>
+      <ul>
+        <a href="./about/index.html"><button id="bottone5">Assignment 1</button></a>
+        <a href="./three/index.html"><button id="bottone5">Assignment 2</button></a>
+        <a href="./map/index.html"><button id="bottone5">Assignment 3</button></a>
+      </ul>
+      <div><img src="./images/Capture.PNG" alt="" />
+      <img src="./photo.jpg" alt="Melanie Xie" height="300" /> 
+      </div>
+  
+    <div class="final">
+    <h3>MELANIE XIE</h3>
+    <ul>
+      This is Melanie's about page.
+      <li>I am a M. Arch student at Carleton University</li>
+      <li>Have two cats</li>
+      <li>Studied Chemical Engineering and Architectural technology</li>
+      <li>Used to work at Burlington</li>
+    </ul>
+  
+  <div>
+    <a href="https://reposarch.vercel.app/"><button id="bottone5">Reposarch</button></a>
+    <a href="https://github.com/melaniexie/reposarch"><button id="bottone5">GitHub</button></a>
+  </div>
+</section>
+</body>
+ 
+  <div id="viewers">
+    <div>
+      <div id="full-screen"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 24 24"><path d="M21.414 18.586l2.586-2.586v8h-8l2.586-2.586-5.172-5.172 2.828-2.828 5.172 5.172zm-13.656-8l2.828-2.828-5.172-5.172 2.586-2.586h-8v8l2.586-2.586 5.172 5.172zm10.828-8l-2.586-2.586h8v8l-2.586-2.586-5.172 5.172-2.828-2.828 5.172-5.172zm-8 13.656l-2.828-2.828-5.172 5.172-2.586-2.586v8h8l-2.586-2.586 5.172-5.172z"/></svg></div>
+      <div id="three-container"></div>
+    </div>
+    
+    <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
+  </div>
+
+<script src="./three/main.js"></script>
+
+<!-- Three js Modules -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+
+<canvas class="viewer" id="three-canvas"></canvas>
+<script type="module" src="./three/main.js"></script>
+  
+</html>

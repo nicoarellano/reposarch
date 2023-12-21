@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Map of all Olympic Host Cities</title>
+    <meta
+      property="og:description"
+      content="Filter a set of symbols based on a property value in the data."
+    />
+    <meta
+      property="og:description"
+      content="When a user hovers over a custom marker, show a popup containing more information."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  </head>
+  <body>
+    <style>
+      .maplibregl-popup {
+        max-width: 400px;
+        font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
+    </style>
+
+    <h1>Map of all Summer and Winter Olympic Host Cities</h1>
+    <div id="map"></div>
+    <nav id="filter-group" class="filter-group"></nav>
+    <script src="./main.js"></script>
+  </body>
+</html>

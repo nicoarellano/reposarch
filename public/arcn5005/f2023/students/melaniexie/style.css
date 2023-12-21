@@ -1,10 +1,9 @@
 *{
+    background-color: rgb(40, 181, 181);
     text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
-#three-canvas {
-    width: 100%;
-    height: 100%
-}
+
 header{
     color: beige;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -12,6 +11,12 @@ header{
 h1{
     color: black;
     text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3{
+    color:bisque;
+    font-size: 24px;
 }
 .subtitle {
     text-align: center;
@@ -26,18 +31,98 @@ body{
     font-size: 18px;
     font-weight: 300;
 }
+
 ul{
     list-style-type: none;
 }
+
 img{
-    width: 100px;
-    height: 140px;
-    padding: 10px;
-    border-radius: 20px;
+    width: 200px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 50px;
     opacity: 1
 }
+.main-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+}
 
-#three-button {
+.final {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+}
+.vl {
+    border-left: 1px solid lightgray;
+    height: 150px;
+}
+.about {
+    background-color: #f1f1f1;
+    width: 70%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+#three-canvas {
+    bottom: 1;
+}
+
+#viewers {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    height: 100%;
+    padding: 1rem;
+}
+#full-screen {
+    width: 29px;
+    height: 29px;
+    position: relative;
+    top: 40px;
+    z-index: 99;
+    left: 8px;
+    padding: 0.3rem;
+    pointer-events: all;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.viewer {
+    right: 0;
+    /* outline: 1px solid black; */
+    border-radius: 1rem;
+    width: 100%;
+    height: 70vh;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#map {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+}
+
+
+#bottone5 {
     align-items: center;
     background-color: rgb(99, 245, 226);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -63,29 +148,21 @@ img{
     width: auto;
    }
    
-   #three-button:hover,
-   #three-button:focus {
+   #bottone5:hover,
+   #bottone5:focus {
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: rgba(0, 0, 0, 0.65);
    }
    
-   #three-button:hover {
+   #bottone5:hover {
     transform: translateY(-1px);
    }
    
-   #three-button:active {
+   #bottone5:active {
     background-color: #F0F0F1;
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
    }
-   canvas {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -9999;
-  }

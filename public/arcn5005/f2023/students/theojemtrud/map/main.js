@@ -531,7 +531,7 @@ map.on('load', () => {
         "coordinates":  [ -73.57116018,45.50982911 ]
      },
      "properties": {
-     "Place":"BENELUX - Brasserie Artisanale",
+     "Place":"BENELUX",
      "Type":"Bar",
      "Price":"$$",
      "Address":"245 Sherbrooke St W, Montreal, Quebec H2X 1X8",

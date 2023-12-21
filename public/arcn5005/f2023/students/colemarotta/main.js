@@ -1,11 +1,65 @@
+const MAPTILER_KEY = 'get_your_own_OpIi9ZULNHzrESv6T2vL';
 const map = new maplibregl.Map({
-    container: 'map',
-    style:
-        'https://api.maptiler.com/maps/backdrop/style.json?key=n2UqeTpVL8iS1Gw18m9b',
+    style: `https://api.maptiler.com/maps/backdrop/style.json?key=${MAPTILER_KEY}`,
     center: [-35.631350486385614, 47.90310711396825],
-    zoom: 2.5,
-  });
-  
+    zoom: 0.7,
+    pitch: 45,
+    bearing: -17.6,
+    container: 'map',
+    antialias: true
+});
+
+// The 'building' layer in the streets vector source contains building-height
+// data from OpenStreetMap.
+map.on('load', () => {
+    // Insert the layer beneath any symbol layer.
+    const layers = map.getStyle().layers;
+
+    let labelLayerId;
+    for (let i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
+            labelLayerId = layers[i].id;
+            break;
+        }
+    }
+
+    map.addSource('openmaptiles', {
+        url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${MAPTILER_KEY}`,
+        type: 'vector',
+    });
+
+    map.addLayer(
+        {
+            'id': '3d-buildings',
+            'source': 'openmaptiles',
+            'source-layer': 'building',
+            'type': 'fill-extrusion',
+            'minzoom': 15,
+            'paint': {
+                'fill-extrusion-color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'render_height'], 0, '#808080', 200, '#000000', 400, '#333333'
+                ],
+                'fill-extrusion-height': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    15,
+                    0,
+                    16,
+                    ['get', 'render_height']
+                ],
+                'fill-extrusion-base': ['case',
+                    ['>=', ['get', 'zoom'], 16],
+                    ['get', 'render_min_height'], 0
+                ]
+            }
+        },
+        labelLayerId
+    );
+});
+
   map.on('load', () => {
     //Time_Machine Marker
     map.loadImage(
@@ -173,23 +227,7 @@ const map = new maplibregl.Map({
                             'coordinates': [-75.73086568, 45.40049213],
                           },
                         }
-                      
-                  
-      
-//<img src="./mapbox/images/Time Machine.jpg" alt="Time Machine" height="200" width="200" />
-
-                 // {
-                  //  "type": "Feature",
-                  //  "geometry": {
-                  //     "type": "Point",
-                  //     "coordinates":  [ -75.694054,45.383638 ]
-                   // },
-                   // "properties": {
-                   // "Name":"Founders' Memorial",
-                   // "Type":"Time_Machine",
-                   // "Location":"Robertson Hall, Ottawa, ON K1S, Canada",
-                  //  }
-                 // },
+//
                  ]
                  }
             });
@@ -210,52 +248,6 @@ const map = new maplibregl.Map({
   
   });
   
-  
-  map.on('load', () => {
-  // Markings_2 Marker
-  map.loadImage(
-      './Pokemon Sprites/eevee.png',
-      (error, image) => {
-          if (error) throw error;
-          map.addImage('Markings_2-marker', image);
-          
-          //Adding Markings_2
-          map.addSource('Markings_2', {
-                  'type': 'geojson',
-                  'data': {
-                    "type": "FeatureCollection",
-                    "features": [
-                   {
-                     "type": "Feature",
-                     "geometry": {
-                        "type": "Point",
-                        "coordinates":  [ -75.697720,45.384683 ]
-                     },
-                     "properties": {
-                     "Name":"Carleton University Courtyard",
-                     "Type":"Markings_2",
-                     "Location":"34 Library Rd, Ottawa, ON K1S 5R1, Canada",
-                     }
-                   },
-               ]
-                }
-  
-          });
-  
-          // Add a symbol layer for Markings_2
-          map.addLayer({
-              'id': 'Markings_2',
-              'type': 'symbol',
-              'source': 'Markings_2',
-              'layout': {
-                  'icon-image': 'Markings_2-marker',
-                  'icon-size': 0.8
-  
-              }
-           });
-      }
-  )
-  });
   
   //Time_Machine Popups
   map.on('click', 'Time_Machine', (e) => {
@@ -371,5 +363,244 @@ const map = new maplibregl.Map({
   layers.appendChild(link);
   }
   
+  window.addEventListener("resize", () => {
+    resize();
+  });
+  
+  const resize = () => {
+    size.width = window.innerWidth * (fullScreen ? 0.92 : 0.6);
+    size.height = window.innerHeight * (fullScreen ? 0.9 : 0.4);
+    camera.aspect = size.width / size.height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(size.width, size.height);
+  };
   
   });
+  const goTo = document.getElementById("go-to");
+let toggleGoTo = true;
+goTo.onclick = function () {
+  if (toggleGoTo) {
+    this.setAttribute("title", "Go to Canada");
+    document.getElementById("go-to-icon").setAttribute("d", icons.worldIcon);
+    // Fly to Carleton
+    flyTo(map, -75.697, 45.384, 15.6);
+  } else {
+    this.setAttribute("title", "Go to site");
+    document.getElementById("go-to-icon").setAttribute("d", icons.goToIcon);
+    // Fly to Canada
+    flyTo(map, -98.74, 56.415, 3, 0);
+  }
+  toggleGoTo = !toggleGoTo;
+};
+
+function flyTo(map, lng, lat, zoom = 15, pitch = 50) {
+  map.flyTo({
+    center: [lng, lat],
+    zoom: zoom,
+    pitch: pitch,
+    duration: 2000,
+  });
+}
+
+const customLayer2 = {
+  id: "3d-model",
+  type: "custom",
+  renderingMode: "3d",
+  onAdd(map, gl) {
+    this.camera = new THREE.Camera();
+    this.scene = new THREE.Scene();
+
+    // create two three.js lights to illuminate the model
+    const directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(0, -70, 100).normalize();
+    this.scene.add(directionalLight);
+
+    const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+    directionalLight2.position.set(0, 70, 100).normalize();
+    this.scene.add(directionalLight2);
+
+  }
+}
+
+  // parameters to ensure the model is georeferenced correctly on the map
+  const modelOrigin = [-75.73086568, 45.40049213];
+  const modelAltitude = 0;
+  const modelRotate = [Math.PI / 2, 0, 0];
+
+  const modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
+      modelOrigin,
+      modelAltitude
+  );
+
+  // transformation parameters to position, rotate and scale the 3D model onto the map
+  const modelTransform = {
+      translateX: modelAsMercatorCoordinate.x,
+      translateY: modelAsMercatorCoordinate.y,
+      translateZ: modelAsMercatorCoordinate.z,
+      rotateX: modelRotate[0],
+      rotateY: modelRotate[1],
+      rotateZ: modelRotate[2],
+      /* Since our 3D model is in real world meters, a scale transform needs to be
+      * applied since the CustomLayerInterface expects units in MercatorCoordinates.
+      */
+      scale: modelAsMercatorCoordinate.meterInMercatorCoordinateUnits()
+  };
+
+  const THREE = window.THREE;
+
+  // configuration of the custom layer for a 3D model per the CustomLayerInterface
+  const customLayer = {
+      id: '3d-model',
+      type: 'custom',
+      renderingMode: '3d',
+      onAdd (map, gl) {
+          this.camera = new THREE.Camera();
+          this.scene = new THREE.Scene();
+
+          // create two three.js lights to illuminate the model
+          const directionalLight = new THREE.DirectionalLight(0xffffff);
+          directionalLight.position.set(0, -70, 100).normalize();
+          this.scene.add(directionalLight);
+
+          const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+          directionalLight2.position.set(0, 70, 100).normalize();
+          this.scene.add(directionalLight2);
+
+          // use the three.js GLTF loader to add the 3D model to the three.js scene
+          loader.load(
+            './models/Cole_Marotta_3dModel.gltf',
+            (gltf) => {
+                this.scene.add(gltf.scene);
+            },
+            undefined,
+            (error) => {
+                console.error('Error loading GLTF model:', error);
+            }
+        );
+          this.map = map;
+          // use the MapLibre GL JS map canvas for three.js
+          this.renderer = new THREE.WebGLRenderer({
+              canvas: map.getCanvas(),
+              context: gl,
+              antialias: true
+          });
+
+          this.renderer.autoClear = false;
+      },
+      render (gl, matrix) {
+          const rotationX = new THREE.Matrix4().makeRotationAxis(
+              new THREE.Vector3(1, 0, 0),
+              modelTransform.rotateX
+          );
+          const rotationY = new THREE.Matrix4().makeRotationAxis(
+              new THREE.Vector3(0, 1, 0),
+              modelTransform.rotateY
+          );
+          const rotationZ = new THREE.Matrix4().makeRotationAxis(
+              new THREE.Vector3(0, 0, 1),
+              modelTransform.rotateZ
+          );
+
+          const m = new THREE.Matrix4().fromArray(matrix);
+          const l = new THREE.Matrix4()
+              .makeTranslation(
+                  modelTransform.translateX,
+                  modelTransform.translateY,
+                  modelTransform.translateZ
+              )
+              .scale(
+                  new THREE.Vector3(
+                      modelTransform.scale,
+                      -modelTransform.scale,
+                      modelTransform.scale
+                  )
+              )
+              .multiply(rotationX)
+              .multiply(rotationY)
+              .multiply(rotationZ);
+
+          this.camera.projectionMatrix = m.multiply(l);
+          this.renderer.resetState();
+          this.renderer.render(this.scene, this.camera);
+          this.map.triggerRepaint();
+      }
+  };
+
+  function zoomToModel() {
+    // Coordinates of the model
+    const modelLngLat = [-75.73086568, 45.40049213];
+
+    // Fly to the model
+    map.flyTo({
+        center: modelLngLat,
+        zoom: 18, // Adjust the zoom level as needed
+        pitch: 50,
+        duration: 2000,
+    });
+}
+
+
+  map.on('style.load', () => {
+      map.addLayer(customLayer);
+  });
+
+
+   // Add a 3D model to the map
+   const loader = new THREE.GLTFLoader();
+   loader.load(
+       './/models/Cole_Marotta_3dModel.gltf',
+       (gltf) => {
+           const model = gltf.scene;
+           model.scale.set(100, 100, 100); // Adjust the scale as needed
+
+           map.on('render', () => {
+               const coords = map.getCenter().toArray();
+               const altitude = map.getZoom();
+               const scale = map.project(coords).y / 20000; // Adjust the scale factor
+
+               model.position.set(coords[0], coords[1], altitude);
+               model.scale.set(scale, scale, scale);
+
+               map.triggerRepaint();
+           });
+
+           map.on('load', () => {
+               map.addLayer({
+                   id: '3d-model',
+                   type: 'custom',
+                   renderingMode: '3d',
+                   onAdd: (map, gl) => {
+                       this.camera = new THREE.Camera();
+                       this.scene = new THREE.Scene();
+                       this.scene.add(model);
+
+                       const directionalLight = new THREE.DirectionalLight(0xffffff);
+                       directionalLight.position.set(0, -70, 100).normalize();
+                       this.scene.add(directionalLight);
+
+                       const directionalLight2 = new THREE.DirectionalLight(0xffffff);
+                       directionalLight2.position.set(0, 70, 100).normalize();
+                       this.scene.add(directionalLight2);
+
+                       this.map = map;
+
+                       this.renderer = new THREE.WebGLRenderer({
+                           canvas: map.getCanvas(),
+                           context: gl,
+                           antialias: true
+                       });
+                       this.renderer.autoClear = false;
+                   },
+                   render: (gl, matrix) => {
+                       const m = new THREE.Matrix4().fromArray(matrix);
+                       const l = new THREE.Matrix4().makeTranslation(0, 0, 0);
+
+                       this.camera.projectionMatrix = m.multiply(l);
+                       this.renderer.resetState();
+                       this.renderer.render(this.scene, this.camera);
+                       this.map.triggerRepaint();
+                   }
+               });
+           });
+       }
+   );
