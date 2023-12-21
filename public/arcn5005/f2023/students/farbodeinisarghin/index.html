@@ -9,6 +9,7 @@
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/47b575adaa.js" crossorigin="anonymous"></script>
     <script>
         (function () {
 
@@ -17,7 +18,7 @@
                 if (this.bars.length > 0) {
                     this.init();
                 }
-            };
+            }; 
 
             SkillsBar.prototype = {
                 init: function () {
@@ -72,11 +73,10 @@
 
 <body>
     <nav class="navbar">
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
         <a href="#contact">Contact me</a>
         <a href="#projects" id="btn">See my projects</a>
-        <a href="index.html">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">Home</a>
     </nav>
     <div class="grid-2">
         <div class="section-1">
@@ -92,7 +92,7 @@
                 <a href="https://github.com/FarbodEini" target="_blank"><i class="fab fa-github"></i></a>
             </section>
         </div>
-        <div class="section-2">
+        <div class="section-2" id="about">
             <h2>About</h2>
             <p>My name is Farbod Eini Sarghin.
                 I'm studying <strong>Master of Architecture</strong> at <i>Carleton University</i>
@@ -180,6 +180,7 @@
 
             <div class="contact" id="contact">
                 <h2>Contact</h2>
+                <a href="https://www.linkedin.com/in/farbod-eini-29152420a/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i></a>
                 <p>farbodeyni@gmail.com</p>
                 <p>343-558-9809</p>
                 <p>192 Bronson Ave, Ottawa, ON</p>
