@@ -211,41 +211,8 @@
                         'text-anchor': 'top'
                     }
                 });
-                map.on('click', 'symbols', (e) => {
-                  map.flyTo({
-                    center: e.features[0].geometry.coordinates
-                  });
-                });
-                map.addLayer({
-                  'id': 'symbols',
-                  'type': 'symbol',
-                  'source': 'points',
-                  'layout': {
-                      'icon-image': 'custom-marker'
-                  }
-              });
-          }
-      );
-                 map.on('mouseenter', 'symbols', () => {
-            map.getCanvas().style.cursor = 'pointer';
-        });
-
-        // Change it back to a pointer when it leaves.
-        map.on('mouseleave', 'symbols', () => {
-            map.getCanvas().style.cursor = '';
-        });
-    }); 
-    map.on('mouseenter', 'symbols', () => {
-      map.getCanvas().style.cursor = 'pointer';
-  });
-
-  // Change it back to a pointer when it leaves.
-  map.on('mouseleave', 'symbols', () => {
-      map.getCanvas().style.cursor = '';
-  });
-;
-            
-        ;
+            }
+        );
 
     map.addSource('openmaptiles', {
         url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${MAPTILER_KEY}`,
@@ -282,16 +249,4 @@
           },
           labelLayerId
       );
-  ;
-  goTo.onclick = function () {
-    if (toggleGoTo) {
-      this.setAttribute("title", "Go to Canada");
-      document.getElementById("go-to-icon").setAttribute("d", icons.worldIcon);
-  function flyTo(map, lng, lat, zoom = 15, pitch = 50) {
-    map.flyTo({
-      center: [lng, lat],
-      zoom: zoom,
-      pitch: pitch,
-      duration: 2000,
-    });
-  }}}
+  });
