@@ -6,31 +6,71 @@
 
 body,
 html {
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+    body {
+        
+        margin: 0;
+        padding: 0;
+    }
+    
+    .info-section {
+        text-align: center; 
+        padding-top: 20px; 
+        background-color: #f0f0f0; 
+    }
+    
+    .info-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .info-list li {
+        font-size: 16px; 
+        margin-bottom: 15px; 
+        color: #333; 
+        
+    }
+    
 }
 
 ol,
 ul {
     list-style-type: disc;
-    margin-left: 2.5rem;
+    margin-left: 1.5rem;
+    margin-right: 2.5rem;
     font-size: large;
 }
 
-
-h1 {
-    color: red;
+.heading-box {
+    text-align: center; 
+    padding: 20px;
+    margin: 40px; 
+    background-color: #ffffffdc; 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(237, 150, 29, 0.763); 
+    transition: box-shadow 0.3s ease; 
 }
 
-.about {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+.heading-box h1 {
+    color: rgb(203, 99, 2);
+    margin: 0; 
+
+        text-align: center; 
+        padding: 20px; 
+        margin: 20px auto;
+        border: 2px solid rgb(203, 99, 2); 
+        border-radius: 10px; 
+        display: inline-block; 
+    }
+    
+    .heading-box h1 {
+        color: rgb(203, 99, 2);
+        margin: 0; 
+    }
+
+
+.heading-box:hover {
+    box-shadow: 0 0 25px rgba(239, 215, 215, 0.972), 0 0 30px
+
 }
 
 .assignment2 {
@@ -67,7 +107,7 @@ h1 {
 }
 
 .about {
-    background-color: #f1f1f1;
+    background-color: #490fb6;
     width: 70%;
     border-radius: 1rem;
     display: flex;
@@ -105,7 +145,7 @@ h1 {
     padding: 0.3rem;
     pointer-events: all;
     cursor: pointer;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +154,7 @@ h1 {
 
 .viewer {
     right: 0;
-    /* outline: 1px solid black; */
+  
     border-radius: 1rem;
     width: 100%;
     height: 45%;
@@ -124,8 +164,8 @@ h1 {
 .dot {
     height: 15px;
     width: 15px;
-    background-color: red;
-    outline: 3px solid yellow;
+    background-color: rgb(204, 42, 9);
+    outline: 3px solid rgb(249, 212, 48);
     border-radius: 50%;
     z-index: 99;
 }
@@ -200,3 +240,40 @@ button:active {
 h1 {
     text-align: center;
   }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('123.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.circular-image {
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
+    object-fit: cover; 
+}
+
+#exploreButton {
+    padding: 10px 20px;
+    background-color: #dda413; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+}
+
+#exploreButton:hover {
+    background-color: #f1a605; 
+}

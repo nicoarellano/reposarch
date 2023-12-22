@@ -6,23 +6,35 @@
     <title>Final exercise</title>
     <link rel="stylesheet" href="./style.css" />
 
+    <button id="exploreButton">Explore</button>
+
   </head>
   <body>
-    <h1>Batool Hayajneh (Final Assignment Examples)</h1>
+    <div class="heading-box">
+      <h1>Batool Hayajneh</h1>
+
       <section class="main-container">
         <div class="final">
-          <ul>
-            <li>Architect from Universidad Catolica of Chile</li>
-            <li>Research team lead at Carleton Immersive Media Studio (CIMS)</li>
-            <li>PhD candidate at Carleton University</li>
-            <li>Amateur programmer</li>
-          </ul>
+          <img src="./batool.jpg" alt="ALBatool Hayajneh" class="circular-image" id="profileImage" />
+
+
           <br />
           <div>
-            <a href="https://reposarch.vercel.app/"><button id:"three-button">Reposarch</button></a>
-            <a href="https://github.com/nicoarellano/reposarch"><button id:"three-button">GitHub</button></a>
+            
+            <a href="https://github.com/batoolhayajneh/Humanity-and-culture"><button id:"three-button">Humanity&Culture</button></a>
+            <a href="https://github.com/batoolhayajneh"><button id:"three-button">My GitHub</button></a>
           </div>
-          <img src="./avatar.jpg" alt="ALBatool Hayajneh" height="300" /> 
+          <ul>
+            <section class="info-section">
+              <ul class="info-list">
+                  <li>Jordanian Canadian Architect</li>
+                  <li>Painting, Traveling, and Cooking</li>
+                  <li>A mother of a joyful 18-month-old 'Ameer' and a newborn 'Hana'</li>
+                  <li>Islamic Architecture and Culture Science</li>
+              </ul>
+          </section>
+          
+
         </div>
         <div id="viewers">
           <div>
@@ -37,7 +49,7 @@
       <script src="./main.js"></script>
 
 
-<!-- Three js Modules -->
+
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
@@ -45,9 +57,16 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 
-
 <canvas class="viewer" id="three-canvas"></canvas>
 
   <script type="module" src="./final/main.js"></script>
+
+  <script>
+    document.getElementById('exploreButton').addEventListener('click', function() {
+        window.location.href = 'https://brightspace.carleton.ca/d2l/home/207080';
+    });
+</script>
+
+
   </body>
 </html>

@@ -55,21 +55,21 @@ const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
-// gltfLoader.load(
-//   "",
-//   function (gltf) {
-//     mesh = gltf.scene;
-//     mesh.scale.x = 3;
-//     mesh.scale.y = 3;
-//     mesh.scale.z = 3;
+gltfLoader.load(
+  "phoenix_bird.glb",
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 3;
+    mesh.scale.y = 3;
+    mesh.scale.z = 3;
 
-//     scene.add(mesh);
-//   },
-//   undefined,
-//   function (error) {
-//     console.error(error);
-//   }
-// );
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
 
 const fontLoader = new THREE.FontLoader();
 
