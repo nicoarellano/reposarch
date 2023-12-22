@@ -45,7 +45,7 @@ function init() {
   scene.add(Torus);
 
   const gltfLoader = new THREE.GLTFLoader();
-  const mesh = "models/Figure2.glb";
+  const mesh = "./three/models/Figure2.glb";
   gltfLoader.load(mesh, (gltf) => {
     const root = gltf.scene;
     root.scale.x = 10;
@@ -54,7 +54,7 @@ function init() {
     scene.add(root);
   });
 
-  const mesh2 = "models/Donut1.glb";
+  const mesh2 = "./three/models/Donut1.glb";
   gltfLoader.load(mesh2, (gltf) => {
     const root2 = gltf.scene;
     root2.scale.x = 25;
@@ -63,13 +63,13 @@ function init() {
     scene.add(root2);
   });
 
-  const mesh3 = "models/mini mel bl.glb";
+  const mesh3 = "./three/models/mini mel bl.glb";
   gltfLoader.load(mesh3, (gltf) => {
     const root = gltf.scene;
     root.scale.x = 8;
     root.scale.y = 8;
     root.scale.z = 8;
-    root.position.set (50,65,50);
+    root.position.set(50, 65, 50);
     scene.add(root);
   });
 
@@ -89,7 +89,7 @@ function init() {
 
   //background
   loader = new THREE.TextureLoader();
-  const texture = loader.load("../images/library.jpg", () => {
+  const texture = loader.load("./images/library.jpg", () => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     texture.colorSpace = THREE.SRGBColorSpace;
     scene.background = texture;
@@ -106,7 +106,7 @@ function init() {
   scene.add(ground);
 
   const textureLoader = new THREE.TextureLoader();
-  textureLoader.load("textures/Concrete.png", function (map) {
+  textureLoader.load("./three/textures/Concrete.png", function (map) {
     map.wrapS = THREE.RepeatWrapping;
     map.wrapT = THREE.RepeatWrapping;
     map.anisotropy = 32;
@@ -123,7 +123,7 @@ function init() {
     const textValue = text;
     const textSize = size;
     fontLoader.load(
-      "./fonts/helvetiker_regular.typeface.json",
+      "./three/fonts/helvetiker_regular.typeface.json",
       function (font) {
         const textGeo = new THREE.TextGeometry(textValue, {
           font: font,
