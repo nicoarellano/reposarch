@@ -1,4 +1,3 @@
-import * as THREE from 'three';
 const scene = new THREE.Scene();
 
 const size = {
@@ -9,7 +8,7 @@ const size = {
 const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
-
+//Sets up the renderer, fetching the canvas of the HTML
 const threeCanvas = document.getElementById("three-canvas");
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
@@ -21,7 +20,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const threeContainer = document.getElementById("three-container");
 threeContainer.appendChild(renderer.domElement);
 
-
+//Creates grids and axes in the scene
 const grid = new THREE.GridHelper(10, 10);
 scene.add(grid);
 
@@ -114,13 +113,14 @@ camera.position.z = 8;
 camera.position.x = 2;
 camera.position.y = 8;
 
-
+// scene.position.x = -5;
+// scene.position.z = 5;
 scene.position.y = -3;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-
+//Creates the lights of the scene
 const lightColor = 0xffffff;
 
 const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
@@ -164,7 +164,7 @@ fullScreenButton.addEventListener("click", () => {
   console.log(fullScreen ? "FULL SCREEN!!" : "little screen");
 });
 
-
+//Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
   resize();
 });
@@ -176,27 +176,3 @@ const resize = () => {
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 };
-
-
-
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-const flyControls = new THREE.FlyControls(camera, renderer.domElement);
-flyControls.movementSpeed = 10;
-flyControls.domElement = renderer.domElement;
-flyControls.rollSpeed = Math.PI / 24;
-flyControls.autoForward = false;
-flyControls.dragToLook = true;
-
-
-const exporter = new THREE.EXRExporter();
-
-function exportEXR() {
-    const renderTarget = new THREE.WebGLRenderTarget(window.innerWidth, window.innerHeight);
-    renderer.setRenderTarget(renderTarget);
-    renderer.render(scene, camera);
-    
-    const exrData = exporter.parse(renderTarget.texture);
