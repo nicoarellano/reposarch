@@ -1,10 +1,10 @@
 import { stadiums } from "./stadium-list.js";
 
 const map = (window.map = new maplibregl.Map({
-  container: "map",
-  style: "/map-styles/satellite.json",
-  center: [-98.74, 56.415], // starting position [lng, lat]
-  zoom: 3, // starting zoom
+  container: 'map',
+  style:'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+  center: [-98.74, 50.415],
+  zoom: 4,
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
   maxPitch: 70,
   minZoom: 3,
