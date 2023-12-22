@@ -1,100 +1,142 @@
 <style> 
 
+header{}
 h1{
-  color: rgb(13, 60, 23);
-  font-size: 40px;
-  margin: 3em;
-}
-body {
-  background-image: url('background.jpg');
-  margin-left: 20em:
-
-}
-section{
-  text-align: center;
-  height: fit-content;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-}
-.btn {
- width: 6.5em;
- height: 2.3em;
- margin: 42em;
- background: rgb(63, 83, 12);
- color: white;
- border: none;
- border-radius: 0.625em;
- font-size: 20px;
- font-weight: bold;
- cursor: pointer;
- position: relative;
- z-index: 1;
- overflow: hidden;
-}
-
-button:hover {
- color: rgb(12, 83, 12);
-}
-
-button:after {
- content: "";
- background: white;
- position: absolute;
- z-index: -1;
- left: -20%;
- right: -20%;
- top: 0;
- bottom: 0;
- transform: skewX(-45deg) scale(0, 1);
- transition: all 0.5s;
-}
-
-button:hover:after {
- transform: skewX(-45deg) scale(1, 1);
- -webkit-transition: all 0.5s;
- transition: all 0.5s;
-}
-.card {
-    width: 310px;
-    height: 254px;
-    border-radius: 4px;
-    background: rgba(235, 231, 225, 0.114);
-    display: flex;
-    gap: 5px;
-    padding: .4em;
-    margin-left: 37.5em;
-    align-items: center;
-  }
-  
-  .card p {
-    height: 100%;
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all .5s;
-    background: #8faf87dd;
-    border: 1px solid #ff5a91;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .card p:hover {
-    flex: 4;
-  }
-  
-  .card p span {
-    min-width: 14em;
-    padding: .5em;
+    color: rgb(68, 68, 68);
+    font-size: 90px;
     text-align: center;
-    transform: rotate(-90deg);
-    transition: all .5s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   background-color: rgba(249, 249, 249, 0.516);
+}
+Body{
+    background-image: url('./assets/background.jpg');
+}
+.container{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.item map{
+    flex-grow: 1;
+}
+.viewer{
+    width:50rem;
+    height: 30rem;
+    margin-top: 3REM;
+}
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 3rem;
+   }
+   
+   button.learn-more {
+    width: 15rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: rgb(68, 68, 68);
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: rgb(68, 68, 68);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
     text-transform: uppercase;
-    color: #102b07d8;
-    letter-spacing: .1em;
-  }
-  
-  .card p:hover span {
-    transform: rotate(0);
-  }
-            </style>
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+.maplibregl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}            
+
+@keyframes Slideinleft {
+    from{
+        transform:translateX(-1500px)
+        translateY(-200px)
+        scale(.7);
+
+    }
+    to{
+        transform: translateX(0px)
+        translateY(0px)
+        scale(1);
+    }
+}
+
+.bird{
+    animation-name: Slideinleft;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}

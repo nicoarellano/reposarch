@@ -55,7 +55,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "../three/models/LastMesh.glb",
+  "../three/models/Blender Model (1).gltf",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 5;

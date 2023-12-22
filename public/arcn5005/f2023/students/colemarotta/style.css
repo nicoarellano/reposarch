@@ -1,0 +1,285 @@
+#fullscreen
+{width: 20px;
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* You can specify your preferred font-family */
+    /* Other styling properties */
+}
+iframe{
+    height: 350px;
+    width: 700px;
+    
+}
+  
+  li {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  h1 {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 40px;
+  }
+  
+  img {
+    padding-right: 30px;
+  }
+  /* Corrected styles for p1 */
+  p {
+    padding-left: 30px;
+    padding-top: -10px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* CSS */
+  .button-27 {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 10px;;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 125px;
+    will-change: transform;
+  }
+  
+  .button-27:disabled {
+    pointer-events: none;
+  }
+  
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+          body { margin: 0; padding: 0; }
+          html, body, #map { height: 95%; }
+          h1 {color: rgb(0, 0, 0);
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+      padding-left: 30px;}
+      p1 {
+         
+          padding-top: -10px;
+          color: grey;
+      font-family: Arial, Helvetica, sans-serif;
+      p {
+          color: grey;   
+      }
+    }
+  
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin:40px;
+  
+  
+    }
+    button{
+      border: none;
+      cursor: pointer;
+      appearance: none;
+      background-color: inherit;
+       transition: transform .7s ease-in-out;
+  
+    }
+    button:hover{
+      transform: rotate(360deg);
+  
+    }
+
+    input[type="email"]{
+      padding:10px;
+      border:2px solid #314de4;
+      outline :none;
+      border-radius:5px;
+      font-size:24px;
+      color:#314de4;
+    }
+    .text{
+      font-size:60px;
+      color:#314de4;
+      font-family:Arial;
+    }
+  
+  #divfix {
+    position: fixed; 
+    bottom: 5px; 
+    left: 5px; 
+    width: 30%; 
+    padding: 10px; /* Add padding for spacing */
+  
+  }
+  
+  .image-button {
+    border: none;
+    padding: 0;
+    background: none;
+  }
+  
+  .image-button img {
+    width: 50px;
+    height: auto;
+    display: block;
+    outline: none;
+  }
+  
+  .card {
+    width: 10rem;
+    height: 15rem;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    border: var(--primary-dark) 0.2rem solid;
+    transition: all 0.15s ease-in;
+    box-shadow: var(--shadow);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card:hover {
+    color: var(--primary-dark);
+    transform: translateY(-0.5rem);
+    fill: var(--secondary-color);
+    transition: all 0.2s ease 0s;
+  }
+  
+  .card svg {
+    fill: var(--secondary-color);
+    width: 4rem;
+    height: 4rem;
+  
+  }
+  
+  .card:hover svg {
+    fill: var(--primary-dark);
+    width: 4.2rem;
+    height: 4.2rem;
+    transition: all 0.2s ease 0s;
+  }
+  
+  .toolbar {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .toolbar a {
+    margin: 0.5rem;
+  }
+  
+  .button {
+    z-index: 1;
+    padding: 0.7rem;
+    margin: 0.3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    align-items: center;
+    width: fit-content;
+  }
+  
+  .circular {
+    color: var(--primary-dark);
+    background: var(--primary-color-transp1);
+    backdrop-filter: var(--blur-filter);
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    pointer-events: all;
+  }
+  
+  .circular:hover {
+    box-shadow: var(--shadow);
+    background: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-7px);
+  }
+  
+  .circular:active {
+    transform: translateY(-1px);
+  }
+  
+  .circular svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--secondary-color);
+  }
+  
+  .circular:hover>svg {
+    width: 1.9rem;
+    height: 1.9rem;
+    fill: var(--primary-dark);
+  }
+  
+  .simple-card-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+  }
+  
+  
+  body { margin: 0; padding: 0; }
+  html, body, #map { height: 95%; }
+  h1 {color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  padding-left: 30px;}
+  p1 {
+  padding-left: 30px;
+  padding-top: -10px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  p {
+  color: grey;   
+  }
+  }
+  

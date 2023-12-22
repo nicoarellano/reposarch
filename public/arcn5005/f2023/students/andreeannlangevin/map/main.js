@@ -251,10 +251,6 @@
             popup.remove();
         });
     
-    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    
-    
- 
 
     // implementation of StyleImageInterface to draw a pulsing dot icon on the map
     // Search for StyleImageInterface in https://maplibre.org/maplibre-gl-js/docs/API/
@@ -345,19 +341,4 @@
             }
         ]);
         
-            map.setLayoutProperty('label_country', 'text-field', [
-                'format',
-                ['get', 'name_en'],
-                {'font-scale': 1.2},
-                '\n',
-                {},
-                ['get', 'name'],
-                {
-                    'font-scale': 0.8,
-                    'text-font': [
-                        'literal',
-                        ['DIN Offc Pro Italic', 'Arial Unicode MS Regular']
-                    ]
-                }
-            ]);
         })

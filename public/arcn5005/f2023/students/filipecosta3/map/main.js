@@ -1041,7 +1041,7 @@ map.on('click', 'Pokespot', (e) => {
       new maplibregl.Popup()
           .setLngLat(coordinates)
           .setHTML(`
-              <h3>${Pokespot.properties.Name} <img src="./Pokemon Sprites/Pokeball.png" alt="OHome Image" style="width:100%; max-width:30px; height:auto;"></h3>
+              <h3>${Pokespot.properties.Name} <img src="./Pokemon Sprites/Pokeball.png" style="width:100%; max-width:30px; height:auto;"></h3>
               <p>Type: ${Pokespot.properties.Type}</p>
               <p>Location: ${Pokespot.properties.Location}</p>
               `)
@@ -1065,7 +1065,7 @@ map.on('click', 'Gym', (e) => {
       new maplibregl.Popup()
           .setLngLat(coordinates)
           .setHTML(`
-              <h3>${Gym.properties.Name} <img src="./Pokemon Sprites/Greatball.png" alt="OHome Image" style="width:100%; max-width:30px; height:auto;"></h3>
+              <h3>${Gym.properties.Name} <img src="./Pokemon Sprites/Greatball.png" style="width:100%; max-width:30px; height:auto;"></h3>
               <p>Type: ${Gym.properties.Type}</p>
               <p>PrimaryTeam: ${Gym.properties.PrimaryTeam}</p>
               <p>Location: ${Gym.properties.Location}</p>
