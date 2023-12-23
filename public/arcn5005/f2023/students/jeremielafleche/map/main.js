@@ -1,389 +1,200 @@
-const MAPTILER_KEY = 'yyLFvKmMAkOmBAVbj4mk';
 const map = new maplibregl.Map({
-    style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_KEY}`,
-    center: [12.490034032328268, 41.894390281115285],
-    zoom: 15.3,
-    pitch: 45,
-    bearing: -17.6,
     container: 'map',
+    style: 'https://api.maptiler.com/maps/basic/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+    zoom: 15,
+    center: [12.492187981731984, 41.890329973316234],
+    pitch: 60,
     antialias: true
 });
 
-  // The 'building' layer in the streets vector source contains building-height
-  // data from OpenStreetMap.
-  map.on('load', () => {
-      // Insert the layer beneath any symbol layer.
-      const layers = map.getStyle().layers;
+// Function to load models
+function loadModel(modelPath) {
+    const loader = new THREE.GLTFLoader();
+    loader.load(modelPath, (gltf) => {
+        customLayer.scene.add(gltf.scene);
+    });
+}
 
-      let labelLayerId;
-      for (let i = 0; i < layers.length; i++) {
-          if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
-              labelLayerId = layers[i].id;
-              break;
-          }
-      }
+// Load multiple models
+loadModel('./models/JerMesh1.glb');
+loadModel('./models/colosseum.glb');
 
-      map.addSource('openmaptiles', {
-          url: `https://api.maptiler.com/tiles/v3/tiles.json?key=${MAPTILER_KEY}`,
-          type: 'vector',
-      });
+const modelOrigin = [12.492587981731984, 41.890329973316234];
+const modelAltitude = 0;
+const modelRotate = [Math.PI / 2, 6, 0];
 
-      map.addLayer(
-          {
-              'id': '3d-buildings',
-              'source': 'openmaptiles',
-              'source-layer': 'building',
-              'type': 'fill-extrusion',
-              'minzoom': 15,
-              'paint': {
-                  'fill-extrusion-color': [
-                      'interpolate',
-                      ['linear'],
-                      ['get', 'render_height'], 0, 'lightgray', 200, 'royalblue', 400, 'lightblue'
-                  ],
-                  'fill-extrusion-height': [
-                      'interpolate',
-                      ['linear'],
-                      ['zoom'],
-                      15,
-                      0,
-                      16,
-                      ['get', 'render_height']
-                  ],
-                  'fill-extrusion-base': ['case',
-                      ['>=', ['get', 'zoom'], 16],
-                      ['get', 'render_min_height'], 0
-                  ]
-              }
-          },
-          labelLayerId
-      );
-  });
+const modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
+    modelOrigin,
+    modelAltitude
+);
 
+const modelTransform = {
+    translateX: modelAsMercatorCoordinate.x,
+    translateY: modelAsMercatorCoordinate.y,
+    translateZ: modelAsMercatorCoordinate.z,
+    rotateX: modelRotate[0],
+    rotateY: modelRotate[1],
+    rotateZ: modelRotate[2],
+    scale: modelAsMercatorCoordinate.meterInMercatorCoordinateUnits() *12
+};
 
-  
-//Roman Forum Layer
-map.on('load', () => {
-    // Roman Forum Marker
-    map.loadImage(
-        'Images/Roman Forum.png',
-        (error, image) => {
-            if (error) throw error;
-            map.addImage('roman forum-marker', image);
-        
-            //Adding Roman Forum
-            map.addSource('Roman Forum', {
-                'type': 'geojson',
-                'data': {
-                    "type": "FeatureCollection",
-                    "features": [
-                   {
-                     "type": "Feature",
-                     "geometry": {
-                        "type": "Point",
-                        "coordinates":  [ 12.4853,41.8925 ]
-                     },
-                     "properties": {
-                    "Name": "Roman Forum" 
-                     }
-                   }
-                 ]
-                 }
-            });
-          
-            // Add a symbol layer for Roman Forum
-            map.addLayer({
-                'id': 'Roman Forum',
-                'type': 'symbol',
-                'source': 'Roman Forum',
-                'layout': {
-                    'icon-image': 'roman forum-marker',
-                    'icon-size': 0.2
-                }
-            });
-        }
-    )
-  });
+const customLayer = {
+    id: '3d-models',
+    type: 'custom',
+    renderingMode: '3d',
+    onAdd(map, gl) {
+        this.camera = new THREE.Camera();
+        this.scene = new THREE.Scene();
 
- //Colosseum Layer
-map.on('load', () => {
-    // Colosseum Marker
-    map.loadImage(
-        'Images/Colosseum.png',
-        (error, image) => {
-            if (error) throw error;
-            map.addImage('Colosseum-marker', image);
-        
-            //Adding Colosseum
-            map.addSource('Colosseum', {
-                'type': 'geojson',
-                'data': {
-                    "type": "FeatureCollection",
-                    "features": [
-                   {
-                     "type": "Feature",
-                     "geometry": {
-                        "type": "Point",
-                        "coordinates":  [ 12.4922,41.8902 ]
-                     },
-                     "properties": {
-                    "Name": "Colosseum" 
-                     }
-                   }
-                 ]
-                 }
-            });
-          
-            // Add a symbol layer for Colosseum
-            map.addLayer({
-                'id': 'Colosseum',
-                'type': 'symbol',
-                'source': 'Colosseum',
-                'layout': {
-                    'icon-image': 'Colosseum-marker',
-                    'icon-size': 0.25
-                }
-            });
-        }
-    )
-  });
+        const directionalLight = new THREE.DirectionalLight(0xE1C16E);
+        directionalLight.position.set(100, 100, 100).normalize();
+        this.scene.add(directionalLight);
 
- //Spanish Steps Layer
- map.on('load', () => {
-    // Spanish Steps Marker
-    map.loadImage(
-        'Images/Spanish Steps.png',
-        (error, image) => {
-            if (error) throw error;
-            map.addImage('Spanish Steps-marker', image);
-        
-            //Adding Spanish Steps
-            map.addSource('Spanish Steps', {
-                'type': 'geojson',
-                'data': {
-                    "type": "FeatureCollection",
-                    "features": [
-                   {
-                     "type": "Feature",
-                     "geometry": {
-                        "type": "Point",
-                        "coordinates":  [ 12.4828,41.9060 ]
-                     },
-                     "properties": {
-                    "Name": "Spanish Steps" 
-                     }
-                   }
-                 ]
-                 }
-            });
-          
-            // Add a symbol layer for Spanish Steps
-            map.addLayer({
-                'id': 'Spanish Steps',
-                'type': 'symbol',
-                'source': 'Spanish Steps',
-                'layout': {
-                    'icon-image': 'Spanish Steps-marker',
-                    'icon-size': 0.2
-                }
-            });
-        }
-    )
-  });
+        const directionalLight2 = new THREE.DirectionalLight(0xE1C16E);
+        directionalLight2.position.set(100, 100, 100).normalize();
+        this.scene.add(directionalLight2);
 
-   //Trevi Fountain Layer
- map.on('load', () => {
-    // Trevi Fountain Marker
-    map.loadImage(
-        'Images/Trevi Fountain.png',
-        (error, image) => {
-            if (error) throw error;
-            map.addImage('Trevi Fountain-marker', image);
-        
-            //Adding Spanish Steps
-            map.addSource('Trevi Fountain', {
-                'type': 'geojson',
-                'data': {
-                    "type": "FeatureCollection",
-                    "features": [
-                   {
-                     "type": "Feature",
-                     "geometry": {
-                        "type": "Point",
-                        "coordinates":  [ 12.4833,41.9009 ]
-                     },
-                     "properties": {
-                    "Name": "Trevi Fountain" 
-                     }
-                   }
-                 ]
-                 }
-            });
-          
-            // Add a symbol layer for Trevi Fountain
-            map.addLayer({
-                'id': 'Trevi Fountain',
-                'type': 'symbol',
-                'source': 'Trevi Fountain',
-                'layout': {
-                    'icon-image': 'Trevi Fountain-marker',
-                    'icon-size': 0.2
-                }
-            });
-        }
-    )
-  });
+        this.renderer = new THREE.WebGLRenderer({
+            canvas: map.getCanvas(),
+            context: gl,
+            antialias: true
+        });
 
-   //Arch of Constantine Layer
- map.on('load', () => {
-    // Arch of Constantine Marker
-    map.loadImage(
-        'Images/Arch of Constantine.png',
-        (error, image) => {
-            if (error) throw error;
-            map.addImage('Arch of Constantine-marker', image);
-        
-            //Adding Arch of Constantine
-            map.addSource('Arch of Constantine', {
-                'type': 'geojson',
-                'data': {
-                    "type": "FeatureCollection",
-                    "features": [
-                   {
-                     "type": "Feature",
-                     "geometry": {
-                        "type": "Point",
-                        "coordinates":  [ 12.4907,41.8898 ]
-                     },
-                     "properties": {
-                    "Name": "Arch of Constantine" 
-                     }
-                   }
-                 ]
-                 }
-            });
-          
-            // Add a symbol layer for Spanish Steps
-            map.addLayer({
-                'id': 'Arch of Constantine',
-                'type': 'symbol',
-                'source': 'Arch of Constantine',
-                'layout': {
-                    'icon-image': 'Arch of Constantine-marker',
-                    'icon-size': 0.1
-                }
-            });
-        }
-    )
-  });
+        this.renderer.autoClear = false;
+    },
+    render(gl, matrix) {
+        const rotationX = new THREE.Matrix4().makeRotationAxis(
+            new THREE.Vector3(1, 0, 0),
+            modelTransform.rotateX
+        );
+        const rotationY = new THREE.Matrix4().makeRotationAxis(
+            new THREE.Vector3(0, 1, 0),
+            modelTransform.rotateY
+        );
+        const rotationZ = new THREE.Matrix4().makeRotationAxis(
+            new THREE.Vector3(0, 0, 1),
+            modelTransform.rotateZ
+        );
 
-//Roman Forum Popups
-map.on('click', 'Roman Forum', (e) => {
-    const coordinates = e.features[0].geometry.coordinates.slice();
-    const bookstore = e.features[0];
+        const m = new THREE.Matrix4().fromArray(matrix);
+        const l = new THREE.Matrix4()
+            .makeTranslation(
+                modelTransform.translateX,
+                modelTransform.translateY,
+                modelTransform.translateZ
+            )
+            .scale(
+                new THREE.Vector3(
+                    modelTransform.scale,
+                    -modelTransform.scale,
+                    modelTransform.scale
+                )
+            )
+            .multiply(rotationX)
+            .multiply(rotationY)
+            .multiply(rotationZ);
 
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) 
-      {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
+        this.camera.projectionMatrix = m.multiply(l);
+        this.renderer.resetState();
+        this.renderer.render(this.scene, this.camera);
+        map.triggerRepaint();
+    }
+};
 
-        new maplibregl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(`
-            <h3>${bookstore.properties.Name}</h3>
-            <img src="Images/Roman Forum.JPG" alt="Home Image" style="width:100%; max-width:300px; height:auto;">
-                `)
-            .addTo(map);
+// Add custom layer when the map style is loaded
+    map.on('style.load', () => {
+        map.addLayer(customLayer);
     });
 
-//Colosseum Popups
-map.on('click', 'Colosseum', (e) => {
-    const coordinates = e.features[0].geometry.coordinates.slice();
-    const bookstore = e.features[0];
+    // Function to add a point of interest
+    function addPointOfInterest(name, image, coordinates, iconSize) {
+        map.loadImage(image, (error, img) => {
+            if (error) throw error;
 
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) 
-      {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
+            map.addImage(`${name}-marker`, img);
 
-        new maplibregl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(`
-            <h3>${bookstore.properties.Name}</h3>
-            <img src="Images/Colosseum.JPG" alt="Home Image" style="width:100%; max-width:300px; height:auto;">
-                `)
-            .addTo(map);
+            map.addSource(name, {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': coordinates
+                            },
+                            'properties': {
+                                'Name': name
+                            }
+                        }
+                    ]
+                }
+            });
+
+            map.addLayer({
+                'id': name,
+                'type': 'symbol',
+                'source': name,
+                'layout': {
+                    'icon-image': `${name}-marker`,
+                    'icon-size': iconSize
+                }
+            });
+
+            // Popups
+            map.on('click', name, (e) => {
+                const coords = e.features[0].geometry.coordinates.slice();
+
+                // Ensure the popup appears over the correct feature
+                while (Math.abs(e.lngLat.lng - coords[0]) > 180) {
+                    coords[0] += e.lngLat.lng > coords[0] ? 360 : -360;
+                }
+
+                new maplibregl.Popup()
+                    .setLngLat(coords)
+                    .setHTML(`
+                        <h3>${name}</h3>
+                        <img src="Images/${name}.JPG" alt="${name} Image" style="width:100%; max-width:300px; height:auto;">
+                    `)
+                    .addTo(map);
+            });
+        });
+    }
+
+    // Define points of interest
+    const pointsOfInterest = [
+        { name: 'Roman Forum', image: 'Images/Roman Forum.png', coordinates: [12.4853, 41.8925], iconSize: 0.2 },
+        { name: 'Spanish Steps', image: 'Images/Spanish Steps.png', coordinates: [12.4828, 41.9060], iconSize: 0.2 },
+        { name: 'Trevi Fountain', image: 'Images/Trevi Fountain.png', coordinates: [12.4833, 41.9009], iconSize: 0.2 },
+        { name: 'Arch of Constantine', image: 'Images/Arch of Constantine.png', coordinates: [12.4907, 41.8898], iconSize: 0.1 }
+        // Add more points of interest as needed
+    ];
+
+    // Add points of interest
+    pointsOfInterest.forEach(point => {
+        addPointOfInterest(point.name, point.image, point.coordinates, point.iconSize);
     });
 
-//Spanish Steps Popups
-map.on('click', 'Spanish Steps', (e) => {
-    const coordinates = e.features[0].geometry.coordinates.slice();
-    const bookstore = e.features[0];
+    const fullScreenButton = document.getElementById("full-screen");
 
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) 
-      {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
+let fullScreen = false;
 
-        new maplibregl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(`
-            <h3>${bookstore.properties.Name}</h3>
-            <img src="Images/Spanish Steps.JPG" alt="Home Image" style="width:100%; max-width:300px; height:auto;">
-                `)
-            .addTo(map);
-    });
-    
-//Trevi Fountain Popups
-map.on('click', 'Trevi Fountain', (e) => {
-    const coordinates = e.features[0].geometry.coordinates.slice();
-    const bookstore = e.features[0];
+fullScreenButton.addEventListener("click", () => {
+  fullScreen = !fullScreen;
+  resize();
+  console.log(fullScreen ? "FULL SCREEN!!" : "little screen");
+});
 
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) 
-      {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
+//Adjust the viewport to the size of the browser
+window.addEventListener("resize", () => {
+  resize();
+});
 
-        new maplibregl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(`
-            <h3>${bookstore.properties.Name}</h3>
-            <img src="Images/Trevi Fountain.JPG" alt="Home Image" style="width:100%; max-width:300px; height:auto;">
-                `)
-            .addTo(map);
-    });
-
-//Arch of Constantine Popups
-map.on('click', 'Arch of Constantine', (e) => {
-    const coordinates = e.features[0].geometry.coordinates.slice();
-    const bookstore = e.features[0];
-
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
-    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) 
-      {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
-
-        new maplibregl.Popup()
-            .setLngLat(coordinates)
-            .setHTML(`
-            <h3>${bookstore.properties.Name}</h3>
-            <img src="Images/Arch of Constantine.JPG" alt="Home Image" style="width:100%; max-width:300px; height:auto;">
-                `)
-            .addTo(map);
-    });
-    
+const resize = () => {
+  size.width = window.innerWidth * (fullScreen ? 0.92 : 0.6);
+  size.height = window.innerHeight * (fullScreen ? 0.9 : 0.4);
+  camera.aspect = size.width / size.height;
+  camera.updateProjectionMatrix();
+  renderer.setSize(size.width, size.height);
+};
