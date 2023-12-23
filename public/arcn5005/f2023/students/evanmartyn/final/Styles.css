@@ -1,4 +1,4 @@
-*{background-color: rgb(255, 255, 255);}
+*{background-color: rgb(190, 190, 190);}
 h1{color: rgb(0, 17, 68);}
 h1{font: 6em Avenir;}
 h2{font: 2em Avenir;}
@@ -11,14 +11,18 @@ img{text-align: center;float: right;}
     font-weight: normal;
     font-style: normal;
   }
+  h2, h5 {
+    font-family: 'Avenir\ Regular.ttf', sans-serif; /* Replace 'Your Desired Font' with the actual font name you want to use */
+  }
+  
   button{ display: inline-block;
     border-radius: 1px;
-    background-color: #ffffff;
+    background-color: rgb(rgb(190, 190, 190));
     border: 2px;
     color: #000000;
     text-align: center;
     font-size: 17px;
-    padding: 16px;
+    padding: 30px;
     width: 130px;
     transition: all 0.5s;
     cursor: pointer;

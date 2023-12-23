@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="Styles.css" />
   <title>Final exercise</title>
   <meta property="og:description" content="Use extrusions to display buildings' height in 3D." />
-   <meta property="og:description" content="Use events and flyTo to center the map on a symbol." />
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
@@ -17,16 +16,57 @@
     h1 {
       color: rgb(15, 15, 15);
     }
-    body { margin: 5px; padding: 5px; }
-    html, body { height: 100%; }
-    h1 { color: rgb(15, 15, 15); }
-    #map-container { width: 50%; display: inline-block; vertical-align: top; }
-    #three-canvas { width: 50%; display: inline-block; vertical-align: top; }
+    #buttons-container button {
+      width: 250px; /* Set the desired width */
+      /* You can adjust the width value as needed */
+    }
+    .flex-container {
+      display: flex; /* This makes it a flex container */
+      justify-content: space-between; /* Adjust as needed: flex-start, center, flex-end, space-between, space-around */
+      align-items: row; /* Adjust as needed: flex-start, center, flex-end, stretch */
+      height: 200px; /* Set a fixed height for demonstration purposes */
+    }
+
+    .flex-item {
+      flex: 1;  /* This makes the items flexible and grow to fill the available space */
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 5px;
+    }
+    .flex-item { 
+      flex: 2;  /* This makes the items flexible and grow to fill the available space */
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 5px;
+    }
   </style>
 </head>
 <body>
+  <div id="buttons-container">
+    <!-- Add links to external resources -->
+    <a href="https://architecture.carleton.ca" target="_blank">
+      <button title="Project 2">
+        <span>ASAU</span>
+      </button>
+    </a>
+    <a href="https://github.com/nicoarellano/reposarch" target="_blank">
+      <button title="Project 3">
+        <span>Github</span>
+      </button>
+    </a>
+    <a href="https://big.dk" target="_blank">
+      <button title="Project 4">
+        <span>Big Architects</span>
+      </button>
+    </a>
+    <a href="https://www.zaha-hadid.com/archive/" target="_blank">
+      <button title="Final">
+        <span>Zaha Hadid Architects</span>
+      </button>
+    </a>
+  </div>
   <div class="assignment2">
-    <img src="./Portrait.jpeg" alt="evanmartyn" height="300" />
+    <img src="./Portrait.jpeg" alt="evanmartyn" height="150" />
   </div>
   <!-- Three js Modules -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
@@ -34,27 +74,14 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-  <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
   <script type="module" src="./mainmap.js"></script>
   <canvas id="three-canvas"></canvas>
   
-  <h2 style="padding: 10px;">ARCN 5005</h2>
-  <h3 style="padding: 10px;">Personal Website for projects</h3>  
-  <button title="Project 2">
-    <span>Project 2</span>
-  </button>
-  <button title="Project 3">
-    <span>Project 3</span>
-  </button>
-  <button title="Project 4">
-    <span>Project 4</span>
-  </button>
-  <button title="Final">
-    <span>Final</span>
-  </button> 
+  <h2 style="padding: 10px;",>Personal Work & Interests</h2>
+  <h5 style="padding: 10px;">This page shows my work from the term, my 3D model and my map showing all the places I have traveled explore the site and check out the some of my favourite architecture firms.</h5>
+  
   <script src="./mainmesh.js "></script>
    <div id="map"></div>
-    
-  
+    <script src="./main.js"></script>
 </body>
 </html>

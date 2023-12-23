@@ -82,4 +82,17 @@ Please let me know if you have further questions.",
       I know that I didn't have time to talk about assignment 3, but don't worry, I will rearrange the dates so we are able to submit everything. We will talk about that next class. \
       Have a great weekend and see you next Thursday.",
   },
+  {
+    title:
+      "I wanted to thank everybody not only for yesterday's great presentations but also for an excellent term.\
+      I am very happy about the results but also about meeting an amazing group of people.\
+      I hope the things that we discussed in class are useful for your personal projects and professional path.\
+      If at least one of you found it interesting and can use it beyond this term, I will be satisfied.\
+      Don't hesitate to contact me if you have questions in the future, I will be more than happy to assist you.\
+      Also, remember that CIMS is always looking for curious, passionate, and talented students like you, so please reach out, \
+      you can send your resume to me at narellano@cims.carleton.ca and professor Fai sfai@cims.carleton.ca.\
+      Happy holidays to everyone and have a restful break.\
+      Best,\
+      Nico",
+  },
 ];

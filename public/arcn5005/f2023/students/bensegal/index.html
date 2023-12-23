@@ -1,45 +1,69 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Assignment II</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben's About Page</title>
+    <link rel="icon" type="image/x-icon" href="Photos/Terminator.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
-
 <body>
-    <div class="assignment2">
-      
-        <img src="./Photos/IMG_4615.PNG" alt="Ben Segal" height="100" />
-        <a href="https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/f2023/students/bensegal" target="_blank" rel="noopener noreferrer">
-            <button id="three-button">GitHub</button>
-        </a>
 
-        <button onclick="redirectToAssignment1()">ASSIGNMENT 1</button>
-        <button>ASSIGNMENT 2</button>
-        <button>ASSIGNMENT 3</button>
-        <button>ASSIGNMENT 4</button>
+    <div class="header">
+        <h1>Reposarch</h1>
+        <h2>Ben Segal</h2>
     </div>
-    
-    
-</body>
 
-<script src="./main.js"></script>
+    <div class="centered-content">
+        <img src="Photos/IMG_4615.PNG" width="360" alt="Ben's Photo" class="rounded-image">
+    </div>
+
+    <header class="button-container" style="margin-top:20px; text-align: left;">
+            <a href="http://127.0.0.1:5502/public/arcn5005/f2023/students/bensegal/about/index.html" class="assignment-link"><button class="assignment-button">ABOUT ME</button></a>
+            <a href="http://127.0.0.1:5502/public/arcn5005/f2023/students/bensegal/three/index.html"class="assignment-link"><button class="assignment-button">THREE.JS</button></a>
+            <a href="http://127.0.0.1:5502/public/arcn5005/f2023/students/bensegal/map/index.html"class="assignment-link"><button class="assignment-button">MAP</button></a>
+            <a href="https://reposarch.vercel.app/"class="assignment-link"><button class="assignment-button">REPOSARCH</button></a>
+            <a href="https://benbsegal.github.io/Ben/"class="assignment-link"><button class="assignment-button">GITHUB</button></a>
+    </header>    
+
+    <section class="main-container">
+        <div class="final">
+          <ul>
+            <li>Toronto ON</li>
+            <li>Studying Masters of Architecture</li>
+            <li>Idol: Arnold Schwarzenegger</li>
+            <li>Love ice cream</li>
+          </ul>
+          <br />
+        </div>
+
+    <div class="centered-content" style="margin-top: 20px;">
+        <img src="https://media1.orlandoweekly.com/orlando/imager/via-movie-pilot/u/original/2330921/terminator-arnold-as-terminator-is-this-the-t-800-we-ll-see-in-terminator-5jpg" height="150px" alt="The G.O.A.T" style="border-radius: 15px;">
+    </div>
+
+    <div class="centered-content" style="margin-top:10px;">
+        <p class="body-paragraph">
+            "Hasta la vista baby" - Arnold Schwarzenegger
+        </p>
+    </div>
+
+    <div class="viewer-container">
+        <iframe class="viewer" src="./three/index.html" frameborder="0"></iframe>
+        <iframe class="viewers" src="./map/index.html" frameborder="0"></iframe>
+    </div>
+
+    <script src="./main.js"></script>
 <!-- Three js Modules -->
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+
 <script type="module" src="./main.js"></script>
 <canvas id="three-canvas"></canvas>
 
-<script>
-    function redirectToAssignment1() {
-        window.location.href = "http://127.0.0.1:5502/public/arcn5005/f2023/students/bensegal/about-A1.html";
-    }
-</script>
 
+</body>
 </html>
