@@ -26,54 +26,7 @@ axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
-// Load background texture
-const textureLoader = new THREE.TextureLoader();
-const backgroundImage = textureLoader.load("wall.jpg"); // Replace with the path to your background image
-
-// Create a plane geometry that covers the entire scene
-const backgroundGeometry = new THREE.PlaneGeometry(100, 100, 1, 1);
-const backgroundMaterial = new THREE.MeshBasicMaterial({
-  map: backgroundImage,
-  side: THREE.DoubleSide,
-});
-const backgroundMesh = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
-scene.add(backgroundMesh);
-
-let mesh;
-
 const loader = new THREE.GLTFLoader();
-
-loader.load(
-  "./models/Donut10.glb",
-  function (gltf) {
-    gltf.scene.scale.x = 3;
-    gltf.scene.scale.y = 3;
-    gltf.scene.scale.z = 3;
-
-    mesh = gltf.scene;
-    scene.add(gltf.scene);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
-
-loader.load(
-  "./models/Candy9.glb",
-  function (gltf) {
-    gltf.scene.scale.x = 3;
-    gltf.scene.scale.y = 3;
-    gltf.scene.scale.z = 3;
-
-    mesh = gltf.scene;
-    scene.add(gltf.scene);
-  },
-  undefined,
-  function (error) {
-    console.error(error);
-  }
-);
 
 camera.position.z = 7;
 camera.position.x = 4;
@@ -93,17 +46,30 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
+
 function animate() {
   requestAnimationFrame(animate);
-  if (mesh) {
-    mesh.rotation.x += 0.01;
-    mesh.rotation.y += 0.01;
-  }
+
+  if (mesh) mesh.rotation.y += 0.01;
+
+  yellowCube.rotation.x += 0.01;
+  yellowCube.rotation.y += 0.01;
+
+  blueCube.rotation.x += 0.02;
+  blueCube.rotation.y -= 0.01;
+
+  redCube.rotation.x -= 0.01;
+  redCube.rotation.y -= 0.02;
+
+  greenCube.rotation.x += 0.02;
+  greenCube.rotation.y -= 0.01;
+
   renderer.render(scene, camera);
 }
 
 animate();
 
+//Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
@@ -111,3 +77,45 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
+
+let mest
+let donutMesh, candyMesh, redbullMesh;
+
+loader.load(
+  "./models/Donut10.glb",
+  function (gltf) {
+    // ... (similar code)
+    donutMesh = gltf.scene;
+    scene.add(donutMesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
+
+loader.load(
+  "./models/Candy9.glb",
+  function (gltf) {
+    // ... (similar code)
+    candyMesh = gltf.scene;
+    scene.add(candyMesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
+
+loader.load(
+  "./models/dragonfruit.glb",
+  function (gltf) {
+    // ... (similar code)
+    redbullMesh = gltf.scene;
+    scene.add(redbullMesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);

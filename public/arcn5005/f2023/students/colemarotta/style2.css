@@ -1,0 +1,93 @@
+body { margin: 0; padding: 0; }
+html, body, #map { height: 100%; }
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin: 0; /* Add this line to remove default margin */
+}
+
+p {
+    color: grey;
+}
+#divfix {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.image-button {
+    margin: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+h3 {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-right: 30px;
+  }
+  
+  img {
+    padding-right: 40px;
+
+  }
+  /* Corrected styles for p1 */
+  p {
+    padding-left: 30px;
+    padding-top: -10px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;}
+
+
+  
+  .circular:hover {
+    box-shadow: var(--shadow);
+    background: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-7px);
+  }
+  
+  .circular:active {
+    transform: translateY(-1px);
+  }
+  
+  .circular svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--secondary-color);
+  }
+  
+  .circular:hover>svg {
+    width: 1.9rem;
+    height: 1.9rem;
+    fill: var(--primary-dark);
+  }
+  
+  .simple-card-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+  }
+  
+  
+  body { margin: 0; padding: 0; }
+  html, body, #map { height: 95%; }
+  h1 {color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  }
+
+  p1 {
+  padding-top: -10px;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  p {
+  color: grey;   
+  }
+  }
+  

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <script>
+        (function () {
+
+            var SkillsBar = function (bars) {
+                this.bars = document.querySelectorAll(bars);
+                if (this.bars.length > 0) {
+                    this.init();
+                }
+            };
+
+            SkillsBar.prototype = {
+                init: function () {
+                    var self = this;
+                    self.index = -1;
+                    self.timer = setTimeout(function () {
+                        self.action();
+                    }, 500);
+
+
+                },
+                select: function (n) {
+                    var self = this,
+                        bar = self.bars[n];
+
+                    if (bar) {
+                        var width = bar.parentNode.dataset.percent;
+
+                        bar.style.width = width;
+                        bar.parentNode.classList.add("complete");
+                    }
+                },
+                action: function () {
+                    var self = this;
+                    self.index++;
+                    if (self.index == self.bars.length) {
+                        clearTimeout(self.timer);
+                    } else {
+                        self.select(self.index);
+                    }
+
+                    setTimeout(function () {
+                        self.action();
+                    }, 1350);
+                }
+            };
+
+            window.SkillsBar = SkillsBar;
+
+        })();
+
+        (function () {
+            document.addEventListener("DOMContentLoaded", function () {
+                var skills = new SkillsBar(".skillbar-bar");
+            });
+        })();
+        
+    </script>
+    
+    <title>Keegan Metheringham</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        
+        <a href="https://keeganmetheringham.github.io/final2023/">deploy</a>
+        <a href="#contact">Contact me</a>
+        <a href="three/index3js.html">Three.js</a>
+        <a href="index.html">Map</a>
+        <a href="#projects">See my Drawings</a>
+        <a href="#About">About</a>
+        <a href="https://github.com/keeganmetheringham" target="_blank"><i class="fab fa-github"></i></a>
+    </nav>
+    <div class="grid-2">
+        <div class="section-1">
+            
+                <i class="<link type="image/png" sizes="16x16" rel="icon" href="icons8-set-square-16.png"></i>
+                <br>
+                <img class="myPic" src="photo4.jpg">
+                <h2>Keegan Metheringham</h2>
+                <p>Ottawa, Canada</p>
+                
+            </section>
+        </div>
+        <div class="section-2">
+            <div id="About">
+            <h2>About</h2>
+            <p>My name is Keegan Metheringham.
+                I was born on the banks of the Red Deer River some time in the Spring of 1773. 
+                I spent my early years working as a fur trader for the North West Company trapping mostly beavers and 
+                marmot.
+                But after suffering a bear attack in the Rocky Foothills, I was forced to give up trapping and trading. 
+                I next headed to the Pacific Coast with Alexander McKenzie. After traversing the Rockies we reached the Bella Coola river.
+                I went native and spent some time with with several different groups of Haida peoples. They showed 
+                me their ways and how abundant the natural resources were. They also showed me a deep respect for 
+                nature, which I had never seen before. 
+                After a few years of this, I ended up in a small coal town on the Eastern Coast of the largest Island.
+                I've been there ever since.
+                </p> 
+            
+
+                <audio controls loop autoplay>
+                        <source src="Oh Tengo Suerte.mp3"  type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
+                    <!-- Rest of your existing HTML code goes here -->
+
+                
+                    
+        
+            <div class="section-1">
+                <div id="projects">
+                <h1>My Drawings</h1>
+                <div class="slideshow-container">
+    
+                    <!-- The list of slides, as the list of captions, will be defined by JavaScript  -->
+                    <!-- 
+                             The div "slideSet" will allow to add the slides BEFORE the anchors "prev" and "next".
+                             This makes the anchors visible even during animation.
+                        -->
+                    <div class="slideSet">
+                        <!--
+                            <div class="mySlides fade">
+                                <div class="numbertext"></div>
+                                <img style="width:100%">
+                                <div class="text"></div>
+                            </div>
+                            -->
+                    </div>
+    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- The "<" character -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a> <!-- The ">" character -->
+    
+                </div>
+                <br>
+    
+                <div class="dots-container">
+                    <!-- The span elements for the dots will be dynanmically added to DOM by JavaScript -->
+                    <!-- The number of dots will depend on the number of slides -->
+                </div>
+            </div>
+
+            <br>
+
+            <div class="contact" id="contact">
+                <h2>Contact</h2>
+                <p>keegsdm@gmail.com</p>
+                <p>126 Forth Ave, Ottawa, ON</p>
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+
+     
+    <script src="slideshow.js"></script>
+</body>
+
+</html>
