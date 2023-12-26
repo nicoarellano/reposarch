@@ -46,23 +46,22 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
-
-function animate() {
+function animate(mesh) {
   requestAnimationFrame(animate);
 
-  if (mesh) mesh.rotation.y += 0.01;
+  // if (mesh) mesh.rotation.y += 0.01;
 
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
+  // yellowCube.rotation.x += 0.01;
+  // yellowCube.rotation.y += 0.01;
 
-  blueCube.rotation.x += 0.02;
-  blueCube.rotation.y -= 0.01;
+  // blueCube.rotation.x += 0.02;
+  // blueCube.rotation.y -= 0.01;
 
-  redCube.rotation.x -= 0.01;
-  redCube.rotation.y -= 0.02;
+  // redCube.rotation.x -= 0.01;
+  // redCube.rotation.y -= 0.02;
 
-  greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
+  // greenCube.rotation.x += 0.02;
+  // greenCube.rotation.y -= 0.01;
 
   renderer.render(scene, camera);
 }
@@ -78,7 +77,7 @@ window.addEventListener("resize", () => {
   renderer.setSize(size.width, size.height);
 });
 
-let mest
+let mest;
 let donutMesh, candyMesh, redbullMesh;
 
 loader.load(
