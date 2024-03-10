@@ -24,6 +24,21 @@ body {
   margin: 0;
 }
 
+.br-sm {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.br-md {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.br-lg {
+  display: block;
+  margin-bottom: 2rem;
+}
+
 h1 {
   font-size: 40px;
   font-weight: 500;

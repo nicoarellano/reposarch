@@ -6,7 +6,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
-import { arcn5005Lectures } from "../../app/arcn5005Lectures";
+import { arcn5005Lectures } from "../../app/arcn5005/(lectures)/arcn5005Lectures";
 
 const classDays = arcn5005Lectures.map((lecture) => lecture.date);
 const quizes = [dayjs("2023-10-05"), dayjs("2023-11-30")];
@@ -28,7 +28,9 @@ function ServerDay(
     !outsideCurrentMonth &&
     highlightedDays.some((date) => date.isSame(day, "day"));
 
-  const isClassDay = classDays.some((classDay) => classDay.isSame(day, "day"));
+  const isClassDay = classDays.some(
+    (classDay) => classDay && classDay.isSame(day, "day")
+  );
   const isAssignmentDay = assignments.some((assignmentDay) =>
     assignmentDay.isSame(day, "day")
   );

@@ -20,10 +20,13 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 // Context
 import { useContext } from "react";
 import { ThemeContext } from "../../middleware/Theme/context";
+import { useRouter } from "next/navigation";
 
 export default function MenuSpeedDial() {
   const themeDispatch = useContext(ThemeContext)["dispatch"];
   const { mode } = useContext(ThemeContext)["state"]["theme"];
+
+  const router = useRouter();
 
   const actionStyle = {
     backgroundColor: mode === "light" ? "#f1f1f195" : "#090c1495",
@@ -96,6 +99,7 @@ export default function MenuSpeedDial() {
       icon: (
         <div
           onClick={() => {
+            router.push(`?mode=${mode === "light" ? "dark" : "light"}`);
             themeDispatch({
               type: "TOGGLE-DARK-MODE",
               payload: { mode: mode === "light" ? "dark" : "light" },

@@ -2,8 +2,8 @@
 
 import { useEffect, useState, ReactElement } from "react";
 
-import { arcn5005Lectures } from "../../../arcn5005Lectures";
-import { Lecture, Toc } from "../../../../types/types";
+import { arcn5005Lectures } from "../arcn5005Lectures";
+import { Lecture, Toc } from "../../../types/types";
 import { Header } from "../../../../components/Header";
 import { Footer } from "../../../../components/Footer";
 import { useRouter } from "next/navigation";

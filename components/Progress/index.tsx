@@ -3,9 +3,9 @@
 import AnnouncementsdIcon from "@mui/icons-material/CampaignRounded";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 
-import { Announcements } from "../../app/arcn5005F2023Anouncements";
+import { Announcements } from "../../app/arcn5005/f2023/announcements/arcn5005F2023Anouncements";
 import ListWithIcon from "../Common/ListWithIcon";
-import { arcn5005Lectures } from "../../app/arcn5005Lectures";
+import { arcn5005Lectures } from "../../app/arcn5005/(lectures)/arcn5005Lectures";
 import dayjs from "dayjs";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -14,7 +14,9 @@ arcn5005Lectures.map((lecture) => (lecture["url"] = lecture.id));
 
 const currentLectures = arcn5005Lectures.filter(
   (lecture) =>
-    lecture.date < dayjs("2023/09/08") || lecture.date < dayjs().add(1, "days")
+    lecture.date &&
+    (lecture.date < dayjs("2023/09/08") ||
+      lecture.date < dayjs().add(1, "days"))
 );
 
 const announcements = Announcements.reverse();

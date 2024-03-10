@@ -1,5 +1,4 @@
 import { Dayjs } from "dayjs";
-import { type } from "os";
 // Interfaces
 export interface Identified {
   _id?: string; //Mongo db id
@@ -47,10 +46,11 @@ export interface Lecture {
   content?: Content[];
   notes?: string;
   slides?: string[];
-  date: Dayjs;
+  date?: Dayjs;
   toc: Toc;
   recordings?: Recording[];
 }
+
 export type Lectures = Lecture[];
 
 export interface Student {

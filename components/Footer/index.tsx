@@ -9,7 +9,7 @@ import PaginationItem from "@mui/material/PaginationItem";
 import BackIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ForwardIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
-import { Slides } from "../../types/types";
+import { Slides } from "../../app/types/types";
 import { ThemeContext } from "../../middleware/Theme/context";
 import useMediaQuery from "@mui/material/useMediaQuery";
 

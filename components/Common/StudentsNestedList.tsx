@@ -10,7 +10,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
 import { Avatar, IconButton } from "@mui/material";
-import { Students, Student } from "../../types/types";
+import { Students, Student } from "../../app/types/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ScrollableAssignmetnsList from "./ScrollableAssignmentsList";

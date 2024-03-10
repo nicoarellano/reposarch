@@ -3,7 +3,7 @@
 import { useContext } from "react";
 import { SlidesFooter } from "../../../components/Footer";
 import { HeaderOfSlide } from "../../../components/Header";
-import { slides } from "../../MainMenu";
+import { slides } from "./MainMenu";
 import { ThemeContext } from "../../../middleware/Theme/context";
 
 export default function NestedTemplate({

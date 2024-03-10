@@ -1,9 +1,9 @@
 "use client";
 import { ReactElement } from "react";
 import Logo from "./Logo";
-import LeftSpeedDial from "../SpeedDial";
+import LeftSpeedDial from "../CourseSpeedDial";
 import { usePathname } from "next/navigation";
-import { Slides, Slide } from "../../types/types";
+import { Slides, Slide } from "../../app/types/types";
 import { useRouter } from "next/navigation";
 import useMediaQuery from "@mui/material/useMediaQuery";
 

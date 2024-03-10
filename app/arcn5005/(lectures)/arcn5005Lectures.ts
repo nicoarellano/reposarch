@@ -1,20 +1,20 @@
 import dayjs from "dayjs";
-import { Lectures } from "../types/types";
-import { content as week01 } from "./arcn5005/(lectures)/week01";
-import { content as week02 } from "./arcn5005/(lectures)/week02";
-import { content as week03 } from "./arcn5005/(lectures)/week03";
-import { content as week04 } from "./arcn5005/(lectures)/week04/";
-import { content as week05 } from "./arcn5005/(lectures)/week05/";
-import { content as week06 } from "./arcn5005/(lectures)/week06/";
-import { content as week07 } from "./arcn5005/(lectures)/week07/";
-import { content as week08 } from "./arcn5005/(lectures)/week08/";
-import { content as week09 } from "./arcn5005/(lectures)/week09/";
-import { content as week10 } from "./arcn5005/(lectures)/week10/";
-import { content as week11 } from "./arcn5005/(lectures)/week11/";
-import { content as week12 } from "./arcn5005/(lectures)/week12/";
-import { content as week13 } from "./arcn5005/(lectures)/week13/";
-import { content as final } from "./arcn5005/(lectures)/final";
-import { content as maps } from "./arcn5005/(lectures)/maps";
+import { Lectures } from "../../types/types";
+import { content as week01 } from "./week01";
+import { content as week02 } from "./week02";
+import { content as week03 } from "./week03";
+import { content as week04 } from "./week04";
+import { content as week05 } from "./week05";
+import { content as week06 } from "./week06";
+import { content as week07 } from "./week07";
+import { content as week08 } from "./week08";
+import { content as week09 } from "./week09";
+import { content as week10 } from "./week10";
+import { content as week11 } from "./week11";
+import { content as week12 } from "./week12";
+import { content as week13 } from "./week13";
+import { content as final } from "./final";
+import { content as maps } from "./maps";
 
 const initialDate = dayjs("2023-09-07");
 

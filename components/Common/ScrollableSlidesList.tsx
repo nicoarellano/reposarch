@@ -2,7 +2,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList, ListChildComponentProps } from "react-window";
-import { Toc } from "../../types/types";
+import { Toc } from "../../app/types/types";
 
 function RenderRow(props: ListChildComponentProps) {
   const { index, style, toc } = props;

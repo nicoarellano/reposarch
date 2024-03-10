@@ -11,17 +11,18 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ScrollableList from "./ScrollableSlidesList";
 import { IconButton } from "@mui/material";
-import { Lectures, Lecture } from "../../types/types";
+import { Lectures, Lecture } from "../../app/types/types";
 import Link from "next/link";
 import dayjs from "dayjs";
 
 interface Props {
   list: Lectures;
+  title: string;
 }
 
 type OpenArray = boolean[];
 
-export default function LecturesNestedList({ list }: Props) {
+export default function LecturesNestedList({ list, title }: Props) {
   const [open, setOpen] = useState<OpenArray>([]);
 
   const handleClick = (index: number) => {
@@ -44,7 +45,7 @@ export default function LecturesNestedList({ list }: Props) {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          Course Schedule (date)
+          {title}
         </ListSubheader>
       }
     >
@@ -60,7 +61,7 @@ export default function LecturesNestedList({ list }: Props) {
               }`}
             />
             <Link
-              hidden={item.date >= dayjs()}
+              hidden={!item.date || item.date >= dayjs()}
               href={item.url ? item.url : item.id}
               title={item.title}
             >

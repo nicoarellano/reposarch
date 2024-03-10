@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Resources } from "../types/types";
+import { Resources } from "../../../types/types";
 
 export const Announcements: Resources = [
   {

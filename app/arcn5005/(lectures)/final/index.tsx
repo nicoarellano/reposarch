@@ -1,4 +1,4 @@
-import { Toc } from "../../../../types/types";
+import { Toc } from "../../../types/types";
 
 import Image from "../../../../components/Common/Image";
 import Video from "../../../../components/Common/Video";

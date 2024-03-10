@@ -1,4 +1,4 @@
-import { Toc } from "../../../../types/types";
+import { Toc } from "../../../types/types";
 import Image from "../../../../components/Common/Image";
 // import Image as NextImage from "next/image";
 

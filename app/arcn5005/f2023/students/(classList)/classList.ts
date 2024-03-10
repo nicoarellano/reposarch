@@ -1,4 +1,4 @@
-import { Students } from "../../../../../types/types";
+import { Students } from "../../../../types/types";
 
 export const classListf2023: Students = [
   {
