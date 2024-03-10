@@ -9,8 +9,8 @@ import {
   Dispatch,
 } from "react";
 import { ThemeReducer, ThemeActions, ThemeState } from "./reducer";
-import { Mode } from "../../types/types";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Mode } from "../../app/types/types";
 
 type InitialStateType = {
   theme: ThemeState;
