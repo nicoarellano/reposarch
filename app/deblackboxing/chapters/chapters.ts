@@ -29,14 +29,7 @@ export const chapters: Lectures = [
     id: `chapter02`,
     url: `chapter02`,
     // content: week02,
-    toc: [
-      { title: "Digitalization of the physical wold" },
-      { title: "Photogrammetry - Guess lecturer: Miguel Reina Ortiz" },
-      { title: "Introduction to digital tools" },
-      { title: "Digital turns" },
-      { title: "Coding, programming, scripting" },
-      { title: "🖥️ LAB 2: MeshRoom to Blender" },
-    ],
+    toc: [{ title: "Digitalization of the physical wold" }],
   },
 
   {
@@ -45,14 +38,7 @@ export const chapters: Lectures = [
     url: `chapter03`,
     // date: initialDate.add(2, "week"),
     // content: week03,
-    toc: [
-      { title: "Sharing Blender experience" },
-      { title: "Digital tools for AEC" },
-      { title: "Representation Processes: CAD, 3D CAD, BIM" },
-      { title: "Proprietary software" },
-
-      { title: "🖥️ LAB 3: P5, LibreCad, and Blender " },
-    ],
+    toc: [{ title: "Sharing Blender experience" }],
   },
   {
     title: "Chapter 4: Black boxes",
@@ -60,19 +46,7 @@ export const chapters: Lectures = [
     url: `chapter04`,
     // date: initialDate.add(3, "week"),
     // content: week04,
-    toc: [
-      { title: "Closed source formats" },
-      { title: "Close-sourced scripting" },
-      {
-        title:
-          "Coding for efficiency and automatization ; AKA Programming solutions for repetitive tasks",
-      },
-
-      {
-        title:
-          "🖥️ LAB 4: Scripting - Dynamo / Grasshopper / Blender Geometry Nodes",
-      },
-    ],
+    toc: [{ title: "Closed source formats" }],
   },
 
   {
@@ -82,23 +56,10 @@ export const chapters: Lectures = [
     // date: initialDate.add(4, "week"),
     // content: week05,
     toc: [
-      { title: "🟡 Quiz 1" },
-      {
-        title:
-          "Guess lecturer: Julie Ivanoff: Brief history of the computers, the internet, and the domocratization of knowledge",
-      },
       {
         title:
           "Open source. History of open-source and the free software society",
       },
-      {
-        title: "FSF: Free Software Foundation",
-      },
-      {
-        title: "OSI: Open Software Initiative",
-      },
-      { title: "How does a website work? Structure, style, logic" },
-      { title: "🖥️ LAB 5: GitHub and HTML" },
     ],
   },
   {
@@ -107,15 +68,7 @@ export const chapters: Lectures = [
     url: `chapter06`,
     // date: initialDate.add(5, "week"),
     // content: week06,
-    toc: [
-      { title: "Open vs Closed BIM" },
-      { title: "BuildingSmart International and IFC" },
-      { title: "File formats - .rvt vs .ifc" },
-      { title: "OSArch" },
-      { title: "Post 2020 milestones" },
-      { title: "CSS - Cascading Style Sheets" },
-      { title: "🖥️ LAB 6: HTML and CSS" },
-    ],
+    toc: [{ title: "Open vs Closed BIM" }],
   },
   {
     title: "Chapter 7: De-blackboxing BIM",
@@ -123,15 +76,7 @@ export const chapters: Lectures = [
     url: `chapter07`,
     // date: initialDate.add(6, "week"),
     // content: week07,
-    toc: [
-      { title: "BlenderBIM - Guess lecturer: Raphaël Vouilloz" },
-      {
-        title:
-          "🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal",
-      },
-      { title: "Native IFC" },
-      { title: "🖥️ LAB 7: BlenderBIM: Native IFC" },
-    ],
+    toc: [{ title: "Native IFC" }],
   },
   {
     title: "Conclusions",

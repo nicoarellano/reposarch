@@ -27,7 +27,13 @@ export default function Home() {
         <WestRoundedIcon fontSize="large" />
         <div className="flex flex-col gap-20 justify-center items-center w-96">
           <h1>DE-BLACKBOXING</h1>
-          <Image priority src={openBox} height={300} width={300} />
+          <Image
+            priority
+            src={openBox}
+            height={300}
+            width={300}
+            alt="open box"
+          />
         </div>
         <EastRoundedIcon fontSize="large" />
         <Link href={"https://cdt.vercel.app/carleton"}>

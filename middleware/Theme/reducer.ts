@@ -1,4 +1,4 @@
-import { Mode } from "../../types/types";
+import { Mode } from "../../app/types/types";
 import { ActionMap } from "../ActionMap";
 
 interface ThemeTypes {

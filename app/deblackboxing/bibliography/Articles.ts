@@ -1,4 +1,4 @@
-import { Resources } from "../../../../types/types";
+import { Resources } from "../../types/types";
 
 export const Articles: Resources = [
   {
