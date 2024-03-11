@@ -19,12 +19,12 @@ export default function Home() {
       <div className="flex items-center gap-20 ">
         <div className="flex flex-col gap-20 justify-center items-center">
           <h1>LEARN</h1>
-          <Link href={"/arcn5005/learn"}>
+          <Link href={"/deblackboxing/learn"}>
             <Learn fontSize="large" style={{ scale: 5 }} />
           </Link>
           <slot className="br-lg" />
           <h1>EDUCATE</h1>
-          <Link href={"/arcn5005/educate"}>
+          <Link href={"/deblackboxing/educate"}>
             <Educate fontSize="large" style={{ scale: 5 }} />
           </Link>
         </div>
@@ -48,12 +48,12 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-20 justify-center items-center">
           <h1>ENGAGE</h1>
-          <Link href={"/arcn5005/engage"}>
+          <Link href={"/deblackboxing/engage"}>
             <Community fontSize="large" style={{ scale: 5 }} />
           </Link>
           <slot className="br-lg" />
           <h1>BUILD</h1>
-          <Link href={"/arcn5005/build"}>
+          <Link href={"/deblackboxing/build"}>
             <Code fontSize="large" style={{ scale: 5 }} />
           </Link>
         </div>

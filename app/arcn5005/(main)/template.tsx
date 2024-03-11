@@ -19,7 +19,7 @@ export default function NestedTemplate({
           mode === "light" ? "bg-light" : "bg-dark "
         }`}
       >
-        <HeaderOfSlide slides={slides} />
+        <HeaderOfSlide slides={slides} section="arcn" />
       </header>
       <section className="top-24 flex justify-center items-center grow ">
         {children}

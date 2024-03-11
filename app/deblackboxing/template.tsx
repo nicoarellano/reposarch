@@ -27,7 +27,7 @@ export default function NestedTemplate({
           mode === "light" ? "bg-light" : "bg-dark "
         }`}
       >
-        <HeaderOfSlide slides={dbbSlides} />
+        <HeaderOfSlide slides={dbbSlides} section="deblackboxing" />
       </header>
       <section className="top-24 flex justify-center items-center grow ">
         {children}

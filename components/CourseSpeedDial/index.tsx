@@ -22,7 +22,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../middleware/Theme/context";
 import { useRouter } from "next/navigation";
 
-export default function MenuSpeedDial() {
+export default function CourseSpeedDial() {
   const themeDispatch = useContext(ThemeContext)["dispatch"];
   const { mode } = useContext(ThemeContext)["state"]["theme"];
 
