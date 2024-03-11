@@ -6,13 +6,13 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
-import { arcn5005Lectures } from "../../app/arcn5005Lectures";
+import { arcn5005Lectures } from "../../app/arcn5005/(lectures)/arcn5005Lectures";
 
 const classDays = arcn5005Lectures.map((lecture) => lecture.date);
-const quizes = [dayjs("2023-10-05"), dayjs("2023-11-09"), dayjs("2023-11-30")];
+const quizes = [dayjs("2023-10-05"), dayjs("2023-11-30")];
 const assignments = [
   dayjs("2023-10-19"),
-  dayjs("2023-11-23"),
+  dayjs("2023-11-16"),
   dayjs("2023-12-07"),
 ];
 const fallBreak = [dayjs("2023-10-26")];
@@ -28,7 +28,9 @@ function ServerDay(
     !outsideCurrentMonth &&
     highlightedDays.some((date) => date.isSame(day, "day"));
 
-  const isClassDay = classDays.some((classDay) => classDay.isSame(day, "day"));
+  const isClassDay = classDays.some(
+    (classDay) => classDay && classDay.isSame(day, "day")
+  );
   const isAssignmentDay = assignments.some((assignmentDay) =>
     assignmentDay.isSame(day, "day")
   );
@@ -36,7 +38,7 @@ function ServerDay(
   const isFallBreakDay = fallBreak.some((fallBreakDay) =>
     fallBreakDay.isSame(day, "day")
   );
-  const isFinalAssignmentDay = day.isSame(dayjs("2023-12-18"), "day");
+  const isFinalAssignmentDay = day.isSame(dayjs("2023-12-20"), "day");
 
   return (
     <Badge

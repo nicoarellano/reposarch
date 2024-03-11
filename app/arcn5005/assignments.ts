@@ -1,6 +1,6 @@
 export const Assignments = [
-  { title: "Three js Assignment", url: "three" },
-  { title: "Ifc js Assignment", url: "ifc" },
-  { title: "Map Assignment", url: "map" },
+  { title: "About page - Assignment 1", url: "about" },
+  { title: "Three js - Assignment 2", url: "three" },
+  { title: "Map - Assignment 3", url: "map" },
   { title: "Final Assignment", url: "final" },
 ];

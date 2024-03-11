@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <title>about v</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Final exercise</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <link rel="stylesheet" href="styles.css">
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js'></script>
+    <script type="module" src="./a2_main.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+    </style>
+</head>
+<body>
+
+</head>
+<body>
+
+    <div class="flex">
+
+    <div id="wrapper">
+        <div id="card_2"></div>
+        <div id="card_3"></div>
+    </div>
+
+   
+    <div class="card_3">
+        <img src="chloe.JPG" height="140px">
+        <div class="category"> dog </div>
+        <div class="heading"> chloe
+            <div class="author"> by <span class="name">vdea</span> 8 days ago</div>
+        </div>
+    </div>
+
+    <div class="card_3">
+        <img src="gelato.jpg" height="140px">
+        <div class="category"> dessert </div>
+        <div class="heading"> gelato
+            <div class="author"> by <span class="name">vdea</span> 6 days ago</div>
+        </div>
+    </div>
+
+    <div class="card_3">
+        <img src="sun.jpg" height="140px">
+        <div class="category"> vaca </div>
+        <div class="heading"> puj
+            <div class="author"> by <span class="name">vdea</span> 4 days ago</div>
+        </div>
+    </div>
+
+    <div class="card_3">
+        <img src="c3.jpg" height="140px">
+        <div class="category"> vroom </div>
+        <div class="heading"> c3
+            <div class="author"> by <span class="name">vdea</span> 2 days ago</div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- Sketchfab Embed Code -->
+    <div class="container">
+    <div class="container1">
+    <div class="sketchfab-embed-wrapper"> <iframe title="Retro Drive into the 80s" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="460" height="260" src="https://sketchfab.com/models/e6464e569572468b86514f9898761cda/embed?autostart=1&camera=0&annotations_visible=0&preload=1"> </iframe> </div>    <!-- End of Sketchfab Embed Code -->
+
+    <div id="card__content-heading">miami beach map</div>
+    <div id="map">
+    <script src="./MIA_main.js"></script>
+    <style src="styles.css"></style>
+    </div>
+</div>
+
+<div class="container2">
+    <div class="card">
+        <div class="card__content">
+            <img src="v.png" width="200px" alt="" srcset="">
+            <h1>vanessa de alexandris</h1>
+            <br>
+            <div class="card__content-heading">
+                <h2>about me</h2>
+                <br>
+            </div>
+            <div class="card__content-body">
+                <p> pets: i have a dog
+                </p>
+                <p> my fav meal: dessert
+                </p>
+                <p> my fav hobby: vacationing
+                </p>
+                <p> my dream summer car: C3 with t-top & luggage rack
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+
+    <button class="btn1" class="btn" onclick="openLink('https://reposarch.vercel.app/arcn5005/f2023/students/vanessadealexandris/about')"> asgmt 1 </button>
+    <button class="btn2" class="btn" onclick="openLink('https://reposarch.vercel.app/arcn5005/f2023/students/vanessadealexandris/three')"> asgmt 2 </button>
+    <button class="btn2" class="btn" onclick="openLink('https://reposarch.vercel.app/arcn5005/f2023/students/vanessadealexandris/map')"> asgmt 3 </button>
+    <button class="btn2" class="btn" onclick="openLink('https://github.com/vdealexandris/vdea')"> github </button>
+
+    </div>
+
+   
+    </div>
+
+    </div>
+    <canvas id="three-canvas"></canvas>
+
+    <script>
+        function openLink(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
 </html>

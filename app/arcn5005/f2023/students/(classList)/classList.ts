@@ -1,10 +1,10 @@
-import { Students } from "../../../../../types/types";
+import { Students } from "../../../../types/types";
 
 export const classListf2023: Students = [
   {
     id: "#101316473",
     username: "nicolasarellanorisop",
-    lastName: "Arellano (example)",
+    lastName: "Arellano (Final Assignment Example)",
     firstName: "Nicolas",
     email: "NicolasArellanoRisop@cmail.carleton.ca",
   },
@@ -182,5 +182,12 @@ export const classListf2023: Students = [
     lastName: "Tourangeau",
     firstName: "Vincent",
     email: "VincentTourangeau@cmail.carleton.ca",
+  },
+  {
+    id: "#101008770",
+    username: "weixizhong",
+    lastName: "Zhong",
+    firstName: "Weixi",
+    email: "weixizhong@cmail.carleton.ca",
   },
 ];

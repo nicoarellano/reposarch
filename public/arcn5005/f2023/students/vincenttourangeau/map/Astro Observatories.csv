@@ -1,0 +1,133 @@
+﻿ID,Name,Country,Latitude (°),Longitude (°),Elevation (m),Light pollution,Limiting magnitude
+aao,Australian Astronomical Observatory,Australia,"31° 16' 31.38"" S","149° 04' 02.03"" E",1136,negligible,6.8
+aip,Leibniz-Institut für Astrophysik Potsdam,Germany,"52° 24' 17.87"" N","13° 06' 15.38"" E",67,very bad,5.5
+ali,Ali Observatory,China,"32° 19' 34.72"" N","80° 01' 32.88"" E",5035,very low,6.7
+alma,Atacama Large Millimeter Array,Chile,"23° 01' 44.40"" S","67° 45' 18.00"" W",5035,negligible,6.8
+apex,Atacama Pathfinder Experiment,Chile,"23° 00' 41.32"" S","67° 46' 42.97"" W",5058,negligible,6.8
+apo,Apache Point Observatory,United States,"32° 46' 48.00"" N","105° 49' 12.00"" W",2798,low,6.7
+apoa,Anton Pannekoek Observatory,Netherlands,"52° 21' 15.66"" N","04° 57' 17.84"" E",0,extreme,4.6
+arecibo,Arecibo Observatory,Puerto Rico,"18° 20' 39.12"" N","66° 45' 09.72"" W",238,bad,6.1
+armagh,Armagh Observatory,United Kingdom,"54° 21' 07.63"" N","06° 38' 54.47"" W",52,bad,5.8
+asiago,Osservatorio Astrofisico di Asiago,Italy,"45° 51' 59.41"" N","11° 31' 35.22"" E",1034,bad,5.8
+atca,Australia Telescope Compact Array,Australia,"30° 18' 46.08"" S","149° 33' 54.00"" E",209,very low,6.8
+bao,Beijing XingLong Observatory,China,"40° 23' 44.52"" N","117° 34' 33.24"" E",950,moderate,6.5
+biruni,Biruni Observatory,Iran,"29° 39' 00.95"" N","52° 30' 16.34"" E",1705,extreme,4.2
+bosscha,Bosscha Observatory,Indonesia,"06° 49' 28.67"" S","107° 37' 01.60"" E",1296,very bad,5.5
+calan,Observatorio Astronómico Nacional de Chile,Chile,"33° 23' 43.80"" S","70° 32' 11.23"" W",859,extreme,4.2
+calaralto,Calar Alto,Spain,"37° 13' 25.00"" N","02° 32' 46.00"" W",2158,moderate,6.6
+cao,Crimean Astrophysical Observatory,Ukraine,"44° 43' 27.96"" N","34° 00' 35.64"" E",578,moderate,6.5
+casleo,Leoncito Astronomical Complex,Argentina,"31° 47' 55.02"" S","69° 17' 44.24"" W",2482,very low,6.7
+cfht,Canada-France-Hawaii Telescope,United States,"19° 49' 30.96"" N","155° 28' 07.67"" W",4215,very low,6.8
+ctio,Cerro Tololo Interamerican Observatory,Chile,"30° 10' 08.40"" S","70° 48' 22.32"" W",2215,low,6.7
+dao,Dominion Astrophysical Observatory,Canada,"48° 31' 11.31"" N","123° 25' 06.00"" W",229,bad,5.8
+dct,Discovery Channel Telescope,United States,"34° 44' 39.50"" N","111° 25' 21.05"" W",2337,very low,6.7
+drao,Dominion Radio Astrophysical Observatory,Canada,"49° 19' 17.57"" N","119° 37' 11.99"" W",546,moderate,6.6
+dwingeloo,Dwingeloo Radio Observatory,Netherlands,"52° 48' 43.55"" N","06° 23' 47.02"" E",14,bad,6.3
+effelsberg,Effelsberg 100m telescope,Germany,"50° 31' 30.36"" N","06° 52' 59.16"" E",328,bad,6.1
+ekar,Mount Ekar 182 cm. Telescope,Italy,"45° 50' 54.73"" N","11° 34' 08.51"" E",1413,bad,5.8
+elt,European Extremely Large Telescope,Chile,"24° 35' 21.48"" S","70° 11' 29.76"" W",3060,negligible,6.8
+fast,500m-aperture Spherical Telescope,China,"25° 39' 10.44"" N","106° 51' 23.80"" E",853,very low,6.7
+flwo,Whipple Observatory,United States,"31° 40' 51.57"" N","110° 52' 42.04"" W",2320,low,6.7
+gbo,Green Bank Observatory,United States,"38° 25' 59.52"" N","79° 50' 22.92"" W",806,moderate,6.6
+gemn,Gemini North,United States,"19° 49' 25.69"" N","155° 28' 08.57"" W",4213,very low,6.8
+gems,Gemini South,Chile,"30° 14' 26.67"" S","70° 44' 12.06"" W",2750,very low,6.7
+griffith,Griffith Observatory,United States,"34° 07' 08.11"" N","118° 18' 01.51"" W",346,extreme,3.7
+haleakala,Haleakala Observatories,United States,"20° 42' 29.32"" N","156° 15' 24.22"" W",3048,low,6.7
+halley,Halley's Mount,Saint Helena,"15° 57' 44.82"" S","05° 41' 58.06"" W",659,very low,6.8
+hanford,LIGO (Hanford),United States,"46° 27' 18.52"" N","119° 24' 27.56"" W",162,bad,6.3
+iao,Indian Astronomical Observatory,India,"32° 46' 45.98"" N","78° 57' 51.00"" E",4486,negligible,6.8
+icao,INAF Catania Astrophysical Observatory,Italy,"37° 41' 35.18"" N","14° 58' 28.00"" E",1733,bad,5.8
+igo,IUCAA Girawali Observatory,India,"19° 04' 22.55"" N","73° 50' 41.09"" E",981,bad,6.3
+ilmt,International Liquid Mirror Telescope,India,"29° 21' 39.39"" N","79° 41' 03.69"" E",2398,moderate,6.6
+ino,Iranian National Observatory,Iran,"33° 40' 26.25"" N","51° 19' 06.58"" E",3572,moderate,6.6
+iram,IRAM 30m telescope,Spain,"37° 03' 59.04"" N","03° 23' 32.64"" W",2843,bad,6.3
+irtf,NASA Infrared Telescope Facility,United States,"19° 49' 34.39"" N","155° 28' 19.20"" W",4168,very low,6.8
+ishigaki,Ishigaki Astronomical Observatory,Japan,"24° 22' 23.92"" N","124° 08' 21.18"" E",182,moderate,6.5
+jcmt,James Clerk Maxwell Telescope,United States,"19° 49' 22.15"" N","155° 28' 37.06"" W",4072,very low,6.8
+jena,Jena Observatory,Germany,"50° 55' 30.96"" N","11° 34' 58.51"" E",155,bad,5.8
+jodrell,Jodrell Bank Observatory,United Kingdom,"53° 14' 12.48"" N","02° 18' 30.60"" W",89,bad,5.8
+keck,W. M. Keck Observatory,United States,"19° 49' 34.67"" N","155° 28' 27.95"" W",4160,very low,6.8
+kiso,Kiso Observatory,Japan,"35° 47' 50.00"" N","137° 37' 31.50"" E",1122,moderate,6.6
+kpno,Kitt Peak National Observatory,United States,"31° 57' 48.00"" N","111° 35' 60.00"" W",2120,low,6.7
+lapalma,"Roque de los Muchachos, La Palma",Spain,"28° 45' 38.31"" N","17° 52' 54.41"" W",2327,low,6.7
+lasilla,La Silla Observatory (ESO),Chile,"29° 15' 32.40"" S","70° 44' 01.68"" W",2347,very low,6.8
+lbt,Large Binocular Telescope,United States,"32° 42' 05.76"" N","109° 53' 19.32"" W",2902,low,6.7
+lco,Las Campanas Observatory,Chile,"29° 00' 51.12"" S","70° 41' 33.00"" W",2282,very low,6.8
+lhk,Landessternwarte Heidelberg-Königstuhl,Germany,"49° 23' 53.32"" N","08° 43' 29.58"" E",561,very bad,5.5
+lick,Lick Observatory,United States,"37° 20' 36.00"" N","121° 38' 12.00"" W",1290,bad,6.1
+livingston,LIGO (Livingston),United States,"30° 33' 46.42"" N","90° 46' 27.27"" W",18,bad,5.8
+lmt,Large Millimeter Telescope,Mexico,"18° 59' 10.32"" N","97° 18' 53.28"" W",4563,moderate,6.5
+loiano,Loiano Observatory,Italy,"44° 15' 32.95"" N","11° 20' 03.98"" E",753,bad,6.1
+lowell,Lowell Observatory,United States,"35° 05' 48.00"" N","111° 32' 06.00"" W",2198,low,6.7
+lulin,Lulin Observatory,Taiwan,"23° 28' 09.46"" N","120° 52' 21.67"" E",2852,moderate,6.5
+mcdonald,McDonald Observatory,United States,"30° 40' 18.00"" N","104° 01' 18.00"" W",2075,very low,6.7
+mdm,Michigan-Dartmouth-MIT Observatory,United States,"31° 57' 11.87"" N","111° 36' 53.65"" W",1938,low,6.7
+medicina,Medicina Radio Telescope,Italy,"44° 31' 13.80"" N","11° 38' 48.84"" E",25,bad,5.8
+metsahovi,Metsähovi Radio Observatory,Finland,"60° 13' 04.13"" N","24° 23' 35.27"" E",51,bad,6.1
+midi,Observatoire du Pic du Midi,France,"42° 56' 11.93"" N","00° 08' 29.29"" E",2829,moderate,6.6
+miro,Mount Abu InfraRed Observatory,India,"24° 39' 11.15"" N","72° 46' 47.43"" E",1680,moderate,6.6
+mmt,Multiple Mirror Telescope,United States,"31° 41' 18.00"" N","110° 53' 06.00"" W",2608,low,6.7
+molonglo,Molonglo Observatory Synthesis Telescope,Australia,"35° 22' 14.78"" S","149° 25' 41.50"" E",736,moderate,6.6
+mrao,Murchison Radio-astronomy Observatory,Australia,"26° 41' 49.30"" S","116° 37' 51.82"" E",374,negligible,6.8
+mro,Manastash Ridge Observatory,United States,"46° 57' 03.95"" N","120° 43' 28.33"" W",1198,moderate,6.6
+mso,Mt. Stromlo Observatory,Australia,"35° 19' 08.87"" S","149° 00' 31.89"" E",767,bad,5.8
+mtbigelow,Catalina Observatory: 61 inch telescope,United States,"32° 25' 00.00"" N","110° 43' 54.00"" W",2510,bad,6.3
+mullard,Mullard Radio Astronomy Observatory,United Kingdom,"52° 10' 02.36"" N","00° 01' 57.88"" E",21,bad,5.8
+mwo,Mount Wilson Observatory,United States,"34° 13' 33.24"" N","118° 03' 25.20"" W",1742,very bad,5.1
+ngts,Next-Generation Transit Survey,Chile,"24° 36' 57.85"" S","70° 23' 25.97"" W",2440,negligible,6.8
+nhao,Nishi-Harima Astronomical Observatory,Japan,"35° 01' 31.14"" N","134° 20' 07.53"" E",432,moderate,6.5
+nobeyama,Nobeyama 45m Telescope,Japan,"35° 56' 40.27"" N","138° 28' 20.71"" E",1347,moderate,6.5
+noto,Noto Radio Telescope,Italy,"36° 52' 33.06"" N","14° 59' 20.04"" E",30,bad,5.8
+nov,National Observatory of Venezuela,Venezuela,"08° 47' 14.60"" N","70° 52' 12.54"" W",3610,moderate,6.6
+oaj,Observatorio Astrofísico de Javalambre,Spain,"40° 02' 31.24"" N","01° 00' 58.27"" W",1954,moderate,6.6
+oalm,Observatorio Astronómico Los Molinos,Uruguay,"34° 45' 19.42"" S","56° 11' 24.98"" W",77,extreme,4.6
+oanc,Observatorio Astronómico Nacional de Colombia,Colombia,"04° 38' 22.90"" N","74° 04' 59.99"" W",2555,extreme,3.7
+oao,Okayama Astrophysical Observatory,Japan,"34° 34' 37.69"" N","133° 35' 37.85"" E",371,bad,6.1
+oavda,Val d'Aosta Observatory,Italy,"45° 47' 23.18"" N","07° 28' 42.19"" E",1673,bad,6.3
+oca,Observatoire de de la Côte d’Azur,France,"43° 43' 38.17"" N","07° 17' 56.80"" E",349,extreme,4.6
+ohp,Observatoire de Haute Provence,France,"43° 55' 51.00"" N","05° 42' 48.00"" E",650,moderate,6.5
+olin,Olin Science Center,United States,"41° 22' 44.65"" N","72° 06' 16.57"" W",65,very bad,5.1
+oliver,Oliver Observing Station,United States,"36° 18' 21.34"" N","121° 34' 00.33"" W",1518,low,6.7
+onsala,Onsala Space Observatory,Sweden,"57° 23' 35.00"" N","11° 55' 03.79"" E",18,bad,6.3
+palomar,Palomar Observatory,United States,"33° 21' 21.60"" N","116° 51' 46.80"" W",1706,bad,6.3
+paranal,Paranal Observatory (ESO),Chile,"24° 37' 39.00"" S","70° 24' 16.20"" W",2635,negligible,6.8
+parkes,Parkes 64m Telescope,Australia,"32° 59' 52.01"" S","148° 15' 46.51"" E",378,very low,6.7
+pdb,Plateau de Bure Interferometer,France,"44° 38' 03.12"" N","05° 54' 28.80"" E",2551,moderate,6.5
+pddo,Observatório Pico dos Dias,Brazil,"22° 32' 05.39"" S","45° 34' 58.90"" W",1847,moderate,6.5
+peyton,Peyton Observatory,United States,"40° 20' 47.75"" N","74° 39' 06.12"" W",45,very bad,5.1
+pulkovo,Pulkovo Observatory,Russia,"59° 46' 18.48"" N","30° 19' 34.25"" E",81,extreme,4.2
+roanjase,Los Nogales de Roan Jase,Chile,"33° 43' 00.92"" S","70° 19' 50.66"" W",1070,bad,6.1
+roe,"Royal Observatory, Edinburgh",United Kingdom,"55° 55' 23.66"" N","03° 11' 16.35"" W",128,very bad,5.1
+rog,Royal Observatory Greenwich,United Kingdom,"51° 28' 40.12"" N","00° 00' 05.31"" W",46,extreme,4.2
+rozhen,Bulgarian National Astronomical Observatory,Bulgaria,"41° 41' 35.26"" N","24° 44' 19.81"" E",1732,moderate,6.6
+salt,Southern African Large Telescope,South Africa,"32° 22' 32.96"" S","20° 48' 38.91"" E",1798,negligible,6.8
+sao,Seoul National University Astronomical Observatory,South Korea,"37° 27' 25.68"" N","126° 57' 15.80"" E",159,extreme,4.2
+saoras,Special Astrophysical Observatory,Russia,"43° 38' 48.60"" N","41° 26' 25.60"" E",2064,low,6.7
+sirene,Observatoire Sirene,France,"44° 00' 00.00"" N","05° 29' 13.00"" E",1100,moderate,6.5
+ska,Square Kilometre Array,South Africa,"30° 43' 17.61"" S","21° 24' 38.60"" E",1054,very low,6.8
+skinakas,Skinakas Observatory,Greece,"35° 12' 42.43"" N","24° 53' 56.70"" E",1732,moderate,6.6
+sma,Submillimeter Array,United States,"19° 49' 28.12"" N","155° 28' 43.03"" W",4073,very low,6.8
+soo,Sharjah Optical Observatory,United Arab Emirates,"25° 16' 57.20"" N","55° 27' 43.20"" E",17,extreme,3.7
+southam,Gordon Southam Observatory,Canada,"49° 16' 31.55"" N","123° 08' 36.98"" W",10,extreme,4.2
+spm,"Observatorio Astronomico Nacional, San Pedro Martir",Mexico,"31° 02' 39.60"" N","115° 27' 49.50"" W",2830,very low,6.8
+spt,South Pole Telescope,-,"90° 00' 00.00"" S","180° 00' 00.00"" E",2800,negligible,6.8
+srt,Sardinia Radio Telescope,Italy,"39° 29' 34.94"" N","09° 14' 42.58"" E",650,bad,6.3
+subaru,Subaru Telescope,United States,"19° 49' 32.00"" N","155° 28' 34.00"" W",4139,very low,6.8
+teide,Teide Observatory,Spain,"28° 18' 03.96"" N","16° 30' 38.52"" W",2390,bad,6.3
+tno,Thai National Observatory,Thailand,"18° 34' 25.79"" N","98° 28' 56.26"" E",2449,moderate,6.6
+tona,"Observatorio Astronomico Nacional, Tonantzintla",Mexico,"19° 01' 53.61"" N","98° 18' 56.34"" W",2174,extreme,4.6
+tug,TÜBİTAK National Observatory,Turkey,"36° 49' 32.38"" N","30° 20' 07.17"" E",2457,bad,6.3
+uclo,University College London Observatory,United Kingdom,"51° 36' 48.06"" N","00° 14' 32.12"" W",77,extreme,4.6
+ucmjo,University of Canterbury Mount John Observatory,New Zealand,"43° 59' 07.19"" S","170° 27' 53.70"" E",1028,very low,6.7
+ufrj,Observatório do Valongo,Brazil,"22° 53' 54.82"" S","43° 11' 11.97"" W",23,extreme,4.2
+usuda,Usuda Deep Space Center,Japan,"36° 07' 56.51"" N","138° 21' 46.37"" E",1458,moderate,6.6
+vbo,Vainu Bappu Observatory,India,"12° 34' 29.56"" N","78° 49' 13.24"" E",725,moderate,6.6
+venus,Pointe Vénus,French Polynesia,"17° 29' 39.44"" S","149° 29' 39.67"" W",0,moderate,6.5
+vidojevica,Astronomical Station Vidojevica,Serbia,"43° 08' 28.30"" N","21° 33' 20.80"" E",1145,moderate,6.5
+vienna,Vienna Observatory,Austria,"48° 13' 55.00"" N","16° 20' 03.00"" E",229,extreme,4.6
+vista,VISTA,Chile,"24° 36' 57.08"" S","70° 23' 51.23"" W",2503,negligible,6.8
+vla,Very Large Array,United States,"34° 04' 43.50"" N","107° 37' 05.82"" W",2124,very low,6.8
+wendelstein,Wendelstein Observatory,Germany,"47° 42' 13.53"" N","12° 00' 44.09"" E",1784,moderate,6.5
+wise,Wise Observatory,Israel,"30° 35' 50.26"" N","34° 45' 43.94"" E",863,bad,6.3
+wright,Wright's Tower,United Kingdom,"54° 40' 26.94"" N","01° 37' 44.48"" W",198,bad,5.8
+yebes,Observatorio de Yebes,Spain,"40° 31' 28.67"" N","03° 05' 20.02"" W",915,bad,6.1

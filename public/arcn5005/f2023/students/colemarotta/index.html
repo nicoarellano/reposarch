@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head lang="en">
+    <script type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  </head>
+  <h1>COLE_MAROTTA</h1>
+  <body>
+    <section class="main-container">
+      <div class="final">
+        <img src="./images/photo.jpeg" alt="Cole Marotta" height="100" />
+
+        <ul>
+          <li>#Undergrad at FAUM</li>
+          <li>#Loves to Cook</li>
+          <li>#Loves TTRPG's</li>
+          <li>#Excited to Learn</li>
+        </ul>
+        <br />
+        <div>
+          <a href="https://reposarch.vercel.app/"
+            ><button class="button-27" role="button">Reposarch</button></a
+          >
+
+          <a href="https://github.com/nicoarellano/reposarch"
+            ><button class="button-27" role="button">Git Nico</button></a
+          >
+
+          <a href="https://github.com/Cole-Marotta/Cole-Repository"
+            ><button class="button-27" role="button">Git Cole</button></a
+          >
+        </div>
+      </div>
+      <div id="viewers">
+        <div>
+          <div id="full-screen" onclick="toggleFullScreen()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.414 18.586l2.586-2.586v8h-8l2.586-2.586-5.172-5.172 2.828-2.828 5.172 5.172zm-13.656-8l2.828-2.828-5.172-5.172 2.586-2.586h-8v8l2.586-2.586 5.172 5.172zm10.828-8l-2.586-2.586h8v8l-2.586-2.586-5.172 5.172-2.828-2.828 5.172-5.172zm-8 13.656l-2.828-2.828-5.172 5.172-2.586-2.586v8h8l-2.586-2.586 5.172-5.172z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <iframe
+          class="viewer"
+          id="fullscreen-iframe"
+          src="./index2.html"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </section>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      function toggleFullScreen() {
+        var iframe = document.getElementById("fullscreen-iframe");
+        if (!document.fullscreenElement) {
+          iframe.requestFullscreen().catch((err) => {
+            console.error(err);
+          });
+        } else {
+          document.exitFullscreen();
+        }
+      }
+    </script>
+  </body>
+</html>

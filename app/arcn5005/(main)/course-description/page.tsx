@@ -1,7 +1,16 @@
 "use client";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../../../middleware/Theme/context";
+
 export default function CourseDescription() {
+  const { mode } = useContext(ThemeContext)["state"]["theme"];
   return (
-    <section className="flex  w-2/3 max-h-[500px] overflow-y-scroll m-6 bg-white p-12 items-baseline text-justify">
+    <section
+      className={`flex  w-2/3 max-h-[500px] overflow-y-scroll m-6 p-12 bg-opacity-70 ${
+        mode === "light" ? "bg-white" : "bg-black"
+      } items-baseline text-justify`}
+    >
       <p className="text-lg ">
         The course reflects on the use of computers and computer coding for
         architectural representation, and it analyses the different ways in
@@ -38,11 +47,9 @@ export default function CourseDescription() {
         describe a system that can be understood only in terms of its inputs and
         outputs, but which process is not accessible or even visible to users.
         To <q>de-blackbox</q> is to understand the process, parts, and
-        connection of the system. The historian Antoine Picon states that
-        <q>
-          it has become unavoidable to enter into the black box of programming
-          in order to make a truly creative use of the computer.
-        </q>
+        connection of the system. The historian Antoine Picon states that “it
+        has become unavoidable to enter into the black box of programming in
+        order to make a truly creative use of the computer.”
         <sup>1</sup> <br />
         However, two conditions must be met before architects can attempt to
         de-blackbox the digital toolbox. Firstly, architects must have a working

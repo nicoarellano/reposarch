@@ -11,17 +11,18 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ScrollableList from "./ScrollableSlidesList";
 import { IconButton } from "@mui/material";
-import { Lectures, Lecture } from "../../types/types";
+import { Lectures, Lecture } from "../../app/types/types";
 import Link from "next/link";
 import dayjs from "dayjs";
 
 interface Props {
   list: Lectures;
+  title: string;
 }
 
 type OpenArray = boolean[];
 
-export default function LencutesNestedList({ list }: Props) {
+export default function LecturesNestedList({ list, title }: Props) {
   const [open, setOpen] = useState<OpenArray>([]);
 
   const handleClick = (index: number) => {
@@ -35,6 +36,7 @@ export default function LencutesNestedList({ list }: Props) {
       sx={{
         width: "60%",
         minWidth: 800,
+        minHeight: 200,
         bgcolor: "background.paper",
         maxHeight: 500,
         overflowY: "auto",
@@ -43,7 +45,7 @@ export default function LencutesNestedList({ list }: Props) {
       aria-labelledby="nested-list-subheader"
       subheader={
         <ListSubheader component="div" id="nested-list-subheader">
-          Course Schedule (date)
+          {title}
         </ListSubheader>
       }
     >
@@ -55,14 +57,11 @@ export default function LencutesNestedList({ list }: Props) {
           >
             <ListItemText
               primary={`${item.title}${
-                item.date ? `(${item.date.format("YYYY/MM/DD")})` : ""
+                item.date ? ` (${item.date.format("YYYY/MM/DD")})` : ""
               }`}
             />
             <Link
-              hidden={
-                item.date > dayjs("2023/09/07") &&
-                item.date > dayjs().add(1, "week")
-              }
+              hidden={!item.date || item.date >= dayjs()}
               href={item.url ? item.url : item.id}
               title={item.title}
             >

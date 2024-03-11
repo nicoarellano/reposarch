@@ -8,8 +8,7 @@ import {
   Dispatch,
 } from "react";
 import { SlidesReducer, SlidesActions, SlidesState } from "./reducer";
-import { Slides, Slide } from "../../types/types";
-import { slides } from "../../app/slides";
+import { slides } from "../../app/arcn5005/(main)/MainMenu";
 
 type InitialStateType = {
   slides: SlidesState;
@@ -20,6 +19,7 @@ const initialState = {
     totalSlides: slides.length - 1,
     slides: slides,
     currentSlideNumber: 0 as number,
+    title: "ARCN 5005 - Theory and Practice of Architectural Representation",
   },
 };
 

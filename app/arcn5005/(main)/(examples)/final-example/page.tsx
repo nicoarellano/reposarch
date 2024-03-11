@@ -1,8 +1,5 @@
 export default function FinalExample() {
   return (
-    <iframe
-      src="/arcn5005/f2023/students/nicolasarellanorisop/final/index.html"
-      className="grow"
-    />
+    <iframe src="https://cdt.vercel.app/carleton" className="h-full grow" />
   );
 }

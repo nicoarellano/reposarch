@@ -2,13 +2,16 @@
 
 import { useEffect, useState, ReactElement } from "react";
 
-import { arcn5005Lectures } from "../../../arcn5005Lectures";
-import { Lecture, Toc } from "../../../../types/types";
+import { arcn5005Lectures } from "../arcn5005Lectures";
+import { Lecture, Toc } from "../../../types/types";
 import { Header } from "../../../../components/Header";
 import { Footer } from "../../../../components/Footer";
+import { useRouter } from "next/navigation";
+
 import ListWithIcon from "../../../../components/Common/ListWithIcon";
 import ArrowRightIcon from "@mui/icons-material/ArrowRightRounded";
-import { useRouter } from "next/navigation";
+import VideoIcon from "@mui/icons-material/OndemandVideoRounded";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 interface Props {
   params: { number: string };
@@ -25,6 +28,19 @@ export default function Page({ params }): ReactElement<Props> {
 
   const router = useRouter();
 
+  const isMobile = useMediaQuery("(max-width: 600px)");
+
+  const recordings: { title: string; url?: string }[] = [];
+  if (lecture?.recordings)
+    lecture?.recordings.map((recording) => {
+      if (recording) {
+        recordings.push({
+          title: `${recording.title} (${recording.date.format("YY/MM/DD")})`,
+          url: recording.url,
+        });
+      }
+    });
+
   useEffect(() => {
     if (lecture?.content) {
       if (!params.number[1]) router.push("1");
@@ -34,13 +50,24 @@ export default function Page({ params }): ReactElement<Props> {
         const fullContent = [
           {
             element: (
-              <nav className="w-2/5">
-                <ListWithIcon
-                  list={lecture.toc as { title: string }[]}
-                  subheader="Table of Content"
-                  icon={<ArrowRightIcon />}
-                />
-              </nav>
+              <div className="flex gap-4 items-start">
+                <div>
+                  <ListWithIcon
+                    list={lecture.toc as { title: string }[]}
+                    subheader="Table of Content"
+                    icon={<ArrowRightIcon />}
+                  />
+                </div>
+                {!isMobile && lecture.recordings && (
+                  <div>
+                    <ListWithIcon
+                      list={recordings}
+                      subheader="Class Recordings"
+                      icon={<VideoIcon />}
+                    />
+                  </div>
+                )}
+              </div>
             ),
           },
           ...lecture?.content,
@@ -62,24 +89,28 @@ export default function Page({ params }): ReactElement<Props> {
   useEffect(() => {
     if (content.length > 0) {
       const currentContent = content[currentSlideNumber - 1];
-      if (currentContent?.notes)
+      console.clear();
+      if (currentContent?.notes) {
         // 🎶 Speaker notes as console log
-        console.log(`%c${currentContent.notes}`, "font-size: 40px");
+        console.log(
+          `%c${currentSlideNumber}- ==================================`,
+          "color: red; font-size: 30px"
+        );
+        console.log(`%c${currentContent.notes}`, "font-size: 35px");
+      }
       setCurrentSlideElement(currentContent.element);
     }
   }, [content, currentSlideNumber]);
 
   return (
-    <main className="flex flex-col w-screen h-screen justify-between">
-      <nav className="top-0 flex flex-row w-screen h-24 ">
-        <Header title={lecture?.title} />
-      </nav>
-      <section className="flex justify-center grow">
-        <section className=" flex flex-col items-center justify-center grow gap-8 mdx max-w-[80%] max-h-[580px]">
-          {currentSlideElement}
-        </section>
+    <main className="flex flex-col w-full h-screen justify-between">
+      <header className="top-0 flex flex-row w-full h-24 ">
+        <Header title={isMobile ? lecture?.id.toUpperCase() : lecture?.title} />
+      </header>
+      <section className=" flex flex-col items-center justify-center slides w-full h-3/4 ">
+        {currentSlideElement}
       </section>
-      <nav className="w-screen flex h-16 items-center">
+      <nav className="w-full flex justify-center h-16 items-center">
         <Footer list={content} currentPage={currentSlideNumber} />
       </nav>
     </main>

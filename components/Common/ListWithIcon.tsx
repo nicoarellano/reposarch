@@ -22,9 +22,9 @@ export default function ListWithIcon({
   return (
     <List
       sx={{
-        width: "100%",
         bgcolor: "background.paper",
         overflowY: "auto",
+        overflowX: "hidden",
       }}
       component="nav"
       aria-labelledby="nested-list-subheader"
@@ -36,7 +36,7 @@ export default function ListWithIcon({
             {Boolean(item.url) ? (
               <Link
                 href={
-                  item.url?.startsWith("http")
+                  item.url?.startsWith("http") || item.url?.startsWith("/")
                     ? item.url
                     : `${path}/${item.url}`
                 }

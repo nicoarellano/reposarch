@@ -1,4 +1,4 @@
-import { Resources } from "../../../../types/types";
+import { Resources } from "../../../types/types";
 
 export const Books: Resources = [
   {
@@ -24,7 +24,7 @@ export const Books: Resources = [
     url: "https://www.amazon.com/Art-Computer-Graphics-Programming-Introduction/dp/0442259913",
   },
   {
-    title: "Eric Raymond - The Cathedral and the Bazaar",
+    title: "Eric Raymond - The Cathedral and the Bazaar (1999)",
     url: "https://monoskop.org/images/e/e0/Raymond_Eric_S_The_Cathedral_and_the_Bazaar_rev_ed.pdf",
   },
   {
@@ -40,5 +40,9 @@ export const Books: Resources = [
   {
     title: "Picon, Antoine – Digital culture and architecture (2010)",
     url: "https://courseworks2.columbia.edu/files/594319/download?download_frd=1",
+  },
+  {
+    title: "Tools of Imagination - Susan Piedmont-Palladino",
+    url: "https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false",
   },
 ];
