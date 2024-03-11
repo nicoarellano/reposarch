@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { useContext } from "react";
 import { ThemeContext } from "../../middleware/Theme/context";
@@ -6,12 +6,20 @@ import { HeaderOfSlide } from "../../components/Header";
 import { SlidesFooter } from "../../components/Footer";
 import { dbbSlides } from "./DbbSlides";
 
+interface Props {
+  children: React.ReactNode;
+  params: { section: string };
+  searchParams: { mode: string };
+}
+
 export default function NestedTemplate({
   children,
-}: {
-  children: React.ReactNode;
-}) {
-  const { mode } = useContext(ThemeContext)["state"]["theme"];
+  params,
+  searchParams,
+}: Props) {
+  console.log(params, searchParams);
+  // const { mode } = useContext(ThemeContext)["state"]["theme"];
+  const mode = "light";
   return (
     <main className={`flex flex-col h-screen justify-between `}>
       <header

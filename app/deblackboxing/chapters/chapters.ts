@@ -18,43 +18,62 @@ import { Lectures } from "../../types/types";
 
 export const chapters: Lectures = [
   {
-    title: "Chapter 1: Introduction",
-    id: `chapter01`,
-    url: `chapter01`,
-    toc: [],
+    title: "Introduction",
+    id: `introduction`,
+    url: `introduction`,
+    toc: [
+      { title: "Digital tools for architects" },
+      {
+        title: "Building Information Modeling (BIM): The new tool in hand (?)",
+      },
+      { title: "Open-source: One way out" },
+      { title: "Digital education for architects" },
+    ],
   },
   {
-    title:
-      "Chapter 2: BIM properly using computers for architectural representation",
-    id: `chapter02`,
-    url: `chapter02`,
-    // content: week02,
-    toc: [{ title: "Digitalization of the physical wold" }],
+    title: "Literature Review",
+    id: `literature-review`,
+    url: `literature-review`,
+    toc: [
+      { title: "Coding as a language" },
+      { title: "Coding as a tool" },
+
+      { title: "Coding as an apparatus" },
+      { title: "Conclusions" },
+    ],
   },
 
   {
-    title: "Chapter 3: BIM Adoption",
-    id: `chapter03`,
-    url: `chapter03`,
+    title:
+      "Chapter 1: BIM properly using computers for architectural representation",
+    id: `chapter01`,
+    url: `chapter01`,
+    // content: week01,
+    toc: [{ title: "History of BIM and IFC" }],
+  },
+  {
+    title: "Chapter 2: BIM Adoption",
+    id: `chapter02`,
+    url: `chapter02`,
     // date: initialDate.add(2, "week"),
-    // content: week03,
+    // content: week02,
     toc: [{ title: "Sharing Blender experience" }],
   },
   {
-    title: "Chapter 4: Black boxes",
-    id: `chapter04`,
-    url: `chapter04`,
+    title: "Chapter 3: Black boxes",
+    id: `chapter03`,
+    url: `chapter03`,
     // date: initialDate.add(3, "week"),
-    // content: week04,
+    // content: week03,
     toc: [{ title: "Closed source formats" }],
   },
 
   {
-    title: "Chapter 5: Coding",
-    id: `chapter05`,
-    url: `chapter05`,
+    title: "Chapter 4: Coding",
+    id: `chapter04`,
+    url: `chapter04`,
     // date: initialDate.add(4, "week"),
-    // content: week05,
+    // content: week04,
     toc: [
       {
         title:
@@ -63,19 +82,19 @@ export const chapters: Lectures = [
     ],
   },
   {
-    title: "Chapter 6: Open source software for architects",
-    id: `chapter06`,
-    url: `chapter06`,
+    title: "Chapter 5: Open source software for architects",
+    id: `chapter05`,
+    url: `chapter05`,
     // date: initialDate.add(5, "week"),
-    // content: week06,
+    // content: week05,
     toc: [{ title: "Open vs Closed BIM" }],
   },
   {
-    title: "Chapter 7: De-blackboxing BIM",
-    id: `chapter07`,
-    url: `chapter07`,
+    title: "Chapter 6: De-blackboxing BIM",
+    id: `chapter06`,
+    url: `chapter06`,
     // date: initialDate.add(6, "week"),
-    // content: week07,
+    // content: week06,
     toc: [{ title: "Native IFC" }],
   },
   {

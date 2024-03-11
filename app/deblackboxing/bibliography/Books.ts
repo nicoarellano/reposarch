@@ -6,7 +6,7 @@ export const Books: Resources = [
     url: "https://courseworks2.columbia.edu/files/594343/download?download_frd=1",
   },
   {
-    title: "Carpo, Mario - The digital turn in architecture 1992-2012 (2013)",
+    title: "Mario, Carpo - The digital turn in architecture 1992-2012 (2013)",
     url: "https://andreaarianoitcaadsaggio.files.wordpress.com/2018/06/digital-turn.pdf",
   },
   {
@@ -29,7 +29,7 @@ export const Books: Resources = [
   },
   {
     title:
-      "Rushkoff, Douglas - Program or Be Programmed Ten Commands for a Digital Age (2010)",
+      "Douglas Rushkoff - Program or Be Programmed Ten Commands for a Digital Age (2010)",
     url: "https://addc401fall2016.files.wordpress.com/2016/08/rushkoff-program-or-be-programmed.pdf",
   },
   {
@@ -38,11 +38,11 @@ export const Books: Resources = [
     url: "https://www.gnu.org/philosophy/fsfs/rms-essays.pdf",
   },
   {
-    title: "Picon, Antoine – Digital culture and architecture (2010)",
+    title: "Antoine Picon - Digital culture and architecture (2010)",
     url: "https://courseworks2.columbia.edu/files/594319/download?download_frd=1",
   },
   {
-    title: "Tools of Imagination - Susan Piedmont-Palladino",
+    title: "Susan Piedmont-Palladino - Tools of Imagination (2007)",
     url: "https://books.google.com.na/books?id=1WUIIh99xDkC&printsec=frontcover&source=gbs_book_other_versions_r&cad=4#v=onepage&q&f=false",
   },
 ];

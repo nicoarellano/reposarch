@@ -21,6 +21,7 @@ export interface Resource {
   id?: string;
   url?: string;
   author?: string;
+  chicago?: string;
 }
 export type Resources = Resource[];
 

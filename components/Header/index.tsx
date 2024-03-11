@@ -13,7 +13,6 @@ interface Props {
 
 export function Header({ title }): ReactElement<Props> {
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
     <nav>

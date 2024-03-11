@@ -1,49 +1,23 @@
-"use client";
 import Image from "next/image";
+import Box from "../../components/Common/Box";
 
-import useMediaQuery from "@mui/material/useMediaQuery";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { Button, IconButton } from "@mui/material";
-
-export default function Arcn5005() {
-  const photo = "/images/reposarch.png";
-  const title = "reposarch";
-  const isMobile = useMediaQuery("(max-width: 600px)");
-
+export default function Deblackboxing() {
   return (
-    <section className=" flex flex-col items-center justify-between w-full m-5">
-      <section
-        className={
-          isMobile ? "" : "grid grid-cols-3 uneven-grid divide-x gap-5"
-        }
-      >
-        <div className=" flex items-center justify-center ">
-          <h1>LEFT</h1>
-        </div>
-        <div
-          className={
-            isMobile ? "hidden" : "flex items-center justify-center flex-col"
-          }
-        >
-          <h3 className="text-center">
-            <em>
-              Open source digital tools for <b>Architects</b>
-            </em>
-          </h3>
-          <Image priority src={photo} height={400} width={350} alt={title} />
-          <Button
-            className="px-5"
-            aria-label="Go To Github"
-            href={"https://github.com/nicoarellano/reposarch"}
-            color="inherit"
-          >
-            <GitHubIcon /> &nbsp; Go To Github
-          </Button>
-        </div>
-        <div className=" flex items-center justify-center flex-col">
-          <h1>RIGHT</h1>
-        </div>
-      </section>
-    </section>
+    <div className="flex flex-col gap-14 justify-center items-center w-[510px] text-center">
+      <h1>DE-BLACKBOXING BIM</h1>
+      <Image
+        priority
+        src={"/images/openBox.png"}
+        height={300}
+        width={300}
+        alt={"De-blackboxing"}
+      />
+      <h3>
+        TO DE-BLACKBOX IS TO SHORTEN THE GAP BETWEEN TOOL USERS AND THEIR TOOLS
+        FOR REPRESENTATION. <br />
+        THIS RESEARCH EXPLORES WAYS TO DE-BLACKBOXING DIGITAL TOOLS FOR
+        ARCHITECTS
+      </h3>
+    </div>
   );
 }
