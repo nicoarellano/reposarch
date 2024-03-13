@@ -99,7 +99,13 @@ export default function CourseDescription({ searchParams }: Props) {
           visible to users. To <q>de-blackbox</q> is to understand the process,
           parts, and connection of the system. The historian Antoine Picon
           states that
-          <i>
+          <i
+            className="cursor-pointer"
+            title="Terzidis, Algorithmic Architecture Kostas Terzidis,
+            Algorithmic Architecture (Netherlands: Taylor & Francis, 2006), vii.
+            Foreword by Antoine Picon: Algorithmic Architecture or the Computer
+            as a Double?"
+          >
             {" "}
             “it has become unavoidable to enter into the black box of
             programming in order to make a truly creative use of the computer.”
@@ -110,7 +116,7 @@ export default function CourseDescription({ searchParams }: Props) {
           <Link
             className="italic font-bold"
             href="https://en.wikipedia.org/wiki/Building_information_modeling"
-            title="Building information modeling is a process involving the generation and management of digital representations of the physical and functional characteristics of places. BIM is supported by various tools, technologies and contracts. Today it is mandated for multiple governments around the world."
+            title="Process involving the generation and management of digital representations of the physical and functional characteristics of buildings. BIM is supported by various tools, technologies and contracts."
           >
             Building Information Modeling (BIM)
           </Link>
@@ -120,12 +126,17 @@ export default function CourseDescription({ searchParams }: Props) {
           limitations.
           <span className="br-md" />
           Chuck Eastman, one of the fathers of BIM explains in his BIM Handbook
-          that
-          <q>
+          that{" "}
+          <i
+            className="cursor-pointer"
+            title="Chuck Eastman et al., BIM Handbook: A Guide to Building
+            Information Modeling for Owners, Designers, Engineers, Contractors,
+            and Facility Managers. (Germany: Wiley, 2018), 364"
+          >
             “BIM is not a thing or a type of software but a human activity that
             ultimately involves broad process changes in construction”
-          </q>
-          <sup>2</sup> Digital objects are coded to describe and represent
+          </i>
+          <sup>2</sup>. Digital objects are coded to describe and represent
           real-life building components. This facilitates a dialog with the
           model that was previously not possible. BIM could be defined as a
           communication and collaboration tool originally created to connect
@@ -147,13 +158,30 @@ export default function CourseDescription({ searchParams }: Props) {
           This research explores both obstacles—
           <strong>digital oblivion</strong> and <strong>black-boxes</strong>
           —that architects must overcome in order to benefit from a fruitful
-          relationship between programming and architecture.{" "}
+          relationship between programming and architecture. .{" "}
           <span className="br-md" />
           Coding has the potential to further expand the current limits of our
           imagination. Computers are a tremendous contribution to our
           architectural exploration if we continue to explore innovative
           research that includes human input with computer logic and processing
-          power to arrive at collaborative solutions. <span className="br-lg" />
+          power to arrive at collaborative solutions. <span className="br-md" />
+          This exploration as an epistemic object is done through 4 actions:{" "}
+          <Link className="italic font-bold" href="/deblackboxing/learn">
+            1) Learn
+          </Link>
+          ,{" "}
+          <Link className="italic font-bold" href="/deblackboxing/educate">
+            2) Educate
+          </Link>
+          ,{" "}
+          <Link className="italic font-bold" href="/deblackboxing/engage">
+            3) Engage
+          </Link>
+          ,{" "}
+          <Link className="italic font-bold" href="/deblackboxing/build">
+            4) Build
+          </Link>
+          <span className="br-lg" />
           <small>
             <sup>1</sup> Terzidis, Algorithmic Architecture Kostas Terzidis,
             Algorithmic Architecture (Netherlands: Taylor & Francis, 2006), vii.
