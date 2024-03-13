@@ -96,9 +96,9 @@ export default function CourseDescription({ searchParams }: Props) {
           been used since early 1940s. It has its origins in electronic circuits
           to describe a system that can be understood only in terms of its
           inputs and outputs, but which process is not accessible or even
-          visible to users. To <q>de-blackbox</q> is to understand the process,
-          parts, and connection of the system. The historian Antoine Picon
-          states that
+          visible to users. To <strong className="italic">de-blackbox</strong>{" "}
+          is to understand the process, parts, and connection of the system. The
+          historian Antoine Picon states that
           <i
             className="cursor-pointer"
             title="Terzidis, Algorithmic Architecture Kostas Terzidis,
@@ -165,7 +165,8 @@ export default function CourseDescription({ searchParams }: Props) {
           architectural exploration if we continue to explore innovative
           research that includes human input with computer logic and processing
           power to arrive at collaborative solutions. <span className="br-md" />
-          This exploration as an epistemic object is done through 4 actions:{" "}
+          In order to overcame these obstacles the epistemic object proposes 4
+          actions:{" "}
           <Link className="italic font-bold" href="/deblackboxing/learn">
             1) Learn
           </Link>
