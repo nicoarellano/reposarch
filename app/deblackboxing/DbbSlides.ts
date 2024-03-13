@@ -20,7 +20,7 @@ export const dbbSlides: Slides = [
   {
     id: "action",
     title: "Action: how to overcome Black boxes",
-    url: "/deblackboxing/Action",
+    url: "/deblackboxing/action",
   },
   {
     id: "learn",
