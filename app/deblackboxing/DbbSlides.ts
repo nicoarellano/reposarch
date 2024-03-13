@@ -14,8 +14,13 @@ export const dbbSlides: Slides = [
   { id: "chapters", title: "Chapters", url: "/deblackboxing/chapters" },
   {
     id: "epistemic-object",
-    title: "Epistemic Object",
+    title: "EPISTEMIC OBJECT and THEORY from InterViews",
     url: "/deblackboxing/epistemic-object",
+  },
+  {
+    id: "action",
+    title: "Action: how to overcome Black boxes",
+    url: "/deblackboxing/Action",
   },
   {
     id: "learn",
