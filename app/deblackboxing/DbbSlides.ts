@@ -11,11 +11,16 @@ export const dbbSlides: Slides = [
     title: "Abstract: De-blackboxing BIM ",
     url: "/deblackboxing/abstract",
   },
-  { id: "chapters", title: "Chapters", url: "/deblackboxing/chapters" },
+
   {
     id: "epistemic-object",
-    title: "Epistemic Object",
+    title: "EPISTEMIC OBJECT and THEORY from InterViews",
     url: "/deblackboxing/epistemic-object",
+  },
+  {
+    id: "action",
+    title: "Action: how to overcome Black boxes",
+    url: "/deblackboxing/action",
   },
   {
     id: "learn",
@@ -39,6 +44,7 @@ export const dbbSlides: Slides = [
     title: "Build a open source library for BIM",
     url: "/deblackboxing/build",
   },
+  { id: "chapters", title: "Chapters", url: "/deblackboxing/chapters" },
   {
     id: "bibliography",
     title: "Bibliography",

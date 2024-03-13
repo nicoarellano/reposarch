@@ -10,7 +10,7 @@ import CloseIcon from "@mui/icons-material/CloseRounded";
 import HomeIcon from "@mui/icons-material/HomeRounded";
 import TocIcon from "@mui/icons-material/ListAltRounded";
 import BookIcon from "@mui/icons-material/MenuBookRounded";
-import StudentPageIcon from "@mui/icons-material/HomeRepairService";
+import ToolboxIcon from "@mui/icons-material/HomeRepairService";
 
 import PaperIcon from "@mui/icons-material/FeedRounded";
 import EvaluationsIcon from "@mui/icons-material/EmojiEventsRounded";
@@ -75,7 +75,7 @@ export default function DeblackboxingSpeedDial() {
     {
       icon: (
         <Link href={"/deblackboxing/epistemic-object"}>
-          <StudentPageIcon sx={actionStyle} />
+          <ToolboxIcon sx={actionStyle} />
         </Link>
       ),
       name: "Epistemic Object",
