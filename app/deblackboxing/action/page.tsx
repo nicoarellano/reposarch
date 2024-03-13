@@ -39,7 +39,7 @@ export default function Home() {
             src={openBox}
             height={300}
             width={300}
-            alt="open box"
+            alt="Epistemic Object: The medium is the message - Marshall McLuhan" //https://en.wikipedia.org/wiki/The_medium_is_the_message
           />
         </div>
         <div className="flex flex-col gap-12">

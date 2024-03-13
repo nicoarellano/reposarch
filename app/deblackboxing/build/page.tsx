@@ -14,7 +14,7 @@ export default function Build() {
         </div>
       ) : (
         <iframe
-          src="https://cdt.vercel.app/carleton/asset?assetId=on_ott_arc_220485353&province=ON&municipality=Ottawa"
+          src="https://cdt.vercel.app/carleton/asset?assetId=ArchBuilding&province=ON&municipality=Ottawa"
           className="h-full grow"
         />
       )}
