@@ -1,0 +1,12 @@
+"use client";
+
+import { classListf2024 } from "./classList";
+import StudentsNestedList from "../../../../../components/Common/StudentsNestedList";
+
+export default function WeekToc() {
+  return (
+    <div className=" flex flex-col items-center justify-center grow gap-8 mdx">
+      <StudentsNestedList students={classListf2024} />
+    </div>
+  );
+}

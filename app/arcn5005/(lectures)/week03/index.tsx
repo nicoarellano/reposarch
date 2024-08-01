@@ -209,6 +209,11 @@ export const content: Toc = [
         />
       </>
     ),
+    notes:
+      "A pixel (px) (short for 'picture element') is the smallest addresable dot or square that make up an digital raster image on a display device.\
+      The more pixels the better image resolution. Image resolution of a computer monitor, smartphone, or TV screen, refers to the number of pixels. \
+      The intensity of each pixel is variable. \
+      In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue (RGB), or cyan, magenta, yellow, and black.",
   },
   { element: <EmojiTitle emoji={"👾"} title="What is a raster image?" /> },
   {
@@ -278,25 +283,25 @@ export const content: Toc = [
       />
     ),
   },
-  {
-    element: (
-      <>
-        <h2>Drawing with code (P5) ✏️</h2>
-        <br />
-        <iframe
-          className="w-full h-full"
-          src="/arcn5005/f2023/students/nicolasarellanorisop/p5/index.html"
-        />
-        <br />
-        <SimpleButton
-          title={"See Code"}
-          href={
-            "https://raw.githubusercontent.com/nicoarellano/reposarch/dev/public/arcn5005/f2023/students/nicolasarellanorisop/p5/sketch.js"
-          }
-        />
-      </>
-    ),
-  },
+  // {
+  //   element: (
+  //     <>
+  //       <h2>Drawing with code (P5) ✏️</h2>
+  //       <br />
+  //       <iframe
+  //         className="w-full h-full"
+  //         src="/arcn5005/f2023/students/nicolasarellanorisop/p5/index.html"
+  //       />
+  //       <br />
+  //       <SimpleButton
+  //         title={"See Code"}
+  //         href={
+  //           "https://raw.githubusercontent.com/nicoarellano/reposarch/dev/public/arcn5005/f2023/students/nicolasarellanorisop/p5/sketch.js"
+  //         }
+  //       />
+  //     </>
+  //   ),
+  // },
   {
     element: (
       <>

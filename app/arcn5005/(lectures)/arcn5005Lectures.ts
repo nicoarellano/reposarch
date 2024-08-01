@@ -16,7 +16,7 @@ import { content as week13 } from "./week13";
 import { content as final } from "./final";
 import { content as maps } from "./maps";
 
-const initialDate = dayjs("2023-09-07");
+const initialDate = dayjs("2024-09-04"); // for Fall 2024
 
 export const arcn5005Lectures: Lectures = [
   {

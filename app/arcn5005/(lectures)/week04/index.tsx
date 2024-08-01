@@ -832,7 +832,7 @@ For collaborating in big projects, such as the Carleton Digital Campus, or the P
     element: (
       <EmojiTitle
         emoji={"🤬‼️"}
-        title={"This course is about Open-source tools for architects!"}
+        title={"These are all proprietary solutions!!"}
       />
     ),
   },

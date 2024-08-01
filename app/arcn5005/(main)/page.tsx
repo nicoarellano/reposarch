@@ -7,6 +7,7 @@ import CalendarLegend from "./calendar/calendarLegend";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Button, IconButton } from "@mui/material";
+import Link from "next/link";
 
 export default function Arcn5005() {
   const photo = "/images/reposarch.png";
@@ -33,7 +34,9 @@ export default function Arcn5005() {
               Open source digital tools for <b>Architects</b>
             </em>
           </h3>
-          <Image priority src={photo} height={400} width={350} alt={title} />
+          <Link href={"/arcn5005"}>
+            <Image priority src={photo} height={400} width={350} alt={title} />
+          </Link>
           <Button
             className="px-5"
             aria-label="Go To Github"

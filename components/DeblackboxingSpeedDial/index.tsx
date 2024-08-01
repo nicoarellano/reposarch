@@ -11,9 +11,7 @@ import HomeIcon from "@mui/icons-material/HomeRounded";
 import TocIcon from "@mui/icons-material/ListAltRounded";
 import BookIcon from "@mui/icons-material/MenuBookRounded";
 import ToolboxIcon from "@mui/icons-material/HomeRepairService";
-
-import PaperIcon from "@mui/icons-material/FeedRounded";
-import EvaluationsIcon from "@mui/icons-material/EmojiEventsRounded";
+import Educate from "@mui/icons-material/RecordVoiceOverRounded";
 
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
@@ -76,6 +74,14 @@ export default function DeblackboxingSpeedDial() {
       icon: (
         <Link href={"/deblackboxing/epistemic-object"}>
           <ToolboxIcon sx={actionStyle} />
+        </Link>
+      ),
+      name: "Epistemic Object",
+    },
+    {
+      icon: (
+        <Link href={"/arcn5005"}>
+          <Educate sx={actionStyle} />
         </Link>
       ),
       name: "Epistemic Object",
