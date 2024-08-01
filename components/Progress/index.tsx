@@ -3,7 +3,7 @@
 import AnnouncementsdIcon from "@mui/icons-material/CampaignRounded";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 
-import { Announcements } from "../../app/arcn5005/f2023/announcements/arcn5005F2023Anouncements";
+import { Announcements } from "../../app/arcn5005/f2024/announcements/arcn5005F2024Anouncements";
 import ListWithIcon from "../Common/ListWithIcon";
 import { arcn5005Lectures } from "../../app/arcn5005/(lectures)/arcn5005Lectures";
 import dayjs from "dayjs";

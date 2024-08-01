@@ -10,7 +10,6 @@ export default function Three(): JSX.Element {
   useEffect(() => {
     const scene: THREE.Scene = new THREE.Scene();
 
-    console.log(refContainer);
     const size = {
       width: window.innerWidth,
       height: window.innerHeight * 0.75,
@@ -55,7 +54,7 @@ export default function Three(): JSX.Element {
     let mesh;
 
     loader.load(
-      "/arcn5005/f2023/students/nicolasarellanorisop/models/justin.glb",
+      "/arcn5005/f2023/students/nicolasarellanorisop/three/models/justin.glb",
       function (gltf) {
         gltf.scene.scale.x = 3;
         gltf.scene.scale.y = 3;

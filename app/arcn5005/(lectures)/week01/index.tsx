@@ -45,10 +45,10 @@ export const content: Toc = [
               <h4>PhD candidate at Carleton University</h4>
             </li>
             <li>
-              <h4>Amateur programmer</h4>
+              <h4>Computer Programmer</h4>
             </li>
             <li>
-              <h4>Father of a 3-years-old girl and a 10 months old boy</h4>
+              <h4>Father of a 3-years-old girl and a 1-years-old old boy</h4>
             </li>
           </ul>
         </div>

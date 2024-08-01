@@ -81,7 +81,7 @@ export default function CourseSpeedDial() {
     },
     {
       icon: (
-        <Link href={"/arcn5005/f2023/students"}>
+        <Link href={"/arcn5005/f2024/students"}>
           <StudentPageIcon sx={actionStyle} />
         </Link>
       ),
