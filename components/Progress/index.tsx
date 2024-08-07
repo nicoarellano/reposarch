@@ -18,7 +18,7 @@ arcn5005Lectures.map((lecture) => (lecture["url"] = lecture.id));
 const currentLectures = arcn5005Lectures.filter(
   (lecture) =>
     lecture.date &&
-    (lecture.date < dayjs(startingDate).add(8, "days") ||
+    (lecture.date < dayjs(startingDate).add(1, "days") ||
       lecture.date < dayjs().add(1, "days"))
 );
 
