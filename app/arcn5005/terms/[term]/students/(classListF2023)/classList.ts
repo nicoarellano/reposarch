@@ -3,13 +3,6 @@ import { Students } from "../../../../../types/types";
 export const classListf2023: Students = [
   {
     id: "#101316473",
-    username: "nicolasarellanorisop",
-    lastName: "Arellano (Final Assignment Example)",
-    firstName: "Nicolas",
-    email: "NicolasArellanoRisop@cmail.carleton.ca",
-  },
-  {
-    id: "#101316473",
     username: "andreeannlangevin",
     lastName: "Langevin",
     firstName: "Andree-Ann",
