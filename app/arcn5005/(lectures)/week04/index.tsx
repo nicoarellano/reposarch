@@ -1,10 +1,10 @@
-import { Toc } from "../../../types/types";
+import { Toc } from "@/app/types/types";
 
-import Image from "../../../../components/Common/Image";
-import Video from "../../../../components/Common/Video";
-import Quote from "../../../../components/Common/Quote";
-import EmojiTitle from "../../../../components/Common/EmojiTitle";
-import PdfViewer from "../../../../components/Common/PdfViewer";
+import Image from "@/components/Common/Image";
+import Video from "@/components/Common/Video";
+import Quote from "@/components/Common/Quote";
+import EmojiTitle from "@/components/Common/EmojiTitle";
+import PdfViewer from "@/components/Common/PdfViewer";
 
 import Scripting from "./Scripting.mdx";
 import RepetitiveTasks from "./RepetitiveTasks.mdx";

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Batool Hayajneh's Page</title>
+</head>
+<body>
+    <header>
+        <h1>Batool Hayajneh</h1>
+    </header>
+
+    </header>
+    <li> you're listening to The Quran, enjoy! </li>
+    
+
+    <audio autoplay loop>
+        <source src="resources/Quran.mp3" type="audio/mpeg"> 
+        
+    </audio>
+
+    
+    <ol class="info-list">
+    
+        <li>All human lives matter</li>
+        <li>Jordanian Canadian Architect</li>
+        <li>Comfort zone: Painting, Traveling, and Cooking</li>
+        <li>A mother of a joyful 18-month-old 'Ameer' and a newborn 'Hana' </li>
+        <li>Interests: Islamic Architecture and Culture Science</li>
+    </ol>
+
+    <header>
+        <h2>Assignments</h2>
+    </header>
+
+    <ol class="assignments-list">
+        <li>
+            <a href="https://reposarch.vercel.app/arcn5005/terms/f2023/students/albatoolhayajneh/about" target="_blank">
+                <button>About page-Assignment 1</button>
+            </a>
+        </li>
+        <li>
+            <a href="https://reposarch.vercel.app/arcn5005/terms/f2023/students/albatoolhayajneh/map" target="_blank">
+                <button>Three.js-Assignment 2</button>
+            </a>
+        </li>
+        <li>
+            <a href="https://reposarch.vercel.app/arcn5005/terms/f2023/students/albatoolhayajneh/three" target="_blank">
+                <button>Map-Assignment 3</button>
+            </a>
+        </li>
+    </ol>    
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Final exercise</title>
+        <link rel="stylesheet" href="./style.css" />
+        
+
+    <div class="image-container">
+        <img src="resources/batool.jpg" alt="Batool" class="profile-picture" id="mainImage" onclick="swapImage()">
+    </div>
+
+    <p style="margin-bottom: 5px;">Click on my photo to see how my name is written in Arabic</p>
+    <p style="margin-bottom: 5px;">Click on the moving photo to see what happens</p>
+<p style="margin-bottom: 5;"></p>
+
+<img src="resources/arch.jpg" alt="Arch" id="movingImage" class="circular-image">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var mainImage = document.getElementById('mainImage');
+            mainImage.onclick = function() {
+                if (mainImage.src.endsWith("batool.jpg")) {
+                    mainImage.src = "resources/name.jpg";
+                } else {
+                    mainImage.src = "resources/batool.jpg";
+                }
+            };
+        });
+    </script> 
+
+<script src="main.js"></script>
+    
+</body>
+</html>
+

@@ -1,4 +1,4 @@
-import SimpleAccordion from "../../../../components/Common/SimpleAccordion";
+import SimpleAccordion from "@/components/Common/SimpleAccordion";
 
 export default function Tags() {
   const tagsList = [

@@ -85,7 +85,7 @@ export default function OsmTest() {
     }
     async function loadIfcAsFragments(scene, fragmentIfcLoader, models) {
       const file = await fetch(
-        "/arcn5005/f2023/students/nicolasarellanorisop/ifc/parking.ifc"
+        "/arcn5005/terms/f2024/students/nicolasarellanorisop/ifc/parking.ifc"
       );
       const data = await file.arrayBuffer();
       const buffer = new Uint8Array(data);

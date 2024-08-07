@@ -1,11 +1,11 @@
-import { Toc } from "../../../types/types";
+import { Toc } from "@/app/types/types";
 
-import Image from "../../../../components/Common/Image";
-import Video from "../../../../components/Common/Video";
+import Image from "@/components/Common/Image";
+import Video from "@/components/Common/Video";
 
-import CartesianPlane from "../../../../components/CartesianPlane";
-import TOC from "../../(main)/toc/page";
-import SimpleButton from "../../../../components/Common/SimpleButton";
+import CartesianPlane from "@/components/CartesianPlane";
+import TOC from "@/app/arcn5005/(main)/toc/page";
+import SimpleButton from "@/components/Common/SimpleButton";
 
 export const content: Toc = [
   {

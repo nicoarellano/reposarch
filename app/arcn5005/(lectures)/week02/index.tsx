@@ -1,9 +1,9 @@
-import { Toc } from "../../../types/types";
-import Image from "../../../../components/Common/Image";
-import Video from "../../../../components/Common/Video";
-import PdfViewer from "../../../../components/Common/PdfViewer";
+import { Toc } from "@/app/types/types";
+import Image from "@/components/Common/Image";
+import Video from "@/components/Common/Video";
+import PdfViewer from "@/components/Common/PdfViewer";
 import Photogrammetry from "./photogrammetry.mdx";
-import EmojiTitle from "../../../../components/Common/EmojiTitle";
+import EmojiTitle from "@/components/Common/EmojiTitle";
 
 export const content: Toc = [
   {
@@ -62,37 +62,38 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/coding/Miquel_Reina_Ortiz_BW.jpg"
-        alt="Miquel Reina Ortiz"
-        caption="Miquel Reina Ortiz - Architect, Ph.D Candidate"
+        alt="Dr. Miquel Reina Ortiz"
+        caption="Dr. Miquel Reina Ortiz - Architect, Ph.D"
       />
     ),
     notes:
-      "Miquel Reina Ortiz is an Assistant Professor (2021-present) and a Ph.D. Candidate in Architecture (2015-present) at the Azrieli School of Architecture and Urbanism (ASAU) at Carleton University. His research concerns the relationship between different scales of intervention within the context of the Historic City. He has been teaching courses in heritage conservation, site and building documentation, urbanism and design studio at the ASAU. He collaborates with the Carleton Immersive Media Studio (CIMS) in the development of new digital workflows applied to heritage conservation. He has participated in international field works and co-authored articles on topics related to digital heritage documentation. He is the Canadian representative of the ICOMOS Emerging Professional Working Group (EPWG) since 2020. He studied architecture at ETSABarcelona (UPC), where he graduated with honours in 2011, and holds a MsC in Restoration and Rehabilitation at ETSABarcelona (UPC). His professional experience in the architecture studio Ravetllat-Ribas Barcelona (2008-2015) focused on adaptive reuse projects, and as a licensed architect, he has designed public space, housing, interiors and competitions.",
+      "Dr. Miquel Reina Ortiz is an Assistant Professor (2021-present) and a Ph.D. in Architecture (2015-present) at the Azrieli School of Architecture and Urbanism (ASAU) at Carleton University. His research concerns the relationship between different scales of intervention within the context of the Historic City. He has been teaching courses in heritage conservation, site and building documentation, urbanism and design studio at the ASAU. He collaborates with the Carleton Immersive Media Studio (CIMS) in the development of new digital workflows applied to heritage conservation. He has participated in international field works and co-authored articles on topics related to digital heritage documentation. He is the Canadian representative of the ICOMOS Emerging Professional Working Group (EPWG) since 2020. He studied architecture at ETSABarcelona (UPC), where he graduated with honours in 2011, and holds a MsC in Restoration and Rehabilitation at ETSABarcelona (UPC). His professional experience in the architecture studio Ravetllat-Ribas Barcelona (2008-2015) focused on adaptive reuse projects, and as a licensed architect, he has designed public space, housing, interiors and competitions.",
   },
   {
     element: (
       <>
-        <h3>Miquel Reina Ortiz</h3>
+        <h3>Dr. Miquel Reina Ortiz</h3>
         <br />
         <h5>
-          Miquel Reina Ortiz was an Assistant Professor (2021) and isa Ph.D.
-          Candidate in Architecture (2015-present) at the Azrieli School of
-          Architecture and Urbanism (ASAU) at Carleton University. His research
-          concerns the relationship between different scales of intervention
-          within the context of the Historic City. He has been teaching courses
-          in heritage conservation, site and building documentation, urbanism
-          and design studio at the ASAU. He collaborates with the Carleton
-          Immersive Media Studio (CIMS) in the development of new digital
-          workflows applied to heritage conservation. He has participated in
-          international field works and co-authored articles on topics related
-          to digital heritage documentation. He is the Canadian representative
-          of the ICOMOS Emerging Professional Working Group (EPWG) since 2020.
-          He studied architecture at ETSABarcelona (UPC), where he graduated
-          with honours in 2011, and holds a MsC in Restoration and
-          Rehabilitation at ETSABarcelona (UPC). His professional experience in
-          the architecture studio Ravetllat-Ribas Barcelona (2008-2015) focused
-          on adaptive reuse projects, and as a licensed architect, he has
-          designed public space, housing, interiors and competitions
+          Dr. Miquel Reina Ortiz is a Ph.D. in Architecture (2015-2023) at the
+          Azrieli School of Architecture and Urbanism (ASAU) at Carleton
+          University. He is an Adjunct professor at Universite de Montreal. He
+          was an Assistant Professor at Carleton (2021). His research concerns
+          the relationship between different scales of intervention within the
+          context of the Historic City. He has been teaching courses in heritage
+          conservation, site and building documentation, urbanism and design
+          studio at the ASAU. He collaborates with the Carleton Immersive Media
+          Studio (CIMS) in the development of new digital workflows applied to
+          heritage conservation. He has participated in international field
+          works and co-authored articles on topics related to digital heritage
+          documentation. He is the Canadian representative of the ICOMOS
+          Emerging Professional Working Group (EPWG) since 2020. He studied
+          architecture at ETSABarcelona (UPC), where he graduated with honours
+          in 2011, and holds a MsC in Restoration and Rehabilitation at
+          ETSABarcelona (UPC). His professional experience in the architecture
+          studio Ravetllat-Ribas Barcelona (2008-2015) focused on adaptive reuse
+          projects, and as a licensed architect, he has designed public space,
+          housing, interiors and competitions
         </h5>
       </>
     ),

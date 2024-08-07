@@ -54,7 +54,7 @@ export default function Three(): JSX.Element {
     let mesh;
 
     loader.load(
-      "/arcn5005/f2023/students/nicolasarellanorisop/three/models/justin.glb",
+      "/models/justin.glb",
       function (gltf) {
         gltf.scene.scale.x = 3;
         gltf.scene.scale.y = 3;

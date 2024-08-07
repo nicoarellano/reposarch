@@ -1,11 +1,11 @@
-import { Toc } from "../../../types/types";
-import Image from "../../../../components/Common/Image";
+import { Toc } from "@/app/types/types";
+import Image from "@/components/Common/Image";
 // import Image as NextImage from "next/image";
 
-import Video from "../../../../components/Common/Video";
-import Quote from "../../../../components/Common/Quote";
-import EmojiTitle from "../../../../components/Common/EmojiTitle";
-import PdfViewer from "../../../../components/Common/PdfViewer";
+import Video from "@/components/Common/Video";
+import Quote from "@/components/Common/Quote";
+import EmojiTitle from "@/components/Common/EmojiTitle";
+import PdfViewer from "@/components/Common/PdfViewer";
 
 import Degree from "./degree.mdx";
 import Curves from "./curves.mdx";
@@ -20,7 +20,7 @@ import Brep from "./brep.mdx";
 import Benefits from "./benefits.mdx";
 import Cons from "./cons.mdx";
 import BimDrivers from "./bimDrivers.mdx";
-import SimpleButton from "../../../../components/Common/SimpleButton";
+import SimpleButton from "@/components/Common/SimpleButton";
 
 export const content: Toc = [
   {
@@ -290,13 +290,13 @@ export const content: Toc = [
   //       <br />
   //       <iframe
   //         className="w-full h-full"
-  //         src="/arcn5005/f2023/students/nicolasarellanorisop/p5/index.html"
+  //         src="/arcn5005/terms/f2024/students/nicolasarellanorisop/p5/index.html"
   //       />
   //       <br />
   //       <SimpleButton
   //         title={"See Code"}
   //         href={
-  //           "https://raw.githubusercontent.com/nicoarellano/reposarch/dev/public/arcn5005/f2023/students/nicolasarellanorisop/p5/sketch.js"
+  //           "https://raw.githubusercontent.com/nicoarellano/reposarch/dev/public/arcn5005/terms/f2024/students/nicolasarellanorisop/p5/sketch.js"
   //         }
   //       />
   //     </>

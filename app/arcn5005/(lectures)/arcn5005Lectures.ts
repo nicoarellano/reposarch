@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Lectures } from "../../types/types";
+import { Lectures } from "@/app/types/types";
 import { content as week01 } from "./week01";
 import { content as week02 } from "./week02";
 import { content as week03 } from "./week03";
@@ -15,14 +15,15 @@ import { content as week12 } from "./week12";
 import { content as week13 } from "./week13";
 import { content as final } from "./final";
 import { content as maps } from "./maps";
+import { startingDate } from "../terms/currentTerm";
 
-const initialDate = dayjs("2024-09-04"); // for Fall 2024
+const initialDate = dayjs(startingDate); // for Fall 2024
 
 export const arcn5005Lectures: Lectures = [
   {
     title: "The art of computer graphics",
     id: `week01`,
-    url: `week01`,
+    url: `lectures/week01`,
     date: initialDate,
     content: week01,
     toc: [
@@ -46,7 +47,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Programming and digitalization of the physical world",
     id: `week02`,
-    url: `week02`,
+    url: `lectures/week02`,
     date: initialDate.add(1, "week"),
     content: week02,
     toc: [
@@ -74,7 +75,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Representation tools and processes for the AEC",
     id: `week03`,
-    url: `week03`,
+    url: `lectures/week03`,
     date: initialDate.add(2, "week"),
     content: week03,
     toc: [
@@ -96,7 +97,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Scripting",
     id: `week04`,
-    url: `week04`,
+    url: `lectures/week04`,
     date: initialDate.add(3, "week"),
     content: week04,
     toc: [
@@ -124,7 +125,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Internet, Collaboration and the Open source movement",
     id: `week05`,
-    url: `week05`,
+    url: `lectures/week05`,
     date: initialDate.add(4, "week"),
     content: week05,
     toc: [
@@ -163,7 +164,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Open source software for architects",
     id: `week06`,
-    url: `week06`,
+    url: `lectures/week06`,
     date: initialDate.add(5, "week"),
     content: week06,
     toc: [
@@ -191,7 +192,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "OS BIM Software: BlenderBIM",
     id: `week07`,
-    url: `week07`,
+    url: `lectures/week07`,
     date: initialDate.add(6, "week"),
     content: week07,
     toc: [
@@ -221,7 +222,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Web based 3D graphics",
     id: `week08`,
-    url: `week08`,
+    url: `lectures/week08`,
     date: initialDate.add(8, "week"),
     content: week08,
     toc: [
@@ -255,7 +256,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "IFC to the browser",
     id: `week09`,
-    url: `week09`,
+    url: `lectures/week09`,
     date: initialDate.add(9, "week"),
     content: week09,
     toc: [
@@ -286,7 +287,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Open Source GIS",
     id: `week10`,
-    url: `week10`,
+    url: `lectures/week10`,
     date: initialDate.add(10, "week"),
     content: week10,
     toc: [
@@ -310,7 +311,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Web based OS mapping and GIS",
     id: `week11`,
-    url: `week11`,
+    url: `lectures/week11`,
     date: initialDate.add(11, "week"),
     content: week11,
     toc: [
@@ -337,7 +338,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Advanced Toolbox - Going online, scalability and maintainability",
     id: `week12`,
-    url: `week12`,
+    url: `lectures/week12`,
     date: initialDate.add(12, "week"),
     content: week12,
     toc: [
@@ -364,7 +365,7 @@ export const arcn5005Lectures: Lectures = [
   {
     title: "Final assignment workshop and assignment 3 presentations",
     id: `week13`,
-    url: `week13`,
+    url: `lectures/week13`,
     date: initialDate.add(13, "week"),
     content: week13,
     toc: [
@@ -383,7 +384,7 @@ export const arcn5005Lectures: Lectures = [
     title: "🏁 Final Presentation 🏁",
     id: `final`,
     url: `final`,
-    date: dayjs("2023-12-20"),
+    date: initialDate.add(14, "week"),
     content: final,
     toc: [{ title: "🏁 Final presentations" }],
   },
@@ -391,7 +392,7 @@ export const arcn5005Lectures: Lectures = [
     title: "🗺️ Maps and GIS 🌎",
     id: `maps`,
     url: `maps`,
-    date: dayjs("2023-09-25"),
+    date: dayjs("2024-09-25"),
     content: maps,
     toc: [
       { title: "History of Mapping" },

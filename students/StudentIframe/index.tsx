@@ -11,7 +11,7 @@ export default function StudentIframe({
 }): ReactElement<Props> {
   return (
     <iframe
-      src={`/arcn5005/f2023/students/${username}/${assignment}/index.html`}
+      src={`/arcn5005/terms/f2023/students/${username}/${assignment}/index.html`}
       className="grow h-[550px] w-full"
     />
   );

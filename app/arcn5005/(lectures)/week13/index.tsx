@@ -1,10 +1,10 @@
-import { Toc } from "../../../types/types";
+import { Toc } from "@/app/types/types";
 
-import Image from "../../../../components/Common/Image";
-import Video from "../../../../components/Common/Video";
-import Quote from "../../../../components/Common/Quote";
-import EmojiTitle from "../../../../components/Common/EmojiTitle";
-import PdfViewer from "../../../../components/Common/PdfViewer";
+import Image from "@/components/Common/Image";
+import Video from "@/components/Common/Video";
+import Quote from "@/components/Common/Quote";
+import EmojiTitle from "@/components/Common/EmojiTitle";
+import PdfViewer from "@/components/Common/PdfViewer";
 
 import Final from "./Final.mdx";
 
@@ -76,7 +76,7 @@ export const content: Toc = [
     element: (
       <iframe
         className="w-full h-full"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/index.html"
+        src="/arcn5005/terms/f2024/students/nicolasarellanorisop/index.html"
       ></iframe>
     ),
   },

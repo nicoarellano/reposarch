@@ -30,26 +30,29 @@ export default function ListWithIcon({
       aria-labelledby="nested-list-subheader"
       subheader={<ListSubheader component="div">{subheader}</ListSubheader>}
     >
-      {list.map((item: { title: string; url?: string }, index) => (
-        <ListItem key={index}>
-          <ListItemIcon>
-            {Boolean(item.url) ? (
-              <Link
-                href={
-                  item.url?.startsWith("http") || item.url?.startsWith("/")
-                    ? item.url
-                    : `${path}/${item.url}`
-                }
-              >
+      {list.map((item: { title: string; url?: string }, index) => {
+        console.log(item);
+        return (
+          <ListItem key={index}>
+            <ListItemIcon>
+              {Boolean(item.url) ? (
+                <Link
+                  href={
+                    item.url?.startsWith("http") || item.url?.startsWith("/")
+                      ? item.url
+                      : `${path}/${item.url}`
+                  }
+                >
+                  <IconButton>{icon}</IconButton>
+                </Link>
+              ) : (
                 <IconButton>{icon}</IconButton>
-              </Link>
-            ) : (
-              <IconButton>{icon}</IconButton>
-            )}
-          </ListItemIcon>
-          <ListItemText primary={item.title} />
-        </ListItem>
-      ))}
+              )}
+            </ListItemIcon>
+            <ListItemText primary={item.title} />
+          </ListItem>
+        );
+      })}
     </List>
   );
 }

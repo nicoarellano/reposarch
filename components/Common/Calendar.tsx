@@ -6,16 +6,16 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
-import { arcn5005Lectures } from "../../app/arcn5005/(lectures)/arcn5005Lectures";
+import { arcn5005Lectures } from "@/app/arcn5005/(lectures)/arcn5005Lectures";
 
 const classDays = arcn5005Lectures.map((lecture) => lecture.date);
-const quizes = [dayjs("2023-10-05"), dayjs("2023-11-30")];
+const quizes = [dayjs("2024-10-02"), dayjs("2024-11-27")];
 const assignments = [
-  dayjs("2023-10-19"),
-  dayjs("2023-11-16"),
-  dayjs("2023-12-07"),
+  dayjs("2024-10-16"),
+  dayjs("2024-11-13"),
+  dayjs("2024-12-04"),
 ];
-const fallBreak = [dayjs("2023-10-26")];
+const fallBreak = [dayjs("2024-10-23")];
 
 const initialValue = dayjs();
 
@@ -38,7 +38,7 @@ function ServerDay(
   const isFallBreakDay = fallBreak.some((fallBreakDay) =>
     fallBreakDay.isSame(day, "day")
   );
-  const isFinalAssignmentDay = day.isSame(dayjs("2023-12-20"), "day");
+  const isFinalAssignmentDay = day.isSame(dayjs("2024-12-16"), "day");
 
   return (
     <Badge

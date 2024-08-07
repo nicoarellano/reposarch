@@ -1,6 +1,6 @@
 "use client";
 
-import ListWithIcon from "../../../../components/Common/ListWithIcon";
+import ListWithIcon from "@/components/Common/ListWithIcon";
 import LinkIcon from "@mui/icons-material/InsertLinkRounded";
 import InternetIcon from "@mui/icons-material/LanguageRounded";
 import BookIcon from "@mui/icons-material/MenuBookRounded";

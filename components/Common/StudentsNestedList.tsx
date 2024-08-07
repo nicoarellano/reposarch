@@ -1,6 +1,5 @@
 "use client";
 import { useState, Fragment } from "react";
-import ListSubheader from "@mui/material/ListSubheader";
 import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -9,10 +8,10 @@ import Collapse from "@mui/material/Collapse";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import StudentPageIcon from "@mui/icons-material/ContactPageRounded";
-import { Avatar, IconButton } from "@mui/material";
+import { Avatar, IconButton, ListSubheader } from "@mui/material";
 import { Students, Student } from "../../app/types/types";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import ScrollableAssignmetnsList from "./ScrollableAssignmentsList";
 
 interface Props {
@@ -42,14 +41,10 @@ export default function StudentsNestedList({ students }: Props) {
       }}
       component="nav"
       aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Students List
-        </ListSubheader>
-      }
+      subheader={<ListSubheader component="div">Students List</ListSubheader>}
     >
       {students.map((student: Student, index) => (
-        <Fragment key={student.username}>
+        <Fragment key={index}>
           <ListItemButton
             onClick={() => handleClick(index)}
             sx={{ borderBottom: 1, borderTop: 1, borderColor: "#ddd" }}
@@ -58,7 +53,7 @@ export default function StudentsNestedList({ students }: Props) {
               <ListItemIcon>
                 <IconButton>
                   <Avatar
-                    src={`/arcn5005/f2023/students/${student.username}/avatar.jpg`}
+                    src={`${path}/${student.username}/avatar.jpg`}
                     sx={{ width: 30, height: 30 }}
                   />
                 </IconButton>

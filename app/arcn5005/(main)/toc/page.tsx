@@ -1,6 +1,6 @@
 "use client";
 
-import NestedParentList from "../../../../components/Common/LecturesNestedList";
+import NestedParentList from "@/components/Common/LecturesNestedList";
 import { arcn5005Lectures } from "../../(lectures)/arcn5005Lectures";
 
 export default function TOC() {

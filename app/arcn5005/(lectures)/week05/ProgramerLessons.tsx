@@ -1,5 +1,5 @@
 import * as React from "react";
-import SimpleAccordion from "../../../../components/Common/SimpleAccordion";
+import SimpleAccordion from "@/components/Common/SimpleAccordion";
 
 export default function Freedoms() {
   const osiList = [
