@@ -77,28 +77,35 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
   }
 
   return (
-    <footer
-      className={`bottom-0 static w-screen justify-center flex h-16 items-center z-50 ${
-        mode === "light" ? "bg-light" : "bg-dark "
-      }`}
-    >
-      <Stack spacing={2} visibility={list.length > 1 ? "visible" : "hidden"}>
-        <Pagination
-          className="  flex justify-center p-3 small"
-          count={list.length}
-          size={isMobile ? "medium" : "large"}
-          page={page}
-          onChange={handlePaginationChange}
-          onTouchStart={() => hanldeTouch}
-          renderItem={(item) => (
-            <PaginationItem
-              slots={{ previous: BackIcon, next: ForwardIcon }}
-              {...item}
+    <>
+      {Boolean(list && list.length > 1) && (
+        <footer
+          className={`bottom-0 static w-screen justify-center flex h-16 items-center z-50 ${
+            mode === "light" ? "bg-light" : "bg-dark "
+          }`}
+        >
+          <Stack
+            spacing={2}
+            visibility={list.length > 1 ? "visible" : "hidden"}
+          >
+            <Pagination
+              className="  flex justify-center p-3 small"
+              count={list.length}
+              size={isMobile ? "medium" : "large"}
+              page={page}
+              onChange={handlePaginationChange}
+              onTouchStart={() => hanldeTouch}
+              renderItem={(item) => (
+                <PaginationItem
+                  slots={{ previous: BackIcon, next: ForwardIcon }}
+                  {...item}
+                />
+              )}
             />
-          )}
-        />
-      </Stack>
-    </footer>
+          </Stack>
+        </footer>
+      )}
+    </>
   );
 }
 

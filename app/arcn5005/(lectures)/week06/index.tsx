@@ -1,10 +1,10 @@
-import { Toc } from "../../../types/types";
+import { Toc } from "@/app/types/types";
 
-import Image from "../../../../components/Common/Image";
-import Video from "../../../../components/Common/Video";
-import Quote from "../../../../components/Common/Quote";
-import EmojiTitle from "../../../../components/Common/EmojiTitle";
-import PdfViewer from "../../../../components/Common/PdfViewer";
+import Image from "@/components/Common/Image";
+import Video from "@/components/Common/Video";
+import Quote from "@/components/Common/Quote";
+import EmojiTitle from "@/components/Common/EmojiTitle";
+import PdfViewer from "@/components/Common/PdfViewer";
 import ClosedBim from "./ClosedBim";
 
 export const content: Toc = [
@@ -571,7 +571,7 @@ it is very hard to achieve openBIM",
         <br />
         <iframe
           className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
-          src="/arcn5005/f2023/students/nicolasarellanorisop/code-editors/html-css.html"
+          src="/arcn5005/terms/f2024/students/nicolasarellanorisop/code-editors/html-css.html"
         />
       </>
     ),

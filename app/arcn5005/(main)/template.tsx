@@ -1,10 +1,10 @@
 "use client";
 
 import { useContext } from "react";
-import { SlidesFooter } from "../../../components/Footer";
-import { HeaderOfSlide } from "../../../components/Header";
+import { SlidesFooter } from "@/components/Footer";
+import { HeaderOfSlide } from "@/components/Header";
+import { ThemeContext } from "@/middleware/Theme/context";
 import { slides } from "./MainMenu";
-import { ThemeContext } from "../../../middleware/Theme/context";
 
 export default function NestedTemplate({
   children,

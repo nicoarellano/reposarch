@@ -1,9 +1,9 @@
 "use client";
 import * as React from "react";
-import Image from "../../../components/Common/Image";
+import Image from "@/components/Common/Image";
 import EducateIcon from "@mui/icons-material/RecordVoiceOverRounded";
 import { useRouter } from "next/navigation";
-import Arcn5005 from "../../arcn5005/(main)/page";
+import Arcn5005 from "@/app/arcn5005/(main)/[section]/page";
 
 export default function Educate() {
   const [clicked, setClicked] = React.useState(false);

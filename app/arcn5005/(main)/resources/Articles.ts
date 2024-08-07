@@ -1,4 +1,4 @@
-import { Resources } from "../../../types/types";
+import { Resources } from "@/app/types/types";
 
 export const Articles: Resources = [
   {

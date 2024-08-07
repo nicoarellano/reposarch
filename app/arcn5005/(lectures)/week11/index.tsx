@@ -1,15 +1,15 @@
-import { Toc } from "../../../types/types";
+import { Toc } from "@/app/types/types";
 
-import Image from "../../../../components/Common/Image";
-import Video from "../../../../components/Common/Video";
-import Quote from "../../../../components/Common/Quote";
-import EmojiTitle from "../../../../components/Common/EmojiTitle";
-import PdfViewer from "../../../../components/Common/PdfViewer";
+import Image from "@/components/Common/Image";
+import Video from "@/components/Common/Video";
+import Quote from "@/components/Common/Quote";
+import EmojiTitle from "@/components/Common/EmojiTitle";
+import PdfViewer from "@/components/Common/PdfViewer";
 
-import CartesianPlane from "../../../../components/CartesianPlane";
+import CartesianPlane from "@/components/CartesianPlane";
 import Cartography from "./Cartography.mdx";
-import SimpleButton from "../../../../components/Common/SimpleButton";
-import CodeButton from "../../../../components/Common/CodeButton";
+import SimpleButton from "@/components/Common/SimpleButton";
+import CodeButton from "@/components/Common/CodeButton";
 
 export const content: Toc = [
   {
@@ -554,7 +554,7 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/cesium/index.html"
+        src="/arcn5005/terms/f2024/students/nicolasarellanorisop/map/cesium/index.html"
         title="Cesium Js gl"
       ></iframe>
     ),
@@ -578,7 +578,7 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/mapbox/index.html"
+        src="/arcn5005/terms/f2024/students/nicolasarellanorisop/map/mapbox/index.html"
         title="Mapbox JS GL"
       ></iframe>
     ),
@@ -610,7 +610,7 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/leaflet/index.html"
+        src="/arcn5005/terms/f2024/students/nicolasarellanorisop/map/leaflet/index.html"
         title="Leaflet"
       ></iframe>
     ),
@@ -649,7 +649,7 @@ export const content: Toc = [
       <iframe
         width="100%"
         height="100%"
-        src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/index.html"
+        src="/arcn5005/terms/f2024/students/nicolasarellanorisop/map/maplibre/index.html"
         title="Maplibre JS GL"
       ></iframe>
     ),
@@ -860,12 +860,12 @@ export const content: Toc = [
         <iframe
           width="100%"
           height="100%"
-          src="/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/airports/index.html"
+          src="/arcn5005/terms/f2024/students/nicolasarellanorisop/map/maplibre/airports/index.html"
           title="Maplibre - Airports in Canada"
         ></iframe>
         <CodeButton
           href={
-            "https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/f2023/students/nicolasarellanorisop/map/maplibre/airports"
+            "https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/terms/f2024/students/nicolasarellanorisop/map/maplibre/airports"
           }
         />
       </>
