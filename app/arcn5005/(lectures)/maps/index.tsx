@@ -1,15 +1,15 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
-import CartesianPlane from "@/components/CartesianPlane";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
+import CartesianPlane from '@/components/CartesianPlane';
 
-import Cartography from "./Cartography.mdx";
-import SimpleButton from "@/components/Common/SimpleButton";
-import CodeButton from "@/components/Common/CodeButton";
+import Cartography from './Cartography.mdx';
+import SimpleButton from '@/components/Common/SimpleButton';
+import CodeButton from '@/components/Common/CodeButton';
 
 export const content: Toc = [
   {
@@ -17,36 +17,31 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv"
         title="Maps, GIS and Map renderers"
-        caption={"Maps, GIS and Map renderers"}
+        caption={'Maps, GIS and Map renderers'}
       />
     ),
   },
   {
     element: (
-      <div>
-        <br />
-        <h3>From the Renaissance to the Computer Era</h3>
-        <h4>Brief history of mapping</h4>
-        <br />
-        <Image
-          src="/images/computer-graphics/from-the-renaissance.jpg"
-          alt="Medieval hacker"
-        />
-      </div>
+      <Image
+        src="/images/computer-graphics/from-the-renaissance.jpg"
+        alt="Medieval hacker"
+        caption={'From the Renaissance to the Computer Era'}
+      />
     ),
   },
-  { element: <EmojiTitle emoji={"🗺️❔"} title={"What is a map?"} /> },
+  { element: <EmojiTitle emoji={'🗺️❔'} title={'What is a map?'} /> },
   {
     element: (
       <Image
         alt="Map"
         src="/images/maps/world-map-1570.jpg"
         href="https://en.wikipedia.org/wiki/Map"
-        caption={"Early World Map (1570) - Wikipedia"}
+        caption={'Early World Map (1570) - Wikipedia'}
       />
     ),
     notes:
-      "A map is a symbolic depiction emphasizing relationships between elements \
+      'A map is a symbolic depiction emphasizing relationships between elements \
         of some space, such as objects, regions, or themes. Many maps are static, \
         fixed to paper or some other durable medium, while others are dynamic or \
         interactive. The most commonly used to depict geography [...]\
@@ -57,10 +52,10 @@ export const content: Toc = [
         comes from the medieval Latin: Mappa mundi, wherein mappa meant napkin \
         or cloth and mundi the world. Thus, map became a shortened term \
         referring to a two-dimensional representation of the surface of the \
-        world.",
+        world.',
   },
   {
-    element: <EmojiTitle emoji={"🗺️❔"} title={"What is Cartography"} />,
+    element: <EmojiTitle emoji={'🗺️❔'} title={'What is Cartography'} />,
   },
   {
     element: (
@@ -69,15 +64,15 @@ export const content: Toc = [
         src="/images/maps/cartography.jpg"
         href="https://en.wikipedia.org/wiki/Cartography"
         caption={
-          "A medieval depiction of the Ecumene (inhabited world) (1482) - Wikipedia"
+          'A medieval depiction of the Ecumene (inhabited world) (1482) - Wikipedia'
         }
       />
     ),
     notes:
-      "Cartography is the study and practice of making and using maps. Combining science, \
+      'Cartography is the study and practice of making and using maps. Combining science, \
     aesthetics and technique, cartography builds on the premise that \
     reality (or an imagined reality) can be modeled in ways that \
-    communicate spatial information effectively.",
+    communicate spatial information effectively.',
   },
   {
     element: <Cartography />,
@@ -97,7 +92,7 @@ export const content: Toc = [
         src="/images/computer-graphics/rome-maps.png"
         alt="Maps of rome"
         caption={
-          "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
+          'Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome'
         }
       />
     ),
@@ -110,7 +105,7 @@ export const content: Toc = [
         src="/images/computer-graphics/rome-maps2.png"
         alt="Maps of rome"
         caption={
-          "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
+          'Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome'
         }
       />
     ),
@@ -122,14 +117,14 @@ export const content: Toc = [
         src="/images/computer-graphics/albertis-device.png"
         alt="Alberti's device"
         caption={
-          "Leon Battista Alberti’s device for the topographical survey of the city of Rome (1450)"
+          'Leon Battista Alberti’s device for the topographical survey of the city of Rome (1450)'
         }
       />
     ),
     notes:
-      "Alberti’s survey of Rome records the passage and lineamenta (outline) of certain features in the city of Rome including: \
+      'Alberti’s survey of Rome records the passage and lineamenta (outline) of certain features in the city of Rome including: \
       walls, rivers, streets, hills, and buildings, as well as the locations of temples, public works, gates, and monuments.\
-      An early version of CAD",
+      An early version of CAD',
   },
   {
     element: (
@@ -137,7 +132,7 @@ export const content: Toc = [
         src="/images/computer-graphics/albertis-grid.png"
         alt="Alberti's grid"
         caption={
-          "Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)"
+          'Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)'
         }
       />
     ),
@@ -167,7 +162,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "In the fifteenth century,  Albrecht Durer revolutionized drawing by adding precision and science to the process.",
+      'In the fifteenth century,  Albrecht Durer revolutionized drawing by adding precision and science to the process.',
   },
   {
     element: <CartesianPlane />,
@@ -177,7 +172,7 @@ export const content: Toc = [
   },
 
   {
-    element: <EmojiTitle emoji={"⛵🗺️"} title={"World mapping"} />,
+    element: <EmojiTitle emoji={'⛵🗺️'} title={'World mapping'} />,
   },
 
   {
@@ -186,17 +181,17 @@ export const content: Toc = [
         alt="Map"
         src="/images/maps/world-map-1526.jpg"
         href="https://en.wikipedia.org/wiki/Map"
-        caption={"Early World Map (1570) - Wikipedia"}
+        caption={'Early World Map (1570) - Wikipedia'}
       />
     ),
     notes:
-      " \
+      ' \
       History of Cartography, or map-making. \
       Maps have been one of the most \
       important human inventions for millennia, allowing humans to explain \
       and navigate their way through the world. The earliest surviving maps \
       include cave paintings followed by \
-      extensive maps produced by ancient Babylon, Greece and Rome, China, and India.",
+      extensive maps produced by ancient Babylon, Greece and Rome, China, and India.',
   },
   // projections:
   {
@@ -204,10 +199,10 @@ export const content: Toc = [
       <Image
         src="/images/maps/flatearth.jpg"
         alt="Flat Earth"
-        caption={"Traditional maps are 2 dimensional"}
+        caption={'Traditional maps are 2 dimensional'}
       />
     ),
-    notes: " In their most simple form maps are two dimensional constructs",
+    notes: ' In their most simple form maps are two dimensional constructs',
   },
 
   {
@@ -215,16 +210,16 @@ export const content: Toc = [
       <Image
         src="/images/maps/globe.png"
         alt="Spherical Earth"
-        caption={"World globes, spherical interpretation of the earth"}
+        caption={'World globes, spherical interpretation of the earth'}
       />
     ),
     notes:
-      "However since the age of Classical Greece maps have also \
-    been projected onto a three-dimensional sphere known as a globe.",
+      'However since the age of Classical Greece maps have also \
+    been projected onto a three-dimensional sphere known as a globe.',
   },
 
   {
-    element: <EmojiTitle emoji={"🌎➡️🗺️"} title={"World map projections"} />,
+    element: <EmojiTitle emoji={'🌎➡️🗺️'} title={'World map projections'} />,
   },
 
   {
@@ -233,7 +228,7 @@ export const content: Toc = [
         src="/images/maps/ProjectionCylindrical.png"
         alt="Cylindrical Projection "
         caption={
-          "Cylindrical projections are used for areas near the equator and for the entire earth but with very large distortions. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+          'Cylindrical projections are used for areas near the equator and for the entire earth but with very large distortions. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html'
         }
       />
     ),
@@ -245,7 +240,7 @@ export const content: Toc = [
         src="/images/maps/ProjectionConic.png"
         alt="Conic Projection "
         caption={
-          "Conical projections are good for areas near the mid-latitudes. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+          'Conical projections are good for areas near the mid-latitudes. - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html'
         }
       />
     ),
@@ -257,7 +252,7 @@ export const content: Toc = [
         src="/images/maps/ProjectionPlanar.png"
         alt="Planar Projection "
         caption={
-          "Planar - Azimuthal (or planar) are good for areas near the pole - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html"
+          'Planar - Azimuthal (or planar) are good for areas near the pole - Source: https://gsp.humboldt.edu/olm/Lessons/GIS/03%20Projections/ProjectionFamilies3.html'
         }
       />
     ),
@@ -270,10 +265,10 @@ export const content: Toc = [
       />
     ),
     notes:
-      "There are a number projection families and a large number of projection methods available based on these families. \
+      'There are a number projection families and a large number of projection methods available based on these families. \
     Each projection methods has trade-offs in how they distort the data as it is projected. \
     All projection methods contain some distortion but they vary in how much distortion they create between: \
-    Area, Form (shape or angles), Distance",
+    Area, Form (shape or angles), Distance',
   },
 
   {
@@ -282,33 +277,33 @@ export const content: Toc = [
         alt="Mercator projection"
         src="/images/maps/mercator.png"
         href="https://en.wikipedia.org/wiki/Mercator_projection"
-        caption={"Mercator 1569 world map - Wikipedia"}
+        caption={'Mercator 1569 world map - Wikipedia'}
       />
     ),
     notes:
-      "The Mercator projection is a cylindrical map projection presented by Flemish geographer and cartographer Gerardus Mercator in 1569. \
+      'The Mercator projection is a cylindrical map projection presented by Flemish geographer and cartographer Gerardus Mercator in 1569. \
       It became the standard map projection for navigation because it is unique in representing north as up and south as down everywhere while preserving local directions and shapes. \
-      ",
+      ',
   },
   {
     element: (
       <Image
         src="/images/maps/mercator2.png"
         alt="Mercator projection"
-        caption={"Mercator projection"}
+        caption={'Mercator projection'}
       />
     ),
     notes:
-      "It was widely used as the standard two-dimensional projection \
+      'It was widely used as the standard two-dimensional projection \
       of the earth for world maps until the late 20th century, when more \
-      accurate projections were formulated. ",
+      accurate projections were formulated. ',
   },
   {
     element: (
       <Image
         src="/images/maps/mercator-cylinder.png"
         alt="Mercator projection"
-        caption={"Mercator projection"}
+        caption={'Mercator projection'}
         href="https://cdn.britannica.com/55/109155-050-9FE4B08C/simple-cylindrical-projection-earth-map-globe-mercator.jpg"
       />
     ),
@@ -323,20 +318,20 @@ export const content: Toc = [
         src="/images/maps/orange.jpg"
         alt="orange"
         caption={
-          "The globe on the quarter-spherical or orange peel projection - Norman Leventhal 1919"
+          'The globe on the quarter-spherical or orange peel projection - Norman Leventhal 1919'
         }
         href="https://commons.wikimedia.org/wiki/File:The_official_map_of_the_world_-_showing_the_four_quarters_of_the_globe_on_the_quarter-spherical_or_orange_peel_projection_%2814533479258%29.jpg"
       />
     ),
     notes:
-      "It is called Orange Peel because of its resemblance to the flattened rind of a hand-peeled orange.",
+      'It is called Orange Peel because of its resemblance to the flattened rind of a hand-peeled orange.',
   },
   {
     element: (
       <Image
         src="/images/maps/goode.png"
         alt="Dymaxion map"
-        caption={"Goode homolosine projection 1923"}
+        caption={'Goode homolosine projection 1923'}
       />
     ),
     notes:
@@ -348,12 +343,12 @@ export const content: Toc = [
       <Image
         src="/images/maps/dymaxion.png"
         alt="Dymaxion map"
-        caption={"Buckminster Fuller - Dymaxion map (1943)"}
+        caption={'Buckminster Fuller - Dymaxion map (1943)'}
         href="https://en.wikipedia.org/wiki/Dymaxion_map"
       />
     ),
     notes:
-      "The Dymaxion map or Fuller map is a projection of a world map onto the surface of an icosahedron, which can be unfolded and flattened to two dimensions. The flat map is heavily interrupted in order to preserve shapes and sizes.",
+      'The Dymaxion map or Fuller map is a projection of a world map onto the surface of an icosahedron, which can be unfolded and flattened to two dimensions. The flat map is heavily interrupted in order to preserve shapes and sizes.',
   },
 
   {
@@ -361,7 +356,7 @@ export const content: Toc = [
       <Image
         src="/images/maps/dymaxion.jpg"
         alt="Dymaxion map"
-        caption={"Buckminster Fuller - Dymaxion map (1943)"}
+        caption={'Buckminster Fuller - Dymaxion map (1943)'}
       />
     ),
     notes:
@@ -369,14 +364,14 @@ export const content: Toc = [
   },
 
   {
-    element: <EmojiTitle emoji={"🌎💻🗺️"} title={"Modern Mapping"} />,
+    element: <EmojiTitle emoji={'🌎💻🗺️'} title={'Modern Mapping'} />,
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/computer.jpg"
         alt="Turin's Computer 1950s"
-        caption={"One of the first computers of the modern era - By Wikimedia"}
+        caption={'One of the first computers of the modern era - By Wikimedia'}
       />
     ),
     notes:
@@ -385,12 +380,12 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"🌎🗺️🥔❔"}
-        title={"Do you think the earth is flat or spherical?"}
+        emoji={'🌎🗺️🥔❔'}
+        title={'Do you think the earth is flat or spherical?'}
       />
     ),
     notes:
-      "none of the above, it is a Geoid, closer to an oblate spheroid or an ellipsoid",
+      'none of the above, it is a Geoid, closer to an oblate spheroid or an ellipsoid',
   },
 
   {
@@ -412,8 +407,8 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"🌎💻🗺️❔"}
-        title={"Does anybody knows what GIS stands for?"}
+        emoji={'🌎💻🗺️❔'}
+        title={'Does anybody knows what GIS stands for?'}
       />
     ),
     notes:
@@ -425,8 +420,8 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"🌎💻🗺️"}
-        title={"Geodetic reference systems - NAD83 vs WGS84"}
+        emoji={'🌎💻🗺️'}
+        title={'Geodetic reference systems - NAD83 vs WGS84'}
       />
     ),
   },
@@ -436,7 +431,7 @@ export const content: Toc = [
       <Image
         src="/images/maps/latlong.png"
         alt="WGS84"
-        caption={"WGS84: World Geodetic System"}
+        caption={'WGS84: World Geodetic System'}
       />
     ),
     notes:
@@ -529,7 +524,7 @@ export const content: Toc = [
   },
 
   {
-    element: <EmojiTitle emoji={"🌎"} title={"Web-based map renderers"} />,
+    element: <EmojiTitle emoji={'🌎'} title={'Web-based map renderers'} />,
   },
   {
     element: (
@@ -537,14 +532,14 @@ export const content: Toc = [
         src="/images/maps/cesium.png"
         alt="cesium"
         href="https://cesium.com/platform/cesiumjs/"
-        caption={"Cesium-gl-js"}
+        caption={'Cesium-gl-js'}
       />
     ),
     notes:
-      "If you need 3D, then Cesium is the place to start. True, MapLibre can provide some basic 3D terrain, but Cesium can give you full control of camera angles and allow users to spin around the location in view. It does a great job rendering topography (including 3D building cityscapes) and they’ve even started work on VR support.\
+      'If you need 3D, then Cesium is the place to start. True, MapLibre can provide some basic 3D terrain, but Cesium can give you full control of camera angles and allow users to spin around the location in view. It does a great job rendering topography (including 3D building cityscapes) and they’ve even started work on VR support.\
       Cesium is also great for its timing features. A built in clock control allows you start and stop playback of recorded data, as well fast forward, rewind, or slide across a timeline. You can even automate this by assigning availability times to features. In fact, Cesium takes it ones step further by including the positions of the sun and other celestial objects based on your timestamps. This can all be done through the JavaScript API, or by defining everything in a CZML file. If you want realistic 3D playback of position data, then Cesium is likely your best choice. \
       On top of these features, Cesium also maintains the usual set of GIS features that you’d expect from a mapping library and can present a 2D view if preferred. \
-      Look into Resium, for use in React. Source: https://javascript.plainenglish.io/5-javascript-mapping-libraries-when-to-use-them-961ff6366d0b",
+      Look into Resium, for use in React. Source: https://javascript.plainenglish.io/5-javascript-mapping-libraries-when-to-use-them-961ff6366d0b',
   },
 
   {
@@ -564,7 +559,7 @@ export const content: Toc = [
         src="/images/maps/mapbox.png"
         alt="mapbox"
         href="https://docs.mapbox.com/mapbox-gl-js/guides/"
-        caption={"Mapbox-gl-js"}
+        caption={'Mapbox-gl-js'}
       />
     ),
     notes:
@@ -584,7 +579,7 @@ export const content: Toc = [
 
   {
     element: (
-      <EmojiTitle emoji={"🌎"} title={"Open source web-based map renderers"} />
+      <EmojiTitle emoji={'🌎'} title={'Open source web-based map renderers'} />
     ),
   },
 
@@ -594,13 +589,13 @@ export const content: Toc = [
         src="/images/maps/leaflet.png"
         alt="leaflet"
         href=""
-        caption={"Leaflet"}
+        caption={'Leaflet'}
       />
     ),
     notes:
-      "Almost any web map project could start by considering Leaflet. It is easy to use and very popular. This mean it is easy to find help online and well as a large set of robust open source plugins. While the core Leaflet API handles the basic 2D map needs with ease, it may not address all the latest GIS technologies. This is where the plugins and extension from third party developers come in handy. There are plugins for vector tiles, Cloud Optimized GeoTiffs (COG), drawing ad hoc geometries, overlaying heat maps and so much more.\
+      'Almost any web map project could start by considering Leaflet. It is easy to use and very popular. This mean it is easy to find help online and well as a large set of robust open source plugins. While the core Leaflet API handles the basic 2D map needs with ease, it may not address all the latest GIS technologies. This is where the plugins and extension from third party developers come in handy. There are plugins for vector tiles, Cloud Optimized GeoTiffs (COG), drawing ad hoc geometries, overlaying heat maps and so much more.\
       What this all means in practice is that you can start with Leaflet quickly and easily and if you find that your needs grow, there are likely to be plugins to help Leaflet grow with you. If quick and flexible development are your goals, then Leaflet is a great choice. If you know that you have specific needs for newer technologies and want a library with native support for those requirements then you may also want to consider one of the following options in the your search. \
-      React developers may want to use Leaflet with the React Leaflet project.",
+      React developers may want to use Leaflet with the React Leaflet project.',
   },
 
   {
@@ -633,14 +628,14 @@ export const content: Toc = [
         src="/images/maps/maplibre.png"
         alt="maplibre"
         href=""
-        caption={"Maplibre-gl-js"}
+        caption={'Maplibre-gl-js'}
       />
     ),
     notes:
-      "MapLibre GL JS \
+      'MapLibre GL JS \
     MapLibre is the open source fork of MapBox GL. MapBox developers (including Leaflet creator Vlad Agafonkin) spent several years leading the open source charge in the web GIS world and still have many useful projects on GitHub. This is especially true when it comes to creating, styling, or serving vector tiles. However, their flagship web map library recently moved into a more commercial role, so MapLibre was born to continue serving the open source community. \
     As you might guess, it specializes in many of the technologies that MapBox has championed over the years, including vector tiles. It also provides a pseudo-3D tilted camera view. I’ve even seen video overlays on this platform. If you want to see the bleeding edge, you will often find it from the folks at MapBox and/or MapLibre. \
-    React developers can use MapLibre with react-map-gl.",
+    React developers can use MapLibre with react-map-gl.',
   },
   {
     element: (
@@ -668,30 +663,30 @@ export const content: Toc = [
       <Image
         src="/images/coding/devices-diagram.png"
         alt="Physical input and output hardware"
-        caption={"Physical input and output hardware"}
+        caption={'Physical input and output hardware'}
       />
     ),
     notes:
-      "Now our dialogue with design is in part mediated by computers.\
+      'Now our dialogue with design is in part mediated by computers.\
     This mediation occurs through multiple devices.\
     > There are different ways to interact with computers. \
     > Physical input hardware. translate our body expressions into digital language. \
         > The mouse or touchscreen. \
-        > The Keyboard that allows us to type words that are then translated into machine code to get executed by the computer, that action is called programming.",
+        > The Keyboard that allows us to type words that are then translated into machine code to get executed by the computer, that action is called programming.',
   },
   {
     element: (
       <Image
         src="/images/coding/interaction.png"
         alt="Human computer interaction"
-        caption={"Interfaces"}
+        caption={'Interfaces'}
       />
     ),
     notes:
-      "> Interfaces are devices or programs that allow users to interact with the code. \
+      '> Interfaces are devices or programs that allow users to interact with the code. \
       > Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. \
       the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium.\
-     makes the interaction with the computer more intuitive for the designers.",
+     makes the interaction with the computer more intuitive for the designers.',
   },
   {
     element: (
@@ -704,28 +699,28 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.",
+      'Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.',
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/sutherland.png"
         alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
-        caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
+        caption={'Ivan Sutherland inventor of Sketchpad, the first GUI'}
       />
     ),
     notes:
-      "In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+      'In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
        With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
-       GUIs made computer more accessible for non-programmers, including architects.",
+       GUIs made computer more accessible for non-programmers, including architects.',
   },
   {
     element: (
       <Image
         src="/images/coding/mac.png"
         alt="First Macintosh (1984)"
-        caption={"First Macintosh (1984)"}
+        caption={'First Macintosh (1984)'}
       />
     ),
     notes:
@@ -746,7 +741,7 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "> Text-based user interfaces (TUIs) use characters, text and symbols.",
+      '> Text-based user interfaces (TUIs) use characters, text and symbols.',
   },
 
   {
@@ -757,7 +752,7 @@ export const content: Toc = [
         <h1>Rise your hand if you have never coded</h1>
       </>
     ),
-    notes: "False, anybody literate person has coded",
+    notes: 'False, anybody literate person has coded',
   },
   {
     element: (
@@ -773,15 +768,15 @@ export const content: Toc = [
       </>
     ),
     notes:
-      " Code is a technology humans have created to systematize artificial language into abstract symbols.\
+      ' Code is a technology humans have created to systematize artificial language into abstract symbols.\
       Such symbols are conventions that lacked meaning until we combine them\
-      Then, they allow us to create and to communicate ideas",
+      Then, they allow us to create and to communicate ideas',
   },
   {
     element: <Image src="/images/coding-is.png" alt="Coding Is..." />,
     notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-    They are used to communicate with computers and with people through computers.",
+      'Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
+    They are used to communicate with computers and with people through computers.',
   },
   {
     element: (
@@ -796,8 +791,8 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
-      They are used to communicate with computers and with people through computers.",
+      'Computer coding is a way of translating human ideas to the electrical, mechanical world of computers.\
+      They are used to communicate with computers and with people through computers.',
   },
 
   {
@@ -809,11 +804,11 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Any computer program is written in some particular language. \
+      'Any computer program is written in some particular language. \
       The language (unlike a natural language such as English) has a precisely specified vocabulary and syntax that must be followed rigorously\
       The semantic properties are also well defined; any syntactically correct statement causes the computer to perform some specific action. \
       Thus a programming language provides a very precise means of communication and requires you to express yourself exactly; \
-      there is no latitude for vagueness , incompleteness, ambiguities, and errors that we tolerate in everyday speech",
+      there is no latitude for vagueness , incompleteness, ambiguities, and errors that we tolerate in everyday speech',
   },
   {
     element: (
@@ -825,12 +820,12 @@ export const content: Toc = [
       />
     ),
     notes:
-      "High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code.       All early computer languages were created in the second half of the twentieth century.\
+      'High-level PLs: Python,  C++, JavaScript, etc, which are how programmers express computational concepts. Based on spoken or written language (normally English) and are designed to translate our operations into machine code.       All early computer languages were created in the second half of the twentieth century.\
       Usually, artificial languages are not created from scratch, but rather they evolve throughout long periods of time and are the result of multiple socio-cultural events that are hard to explain.\
       However, in the case of computer languages, not only did the language itself had to be quickly invented artificially,\
       but because this was a totally new phenomenon, \
       there weren’t even terms to define the emerging actors that constituted this new ‘computer science’.\
-      The way in which programmers were naming things had to be invented as well",
+      The way in which programmers were naming things had to be invented as well',
   },
   {
     element: (
@@ -841,27 +836,27 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
-    and mathematically. So it is much easier to write, read, and understand programs in these languages.",
+      'Higher level algorithmic languages are much closer to the way that people generally express themselves verbally (English in our case) \
+    and mathematically. So it is much easier to write, read, and understand programs in these languages.',
   },
 
   {
-    element: <EmojiTitle emoji={"📃 💬 💻"} title={"Program"} />,
+    element: <EmojiTitle emoji={'📃 💬 💻'} title={'Program'} />,
     notes:
-      "a computer Programs is a Set of instructions written in a programming language that use syntax to systematize the logic of computer operations",
+      'a computer Programs is a Set of instructions written in a programming language that use syntax to systematize the logic of computer operations',
   },
 
   {
-    element: <EmojiTitle emoji={"📃📃📃 💬 💻"} title={"Software"} />,
+    element: <EmojiTitle emoji={'📃📃📃 💬 💻'} title={'Software'} />,
     notes:
-      "Software (which is also the plural of software) is a set of programs combined by a programmer to address a more specific problem.",
+      'Software (which is also the plural of software) is a set of programs combined by a programmer to address a more specific problem.',
   },
 
   {
     element: (
       <EmojiTitle
-        emoji={"💻🥇❔"}
-        title={"What is the most popular type of software in the world?"}
+        emoji={'💻🥇❔'}
+        title={'What is the most popular type of software in the world?'}
       />
     ),
   },
@@ -873,7 +868,7 @@ export const content: Toc = [
         alt="WORLD INTERNET USAGE AND POPULATION STATISTICS"
         href="https://en.wikipedia.org/wiki/Web_browser"
         caption={
-          "WORLD INTERNET USAGE AND POPULATION STATISTICS - 2023 Year Estimates"
+          'WORLD INTERNET USAGE AND POPULATION STATISTICS - 2023 Year Estimates'
         }
       />
     ),
@@ -885,7 +880,7 @@ export const content: Toc = [
         alt="Web Browsers"
         href="https://en.wikipedia.org/wiki/Web_browser"
         caption={
-          "Most popular web browsers - Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, and Safari"
+          'Most popular web browsers - Google Chrome, Microsoft Edge, Mozilla Firefox, Opera, and Safari'
         }
       />
     ),
@@ -901,7 +896,7 @@ export const content: Toc = [
         <Image
           src="/images/html-css-js.png"
           alt="JavaScript"
-          caption={"Technology behind web browsers: HTML - CSS - JS"}
+          caption={'Technology behind web browsers: HTML - CSS - JS'}
         />
       </>
     ),
@@ -914,12 +909,12 @@ export const content: Toc = [
         alt="JavaScript"
         href="https://www.w3schools.com/html/html_intro.asp"
         caption={
-          "Hyper Text Markup Language (HTML) describes the structure of a Web page"
+          'Hyper Text Markup Language (HTML) describes the structure of a Web page'
         }
       />
     ),
     notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
+      'Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world',
   },
 
   {
@@ -929,12 +924,12 @@ export const content: Toc = [
         alt="JavaScript"
         href="https://www.w3schools.com/css/css_intro.asp"
         caption={
-          "Cascading Style Sheets (CSS) is the language we use to style an HTML document"
+          'Cascading Style Sheets (CSS) is the language we use to style an HTML document'
         }
       />
     ),
     notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
+      'Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world',
   },
 
   {
@@ -944,12 +939,12 @@ export const content: Toc = [
           src="/images/javascript/js.png"
           alt="JavaScript"
           href="https://www.w3schools.com/js/default.asp"
-          caption={"JavaScript is the programming language of the Web"}
+          caption={'JavaScript is the programming language of the Web'}
         />
       </>
     ),
     notes:
-      "Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world",
+      'Do not confuse with Java,Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world',
   },
 
   {
@@ -971,9 +966,9 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"Lab 💻🌎"}
+        emoji={'Lab 💻🌎'}
         title={
-          "Installing an IDE and some extensions and creating a free map platform"
+          'Installing an IDE and some extensions and creating a free map platform'
         }
       />
     ),
@@ -984,11 +979,11 @@ export const content: Toc = [
         src="/images/computer-graphics/vsCode.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
-        caption={"Visual Studio Code, free IDE from Microsoft."}
+        caption={'Visual Studio Code, free IDE from Microsoft.'}
       />
     ),
     notes:
-      "we are going to use Visual Studio Code, which is a free IDE from Microsoft. It’s one of the most widely used in the web development world.",
+      'we are going to use Visual Studio Code, which is a free IDE from Microsoft. It’s one of the most widely used in the web development world.',
   },
   {
     element: (
@@ -997,12 +992,12 @@ export const content: Toc = [
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={
-          "We are going to download 5 extensions: \
+          'We are going to download 5 extensions: \
         1. Live Server\
         2. Prettier\
         3. Material Icon \
         4. Console Ninja\
-        5. Auto Import"
+        5. Auto Import'
         }
       />
     ),
@@ -1016,7 +1011,7 @@ export const content: Toc = [
           src="/images/computer-graphics/nodejs.png"
           alt="Node.js"
           href="https://en.wikipedia.org/wiki/Nodejs#"
-          caption={"Node.js - Wikipedia"}
+          caption={'Node.js - Wikipedia'}
         />
         <br />
         <SimpleButton
@@ -1032,16 +1027,16 @@ export const content: Toc = [
       <Image
         src="/images/maps/npm-maplibre.gif"
         alt="npm maplibre"
-        caption={"Npm example - Installing Maplibre-gl"}
+        caption={'Npm example - Installing Maplibre-gl'}
       />
     ),
   },
   {
     element: (
       <EmojiTitle
-        emoji={"Lab 💻🌎"}
+        emoji={'Lab 💻🌎'}
         title={
-          "Exercise: use Maplibre to create your custom map - Map GeoJson features"
+          'Exercise: use Maplibre to create your custom map - Map GeoJson features'
         }
       />
     ),
@@ -1049,8 +1044,8 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"JSON and GeoJSON 🧊📄❔"}
-        title={"What are they? How to add them to your map?"}
+        emoji={'JSON and GeoJSON 🧊📄❔'}
+        title={'What are they? How to add them to your map?'}
       />
     ),
   },
@@ -1059,12 +1054,12 @@ export const content: Toc = [
       <Image
         src="/images/maps/json.png"
         alt="json"
-        caption={"JSON - JavaScript Object Notation"}
+        caption={'JSON - JavaScript Object Notation'}
         href="https://www.json.org/json-en.html"
       />
     ),
     notes:
-      "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.",
+      'JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.',
   },
 
   {
@@ -1072,11 +1067,11 @@ export const content: Toc = [
       <Image
         src="/images/maps/json-example.png"
         alt="json"
-        caption={"JSON - JavaScript Object Notation"}
+        caption={'JSON - JavaScript Object Notation'}
         href="https://www.json.org/json-en.html"
       />
     ),
-    notes: "JSON (JavaScript Object Notation) - Example",
+    notes: 'JSON (JavaScript Object Notation) - Example',
   },
 
   {
@@ -1085,14 +1080,14 @@ export const content: Toc = [
         src="/images/maps/geojson.png"
         alt="geojson"
         caption={
-          "GeoJSON - GeoJSON is the Json format for encoding a variety of geographic data structures."
+          'GeoJSON - GeoJSON is the Json format for encoding a variety of geographic data structures.'
         }
         href="https://geojson.org/"
       />
     ),
     notes:
-      "GeoJSON is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. It is based on the JSON format. \
-    it supports the following geometry types: Point, LineString, Polygon, MultiPoint, MultiLineString, and MultiPolygon. Geometric objects with additional properties are Feature objects. Sets of features are contained by FeatureCollection objects.",
+      'GeoJSON is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. It is based on the JSON format. \
+    it supports the following geometry types: Point, LineString, Polygon, MultiPoint, MultiLineString, and MultiPolygon. Geometric objects with additional properties are Feature objects. Sets of features are contained by FeatureCollection objects.',
   },
 
   {
@@ -1100,13 +1095,13 @@ export const content: Toc = [
       <Image
         src="/images/maps/geojson-types.png"
         alt="geojson"
-        caption={"GeoJSON - Types"}
+        caption={'GeoJSON - Types'}
       />
     ),
     notes:
-      "GeoJSON: A format for encoding a variety of geographic data structures. \
+      'GeoJSON: A format for encoding a variety of geographic data structures. \
       It is an open standard format designed for representing simple geographical features, along with their non-spatial attributes. \
-      It is based on JSON, the JavaScript Object Notation. The features include points, line strings, polygons, and multi-part collections of these types",
+      It is based on JSON, the JavaScript Object Notation. The features include points, line strings, polygons, and multi-part collections of these types',
   },
 
   {
@@ -1114,7 +1109,7 @@ export const content: Toc = [
       <Image
         src="/images/maps/geojson-example.png"
         alt="geojson"
-        caption={"GeoJSON - Example"}
+        caption={'GeoJSON - Example'}
       />
     ),
   },
@@ -1130,7 +1125,7 @@ export const content: Toc = [
         ></iframe>
         <CodeButton
           href={
-            "https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/terms/f2024/students/nicolasarellanorisop/map/index.html"
+            'https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/terms/f2024/students/nicolasarellanorisop/map/index.html'
           }
         />
       </>
@@ -1148,8 +1143,8 @@ export const content: Toc = [
         ></iframe>
         <br />
         <SimpleButton
-          title={"Maplibre Examples"}
-          href={"https://maplibre.org/maplibre-gl-js/docs/examples/"}
+          title={'Maplibre Examples'}
+          href={'https://maplibre.org/maplibre-gl-js/docs/examples/'}
         />
       </>
     ),
@@ -1159,7 +1154,7 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/VO94LWTuofM?si=0gIlwSYCNOLYTFuS"
         title="Maplibre - Tutorial 1"
-        caption={"Maplibre - Tutorial 1"}
+        caption={'Maplibre - Tutorial 1'}
       />
     ),
   },

@@ -60,15 +60,11 @@ export const content: Toc = [
   },
   {
     element: (
-      <div>
-        <br />
-        <h3>From the Renaissance to the Computer Era</h3>
-        <br />
-        <Image
-          src="/images/computer-graphics/from-the-renaissance.jpg"
-          alt="Medieval hacker"
-        />
-      </div>
+      <Image
+        src="/images/computer-graphics/from-the-renaissance.jpg"
+        alt="Medieval hacker"
+        caption={'From the Renaissance to the Computer Era'}
+      />
     ),
   },
   {

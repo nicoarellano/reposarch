@@ -82,14 +82,32 @@ strong {
   font-weight: bolder;
 }
 
-.slides {
-  text-align: center;
-  max-width: 90%;
-  display: flex;
-  align-items: center;
-  align-self: center;
+.lecture-grid {
+  display: grid;
+  grid-template-rows: 6rem 1fr 4rem;
+  height: 100vh;
+  width: 100vw;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-rows: 1fr 4rem;
+  height: 100%;
+  width: 100%;
+}
+
+.slides {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 3rem;
+}
 
 .slides h1 {
   font-size: 60px;

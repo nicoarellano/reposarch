@@ -190,27 +190,26 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
-    title: 'OS BIM Software: BonsaiBIM (formerly BlenderBIM)',
+    title: 'OS BIM Software: BonsaiBIM',
     id: `week07`,
     url: `lectures/week07`,
     date: initialDate.add(6, 'week'),
     content: week07,
     toc: [
       {
-        title:
-          'BonsaiBIM (formerly BlenderBIM) - Guess lecturer: Raphaël Vouilloz',
+        title: 'BonsaiBIM - Guess lecturer: Raphaël Vouilloz',
       },
       {
         title:
           '🔴 Assignment 1 presentation - Using HTML and CSS to create your assignment portal',
       },
       { title: 'Native IFC' },
-      { title: '🖥️ LAB 7: BonsaiBIM (formerly BlenderBIM): Native IFC' },
+      { title: '🖥️ LAB 7: BonsaiBIM: Native IFC' },
     ],
     recordings: [
       {
         url: 'https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7',
-        title: 'Raphael Vouilloz - BonsaiBIM (formerly BlenderBIM)',
+        title: 'Raphael Vouilloz - BonsaiBIM',
         date: dayjs('2023/10/19'),
       },
     ],
