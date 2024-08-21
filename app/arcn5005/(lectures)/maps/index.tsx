@@ -1125,12 +1125,12 @@ export const content: Toc = [
         <iframe
           width="100%"
           height="100%"
-          src="/arcn5005/terms/f2024/students/nicolasarellanorisop/map/maplibre/airports/index.html"
+          src="/arcn5005/terms/f2024/students/nicolasarellanorisop/map/index.html"
           title="Maplibre - Airports in Canada"
         ></iframe>
         <CodeButton
           href={
-            "https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/terms/f2024/students/nicolasarellanorisop/map/maplibre/airports"
+            "https://github.com/nicoarellano/reposarch/tree/dev/public/arcn5005/terms/f2024/students/nicolasarellanorisop/map/index.html"
           }
         />
       </>

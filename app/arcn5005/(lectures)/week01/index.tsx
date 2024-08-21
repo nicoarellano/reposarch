@@ -1,17 +1,17 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
 
-import CartesianPlane from "@/components/CartesianPlane";
-import TOC from "@/app/arcn5005/(main)/toc/page";
-import SimpleButton from "@/components/Common/SimpleButton";
+import CartesianPlane from '@/components/CartesianPlane';
+import TOC from '@/app/arcn5005/(main)/toc/page';
+import SimpleButton from '@/components/Common/SimpleButton';
 
 export const content: Toc = [
   {
     element: (
       <>
-        <h1>Welcome everyone to ARCN5005 Fall 2023</h1>
+        <h1>Welcome everyone to ARCN5005 Fall 2024</h1>
         <br />
         <h2>Looking forward to meeting you all</h2>
       </>
@@ -20,7 +20,7 @@ export const content: Toc = [
   {
     element: <h1>Territory Acknowledgment</h1>,
     notes:
-      "I would like to begin by acknowledging that the land on which we gather is the traditional and unceded territory of the Algonquin nation.",
+      'I would like to begin by acknowledging that the land on which we gather is the traditional and unceded territory of the Algonquin nation.',
   },
   {
     element: (
@@ -48,7 +48,7 @@ export const content: Toc = [
               <h4>Computer Programmer</h4>
             </li>
             <li>
-              <h4>Father of a 3-years-old girl and a 1-years-old old boy</h4>
+              <h4>Father of a 4-years-old girl and a 2-years-old boy</h4>
             </li>
           </ul>
         </div>
@@ -77,7 +77,7 @@ export const content: Toc = [
         src="/images/computer-graphics/rome-maps.png"
         alt="Maps of rome"
         caption={
-          "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
+          'Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome'
         }
       />
     ),
@@ -88,7 +88,7 @@ export const content: Toc = [
         src="/images/computer-graphics/rome-maps2.png"
         alt="Maps of rome"
         caption={
-          "Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome"
+          'Graziano Mario Valenti, Jessica Romor: Leon Battista Alberti and the Survey of the Walls of Rome'
         }
       />
     ),
@@ -99,14 +99,14 @@ export const content: Toc = [
         src="/images/computer-graphics/albertis-device.png"
         alt="Alberti's device"
         caption={
-          "Leon Battista Alberti’s device for the topographical survey of the city of Rome (1450)"
+          'Leon Battista Alberti’s device for the topographical survey of the city of Rome (1450)'
         }
       />
     ),
     notes:
-      "Alberti’s survey of Rome records the passage and lineamenta (outline) of certain features in the city of Rome including: \
+      'Alberti’s survey of Rome records the passage and lineamenta (outline) of certain features in the city of Rome including: \
       walls, rivers, streets, hills, and buildings, as well as the locations of temples, public works, gates, and monuments.\
-      An early version of CAD",
+      An early version of CAD',
   },
   {
     element: (
@@ -114,7 +114,7 @@ export const content: Toc = [
         src="/images/computer-graphics/albertis-grid.png"
         alt="Alberti's grid"
         caption={
-          "Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)"
+          'Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)'
         }
       />
     ),
@@ -144,7 +144,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "In the fifteenth century,  Albrecht Durer revolutionized drawing by adding precision and science to the process.",
+      'In the fifteenth century,  Albrecht Durer revolutionized drawing by adding precision and science to the process.',
   },
   {
     element: (
@@ -155,7 +155,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      "The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637",
+      'The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637',
   },
   {
     element: <CartesianPlane />,
@@ -167,7 +167,7 @@ export const content: Toc = [
       <Image
         src="/images/computer-graphics/computer.jpg"
         alt="Turin's Computer 1950s"
-        caption={"One of the first computers of the modern era - By Wikimedia"}
+        caption={'One of the first computers of the modern era - By Wikimedia'}
       />
     ),
     notes:
@@ -179,7 +179,7 @@ export const content: Toc = [
         src="/images/computer-graphics/mitchell.jpg"
         alt="The Art of Computer Graphics Programming"
         caption={
-          "The Art of Computer Graphics Programming - William J. Mitchell (1987)"
+          'The Art of Computer Graphics Programming - William J. Mitchell (1987)'
         }
       />
     ),
@@ -210,78 +210,78 @@ export const content: Toc = [
       <Image
         src="/images/computer-graphics/sutherland.png"
         alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
-        caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
+        caption={'Ivan Sutherland inventor of Sketchpad, the first GUI'}
       />
     ),
     notes:
-      "In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+      'In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
        With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
        GUIs made computer more accessible for non-programmers, including architects.\
        Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\
-       Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.",
+       Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.',
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/digital-turns.png"
         alt="Digital Turns"
-        caption={"Mario Carpo First and Second digital Turns in Architecture"}
+        caption={'Mario Carpo First and Second digital Turns in Architecture'}
         href="https://andreaarianoitcaadsaggio.files.wordpress.com/2018/06/digital-turn.pdf"
       />
     ),
-    notes: "",
+    notes: '',
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/analog-process.png"
         alt="Analog Process"
-        caption={"Analog creative process"}
+        caption={'Analog creative process'}
       />
     ),
     notes:
-      "We have been using analogue tools for centuries to express our creativity.\
-    This allows a particular relationship with the object.",
+      'We have been using analogue tools for centuries to express our creativity.\
+    This allows a particular relationship with the object.',
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/process-with-gui.png"
         alt="Digital Creative Process"
-        caption={"Digital creative process with GUI"}
+        caption={'Digital creative process with GUI'}
       />
     ),
     notes:
-      "Just as the new representational technology of pencil and paper challenged Renaissance architects to rethink the nature of their work away from the construction site,\
+      'Just as the new representational technology of pencil and paper challenged Renaissance architects to rethink the nature of their work away from the construction site,\
        today’s new representational technology must find ways to nurture the material imagination.\
-        - Susan Piedmon-Palladino - Tools of the Imagination",
+        - Susan Piedmon-Palladino - Tools of the Imagination',
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/workplace.png"
         alt="Change in the workplace"
-        caption={"With the change of the tools, the way we work changes..."}
+        caption={'With the change of the tools, the way we work changes...'}
       />
     ),
     notes:
-      "25 years ago, Using computers for drafting in architecture offices was not common. \
+      '25 years ago, Using computers for drafting in architecture offices was not common. \
     Design was done by hand. Today, no architectural practice could do without digital technology \
-    Antoine Picon - Digital culture and architecture ",
+    Antoine Picon - Digital culture and architecture ',
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/buildings.png"
         alt="Change of the buildings"
-        caption={"...our buildings change..."}
+        caption={'...our buildings change...'}
       />
     ),
     notes:
-      "Almost a generation ago, the early software for computer aided design and manufacturing (CAD/CAM)\
+      'Almost a generation ago, the early software for computer aided design and manufacturing (CAD/CAM)\
      spawned a style of smooth and curving lines and surfaces that gave visible form to the first digital age,\
-      and left an indelible mark on contemporary architecture. - Mario Carpo - The Second Digital Turn",
+      and left an indelible mark on contemporary architecture. - Mario Carpo - The Second Digital Turn',
   },
   {
     element: (
@@ -308,14 +308,14 @@ export const content: Toc = [
       <Image
         src="/images/computer-graphics/singapore.jpg"
         alt="Change of the buildings"
-        caption={"...our cities too"}
+        caption={'...our cities too'}
       />
     ),
     notes:
-      "All tools modify the gestures of their users,   \
+      'All tools modify the gestures of their users,   \
      this feedback often leaves a visible trace. When these traces become consistent and pervasive,    \
      they coalesce into the style of an age and express the spirit of a time.    \
-     - Mario Carpo - The Second Digital Turn",
+     - Mario Carpo - The Second Digital Turn',
   },
   {
     element: (
@@ -338,14 +338,14 @@ export const content: Toc = [
       <Image
         src="/images/computer-graphics/creative-process.png"
         alt="Digital Creative Process"
-        caption={"Digital Creative Process"}
+        caption={'Digital Creative Process'}
       />
     ),
     notes:
-      "The machine has been instrumental in the direction taken by digital architecture... \
+      'The machine has been instrumental in the direction taken by digital architecture... \
     Since the early developments of CAD all sorts of new and spectacular forms have appeared on screens... \
     begun to transform the built environment. \
-    Antoine Picon - Digital culture and architecture",
+    Antoine Picon - Digital culture and architecture',
   },
   {
     element: (
@@ -391,8 +391,8 @@ export const content: Toc = [
       </h4>
     ),
     notes:
-      "This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
-      In some cases, an accessible tool, but in most cases, an utterly opaque one.",
+      'This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
+      In some cases, an accessible tool, but in most cases, an utterly opaque one.',
   },
   {
     element: (
@@ -402,8 +402,8 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "The term black box to describe opaque computer processes has been used since early\
-      1940s. It has its origins in electronic circuits",
+      'The term black box to describe opaque computer processes has been used since early\
+      1940s. It has its origins in electronic circuits',
   },
   {
     element: (
@@ -441,10 +441,10 @@ export const content: Toc = [
       </>
     ),
     notes:
-      "Two conditions must be met before architects can fully de-black box the digital toolbox.\
+      'Two conditions must be met before architects can fully de-black box the digital toolbox.\
     Firstly, architects must have a working knowledge of computer programming. Secondly, the\
     source code—the list of human-readable instructions that define a computer program—of the\
-    software that they use must be accessible for modification by the user.",
+    software that they use must be accessible for modification by the user.',
   },
   {
     element: (
@@ -455,7 +455,7 @@ export const content: Toc = [
         <h3>2. Participate in the Open source communities</h3>
       </>
     ),
-    notes: "",
+    notes: '',
   },
   {
     element: (
@@ -472,7 +472,7 @@ export const content: Toc = [
         <h5>
           <br />
           <em>
-            William J. Mitchell - The Art of Computer Graphics Programming{" "}
+            William J. Mitchell - The Art of Computer Graphics Programming{' '}
           </em>
         </h5>
       </h4>
@@ -480,7 +480,7 @@ export const content: Toc = [
   },
   {
     element: <TOC />,
-    notes: "",
+    notes: '',
   },
   {
     element: (
@@ -531,7 +531,7 @@ export const content: Toc = [
         />
       </>
     ),
-    notes: "There are thousands of programming languages",
+    notes: 'There are thousands of programming languages',
   },
   {
     element: (
@@ -570,11 +570,11 @@ export const content: Toc = [
         src="/images/computer-graphics/vsCode.png"
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
-        caption={"Visual Studio Code, free IDE from Microsoft."}
+        caption={'Visual Studio Code, free IDE from Microsoft.'}
       />
     ),
     notes:
-      "we are going to use Visual Studio Code, which is a free IDE from Microsoft. It’s one of the most widely used in the web development world.",
+      'we are going to use Visual Studio Code, which is a free IDE from Microsoft. It’s one of the most widely used in the web development world.',
   },
   {
     element: (
@@ -583,12 +583,12 @@ export const content: Toc = [
         alt="Visual Studio Code"
         href="https://code.visualstudio.com/download"
         caption={
-          "We are going to download 5 extensions: \
+          'We are going to download 5 extensions: \
         1. Live Server\
         2. Prettier\
         3. Material Icon \
         4. Console Ninja\
-        5. Auto Import"
+        5. Auto Import'
         }
       />
     ),
@@ -604,7 +604,7 @@ export const content: Toc = [
           src="/images/computer-graphics/git.png"
           alt="Git"
           href="https://en.wikipedia.org/wiki/Git"
-          caption={"Git - Wikipedia"}
+          caption={'Git - Wikipedia'}
         />
         <br />
         <SimpleButton
@@ -625,7 +625,7 @@ export const content: Toc = [
           src="/images/computer-graphics/nodejs.png"
           alt="Node.js"
           href="https://en.wikipedia.org/wiki/Nodejs#"
-          caption={"Node.js - Wikipedia"}
+          caption={'Node.js - Wikipedia'}
         />
         <br />
         <SimpleButton
@@ -646,7 +646,7 @@ export const content: Toc = [
           src="/images/computer-graphics/GitHub-logo.png"
           alt="GitHub"
           href="https://en.wikipedia.org/wiki/GitHub#"
-          caption={"GitHub - Wikipedia"}
+          caption={'GitHub - Wikipedia'}
         />
       </>
     ),
@@ -663,7 +663,7 @@ export const content: Toc = [
           alt="GitHub"
           href="https://github.com/nicoarellano/reposarch"
           caption={
-            "Reposarch - Course GitHub - https://github.com/nicoarellano/reposarch"
+            'Reposarch - Course GitHub - https://github.com/nicoarellano/reposarch'
           }
         />
       </>
@@ -710,7 +710,7 @@ export const content: Toc = [
           alt="Fork Reposarch"
           href="https://github.com/nicoarellano/reposarch"
           caption={
-            "Fork Github Repository https://github.com/nicoarellano/reposarch/fork"
+            'Fork Github Repository https://github.com/nicoarellano/reposarch/fork'
           }
         />
       </>
@@ -727,7 +727,7 @@ export const content: Toc = [
         <Video
           src="https://www.youtube.com/embed/UVerq5DSdKU?si=GmIUk9y3PpRTwK2w"
           title="The Second Digital Turn | Mario Carpo | Talks at Google"
-          caption={"The Second Digital Turn | Mario Carpo | Talks at Google"}
+          caption={'The Second Digital Turn | Mario Carpo | Talks at Google'}
         />
       </>
     ),

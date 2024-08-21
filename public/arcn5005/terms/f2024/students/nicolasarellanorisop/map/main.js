@@ -1,5 +1,5 @@
 import { icons } from "../assets/icons.js";
-import { airports } from "/arcn5005/terms/f2023/students/nicolasarellanorisop/map/maplibre/airports/airports-list.js";
+import { airports } from "./airports/airports-list.js";
 
 const map = (window.map = new maplibregl.Map({
   container: "map-f2024",

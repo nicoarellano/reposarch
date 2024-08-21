@@ -1,26 +1,26 @@
-import { Toc } from "@/app/types/types";
-import Image from "@/components/Common/Image";
+import { Toc } from '@/app/types/types';
+import Image from '@/components/Common/Image';
 // import Image as NextImage from "next/image";
 
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
 
-import Degree from "./degree.mdx";
-import Curves from "./curves.mdx";
-import Weygant from "./weygant.mdx";
-import Weygant2 from "./weygant2.mdx";
-import Bim from "./bim.mdx";
-import BimLevels from "./bimLevels.mdx";
-import Csg from "./csg.mdx";
-import Boolean from "./boolean.mdx";
-import SolidBoolean from "./solidBoolean.mdx";
-import Brep from "./brep.mdx";
-import Benefits from "./benefits.mdx";
-import Cons from "./cons.mdx";
-import BimDrivers from "./bimDrivers.mdx";
-import SimpleButton from "@/components/Common/SimpleButton";
+import Degree from './degree.mdx';
+import Curves from './curves.mdx';
+import Weygant from './weygant.mdx';
+import Weygant2 from './weygant2.mdx';
+import Bim from './bim.mdx';
+import BimLevels from './bimLevels.mdx';
+import Csg from './csg.mdx';
+import Boolean from './boolean.mdx';
+import SolidBoolean from './solidBoolean.mdx';
+import Brep from './brep.mdx';
+import Benefits from './benefits.mdx';
+import Cons from './cons.mdx';
+import BimDrivers from './bimDrivers.mdx';
+import SimpleButton from '@/components/Common/SimpleButton';
 
 export const content: Toc = [
   {
@@ -28,7 +28,7 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz"
         title="Class 3  - Representation tools and processes for architects"
-        caption={"Class 3  - Representation tools and processes for architects"}
+        caption={'Class 3  - Representation tools and processes for architects'}
       />
     ),
   },
@@ -42,11 +42,11 @@ export const content: Toc = [
         />
         <Quote
           quote={
-            "The architect needs the right tools for the job. [...] The newest \
+            'The architect needs the right tools for the job. [...] The newest \
             tool, the computer, is really an entirely new toolbox full of \
-            software to solve old and new problems."
+            software to solve old and new problems.'
           }
-          author={"Susan Piedmont Palladino - Tools of the imagination"}
+          author={'Susan Piedmont Palladino - Tools of the imagination'}
         />
       </>
     ),
@@ -56,14 +56,14 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "It is through the mastery of the full range of tools that the images \
+          'It is through the mastery of the full range of tools that the images \
           in the architect’s mind are translated into drawings and models, and \
           from the drawings and the models into buildings. Whether a simple \
           pencil or computer software, these tools give form to the wishes and \
           the instructions of the architect, but they are also active shapers of \
-          what is possible."
+          what is possible.'
         }
-        author={"Susan Piedmont Palladino - Tools of the imagination"}
+        author={'Susan Piedmont Palladino - Tools of the imagination'}
       />
     ),
   },
@@ -72,22 +72,22 @@ export const content: Toc = [
       <Image
         src="/images/computer-graphics/sutherland.png"
         alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
-        caption={"Ivan Sutherland inventor of Sketchpad, the first GUI"}
+        caption={'Ivan Sutherland inventor of Sketchpad, the first GUI'}
       />
     ),
     notes:
-      "In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+      'In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
        With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
        GUIs made computer more accessible for non-programmers, including architects.\
-       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.",
+       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.',
   },
   {
     element: (
       <Video
         src="https://www.youtube.com/embed/6orsmFndx_o?si=kTjsHWqd1tDjfhuj"
         title="Sketchpad by Ivan Sutherland"
-        caption={"Sketchpad by Ivan Sutherland"}
+        caption={'Sketchpad by Ivan Sutherland'}
       />
     ),
   },
@@ -95,12 +95,12 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "Sketchpad pioneered the graphical user interface (GUI), which allows \
+          'Sketchpad pioneered the graphical user interface (GUI), which allows \
           interaction with the virtual world without typing in long strings of \
           coded commands. Instead, the user points, clicks, and double-clicks on \
-          displays of icons, the virtual tools on the screen."
+          displays of icons, the virtual tools on the screen.'
         }
-        author={"Susan Piedmont Palladino - Tools of the imagination"}
+        author={'Susan Piedmont Palladino - Tools of the imagination'}
       />
     ),
   },
@@ -110,7 +110,7 @@ export const content: Toc = [
         quote={
           "GUIs quickly became 'the only computer use that most people had ever known'"
         }
-        author={"Mario Carpo - Digital Turn"}
+        author={'Mario Carpo - Digital Turn'}
       />
     ),
   },
@@ -126,32 +126,32 @@ export const content: Toc = [
       />
     ),
     notes:
-      "the programs for architects that were produced using GUIs had been designed with specific functionalities.\
+      'the programs for architects that were produced using GUIs had been designed with specific functionalities.\
       On the one hand, they allowed architects to explore infinite graphic possibilities.\
-      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.",
+      On the other hand, they drastically limited the boundaries that architects could explore outside what had been programmed.',
   },
   {
     element: (
       <Image
         src="/images/computer-graphics/process-with-gui.png"
         alt="Digital Creative Process"
-        caption={"Digital creative process with GUI"}
+        caption={'Digital creative process with GUI'}
       />
     ),
     notes:
-      "Carpo says that GUIs quickly became “the only computer use that most people had ever known”.\
+      'Carpo says that GUIs quickly became “the only computer use that most people had ever known”.\
       This was the moment when, for most architects, programming ceased to be an open language to interact with the machine, and thus became a tool.\
-      In some cases, an accessible tool, but in most cases, an utterly opaque one.",
+      In some cases, an accessible tool, but in most cases, an utterly opaque one.',
   },
   {
     element: (
-      <EmojiTitle emoji={"❔"} title={"Do you know what CAD stands for?"} />
+      <EmojiTitle emoji={'❔'} title={'Do you know what CAD stands for?'} />
     ),
   },
   {
     element: (
       <EmojiTitle
-        emoji={"❔"}
+        emoji={'❔'}
         title={
           <h2>
             Computer Aided <b>Design</b> or Computer Aided <b>Drafting</b>?
@@ -163,7 +163,7 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"❔"}
+        emoji={'❔'}
         title={
           <>
             <h2>
@@ -181,7 +181,7 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"CAD ✏️💻"}
+        emoji={'CAD ✏️💻'}
         title={
           <h4>
             <b>A CAD system</b> is a combination of hardware and software that
@@ -196,7 +196,7 @@ export const content: Toc = [
     ),
   },
   {
-    element: <EmojiTitle emoji={"✏️📐💻"} title={"Basis of CAD"} />,
+    element: <EmojiTitle emoji={'✏️📐💻'} title={'Basis of CAD'} />,
   },
   {
     element: (
@@ -215,11 +215,11 @@ export const content: Toc = [
       The intensity of each pixel is variable. \
       In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue (RGB), or cyan, magenta, yellow, and black.",
   },
-  { element: <EmojiTitle emoji={"👾"} title="What is a raster image?" /> },
+  { element: <EmojiTitle emoji={'👾'} title="What is a raster image?" /> },
   {
     element: (
       <EmojiTitle
-        emoji={"Raster image 👾"}
+        emoji={'Raster image 👾'}
         title={
           <h4>
             Raster (or bitmap) images are compiled using pixels, containing
@@ -238,7 +238,7 @@ export const content: Toc = [
     ),
   },
   {
-    element: <EmojiTitle emoji={"Points ⚫  ⚫  ⚫"} title="What's a Point?" />,
+    element: <EmojiTitle emoji={'Points ⚫  ⚫  ⚫'} title="What's a Point?" />,
   },
   {
     element: (
@@ -247,7 +247,7 @@ export const content: Toc = [
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Points"
         caption={
-          "A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in CAD software exists in our two-dimensional coordinate systems (X,Y) or three-dimensional (X,Y,Z).- Dynamo Primer"
+          'A Point is defined by nothing more than one or more values called coordinates. How many coordinate values we need to define the Point depends upon the Coordinate System or context in which it resides. The most common kind of Point in CAD software exists in our two-dimensional coordinate systems (X,Y) or three-dimensional (X,Y,Z).- Dynamo Primer'
         }
       />
     ),
@@ -259,16 +259,16 @@ export const content: Toc = [
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Points"
         caption={
-          "Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using [X,Y] on a Plane or [U,V] if we are on a surface. - Dynamo Primer"
+          'Points can exist in a two-dimensional Coordinate System as well. Convention has different letter notation depending upon what kind of space we are working with - we might be using [X,Y] on a Plane or [U,V] if we are on a surface. - Dynamo Primer'
         }
       />
     ),
   },
-  { element: <EmojiTitle emoji={"♾️"} title="What is a vector image?" /> },
+  { element: <EmojiTitle emoji={'♾️'} title="What is a vector image?" /> },
   {
     element: (
       <EmojiTitle
-        emoji={"Vector images ♾️"}
+        emoji={'Vector images ♾️'}
         title={
           <h4>
             Instead of trying to keep track of the millions of tiny pixels in a
@@ -348,7 +348,7 @@ export const content: Toc = [
         src="/images/cad-bim/curve.png"
         alt="Curve"
         caption={
-          "A curve or curved line, may be the trace left by moving a point. It has no width nor depth"
+          'A curve or curved line, may be the trace left by moving a point. It has no width nor depth'
         }
       />
     ),
@@ -359,7 +359,7 @@ export const content: Toc = [
         src="/images/cad-bim/line.png"
         alt="Line"
         caption={
-          "Lines are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions."
+          'Lines are the simplest form of Curves. They may not look curvy but they are in fact Curves - just without any curvature. There are a few different ways to create Lines, the most intuitive being from Point A to Point B. The shape of the Line AB will be drawn between the points but mathematically it extends infinitely in both directions.'
         }
       />
     ),
@@ -381,7 +381,7 @@ export const content: Toc = [
         src="/images/cad-bim/arcs.png"
         alt="Arcs, Circles, Ellipse Arcs, and Ellipses"
         caption={
-          "As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an Arc, Circle, Ellipse Arc, or Ellipse by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed."
+          'As we add more complexity to the Parametric Functions that define a shape, we can take one step further from a Line to create an Arc, Circle, Ellipse Arc, or Ellipse by describing one or two radii. The differences between the Arc version and the Circle or Ellipse is only whether or not the shape is closed.'
         }
       />
     ),
@@ -392,7 +392,7 @@ export const content: Toc = [
         src="/images/cad-bim/nurbs.png"
         alt="NURBS"
         caption={
-          "NURBS (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing."
+          'NURBS (Non-uniform Rational Basis Splines) are mathematical representations that can accurately model any shape from a simple two dimensional Line, Circle, Arc, or Rectangle to the most complex three-dimensional free-form organic Curve. Because of their flexibility (relatively few control points, yet smooth interpolation based on Degree settings) and precision (bound by a robust math), NURBS models can be used in any process from illustration and animation to manufacturing.'
         }
       />
     ),
@@ -404,7 +404,7 @@ export const content: Toc = [
         src="/images/cad-bim/degrees.png"
         alt="NURBS"
         caption={
-          "1 Degree, 2 Degree, 3 Degree - The higher the degree value, the more Control Points are used to interpolate the resulting Curve."
+          '1 Degree, 2 Degree, 3 Degree - The higher the degree value, the more Control Points are used to interpolate the resulting Curve.'
         }
       />
     ),
@@ -413,7 +413,7 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"3D Modelling 🫖💻"}
+        emoji={'3D Modelling 🫖💻'}
         title={
           <h4>
             3D modeling is the process of developing a mathematical
@@ -431,8 +431,8 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"3D CAD 🫖✏️💻"}
-        title={"3d CAD is using a computer to draw 3d models to assist design"}
+        emoji={'3D CAD 🫖✏️💻'}
+        title={'3d CAD is using a computer to draw 3d models to assist design'}
       />
     ),
   },
@@ -532,9 +532,9 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/wireframe.png"
-        alt={"Wireframe 3d models"}
+        alt={'Wireframe 3d models'}
         href="https://en.wikipedia.org/wiki/Wire-frame_model"
-        caption={"Wireframe 3d models"}
+        caption={'Wireframe 3d models'}
       />
     ),
   },
@@ -583,8 +583,8 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/surface.png"
-        alt={"Surface 3d model"}
-        caption={"Surface 3d model"}
+        alt={'Surface 3d model'}
+        caption={'Surface 3d model'}
       />
     ),
   },
@@ -621,9 +621,9 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/surface-domain.png"
-        alt={"Surface Domain"}
+        alt={'Surface Domain'}
         caption={
-          "A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max). - Source: Dynamo Primer"
+          'A surface domain is defined as the range of (U,V) parameters that evaluate into a three dimensional point on that surface. The domain in each dimension (U or V) is usually described as two numbers (U Min to U Max) and (V Min to V Max). - Source: Dynamo Primer'
         }
       />
     ),
@@ -632,9 +632,9 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/nurbs-surfaces.png"
-        alt={"Nurbs Surfaces"}
+        alt={'Nurbs Surfaces'}
         caption={
-          "NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface. - Source: Dynamo Primer"
+          'NURBS Surfaces are very similar to NURBS curves. You can think of NURBS Surfaces as a grid of NURBS Curves that go in two directions. The shape of a NURBS Surface is defined by a number of control points and the degree of that surface in the U and V directions. The same algorithms are used to calculate shape, normals, tangents, curvatures and other properties by way of control points, weights and degree. In the case of NURBS surfaces, there are two directions implied by the geometry, because NURBS surfaces are, regardless of the shape we see, rectangular grids of control points. And even though these directions are often arbitrary relative to the world coordinate system, we will use them frequently to analyze our models or generate other geometry based on the Surface. - Source: Dynamo Primer'
         }
       />
     ),
@@ -643,9 +643,9 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/polysurface.png"
-        alt={"Polysurfaces"}
+        alt={'Polysurfaces'}
         caption={
-          "Polysurfaces are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology. Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface. - Source: Dynamo Primer"
+          'Polysurfaces are composed of Surfaces that are joined across an edge. Polysurfaces offer more than two dimensional UV definition in that we can now move through the connected shapes by way of their Topology. Sometimes called patches, joining Surfaces in this manner allows us to make more complex shapes as well as define detail across the seam. Conveniently we can apply a fillet or chamfer operation to the edges of a Polysurface. - Source: Dynamo Primer'
         }
       />
     ),
@@ -695,8 +695,8 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/voxel.png"
-        alt={"Decomposition models"}
-        caption={"Decomposition models - Octrees"}
+        alt={'Decomposition models'}
+        caption={'Decomposition models - Octrees'}
       />
     ),
   },
@@ -705,8 +705,8 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/primitive-solids.png"
-        alt={"Primitive Solids"}
-        caption={"Primitive Solids "}
+        alt={'Primitive Solids'}
+        caption={'Primitive Solids '}
       />
     ),
   },
@@ -716,8 +716,8 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/boolean-operations.png"
-        alt={"Boolean Operations"}
-        caption={"Constructive Models - Boolean Operations "}
+        alt={'Boolean Operations'}
+        caption={'Constructive Models - Boolean Operations '}
       />
     ),
   },
@@ -726,9 +726,9 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/solid-boolean.png"
-        alt={"Solid Boolean Operations"}
+        alt={'Solid Boolean Operations'}
         caption={
-          "There are three Solid Boolean operations that distinguish which parts of the geometry are kept. 1. Union: Remove the overlapping portions of the Solids and join them into a single Solid. 2. Difference: Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume. 3. Intersection: Keep only the intersecting volume of the two Solids. - Source: Dynamo Primer"
+          'There are three Solid Boolean operations that distinguish which parts of the geometry are kept. 1. Union: Remove the overlapping portions of the Solids and join them into a single Solid. 2. Difference: Subtract one Solid from another. The Solid to be subtracted is referred to as a tool. Note that you could switch which Solid is the tool to keep the inverse volume. 3. Intersection: Keep only the intersecting volume of the two Solids. - Source: Dynamo Primer'
         }
       />
     ),
@@ -739,8 +739,8 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/brep.png"
-        alt={"Boundary models"}
-        caption={"Boundary models - B-rep"}
+        alt={'Boundary models'}
+        caption={'Boundary models - B-rep'}
       />
     ),
   },
@@ -748,8 +748,8 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/euler.png"
-        alt={"Euler Poincare Formula"}
-        caption={"Euler Poincare Formula"}
+        alt={'Euler Poincare Formula'}
+        caption={'Euler Poincare Formula'}
       />
     ),
   },
@@ -799,9 +799,9 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "Needless to say, it’s clear to see why CAD was adopted across so many industries. Virtually everything in the modern world is created using CAD technology, because its design process is so sleek and so powerful. Obviously, the pros and cons of CAD are susceptible to change. CAD is still evolving, and with it, so too will its advantages and disadvantages. A decade down the line, who’s to say what CAD will or won’t be capable of? "
+          'Needless to say, it’s clear to see why CAD was adopted across so many industries. Virtually everything in the modern world is created using CAD technology, because its design process is so sleek and so powerful. Obviously, the pros and cons of CAD are susceptible to change. CAD is still evolving, and with it, so too will its advantages and disadvantages. A decade down the line, who’s to say what CAD will or won’t be capable of? '
         }
-        author={"https://www.scan2cad.com/blog/cad/cad-evolved-since-1982/"}
+        author={'https://www.scan2cad.com/blog/cad/cad-evolved-since-1982/'}
       />
     ),
   },
@@ -834,9 +834,9 @@ export const content: Toc = [
         <br />
         <Image
           src="/images/cad-bim/librecad.png"
-          alt={"LibreCad"}
+          alt={'LibreCad'}
           href="https://wiki.librecad.org/index.php"
-          caption={"LibreCad is a free and open source alternative to AutoCad"}
+          caption={'LibreCad is a free and open source alternative to AutoCad'}
         />
       </>
     ),
@@ -851,7 +851,7 @@ export const content: Toc = [
           src="/images/coding/blender.png"
           alt="Blender"
           caption={
-            "Blender - Open-Source 3d creative suite - 3D CAD, BIM and much more..."
+            'Blender - Open-Source 3d creative suite - 3D CAD, BIM and much more...'
           }
           href="https://www.blender.org/download/"
         />
@@ -890,11 +890,11 @@ export const content: Toc = [
       <Image
         src="/images/cad-bim/bim-books.png"
         alt="BIM Books"
-        caption={"Three fundamental BIM books: Weygnant’s, Saxon’s, Eastman’s"}
+        caption={'Three fundamental BIM books: Weygnant’s, Saxon’s, Eastman’s'}
       />
     ),
     notes:
-      "Weygnant’s definition is a good baseline for tool-oriented people; Saxon’s explanation is for client/business-oriented people; Eastman is considered the father of BIM, and has the most technically correct definition",
+      'Weygnant’s definition is a good baseline for tool-oriented people; Saxon’s explanation is for client/business-oriented people; Eastman is considered the father of BIM, and has the most technically correct definition',
   },
   { element: <Weygant /> },
   { element: <Weygant2 /> },
@@ -902,9 +902,9 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "For estate-holding clients, BIM offers not just the possibility of faster, cheaper and better quality construction but also a database of operation and maintenance information to support the life cycle. Clients who have preferred or required standards for their properties can hold these standards in a BIM library of model elements and provide them to design-build teams to incorporate into projects."
+          'For estate-holding clients, BIM offers not just the possibility of faster, cheaper and better quality construction but also a database of operation and maintenance information to support the life cycle. Clients who have preferred or required standards for their properties can hold these standards in a BIM library of model elements and provide them to design-build teams to incorporate into projects.'
         }
-        author={"Saxon"}
+        author={'Saxon'}
       />
     ),
   },
@@ -912,9 +912,9 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "The arrival of BIM marks a switch for the construction industry from considering buildings as projects to considering them as assets. The circular model of the asset life cycle replaces the linear model of a project"
+          'The arrival of BIM marks a switch for the construction industry from considering buildings as projects to considering them as assets. The circular model of the asset life cycle replaces the linear model of a project'
         }
-        author={"Saxon"}
+        author={'Saxon'}
       />
     ),
   },
@@ -922,9 +922,9 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          "BIM consists of a digital database of a particular building that contains information about its objects. This may include its geometry (generally defined by parametric rules), its performance, its planning, its construction and later its operation. A Revit® model and a Digital Project® model of a building are examples of building models. “Building model” can be considered the next generation replacement for “construction drawings”, or “architectural drawings”. Downstream in the process, the term “fabrication model” is already in common use as a replacement for “shop drawings”."
+          'BIM consists of a digital database of a particular building that contains information about its objects. This may include its geometry (generally defined by parametric rules), its performance, its planning, its construction and later its operation. A Revit® model and a Digital Project® model of a building are examples of building models. “Building model” can be considered the next generation replacement for “construction drawings”, or “architectural drawings”. Downstream in the process, the term “fabrication model” is already in common use as a replacement for “shop drawings”.'
         }
-        author={"Eastman"}
+        author={'Eastman'}
       />
     ),
   },
@@ -934,7 +934,7 @@ export const content: Toc = [
       <Image
         src="/images/cad-bim/macleamy.png"
         alt="BIM Books"
-        caption={"MacLeamy Curve"}
+        caption={'MacLeamy Curve'}
       />
     ),
   },
@@ -944,7 +944,7 @@ export const content: Toc = [
       <Image
         src="/images/cad-bim/lod.png"
         alt="Levels of detail"
-        caption={"Levels of detail"}
+        caption={'Levels of detail'}
       />
     ),
   },
@@ -953,18 +953,18 @@ export const content: Toc = [
       <Image
         src="/images/cad-bim/lod2.png"
         alt="Levels of detail"
-        caption={"Levels of detail"}
+        caption={'Levels of detail'}
       />
     ),
     notes:
-      "Moving from conception → to approximate geometry → to Precise geometry → to fabrication → to as-built",
+      'Moving from conception → to approximate geometry → to Precise geometry → to fabrication → to as-built',
   },
   {
     element: (
       <Image
         src="/images/cad-bim/levels.png"
         alt="BIM Maturity Levels"
-        caption={"BIM Maturity Levels"}
+        caption={'BIM Maturity Levels'}
       />
     ),
   },
@@ -974,7 +974,7 @@ export const content: Toc = [
       <Image
         src="/images/cad-bim/bim-ecosystem.png"
         alt="Traditional BIM Ecosystem"
-        caption={"Traditional BIM Ecosystem"}
+        caption={'Traditional BIM Ecosystem'}
       />
     ),
   },
@@ -984,7 +984,7 @@ export const content: Toc = [
         src="/images/cad-bim/revitorarchicad.png"
         alt="Revit or Archicad?"
         caption={
-          "BIM authoring tools have been fighting to become the standard tool in the industry. Who is winning?"
+          'BIM authoring tools have been fighting to become the standard tool in the industry. Who is winning?'
         }
       />
     ),
@@ -994,7 +994,7 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/iuiichHnV9g?si=qgNvNyF7h8Pwk5S1"
         title="Revit wins"
-        caption={"Revit has become the most popular BIM software in the world"}
+        caption={'Revit has become the most popular BIM software in the world'}
       />
     ),
   },
@@ -1014,10 +1014,10 @@ export const content: Toc = [
         src="/images/cad-bim/closed-bim.png"
         alt="Closed BIM"
         caption={
-          "Proprietary BIM authoring tools and formats turn BIM into a closed process\
+          'Proprietary BIM authoring tools and formats turn BIM into a closed process\
           BIM has been defined as a communication and collaboration tool or process originally created to connect people, processes, and data.\
 However, that is not exactly the way the Architecture Engineering and Construction or AEC industry is using BIM.\
-The status quo is to work with proprietary solutions and closed file formats."
+The status quo is to work with proprietary solutions and closed file formats.'
         }
       />
     ),
@@ -1040,10 +1040,10 @@ The status quo is to work with proprietary solutions and closed file formats."
       />
     ),
     notes:
-      "Government BIM mandates.\
+      'Government BIM mandates.\
     Countries all over the word are becoming to regulate the use of BIM. So if one wants to participate in public works and even non public projects BIM is a requirement.\
     Which means that BIM is in many cases not an option anymore but a mandate.\
-    Knowing that BIM software are mainly controlled by a few vendors, this mean that these software companies will have a tremendous impact over our practice.",
+    Knowing that BIM software are mainly controlled by a few vendors, this mean that these software companies will have a tremendous impact over our practice.',
   },
   {
     element: (
@@ -1064,10 +1064,10 @@ The status quo is to work with proprietary solutions and closed file formats."
         <br />
         <Image
           src="/images/cad-bim/blenderbim.png"
-          alt={"BlenderBIM"}
-          href="https://blenderbim.org/"
+          alt={'BlenderBIM'}
+          href="https://bonsaibim.org/"
           caption={
-            "BlenderBIM is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BlenderBIM"
+            'BlenderBIM is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BlenderBIM'
           }
         />
       </>
