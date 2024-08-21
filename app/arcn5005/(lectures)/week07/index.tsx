@@ -1,26 +1,25 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
-import AudioPlayer from "@/components/Common/AudioPlayer";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
+import AudioPlayer from '@/components/Common/AudioPlayer';
 
 export const content: Toc = [
   {
-    element: <EmojiTitle emoji={"🏗️💻"} title={"Open Source BIM"} />,
+    element: <EmojiTitle emoji={'🏗️💻'} title={'Open Source BIM'} />,
   },
 
   {
     element: (
       <Image
-        src="/images/blenderbim/raphael.jpg"
+        src="/images/bonsaibim/raphael.jpg"
         alt="Raphaël Vouilloz"
         caption="Guess lecturer: Raphaël Vouilloz"
       />
     ),
-    notes: "",
+    notes: '',
   },
   {
     element: (
@@ -37,13 +36,14 @@ export const content: Toc = [
           laboratory (CNPA) as a scientific assistant for teaching geometry and
           stereotomy on parametric software and BIM, as well as for research and
           development oriented towards open formats and open-source tools for
-          architects, such as Speckle, IFC.js and BlenderBIM. He is doing a PhD
-          under the co-direction of Prof. Bernard Cache and Philippe Marin, of
-          the Méthodes et Histoire de l`Architecture (MHA) laboratory at the
-          École Nationale Supérieure d`Architecture de Grenoble (ENSAG). His
-          research involves defining digital BIM and CAD/CAM processes for
-          ashlar construction, prototyping a model of the horseshoe-shaped
-          staircase at the Château de Fontainebleau.
+          architects, such as Speckle, IFC.js and BonsaiBIM (formerly
+          BlenderBIM). He is doing a PhD under the co-direction of Prof. Bernard
+          Cache and Philippe Marin, of the Méthodes et Histoire de
+          l`Architecture (MHA) laboratory at the École Nationale Supérieure
+          d`Architecture de Grenoble (ENSAG). His research involves defining
+          digital BIM and CAD/CAM processes for ashlar construction, prototyping
+          a model of the horseshoe-shaped staircase at the Château de
+          Fontainebleau.
         </h5>
       </>
     ),
@@ -54,7 +54,7 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7"
         title="Raphael Vouilloz - BlenderBIM"
-        caption={"Raphael Vouilloz - BlenderBIM"}
+        caption={'Raphael Vouilloz - BlenderBIM'}
       />
     ),
   },
@@ -66,7 +66,7 @@ export const content: Toc = [
         <br />
         <ol>
           <li>
-            <a href="https://blenderbim.org/">BlenderBIM</a>
+            <a href="https://bonsaibim.org/">BonsaiBIM</a>
           </li>
           <li>
             <a href="https://osarch.org">OSArch</a>
@@ -92,21 +92,21 @@ export const content: Toc = [
     element: (
       <>
         <Image
-          src="/images/blenderbim/native-ifc.png"
+          src="/images/bonsaibim/native-ifc.png"
           alt="Native IFC"
           href="https://github.com/brunopostle/ifcmerge/blob/main/docs/whitepaper.rst"
           caption="Native IFC"
         />
         <br />
-        <AudioPlayer src={"/resources/native-ifc.m4a"} />
+        <AudioPlayer src={'/resources/native-ifc.m4a'} />
       </>
     ),
     notes:
-      "A simple to implement set of protocols for reading and writing BIM data, known as *Native IFC*, enables robust multi-user collaborative BIM workflows.\n\
+      'A simple to implement set of protocols for reading and writing BIM data, known as *Native IFC*, enables robust multi-user collaborative BIM workflows.\n\
    The whitepaper shows full version tracking, rollback, attribution, staging, merging, multi-user editing, issue tracking, \n\
     automated checking, and publishing can be achieved by hosting IFC data in established commercial and open source git-forge services.\n\
     It shows that the git revision control system as a Common Data Environment (CDE) for BIM data is scalable, secure, future-proof and fully interoperable with existing systems. \n\
-    It shows multiple software applications and libraries that already implement *Native IFC*, this is a real-world technology.",
+    It shows multiple software applications and libraries that already implement *Native IFC*, this is a real-world technology.',
   },
 
   {
@@ -124,15 +124,15 @@ export const content: Toc = [
     ),
   },
 
-  // BLENDER BIM
+  // BONSAI BIM
   {
     element: (
       <Image
-        src="/images/blenderbim/blender+bim.png"
-        alt={"BlenderBIM"}
-        href="https://blenderbim.org/"
+        src="/images/bonsaibim/blender+bim.png"
+        alt={'BonsaiBIM'}
+        href="https://bonsaibim.org/"
         caption={
-          "BlenderBIM is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BlenderBIM"
+          'BonsaiBIM (formerly BlenderBIM) is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BonsaiBIM'
         }
       />
     ),
@@ -142,8 +142,8 @@ export const content: Toc = [
     element: (
       <Video
         src="https://www.youtube.com/embed/tpQjRjB1wnU?si=q1XMa_so-2EJ34kJ"
-        title="BlenderBim - major UI update"
-        caption={"BlenderBim - major UI update"}
+        title="BonsaiBIM - major UI update"
+        caption={'BonsaiBIM - major UI update'}
       />
     ),
   },
@@ -151,10 +151,8 @@ export const content: Toc = [
     element: (
       <Video
         src="https://www.youtube.com/embed/zoecibNDokE?si=V59fmJi9g_bNFgKD"
-        title="BlenderBim Addon Update - 23.09.02 - Overview & Demonstration"
-        caption={
-          "BlenderBim Addon Update - 23.09.02 - Overview & Demonstration"
-        }
+        title="BonsaiBIM Addon Update - 23.09.02 - Overview & Demonstration"
+        caption={'BonsaiBIMAddon Update - 23.09.02 - Overview & Demonstration'}
       />
     ),
   },
@@ -163,16 +161,13 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/kmPPR0fWOrI?si=Z4gWdJ1Y0aa51h2G"
         title="Import DXF Files in Blender"
-        caption={"Import DXF Files in Blender"}
+        caption={'Import DXF Files in Blender'}
       />
     ),
   },
   {
     element: (
-      <EmojiTitle
-        emoji={"Lab 7 🏗️"}
-        title={"BlenderBIM - Create a BIM model"}
-      />
+      <EmojiTitle emoji={'Lab 7 🏗️'} title={'BonsaiBIM - Create a BIM model'} />
     ),
   },
 ];

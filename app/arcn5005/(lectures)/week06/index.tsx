@@ -1,25 +1,25 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
-import ClosedBim from "./ClosedBim";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
+import ClosedBim from './ClosedBim';
 
 export const content: Toc = [
   {
     element: (
-      <Image src="/images/osarch/osarch.png" alt="OSARCH" caption={"OSArch"} />
+      <Image src="/images/osarch/osarch.png" alt="OSARCH" caption={'OSArch'} />
     ),
-    notes: "",
+    notes: '',
   },
   {
     element: (
       <Video
         src="https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3"
         title="OSArch - Open source for architects community"
-        caption={"OSArch - Open source for architects community"}
+        caption={'OSArch - Open source for architects community'}
       />
     ),
   },
@@ -28,14 +28,14 @@ export const content: Toc = [
       <Image
         src="/images/osarch/osarch-software.png"
         alt="Osarch software"
-        caption={"OSArch - Software"}
+        caption={'OSArch - Software'}
       />
     ),
     notes:
-      "In the last couple of years open-source community for the AEC industry has grown in an accelerated pace. \n\
+      'In the last couple of years open-source community for the AEC industry has grown in an accelerated pace. \n\
     There are hundreds of open-source packages available for us. \n\
     This is a new reality for architects, that makes tools more accessible…  \n\
-    There are several solutions available and by combining some of them the possibilities are endless.",
+    There are several solutions available and by combining some of them the possibilities are endless.',
   },
   { element: <iframe className="w-full h-full" src="https://osarch.org/" /> },
   {
@@ -51,37 +51,37 @@ export const content: Toc = [
       <Image
         src="/images/osarch/timeline.png"
         alt="OS timeline"
-        caption={"OSArch - timeline"}
+        caption={'OSArch - timeline'}
       />
     ),
     notes:
-      "However, before the end of 2019 to imagine an alternative to proprietary software for the AEC industry was challenging.\n\
+      'However, before the end of 2019 to imagine an alternative to proprietary software for the AEC industry was challenging.\n\
       The industry was (and still is) too dependant on the main vendor’s solutions.\n\
       But then, a chain of events started to open the door to alternatives\n\
-      → In October 2019 Dion Moult releases BlenderBIM\n\
+      → In October 2019 Dion Moult releases BonsaiBIM (formerly BlenderBIM)\n\
       → In February 2020, the OS Arch is created: OSArch,, is an online community that promotes that the built environment can be designed, constructed, operated, and recycled with free/libre and open-source software.\n\
       → In July 2020, several leading UK and international AEC firms wrote an open letter to Autodesk’ demanding changes related to costs, licensing & business practices\n\
       → In December 2020 the IFC.js library is released. The first FLOSS online library to work with BIM and IFC.\n\
       → In September 2022 there is a follow-up letter by the Nordic Architectural Associations endorsed by  the Architects’ council of Europe. \n\
       → We don’t know about 2023 but I believe this is the year for CIMS…\n\
       → In my opinion, instead of writing letters to the vendors we as sector need to keep taking action with our own hands. \n\
-      → This is what I am trying to do with the epistemic object.",
+      → This is what I am trying to do with the epistemic object.',
   },
   {
-    element: <PdfViewer src={"/resources/letter-to-autodesk.pdf"} />,
+    element: <PdfViewer src={'/resources/letter-to-autodesk.pdf'} />,
   },
   {
     element: (
       <PdfViewer
         src={
-          "/resources/A Reply To Our Customers’ Open Letter On Autodesk Revit _ Autodesk News.pdf"
+          '/resources/A Reply To Our Customers’ Open Letter On Autodesk Revit _ Autodesk News.pdf'
         }
       />
     ),
   },
   {
     element: (
-      <PdfViewer src={"/resources/Nordic OPEN LETTER TO AUTODESK.pdf"} />
+      <PdfViewer src={'/resources/Nordic OPEN LETTER TO AUTODESK.pdf'} />
     ),
   },
   {
@@ -90,7 +90,7 @@ export const content: Toc = [
         src="https://www.youtube.com/embed/DK4zmfkp_pw?si=MWZZzjmOa4O9jB-B"
         title="Free / libre & Open Source software in AEC, and how it impacts OpenBIM"
         caption={
-          "Free / libre & Open Source software in AEC, and how it impacts OpenBIM"
+          'Free / libre & Open Source software in AEC, and how it impacts OpenBIM'
         }
       />
     ),
@@ -100,14 +100,14 @@ export const content: Toc = [
       <Image
         src="/images/osarch/bim.png"
         alt="bim"
-        caption={"BIM - Building Information Modelling"}
+        caption={'BIM - Building Information Modelling'}
       />
     ),
     notes:
-      "Going back to BIM. Is nowadays the most widely use digital process for architects. \n\
+      'Going back to BIM. Is nowadays the most widely use digital process for architects. \n\
     In industrialized countries, the bast majority of buildings are now designed and managed using BIM. \n\
     BuildingSmart International is an open, neutral not-for-profit organization committed to creating and developing open digital ways of working for BIM \n\
-    They promote the concept of openBIM",
+    They promote the concept of openBIM',
   },
 
   {
@@ -116,11 +116,11 @@ export const content: Toc = [
         src="/images/osarch/openbim.png"
         alt="openbim"
         href="https://www.buildingsmart.org/about/osarch/openbim-definition/"
-        caption={"BuildingSmart International - OpenBIM (?)"}
+        caption={'BuildingSmart International - OpenBIM (?)'}
       />
     ),
     notes:
-      "BuildingSmart states that openBIM extends the benefits of BIM by improving its:  \n\
+      'BuildingSmart states that openBIM extends the benefits of BIM by improving its:  \n\
     → accessibility,  \n\
     → usability, and \n\
     → sustainability of digital data in the building industry.  \n\
@@ -130,7 +130,7 @@ export const content: Toc = [
     → Openness of assets and processes \n\
     → Collaboration between stakeholders \n\
     → Flexibility of choice of technology  \n\
-    Also, The ISO 19650 (which is the chapter about BIM for the International Organization for Standarization) defines open data as data available or visible to others and that can be freely used, re-used, re-published and redistributed by anyone.",
+    Also, The ISO 19650 (which is the chapter about BIM for the International Organization for Standarization) defines open data as data available or visible to others and that can be freely used, re-used, re-published and redistributed by anyone.',
   },
   {
     element: (
@@ -138,15 +138,15 @@ export const content: Toc = [
         src="/images/osarch/openbim-definition.png"
         alt="openbim definition"
         href="https://wiki.osarch.org/index.php?title=OpenBIM"
-        caption={"BuildingSmart International - OpenBIM Definition"}
+        caption={'BuildingSmart International - OpenBIM Definition'}
       />
     ),
     notes:
-      "I agree with this definition of openBIM, \n\
+      'I agree with this definition of openBIM, \n\
       however, at the end of the day, OpenBIM sounds a lot like regular BIM. \n\
       All of these concepts are what BIM was designed for. \n\
       BIM is all about connecting people, processes, and data. \n\
-      because BIM was originally intended to be a collaborative approach to lifecycle management.",
+      because BIM was originally intended to be a collaborative approach to lifecycle management.',
   },
 
   {
@@ -154,14 +154,14 @@ export const content: Toc = [
       <Image
         src="/images/osarch/closed-bim.png"
         alt="closed-bim"
-        caption={"Closed-BIM"}
+        caption={'Closed-BIM'}
       />
     ),
     notes:
-      "The other thing that we tend to call BIM is what we should call ClosedBIM, \n\
+      'The other thing that we tend to call BIM is what we should call ClosedBIM, \n\
       proprietary software and closed file formats are useful to manage BIM. \n\
 , but unfortunately, they have one big limitation, \n\
-it is very hard to achieve openBIM",
+it is very hard to achieve openBIM',
   },
 
   {
@@ -169,11 +169,11 @@ it is very hard to achieve openBIM",
       <Image
         src="/images/osarch/closed-bim-definition.png"
         alt="closed-bim definition"
-        caption={"Closed-BIM - Trapped in the black box"}
+        caption={'Closed-BIM - Trapped in the black box'}
       />
     ),
     notes:
-      "When we use proprietary formats, we are without doubt trapped in a black box for the following reasons:",
+      'When we use proprietary formats, we are without doubt trapped in a black box for the following reasons:',
   },
 
   { element: <ClosedBim /> },
@@ -183,7 +183,7 @@ it is very hard to achieve openBIM",
       <Video
         src="https://www.youtube.com/embed/pNXssDb50qI?si=3JZq2lPzVYzhpLLs?si=FLDr9AqvaDFqnuj1&amp;start=53"
         title="BIM Voice - Dion Moult - What is OpenBIM?"
-        caption={"BIM Voice - Dion Moult - What is OpenBIM?"}
+        caption={'BIM Voice - Dion Moult - What is OpenBIM?'}
       />
     ),
   },
@@ -200,12 +200,12 @@ it is very hard to achieve openBIM",
       />
     ),
     notes:
-      "At its core, buildingSMART enables the entire built asset industry to improve the sharing of information throughout the lifecycle of project or asset. \n\
+      'At its core, buildingSMART enables the entire built asset industry to improve the sharing of information throughout the lifecycle of project or asset. \n\
     By breaking down the silos of information, end users can better collaborate and cooperate regardless of which software application they are using. \n\
     buildingSMART’s technical core is based around Industry Foundation Classes (IFC) which was ISO certified in 2013. \n\
     IFC is a standardized, digital description of the built asset industry. \n\
     It is an open, international standard (ISO 16739-1:2018) and promotes vendor-neutral, or agnostic, and usable capabilities across a wide range of hardware devices, \
-    software platforms, and interfaces for many different use cases. More about IFC, its uses and adoption may be found here.",
+    software platforms, and interfaces for many different use cases. More about IFC, its uses and adoption may be found here.',
   },
   {
     element: (
@@ -213,7 +213,7 @@ it is very hard to achieve openBIM",
         src="https://www.youtube.com/embed/9YgXXbdohOQ?si=iv5Iq_VxtjHtACTQ"
         title="What is IFC (Industry Foundation Classes)?"
         caption={
-          "What is IFC (Industry Foundation Classes)? - archive file approach"
+          'What is IFC (Industry Foundation Classes)? - archive file approach'
         }
       />
     ),
@@ -224,7 +224,7 @@ it is very hard to achieve openBIM",
       <Video
         src="https://www.youtube.com/embed/h2Rv9iu7yDk?si=JoqYT8H4xzmxrXZm"
         title="Introduction to OpenBIM, Native IFC, and Open Source AEC"
-        caption={"Introduction to OpenBIM, Native IFC, and Open Source AEC"}
+        caption={'Introduction to OpenBIM, Native IFC, and Open Source AEC'}
       />
     ),
   },
@@ -239,7 +239,7 @@ it is very hard to achieve openBIM",
         <Image
           src="/images/html-css-js.png"
           alt="html-css-js"
-          caption={"Technology behind web browsers: HTML - CSS - JS"}
+          caption={'Technology behind web browsers: HTML - CSS - JS'}
         />
       </>
     ),
@@ -252,20 +252,20 @@ it is very hard to achieve openBIM",
         alt="css"
         href="https://www.w3schools.com/css/css_intro.asp"
         caption={
-          "Cascading Style Sheets (CSS) is the language we use to style an HTML document"
+          'Cascading Style Sheets (CSS) is the language we use to style an HTML document'
         }
       />
     ),
     notes:
-      "CSS is the language we use to style an HTML document. \n\
-    CSS describes how HTML elements should be displayed.",
+      'CSS is the language we use to style an HTML document. \n\
+    CSS describes how HTML elements should be displayed.',
   },
   {
     element: (
       <Video
         src="https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg"
         title="OSArch - Open source for architects community"
-        caption={"Introduction to CSS"}
+        caption={'Introduction to CSS'}
       />
     ),
   },
@@ -276,16 +276,16 @@ it is very hard to achieve openBIM",
           src="/images/css/css-diagram.png"
           alt="css"
           href="https://www.w3schools.com/js/default.asp"
-          caption={"CSS syntax"}
+          caption={'CSS syntax'}
         />
       </>
     ),
     notes:
-      "Cascading Style Sheets (CSS), is a simple design language intended to transform the presentation of a Web Pages as well as many ostensibly non-web environments. \n\
+      'Cascading Style Sheets (CSS), is a simple design language intended to transform the presentation of a Web Pages as well as many ostensibly non-web environments. \n\
     CSS handles the look and feel part of a web page. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, \n\
     how columns are sized and laid out, what background images or colors are used, layout designs, \n\
     variations in display for different devices and screen sizes as well as a variety of other effects. \n\
-    CSS is easy to learn and understand but it provides powerful control over the presentation of an HTML document. Most commonly, CSS is combined with the markup languages HTML or XHTML.",
+    CSS is easy to learn and understand but it provides powerful control over the presentation of an HTML document. Most commonly, CSS is combined with the markup languages HTML or XHTML.',
   },
   {
     element: (
@@ -296,11 +296,11 @@ it is very hard to achieve openBIM",
       </>
     ),
     notes:
-      "The third option generally is the cleanest and the standard due to the separation of concerns it’s much better to separate the structure of the application from its style. \n\
+      'The third option generally is the cleanest and the standard due to the separation of concerns it’s much better to separate the structure of the application from its style. \n\
     Generally the styles are contained in a separate file which by convention is called `styles.css` *or something similar. This is where the CSS code will be contained. \n\
     Making one or several CSS files depends on the project. \n\
     *** A single CSS file usually is more than enough for simple projects, but we’ll see some cases in which we’ll want to separate them (e.g. when creating responsive styles) \n\
-    The CSS files must be linked to the HTML by inserting a `<link>` element in the `<head>` section as follows:",
+    The CSS files must be linked to the HTML by inserting a `<link>` element in the `<head>` section as follows:',
   },
 
   {
@@ -318,7 +318,7 @@ it is very hard to achieve openBIM",
             <h5>
               The universal selector (*) selects all HTML elements on the page.
               <br /> example:
-              <b className="text-red-500">* {"{color: red;}"}</b>
+              <b className="text-red-500">* {'{color: red;}'}</b>
             </h5>
           </li>
           <li>
@@ -330,7 +330,7 @@ it is very hard to achieve openBIM",
               <br />
               To select an element with a specific id, write a hash (#)
               character, followed by the id of the element. <br /> example:
-              <b className="text-red-500">#page-title {"{color: red;}"}</b>
+              <b className="text-red-500">#page-title {'{color: red;}'}</b>
             </h5>
           </li>
           <li>
@@ -340,7 +340,7 @@ it is very hard to achieve openBIM",
               attribute. <br />
               To select elements with a specific class, write a period (.)
               character, followed by the class name. <br /> example:
-              <b className="text-red-500">.pages {"{color: red;}"}</b>
+              <b className="text-red-500">.pages {'{color: red;}'}</b>
             </h5>
           </li>
           <li>
@@ -352,11 +352,11 @@ it is very hard to achieve openBIM",
               Look at the following CSS code (the h1, h2, and p elements have
               the same style definitions)
               <br /> example:
-              <b className="text-red-500">h1 {"{color: red;}"}</b>
+              <b className="text-red-500">h1 {'{color: red;}'}</b>
               <br /> example:
-              <b className="text-blue-500">h2 {"{color: blue;}"}</b>
+              <b className="text-blue-500">h2 {'{color: blue;}'}</b>
               <br /> example:
-              <b className="text-green-500">p {"{color: green;}"}</b>
+              <b className="text-green-500">p {'{color: green;}'}</b>
             </h5>
           </li>
         </ol>
@@ -370,12 +370,12 @@ it is very hard to achieve openBIM",
           src="/images/css/css-colors.png"
           alt="CSS Colors"
           href="https://color-hex.org/blog/color-wiki"
-          caption={"CSS Colors: Names, HEX,  RGB+a, RGB+a"}
+          caption={'CSS Colors: Names, HEX,  RGB+a, RGB+a'}
         />
       </>
     ),
     notes:
-      "1. BY NAME: Browsers support some colors by their name. Table shows names, hexadecimal code, values in RGB, HSL formats and description. \n\n\
+      '1. BY NAME: Browsers support some colors by their name. Table shows names, hexadecimal code, values in RGB, HSL formats and description. \n\n\
       2. HEX: Hexadecimal colors are based, on the number 16. The numbers are as follows: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. \
       Numbers from 10 to 15 are replaced by Latin letters. Numbers which are greater than 15 in the hexadecimal system are formed by combining two numbers into one. \
       For example, the number 255 in the decimal system corresponds to FF value in the hexadecimal system. \
@@ -388,7 +388,7 @@ it is very hard to achieve openBIM",
       The RGBA format is similar to RGB in syntax, but includes the alpha channel that specifies the transparency of the element. The value 0 corresponds to full transparency, the value 1 to opacity, and the intermediate value like 0.5 to translucency. \n\n\
       4. HSL+a: Hue, Saturate and Lightness. Hue is the color value on the color wheel and is measured in degrees. 0° corresponds to red, 120 ° to green, and 240 ° to blue. The hue value can vary from 0 to 359. \
       Saturation is the intensity of the color, measured in percentages from 0% to 100%. The value of 0% means the absence of the color and the shade of gray, the value of 100% means the maximum value of saturation. \
-      Lightness specifies how bright the color is and is measured in percentages from 0% to 100%. Small values make the color darker, and high values make the color lighter, values of 0% and 100% correspond to black and white.",
+      Lightness specifies how bright the color is and is measured in percentages from 0% to 100%. Small values make the color darker, and high values make the color lighter, values of 0% and 100% correspond to black and white.',
   },
 
   {
@@ -404,7 +404,7 @@ it is very hard to achieve openBIM",
         <Image
           src="/images/css/css-units.png"
           alt="CSS Units"
-          caption={"CSS Units"}
+          caption={'CSS Units'}
         />
       </>
     ),
@@ -534,7 +534,7 @@ it is very hard to achieve openBIM",
         <Image
           src="/images/css/css-box-model.png"
           alt="CSS Box Model"
-          caption={"CSS Box Model"}
+          caption={'CSS Box Model'}
         />
       </>
     ),
@@ -548,19 +548,19 @@ it is very hard to achieve openBIM",
           src="/images/css/css-flexbox.png"
           href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
           alt="CSS Flexbox"
-          caption={"CSS Flexbox"}
+          caption={'CSS Flexbox'}
         />
       </>
     ),
     notes:
-      "The flexible box layout module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides. \n\
- When we describe flexbox as being one-dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of CSS Grid Layout, which controls columns and rows together.",
+      'The flexible box layout module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides. \n\
+ When we describe flexbox as being one-dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of CSS Grid Layout, which controls columns and rows together.',
   },
   {
     element: (
       <EmojiTitle
-        emoji={"Lab 6 💻😺🐙"}
-        title={"Continue the creation of our website using HTML + CSS"}
+        emoji={'Lab 6 💻😺🐙'}
+        title={'Continue the creation of our website using HTML + CSS'}
       />
     ),
   },

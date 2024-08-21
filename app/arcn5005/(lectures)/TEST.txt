@@ -4,7 +4,7 @@ Representation tools and processes for the AEC
 Scripting 
 Internet, Collaboration and the Open source movement 
 Open source software for architects 
-OS BIM Software: BlenderBIM 
+OS BIM Software: BonsaiBIM (formerly BlenderBIM) 
 Web based 3D graphics 
 IFC to the browser 
 Open Source GIS 
@@ -13,43 +13,43 @@ Advanced Toolbox - Going online, scalability and maintainability
 Final assignment workshop and assignment 3 presentations 
 
 Week 01 – The art of computer graphics 
-Wednesday, September 4, 2:35 – 5:25pm EST, Architecture Building - Room AA-435 (all classes are in-person only)
+Wednesday, September 4, 2:35 – 5:25pm EST, Architecture Building - Room AA-209 (all classes are in-person only)
 
 Week 02 – Programming and digitalization of the physical world 
-Wednesday, September 11, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, September 11, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
 Week 03 – Representation tools and processes for the AEC 
-Wednesday, September 18, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, September 18, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
 Week 04 – Scripting 
 Wednesday, September 25, 2:35 – 5:25pm EST, Pit
 
 Week 05 – Internet, Collaboration and the Open source movement 
-Wednesday, October 2, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, October 2, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
 Week 06 – Open source software for architects 
-Wednesday, October 9, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, October 9, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
-Week 07 – OS BIM Software: BlenderBIM 
+Week 07 – OS BIM Software: BonsaiBIM (formerly BlenderBIM) 
 Wednesday, October 16, 2:35 – 5:25pm EST, Pit
 
 Week 08 – Reading Week
 Wednesday, October 23, No class
 
 Week 9 – Web based 3D graphics 
-Wednesday, October 30, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, October 30, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
 Week 10 – IFC to the browser 
 Wednesday, November 6, 2:35 – 5:25pm EST, Pit
 
 Week 11 – Open Source GIS 
-Wednesday, November 13, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, November 13, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
 Week 12 – Web based OS mapping and GIS 
-Wednesday, November 20, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, November 20, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
 Week 13 – Advanced Toolbox - Going online, scalability and maintainability
-Wednesday, November 27, 2:35 – 5:25pm EST, Architecture Building - Room AA-435
+Wednesday, November 27, 2:35 – 5:25pm EST, Architecture Building - Room AA-209
 
 Week 14 – Final assignment workshop and assignment 3 presentations 
 Wednesday, December 4, 2:35 – 5:25pm EST, Gallery
