@@ -27,12 +27,18 @@ export const content: Toc = [
       <section className=" grid grid-cols-2 divide-x grow max-h-1/4 w-full overflow-x-auto">
         <div className="flex items-center justify-center grow">
           <Image
-            src="/images/computer-graphics/Nico.png"
+            src="/images/webbased.png"
             alt="Medieval hacker"
+            href="/deblackboxing"
+            caption={
+              'My research: Deblackboxing BIM (click to see the research)'
+            }
           />
         </div>
         <div className="flex items-center justify-center ">
           <ul>
+            <h3>Nicolas Arellano Risopatron</h3>
+            <br />
             <li>
               <h4>Architect from Universidad Catolica of Chile</h4>
             </li>
@@ -45,7 +51,7 @@ export const content: Toc = [
               <h4>PhD candidate at Carleton University</h4>
             </li>
             <li>
-              <h4>Computer Programmer</h4>
+              <h4>Software Developer</h4>
             </li>
             <li>
               <h4>Father of a 4-years-old girl and a 2-years-old boy</h4>
