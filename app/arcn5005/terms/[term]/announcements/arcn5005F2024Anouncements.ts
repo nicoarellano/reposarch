@@ -3,8 +3,13 @@ import { Resources } from '../../../../types/types';
 
 export const AnnouncementsF2024: Resources = [
   {
-    title: `2024/08/30: Welcome to ARCN5005! The important announcements of the class will be posted here`,
-    url: '',
+    title:
+      '2024/09/04: All meetings will be at the School of architecture in room AA-209 at 8:35 am to 11:35 am. \
+      It is mandatory to be in person but I will record the meetings in case you miss it or you want to re-watch it.\
+  The Zoom link is https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09 -\
+  Meeting ID: 931 4954 9185\
+  Passcode: arcn5005',
+    url: 'https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09',
   },
   {
     title: `2024/09/04:  My name is Nicolas Arellano, I am an Architect and a Ph.D. Candidate at Carleton University.
@@ -14,13 +19,8 @@ export const AnnouncementsF2024: Resources = [
     I am looking forward forward to meeting you all!`,
   },
   {
-    title:
-      '2024/09/04: All meetings will be at the School of architecture in room AA-209 at 8:35 am to 11:35 am. \
-      It is mandatory to be in person but I will record the meetings in case you miss it or you want to re-watch it.\
-  The Zoom link is https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09 -\
-  Meeting ID: 931 4954 9185\
-  Passcode: arcn5005',
-    url: 'https://carleton-ca.zoom.us/j/93149549185?pwd=cjVyT3c3TW10MFN1YklLeHJrNlNOZz09',
+    title: `2024/08/30: Welcome to ARCN5005! The important announcements of the class will be posted here`,
+    url: '',
   },
   /*
   {
