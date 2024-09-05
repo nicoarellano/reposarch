@@ -3,19 +3,11 @@ import { Resources } from '../../../../types/types';
 
 export const AnnouncementsF2024: Resources = [
   {
-    title: `2024/08/30: Welcome to ARCN5005! The important announcements of the class will be posted here`,
-    url: '',
-  },
-  {
     title:
       '2024/09/04: It was a pleasure to finally meeting you all, I hope that you like the course and you learn a lot. \
       please find the recording of the class here: https://www.youtube.com/watch?v=nsiEUajkL74 \
       Please remember that next class will be at 9:00am instead of 8:35. Please arrive in time to the class because we have a great guest lecturer. \
       Have a great weekend and see you next week.',
-    url: '',
-  },
-  {
-    title: `2024/08/30: Welcome to ARCN5005! The important announcements of the class will be posted here`,
     url: '',
   },
   {
