@@ -20,7 +20,7 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/watch?v=nsiEUajkL74"
+        src="https://www.youtube.com/embed/nsiEUajkL74?si=EQ8fsUrX3i1GbW6t"
         title="The Art of computer sciences: course introduction"
         caption={'Class 1 - The Art of computer sciences: course introduction'}
       />
