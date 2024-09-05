@@ -43,6 +43,13 @@ export const arcn5005Lectures: Lectures = [
           '🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), Github',
       },
     ],
+    recordings: [
+      {
+        url: 'https://www.youtube.com/watch?v=nsiEUajkL74',
+        title: 'The Art of computer sciences: course introduction',
+        date: dayjs('2024/09/04'),
+      },
+    ],
   },
   {
     title: 'Programming and digitalization of the physical world',
