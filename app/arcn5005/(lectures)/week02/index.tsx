@@ -540,14 +540,64 @@ export const content: Toc = [
   },
   {
     element: (
+      <EmojiTitle
+        emoji={'🌎 → 📸 → 💻🫖'}
+        title={'Download a photogrametry software of your choice'}
+      />
+    ),
+  },
+  {
+    element: (
       <>
-        <h2>Download Meshroom</h2>
+        <h2>Meshroom</h2>
         <br />
         <Image
           src="/images/coding/logo-meshroom.png"
           alt="Meshroom"
           caption={'Meshroom - Open-Source photogrametry software'}
           href="https://alicevision.org/#meshroom"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Luma AI</h2>
+        <br />
+        <Image
+          src="/images/coding/logo-luma.png"
+          alt="Luma AI"
+          caption={'Luma AI'}
+          href="https://play.google.com/store/apps/details?id=ai.lumalabs.polar&hl=en_CA&pli=1"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Reality Capture</h2>
+        <br />
+        <Image
+          src="/images/coding/logo-reality_capture.png"
+          alt="Reality Capture"
+          caption={'Reality Capture'}
+          href="https://www.capturingreality.com/realitycapture"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Reality Scan App (Unreal Engine)</h2>
+        <br />
+        <Image
+          src="/images/coding/logo-reality_scan.jpeg"
+          alt="Reality Scan App"
+          caption={'Reality Scan App'}
+          href="https://www.unrealengine.com/en-US/realityscan"
         />
       </>
     ),
