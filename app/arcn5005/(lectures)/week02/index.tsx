@@ -107,7 +107,6 @@ export const content: Toc = [
         src="https://www.youtube.com/embed/X5hC_ckbP0I?si=UZmU0UTu6aqwqm55"
         title="Miquel Reina Ortiz - Photogrammetry"
         caption={'Miquel Reina Ortiz - Photogrammetry - Fall 2024'}
-        caption={'Miquel Reina Ortiz - Photogrammetry - Fall 2024'}
       />
     ),
   },
