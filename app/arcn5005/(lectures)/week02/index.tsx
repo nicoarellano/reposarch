@@ -104,7 +104,7 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://youtu.be/X5hC_ckbP0I"
+        src="https://www.youtube.com/embed/X5hC_ckbP0I?si=UZmU0UTu6aqwqm55"
         title="Miquel Reina Ortiz - Photogrammetry"
         caption={'Miquel Reina Ortiz - Photogrammetry - Fall 2024'}
       />
@@ -123,7 +123,7 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://youtu.be/i1VPXuYhHGk"
+        src="https://www.youtube.com/embed/i1VPXuYhHGk?si=1eiOI4rV5gbI6BpT"
         title="Class 2 - Programming"
         caption={'Class 2 - Programming - Fall 2024'}
       />
