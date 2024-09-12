@@ -104,11 +104,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG"
+        src="https://youtu.be/X5hC_ckbP0I"
         title="Miquel Reina Ortiz - Photogrammetry"
-        caption={
-          'Miquel Reina Ortiz - Photogrammetry - presentation from Fall 2023'
-        }
+        caption={'Miquel Reina Ortiz - Photogrammetry - Fall 2024'}
       />
     ),
   },
@@ -122,15 +120,15 @@ export const content: Toc = [
       </>
     ),
   },
-  // {
-  //   element: (
-  //     <Video
-  //       src="https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v"
-  //       title="Class 2 - Programming"
-  //       caption={'Class 2 - Programming'}
-  //     />
-  //   ),
-  // },
+  {
+    element: (
+      <Video
+        src="https://youtu.be/i1VPXuYhHGk"
+        title="Class 2 - Programming"
+        caption={'Class 2 - Programming - Fall 2024'}
+      />
+    ),
+  },
   {
     element: (
       <>
