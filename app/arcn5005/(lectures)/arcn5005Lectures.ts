@@ -67,13 +67,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
-        url: 'https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG',
-        title: 'Photogrammetry - Miquel Reina Ortiz',
-        date: dayjs('2023/09/14'),
+        url: 'https://youtu.be/i1VPXuYhHGk',
+        title: 'Programming',
+        date: dayjs('2024/09/11'),
+      },
+      {
+        url: 'https://youtu.be/X5hC_ckbP0I',
+        title: 'Photogrammetry - Miquel Reina Ortiz - Fall 2024',
+        date: dayjs('2024/09/11'),
       },
       {
         url: 'https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v',
         title: 'Programming',
+        date: dayjs('2023/09/14'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG',
+        title: 'Photogrammetry - Miquel Reina Ortiz - Fall 2023',
         date: dayjs('2023/09/14'),
       },
     ],
