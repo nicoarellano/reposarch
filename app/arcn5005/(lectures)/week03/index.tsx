@@ -1066,10 +1066,10 @@ The status quo is to work with proprietary solutions and closed file formats.'
         <br />
         <Image
           src="/images/cad-bim/blenderbim.png"
-          alt={'BlenderBIM'}
+          alt={'BonsaiBIM'}
           href="https://bonsaibim.org/"
           caption={
-            'BlenderBIM is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BlenderBIM'
+            'BonsaiBIM (formerly BlenderBIM) is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BonsaiBIM'
           }
         />
       </>
