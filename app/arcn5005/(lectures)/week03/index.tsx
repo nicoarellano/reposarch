@@ -26,9 +26,11 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz"
-        title="Class 3  - Representation tools and processes for architects"
-        caption={'Class 3  - Representation tools and processes for architects'}
+        src="https://www.youtube.com/embed/wruFGy9uPkA?si=Vf9gLEv2vF4Hd3dT"
+        title="Class 3  - Representation tools and processes for architects (fall 2024)"
+        caption={
+          'Class 3  - Representation tools and processes for architects (fall 2024)'
+        }
       />
     ),
   },

@@ -105,6 +105,11 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://youtu.be/wruFGy9uPkA',
+        title: 'CAD, 3D CAD, and BIM',
+        date: dayjs('2024/09/17'),
+      },
+      {
         url: 'https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz',
         title: 'CAD, 3D CAD, and BIM',
         date: dayjs('2023/09/21'),

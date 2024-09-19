@@ -205,6 +205,13 @@ export const classListf2024: Students = [
     email: 'TessComan@cmail.carleton.ca',
   },
   {
+    id: '#101159867',
+    username: 'williamlozides',
+    lastName: 'Lozides',
+    firstName: 'William',
+    email: 'williamlozides@cmail.carleton.ca',
+  },
+  {
     id: '#101348046',
     username: 'zelalkaya',
     lastName: 'Kaya',
