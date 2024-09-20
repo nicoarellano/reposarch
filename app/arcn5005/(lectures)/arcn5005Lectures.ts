@@ -244,7 +244,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [],
   },
   {
-    title: 'Web based 3D graphics',
+    title: 'Web based 3D graphics (⚠️💻 Online Class)',
     id: `week08`,
     url: `lectures/week08`,
     date: initialDate.add(8, 'week'),
