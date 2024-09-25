@@ -412,6 +412,7 @@ export const arcn5005Lectures: Lectures = [
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
+/*
   {
     title: '🗺️ Maps and GIS 🌎',
     id: `maps`,
@@ -440,5 +441,5 @@ export const arcn5005Lectures: Lectures = [
         date: dayjs('2023/09/25'),
       },
     ],
-  },
+  },*/
 ];
