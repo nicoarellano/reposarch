@@ -17,9 +17,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu"
-        title="Class 4  - Scripting and Visual Programming"
-        caption={"Class 4  - Scripting and Visual Programming"}
+        src="https://www.youtube.com/embed/iT22KQ9AAY4?si=sq8VsnssGnmPlESC"
+        title="Class 4  - Scripting and Visual Programming - Fall 2024"
+        caption={"Class 4  - Scripting and Visual Programming - Fall 2024"}
       />
     ),
   },
