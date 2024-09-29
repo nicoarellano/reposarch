@@ -17,9 +17,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu"
-        title="Class 4  - Scripting and Visual Programming"
-        caption={"Class 4  - Scripting and Visual Programming"}
+        src="https://www.youtube.com/embed/iT22KQ9AAY4?si=sq8VsnssGnmPlESC"
+        title="Class 4  - Scripting and Visual Programming - Fall 2024"
+        caption={"Class 4  - Scripting and Visual Programming - Fall 2024"}
       />
     ),
   },
@@ -136,7 +136,7 @@ export const content: Toc = [
     notes:
       "Is a that AutoDesk acquired a couple of year ago, that one can access through Revit (since 2019). designers, engineers or construction professionals without any computer-related background or who do not know how to write code can access to basic but powerful scripting. (which is a type of coding used to automate processes) Dynamo provides flexibility to explore inaccessible places inside the general functionalities of Revit (such as its API (application programming interface) and to manipulate large amounts of data and complex geometry with precision. ",
   },
-  {
+ /* {
     element: (
       <iframe
         className="w-full h-full"
@@ -145,7 +145,7 @@ export const content: Toc = [
       />
     ),
   },
-  { element: <RepetitiveTasks /> },
+  { element: <RepetitiveTasks /> }, */
   {
     element: (
       <Image

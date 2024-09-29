@@ -136,9 +136,14 @@ export const arcn5005Lectures: Lectures = [
       },
     ],
     recordings: [
+            {
+        url: 'https://www.youtube.com/embed/iT22KQ9AAY4?si=sq8VsnssGnmPlESC',
+        title: 'Scripting and Visual Programming - Fall 2024',
+        date: dayjs('2024/09/25'),
+      },
       {
         url: 'https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu',
-        title: 'Scripting and Visual Programming',
+        title: 'Scripting and Visual Programming - Fall 2023',
         date: dayjs('2023/09/28'),
       },
     ],
@@ -412,6 +417,7 @@ export const arcn5005Lectures: Lectures = [
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
+/*
   {
     title: '🗺️ Maps and GIS 🌎',
     id: `maps`,
@@ -440,5 +446,5 @@ export const arcn5005Lectures: Lectures = [
         date: dayjs('2023/09/25'),
       },
     ],
-  },
+  },*/
 ];
