@@ -40,7 +40,7 @@ export const content: Toc = [
         <h3>Julie Ivanoff</h3>
         <br />
         <h5>
-          Julie Ivanoff is a Master’s of Architectural Studies at Carleton
+          Julie Ivanoff is a PhD Student and holds a Master’s of Architectural Studies at Carleton
           University. She is an expert in Digital Twins, focusing on the
           positive impacts of digital twin in urban development. In her research
           she dives into the history of digital twins, and how they are
