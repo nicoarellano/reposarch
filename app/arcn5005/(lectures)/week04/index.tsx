@@ -144,8 +144,8 @@ export const content: Toc = [
         title="Dynamo Primer"
       />
     ),
-  },
-  { element: <RepetitiveTasks /> }, */
+  },*/
+  { element: <RepetitiveTasks /> }, 
   {
     element: (
       <Image
