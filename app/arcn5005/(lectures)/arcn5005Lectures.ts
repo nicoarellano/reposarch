@@ -136,7 +136,7 @@ export const arcn5005Lectures: Lectures = [
       },
     ],
     recordings: [
-            {
+      {
         url: 'https://www.youtube.com/embed/iT22KQ9AAY4?si=sq8VsnssGnmPlESC',
         title: 'Scripting and Visual Programming - Fall 2024',
         date: dayjs('2024/09/25'),
@@ -176,9 +176,20 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/htt3qG2hhQI?si=1fSm5eenb5x6AxN-',
+        title:
+          'Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge  + HTML Introduction - Fall 2024',
+        date: dayjs('2024/10/02'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/ZMTE2R8nI34?si=e-dQpLeLjeE6novW',
+        title: 'Assignment 1 Explanation - Fall 2024',
+        date: dayjs('2024/10/02'),
+      },
+      {
         url: 'https://www.youtube.com/embed/qEGt81c3DTM?si=6K_swhkQAz6OUtUM',
         title:
-          'Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge ',
+          'Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge',
         date: dayjs('2023/10/05'),
       },
       {
@@ -417,7 +428,7 @@ export const arcn5005Lectures: Lectures = [
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
-/*
+  /*
   {
     title: '🗺️ Maps and GIS 🌎',
     id: `maps`,
