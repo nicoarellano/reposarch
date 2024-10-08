@@ -49,7 +49,7 @@ export default function StudentsList({ students }: Props) {
             sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
           >
             <ListItemIcon>
-              <IconButton href={`${path}/${student.username}/about`}>
+              <IconButton href={`${path}/${student.username}`}>
                 <Avatar
                   src={`${path}/${student.username}/avatar.jpg`}
                   sx={{ width: 30, height: 30 }}
