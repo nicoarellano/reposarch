@@ -1,193 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IFC.js</title>
-    <link rel="stylesheet" href="../assets/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.css"
-    />
-  </head>
+<html>
 
-  <body>
-    <iframe
-      style="width: 100vw; height: 100vh; margin: 0; padding: 0"
-      class="hide-overflow flex grow w-[100vw] h-full"
-      src="https://cdt.vercel.app/carleton"
-    ></iframe>
-  </body>
-</html>
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final</title>
+</head>
+<body>
+<section class="main-container">
+  <div class="final">
+    <ul>
+      <li>Architect from Universidad Catolica of Chile</li>
+      <li>Research team lead at Carleton Immersive Media Studio (CIMS)</li>
+      <li>PhD candidate at Carleton University</li>
+      <li>Amateur programmer</li>
+    </ul>
+    <br />
+    <div>
+      <a href="https://reposarch.vercel.app/"><button id:"three-button">Reposarch</button></a>
+      <a href="https://github.com/nicoarellano/reposarch"><button id:"three-button">GitHub</button></a>
+    </div>
+    <img src="../photo.png" alt="Nicolas Arellano" height="300" /> 
+  </div>
+  <div id="viewers">
+    <div width='50vw' height="80vh">
+      <div id="three-container-f2024" ></div>
+    </div>
+    
+    <iframe class="viewer" src="../map/index.html" frameborder="0"></iframe>
+    <div class="legend"><span class="dot"></span><p>Canadian Airports</p></div>
+  </div>
+</section>
+</body>
 
-<style>
-  * {
-    padding: 0;
-    box-sizing: border-box;
-  }
+<!-- Three js Modules -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 
-  body,
-  html {
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
 
-  ol,
-  ul {
-    list-style-type: disc;
-    margin-left: 2.5rem;
-    font-size: large;
-  }
+<canvas class="three-canvas" id="three-canvas-f2024"></canvas>
 
-  h1 {
-    color: red;
-  }
-
-  .about {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .assignment2 {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: end;
-    overflow: hidden;
-    gap: 2rem;
-  }
-
+  <script type="module" src="./main.js"></script>
+  
+  <style>
+    #viewers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem;
+      height: 100%;
+      padding: 1rem;
+    }
+  
   .main-container {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    gap: 2rem;
+      width: 95%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      overflow: hidden;
+      gap: 2rem;
   }
-
-  .final {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    gap: 2rem;
-  }
-
-  .about {
-    background-color: #f1f1f1;
-    width: 70%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  }
-
-  .vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-  }
-
-  .three-canvas {
-    bottom: 0;
-  }
-
-  #viewers {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1rem;
-    height: 100%;
-    padding: 1rem;
-  }
-
-  #full-screen {
-    width: 29px;
-    height: 29px;
-    position: relative;
-    top: 40px;
-    z-index: 99;
-    left: 8px;
-    padding: 0.3rem;
-    pointer-events: all;
-    cursor: pointer;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-  }
-
+  
+  
   .viewer {
-    right: 0;
-    /* outline: 1px solid black; */
-    border-radius: 1rem;
-    width: 100%;
-    height: 45%;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      right: 0;
+      /* outline: 1px solid black; */
+      border-radius: 1rem;
+      width: 100%;
+      height: 45%;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   }
-
+  
   .dot {
-    height: 15px;
-    width: 15px;
-    background-color: red;
-    outline: 3px solid yellow;
-    border-radius: 50%;
-    z-index: 99;
+      height: 15px;
+      width: 15px;
+      background-color: red;
+      outline: 3px solid yellow;
+      border-radius: 50%;
+      z-index: 99;
   }
-
+  
   .legend {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-    width: fit-content;
-    height: 1rem;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      width: fit-content;
+      height: 1rem;
   }
-
+  
   #map {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+      position: absolute;
+      height: 100%;
+      width: 100%;
   }
+  </style>
 
-  button:disabled {
-    pointer-events: none;
-  }
-
-  button:hover {
-    color: #fff;
-    background-color: #1a1a1a;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    transform: translateY(-2px);
-  }
-
-  button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-</style>
+</html>
