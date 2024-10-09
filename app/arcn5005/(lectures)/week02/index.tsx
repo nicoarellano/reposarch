@@ -104,11 +104,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG"
+        src="https://www.youtube.com/embed/X5hC_ckbP0I?si=UZmU0UTu6aqwqm55"
         title="Miquel Reina Ortiz - Photogrammetry"
-        caption={
-          'Miquel Reina Ortiz - Photogrammetry - presentation from Fall 2023'
-        }
+        caption={'Miquel Reina Ortiz - Photogrammetry - Fall 2024'}
       />
     ),
   },
@@ -122,15 +120,15 @@ export const content: Toc = [
       </>
     ),
   },
-  // {
-  //   element: (
-  //     <Video
-  //       src="https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v"
-  //       title="Class 2 - Programming"
-  //       caption={'Class 2 - Programming'}
-  //     />
-  //   ),
-  // },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/i1VPXuYhHGk?si=1eiOI4rV5gbI6BpT"
+        title="Class 2 - Programming"
+        caption={'Class 2 - Programming - Fall 2024'}
+      />
+    ),
+  },
   {
     element: (
       <>
@@ -540,14 +538,64 @@ export const content: Toc = [
   },
   {
     element: (
+      <EmojiTitle
+        emoji={'🌎 → 📸 → 💻🫖'}
+        title={'Download a photogrametry software of your choice'}
+      />
+    ),
+  },
+  {
+    element: (
       <>
-        <h2>Download Meshroom</h2>
+        <h2>Meshroom</h2>
         <br />
         <Image
           src="/images/coding/logo-meshroom.png"
           alt="Meshroom"
           caption={'Meshroom - Open-Source photogrametry software'}
           href="https://alicevision.org/#meshroom"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Luma AI</h2>
+        <br />
+        <Image
+          src="/images/coding/logo-luma.png"
+          alt="Luma AI"
+          caption={'Luma AI'}
+          href="https://play.google.com/store/apps/details?id=ai.lumalabs.polar&hl=en_CA&pli=1"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Reality Capture</h2>
+        <br />
+        <Image
+          src="/images/coding/logo-reality_capture.png"
+          alt="Reality Capture"
+          caption={'Reality Capture'}
+          href="https://www.capturingreality.com/realitycapture"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <h2>Reality Scan App (Unreal Engine)</h2>
+        <br />
+        <Image
+          src="/images/coding/logo-reality_scan.jpeg"
+          alt="Reality Scan App"
+          caption={'Reality Scan App'}
+          href="https://www.unrealengine.com/en-US/realityscan"
         />
       </>
     ),
