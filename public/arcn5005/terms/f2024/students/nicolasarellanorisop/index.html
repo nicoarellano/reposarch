@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 <section class="main-container">
@@ -34,52 +35,18 @@
 </body>
 
 <style>
-  .main-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .final {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-  }
-  .final ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .final ul li {
-    margin: 10px;
-  }
-  .final img {
-    margin-top: 20px;
-  }
   #viewers {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
-  }
-
-body,
-html {
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
-    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
     height: 100%;
-}
-
-ol,
-ul {
-    list-style-type: disc;
-    margin-left: 2.5rem;
-    font-size: large;
-}
+    padding: 1rem;
+  }
 
 .main-container {
     width: 95%;
@@ -92,19 +59,6 @@ ul {
     gap: 2rem;
 }
 
-.vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-}
-
-#viewers {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1rem;
-    height: 100%;
-    padding: 1rem;
-}
 
 .viewer {
     right: 0;
@@ -137,47 +91,6 @@ ul {
     position: absolute;
     height: 100%;
     width: 100%;
-}
-
-button {
-    appearance: none;
-    background-color: white;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
-}
-
-button:disabled {
-    pointer-events: none;
-}
-
-button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    transform: translateY(-2px);
-}
-
-button:active {
-    box-shadow: none;
-    transform: translateY(0);
 }
 </style>
 
