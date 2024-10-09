@@ -39,47 +39,44 @@ export default function StudentsList({ students }: Props) {
       subheader={<ListSubheader component="div">Students List</ListSubheader>}
     >
       {students.map((student: Student, index) => (
-        <div
-          key={index}
-          // href={`${path}/${student.username}`}
-          title={student.username}
-        >
+        <div key={index} title={student.username}>
           <ListItemButton
             onClick={() => handleClick(index)}
             sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
           >
             <ListItemIcon>
-              <IconButton href={`${path}/${student.username}`}>
-                <Avatar
-                  src={`${path}/${student.username}/avatar.jpg`}
-                  sx={{ width: 30, height: 30 }}
-                />
-              </IconButton>
+              <Link href={`${path}/${student.username}`}>
+                <IconButton>
+                  <Avatar
+                    src={`${path}/${student.username}/avatar.jpg`}
+                    sx={{ width: 30, height: 30 }}
+                  />
+                </IconButton>
+              </Link>
             </ListItemIcon>
             <ListItemText
               primary={`${student.firstName} ${student.lastName}`}
             />
-            <IconButton
-              title="About"
-              href={`${path}/${student.username}/about`}
-            >
-              <AboutIcon />
-            </IconButton>
-            <IconButton
-              title="Three"
-              href={`${path}/${student.username}/three`}
-            >
-              <ThreeIcon />
-            </IconButton>
-            <IconButton title="Map" href={`${path}/${student.username}/map`}>
-              <MapIcon />
-            </IconButton>
-            <IconButton
-              title="Final"
-              href={`${path}/${student.username}/final`}
-            >
-              <FinalIcon />
-            </IconButton>
+            <Link href={`${path}/${student.username}/about`}>
+              <IconButton title="About">
+                <AboutIcon />
+              </IconButton>
+            </Link>
+            <Link href={`${path}/${student.username}/three`}>
+              <IconButton title="Three">
+                <ThreeIcon />
+              </IconButton>
+            </Link>
+            <Link href={`${path}/${student.username}/map`}>
+              <IconButton title="Map">
+                <MapIcon />
+              </IconButton>
+            </Link>
+            <Link href={`${path}/${student.username}/final`}>
+              <IconButton title="Final">
+                <FinalIcon />
+              </IconButton>
+            </Link>
           </ListItemButton>
         </div>
       ))}
