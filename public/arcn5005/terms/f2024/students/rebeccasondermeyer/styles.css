@@ -4,6 +4,18 @@
 
 }
 
+.b{
+    color: rgb(214, 220, 220);
+    background-color: rgb(110, 136, 131);
+}
+.projects{
+    display: flex;
+}
+
+.t{
+    padding: 10px;
+} 
+
 body,
 html {
     font-family: 'Roboto', sans-serif;
