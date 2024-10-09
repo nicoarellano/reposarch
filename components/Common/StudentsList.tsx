@@ -81,9 +81,6 @@ export default function StudentsList({ students }: Props) {
               <FinalIcon />
             </IconButton>
           </ListItemButton>
-          <Collapse in={open[index]} timeout="auto" unmountOnExit>
-            <ScrollableAssignmetnsList username={student.username} />
-          </Collapse>
         </div>
       ))}
     </List>
