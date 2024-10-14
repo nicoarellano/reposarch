@@ -9,7 +9,7 @@ body {
   text-align: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(-45deg, #e6ffe6, #ffffff, #9eafb0, #5f6966);
+  background: linear-gradient(-45deg, #e6ffe6, #ffffff, #9eafb0, #9ca8a5);
   background-size: 400% 400%;
   animation: gradientBackground 5s ease infinite;
 }
@@ -73,8 +73,7 @@ p {
 .interests img {
   width: 150px;
   height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50px;
   margin-bottom: 10px;
 }
 a, button {
