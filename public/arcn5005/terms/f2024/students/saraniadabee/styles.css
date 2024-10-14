@@ -3,6 +3,57 @@
     box-sizing: border-box;
 
 }
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #f0f0f0; /* Light gray background */
+  }
+  
+  .animated-background::before,
+  .animated-background::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(100, 100, 255, 0.1); /* Light blue circles */
+    animation: move 15s infinite linear;
+  }
+  
+  .animated-background::before {
+    left: -150px;
+    top: -150px;
+  }
+  
+  .animated-background::after {
+    right: -150px;
+    bottom: -150px;
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    25% {
+      transform: translateX(100%) translateY(0);
+    }
+    50% {
+      transform: translateX(100%) translateY(100%);
+    }
+    75% {
+      transform: translateX(0) translateY(100%);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
 
 body,
 html {
