@@ -1,10 +1,23 @@
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5px;
+}
+h2 {
+  font-size: 1.0rem;
+  letter-spacing: 0.5px;
+}
+h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.1px;
+}
+p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
 body {
   margin: 0;
   padding: 50px;
-  min-height: 100vh;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Helvetica';
   display: flex;
   text-align: center;
   align-items: center;
@@ -18,16 +31,16 @@ body {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-.image-container {
+.image-container{
   display: flex;
   align-items: center;
 }
 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+width: 400px;
+height: 300px;
+border-radius: 30px;
 }
-.content,.introduction {
+.introduction {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 30px;
   box-shadow: 0 4px 6px rgb(86, 113, 173);
@@ -38,49 +51,29 @@ ul {
   padding-left: 0;
   margin-left: 0;
 }
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  text-decoration: underline;
-}
-h2 {
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
-}
-h3 {
-  font-size: 0.8rem;
-  letter-spacing: 0.1px;
-  font-style: italic;
-}
-p {
-  font-size: 1.2rem;
-  max-width: 600px;
-}
 .interests {
   width: 100%;
-  padding: 3rem;
   gap: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 30px;
   box-shadow: 0 4px 6px rgb(86, 113, 173);
   flex-wrap: nowrap;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  padding:2rem
 }
 .interests img {
   width: 150px;
   height: 150px;
   border-radius: 50px;
-  margin-bottom: 10px;
+  padding: 2rem;
 }
 a, button {
   display: inline-block;
-  padding: 10px 20px;
   margin: 10px;
   text-decoration: none;
-  color: #333;
-  background-color: transparent;
+  color: rgb(86, 113, 173);
+  background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid #333;
   font-family: inherit;
   font-size: 0.7rem;
@@ -88,6 +81,7 @@ a, button {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0.5rem 0.8rem;
 }
 a:hover, button:hover {
   background-color: #333;
