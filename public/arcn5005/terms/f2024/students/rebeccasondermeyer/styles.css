@@ -1,7 +1,6 @@
 * 
 {
-    padding: 0;
-    box-sizing: border-box;
+    transition:0.3s;
 }
 @font-face {
     font-family: 'ChunkFiveRegular';
@@ -16,8 +15,11 @@ html {
     display: flex;
 }
 .t {
-    padding: 20px;
+    padding: 40px;
 } 
+.y {
+    padding: 20px;
+}
 body, html {
     width: 100%;
     background-color: rgb(110, 136, 131);
@@ -26,8 +28,7 @@ body, html {
     width: 23%;
     float: left;
     margin: 1%;}
-.column4 {margin-right:0%;
-}
+
 li  {
     display: inline;
     padding: 0.5em;
@@ -41,19 +42,15 @@ li  {
     align-items: center;
     overflow: hidden;    
 }
-header, section, footer, aside, nav, article, figure, figcaption {display:block;
+figure, figcaption {display:block;
 }
 .email {
-    padding-left: 1180px;
+    padding-left: 1515px;
 }
 button {
-    appearance: none;
     background-size: cover;
     background-color: rgb(110, 136, 131);
     box-shadow: rgba(14, 30, 37, 0.12) 20px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: none;
-    box-sizing: none;
-    cursor: none;
     display: inline-block;
     font-size: 16px;
     font-weight: 600;
@@ -61,15 +58,9 @@ button {
     margin: 0px;
     min-height: 20em;
     min-width: 20em;
-    outline: none;
     padding: 1em 2.3em;
     text-align: left;
-    text-decoration: none;
-    transition: none;
-    user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
-    transition: background-colour 0.3s;
     transform: scaleX(90%);
     opacity: 'overlay-text', 0%
 }
@@ -86,10 +77,8 @@ button:hover {
   
   .image-container img {
     display: block;
-    width: 100%;
-    height: auto;
+    height: 100%;
   }
-  
 .content{ 
     position: absolute;
     top: 50%; 
@@ -104,6 +93,6 @@ button:hover {
     transition: 0.3s; 
 } 
 
-.content:hover{ 
-    opacity: 0.75; 
-} 
+.image-container:hover .content{
+    opacity:0.75;
+}
