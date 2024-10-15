@@ -1,54 +1,37 @@
-* {
+* 
+{
     padding: 0;
     box-sizing: border-box;
-
-
+}
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('font/chunkfive.eot')}
+h1, h2 {
+    font-family: 'ChunkFiveRegular', Georgia, serif;
 }
 html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-.b{
-    color: rgb(214, 220, 220);
-    background-color: rgb(110, 136, 131);
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif
 }
-.projects{
+.projects {
     display: flex;
 }
-
-.t{
+.t {
     padding: 20px;
 } 
-
 body, html {
     width: 100%;
     background-color: rgb(110, 136, 131);
     margin:0 auto; }
-#content {overflow: auto;}
-#nav, #feature, #footer  {
-    margin: 1%;}
 .column1, .column2, .column3, .column4 {
-    width: 24%;
+    width: 23%;
     float: left;
     margin: 1%;}
-.column4 {margin-right:0%;}
+.column4 {margin-right:0%;
+}
 li  {
     display: inline;
-    padding: 0.5em;}
-#nav, #footer {
-padding: 0.5em 0;}
-#feature, .article {
-    height: 10em;
-    margin-bottom: 1em;
-    }
-ol,
-ul {
-    list-style-type: disc;
-    margin-left: 2.5rem;
-    font-size: large;
+    padding: 0.5em;
 }
-
-
 .about {
     width: 100%;
     height: 100%;
@@ -56,19 +39,20 @@ ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    
+    overflow: hidden;    
 }
-
-.email{
+header, section, footer, aside, nav, article, figure, figcaption {display:block;
+}
+.email {
     padding-left: 1180px;
 }
 button {
     appearance: none;
     background-size: cover;
+    background-color: rgb(110, 136, 131);
     box-shadow: rgba(14, 30, 37, 0.12) 20px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: none;
-    box-sizing: border-box;
+    box-sizing: none;
     cursor: none;
     display: inline-block;
     font-size: 16px;
@@ -79,17 +63,47 @@ button {
     min-width: 20em;
     outline: none;
     padding: 1em 2.3em;
-    text-align: end;
+    text-align: left;
     text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    transition: none;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    will-change: transform;
     transition: background-colour 0.3s;
     transform: scaleX(90%);
+    opacity: 'overlay-text', 0%
 }
-
 button:hover {
     transform: translateY(-20px);
-}  
+    box-shadow: none;
+    background-color: rgb(25, 29, 48);
+    opacity: 'overlay-text', 100%;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+.content{ 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: beige; 
+    color: black; 
+    padding: 30px 30px; 
+    font-size: 20px; 
+    text-align: center;
+    opacity: 0%; 
+    transition: 0.3s; 
+} 
+
+.content:hover{ 
+    opacity: 0.75; 
+} 
