@@ -18,9 +18,30 @@ ul {
     color: #333;
 }
 
+button {
+    margin-left: 100px;
+    background-color: #066d47; /* Green */
+    border: 2px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
 pre {
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 20px;
     color: #333;
 }
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
