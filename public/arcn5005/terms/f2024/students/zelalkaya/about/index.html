@@ -1,11 +1,132 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>zelalkaya about page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelal Kaya's Profile</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+          <img class="profile-pic" src="avatar.jpg" width="100px"/>
+          
+            <h1>Zelal Kaya</h1>
+            <p style="text-align: center; color: var(black);">M.Arch Student at Azrieli school of architecture and urbanism</p>
+        </div>
+        <div class="main-content">
+          <section>
+            <img src="spotify.jpg" width="110px" style="display: inline; vertical-align: middle;"/> 
+<p style="display: inline; vertical-align: middle;">Bonkers - Pilsplaat</p>
+          </section>
+            <section>
+              <audio controls>
+              <source src="Pilsplaat.mp3" type="audio/mpeg">
+          </audio>
+          </section>
+            <section>
+                <h2>About Me</h2>
+                <p>Welcome!</p>
+                <p>As a M.Arch student at Azrieli school of Architecture and Urbanism, I have previously completed my bachelor's degree in Environmental design at Université de Québec à Montréal (UQAM) and my college degree in Architectural technology at Montmorency College.</p>
+                  <p>I am looking to obtain my license as an Architect after my master's degree.</p>
+                  <p>I love architecture and travel the world to admire it.</p>
+                  <p>Here's a few of my favorite architectural cities.</p>
+            </section>
+            
+            <section>
+                <h2>My photos album </h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <img class="slide" src="athens.jpg"/>
+                        <img class="slide" src="barcelona.jpg"/>
+                        <img class="slide" src="istanbul.jpg"/>
+                        <img class="slide" src="paris.jpg"/>
+                        <img class="slide" src="new york.jpg"/>
+                    </div>
+                    <button class="slider-btn prev">&lt;</button>
+                    <button class="slider-btn next">&gt;</button>
+                </div>
+            </section>
+                <ul class="assignments">
+                     
+                        <button class="cta">
+                          <span class="hover-underline-animation"> Assignment 2 </span>
+                          <svg
+                            id="arrow-horizontal"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="10"
+                            viewBox="0 0 46 16"
+                          >
+                            <path
+                              id="Path_10"
+                              data-name="Path 10"
+                              d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                              transform="translate(30)"
+                            ></path>
+                          </svg>
+                        </button>
+                        
+                        <ul class="assignments">
+                     
+                          <button class="cta">
+                            <span class="hover-underline-animation"> Assignment 3 </span>
+                            <svg
+                              id="arrow-horizontal"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="30"
+                              height="10"
+                              viewBox="0 0 46 16"
+                            >
+                              <path
+                                id="Path_10"
+                                data-name="Path 10"
+                                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                transform="translate(30)"
+                              ></path>
+                            </svg>
+                          </button>
+                          <ul class="assignments">
+                     
+                            <button class="cta">
+                              <span class="hover-underline-animation"> Final assignment </span>
+                              <svg
+                                id="arrow-horizontal"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="30"
+                                height="10"
+                                viewBox="0 0 46 16"
+                              >
+                                <path
+                                  id="Path_10"
+                                  data-name="Path 10"
+                                  d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                  transform="translate(30)"
+                                ></path>
+                              </svg>
+                            </button>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let slideIndex = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function showSlide(index) {
+            if (index < 0) {
+                slideIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                slideIndex = 0;
+            } else {
+                slideIndex = index;
+            }
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(slideIndex - 1));
+        nextBtn.addEventListener('click', () => showSlide(slideIndex + 1));
+    </script>
+
+</body>
 </html>
