@@ -1,29 +1,37 @@
 * 
 {
     transition:0.3s;
+    color: beige;
 }
-@font-face {
-    font-family: 'ChunkFiveRegular';
-    src: url('font/chunkfive.eot')}
-h1, h2 {
-    font-family: 'ChunkFiveRegular', Georgia, serif;
+h1, h2, h3, h4 {
+    color: beige;
+}
+h1{
+    font-family: Georgia, serif;
+    font-size: 40px
+}
+h2{
+    font-family: "funkydori", sans-serif;
+    font-size: 60px;
 }
 html {
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif
+    font-family: Georgia, serif
 }
 .projects {
     display: flex;
 }
-.t {
+.p40 {
     padding: 40px;
 } 
-.y {
+.p20 {
     padding: 20px;
 }
 body, html {
     width: 100%;
-    background-color: rgb(110, 136, 131);
-    margin:0 auto; }
+    background-color:rgb(110, 136, 131);
+    margin:0 auto; 
+}
+    
 .column1, .column2, .column3, .column4 {
     width: 23%;
     float: left;
@@ -46,6 +54,7 @@ figure, figcaption {display:block;
 }
 .email {
     padding-left: 1515px;
+    
 }
 button {
     background-size: cover;
@@ -84,7 +93,7 @@ button:hover {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    background-color: beige; 
+    background-color: white;
     color: black; 
     padding: 30px 30px; 
     font-size: 20px; 
