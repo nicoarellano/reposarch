@@ -216,13 +216,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/a7hWyWWJ3oQ?si=qxNqEVF2Q99S7Bfb',
+        title: 'OSArch - Open source for architects community - Fall 2024',
+        date: dayjs('2024/10/09'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/Qe2Bdh8Tpoc?si=5hVQ7_MVfWYrDovm',
+        title: 'Introduction to CSS - Fall 2024',
+        date: dayjs('2024/10/09'),
+      },
+      {
         url: 'https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3',
-        title: 'OSArch - Open source for architects community',
+        title: 'OSArch - Open source for architects community - Fall 2023',
         date: dayjs('2023/10/12'),
       },
       {
         url: 'https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg',
-        title: 'Introduction to CSS',
+        title: 'Introduction to CSS - Fall 2023',
         date: dayjs('2023/10/12'),
       },
     ],
