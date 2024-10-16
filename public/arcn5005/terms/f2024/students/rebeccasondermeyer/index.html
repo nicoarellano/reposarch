@@ -1,28 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rebeccasondermeyer's About Page</title>
+<head>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <header>
-      <h1 id="title">About page</h1>
-      <h2 class="subtitle">Subtitle</h2>
-    </header>
-    <h2>Student name</h2>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebecca's About Me Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+</head>
 
-    <a href=""><button>Assignment 2</button></a>
-    <a href=""><button>Assignment 3</button></a>
-    <a href=""><button>Assignment 4</button></a>
-    <a href=""><button>Final Assignment</button></a>
-
-    <img src="photo.png" width="100px" alt="profile picture" />
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur facere
-      molestiae sequi aliquid totam. Expedita in voluptate eaque quos nisi
-    </p>
-  </body>
+<body>
+    <div class="about">
+        <header>
+            <h1 style="color: beige;">About me page</h1>
+        </header>
+    </div>
+            <div class="t" style="background-color:rgb(25, 29, 48);">
+                <div class="projects">
+                    <img alt="Rebecca" width="300px" height="400px" src="about/avatar.jpg"/>
+                    <div class="y">
+                        <h2 style="color: beige;">Rebecca Sondermeyer</h2>
+                        <h4 style="color: beige;">Assignment Portal</h2>        
+                            <div style="width: 500px">
+                                <p style="color: beige;">I graduated from the Bachelor of Architectural Studies Conservation & Sustainability program at Carleton University in 2020. 
+                                I worked at many firms in the summers between classes including AECOM as a Junior BIM Coordinator, SOTA as an Acoustic Consultant, and Heritage Grade as a Heritage Consultant.
+                                I have 4 years experience working as a Building Science Consultant, most proudly completing dozens of building condition assessments for the city of Ottawa public park buildings, 
+                                and assisting the Sustainability team to put together applications for LEED and Green Globes.
+                                I have a passion for sustainable design and seek an opportunities to support my community, and the environment. 
+                                I can speal both English and French. 
+                                My interests include volunteering for animal rescues, playing piano, singing, skating and golfing.
+                                </p>
+                            </div>                     
+                    </div>
+                        <img width="267px" height="100%" src="about/golf.gif">
+                        <img width="250px" height="250px"src="about/white-cat bobbing.gif">
+                        <img width="500px" height="270px" src="about/Sierra.png">                    
+                </div>
+                                <address style="color: beige;">
+                                    <p>
+                                        <a class="email" href="mailto:rebeccasondermeyer@cmail.carleton.ca">rebeccasondermeyer@cmail.carleton.ca</a>
+                                    </p>
+                                </address>
+            </div>
+            <div>
+                <div  class="column1">
+                    <button :hover> 
+                        <div class="image-container">
+                            <a style="color: blue" href="https://github.com/rebeccasondermeyer/reposarch-rs/tree/dev/public/arcn5005/terms/f2024/students/rebeccasondermeyer/about"> 
+                                <figure>
+                                    <img alt="about" width="250px" height="250px" src="about/aboutphoto.jpg">
+                                </figure>
+                                    <figurecaption>about</figurecaption>
+                            </a>
+                                <div :hover class="content">about</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="column2">
+                    <button :hover>
+                        <div class="image-container">
+                            <a style="color: blue" href="https://github.com/rebeccasondermeyer/reposarch-rs/tree/dev/public/arcn5005/terms/f2024/students/rebeccasondermeyer/map">
+                                <figure>
+                                    <img alt="map" width="250px" height="250px" src="about/rotatingearth.gif">
+                                </figure>
+                                    <figurecaption>map</figurecaption>
+                            </a>
+                                <div :hover class="content">map</div>
+                        </div>
+                    </button>
+                </div>
+                <div class="column3">
+                    <button :hover>
+                        <div class="image-container">
+                            <a style="color: blue" href="https://github.com/rebeccasondermeyer/reposarch-rs/tree/dev/public/arcn5005/terms/f2024/students/rebeccasondermeyer/three"> 
+                                <figure>
+                                    <img alt="three" width="250px" height="250px" src="about/threephoto.jpg">
+                                </figure>
+                                    <figurecaption>three</figurecaption>
+                            </a>
+                                <div :hover class="content">three</div>
+                        </div> 
+                    </button>
+                </div>
+                <div class="column4">
+                    <button :hover> 
+                        <div class="image-container">
+                            <a style="color: blue" href="https://github.com/rebeccasondermeyer/reposarch-rs/tree/dev/public/arcn5005/terms/f2024/students/rebeccasondermeyer/final"> 
+                                <figure>
+                                    <img alt="final" width="250px" height="250px" src="about/finalphoto.jpg">
+                                </figure>
+                                    <figurecaption>final</figurecaption>
+                            </a>
+                                <div :hover class="content">final</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+     
+</body>
 </html>
