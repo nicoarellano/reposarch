@@ -6,23 +6,73 @@
 
 body,
 html {
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    font-family: 'Libre Franklin', sans-serif;
+    overflow: auto;
     width: 100%;
     height: 100%;
 }
 
-ol,
-ul {
-    list-style-type: disc;
-    margin-left: 2.5rem;
-    font-size: large;
+body, .custom-cursor {
+  cursor: url('cursor.png'), auto;
 }
 
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../background.png);
+  background-size: cover;       
+  background-position: center;  
+  opacity: 0.5;                
+  z-index: -1;   
+}
 
 h1 {
-    color: red;
+    color: rgb(21, 73, 128);
+    font-size: 50px;
+    text-align: right;
+    margin-bottom: 2px;
+    margin-left: 30px;
 }
+
+h2 { 
+  color: rgb(255, 255, 255);
+  font-size:15px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: right;
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  color: rgb(21, 73, 128);
+  font-size: 30px;
+  text-align: left;
+  margin-left: 65px;
+}
+
+.rounded-box {
+  background-color: rgb(255, 255, 255, 0.5); 
+  border-radius: 20px; 
+  padding: 10px;       
+  width: 530px;        
+  text-align:left; 
+  position: relative; 
+  margin-left: 65px;
+}
+
+.box-text, ul {
+  color:rgb(13, 53, 128);
+  list-style-type: disc;
+   margin-left: 2.5rem;
+   font-size: large;
+   font-weight: 450 ;
+   line-height: 1.5;
+  }
 
 .about {
     width: 95%;
@@ -33,44 +83,138 @@ h1 {
     overflow: hidden;
 }
 
+.image1 {
+  border: 2px solid rgb(13, 53, 128);
+  border-radius: 50%;
+  float: right;
+  position: absolute;
+  left:400px;
+  top:50%;
+  transform: translateY(-50%);
+}
 
+* {box-sizing:border-box}
+
+/* From Uiverse.io by WhiteNervosa */ 
 button {
-    appearance: none;
-    background-color: white;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
+  font-size: 20px;
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: url('cursor.png'), pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  padding: 10px;
+  margin-left: 60px;
+  margin-top: -10px;
 }
 
-button:disabled {
-    pointer-events: none;
-}
-
+button:focus,
 button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    transform: translateY(-2px);
+  color:rgb(21, 73, 128);
 }
 
-button:active {
-    box-shadow: none;
-    transform: translateY(0);
+button:focus:after,
+button:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+button:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+  position: fixed; 
+  bottom: -15px;    
+  right: 10px;     
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  transform: translateY(-2px);
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+.wrapper .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%; 
+  transform: translateX(-50%);
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: rgb(21, 73, 128);
+  color: #fff;
 }
