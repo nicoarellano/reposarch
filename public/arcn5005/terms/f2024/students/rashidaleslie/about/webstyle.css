@@ -1,0 +1,111 @@
+.sniglet-regular {
+  font-family: "Sniglet", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sniglet-extrabold {
+  font-family: "Sniglet", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+ul{
+  padding-right: 50px;
+  line-height: 2;
+  font-family: 'sniglet';
+  font-weight: 300;
+}
+h1{
+  text-align: center;
+  font-family: 'sniglet';
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: auto;
+ 
+}
+
+h2{
+  
+  font-family: 'sniglet';
+  font-weight: 300;
+  
+  
+}
+
+
+body{
+background-color: #ffffff;
+background-image:  linear-gradient(#7f7f7f 1px, transparent 1px), linear-gradient(to right, #7f7f7f 1px, #ffffff 1px);
+background-size: 20px 20px;
+}
+  
+  .row {
+    display: flex; /* Use flexbox to place columns side by side */
+  }
+  .column-1{ 
+    flex:2;
+    height: 800px;
+  
+
+  }
+  .column-group {
+    display: flex;
+    flex-direction: column;
+    flex: 2; /* This ensures columns 2, 3, and the bottom section collectively take up more space */
+  }
+  .columns-container {
+    display: flex; 
+  }
+  .column {
+    flex: 1; /* Make each column take up equal space */
+    padding: 10px; 
+    height: 400px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom-section {
+    
+    padding: 10px;
+    border: 5px solid #575b82; 
+     border-radius: 5px;
+     background-color: #ffffff;
+     height: 400px;
+  }
+   /* Clear floats after the columns */
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .image-border {
+    border: 5px solid#575b82; 
+    border-radius: 5px; /* Optional: Adds rounded corners to the border */
+    padding: 20px;
+    background-color: #ffffff;
+}
+.new-section {
+  background-color: lightblue; 
+  padding: 20px; /* Add some padding */
+  margin-top: 20px; /* Space above the new section */
+  border: 2px solid #575b82; /* Border around the new section */
+  border-radius: 5px; /* Rounded corners */
+  height: 500px;
+
+}
+
+.button {
+  background-color:#575b82; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
