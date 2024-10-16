@@ -1,10 +1,35 @@
 
 h1 {
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: left;
   gap: 10px;
+}
+
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alumni-sans-pinstripe-regular-italic {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.page-title {
+  text-align: left;
+  font-size: 2em; 
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #225101;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .first{
@@ -42,7 +67,6 @@ h1 {
 body {
   margin: 0;
   padding: 50px;
-  font-family: 'Helvetica';
   height: 100vh; 
   background-image: url('background.jpg');
   background-size: cover;
@@ -57,15 +81,15 @@ body {
   align-items: flex-start;
   position: relative;
   gap: 20px;
-  margin-top: 35px;
+  margin-top: 50px;
   z-index: 10;
 }
 
 .card {
   width: 30em;
   height: 17em;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
   background: #9fbd7d;
   transition: 1s ease-in-out;
   clip-path: polygon(
@@ -84,15 +108,16 @@ body {
 
 .card span {
   align-content: left;
-  font-weight: bold;
+  font-weight: normal;
   color: white;
   text-align: center;
   display: block;
-  font-size: .7em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-style: normal;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
 }
 
 .card .info {
@@ -100,11 +125,10 @@ body {
   color: white;
   display: block;
   text-align: center;
-  font-size: 0.6em;
+  font-size: .6em;
   font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     margin: .25em;
-  margin-bottom: .5px;
 
 }
 
@@ -220,7 +244,7 @@ button {
   .card_2 {
     display: inline-block;
    width: 190px;
-    background: #9fbd7d;
+    background: rgb(159, 189, 125, 0.8);
     padding: .4em;
     border-radius: 6px;
     align-items: right;
@@ -258,7 +282,7 @@ button {
    .card_3 {
        display: inline-block;
        width: 190px;
-       background: #9fbd7d;
+       background: rgb(159, 189, 125, 0.8);
        padding: .4em;
        border-radius: 6px;
        margin-left: 2.6%;
@@ -316,12 +340,13 @@ button {
     max-width: 140 px;
   }
 
-  .page-title {
-    font-size: .6em;
+  .class-title {
+    font-size: .8em;
       font-family: Arial, Helvetica, sans-serif;
       text-transform: uppercase; 
-    font-weight: 400;
-    margin-left: 15px; 
-    margin-top: 75px; 
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 25px; 
+    margin-top: 50px; 
     color: #225101;
   }
