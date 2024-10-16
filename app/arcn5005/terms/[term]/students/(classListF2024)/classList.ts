@@ -107,6 +107,20 @@ export const classListf2024: Students = [
     email: 'HassanHannawi@cmail.carleton.ca',
   },
   {
+    id: '#101195968',
+    username: 'jasminehersh',
+    lastName: 'Hersh',
+    firstName: 'Jasmine',
+    email: 'jasminehersh@cmail.carleton.ca',
+  },
+  {
+    id: '#101315584',
+    username: 'jaspersilverking',
+    lastName: 'Silver-King',
+    firstName: 'Jasper',
+    email: 'jaspersilverking@cmail.carleton.ca',
+  },
+  {
     id: '#101351899',
     username: 'joshharriman',
     lastName: 'Harriman',
@@ -196,6 +210,13 @@ export const classListf2024: Students = [
     lastName: 'Coman',
     firstName: 'Tess',
     email: 'TessComan@cmail.carleton.ca',
+  },
+  {
+    id: '#101159867',
+    username: 'williamlozides',
+    lastName: 'Lozides',
+    firstName: 'William',
+    email: 'williamlozides@cmail.carleton.ca',
   },
   {
     id: '#101348046',

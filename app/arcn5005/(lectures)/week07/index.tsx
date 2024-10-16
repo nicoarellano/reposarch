@@ -53,8 +53,8 @@ export const content: Toc = [
     element: (
       <Video
         src="https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7"
-        title="Raphael Vouilloz - BlenderBIM"
-        caption={'Raphael Vouilloz - BlenderBIM'}
+        title="Raphael Vouilloz - BlenderBIM - Fall 2023"
+        caption={'Raphael Vouilloz - BlenderBIM - Fall 2023'}
       />
     ),
   },
@@ -141,9 +141,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/tpQjRjB1wnU?si=q1XMa_so-2EJ34kJ"
-        title="BonsaiBIM - major UI update"
-        caption={'BonsaiBIM - major UI update'}
+        src="https://www.youtube.com/embed/oF-0qq_yi34?si=eNJuZKtzSou_wX9I"
+        title="BonsaiBIM - Addon Update - 24.06.02"
+        caption={'BonsaiBIM - Addon Update - 24.06.02'}
       />
     ),
   },
