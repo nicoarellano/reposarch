@@ -1,21 +1,21 @@
-import * as React from "react";
-import dayjs, { Dayjs } from "dayjs";
-import Badge from "@mui/material/Badge";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
-import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
-import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
-import { arcn5005Lectures } from "@/app/arcn5005/(lectures)/arcn5005Lectures";
+import * as React from 'react';
+import dayjs, { Dayjs } from 'dayjs';
+import Badge from '@mui/material/Badge';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { PickersDay, PickersDayProps } from '@mui/x-date-pickers/PickersDay';
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import { DayCalendarSkeleton } from '@mui/x-date-pickers/DayCalendarSkeleton';
+import { arcn5005Lectures } from '@/app/arcn5005/(lectures)/arcn5005Lectures';
 
 const classDays = arcn5005Lectures.map((lecture) => lecture.date);
-const quizes = [dayjs("2024-10-02"), dayjs("2024-11-27")];
+const quizes = [dayjs('2024-10-02'), dayjs('2024-11-27')];
 const assignments = [
-  dayjs("2024-10-16"),
-  dayjs("2024-11-13"),
-  dayjs("2024-12-04"),
+  dayjs('2024-10-16'),
+  dayjs('2024-11-13'),
+  dayjs('2024-12-04'),
 ];
-const fallBreak = [dayjs("2024-10-23")];
+const fallBreak = [dayjs('2024-10-23')];
 
 const initialValue = dayjs();
 
@@ -26,19 +26,21 @@ function ServerDay(
 
   const isSelected =
     !outsideCurrentMonth &&
-    highlightedDays.some((date) => date.isSame(day, "day"));
+    highlightedDays.some((date) => date.isSame(day, 'day'));
 
   const isClassDay = classDays.some(
-    (classDay) => classDay && classDay.isSame(day, "day")
+    (classDay) => classDay && classDay.isSame(day, 'day')
   );
   const isAssignmentDay = assignments.some((assignmentDay) =>
-    assignmentDay.isSame(day, "day")
+    assignmentDay.isSame(day, 'day')
   );
-  const isQuizDay = quizes.some((quizDay) => quizDay.isSame(day, "day"));
+  const isQuizDay = quizes.some((quizDay) => quizDay.isSame(day, 'day'));
   const isFallBreakDay = fallBreak.some((fallBreakDay) =>
-    fallBreakDay.isSame(day, "day")
+    fallBreakDay.isSame(day, 'day')
   );
-  const isFinalAssignmentDay = day.isSame(dayjs("2024-12-16"), "day");
+
+  const isOnline = day.isSame(dayjs('2024-10-30'), 'day');
+  const isFinalAssignmentDay = day.isSame(dayjs('2024-12-16'), 'day');
 
   return (
     <Badge
@@ -46,15 +48,17 @@ function ServerDay(
       overlap="circular"
       badgeContent={
         isFinalAssignmentDay
-          ? "🏁"
+          ? '🏁'
           : isAssignmentDay
-          ? "🔴"
+          ? '🔴'
           : isQuizDay
-          ? "🟡"
+          ? '🟡'
           : isFallBreakDay
-          ? "✖️"
+          ? '✖️'
+          : isOnline
+          ? '💻'
           : isSelected
-          ? "🔵"
+          ? '🔵'
           : undefined
       }
     >
