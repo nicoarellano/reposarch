@@ -1,12 +1,24 @@
 * {
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 
 }
 
-img {
-    border-radius: 50%;
-  }
+
+button {
+width: 50px;
+height: 50px;
+background: transparent;
+border: none;
+}
+
+button:hover {
+  animation: bounce .3s infinite alternate;
+}
+
+@keyframes bounce {
+  to { transform: scale(1.2); }
+}
 
 header
 .container {
@@ -16,16 +28,23 @@ header
 
   }
   
-  .centered {
+  .centered-left {
     position: absolute;
-    top: 75%;
-    left: 50%;
+    top: 50%;
+    left: 500px;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+  }
+  .centered-right {
+    position: absolute;
+    top: 50%;
+    left: 920px;
     transform: translate(-50%, -50%);
   }
-  .centered-lower {
+  .centered-rightagain {
     position: absolute;
-    top: 80%;
-    left: 50%;
+    top: 50%;
+    left: 990px;
     transform: translate(-50%, -50%);
   }
 
@@ -35,12 +54,15 @@ html {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background-color: #1C1C1C;
+    background-color: #1c1c1c;
     color: white;
     text-align: center;
     width: 1500px;
     display: table;
     margin: auto;
+    font-size: large;
+    overflow-y: scroll;
+
 }
 
 
