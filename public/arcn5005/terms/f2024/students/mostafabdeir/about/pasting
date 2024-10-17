@@ -1,0 +1,59 @@
+/* From Uiverse.io by adamgiebl, Partly tweeked by me */
+button {
+    border: 6px solid rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    padding: 1em 12em;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+  }
+  
+  button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  
+  button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 700%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(112, 0, 0, 0.651);
+    z-index: -1;
+  }
+  
+  button:hover {
+    color: rgb(255, 255, 255);
+    background-image: url("sharing1.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  button:active span::before {
+    background: #c2ffd6;
+  }

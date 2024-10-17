@@ -43,6 +43,13 @@ export const arcn5005Lectures: Lectures = [
           '🖥️ LAB 1: Downloading software, installing an IDE (Visual studio code), Github',
       },
     ],
+    recordings: [
+      {
+        url: 'https://www.youtube.com/watch?v=nsiEUajkL74',
+        title: 'The Art of computer sciences: course introduction',
+        date: dayjs('2024/09/04'),
+      },
+    ],
   },
   {
     title: 'Programming and digitalization of the physical world',
@@ -60,13 +67,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
-        url: 'https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG',
-        title: 'Photogrammetry - Miquel Reina Ortiz',
-        date: dayjs('2023/09/14'),
+        url: 'https://youtu.be/i1VPXuYhHGk',
+        title: 'Programming',
+        date: dayjs('2024/09/11'),
+      },
+      {
+        url: 'https://youtu.be/X5hC_ckbP0I',
+        title: 'Photogrammetry - Miquel Reina Ortiz - Fall 2024',
+        date: dayjs('2024/09/11'),
       },
       {
         url: 'https://www.youtube.com/embed/w2N2Yth4sbQ?si=K6D_B2ESbYQ1Cq0v',
         title: 'Programming',
+        date: dayjs('2023/09/14'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/KzBL9fhKgWA?si=iIBCf7Sjgilq12xG',
+        title: 'Photogrammetry - Miquel Reina Ortiz - Fall 2023',
         date: dayjs('2023/09/14'),
       },
     ],
@@ -87,6 +104,11 @@ export const arcn5005Lectures: Lectures = [
       { title: '🖥️ LAB 3: P5, LibreCad, and Blender ' },
     ],
     recordings: [
+      {
+        url: 'https://youtu.be/wruFGy9uPkA',
+        title: 'CAD, 3D CAD, and BIM',
+        date: dayjs('2024/09/17'),
+      },
       {
         url: 'https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz',
         title: 'CAD, 3D CAD, and BIM',
@@ -115,8 +137,13 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/iT22KQ9AAY4?si=sq8VsnssGnmPlESC',
+        title: 'Scripting and Visual Programming - Fall 2024',
+        date: dayjs('2024/09/25'),
+      },
+      {
         url: 'https://www.youtube.com/embed/XeX3Iz3hE9g?si=jdr_iGGWa1TJB8Cu',
-        title: 'Scripting and Visual Programming',
+        title: 'Scripting and Visual Programming - Fall 2023',
         date: dayjs('2023/09/28'),
       },
     ],
@@ -149,9 +176,20 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/htt3qG2hhQI?si=1fSm5eenb5x6AxN-',
+        title:
+          'Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge  + HTML Introduction - Fall 2024',
+        date: dayjs('2024/10/02'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/ZMTE2R8nI34?si=e-dQpLeLjeE6novW',
+        title: 'Assignment 1 Explanation - Fall 2024',
+        date: dayjs('2024/10/02'),
+      },
+      {
         url: 'https://www.youtube.com/embed/qEGt81c3DTM?si=6K_swhkQAz6OUtUM',
         title:
-          'Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge ',
+          'Julie Ivanoff - Brief history of the computers, the internet, and the domocratization of knowledge',
         date: dayjs('2023/10/05'),
       },
       {
@@ -178,13 +216,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/a7hWyWWJ3oQ?si=qxNqEVF2Q99S7Bfb',
+        title: 'OSArch - Open source for architects community - Fall 2024',
+        date: dayjs('2024/10/09'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/Qe2Bdh8Tpoc?si=5hVQ7_MVfWYrDovm',
+        title: 'Introduction to CSS - Fall 2024',
+        date: dayjs('2024/10/09'),
+      },
+      {
         url: 'https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3',
-        title: 'OSArch - Open source for architects community',
+        title: 'OSArch - Open source for architects community - Fall 2023',
         date: dayjs('2023/10/12'),
       },
       {
         url: 'https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg',
-        title: 'Introduction to CSS',
+        title: 'Introduction to CSS - Fall 2023',
         date: dayjs('2023/10/12'),
       },
     ],
@@ -222,7 +270,7 @@ export const arcn5005Lectures: Lectures = [
     toc: [],
   },
   {
-    title: 'Web based 3D graphics',
+    title: 'Web based 3D graphics (⚠️💻 Online Class)',
     id: `week08`,
     url: `lectures/week08`,
     date: initialDate.add(8, 'week'),
@@ -390,6 +438,7 @@ export const arcn5005Lectures: Lectures = [
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
+  /*
   {
     title: '🗺️ Maps and GIS 🌎',
     id: `maps`,
@@ -418,5 +467,5 @@ export const arcn5005Lectures: Lectures = [
         date: dayjs('2023/09/25'),
       },
     ],
-  },
+  },*/
 ];

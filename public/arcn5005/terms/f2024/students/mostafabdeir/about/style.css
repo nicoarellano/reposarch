@@ -1,0 +1,435 @@
+/* ALL IMAGES/GIFS USED ARE NOT MINE BESIDES THE NAME CARD */
+#fax {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25pt;
+  font-weight: bold;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 1pt;
+  text-shadow: 4px 4px 10px rgb(0, 0, 0);
+  position: absolute;
+  left: 6rem;
+  top: 34rem;
+}
+
+.Int1 {
+  font-size: 30pt;
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  left: 7rem;
+  top: 29rem;
+
+}
+
+h1 {color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+};    
+
+#lis {
+    width: fit-content;
+}
+
+.list1 {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: fit-content;
+    position: absolute;
+    left: 29vw;
+    right: 40vw;
+    top: 22rem;
+}
+
+.but1 {
+    color: 0;
+}
+
+/*first button*/
+/* From Uiverse.io by adamgiebl, Partly tweeked by me */
+.button1 {
+    border: 6px solid rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    padding: 1em 12em;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke-width: 1pt;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-image: url("sharinganeyes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 70%;
+    background-position: 5rem;
+  }
+  
+  .button1 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  
+  .button1 span::before {
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 700%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  .button1:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(112, 0, 0, 0.651);
+    z-index: -1;
+  }
+  
+  .button1:hover {
+    color: rgb(255, 255, 255);
+    background-image: url("sharinganeyes.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 5rem;
+  }
+  
+  .button1:active span::before {
+    background: #c2ffd6;
+  }
+
+/*Second Button*/
+.button2 {
+    border: 6px solid rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    padding: 1em 12em;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke-width: 1pt;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-image: url("zorowalk1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .button2 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  
+  .button2 span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 700%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  .button2:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(112, 0, 0, 0.651);
+    z-index: -1;
+  }
+  
+  .button2:hover {
+    color: rgb(255, 255, 255);
+    background-image: url("zorowalk.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .button2:active span::before {
+    background: #c2ffd6;
+  }
+
+/*Third Button*/
+.button3 {
+    border: 6px solid rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    padding: 1em 12em;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke-width: 1pt;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-image: url("Sonic-Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  
+  .button3 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  
+  .button3 span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 700%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  .button3:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(112, 0, 0, 0.651);
+    z-index: -1;
+  }
+  
+  .button3:hover {
+    color: rgb(255, 255, 255);
+    background-image: url("SonicRunCrop.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: center
+    
+  }
+  
+  .button3:active span::before {
+    background: #c2ffd6;
+  }
+
+/*4th Button*/
+.button4 {
+    border: 6px solid rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    padding: 1em 12em;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke-width: 1pt;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-image: url("gokuvsvegeta.png");
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: rem;
+  }
+  
+  .button4 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  
+  .button4 span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 700%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  .button4:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(112, 0, 0, 0.651);
+    z-index: -1;
+  }
+  
+  .button4:hover {
+    color: rgb(255, 255, 255);
+    background-image: url("gokuvsvegeta.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: rem;
+  }
+  
+  .button1:active span::before {
+    background: #c2ffd6;
+  }
+
+
+body {
+    background-image: url("sunsetwizz.gif");
+    background-size: 100vw;
+}
+
+#title1 {
+    position: absolute;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    left: 40vw;
+    
+}
+
+p {color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bold;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke-width: 1pt;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+}
+
+.firstsen {
+  position: absolute;
+  top: 16rem;
+  left: 4rem;
+}
+
+.secondsen {
+  position: absolute;
+  top: 18rem;
+}
+
+/*art page link button*/
+/* From Uiverse.io by felipesntr */ 
+.artlink {
+  padding: 2em 3em;
+  position: absolute;
+  right: 10rem;
+  top: 25rem;
+  border: 4px solid #fa725a;
+  transition: ease-in-out 0.3s;
+  background-color: transparent;
+  color: #000000;
+  font-weight: bolder;
+  font-size: 16px;
+ }
+ 
+ .artlink:hover {
+  transform: scale(1.2) rotate(10deg);
+  background-color: #fa725a;
+  color: white;
+ }
+
+
+/*design page link button*/
+.designlink {
+  padding: 2em 3em;
+  position: absolute;
+  left: 10rem;
+  top: 25rem;
+  border: 4px solid #fa725a;
+  transition: ease-in-out 0.3s;
+  background-color: transparent;
+  color: #000000;
+  font-weight: bolder;
+  font-size: 16px;
+ }
+ 
+ .designlink:hover {
+  transform: scale(1.2) rotate(10deg);
+  background-color: #fa725a;
+  color: white;
+ }
+
+.art1 {
+  width: 6rem;
+  height: 6rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 5em 10em;
+  position: absolute;
+  top: 32rem;
+  right: 1px;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.art1:hover { 
+  background-image: url(zorobackpainting.jpg); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 5em 10em;  
+  opacity: 1;
+}
+
+.pfp1 {
+  background-image: url(pfpnico.png);
+  background-size: contain;
+  width: fit-content;
+  padding: 5em 5em;
+  background-repeat: no-repeat;
+  border-radius: 5rem;
+  position: absolute;
+  top: 5rem;
+  left: 10.5rem;
+}
+
+.pfp2 {
+  background-image: url(avatyelvis.png);
+  background-size: contain;
+  width: fit-content;
+  padding: 5em 5em;
+  background-repeat: no-repeat;
+  border-radius: 5rem;
+  position: absolute;
+  top: 5rem;
+  right: 10rem;
+}
+

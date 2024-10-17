@@ -18,6 +18,15 @@ export const content: Toc = [
     ),
   },
   {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/nsiEUajkL74?si=EQ8fsUrX3i1GbW6t"
+        title="The Art of computer sciences: course introduction"
+        caption={'Class 1 - The Art of computer sciences: course introduction'}
+      />
+    ),
+  },
+  {
     element: <h1>Territory Acknowledgment</h1>,
     notes:
       'I would like to begin by acknowledging that the land on which we gather is the traditional and unceded territory of the Algonquin nation.',
