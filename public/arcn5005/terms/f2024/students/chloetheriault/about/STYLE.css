@@ -24,6 +24,11 @@ margin-right:15%}
 }
 #evil-button{
   font-family: "Concert One";
+  display: flex;
+  align-self: center;
+  margin-top: 2%;
+ 
+
 }
 
 h1{
