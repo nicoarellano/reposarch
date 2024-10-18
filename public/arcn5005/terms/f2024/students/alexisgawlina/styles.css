@@ -9,12 +9,53 @@ body {
     font-family: 'roboto', sans serif;
    
 }
-
-h1 {
-    color: rgb(97, 0, 45);
-    font-family: 'roboto', sans serif;
-    text-align: center;
+/* Custom cursor for the whole page */
+body {
+    cursor: url('cursor.png'), auto; 
 }
+
+/*name animation */
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3:rgb(97, 0, 45);
+  }
+  
+  .title-word-2 {
+    --color-1: #ffd987;
+    --color-2: #ACCFCB;
+    --color-3: #ffa6c6;
+  }
+  
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  
+  .header {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 10vh
+  }
+  
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
 
 h3 {
     color: rgb(97, 0, 45);
