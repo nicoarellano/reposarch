@@ -3,26 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>basilcurrie's About Page</title>
+    <title>Basil Currie's About Page</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    <header>
-      <h1 id="title">About page</h1>
-      <h2 class="subtitle">Subtitle</h2>
-    </header>
-    <h2>Student name</h2>
-
-    <a href=""><button>Assignment 2</button></a>
-    <a href=""><button>Assignment 3</button></a>
-    <a href=""><button>Assignment 4</button></a>
-    <a href=""><button>Final Assignment</button></a>
-
-    <img src="photo.png" width="100px" alt="profile picture" />
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur facere
-      molestiae sequi aliquid totam. Expedita in voluptate eaque quos nisi
-    </p>
+    <div class="phone">
+        <p>ENTER CONTACT INFORMATION FOR INQUIRIES</p>
+        <p style="font-size:0.7em;">Phone number:</p>
+        <input type="range" min="1000000000" max="9999999999" value="50" class="slider" id="rang">
+        <div id="val" style="font-family:helvetica,sans-serif;">(xxx) xxx-xxxx</div>   
+    </div>
+    <div class="email">
+      <p>Email:</p>
+      <p style="font-size:0.5em;">(be fast)</p>
+      <input type="text" id="mail">
+      <button id="mailbutton">ENTER</button>
+      <div id="mailout"></div>
+    </div>
+    <div class="maincontent">
+      <div id="title">
+        <div id="avatar">
+        </div>
+        <div id="words">
+          <h2>BASIL CURRIE</h2>
+          <h6 style="padding:3px;">Assignment Portal</h6>
+        </div>
+      </div>
+      <hr>
+      <div class="projectcontainer">
+        <div class="project">
+          <a href="about/about.html">
+            <img src="avatar.jpg" width="100%">
+            <div>
+              <p>ASSG 1</p>
+              <p style='font-size:8pt'>About Me</p>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="three/three.html">
+            <img src="Project 2 Thumbnail.png" height="100%">
+            <div>
+              <p>ASSG 2</p>
+              <p style='font-size:8pt'>Photogrammetry</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="projectcontainer">
+        <div class="project">
+          <a href="map/map.html">
+            <img src="map.png" width="100%">
+            <div>
+              <p>ASSG 3</p>
+              <p style='font-size:8pt'>Map</p>
+            </div>
+          </a>
+        </div>
+        <div class="project">
+          <a href="final/final.html">
+            <img src="3js.png" width="100%">
+            <div>
+              <p>FINAL PROJECT</p>
+              <p style='font-size:8pt'>3D+JS Platform</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="hidden"></div>
   </body>
+  <script src="app.js"></script> 
 </html>
