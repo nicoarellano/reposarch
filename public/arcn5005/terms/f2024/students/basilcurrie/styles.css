@@ -21,6 +21,13 @@ h2{
 	transition:1s;
 }
 
+h3{
+	margin:0;
+	padding:0;
+	font-family:'helvetica', serif;
+	line-height:1.03em;
+}
+
 h2:hover{
 	transform:rotate(-10deg)scale(0);
 	color:red;
@@ -73,10 +80,8 @@ li{font-size:12px;}
 	border:solid white 0px;
 }
 
-#avatar:hover{
-	transform:rotate(360deg);
-	border:solid green 10px;
-	box-shadow:10px 10px 10px red;
+#avatar{
+	transition:none;
 }
 
 .bottommargin{
@@ -120,6 +125,7 @@ li{font-size:12px;}
 	border-radius:5px;
 	transition:1s;
 	right:5%;
+	display:none;
 }
 
 .phone{
@@ -220,4 +226,10 @@ li{font-size:12px;}
 	.text-projects{width:60%;padding:0 10px;}
 	#title{text-align:left;justify-content:left;}
 	.bottommargin{display:block;margin-bottom:100px;}
+}
+
+@media only screen and (min-width:1080px){
+	.phone, .email{
+		display:block;
+	}
 }
