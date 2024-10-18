@@ -40,17 +40,18 @@ h3 {
     font-size: 50px;
     color: black;
 }
+
 p1 {
     font-family: Arial;
     font-size: 24px;
     color: black
 }
 
-container{
+container {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    }
+}
     
 
 ul {
