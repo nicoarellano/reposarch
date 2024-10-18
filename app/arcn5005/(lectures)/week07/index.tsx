@@ -161,7 +161,7 @@ export const content: Toc = [
       <EmojiTitle
         emoji={'Lab 7 🏗️'}
         title={
-          'BonsaiBIM + That Open Engine - Create a BIM model and a BIM Viewer'
+          'BonsaiBIM & That Open Engine: Create a BIM model and a BIM Viewer'
         }
       />
     ),
