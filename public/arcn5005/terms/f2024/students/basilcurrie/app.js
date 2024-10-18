@@ -3,9 +3,11 @@ let val = document.getElementById('val');
 let mail = document.getElementById('mail');
 let mailbutton = document.getElementById('mailbutton');
 let mailout = document.getElementById('mailout');
+let avatar = document.getElementById('avatar');
 
 slider.addEventListener('input', function(){
     val.textContent = '(' + String(this.value).substr(0,3) + ') ' + String(this.value).substr(3,3) + '-' + String(this.value).substr(6,4);
+    avatar.style.transform = "translate(" + [(this.value-1000000000)/8999999999*5] + "in)rotate(" + [(this.value-1000000000)/8999999999*720] + "deg)";
 })
 
 mailbutton.addEventListener('click', function(){
