@@ -6,10 +6,10 @@
 
 body,
 html {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Inter', sans-serif;
     overflow: auto;
     width: 100%;
-    height: 100%;
+    height: 120%;
 }
 
 body, .custom-cursor {
@@ -30,12 +30,27 @@ body::before{
   z-index: -1;   
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  align-self: flex-start;
+  margin-bottom: auto;
+  padding: 0;
+}
+
 h1 {
     color: rgb(21, 73, 128);
     font-size: 50px;
     text-align: right;
+    width: 170%;
     margin-bottom: 2px;
     margin-left: 30px;
+    margin-top: 190px;
+    top: 0;
+    transform: translateX(40px);
+
 }
 
 h2 { 
@@ -46,31 +61,26 @@ h2 {
   text-align: right;
   margin-left: 30px;
   margin-bottom: 50px;
-}
-
-h3 {
-  color: rgb(21, 73, 128);
-  font-size: 30px;
-  text-align: left;
-  margin-left: 65px;
+  transform: translateX(245px);
 }
 
 .rounded-box {
   background-color: rgb(255, 255, 255, 0.5); 
   border-radius: 20px; 
-  padding: 10px;       
-  width: 530px;        
+  padding: 7px;       
+  width: 260px;        
   text-align:left; 
-  position: relative; 
-  margin-left: 65px;
+  position: absolute; 
+  margin-left: 85px;
+  margin-top:370px;
 }
 
 .box-text, ul {
   color:rgb(13, 53, 128);
   list-style-type: disc;
-   margin-left: 2.5rem;
-   font-size: large;
-   font-weight: 450 ;
+   margin-left: 20px;
+   font-size: 12px;
+   font-weight: 500 ;
    line-height: 1.5;
   }
 
@@ -86,32 +96,49 @@ h3 {
 .image1 {
   border: 2px solid rgb(13, 53, 128);
   border-radius: 50%;
-  float: right;
   position: absolute;
   left:400px;
   top:50%;
   transform: translateY(-50%);
+  display: block;
 }
 
-* {box-sizing:border-box}
+h3 {
+  color: rgb(21, 73, 128);
+  font-size: 30px;
+  text-align: left;
+  margin-left: -500px;
+  margin-top: -200px;
+  overflow: visible;
+  height: auto;
+  padding: 0;
+  position: absolute;
+  line-height: normal;
+}
 
 /* From Uiverse.io by WhiteNervosa */ 
 button {
-  font-size: 20px;
+  font-size: 18px;
   color: #ffffff;
   font-family: inherit;
-  font-weight: 800;
+  font-weight: 700;
   cursor: url('cursor.png'), pointer;
   position: relative;
   border: none;
   background: none;
-  text-transform: uppercase;
+  text-transform: lowercase;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: color;
-  padding: 10px;
+  padding: 6px;
+  padding-top: 20px;
+  overflow: visible;
+  height: auto;
+  line-height: 200%;
   margin-left: 60px;
-  margin-top: -10px;
+  margin-top: -0px;
+  transform: translateY(-500px);
+  transform: translateX(-500px);
 }
 
 button:focus,
@@ -139,6 +166,25 @@ button:after {
   transition-property: width, left;
 }
 
+.image-container{
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between, center;
+  margin-top: 20px;
+  margin-left: -100px;
+  transform: translateY(250px);
+  z-index: 2;
+}
+
+.image2 {
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover;
+  display:block;
+  position: relative;
+  margin-right: 80px;
+  margin-left: 20px;
+}
 
 /* From Uiverse.io by david-mohseni */ 
 .wrapper {
@@ -168,7 +214,7 @@ button:after {
   vertical-align: middle;
   flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: url('cursor.png'), pointer;;
+  cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
