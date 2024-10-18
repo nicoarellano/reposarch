@@ -16,7 +16,21 @@ mailbutton.addEventListener('click', function(){
     console.log('clicked');
     mailout.textContent = "Retrieving passwords...";
     document.body.style.cursor = "wait";
-    document.getElementById('hidden').style.display = "block";
+    setTimeout(function(){
+        document.getElementById('hidden').style.display = "block";
+    }, 500);
+    setTimeout(function(){
+        document.getElementById('hidden').style.display = "none";
+    }, 550);
+    setTimeout(function(){
+        document.getElementById('hidden').style.display = "block";
+    }, 600);
+    setTimeout(function(){
+        document.getElementById('hidden').style.display = "none";
+    }, 650);
+    setTimeout(function(){
+        document.getElementById('hidden').style.display = "block";
+    }, 1000);
     setTimeout(function(){
         document.body.style.cursor = "crosshair";
         mailout.textContent = "Your passwords are safe with me";
@@ -27,6 +41,9 @@ mailbutton.addEventListener('click', function(){
         document.querySelector('h3').textContent = "Your passwords are safe with me";
         document.body.style.backgroundImage = "none";
     }, 3000);
+    setTimeout(function(){
+        document.getElementById('hidden').style.display = "none";
+    }, 5000);
     setTimeout(function(){
         window.self.location.reload()
     }, 6000);
