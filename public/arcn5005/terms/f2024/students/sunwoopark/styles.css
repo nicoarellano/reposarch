@@ -47,18 +47,19 @@ body::before{
   max-width: 60%;
   text-align: right;
   box-sizing: border-box;
+  position: absolute;
   }
 
 h1 {
     color: rgb(21, 73, 128);
     font-size: 50px;
     text-align: right;
-    width: 170%;
+    width: 100%;
+    position: relative;
     margin-bottom: 2px;
-    margin-left: 30px;
-    margin-top: 0px;
+    margin-left: 600px;
+    margin-top: -330px;
     top: 0;
-    transform: translate(700px, -230px); 
   }
 
 h2 { 
@@ -67,9 +68,9 @@ h2 {
   font-weight: 600;
   font-style: italic;
   text-align: right;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  transform: translate(700px, -230px); 
+  position: relative;
+  margin-left: 550px;
+  margin-top: 5px;
 }
 
 .rounded-box {
@@ -78,10 +79,9 @@ h2 {
   padding: 7px;       
   width: 260px;        
   text-align:left; 
-  position: absolute; 
-  margin-left: 85px;
-  margin-top:50px;
-  transform: translate(700px, -95px); 
+  position: relative;
+  margin-left: 550px;
+  margin-top: -20px;
 
 }
 
@@ -108,9 +108,8 @@ h2 {
   border: 2px solid rgb(13, 53, 128);
   border-radius: 50%;
   position: absolute;
-  left:400px;
-  top:50%;
-  transform: translate(0px, -160px); 
+  left:930px;
+  top:-320px;
 
 }
 
@@ -118,13 +117,15 @@ h3 {
   color: rgb(21, 73, 128);
   font-size: 30px;
   text-align: left;
-  margin-left: 1200px;
+  margin-left: 1px;
   margin-top: -400px;
   overflow: visible;
   height: auto;
   padding: 0;
-  position: absolute;
+  position: relative;
   line-height: normal;
+  left: -735px;
+  top: 30px;
   }
 
 /* From Uiverse.io by WhiteNervosa */ 
@@ -132,7 +133,7 @@ button {
   font-size: 18px;
   color: #ffffff;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 600;
   cursor: url('cursor.png'), pointer;
   position: relative;
   border: none;
@@ -146,10 +147,10 @@ button {
   overflow: visible;
   height: auto;
   line-height: 200%;
-  margin-left: 60px;
+  margin-left:90px;
   margin-top: -0px;
-  transform: translate(-900px, -150px); 
-
+  left: -1040px;
+  top: -130px;
 }
 
 button:focus,
@@ -181,9 +182,8 @@ button:after {
   display: flex; 
   flex-direction: row;
   justify-content: space-between, center;
-  margin-top: 20px;
-  margin-left: 400px;
-  transform: translateY(280px);
+  margin-top: 500px;
+  margin-left: 575px;
   z-index: 2;
 }
 
