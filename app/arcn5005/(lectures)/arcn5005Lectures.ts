@@ -256,8 +256,19 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/RjMWyDfLOwY?si=6rM9SCsHUbW04BWN',
+        title:
+          'Assignment 1 That Open Engine template   BIM software - Fall 2024',
+        date: dayjs('2023/10/19'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/g3GxMstbgDc?si=5VXjfc2G_5JrnTCU',
+        title: 'Raphael Vouilloz - BonsaiBIM - Fall 2024',
+        date: dayjs('2024/10/16'),
+      },
+      {
         url: 'https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7',
-        title: 'Raphael Vouilloz - BonsaiBIM',
+        title: 'Raphael Vouilloz - BlenderBIM - Fall 2023',
         date: dayjs('2023/10/19'),
       },
     ],
