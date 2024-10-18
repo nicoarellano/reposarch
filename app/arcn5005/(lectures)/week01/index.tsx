@@ -3,7 +3,7 @@ import { Toc } from '@/app/types/types';
 import Image from '@/components/Common/Image';
 import Video from '@/components/Common/Video';
 
-import CartesianPlane from '@/components/CartesianPlane';
+// import CartesianPlane from '@/components/CartesianPlane';
 import TOC from '@/app/arcn5005/(main)/toc/page';
 import SimpleButton from '@/components/Common/SimpleButton';
 
@@ -15,6 +15,15 @@ export const content: Toc = [
         <br />
         <h2>Looking forward to meeting you all</h2>
       </>
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/nsiEUajkL74?si=EQ8fsUrX3i1GbW6t"
+        title="The Art of computer sciences: course introduction"
+        caption={'Class 1 - The Art of computer sciences: course introduction'}
+      />
     ),
   },
   {
@@ -159,11 +168,11 @@ export const content: Toc = [
     notes:
       'The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637',
   },
-  {
-    element: <CartesianPlane />,
-    notes:
-      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
-  },
+  // {
+  //   element: <CartesianPlane />,
+  //   notes:
+  //     "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
+  // },
   {
     element: (
       <Image

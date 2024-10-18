@@ -1,106 +1,116 @@
-* 
-{
-    transition:0.3s;
-    color: beige;
+* {
+  transition: 0.3s;
+  color: beige;
 }
-h1, h2, h3, h4 {
-    color: beige;
+h1,
+h2,
+h3,
+h4 {
+  color: beige;
 }
-h1{
-    font-family: Georgia, serif;
-    font-size: 40px
+h1 {
+  font-family: Georgia, serif;
+  font-size: 40px;
 }
-h2{
-    font-family: "funkydori", sans-serif;
-    font-size: 60px;
+h2 {
+  font-family: 'funkydori', sans-serif;
+  font-size: 60px;
 }
 html {
-    font-family: Georgia, serif
+  font-family: Georgia, serif;
 }
 .projects {
-    display: flex;
+  display: flex;
 }
 .p40 {
-    padding: 40px;
-} 
+  padding: 40px;
+}
 .p20 {
-    padding: 20px;
+  padding: 20px;
 }
-body, html {
-    width: 100%;
-    background-color:rgb(110, 136, 131);
-    margin:0 auto; 
+body,
+html {
+  width: 100%;
+  background-color: rgb(110, 136, 131);
+  margin: 0 auto;
 }
-    
-.column1, .column2, .column3, .column4 {
-    width: 23%;
-    float: left;
-    margin: 1%;}
 
-li  {
-    display: inline;
-    padding: 0.5em;
+.column1,
+.column2,
+.column3,
+.column4 {
+  width: 23%;
+  float: left;
+  margin: 1%;
+}
+
+li {
+  display: inline;
+  padding: 0.5em;
 }
 .about {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;    
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-figure, figcaption {display:block;
+figure,
+figcaption {
+  display: block;
 }
 .email {
-    padding-left: 1515px;
+  padding-left: 1515px;
 }
 button {
-    background-size: cover;
-    background-color: rgb(110, 136, 131);
-    box-shadow: rgba(14, 30, 37, 0.12) 20px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0px;
-    min-height: 20em;
-    min-width: 20em;
-    padding: 1em 2.3em;
-    text-align: left;
-    touch-action: manipulation;
-    transform: scaleX(90%);
-    opacity: 'overlay-text', 0%
+  background-size: cover;
+  background-color: rgb(110, 136, 131);
+  box-shadow: rgba(14, 30, 37, 0.12) 20px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0px;
+  min-height: 20em;
+  min-width: 20em;
+  padding: 1em 2.3em;
+  text-align: left;
+  touch-action: manipulation;
+  transform: scaleX(90%);
+  opacity: 'overlay-text', 0%;
 }
 button:hover {
-    transform: translateY(-20px);
-    box-shadow: none;
-    background-color: rgb(25, 29, 48);
-    opacity: 'overlay-text', 100%;
+  transform: translateY(-20px);
+  box-shadow: none;
+  background-color: rgb(25, 29, 48);
+  opacity: 'overlay-text', 100%;
 }
 .image-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .image-container img {
-    display: block;
-    height: 100%;
-  }
-.content{ 
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: white;
-    color: black; 
-    padding: 30px 30px; 
-    font-size: 20px; 
-    text-align: center;
-    opacity: 0%; 
-    transition: 0.3s; 
-} 
+  position: relative;
+  display: inline-block;
+}
 
-.image-container:hover .content{
-    opacity:0.75;
+.image-container img {
+  display: block;
+  height: 100%;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 30px 30px;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0%;
+  transition: 0.3s;
+}
+
+.image-container:hover .content {
+  opacity: 0.75;
 }

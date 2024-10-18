@@ -6,6 +6,7 @@ export default function CalendarLegend() {
       <li>🏁 Final Assignment</li>
       <li>🟡 Quizzes</li>
       <li>✖️ Break</li>
+      <li>💻 Online</li>
     </ul>
   );
 }
