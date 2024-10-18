@@ -1,57 +1,117 @@
 body {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 20px;
-    padding: 20px;
-    border: 3px;
-    color:rgb(97, 0, 45);
-    font-family: 'roboto', sans serif;
-   
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 20px;
+  padding: 20px;
+  border: 3px;
+  color: rgb(97, 0, 45);
+  font-family: 'roboto', sans serif;
+}
+/* Custom cursor for the whole page */
+body {
+  cursor: url('cursor.png'), auto;
 }
 
-h1 {
-    color: rgb(97, 0, 45);
-    font-family: 'roboto', sans serif;
-    text-align: center;
+/*name animation */
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #df8453;
+  --color-2: #3d8dae;
+  --color-3: rgb(97, 0, 45);
+}
+
+.title-word-2 {
+  --color-1: #ffd987;
+  --color-2: #accfcb;
+  --color-3: #ffa6c6;
+}
+
+@keyframes color-animation {
+  0% {
+    color: var(--color-1);
+  }
+  32% {
+    color: var(--color-1);
+  }
+  33% {
+    color: var(--color-2);
+  }
+  65% {
+    color: var(--color-2);
+  }
+  66% {
+    color: var(--color-3);
+  }
+  99% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  height: 10vh;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 h3 {
-    color: rgb(97, 0, 45);
-    font-family: 'roboto', sans serif;
-    text-align: center;
+  color: rgb(97, 0, 45);
+  font-family: 'roboto', sans serif;
+  text-align: center;
 }
 /*scroller*/
 .container {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 .description {
-  padding-left:20px;
+  padding-left: 20px;
 }
 
-* {box-sizing: border-box}
-body {font-family: 'roboto', sans serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'roboto', sans serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 475px;
   position: relative;
   margin: auto;
-
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -72,13 +132,14 @@ img {vertical-align: middle;}
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: rgba(255, 255, 255, 0.271);
 }
 
 /* Caption text */
 .text {
-  color:  rgb(255, 251, 146);
+  color: rgb(255, 251, 146);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -89,7 +150,7 @@ img {vertical-align: middle;}
 
 /* Number text (1/6 etc) */
 .numbertext {
-  color:  rgb(255, 251, 146);
+  color: rgb(255, 251, 146);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -103,13 +164,21 @@ img {vertical-align: middle;}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
 }
 
 /*buttons*/
@@ -120,84 +189,83 @@ img {vertical-align: middle;}
 }
 
 button {
-    background-color:rgb(255, 255, 255);
-    color: rgb(97, 0, 45);
-    border-radius: 9em;
-    font-size: 11px;
-    font-weight: 500;
-    font-family: 'roboto', sans serif;
-    padding: 1em 2em;
-    margin: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid rgb(97, 0, 45);
-    box-shadow: rgba(97, 0, 45, 0.326);
-  }
-  
-  button:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px rgba(97, 0, 45, 0.326);
-  }
-  
-  button:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: rgba(97, 0, 45, 0.326);
+  background-color: rgb(255, 255, 255);
+  color: rgb(97, 0, 45);
+  border-radius: 9em;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'roboto', sans serif;
+  padding: 1em 2em;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgb(97, 0, 45);
+  box-shadow: rgba(97, 0, 45, 0.326);
+}
+
+button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px rgba(97, 0, 45, 0.326);
+}
+
+button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: rgba(97, 0, 45, 0.326);
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+}
+/* instagram*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 30px;
+}
+.containerOne:hover {
+  background-color: rgb(255, 255, 255);
+  transition-duration: 0.3s;
+  transform: scale(1.2);
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(97, 0, 45);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
   }
 
-  .card {
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    gap: 20px;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
- /* instagram*/
-  .socialContainer {
-    width: 52px;
-    height: 52px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition-duration: 0.3s;
-    border-radius: 30px;
-  }
-    .containerOne:hover {
-    background-color: rgb(255, 255, 255);
-    transition-duration: 0.3s;
-    transform: scale(1.2);
-  }
-     
-  .socialContainer:active {
-    transform: scale(0.9);
-    transition-duration: 0.3s;
-  }
-  
-  .socialSvg {
-    width: 17px;
-  }
-  
-  .socialSvg path {
-    fill: rgb(97, 0, 45);
-  }
-  
-  .socialContainer:hover .socialSvg {
-    animation: slide-in-top 0.3s both;
-  }
-  
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
+}
