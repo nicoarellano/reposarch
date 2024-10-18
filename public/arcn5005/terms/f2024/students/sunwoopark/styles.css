@@ -30,15 +30,24 @@ body::before{
   z-index: -1;   
 }
 
-.text-container {
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: flex-start; 
-  align-self: flex-start;
-  margin-bottom: auto;
-  padding: 0;
+.introduction {
+  display: flex;               
+  justify-content: space-between; 
+  align-items:center;    
+  gap: 20px;
+  max-width: 170%;
 }
+
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  max-width: 60%;
+  text-align: right;
+  box-sizing: border-box;
+  }
 
 h1 {
     color: rgb(21, 73, 128);
@@ -47,11 +56,10 @@ h1 {
     width: 170%;
     margin-bottom: 2px;
     margin-left: 30px;
-    margin-top: 190px;
+    margin-top: 0px;
     top: 0;
-    transform: translateX(40px);
-
-}
+    transform: translate(700px, -230px); 
+  }
 
 h2 { 
   color: rgb(255, 255, 255);
@@ -60,8 +68,8 @@ h2 {
   font-style: italic;
   text-align: right;
   margin-left: 30px;
-  margin-bottom: 50px;
-  transform: translateX(245px);
+  margin-bottom: 10px;
+  transform: translate(700px, -230px); 
 }
 
 .rounded-box {
@@ -72,7 +80,9 @@ h2 {
   text-align:left; 
   position: absolute; 
   margin-left: 85px;
-  margin-top:370px;
+  margin-top:50px;
+  transform: translate(700px, -95px); 
+
 }
 
 .box-text, ul {
@@ -91,6 +101,7 @@ h2 {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    object-fit: contain;
 }
 
 .image1 {
@@ -99,22 +110,22 @@ h2 {
   position: absolute;
   left:400px;
   top:50%;
-  transform: translateY(-50%);
-  display: block;
+  transform: translate(0px, -160px); 
+
 }
 
 h3 {
   color: rgb(21, 73, 128);
   font-size: 30px;
   text-align: left;
-  margin-left: -500px;
-  margin-top: -200px;
+  margin-left: 1200px;
+  margin-top: -400px;
   overflow: visible;
   height: auto;
   padding: 0;
   position: absolute;
   line-height: normal;
-}
+  }
 
 /* From Uiverse.io by WhiteNervosa */ 
 button {
@@ -137,8 +148,8 @@ button {
   line-height: 200%;
   margin-left: 60px;
   margin-top: -0px;
-  transform: translateY(-500px);
-  transform: translateX(-500px);
+  transform: translate(-900px, -150px); 
+
 }
 
 button:focus,
@@ -171,19 +182,19 @@ button:after {
   flex-direction: row;
   justify-content: space-between, center;
   margin-top: 20px;
-  margin-left: -100px;
-  transform: translateY(250px);
+  margin-left: 400px;
+  transform: translateY(280px);
   z-index: 2;
 }
 
 .image2 {
-  width: 250px; 
-  height: 250px; 
+  width: 270px; 
+  height: 270px; 
   object-fit: cover;
   display:block;
   position: relative;
   margin-right: 80px;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 /* From Uiverse.io by david-mohseni */ 
@@ -261,6 +272,6 @@ button:after {
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-  background: rgb(21, 73, 128);
+  background:rgb(21, 73, 128);
   color: #fff;
 }
