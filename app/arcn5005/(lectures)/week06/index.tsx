@@ -17,9 +17,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3"
-        title="OSArch - Open source for architects community"
-        caption={'OSArch - Open source for architects community'}
+        src="https://www.youtube.com/embed/a7hWyWWJ3oQ?si=qxNqEVF2Q99S7Bfb"
+        title="OSArch - Open source for architects community - Fall 2024"
+        caption={'OSArch - Open source for architects community  - Fall 2024'}
       />
     ),
   },
@@ -263,9 +263,9 @@ it is very hard to achieve openBIM',
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg"
-        title="OSArch - Open source for architects community"
-        caption={'Introduction to CSS'}
+        src="https://www.youtube.com/embed/Qe2Bdh8Tpoc?si=5hVQ7_MVfWYrDovm"
+        title="Introduction to CSS  - Fall 2024"
+        caption={'Introduction to CSS  - Fall 2024'}
       />
     ),
   },
