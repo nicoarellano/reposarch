@@ -1,19 +1,19 @@
-"use client";
-import { useState, Fragment } from "react";
-import ListSubheader from "@mui/material/ListSubheader";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import SlideshowIcon from "@mui/icons-material/Slideshow";
-import ScrollableList from "./ScrollableSlidesList";
-import { IconButton } from "@mui/material";
-import { Lectures, Lecture } from "../../app/types/types";
-import Link from "next/link";
-import dayjs from "dayjs";
+'use client';
+import { useState, Fragment } from 'react';
+import ListSubheader from '@mui/material/ListSubheader';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import SlideshowIcon from '@mui/icons-material/Slideshow';
+import ScrollableList from './ScrollableSlidesList';
+import { IconButton } from '@mui/material';
+import { Lectures, Lecture } from '../../app/types/types';
+import Link from 'next/link';
+import dayjs from 'dayjs';
 
 interface Props {
   list: Lectures;
@@ -34,30 +34,26 @@ export default function LecturesNestedList({ list, title }: Props) {
   return (
     <List
       sx={{
-        width: "60%",
+        width: '60%',
         minWidth: 800,
         minHeight: 200,
-        bgcolor: "background.paper",
+        bgcolor: 'background.paper',
         maxHeight: 500,
-        overflowY: "auto",
+        overflowY: 'auto',
       }}
       component="nav"
       aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          {title}
-        </ListSubheader>
-      }
+      subheader={<ListSubheader component="div">{title}</ListSubheader>}
     >
       {list.map((item: Lecture, index) => (
         <Fragment key={item.title}>
           <ListItemButton
             onClick={() => handleClick(index)}
-            sx={{ borderBottom: 1, borderTop: 1, borderColor: "#ddd" }}
+            sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
           >
             <ListItemText
               primary={`${item.title}${
-                item.date ? ` (${item.date.format("YYYY/MM/DD")})` : ""
+                item.date ? ` (${item.date.format('YYYY/MM/DD')})` : ''
               }`}
             />
             <Link

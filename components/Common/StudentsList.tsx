@@ -14,6 +14,7 @@ import ScrollableAssignmetnsList from './ScrollableAssignmentsList';
 import AboutIcon from '@mui/icons-material/AccountCircle';
 import ThreeIcon from '@mui/icons-material/ThreeDRotationRounded';
 import MapIcon from '@mui/icons-material/PublicRounded';
+import BIMIcon from '@mui/icons-material/MapsHomeWorkRounded';
 import FinalIcon from '@mui/icons-material/SportsScoreRounded';
 
 interface Props {
@@ -22,8 +23,6 @@ interface Props {
 
 export default function StudentsList({ students }: Props) {
   const path = usePathname();
-
-  const handleClick = (index: number) => {};
 
   return (
     <List
@@ -41,11 +40,10 @@ export default function StudentsList({ students }: Props) {
       {students.map((student: Student, index) => (
         <div key={index} title={student.username}>
           <ListItemButton
-            onClick={() => handleClick(index)}
             sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
           >
             <ListItemIcon>
-              <Link href={`${path}/${student.username}`}>
+              <Link href={`${path}/${student.username}/final`}>
                 <IconButton>
                   <Avatar
                     src={`${path}/${student.username}/avatar.jpg`}
@@ -72,9 +70,9 @@ export default function StudentsList({ students }: Props) {
                 <MapIcon />
               </IconButton>
             </Link>
-            <Link href={`${path}/${student.username}/final`}>
-              <IconButton title="Final">
-                <FinalIcon />
+            <Link href={`${path}/${student.username}/bim`}>
+              <IconButton title="BIM">
+                <BIMIcon />
               </IconButton>
             </Link>
           </ListItemButton>
