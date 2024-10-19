@@ -25,21 +25,44 @@
   src: url(../Fonts/Montserrat-MediumItalic.ttf);
 }
 
-/* Body Flexbox (Not Including Header/Footer) */
+/* Body Elements */
 
-html, body {
-  height: 100%;
-  margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body{
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
-nav{
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(41, 17, 88);
+  padding-top: 50px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+nav {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -48,21 +71,107 @@ nav{
   padding-bottom: 20px;
 }
 
-main{
+main {
+  padding-top: 40px;
+  padding-bottom: 40px;
   flex: 1;
 }
 
-/* Header */
-
-header{
-  background-color:rgb(41, 17, 88);
-  padding-top: 50px;
-  position: static;
-  top: 0px;
+.main-container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section,
+aside {
+  margin: 40px auto;
+  display: block;
+  max-width: 800px;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.section-container section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.text-container,
+p {
+  font-family: MagilioRegular-Yzv2O;
+  font-size: 20px;
+}
+
+#About,
+p {
   margin: 0;
   padding: 0;
+}
+
+section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.aside-container {
+  width: 50%;
+}
+
+#profile-pic {
+  max-width: 350px;
+  height: auto;
+  padding-top: 40px;
+  padding-right: 40px;
+  margin-left: 0px;
+}
+
+#About {
+  padding-top: 10px;
+  font-family: 'Montserrat-Light';
+  font-size: 15px;
+  max-width: 500px;
+}
+
+#About,
+p {
+  display: block;
+}
+
+footer {
+  width: 100%;
   text-align: center;
+  position: static;
+  bottom: 0;
+  padding: 2px 0;
+  background-color: rgb(41, 17, 88);
+  color: white;
+}
+
+header,
+footer {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Title */
@@ -99,14 +208,17 @@ header{
   overflow: hidden;
   background: var(--bg);
   margin: 0;
+  top: -20px;
   padding-top: 35px;
 }
 
 .subtitle {
   font-family: 'Montserrat-Light';
   font-size: 20px;
-  color:#e6e6fa;
-  padding-bottom: 25px;
+  position: relative;
+  color: #e6e6fa;
+  margin: 0;
+  top: -25px;
 }
 
 .aurora {
@@ -274,42 +386,42 @@ header{
 /* Mouse Cursor Dot */
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    overflow: hidden;
-    cursor: none; /* Optional: Hides the default cursor */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  cursor: none; /* Optional: Hides the default cursor */
 }
 .circle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(147, 112, 219); /* Low-opacity blue */
-    border-radius: 50%;
-    pointer-events: none; /* Prevents the circle from interfering with clicks */
-    transition: transform 0.05s ease-out; /* Smooth movement */
-}  
- 
- .card {
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    gap: 20px;
-  }
-  
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(147, 112, 219); /* Low-opacity blue */
+  border-radius: 50%;
+  pointer-events: none; /* Prevents the circle from interfering with clicks */
+  transition: transform 0.05s ease-out; /* Smooth movement */
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+}
+
 /* Assignment Buttons */
 /* Button-1 */
 
 .button-1 {
   position: static;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   color: rgb(255, 255, 255);
   font-size: 15px;
   font-family: 'Montserrat-Light';
@@ -317,48 +429,54 @@ body {
   width: 300px;
   height: 60px;
   border: none;
-  text-transform:capitalize;
+  text-transform: capitalize;
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 20px 25px rgb(41, 17, 88);
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-1::before {
   content: "That's This Page, Silly";
   font-size: 15px;
   font-family: 'Montserrat-Light';
+  color: rgb(41, 17, 88);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: linear-gradient(135deg,rgba(147, 112, 219),#e6e6fa );
-  transform: translate(0%,90%);
+  background: linear-gradient(
+    135deg,
+    rgba(147, 112, 219),
+    #e6e6fa,
+    rgba(147, 112, 219)
+  );
+  transform: translate(0%, 90%);
   z-index: 99;
   position: relative;
   transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-1::after {
-  content: "About";
+  content: 'About';
   font-family: 'Montserrat-Light';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   width: 100%;
   height: 100%;
   pointer-events: none;
   transform-origin: top;
-  transform: translate(0%,-100%);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transform: translate(0%, -100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-1:hover::before {
-  transform: translate(0%,0%);
+  transform: translate(0%, 0%);
 }
 .button-1:hover::after {
-  transform: translate(0%,-200%);
+  transform: translate(0%, -200%);
 }
 .button-1:focus {
   outline: none;
@@ -371,7 +489,7 @@ body {
 
 .button-2 {
   position: static;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   color: rgb(255, 255, 255);
   font-size: 15px;
   font-family: 'Montserrat-Light';
@@ -383,45 +501,51 @@ body {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 20px 25px rgb(41, 17, 88);
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-2::before {
-  content: "Blender + Meshroom + Three.js";
+  content: 'Blender + Meshroom + Three.js';
   font-size: 15px;
   font-family: 'Montserrat-Light';
+  color: rgb(41, 17, 88);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: linear-gradient(135deg,rgba(147, 112, 219),#e6e6fa );
-  transform: translate(0%,90%);
+  background: linear-gradient(
+    135deg,
+    rgba(147, 112, 219),
+    #e6e6fa,
+    rgba(147, 112, 219)
+  );
+  transform: translate(0%, 90%);
   z-index: 99;
   position: relative;
   transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-2::after {
-  content: "Assignment 2";
+  content: 'Assignment 2';
   font-size: 15px;
   font-family: 'Montserrat-Light';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   width: 100%;
   height: 100%;
   pointer-events: none;
   transform-origin: top;
-  transform: translate(0%,-100%);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transform: translate(0%, -100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-2:hover::before {
-  transform: translate(0%,0%);
+  transform: translate(0%, 0%);
 }
 .button-2:hover::after {
-  transform: translate(0%,-200%);
+  transform: translate(0%, -200%);
 }
 .button-2:focus {
   outline: none;
@@ -434,7 +558,7 @@ body {
 
 .button-3 {
   position: static;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   color: rgb(255, 255, 255);
   font-size: 15px;
   font-family: 'Montserrat-Light';
@@ -447,45 +571,51 @@ body {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 20px 25px rgb(41, 17, 88);
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-3::before {
-  content: "Maplibre";
+  content: 'Maplibre';
   font-size: 15px;
   font-family: 'Montserrat-Light';
+  color: rgb(41, 17, 88);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: linear-gradient(135deg,rgba(147, 112, 219),#e6e6fa );
-  transform: translate(0%,90%);
+  background: linear-gradient(
+    135deg,
+    rgba(147, 112, 219),
+    #e6e6fa,
+    rgba(147, 112, 219)
+  );
+  transform: translate(0%, 90%);
   z-index: 99;
   position: relative;
   transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-3::after {
-  content: "Assignment 3";
+  content: 'Assignment 3';
   font-size: 15px;
   font-family: 'Montserrat-Light';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   width: 100%;
   height: 100%;
   pointer-events: none;
   transform-origin: top;
-  transform: translate(0%,-100%);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transform: translate(0%, -100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-3:hover::before {
-  transform: translate(0%,0%);
+  transform: translate(0%, 0%);
 }
 .button-3:hover::after {
-  transform: translate(0%,-200%);
+  transform: translate(0%, -200%);
 }
 .button-3:focus {
   outline: none;
@@ -498,7 +628,7 @@ body {
 
 .button-4 {
   position: static;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   color: rgb(255, 255, 255);
   font-size: 15px;
   font-family: 'Montserrat-Light';
@@ -511,45 +641,51 @@ body {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0 20px 25px rgb(41, 17, 88);
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-4::before {
-  content: "GIS + BIM";
+  content: 'GIS + BIM';
   font-size: 15px;
   font-family: 'Montserrat-Light';
+  color: rgb(41, 17, 88);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background: linear-gradient(135deg,rgba(147, 112, 219),#e6e6fa );
-  transform: translate(0%,90%);
+  background: linear-gradient(
+    135deg,
+    rgba(147, 112, 219),
+    #e6e6fa,
+    rgba(147, 112, 219)
+  );
+  transform: translate(0%, 90%);
   z-index: 99;
   position: relative;
   transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-4::after {
-  content: "Final";
+  content: 'Final';
   font-size: 15px;
   font-family: 'Montserrat-Light';
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(41, 17, 88);
+  background-color: rgba(147, 112, 219);
   width: 100%;
   height: 100%;
   pointer-events: none;
   transform-origin: top;
-  transform: translate(0%,-100%);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transform: translate(0%, -100%);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .button-4:hover::before {
-  transform: translate(0%,0%);
+  transform: translate(0%, 0%);
 }
 .button-4:hover::after {
-  transform: translate(0%,-200%);
+  transform: translate(0%, -200%);
 }
 .button-4:focus {
   outline: none;
@@ -558,43 +694,39 @@ body {
   scale: 0.95;
 }
 
-/* About Me Section (need to move up on the page) */
-
-#About{
-    font-family: 'Montserrat-Medium', sans-serif;
-    font-size: 30px;
-}
-
-#About li{
-    font-family: 'Montserrat-Light', sans-serif;
-    font-size: 15px;
-  }
-
 /* Picture Slideshow */
 
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
-  width: 100%;
-  max-width: 500px;
   position: relative;
-  right: -510px;
-  margin: 0 10px;
-  padding-right: 20px;
+  display: flex;
+  max-width: 550px;
+  max-height: auto;
   padding-top: 40px;
+  padding-left: 40px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  width: 100%;
+  height: auto;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: auto;
   margin-top: 10px;
   padding: 10px;
@@ -606,18 +738,24 @@ body {
   user-select: none;
 }
 
+.prev {
+  left: 40px;
+  border-radius: 3px 0 0 3px;
+}
+
 /* Position the "next button" to the right */
 .next {
-  right: 20px;
+  right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: #e6e6fa;
 }
 
-/* Caption text (Not Putting Any In) */
+/* Caption text NOT USING RIGHT NOW  */
 .text {
   color: rgb(41, 17, 88);
   font-size: 15px;
@@ -649,7 +787,8 @@ body {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: rgb(41, 17, 88);
 }
 
@@ -660,102 +799,95 @@ body {
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Social Media Buttons */
 
-  /* for all social containers*/
-  .socialContainer {
-    width: 35px;
-    height: 35px;
-    background-color: rgba(147, 112, 219);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition-duration: 0.5s;
-    border-radius: 30px;
-  }
-  /* instagram*/
-  .containerOne:hover {
-    background-color: #e6e6fa;
-    transition-duration: 0.5s;
-    transform: scale(1.2);
-  }
-  /* linkdin*/
-  .containerThree:hover {
-    background-color: #e6e6fa;
-    transition-duration: 0.5s;
-    transform: scale(1.2);
-  }
-  
-  .socialContainer:active {
-    transform: scale(0.9);
-    transition-duration: 0.3s;
-  }
-  
-  .socialSvg {
-    width: 17px;
-  }
-  
-  .socialSvg path {
-    fill: rgb(230, 230, 250);
-  }
-  
-  .socialContainer:hover .socialSvg {
-    animation: slide-in-top 0.3s both;
-  }
-  
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+/* for all social containers*/
+.socialContainer {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(147, 112, 219);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  border-radius: 30px;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #e6e6fa;
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #e6e6fa;
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(230, 230, 250);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
   }
 
-  #Socials{
-    font-family:'Montserrat-Light'; 
-    font-size: 15px;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
+}
 
-/*  Footer Section */
+#Socials {
+  font-family: 'Montserrat-Light';
+  font-size: 15px;
+}
 
-  footer{
-    width: 100%;
-    text-align: center;
-    position: static;
-    bottom: 0;
-    padding: 2px 0;
-    background-color: rgb(41, 17, 88);
-    color: white;
-  }
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+}
 
-  .card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 15px;
-  }
+.socialSvg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
 
-  .socialSvg{
-    width: 24px;
-    height: 24px;
-    fill: white;
-  }
+.socialContainer {
+  display: flex;
+  align-items: center;
+}
 
-  .socialContainer{
-    display: flex;
-    align-items: center;
-  }
-
-  .instagramSvg, .linkdinSVG{
-    cursor: pointer;
-  }
+.instagramSvg,
+.linkdinSVG {
+  cursor: pointer;
+}
