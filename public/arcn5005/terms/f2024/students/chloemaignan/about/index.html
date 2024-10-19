@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chloemaignan about page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> Chloe's About</title>
+</head>
+<body>
+  <hr class="grey-line" />
+  <img src="image.jpg" width="150px" alt="profile picture" />
+    <div class="container">
+        <!-- Title Section -->
+        <header>
+            <h2>About Me</h2>
+        </header>
+
+        <!-- Image and Description Section -->
+        <section class="about">
+            <img src="your-image.jpg" alt="Your Image" class="profile-img">
+            <p>
+                Hello! My name is Chloe! I am a Master of Architecture student at Carleton University. I also completed my bachelor in History and Theory of Architecture at Carleton. I have a passion for design, particularly in creating spaces that balance inclusivity with social impact. Fun fact: I grew up in Montreal!
+            </p>
+        </section>
+        <hr class="grey-line" />
+        <div class="assignments-container">
+          <h3>Assignments</h3>
+          <a href="#" class="button">Three</a>
+          <a href="#" class="button">BIM</a>
+          <a href="#" class="button">Map</a>
+          <a href="#" class="button">Final</a>
+
+        <!-- Assignments Section -->
+        <section class="assignments">
+            <h2>Future Assignments</h2>
+            <form>
+                <label for="assignment1">Assignment 1:</label>
+                <input type="file" id="assignment1" name="assignment1"><br><br>
+
+                <label for="assignment2">Assignment 2:</label>
+                <input type="file" id="assignment2" name="assignment2"><br><br>
+
+                <label for="assignment3">Assignment 3:</label>
+                <input type="file" id="assignment3" name="assignment3"><br><br>
+
+                <input type="submit" value="Submit Assignments">
+            </form>
+        </section>
+    </div>
+</body>
 </html>
