@@ -26,9 +26,11 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/GHW0PLXnqhs?si=0AtxbAz1BRhrZBCz"
-        title="Class 3  - Representation tools and processes for architects"
-        caption={'Class 3  - Representation tools and processes for architects'}
+        src="https://www.youtube.com/embed/wruFGy9uPkA?si=bhI3khTc5aK10Swt"
+        title="Class 3  - Representation tools and processes for architects (fall 2024)"
+        caption={
+          'Class 3  - Representation tools and processes for architects (fall 2024)'
+        }
       />
     ),
   },
@@ -1064,10 +1066,10 @@ The status quo is to work with proprietary solutions and closed file formats.'
         <br />
         <Image
           src="/images/cad-bim/blenderbim.png"
-          alt={'BlenderBIM'}
+          alt={'BonsaiBIM'}
           href="https://bonsaibim.org/"
           caption={
-            'BlenderBIM is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BlenderBIM'
+            'BonsaiBIM (formerly BlenderBIM) is a free and open source alternative to Revit - On a few weeks we will have a lecture and a workshop dedicated specifically to BonsaiBIM'
           }
         />
       </>
