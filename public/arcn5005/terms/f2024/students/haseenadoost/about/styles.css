@@ -1,76 +1,176 @@
+/* General Reset */
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body,
 html {
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
     width: 100%;
     height: 100%;
+    background: linear-gradient(135deg, #E3D3F2, #F5E7FF); /* Lilac gradient background */
+    background-size: 400% 400%; /* Makes the gradient more dynamic */
+    animation: gradient-animation 10s ease infinite; /* Animate the background */
+    color: #333;
 }
 
-ol,
-ul {
-    list-style-type: disc;
-    margin-left: 2.5rem;
-    font-size: large;
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-
-h1 {
-    color: red;
+header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #E3D3F2, #FFFFFF); /* Lilac to white gradient */
 }
 
-.about {
-    width: 95%;
+.playfair-display-title {
+    font-size: 4rem;
+    animation: wave 2s infinite alternate; /* Wave effect */
+}
+
+.typing-effect {
+    display: inline-block;
+    overflow: hidden; /* Ensures the text is hidden until typed */
+    white-space: nowrap; /* Prevents text from wrapping */
+    border-right: .15em solid rgba(255, 255, 255, 0.75); /* Creates a cursor effect */
+    animation: typing 4s steps(15) 1 forwards; /* Typing effect */
+}
+
+.playfair-display-subheading {
+    font-size: 2rem;
+    color: #6b8e23; /* Olive green */
+}
+
+.profile {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
+    padding: 2rem;
+}
+
+.profile-pic-container {
+    flex: 1;
+}
+
+.profile-pic {
+    width: 200px; /* Rectangle shape */
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-info {
+    flex: 2;
+    padding-left: 2rem;
+}
+
+.secondary-text {
+    color: #8fbc8f; /* Dark sea green */
+}
+
+.assignments,
+.resume,
+.contact,
+.travel,
+.model-making {
+    padding: 2rem;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.playfair-button {
+    background: linear-gradient(45deg, #d9c9f0, #a68cc1); /* Gradient background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.5s, transform 0.3s;
+    font-family: 'Playfair Display', serif; /* Font style */
+}
+
+.playfair-button:hover {
+    background: linear-gradient(45deg, #ff69b4, #ff1493); /* Gradient on hover */
+    transform: scale(1.05);
+    animation: wave 0.5s ease infinite alternate; /* Add wave effect on hover */
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.carousel-image {
+    width: 200px; /* Adjust image size */
+    height: auto;
+    border-radius: 10px;
+}
+
+.resume-button,
+.contact-button {
+    background: linear-gradient(45deg, #d9c9f0, #a68cc1); /* Gradient background */
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: background 0.5s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+}
+
+.resume-button:hover,
+.contact-button:hover {
+    background: linear-gradient(45deg, #98fb98, #2e8b57); /* Gradient on hover */
+    transform: scale(1.05);
+    animation: wave 0.5s ease infinite alternate; /* Add wave effect on hover */
+}
+
+/* Typing Effect Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Waving Animation */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Text Hover Animation */
+.hover-effect {
+    display: inline-block;
+    position: relative;
     overflow: hidden;
 }
 
-
-button {
-    appearance: none;
-    background-color: rgb(16, 104, 117);
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
+.hover-effect::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    transition: all 0.5s;
 }
 
-button:disabled {
-    pointer-events: none;
+.hover-effect:hover::before {
+    animation: typing 0.5s steps(10) forwards;
 }
 
-button:hover {
-    color: #885fef;
-    background-color: #1A1A1A;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    transform: translateY(-2px);
-}
-
-button:active {
-    box-shadow: none;
-    transform: translateY(0);
+/* Additional Styles for Animations */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
