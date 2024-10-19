@@ -5,9 +5,8 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "proxima-soft", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
   color: #000000;
   background-color: #eee5f1;
   line-height: 1.6;
@@ -36,8 +35,8 @@ body {
 	position:absolute;
 	left:0px;
 	top:0px;
-  font-family: "proxima-soft", sans-serif;
-  font-weight: 500;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
   font-style: normal;
 	text-align:left;
 	font-size:15px;
@@ -107,8 +106,8 @@ body {
 	position:absolute;
 	left:-110px;
 	top:0px;
-  font-family: "proxima-soft", sans-serif;
-  font-weight: 500;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
   font-style: normal;
 	text-align:left;
 	font-size:20px;
@@ -120,9 +119,8 @@ body {
 	position:absolute;
 	left:477px;
 	top:22px;
-  font-family: "superpop-variable", sans-serif;
-  font-variation-settings: "wght" 700;
-  font-size: 70px;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
   color:rgb(149, 126, 143);
   text-shadow: 
     -6px -6px 0px black, 
@@ -130,9 +128,7 @@ body {
     -2px 2px 0px black,  
     2px 2px 0px black;   
 	text-align:left;
-	font-size:40px;
-	letter-spacing:2px;
-  
+	letter-spacing:2px; 
 }
 .profile-pic { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -488,7 +484,8 @@ body.dark-mode .box:hover:after {
   height: 120px;
   width: 100%;
   padding-top: 40px;
-  font-family: "Poppins", sans-serif;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
   justify-content: center;
   position: fixed; 
   bottom: 0;
@@ -594,7 +591,8 @@ body.dark-mode .box:hover:after {
 
 
 body {
-  font-family: 'Franklin Gothic', sans-serif;
+  font-family: "ivysoft-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wght" 700;
   color: #333;
   background-color: #eee5f1;
   line-height: 1.6;
@@ -624,9 +622,8 @@ body {
 	position:absolute;
 	left:0px;
 	top:0px;
-	font-family:'Franklin Gothic', sans-serif;
-	text-align:left;
-	font-size:12px;
+  font-family: "ivysoft-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wght" 400;
 	letter-spacing:0;
 }
 .notebox { 
@@ -689,12 +686,13 @@ body {
 }
 .about-me-text { 
 	
-	width:315px;
+	width:415px;
 	height:328px;
 	position:absolute;
 	left:-80px;
 	top:0px;
-	font-family:'Franklin Gothic', sans-serif;
+  font-family: "ivysoft-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wght" 400;
 	text-align:left;
 	font-size:20px;
 	letter-spacing:0;
@@ -703,13 +701,15 @@ body {
 	
 	width:315px;
 	height:58px;
+  font-family: "cheesecake", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 	position:absolute;
 	left:500px;
-	top:22px;
-	font-family:Inter;
+	top:100px;
 	text-align:left;
-	font-size:30px;
-	letter-spacing:0;
+	font-size:35px;
+	letter-spacing:10;
   
 }
 .profile-pic { 
@@ -718,7 +718,7 @@ body {
 	height:400px;
 	position:absolute;
 	left:188px;
-	top:250px;
+	top:190px;
 	border-top-left-radius:9999px;
 	border-top-right-radius:9999px;
 	border-bottom-left-radius:9999px;
@@ -754,9 +754,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
-/* Container styling for centering the content */
+/* Container styling */
 .container {
   display: flex;
   flex-direction: column;
@@ -767,13 +765,11 @@ body {
   max-width: 800px;
   height: 600px;
 }
-
 /* Main heading styling */
 .main-heading {
   padding: 0rem 0;
   text-align: center;
 }
-
 /* Carousel content positioning */
 .carousel-content {
   position: absolute;
@@ -783,7 +779,6 @@ body {
   text-align: center;
   z-index: 50;
 }
-
 /* Slideshow styling */
 .slideshow {
   height: 100%;
@@ -794,9 +789,9 @@ body {
 /* Wrapper for the slideshow images */
 .slideshow-wrapper {
   display: flex;
-  width: 400%; /* 4 images -> 400% width */
+  width: 400%; 
   height: 100%;
-  position: relative; /* Ensure keyframes 'left' works */
+  position: relative; 
   left: 0;
   animation: slideshow 20s infinite;
 }
@@ -935,12 +930,14 @@ ul ul {
 .box:hover:before {
   border-color: #262626;
   height: 100%;
-  transform: translateX(0);}
+  transform: translateX(0);
+}
 
 .box:hover:after {
   border-color: #262626;
   height: 100%;
-  transform: translateX(0);}
+  transform: translateX(0);
+}
 
 button {
   color: black;
@@ -971,8 +968,6 @@ body.dark-mode .box:hover:after {
 
 }
 
-
-
 /* Dark Mode Toggle Button - start */
 .theme-toggle {
   position: relative; 
@@ -988,14 +983,11 @@ body.dark-mode .box:hover:after {
   height: 2em;
   user-select: none;
 }
-
-
 .switch .cb {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .toggle {
   position: absolute;
   cursor: pointer;
@@ -1009,7 +1001,6 @@ body.dark-mode .box:hover:after {
   overflow: hidden;
   box-shadow: -0.3em 0 0 0 #373737, -0.3em 0.3em 0 0 #373737, 0.3em 0 0 0 #373737, 0.3em 0.3em 0 0 #373737, 0 0.3em 0 0 #373737;
 }
-
 .toggle > .left {
   position: absolute;
   display: flex;
@@ -1026,7 +1017,6 @@ body.dark-mode .box:hover:after {
   transform-style: preserve-3d;
   transition: all 150ms;
 }
-
 .left::before {
   position: absolute;
   content: "";
@@ -1036,7 +1026,6 @@ body.dark-mode .box:hover:after {
   transform-origin: center left;
   transform: rotateY(90deg);
 }
-
 .left::after {
   position: absolute;
   content: "";
@@ -1046,7 +1035,6 @@ body.dark-mode .box:hover:after {
   transform-origin: center bottom;
   transform: rotateX(90deg);
 }
-
 .toggle > .right {
   position: absolute;
   display: flex;
@@ -1063,7 +1051,6 @@ body.dark-mode .box:hover:after {
   transform-style: preserve-3d;
   transition: all 150ms;
 }
-
 .right::before {
   position: absolute;
   content: "";
@@ -1073,7 +1060,6 @@ body.dark-mode .box:hover:after {
   transform-origin: center right;
   transform: rotateY(-90deg);
 }
-
 .right::after {
   position: absolute;
   content: "";
@@ -1083,12 +1069,10 @@ body.dark-mode .box:hover:after {
   transform-origin: center bottom;
   transform: rotateX(90deg);
 }
-
 .switch input:checked + .toggle > .left {
   transform: rotateX(10deg) rotateY(45deg);
   color: rgb(206, 206, 206);
 }
-
 .switch input:checked + .toggle > .right {
   transform: rotateX(10deg) rotateY(0deg);
   color: #487bdb;
@@ -1102,7 +1086,8 @@ body.dark-mode .box:hover:after {
   height: 120px;
   width: 100%;
   padding-top: 40px;
-  font-family: "Poppins", sans-serif;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
   justify-content: center;
   position: fixed; 
   bottom: 0;
@@ -1197,3 +1182,13 @@ body.dark-mode .box:hover:after {
   color: #fff;
 }
 /* socials - end */ 
+.clouds{
+  top: 800px;
+  opacity: 60%;
+}
+.main-heading{
+  font-family: "ivysoft-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wght" 900;
+  color: rgb(255, 255, 255);
+  background-color: rgb(149, 126, 143);
+}
