@@ -15,13 +15,18 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: aliceblue;
 }
 
 header {
   position: fixed;
+  text-align: center;
   top: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #b1c4cd;
   z-index: 1000;
   padding-left: 30px;
   color:rgb(22, 68, 101)
@@ -31,19 +36,25 @@ main {
   margin-top: 25px;
 }
 
-section {
-  padding: 20px;
-  color: rgb(80, 7, 62);
+  section {
+    padding-top: 40px;
+    padding-left: 150px;
+    color: rgb(255, 255, 255);
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: left; 
+  
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding-left: 60px;
 }
 
 .left-image {
-  margin-right: 0;
+  margin-right: 0px;
   }
 
 .buttons {
@@ -52,10 +63,10 @@ section {
 }
 
 button {
-  --color: #ab7de6;
+  --color: rgb(22, 68, 101);
   font-family: inherit;
   display: inline-block;
-  width: 6em;
+  width: 200px;
   height: 2.6em;
   line-height: 2.5em;
   overflow: hidden;
@@ -69,16 +80,6 @@ button {
   position: relative;
 }
 
-button::before {
-  position: absolute;
-  content: "";
-  background: var(--color);
-  width: 150px;
-  height: 200px;
-  z-index: -1;
-  border-radius: 50%;
-}
-
 button:hover {
   color: white;
 }
@@ -89,6 +90,43 @@ button:before {
   transition: 0.3s all;
 }
 
-footer {
-  background-color: black;
+.center-text {
+  text-align: center;
+}
+
+.photo-gallery {
+  display:flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.photo-gallery figure {
+  margin: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.photo-gallery img {
+  width: 180px;
+  height: 180px;
+  opacity: 0.5;
+}
+
+.photo-gallery figcaption {
+  display: none; /* Make sure this is hidden by default */
+  font-size: 14px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0; /* Adjust position as needed */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: for better visibility */
+}
+
+.photo-gallery figure:hover figcaption {
+  display: block; /* Show caption on hover */
+}
+
+.photo-gallery img:hover {
+  opacity: 1;
 }
