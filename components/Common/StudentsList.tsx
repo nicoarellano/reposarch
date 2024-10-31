@@ -19,12 +19,13 @@ interface Props {
 
 export default function StudentsList({ students }: Props) {
   const path = usePathname();
+  const isF2023 = path?.includes('f2023');
 
   return (
     <List
       sx={{
         width: '60%',
-        minWidth: 800,
+        minWidth: 500,
         bgcolor: 'background.paper',
         maxHeight: 500,
         overflowY: 'auto',
@@ -39,7 +40,9 @@ export default function StudentsList({ students }: Props) {
             sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
           >
             <ListItemIcon>
-              <Link href={`${path}/${student.username}/final`}>
+              <Link
+                href={`${path}/${student.username}${isF2023 ? '' : '/final'}`}
+              >
                 <IconButton>
                   <Avatar
                     src={`${path}/${student.username}/avatar.jpg`}
