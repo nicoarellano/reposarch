@@ -3,19 +3,15 @@ import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import ExpandLess from '@mui/icons-material/ExpandLess';
 import { Avatar, IconButton, ListSubheader } from '@mui/material';
 import { Students, Student } from '../../app/types/types';
 import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
-import ScrollableAssignmetnsList from './ScrollableAssignmentsList';
+import { usePathname } from 'next/navigation';
 
 import AboutIcon from '@mui/icons-material/AccountCircle';
 import ThreeIcon from '@mui/icons-material/ThreeDRotationRounded';
 import MapIcon from '@mui/icons-material/PublicRounded';
 import BIMIcon from '@mui/icons-material/MapsHomeWorkRounded';
-import FinalIcon from '@mui/icons-material/SportsScoreRounded';
 
 interface Props {
   students: Students;
@@ -23,12 +19,13 @@ interface Props {
 
 export default function StudentsList({ students }: Props) {
   const path = usePathname();
+  const isF2023 = path?.includes('f2023');
 
   return (
     <List
       sx={{
         width: '60%',
-        minWidth: 800,
+        minWidth: 500,
         bgcolor: 'background.paper',
         maxHeight: 500,
         overflowY: 'auto',
@@ -43,7 +40,9 @@ export default function StudentsList({ students }: Props) {
             sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
           >
             <ListItemIcon>
-              <Link href={`${path}/${student.username}/final`}>
+              <Link
+                href={`${path}/${student.username}${isF2023 ? '' : '/final'}`}
+              >
                 <IconButton>
                   <Avatar
                     src={`${path}/${student.username}/avatar.jpg`}
@@ -55,26 +54,34 @@ export default function StudentsList({ students }: Props) {
             <ListItemText
               primary={`${student.firstName} ${student.lastName}`}
             />
-            <Link href={`${path}/${student.username}/about`}>
-              <IconButton title="About">
-                <AboutIcon />
-              </IconButton>
-            </Link>
-            <Link href={`${path}/${student.username}/three`}>
-              <IconButton title="Three">
-                <ThreeIcon />
-              </IconButton>
-            </Link>
-            <Link href={`${path}/${student.username}/map`}>
-              <IconButton title="Map">
-                <MapIcon />
-              </IconButton>
-            </Link>
-            <Link href={`${path}/${student.username}/bim`}>
-              <IconButton title="BIM">
-                <BIMIcon />
-              </IconButton>
-            </Link>
+            {student.assignments.includes('about') && (
+              <Link href={`${path}/${student.username}/about`}>
+                <IconButton title="About">
+                  <AboutIcon />
+                </IconButton>
+              </Link>
+            )}
+            {student.assignments.includes('three') && (
+              <Link href={`${path}/${student.username}/three`}>
+                <IconButton title="Three">
+                  <ThreeIcon />
+                </IconButton>
+              </Link>
+            )}
+            {student.assignments.includes('map') && (
+              <Link href={`${path}/${student.username}/map`}>
+                <IconButton title="Map">
+                  <MapIcon />
+                </IconButton>
+              </Link>
+            )}
+            {student.assignments.includes('bim') && (
+              <Link href={`${path}/${student.username}/bim`}>
+                <IconButton title="BIM">
+                  <BIMIcon />
+                </IconButton>
+              </Link>
+            )}
           </ListItemButton>
         </div>
       ))}
