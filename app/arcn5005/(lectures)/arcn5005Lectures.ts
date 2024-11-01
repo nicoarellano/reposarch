@@ -296,19 +296,24 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/9RQhbmcbAfk?si=aZXDQhDv3dQcWJyO',
+        title: 'Introduction to JavaScript and Three.js - Fall 2024',
+        date: dayjs('2024/10/30'),
+      },
+      {
         url: 'https://www.youtube.com/embed/fi_36W2oZfA?si=02doFd78VBxNBQba',
-        title: 'Assignment 2',
+        title: 'Assignment 2 explained - Fall 2023',
         date: dayjs('2023/11/02'),
       },
       {
         url: 'https://www.youtube.com/embed/W4OTcU1AB-A?si=oSW7CwZueWjG0rUf',
-        title: 'Introduction to JavaScript',
+        title: 'Introduction to JavaScript - Fall 2023',
         date: dayjs('2023/11/02'),
       },
       {
         url: 'https://www.youtube.com/embed/3wsFKrYhAHc?si=3KKtMe2XpZpR6eix',
         title:
-          'Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js',
+          'Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js - Fall 2023',
         date: dayjs('2023/11/02'),
       },
     ],
