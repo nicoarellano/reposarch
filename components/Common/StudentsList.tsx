@@ -1,9 +1,9 @@
 'use client';
-import List from '@mui/material/List';
+
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Avatar, IconButton, ListSubheader } from '@mui/material';
+import { Avatar, IconButton, List, ListSubheader } from '@mui/material';
 import { Students, Student } from '../../app/types/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
