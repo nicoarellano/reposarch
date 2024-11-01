@@ -296,8 +296,13 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/BJ5hcpEoMpY?si=FLqUkvV_bBb0O7Qk',
+        title: 'Introduction to JavaScript and Three.js - Fall 2024 - Part2',
+        date: dayjs('2024/10/30'),
+      },
+      {
         url: 'https://www.youtube.com/embed/9RQhbmcbAfk?si=aZXDQhDv3dQcWJyO',
-        title: 'Introduction to JavaScript and Three.js - Fall 2024',
+        title: 'Introduction to JavaScript - Fall 2024 - Part1',
         date: dayjs('2024/10/30'),
       },
       {
