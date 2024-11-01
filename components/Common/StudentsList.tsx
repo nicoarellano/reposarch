@@ -2,7 +2,13 @@
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Avatar, IconButton, ListSubheader, List } from '@mui/material';
+import {
+  Avatar,
+  IconButton,
+  ListSubheader,
+  List,
+  useMediaQuery,
+} from '@mui/material';
 import { Students, Student } from '../../app/types/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -20,13 +26,15 @@ export default function StudentsList({ students }: Props) {
   const path = usePathname();
   const isF2023 = path?.includes('f2023');
 
+  const isMobile = useMediaQuery('(max-width:600px)');
+
   return (
     <List
       sx={{
-        width: '60%',
-        minWidth: 450,
+        width: '50%',
+        minWidth: 350,
         bgcolor: 'background.paper',
-        maxHeight: 500,
+        maxHeight: isMobile ? 600 : 700,
         overflowY: 'auto',
       }}
       component="nav"
