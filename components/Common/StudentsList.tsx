@@ -34,7 +34,7 @@ export default function StudentsList({ students }: Props) {
         width: '50%',
         minWidth: 350,
         bgcolor: 'background.paper',
-        maxHeight: isMobile ? 600 : 700,
+        maxHeight: isMobile ? 550 : 700,
         overflowY: 'auto',
       }}
       component="nav"
