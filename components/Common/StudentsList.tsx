@@ -1,12 +1,10 @@
 'use client';
-import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Avatar, IconButton, ListSubheader } from '@mui/material';
+import { Avatar, IconButton, ListSubheader, List } from '@mui/material';
 import { Students, Student } from '../../app/types/types';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 
 import AboutIcon from '@mui/icons-material/AccountCircle';
@@ -21,13 +19,12 @@ interface Props {
 export default function StudentsList({ students }: Props) {
   const path = usePathname();
   const isF2023 = path?.includes('f2023');
-  const isF2023 = path?.includes('f2023');
 
   return (
     <List
       sx={{
         width: '60%',
-        minWidth: 400,
+        minWidth: 450,
         bgcolor: 'background.paper',
         maxHeight: 500,
         overflowY: 'auto',
@@ -45,9 +42,6 @@ export default function StudentsList({ students }: Props) {
               <Link
                 href={`${path}/${student.username}${isF2023 ? '' : '/final'}`}
               >
-              <Link
-                href={`${path}/${student.username}${isF2023 ? '' : '/final'}`}
-              >
                 <IconButton>
                   <Avatar
                     src={`${path}/${student.username}/avatar.jpg`}
@@ -59,34 +53,6 @@ export default function StudentsList({ students }: Props) {
             <ListItemText
               primary={`${student.firstName} ${student.lastName}`}
             />
-            {student.assignments.includes('about') && (
-              <Link href={`${path}/${student.username}/about`}>
-                <IconButton title="About">
-                  <AboutIcon />
-                </IconButton>
-              </Link>
-            )}
-            {student.assignments.includes('three') && (
-              <Link href={`${path}/${student.username}/three`}>
-                <IconButton title="Three">
-                  <ThreeIcon />
-                </IconButton>
-              </Link>
-            )}
-            {student.assignments.includes('map') && (
-              <Link href={`${path}/${student.username}/map`}>
-                <IconButton title="Map">
-                  <MapIcon />
-                </IconButton>
-              </Link>
-            )}
-            {student.assignments.includes('bim') && (
-              <Link href={`${path}/${student.username}/bim`}>
-                <IconButton title="BIM">
-                  <BIMIcon />
-                </IconButton>
-              </Link>
-            )}
             {student.assignments.includes('about') && (
               <Link href={`${path}/${student.username}/about`}>
                 <IconButton title="About">
