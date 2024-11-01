@@ -34,8 +34,17 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
     element: (
       <Video
         src="https://www.youtube.com/embed/9RQhbmcbAfk?si=aZXDQhDv3dQcWJyO"
-        title="Introduction to JavaScript and Three.js - Fall 2024"
-        caption={'Introduction to JavaScript and Three.js - Fall 2024'}
+        title="Introduction to JavaScript - Fall 2024 - Part 1"
+        caption={'Introduction to JavaScript - Fall 2024 - Part 1'}
+      />
+    ),
+  },
+  {
+    element: (
+      <Video
+        src="https://www.youtube.com/embed/BJ5hcpEoMpY?si=FLqUkvV_bBb0O7Qk"
+        title="Introduction to JavaScript and Three.js - Fall 2024 - Part 2"
+        caption={'Introduction to JavaScript and Three.js - Fall 2024 - Part 2'}
       />
     ),
   },
