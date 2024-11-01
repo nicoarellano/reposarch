@@ -1,14 +1,14 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
-import Gltf from "./Gltf";
-import { title } from "process";
-import Conditionals from "./Conditionals.mdx";
-import Loops from "./Loops.mdx";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
+import Gltf from './Gltf';
+import { title } from 'process';
+import Conditionals from './Conditionals.mdx';
+import Loops from './Loops.mdx';
 
 export const content: Toc = [
   // JAVASCRIPT CONTENT
@@ -19,27 +19,26 @@ export const content: Toc = [
           src="/images/javascript/js.gif"
           alt="JavaScript"
           href="https://www.w3schools.com/js/default.asp"
-          caption={"JavaScript is the programming language of the Web"}
+          caption={'JavaScript is the programming language of the Web'}
         />
       </>
     ),
     notes:
-      "Do not confuse with Java, Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world \n\
+      'Do not confuse with Java, Javascript is the logic behind of all modern internet browsers. It is also one of the most popular programming languages in the world \n\
       JavaScript and Java are completely different languages, both in concept and design. \n\
 JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. \n\
-ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.",
+ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.',
   },
 
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/W4OTcU1AB-A?si=oSW7CwZueWjG0rUf"
-        title="Introduction to JavaScript"
-        caption={"Introduction to JavaScript"}
+        src="https://www.youtube.com/embed/9RQhbmcbAfk?si=aZXDQhDv3dQcWJyO"
+        title="Introduction to JavaScript and Three.js - Fall 2024"
+        caption={'Introduction to JavaScript and Three.js - Fall 2024'}
       />
     ),
   },
-
   {
     element: (
       <>
@@ -47,30 +46,30 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
           src="/images/javascript/compiled-vs-interpreted-languages.png"
           alt="Compiled vs Interpreted"
           href="https://www.linkedin.com/pulse/what-difference-between-compiled-interpreted-programming-language/"
-          caption={"Compiled vs Interpreted"}
+          caption={'Compiled vs Interpreted'}
         />
       </>
     ),
     notes:
-      "Programming languages can be broadly categorized into two types based on how they are processed: compiled and interpreted. \n\
+      'Programming languages can be broadly categorized into two types based on how they are processed: compiled and interpreted. \n\
       In Compiled languages, the source code is passed through a program called a compiler, which translates it into machine (low-level language) code that the machine understands and can execute (.exe or .dll files) \n\
-      In contrast, JavaScript has no compilation step. Instead, an interpreter in the browser reads over the JavaScript code, interprets each line, and runs it.",
+      In contrast, JavaScript has no compilation step. Instead, an interpreter in the browser reads over the JavaScript code, interprets each line, and runs it.',
   },
 
   {
-    element: <EmojiTitle emoji={"👋🌎"} title="printing: 'Hello world!'" />,
+    element: <EmojiTitle emoji={'👋🌎'} title="printing: 'Hello world!'" />,
   },
 
   {
     element: (
       <>
-        <h3>{"<script> console.log(`Hello world!`) </script>"}</h3>
+        <h3>{'<script> console.log(`Hello world!`) </script>'}</h3>
         <br />
         <Image
           src="/images/javascript/html-hello-world.png"
           alt="Script Hello world"
           caption={
-            "Using JavaScript into HTML. Hello world within a script HTML element → the output will be rendered in the web browser Console (F12)"
+            'Using JavaScript into HTML. Hello world within a script HTML element → the output will be rendered in the web browser Console (F12)'
           }
         />
       </>
@@ -86,7 +85,7 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
           src="/images/javascript/hello-world.png"
           alt="Hello world"
           caption={
-            "Adding a JavaScript external file to our HTML file. By convention we will call it main.js, app.js, or index.js → the output will be rendered in the web browser Console (F12)"
+            'Adding a JavaScript external file to our HTML file. By convention we will call it main.js, app.js, or index.js → the output will be rendered in the web browser Console (F12)'
           }
         />
       </>
@@ -96,13 +95,13 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
   {
     element: (
       <EmojiTitle
-        emoji={"JavaScript Variables 🗃️"}
+        emoji={'JavaScript Variables 🗃️'}
         title="Variables or constants are containers that will eventually be declared with values"
       />
     ),
     notes:
-      "Variables or constants are containers that will eventually be declared with values \n\
-      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.",
+      'Variables or constants are containers that will eventually be declared with values \n\
+      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.',
   },
 
   {
@@ -125,8 +124,8 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
       </>
     ),
     notes:
-      " \n\
-      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.",
+      ' \n\
+      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.',
   },
   {
     element: (
@@ -152,8 +151,8 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
       </div>
     ),
     notes:
-      " \n\
-      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.",
+      ' \n\
+      In some occasions, you can use variable without declaring them, however, it is considered good programming practice to always declare variables before use.',
   },
 
   {
@@ -317,7 +316,7 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
                 <td>Number</td>
                 <td>
                   All JavaScript numbers are stored as decimal numbers (floating
-                  point). Numbers can be written with, or without decimals{" "}
+                  point). Numbers can be written with, or without decimals{' '}
                   <br />
                   Extra large or extra small numbers can be written with
                   scientific (exponential) notation ie: 123e5 (12300000) or
@@ -350,7 +349,7 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
               <tr>
                 <td>Objects</td>
                 <td>
-                  JavaScript objects are written with curly braces {"{...}"}.
+                  JavaScript objects are written with curly braces {'{...}'}.
                   Object properties are written as name:value pairs, separated
                   by commas: <br />
                   {
@@ -383,13 +382,13 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
       </>
     ),
     notes:
-      "In programming, data types is an important concept. \n\
+      'In programming, data types is an important concept. \n\
     To be able to operate on variables, it is important to know something about the type.     \n\
     Without data types, a computer cannot safely solve this \n\
     JavaScript is not too strict in relation to data types like other languages, but that could lead to errors and bugs. \n\
     ie: When adding a number and a string, JavaScript will treat the number as a string. \n\
     JavaScript has dynamic types. This means that the same variable can be used to hold different data types \n\
-     In a couple of weeks we are going to learn a framework called Typescript that was developed by Facebook to solve Type issues in Javascript",
+     In a couple of weeks we are going to learn a framework called Typescript that was developed by Facebook to solve Type issues in Javascript',
   },
   // Objects
   {
@@ -415,11 +414,11 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
       />
     ),
     notes:
-      "Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life \n\
+      'Objects in JavaScript, just as in many other programming languages, can be compared to objects in real life \n\
       In JavaScript, an object is a standalone entity, with properties and type. \n\
       Compare it with a cup, for example. A cup is an object, with properties. \n\
       A cup has a color, a design, weight, a material it is made of, etc. \n\
-      The same way, JavaScript objects can have properties, which define their characteristics.",
+      The same way, JavaScript objects can have properties, which define their characteristics.',
   },
   // functions
   {
@@ -431,8 +430,8 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
       />
     ),
     notes:
-      "A JavaScript function is a block of code designed to perform a particular task.\n\
-    A JavaScript function is executed when `something` invokes it (calls it)",
+      'A JavaScript function is a block of code designed to perform a particular task.\n\
+    A JavaScript function is executed when `something` invokes it (calls it)',
   },
 
   // Conditionals
@@ -512,15 +511,15 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
   {
     element: (
       <EmojiTitle
-        emoji={"Loops 🔄️"}
+        emoji={'Loops 🔄️'}
         title={
-          "Loops are ways JavaScript has to do something repeatedly🔁. They are a great way to automate processes 🤖"
+          'Loops are ways JavaScript has to do something repeatedly🔁. They are a great way to automate processes 🤖'
         }
       />
     ),
     notes:
-      "Loops offer a quick and easy way to do something repeatedly. \n\
-      You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another.",
+      'Loops offer a quick and easy way to do something repeatedly. \n\
+      You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another.',
   },
 
   {
@@ -602,7 +601,7 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
   {
     element: (
       <EmojiTitle
-        emoji={"Events 👂"}
+        emoji={'Events 👂'}
         title={
           "Events are actions assigned to HTML elements. JavaScript listens 👂 to javascript 'events' and reacts 🎬"
         }
@@ -794,8 +793,8 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
       </>
     ),
     notes:
-      "In any programming language, a reserved word or a reserved identifier is a word that cannot be used as an identifier, such as the name of a variable, function, or label. \n\
-    Thus, it is reserved and cannot be used for defining any of these.",
+      'In any programming language, a reserved word or a reserved identifier is a word that cannot be used as an identifier, such as the name of a variable, function, or label. \n\
+    Thus, it is reserved and cannot be used for defining any of these.',
   },
 
   {
@@ -818,19 +817,19 @@ ECMA-262 is the official name of the standard. ECMAScript is the official name o
         <Image
           src="/images/javascript/js-cloud.png"
           alt="JavaScript libraries"
-          caption={"JavaScript libraries"}
+          caption={'JavaScript libraries'}
         />
       </>
     ),
     notes:
-      "Javascript libraries include pre-written JavaScript code that simplifies the completion of common and complicated tasks \n\
+      'Javascript libraries include pre-written JavaScript code that simplifies the completion of common and complicated tasks \n\
       Active Communities \n\
 The most widely used libraries have active communities and forums where you may obtain help getting started with them. \
 The library developer site is frequently used to get JavaScript libraries. \n\
 Many library creators make both development and production versions of their libraries available. \
 Comments and tips, as well as other non-minified code, are included in the development versions. \
 Production versions are frequently minified and compressed for usage on live sites. \n\
-Some libraries are even accessible via content delivery networks (CDNs), including cdnjs, Google Hosted Libraries, jsDelivr, and Microsoft Ajax Content Delivery Network, to name a few.",
+Some libraries are even accessible via content delivery networks (CDNs), including cdnjs, Google Hosted Libraries, jsDelivr, and Microsoft Ajax Content Delivery Network, to name a few.',
   },
   {
     element: (
@@ -840,17 +839,17 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
           alt="JavaScript visual libraries"
           href="https://en.wikipedia.org/wiki/List_of_JavaScript_libraries"
           caption={
-            "JavaScript visual libraries - source: https://isquared.digital/blog/2020-03-24-viz-tools-pt2-1"
+            'JavaScript visual libraries - source: https://isquared.digital/blog/2020-03-24-viz-tools-pt2-1'
           }
         />
       </>
     ),
     notes:
-      "There are plenty of JavaScript Visualization tools. Based on their functionality, we can cluster them into 4 main categories: \n\
+      'There are plenty of JavaScript Visualization tools. Based on their functionality, we can cluster them into 4 main categories: \n\
       → Charting: to produce the most common DataViz plots;\n\
       → Graphs: representing and analyzing graph-based data;\n\
       → Maps: for representing data that has geo-features and\n\
-      → 3D: creating three-dimensional charts and cool animations.",
+      → 3D: creating three-dimensional charts and cool animations.',
   },
 
   // 3D graphics
@@ -863,7 +862,7 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
           alt="Web gl"
           href="https://www.khronos.org/webgl/"
           caption={
-            "WebGL™ is a cross-platform, royalty-free open web standard for a low-level 3D graphics API based on OpenGL ES"
+            'WebGL™ is a cross-platform, royalty-free open web standard for a low-level 3D graphics API based on OpenGL ES'
           }
         />
       </>
@@ -880,7 +879,7 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
         src="https://www.youtube.com/embed/3wsFKrYhAHc?si=3KKtMe2XpZpR6eix"
         title="Introduction to WebGL, GLTF and Three.js"
         caption={
-          "Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js"
+          'Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js'
         }
       />
     ),
@@ -894,7 +893,7 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
         <Image
           src="/images/three/webgl-vertex-shader.png"
           alt="WebGL shaders"
-          caption={"WebGL shaders are hard to use"}
+          caption={'WebGL shaders are hard to use'}
         />
       </>
     ),
@@ -908,15 +907,15 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
         <Gltf />
 
         <a href="https://en.wikipedia.org/wiki/GlTF">
-          <em>GLTF: Graphics Library Transmission Format</em>{" "}
+          <em>GLTF: Graphics Library Transmission Format</em>{' '}
         </a>
       </>
     ),
     notes:
-      "glTF™ is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by engines and applications. \n\
+      'glTF™ is a royalty-free specification for the efficient transmission and loading of 3D scenes and models by engines and applications. \n\
     glTF minimizes the size of 3D assets, and the runtime processing needed to unpack and use them. \n\
     glTF defines an extensible, publishing format that streamlines authoring workflows and interactive services by enabling the interoperable use of 3D content across the industry. \n\
-    glTF 2.0 has been released as the ISO/IEC 12113:2022 International Standard.",
+    glTF 2.0 has been released as the ISO/IEC 12113:2022 International Standard.',
   },
   {
     element: (
@@ -948,7 +947,7 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
       <Video
         src="https://www.youtube.com/embed/tonSNnEj-ow?si=h7M704Svi3SpAvN3"
         title="Gltf"
-        caption={"What is GLTF"}
+        caption={'What is GLTF'}
       />
     ),
   },
@@ -962,14 +961,14 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
           alt="Three js"
           href="https://threejs.org/"
           caption={
-            "Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage"
+            'Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage'
           }
         />
       </>
     ),
     notes:
-      "Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage. \n\
-      Three.js is often confused with WebGL since more often than not, but not always, three.js uses WebGL to draw 3D.",
+      'Three.js is a 3D library that tries to make it as easy as possible to get 3D content on a webpage. \n\
+      Three.js is often confused with WebGL since more often than not, but not always, three.js uses WebGL to draw 3D.',
   },
   {
     element: (
@@ -1002,8 +1001,8 @@ Some libraries are even accessible via content delivery networks (CDNs), includi
   {
     element: (
       <EmojiTitle
-        emoji={"Lab 8 🌐🫖"}
-        title={"Use Three js to upload your Blender model (mesh/gltf)"}
+        emoji={'Lab 8 🌐🫖'}
+        title={'Use Three js to upload your Blender model (mesh/gltf)'}
       />
     ),
   },
