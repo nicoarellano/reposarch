@@ -25,7 +25,7 @@ export default function StudentsList({ students }: Props) {
     <List
       sx={{
         width: '60%',
-        minWidth: 400,
+        minWidth: 450,
         bgcolor: 'background.paper',
         maxHeight: 500,
         overflowY: 'auto',
