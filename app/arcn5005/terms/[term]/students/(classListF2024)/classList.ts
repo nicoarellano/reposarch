@@ -4,7 +4,7 @@ export const classListf2024: Students = [
   {
     id: '#101112560',
     username: 'nicolasarellanorisop',
-    lastName: 'Arellano (Final Assignment Example)',
+    lastName: 'Arellano',
     firstName: 'Nicolas',
     email: 'NicolasArellanoRisop@cmail.carleton.ca',
     assignments: ['about', 'three', 'map', 'bim'],
