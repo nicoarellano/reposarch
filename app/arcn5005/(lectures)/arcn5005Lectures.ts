@@ -338,18 +338,29 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/DvjTZDPMCQM?si=TaxSSg2TXzsgAA6I',
+        title: 'Antonio Gonzales Viegas - That Open Company - Fall 2024',
+        date: dayjs('2024/11/06'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/wz5I8SY5FVc?si=1GIwVV241G1bmLG8',
+        title:
+          'That Open Company use Template to create BIM viewer - Fall 2024',
+        date: dayjs('2024/11/06'),
+      },
+      {
         url: 'https://www.youtube.com/embed/rLE9pdzEBsw?si=3ZuwNi6pz6lcC8Dq',
-        title: 'Antonio Gonzales Viegas - That Open Company',
+        title: 'Antonio Gonzales Viegas - That Open Company - Fall 2023',
         date: dayjs('2023/11/09'),
       },
       {
         url: 'https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4',
-        title: 'Three js - Assignment 2 - 1/2',
+        title: 'Three js - Assignment 2 - 1/2 - Fall 2023',
         date: dayjs('2023/11/09'),
       },
       {
         url: 'https://www.youtube.com/embed/bLUMHQRJJyU?si=EGpp1l5QnUQcQmV3',
-        title: 'Three js - Assignment 2 - 2/2',
+        title: 'Three js - Assignment 2 - 2/2 - Fall 2023',
         date: dayjs('2023/11/09'),
       },
     ],
