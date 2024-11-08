@@ -136,6 +136,40 @@ export const content: Toc = [
   {
     element: (
       <Image
+        src="/images/osarch/ifc-logo.png"
+        alt="ifc definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/"
+        caption={'IFC - Industry Foundation Classes'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/ids.png"
+        alt="ids definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/"
+        caption={'IDS - Information Delivery Specification'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/bcf.png"
+        alt="bcf definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/bim-collaboration-format/"
+        caption={'BCF - BIM Collaboration Format'}
+      />
+    ),
+    notes: '',
+  },
+
+  {
+    element: (
+      <Image
         src="/images/osarch/openbim-definition.png"
         alt="openbim definition"
         href="https://wiki.osarch.org/index.php?title=OpenBIM"
