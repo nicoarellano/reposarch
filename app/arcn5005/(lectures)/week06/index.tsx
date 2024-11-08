@@ -132,6 +132,41 @@ export const content: Toc = [
     → Flexibility of choice of technology  \n\
     Also, The ISO 19650 (which is the chapter about BIM for the International Organization for Standarization) defines open data as data available or visible to others and that can be freely used, re-used, re-published and redistributed by anyone.',
   },
+
+  {
+    element: (
+      <Image
+        src="/images/osarch/ifc-logo.png"
+        alt="ifc definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/"
+        caption={'IFC - Industry Foundation Classes'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/ids.png"
+        alt="ids definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/"
+        caption={'IDS - Information Delivery Specification'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/bcf.png"
+        alt="bcf definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/bim-collaboration-format/"
+        caption={'BCF - BIM Collaboration Format'}
+      />
+    ),
+    notes: '',
+  },
+
   {
     element: (
       <Image
