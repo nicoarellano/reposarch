@@ -1,10 +1,11 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
+import SimpleButton from '@/components/Common/SimpleButton';
 
 export const content: Toc = [
   {
@@ -27,9 +28,8 @@ export const content: Toc = [
           Antonio González Viegas is a BIM software developer and architect with
           work experience in open BIM, 3D graphics, 3D Math, and project
           management in New York, Norway, Germany, and Spain. He has a degree in
-          Architecture from the University of Seville. He is currently working
-          as a BIM software developer for Autility and is the CEO of That Open
-          Company (Former IFC.js) Antonio is also a prolific open-source
+          Architecture from the University of Seville. He is the CEO of That
+          Open Company (Former IFC.js). Antonio is also a prolific open-source
           contributor. He has contributed to several projects on GitHub,
           including IFC.js, openbim-components, and three.js. He is passionate
           about using code to solve problems in the BIM world and has given
@@ -43,9 +43,11 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/rLE9pdzEBsw?si=3ZuwNi6pz6lcC8Dq"
+        src="https://www.youtube.com/embed/DvjTZDPMCQM?si=TaxSSg2TXzsgAA6I"
         title="Antonio Gonzales Viegas - That Open Company"
-        caption={"Antonio Gonzales Viegas - That Open Company"}
+        caption={
+          'Antonio Gonzales Viegas presentation and That Open Company overview'
+        }
       />
     ),
   },
@@ -55,11 +57,11 @@ export const content: Toc = [
       <Image
         src="/images/obc/timeline.png"
         alt="OS timeline"
-        caption={"OSArch - timeline"}
+        caption={'OSArch - timeline'}
       />
     ),
     notes:
-      "However, before the end of 2019 to imagine an alternative to proprietary software for the AEC industry was challenging.\n\
+      'However, before the end of 2019 to imagine an alternative to proprietary software for the AEC industry was challenging.\n\
       The industry was (and still is) too dependant on the main vendor’s solutions.\n\
       But then, a chain of events started to open the door to alternatives\n\
       → In October 2019 Dion Moult releases BlenderBIM\n\
@@ -68,8 +70,7 @@ export const content: Toc = [
       → In December 2020 the IFC.js library is released. The first FLOSS online library to work with BIM and IFC.\n\
       → In September 2022 there is a follow-up letter by the Nordic Architectural Associations endorsed by  the Architects’ council of Europe. \n\
       → We don’t know about 2023 but I believe this is the year for CIMS…\n\
-      → In my opinion, instead of writing letters to the vendors we as sector need to keep taking action with our own hands. \n\
-      → This is what I am trying to do with the epistemic object.",
+      → In my opinion, instead of writing letters to the vendors we as sector need to keep taking action with our own hands.',
   },
 
   {
@@ -77,7 +78,7 @@ export const content: Toc = [
       <Image
         src="/images/obc/thatopencompany.png"
         alt="That Open Company - Welcome to the AECOsystem."
-        caption={"That Open Company - Welcome to the AECOsystem."}
+        caption={'That Open Company - Welcome to the AECOsystem.'}
         href="https://thatopen.com/"
       />
     ),
@@ -89,12 +90,45 @@ export const content: Toc = [
     That People Community: Meet other members, forums, chats, and meetings every six weeks within That Open Company's team to find out what's happening exclusively things while sharing opinions. \n\
     Open University: A new(? rebranded) platform built by That Open Company to create a path from zero knowledge about programming to becoming a software developer in less time than possible, with teachers supporting students in their career paths.",
   },
-
+  {
+    element: (
+      <div>
+        <h3>Useful That Open Company Links</h3>
+        <br />
+        <ol>
+          <li>
+            <SimpleButton
+              title="That Open Company"
+              href="https://thatopen.com/"
+            />
+          </li>
+          <li>
+            <SimpleButton
+              title="That Open People"
+              href="https://people.thatopen.com/"
+            />
+          </li>
+          <li>
+            <SimpleButton
+              title="That Open Documentation"
+              href="https://docs.thatopen.com/"
+            />
+          </li>
+          <li>
+            <SimpleButton
+              title="That Open Company Github"
+              href="https://github.com/ThatOpen/"
+            />
+          </li>
+        </ol>
+      </div>
+    ),
+  },
   {
     element: (
       <EmojiTitle
-        emoji={"Lab 9 💻"}
-        title={"Working on Assignment 2 and exploring OpenBIM components"}
+        emoji={'Lab 9 💻'}
+        title={'Working on Assignment 2 and exploring OpenBIM components'}
       />
     ),
   },
@@ -103,7 +137,7 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4"
         title="Three js - Assignment 2 - 1/2"
-        caption={"Three js - Assignment 2 - 1/2"}
+        caption={'Three js - Assignment 2 - 1/2'}
       />
     ),
   },
@@ -112,7 +146,7 @@ export const content: Toc = [
       <Video
         src="https://www.youtube.com/embed/bLUMHQRJJyU?si=EGpp1l5QnUQcQmV3"
         title="Three js - Assignment 2 - 2/2"
-        caption={"Three js - Assignment 2 - 2/2"}
+        caption={'Three js - Assignment 2 - 2/2'}
       />
     ),
   },
