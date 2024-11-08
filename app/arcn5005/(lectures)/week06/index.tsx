@@ -228,7 +228,7 @@ it is very hard to achieve openBIM',
   {
     element: (
       <Image
-        src="/images/osarch/ifc.png"
+        src="/images/osarch/ifc-logo.png"
         alt="IFC"
         href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/"
         caption="Industry Foundation Classes (IFC)"
@@ -242,6 +242,29 @@ it is very hard to achieve openBIM',
     It is an open, international standard (ISO 16739-1:2018) and promotes vendor-neutral, or agnostic, and usable capabilities across a wide range of hardware devices, \
     software platforms, and interfaces for many different use cases. More about IFC, its uses and adoption may be found here.',
   },
+  {
+    element: (
+      <Image
+        src="/images/osarch/ids.png"
+        alt="ids definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/"
+        caption={'IDS - Information Delivery Specification'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/bcf.png"
+        alt="bcf definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/bim-collaboration-format/"
+        caption={'BCF - BIM Collaboration Format'}
+      />
+    ),
+    notes: '',
+  },
+
   {
     element: (
       <Video
