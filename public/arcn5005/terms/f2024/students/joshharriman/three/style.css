@@ -8,7 +8,8 @@
 
 
 body {
-  background-color: rgb(214, 207, 193);
+  background-size:cover; 
+  background-position:center;
 }
 
 header {
