@@ -57,10 +57,6 @@ let mesh;
 loader.load(
   "/arcn5005/terms/f2023/students/muqujenniferliu/three/models/Jennifermesh.gltf",
   function (gltf) {
-    gltf.scene.scale.x = 2;
-    gltf.scene.scale.y = 2;
-    gltf.scene.scale.z = 2;
-
     mesh = gltf.scene;
     scene.add(gltf.scene);
   },
@@ -226,7 +222,6 @@ function createText(text, z = 0, textColor = "0x000000", size = 0.5) {
     });
 
     const color = new THREE.Color();
-
     color.setHex(textColor);
     const textMaterial = new THREE.MeshBasicMaterial({ color: color });
     const text = new THREE.Mesh(textGeo, textMaterial);
@@ -276,13 +271,6 @@ function animate() {
   requestAnimationFrame(animate);
 
   if (mesh) mesh.rotation.y += 0.01;
-  if (mesh2) mesh2.rotation.y += 0.01;
-  if (mesh3) mesh3.rotation.y += 0.01;
-  if (mesh4) mesh4.rotation.y += 0.01;
-  if (mesh5) mesh5.rotation.y += 0.01;
-  if (mesh6) mesh6.rotation.y += 0.01;
-  if (mesh7) mesh7.rotation.y += 0.01;
-  if (mesh8) mesh8.rotation.y += 0.01;
 
   yellowCube.rotation.x += 0.01;
   yellowCube.rotation.y += 0.01;
