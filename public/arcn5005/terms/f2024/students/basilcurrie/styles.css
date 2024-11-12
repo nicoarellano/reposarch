@@ -80,6 +80,19 @@ li{font-size:12px;}
 	border:solid white 0px;
 }
 
+#threeimage{
+	background-image:url('Project 2 Thumbnail.png');
+	background-size:cover;
+	background-position:center;
+	width:110px;
+	min-height:110px;
+	max-height:500px;
+	margin-top:0;
+	border-radius:500px;
+	transition:5s;
+	border:solid white 0px;
+}
+
 #avatar{
 	transition:none;
 }
@@ -229,7 +242,7 @@ li{font-size:12px;}
 
 @media only screen and (min-width:600px){
 	h2{line-height:0.85em;}
-	#avatar{margin-right:20px;height:100%;}
+	#avatar, #threeimage{margin-right:20px;height:100%;}
 	.maincontent{padding:30px 20px 20px 20px;}
 	.projectcontainer, #CV{display:flex;}
 	.project{margin:0;width:278px;height:278px;}
