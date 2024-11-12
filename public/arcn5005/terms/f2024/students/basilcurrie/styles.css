@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
 	transition:1s;
-	cursor:crosshair;
 }
 
 body{
@@ -9,6 +8,7 @@ body{
 	background-image:url('coop-background.jpg');
 	background-size:cover;
 	background-attachment:fixed;
+	margin:0;
 }
 
 
@@ -86,6 +86,16 @@ li{font-size:12px;}
 
 .bottommargin{
 	display:none;
+}
+
+.content-container{
+	width:100%;
+	display:flex;
+	justify-content:center;
+}
+
+.canvas {
+    outline: none;
 }
 
 #hidden{
