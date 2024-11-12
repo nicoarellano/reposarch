@@ -375,10 +375,12 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       {
         title:
-          '🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js',
+          '🔴 Assignment 2 review - 3d model using Blender, a photogrammetry software and Three.js',
       },
       { title: 'Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)' },
-      { title: 'Q GIS' },
+      { title: "Canada's Digital Twin" },
+      { title: 'QGIS' },
+      { title: 'CloudCompare' },
       { title: '🖥️ LAB 10: Three js continuation' },
     ],
     recordings: [
