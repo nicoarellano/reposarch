@@ -1,10 +1,10 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
 
 export const content: Toc = [
   {
@@ -28,7 +28,7 @@ Ken is currently finishing up the PhD and is preparing to defend this winter."
       <Video
         src="https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd"
         title="Ken Percy - Open-source GIS"
-        caption={"Ken Percy - Open-source GIS"}
+        caption={'Ken Percy - Open-source GIS'}
       />
     ),
   },
@@ -85,7 +85,7 @@ Ken is currently finishing up the PhD and is preparing to defend this winter."
     element: (
       <>
         <Image
-          src="/images/maps/qgis.png"
+          src="/images/maps/qgis-logo.svg"
           alt="QGIS"
           caption="Download QGIS"
           href="https://www.qgis.org/en/site/forusers/download.html"
