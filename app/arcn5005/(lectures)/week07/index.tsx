@@ -52,9 +52,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7"
-        title="Raphael Vouilloz - BlenderBIM - Fall 2023"
-        caption={'Raphael Vouilloz - BlenderBIM - Fall 2023'}
+        src="https://www.youtube.com/embed/g3GxMstbgDc?si=5VXjfc2G_5JrnTCU"
+        title="Raphael Vouilloz - BonsaiBIM - Fall 2024"
+        caption={'Raphael Vouilloz - BonsaiBIM - Fall 2024'}
       />
     ),
   },
@@ -150,15 +150,6 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/zoecibNDokE?si=V59fmJi9g_bNFgKD"
-        title="BonsaiBIM Addon Update - 23.09.02 - Overview & Demonstration"
-        caption={'BonsaiBIMAddon Update - 23.09.02 - Overview & Demonstration'}
-      />
-    ),
-  },
-  {
-    element: (
-      <Video
         src="https://www.youtube.com/embed/kmPPR0fWOrI?si=Z4gWdJ1Y0aa51h2G"
         title="Import DXF Files in Blender"
         caption={'Import DXF Files in Blender'}
@@ -167,7 +158,12 @@ export const content: Toc = [
   },
   {
     element: (
-      <EmojiTitle emoji={'Lab 7 🏗️'} title={'BonsaiBIM - Create a BIM model'} />
+      <EmojiTitle
+        emoji={'Lab 7 🏗️'}
+        title={
+          'BonsaiBIM & That Open Engine: Create a BIM model and a BIM Viewer'
+        }
+      />
     ),
   },
 ];

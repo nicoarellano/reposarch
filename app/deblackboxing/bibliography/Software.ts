@@ -1,20 +1,20 @@
-import { Resources } from "../../types/types";
+import { Resources } from '../../types/types';
 
 export const Software: Resources = [
   {
-    title: "Blender",
-    url: "https://www.blender.org/download/",
+    title: 'Blender',
+    url: 'https://www.blender.org/download/',
   },
   {
-    title: "BlenderBIM",
-    url: "https://blenderbim.org/download.html",
+    title: 'BlenderBIM',
+    url: 'https://blenderbim.org/download.html',
   },
   {
-    title: "MeshRoom",
-    url: "https://alicevision.org/#meshroom",
+    title: 'MeshRoom',
+    url: 'https://alicevision.org/#meshroom',
   },
   {
-    title: "NodeJs",
-    url: "https://nodejs.org/en/download",
+    title: 'NodeJs',
+    url: 'https://nodejs.org/en/download/prebuilt-installer',
   },
 ];
