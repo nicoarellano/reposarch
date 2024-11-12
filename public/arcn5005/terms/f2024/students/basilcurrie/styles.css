@@ -111,6 +111,10 @@ li{font-size:12px;}
     outline: none;
 }
 
+.scorebar {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
 #hidden{
 	display:none;
 	position:absolute;

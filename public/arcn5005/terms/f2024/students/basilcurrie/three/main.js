@@ -11,6 +11,9 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 
+const cubecount = document.getElementById('cubecount')
+const youcount = document.getElementById('youcount')
+
 const renderer = new THREE.WebGLRenderer({antialias:true,alpha: true});
 renderer.shadowMap.enabled = true;
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -92,15 +95,15 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
       const textMaterial = new THREE.MeshLambertMaterial({ color: color });
       const text = new THREE.Mesh(textGeo, textMaterial);
   
-      text.position.x = 2;
       text.position.y = elevation;
       text.position.z = 1.31;
+      text.position.x = -2;
   
       scene.add(text);
     });
   };
 
-  createText("PRESS ANY KEY", -1.5, "0XFF0000",0.2);
+  createText("NO INTERNET GAME", -1.5, "0XFF0000",0.5);
 
 let cubevelocity = 0.03;
 let rootrotation = 0;
@@ -109,10 +112,15 @@ let ztranslation = 0;
 const gravity = 0.0005;
 
 let increment = 0;
+let cubescore = 0;
+let youscore = 0;
 
 function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
+
+  cubecount.innerText = ('Cube: ' + cubescore);
+  youcount.innerText = ('You: ' + youscore);
 
   increment += 0.001;
 
@@ -127,9 +135,15 @@ function animate() {
   else{
     cube.position.set(5,0.5,0)
     cubevelocity = 0.03
+    if (rootrotation == 0){
+      youscore ++;
+    }
+    else{
+      cubescore ++;
+    };
   };
   
-  window.addEventListener ('keydown', () =>{
+  window.addEventListener ('click', () =>{
     if (root.position.y <= 0){
         rootvel = 0.03
     }
@@ -144,9 +158,9 @@ function animate() {
     root.position.y = 0
   };
   
-  if (cube.position.x < -3 && root.position.y == 0){
-    rootrotation = 0.1
-    ztranslation = 0.1
+  if (cube.position.x < -2.5 && root.position.y == 0){
+    rootrotation = 0.1;
+    ztranslation = 0.1;
   };
 
   if (root.position.z > 10){
