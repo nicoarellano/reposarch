@@ -18,7 +18,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 
 renderer.setSize(size.width, size.height);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));               
 document.body.appendChild(renderer.domElement);
 
 //Creates grids and axes in the scene
