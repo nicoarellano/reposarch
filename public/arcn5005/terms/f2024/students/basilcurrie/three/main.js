@@ -160,6 +160,7 @@ function animate() {
   root.position.z += ztranslation;
   camera.position.x = Math.sin(increment)*5;
   camera.position.z = Math.cos(increment)*5;
+  camera.position.y = 0.5-[Math.cos(2*increment)*0.5];
   camera.rotation.y = increment;
 
 };
