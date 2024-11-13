@@ -49,8 +49,6 @@ body::before {
   box-sizing: border-box;
   position: absolute;
   }
-  position: absolute;
-}
 
 h1 {
     color: rgb(21, 73, 128);
