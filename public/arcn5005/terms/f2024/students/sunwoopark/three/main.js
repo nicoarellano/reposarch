@@ -9,7 +9,7 @@ const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
 
 //Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas-f2024");
+const threeCanvas = document.getElementById("three-canvas-park");
 console.log(threeCanvas);
 
 const renderer = new THREE.WebGLRenderer({
@@ -81,12 +81,12 @@ window.addEventListener("keydown", (event) => {
 });
 
 //Camera
-camera.position.z = 30;
-camera.position.x = 15;
-camera.position.y = 2;
+camera.position.z = 50;
+camera.position.x = 10;
+camera.position.y = 7;
 
-scene.position.x = -5;
-scene.position.z = 5;
+scene.position.x = 3;
+scene.position.z = 30;
 scene.position.y = -3;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -296,7 +296,7 @@ function getRandomHexColor() {
 
 //Creates the lights of the scene
 const lightColor = 0xffffff;
-const ambientLight = new THREE.AmbientLight(lightColor, 1);
+const ambientLight = new THREE.AmbientLight(lightColor, .7);
 scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(lightColor, 2);
 directionalLight.position.set(15, 10, 5);
