@@ -1,10 +1,10 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
 
 export const content: Toc = [
   {
@@ -15,12 +15,16 @@ export const content: Toc = [
         <Image
           src="/images/maps/Ken.jpg"
           alt="Ken Percy"
-          caption="KEN PERCY is a graduate of the Azrieli School of Architecture and Urbanism where he completed the BAS and MArch.
-During his masters he started working at the Carleton Immersive Media Studio (CIMS) where he has had the opportunity to lead, or contribute to a number of important projects including laser scanning Parliament Hill, digital fabrication for the Canadian Senate, and GIS software development for the Digital Twin.
-Ken is currently finishing up the PhD and is preparing to defend this winter."
+          caption="Ken Percy studied architecture at Carleton University in the Azrieli School of Architecture & Urbanism, and is currently completing a PhD in architecture. 
+          He spent many years researching the translation from laser scan to building information model, while his current work at CIMS is focused on exploring two themes: 
+          the creative potential of machine code for architecture via digital fabrication, and the development of an open-source digital twin."
         />
       </>
     ),
+    notes:
+      'Ken Percy studied architecture at Carleton University in the Azrieli School of Architecture & Urbanism, and is currently completing a PhD in architecture. \n\
+      He spent many years researching the translation from laser scan to building information model, while his current work at CIMS is focused on exploring two themes: \n\
+      the creative potential of machine code for architecture via digital fabrication, and the development of an open-source digital twin.',
   },
 
   {
@@ -28,7 +32,7 @@ Ken is currently finishing up the PhD and is preparing to defend this winter."
       <Video
         src="https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd"
         title="Ken Percy - Open-source GIS"
-        caption={"Ken Percy - Open-source GIS"}
+        caption={'Ken Percy - Open-source GIS'}
       />
     ),
   },
@@ -85,10 +89,22 @@ Ken is currently finishing up the PhD and is preparing to defend this winter."
     element: (
       <>
         <Image
-          src="/images/maps/qgis.png"
+          src="/images/maps/qgis-logo.svg"
           alt="QGIS"
           caption="Download QGIS"
           href="https://www.qgis.org/en/site/forusers/download.html"
+        />
+      </>
+    ),
+  },
+  {
+    element: (
+      <>
+        <Image
+          src="/images/maps/cloud-compare-logo.png"
+          alt="Cloud Compare"
+          caption="Download Cloud Compare"
+          href="https://www.danielgm.net/cc/"
         />
       </>
     ),

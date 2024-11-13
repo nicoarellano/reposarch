@@ -17,9 +17,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3"
-        title="OSArch - Open source for architects community"
-        caption={'OSArch - Open source for architects community'}
+        src="https://www.youtube.com/embed/a7hWyWWJ3oQ?si=qxNqEVF2Q99S7Bfb"
+        title="OSArch - Open source for architects community - Fall 2024"
+        caption={'OSArch - Open source for architects community  - Fall 2024'}
       />
     ),
   },
@@ -132,6 +132,41 @@ export const content: Toc = [
     → Flexibility of choice of technology  \n\
     Also, The ISO 19650 (which is the chapter about BIM for the International Organization for Standarization) defines open data as data available or visible to others and that can be freely used, re-used, re-published and redistributed by anyone.',
   },
+
+  {
+    element: (
+      <Image
+        src="/images/osarch/ifc-logo.png"
+        alt="ifc definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/"
+        caption={'IFC - Industry Foundation Classes'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/ids.png"
+        alt="ids definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/"
+        caption={'IDS - Information Delivery Specification'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/bcf.png"
+        alt="bcf definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/bim-collaboration-format/"
+        caption={'BCF - BIM Collaboration Format'}
+      />
+    ),
+    notes: '',
+  },
+
   {
     element: (
       <Image
@@ -193,7 +228,7 @@ it is very hard to achieve openBIM',
   {
     element: (
       <Image
-        src="/images/osarch/ifc.png"
+        src="/images/osarch/ifc-logo.png"
         alt="IFC"
         href="https://www.buildingsmart.org/standards/bsi-standards/industry-foundation-classes/"
         caption="Industry Foundation Classes (IFC)"
@@ -207,6 +242,29 @@ it is very hard to achieve openBIM',
     It is an open, international standard (ISO 16739-1:2018) and promotes vendor-neutral, or agnostic, and usable capabilities across a wide range of hardware devices, \
     software platforms, and interfaces for many different use cases. More about IFC, its uses and adoption may be found here.',
   },
+  {
+    element: (
+      <Image
+        src="/images/osarch/ids.png"
+        alt="ids definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/information-delivery-specification-ids/"
+        caption={'IDS - Information Delivery Specification'}
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/osarch/bcf.png"
+        alt="bcf definition"
+        href="https://www.buildingsmart.org/standards/bsi-standards/bim-collaboration-format/"
+        caption={'BCF - BIM Collaboration Format'}
+      />
+    ),
+    notes: '',
+  },
+
   {
     element: (
       <Video
@@ -263,9 +321,9 @@ it is very hard to achieve openBIM',
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg"
-        title="OSArch - Open source for architects community"
-        caption={'Introduction to CSS'}
+        src="https://www.youtube.com/embed/Qe2Bdh8Tpoc?si=5hVQ7_MVfWYrDovm"
+        title="Introduction to CSS  - Fall 2024"
+        caption={'Introduction to CSS  - Fall 2024'}
       />
     ),
   },
