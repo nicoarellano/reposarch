@@ -1,11 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chloemaignan about page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Chloe Maignan, Master of Architecture student at Carleton University">
+    <title>About Me - Chloe Maignan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+        body, h1, h2, p, li, span {
+            color: #ffffff;
+            font-family: 'IBM Plex Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('your-background-image-url.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Assignment Section (Top Right) */
+        .assignment-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            position: fixed;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+
+        .assignment-box {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            border: 2px solid #fff;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .assignment-box:hover {
+            opacity: 0.3;
+        }
+
+        .assignment-box:hover img {
+            opacity: 0.3;
+        }
+
+        .assignment-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .assignment-box span {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .assignment-box:hover span {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile picture section -->
+        <img src="your-profile-picture-url.jpg" alt="Chloe Maignan" class="profile-pic">
+        
+        <h1>Chloe Maignan</h1>
+        <h2>About Me</h2>
+        <ul>
+            <li>Master of Architecture student at Carleton University</li>
+            <li>Completed a Bachelor's in History and Theory of Architecture at Carleton</li>
+            <li>Passionate about design, creating spaces that balance inclusivity with social impact</li>
+            <li>Fun fact: I was born in Boston, Massachusetts!</li>
+        </ul>
+    </div>
+
+        <!-- Assignment Section (Top Right) -->
+        <div class="assignment-section">
+            <div class="assignment-box" style="background-image: url('assignment1-image-url.jpg');"
+                <span>Assignment 1</span>
+            </div>
+
+            <div class="assignment-box" style="background-image: url('assignment2-image-url.jpg');"
+                <span>Assignment 2</span>
+            </div>
+
+            <div class="assignment-box" style="background-image: url('assignment3-image-url.jpg');"
+                <span>Assignment 3</span>
+            </div>
+
+            <div class="assignment-box" style="background-image: url('final-image-url.jpg');"
+                <span>Final</span>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
