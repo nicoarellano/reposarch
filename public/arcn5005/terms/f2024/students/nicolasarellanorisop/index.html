@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
   <title>About</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 <section class="main-container">
@@ -24,9 +24,8 @@
     <img src="./photo.png" alt="Nicolas Arellano" height="300" /> 
   </div>
   <div id="viewers">
-    <div>
-      <div id="full-screen"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 24 24"><path d="M21.414 18.586l2.586-2.586v8h-8l2.586-2.586-5.172-5.172 2.828-2.828 5.172 5.172zm-13.656-8l2.828-2.828-5.172-5.172 2.586-2.586h-8v8l2.586-2.586 5.172 5.172zm10.828-8l-2.586-2.586h8v8l-2.586-2.586-5.172 5.172-2.828-2.828 5.172-5.172zm-8 13.656l-2.828-2.828-5.172 5.172-2.586-2.586v8h8l-2.586-2.586 5.172-5.172z"/></svg></div>
-      <div id="three-container-f2024"></div>
+    <div width='50vw' height="80vh">
+      <div id="three-container-f2024" ></div>
     </div>
     
     <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
@@ -34,6 +33,66 @@
   </div>
 </section>
 </body>
+
+<style>
+  #viewers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    height: 100%;
+    padding: 1rem;
+  }
+
+.main-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+
+.viewer {
+    right: 0;
+    /* outline: 1px solid black; */
+    border-radius: 1rem;
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    outline: 3px solid yellow;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.legend {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+    height: 1rem;
+}
+
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+</style>
 
 <!-- Three js Modules -->
 <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>

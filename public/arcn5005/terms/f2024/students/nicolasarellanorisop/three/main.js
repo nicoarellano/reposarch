@@ -9,8 +9,7 @@ const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
 //Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas-f2024");
-console.log(threeCanvas);
+const threeCanvas = document.getElementById('three-canvas-f2024');
 
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
@@ -49,7 +48,7 @@ greenCube.position.z = 3;
 
 scene.add(yellowCube);
 scene.add(blueCube);
-// scene.add(redCube);
+scene.add(redCube);
 scene.add(greenCube);
 
 const gltfLoader = new THREE.GLTFLoader();
@@ -57,7 +56,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "./models/justin.glb",
+  './models/justin.glb',
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 3;
@@ -74,10 +73,10 @@ gltfLoader.load(
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
+function createText(text, elevation = 0, textColor = '0x000000', size = 0.5) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+  fontLoader.load('./fonts/helvetiker_regular.typeface.json', function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -102,11 +101,10 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Nicolas Arellano", 5, "0XFF00FF");
-createText("- Architect from PUC", 3, "0XFF0000");
-createText("- Research team lead at CIMS", 2, "0XFF0000");
-createText("- PhD candidate at ASAU", 1, "0XFF0000");
-createText("- Amateur programmer", 0, "0XFF0000");
+createText('Nicolas Arellano', 5, '0XFF00FF');
+createText('- Architect from PUC', 3, '0XFF0000');
+createText('- Research team lead at CIMS', 2, '0X00ff00');
+createText('- PhD candidate at ASAU', 1, '0XFF0000');
 
 camera.position.z = 13;
 camera.position.x = 5;
@@ -154,7 +152,7 @@ function animate() {
 animate();
 
 //Adjust the viewport to the size of the browser
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
   camera.aspect = size.width / size.height;
