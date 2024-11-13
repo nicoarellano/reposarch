@@ -25,6 +25,7 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 let material = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
 let cube = new THREE.Mesh(geometry, material);
 cube.position.set(5, 0.5, 0);
+cube.position.set(5, 0.5, 0);
 cube.scale.y = 0.3;
 cube.scale.x = 0.3;
 cube.scale.z = 0.3;
