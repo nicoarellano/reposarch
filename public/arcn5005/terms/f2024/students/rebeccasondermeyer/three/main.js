@@ -19,7 +19,7 @@ let jumpStrength = 2; // how strong the jump is
 let groundLevel = 4; // Y level of the ground
 
 //Canvas Setup
-const threeCanvas = document.getElementById("three-canvas");
+const threeCanvas = document.getElementById("three-canvas-rebecca");
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
   alpha: true,
