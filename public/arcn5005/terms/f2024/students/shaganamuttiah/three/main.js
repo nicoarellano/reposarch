@@ -22,7 +22,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
 // Creates grids and axes in the scene
-const grid = new THREE.GridHelper(10, 10);
+const grid = new THREE.GridHelper(1, 1);
 scene.add(grid);
 
 const axes = new THREE.AxesHelper();
@@ -62,10 +62,15 @@ const blueHeart = createPuffyHeartMesh(0xD63333);
 const redHeart = createPuffyHeartMesh(0xD63333);
 const greenHeart = createPuffyHeartMesh(0xD63333);
 
-yellowHeart.position.set(0, 0, -3);
-blueHeart.position.set(-3, 0, 0);
-redHeart.position.set(3, 0, 0);
-greenHeart.position.set(0, 0, 3);
+yellowHeart.position.set(-6, 3, 6);
+yellowHeart.rotation.x = Math.PI; 
+blueHeart.position.set(-3, 3, 0);
+blueHeart.rotation.x = Math.PI;
+redHeart.position.set(3, 1, 9);
+redHeart.rotation.x = Math.PI;
+greenHeart.position.set(0, 3, 15);
+greenHeart.rotation.x = Math.PI;
+
 
 scene.add(yellowHeart);
 scene.add(blueHeart);
@@ -94,8 +99,19 @@ gltfLoader.load(
 gltfLoader.load("./models/grass.glb", function (gltf) {
   const grassMesh = gltf.scene;
   grassMesh.scale.set(0.1, 0.1, 0.1);
+
+  // Traverse through the mesh to apply the green color to all materials
+  grassMesh.traverse((child) => {
+    if (child.isMesh) {
+      child.material = new THREE.MeshLambertMaterial({ color: 0x648a5e }); // Set green color
+    }
+  });
+
   scene.add(grassMesh);
-}, undefined, function (error) { console.error(error); });
+}, undefined, function (error) {
+  console.error(error);
+});
+
 
 gltfLoader.load("./models/justin.glb", function (gltf) {
   const justinMesh = gltf.scene;
@@ -147,11 +163,11 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Shagana Muttiah", 7, "0XFF00FF", 1);
-createText("- Architect from PUC", 5, "0XFF0000");
-createText("- Research team lead at CIMS", 4, "0XFF0000");
-createText("- PhD candidate at ASAU", 3, "0XFF0000");
-createText("- Amateur programmer", 2, "0XFF0000");
+createText("Shagana Muttiah", 7, 0x0000FF, 1);
+createText("- Student at Carleton U", 5, 0x0000FF);
+createText("- Artist", 4, 0x0000FF);
+createText("- Urban Design Graduate", 3, 0x0000FF);
+createText("- Figure Skater", 2, 0x0000FF);
 
 camera.position.set(6, 9, 25);
 scene.position.set(-5, -3, 5);
@@ -160,10 +176,10 @@ const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
 const lightColor = 0xffffff;
-const ambientLight = new THREE.AmbientLight(lightColor, 0.2);
+const ambientLight = new THREE.AmbientLight(lightColor, 0.3);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(lightColor, 1);
+const directionalLight = new THREE.DirectionalLight(lightColor, 0.8);
 directionalLight.position.set(5, 10, 5);
 directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
@@ -174,13 +190,13 @@ function animate() {
 
  
 
-  yellowHeart.rotation.x += 0.01;
+  yellowHeart.rotation.x += 0.0;
   yellowHeart.rotation.y += 0.01;
-  blueHeart.rotation.x += 0.02;
+  blueHeart.rotation.x += 0.0;
   blueHeart.rotation.y -= 0.01;
-  redHeart.rotation.x -= 0.01;
-  redHeart.rotation.y -= 0.02;
-  greenHeart.rotation.x += 0.02;
+  redHeart.rotation.x -= 0.0;
+  redHeart.rotation.y -= 0.01;
+  greenHeart.rotation.x += 0.0;
   greenHeart.rotation.y -= 0.01;
 
   renderer.render(scene, camera);
@@ -195,3 +211,30 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
 });
+
+const gradientMaterial = new THREE.ShaderMaterial({
+  uniforms: {
+    color1: { type: 'vec3', value: new THREE.Color(0xff9a9e) },
+    color2: { type: 'vec3', value: new THREE.Color(0x84c3c3) }
+  },
+  vertexShader: `
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  `,
+  fragmentShader: `
+    uniform vec3 color1;
+    uniform vec3 color2;
+    varying vec2 vUv;
+    void main() {
+      gl_FragColor = vec4(mix(color1, color2, vUv.y), 1.0);
+    }
+  `,
+  side: THREE.BackSide
+});
+
+const gradientBackground = new THREE.Mesh(new THREE.SphereGeometry(1000, 32, 32), gradientMaterial);
+scene.add(gradientBackground);
+
