@@ -40,7 +40,7 @@ function ServerDay(
   );
 
   const isOnline = day.isSame(dayjs('2024-10-30'), 'day');
-  const isFinalAssignmentDay = day.isSame(dayjs('2024-12-16'), 'day');
+  const isFinalAssignmentDay = day.isSame(dayjs('2024-12-13'), 'day');
 
   return (
     <Badge

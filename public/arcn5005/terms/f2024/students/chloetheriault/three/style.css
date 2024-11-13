@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {background-color: rgb(154, 198, 197) ;
+}
+
+img{
+    height: 150px;
+    width: 200px;
+    float:left;
+    margin: 100px ;
+    margin-top: 50px;
+}
+
+#title{
+display: flex;
+    font-family: "Concert One", sans-serif;
+    align-self: left;
+    justify-content: left;
+    margin-top: 2%;
+    margin-left: 25px;
+    color: rgb(255, 255, 255);
+
+}
