@@ -11,6 +11,8 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 
+const aud = document.getElementById('aud');
+
 const cubecount = document.getElementById('cubecount');
 const youcount = document.getElementById('youcount');
 
@@ -22,6 +24,7 @@ document.body.appendChild(renderer.domElement);
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 let material = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
 let cube = new THREE.Mesh(geometry, material);
+cube.position.set(5, 0.5, 0);
 cube.position.set(5, 0.5, 0);
 cube.scale.y = 0.3;
 cube.scale.x = 0.3;
@@ -98,7 +101,7 @@ function createText(text, elevation = 0, textColor = '0x000000', size = 0.5) {
   });
 }
 
-createText('NO INTERNET GAME', -1.5, '0XFF0000', 0.5);
+createText('JUMP!', -1.5, '0XFF0000', 0.5);
 
 let cubevelocity = 0.03;
 let rootrotation = 0;
@@ -139,6 +142,18 @@ function animate() {
   window.addEventListener('click', () => {
     if (root.position.y <= 0) {
       rootvel = 0.03;
+    }
+    if (aud.muted == true) {
+      aud.muted = false;
+    }
+  });
+
+  window.addEventListener('keydown', () => {
+    if (root.position.y <= 0) {
+      rootvel = 0.03;
+    }
+    if (aud.muted == true) {
+      aud.muted = false;
     }
   });
 
