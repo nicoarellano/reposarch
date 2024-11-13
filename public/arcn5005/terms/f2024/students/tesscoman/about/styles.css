@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./rw_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+}
+
+body {
+  background-image: url(../images/background-tc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: rgb(255, 255, 255);
+}
+
+header {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  background-color: #b1c4cd;
+  z-index: 1000;
+  padding-left: 30px;
+  color:rgb(22, 68, 101)
+}
+
+main {
+  margin-top: 25px;
+}
+
+  section {
+    padding-top: 40px;
+    padding-left: 150px;
+    color: rgb(255, 255, 255);
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: left; 
+  
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 60px;
+}
+
+.left-image {
+  margin-right: 0px;
+  }
+
+.buttons {
+  display: flex;
+  flex-direction: column; 
+}
+
+button {
+  --color: rgb(22, 68, 101);
+  font-family: inherit;
+  display: inline-block;
+  width: 200px;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+}
+
+button:hover {
+  color: white;
+}
+
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.photo-gallery {
+  display:flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.photo-gallery figure {
+  margin: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.photo-gallery img {
+  width: 180px;
+  height: 180px;
+  opacity: 0.5;
+}
+
+.photo-gallery figcaption {
+  display: none; /* Make sure this is hidden by default */
+  font-size: 14px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0; /* Adjust position as needed */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: for better visibility */
+}
+
+.photo-gallery figure:hover figcaption {
+  display: block; /* Show caption on hover */
+}
+
+.photo-gallery img:hover {
+  opacity: 1;
+}
