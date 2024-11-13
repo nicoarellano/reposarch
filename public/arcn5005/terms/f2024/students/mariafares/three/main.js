@@ -57,7 +57,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  './three/modes/maria.gltf',
+  './models/maria.gltf',
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 300;
