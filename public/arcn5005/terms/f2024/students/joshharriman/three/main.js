@@ -49,7 +49,7 @@ greenCube.position.z = 5;
 
 scene.add(yellowCube);
 scene.add(blueCube);
-// scene.add(redCube);
+scene.add(redCube);
 scene.add(greenCube);
 
 const gltfLoader = new THREE.GLTFLoader();
@@ -57,7 +57,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "./models/scene4.glb",
+  "./models/scene5.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 5;
