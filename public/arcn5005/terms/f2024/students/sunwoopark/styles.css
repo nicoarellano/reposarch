@@ -48,19 +48,19 @@ body::before {
   text-align: right;
   box-sizing: border-box;
   position: absolute;
-}
+  }
 
 h1 {
-  color: rgb(21, 73, 128);
-  font-size: 50px;
-  text-align: right;
-  width: 100%;
-  position: relative;
-  margin-bottom: 2px;
-  margin-left: 600px;
-  margin-top: -330px;
-  top: 0;
-}
+    color: rgb(21, 73, 128);
+    font-size: 50px;
+    text-align: right;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2px;
+    margin-left: 600px;
+    margin-top: -330px;
+    top: 0;
+  }
 
 h2 {
   color: rgb(255, 255, 255);
@@ -74,11 +74,11 @@ h2 {
 }
 
 .rounded-box {
-  background-color: rgb(255, 255, 255, 0.5);
-  border-radius: 20px;
-  padding: 7px;
-  width: 260px;
-  text-align: left;
+  background-color: rgb(255, 255, 255, 0.5); 
+  border-radius: 20px; 
+  padding: 7px;       
+  width: 260px;        
+  text-align:left; 
   position: relative;
   margin-left: 550px;
   margin-top: -20px;
@@ -108,8 +108,8 @@ ul {
   border: 2px solid rgb(13, 53, 128);
   border-radius: 50%;
   position: absolute;
-  left: 930px;
-  top: -320px;
+  left:930px;
+  top:-320px;
 }
 
 h3 {
@@ -146,7 +146,7 @@ button {
   overflow: visible;
   height: auto;
   line-height: 200%;
-  margin-left: 90px;
+  margin-left:90px;
   margin-top: -0px;
   left: -1040px;
   top: -130px;

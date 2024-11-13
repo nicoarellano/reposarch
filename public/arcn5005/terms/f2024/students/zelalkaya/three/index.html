@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>zelalkaya three page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<html>
+<head>
+    <title>Zelal's assignment 2</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden;
+        }
+        canvas { 
+            display: block; 
+        }
+        #error-message {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: red;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="error-message"></div>
+    <script type="importmap">
+        
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.159.0/examples/jsm/",
+                "three/": "https://unpkg.com/three@0.159.0/"
+            }
+        }
+    </script>
+    <script type="module" src="./main.js"></script>
+</body>
 </html>
