@@ -57,7 +57,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "./models/justin.glb",
+  "./three/modes/maria.gltf",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 300;
@@ -102,11 +102,12 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Nicolas Arellano", 5, "0XFF00FF");
-createText("- Architect from PUC", 3, "0XFF0000");
-createText("- Research team lead at CIMS", 2, "0XFF0000");
-createText("- PhD candidate at ASAU", 1, "0XFF0000");
-createText("- Amateur programmer", 0, "0XFF0000");
+createText("SUSPECT: MARIA FARES", 5, "0XFF00FF");
+createText("5'2, brown eyes, green shirt", 3, "0XFF0000");
+createText("loves waffles", 2, "0XFF0000");
+createText("Master of Architecutre Student", 1, "0XFF0000");
+createText("favourite colour: red", 0, "0XFF0000");
+createText("Wanted for stealing chocolate", -1, "0XFF0000");
 
 camera.position.z = 13;
 camera.position.x = 5;
