@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 interface Props {
   searchParams: {
@@ -6,27 +6,28 @@ interface Props {
   };
 }
 
-export default function CourseDescription({ searchParams }: Props) {
+export default function Abstract({ searchParams }: Props) {
   const { mode } = searchParams;
+
   return (
     <section className="flex-col flex justify-center items-center w-full h-full">
       <section
         className={`flex flex-col  w-2/3 max-h-[500px] overflow-y-scroll m-6 p-12 bg-opacity-70 ${
-          mode === "dark" ? "bg-black" : "bg-white"
+          mode === 'dark' ? 'bg-black' : 'bg-white'
         } items-baseline text-justify`}
       >
-        {" "}
+        {' '}
         <h2>
           Why and how should architects de-blackbox their tools of digital
           architectural representation
         </h2>
         <span className="br-md" />
-        <h3>(CAD and BIM software and closed file formats)</h3>
+        <h3>(CAD, BIM, and GIS software and closed file formats)</h3>
         <span className="br-lg" />
         <p className="text-lg ">
           My research talks about
           <strong>
-            {" "}
+            {' '}
             the use of computer coding in the field of architectural
             representation
           </strong>
@@ -41,46 +42,46 @@ export default function CourseDescription({ searchParams }: Props) {
           The research recognizes actors, processes and milestones that have led
           architects into the scenario that we are in today where a handful of
           software vendors control the majority of the tools that architects use
-          to design, build and manage buildings. Monopolistic practices such as{" "}
+          to design, build and manage buildings. Monopolistic practices such as{' '}
           <i
             className="cursor-pointer"
             title="The cost of switching to a different vendor (training, software, hardware, file formats) is so high that the user is stuck with the original vendor."
           >
             vendor-lock-in
-          </i>{" "}
-          have building professionals dependant on opaque proprietary software.{" "}
+          </i>{' '}
+          have building professionals dependant on opaque proprietary software.{' '}
           <span className="br-md" />
           Software are sets of programs that have a specific function.
           Originally, back in the 50s, software were open systems written in
           human readable programming language that could be studied and modified
           by their users, however, software vendors created methods to prevent
           the free distribution of their products. The term open-software was
-          pioneered first by the{" "}
+          pioneered first by the{' '}
           <Link
             className="italic"
             href="https://www.fsf.org/"
             title="The Free Software Foundation is a non-profit organization founded by Richard Stallman on October 4, 1985, to support the free software movement, with the organization's preference for software being distributed under copyleft terms, such as with its own GNU General Public License."
           >
-            Free Software Foundation (1985){" "}
+            Free Software Foundation (1985){' '}
           </Link>
-          back in 1985 and popularized by the{" "}
+          back in 1985 and popularized by the{' '}
           <Link
             className="italic"
             href="https://opensource.org/"
             title="The Open Source Initiative (OSI) is a non-profit corporation with global scope formed to educate about and advocate for the benefits of open source and to build bridges among different constituencies in the open source community."
           >
             Open Source Initiative
-          </Link>{" "}
-          (1998) to regain the freedom for the user and software respectively.{" "}
+          </Link>{' '}
+          (1998) to regain the freedom for the user and software respectively.{' '}
           <span className="br-md" />
-          Many industries, such a s GIS, IT, web and game developers, visual and
+          Many industries, such as GIS, IT, web and game developers, visual and
           media artist, media, entertainment, among others, have embraced free
           and open-source software in their workflows. With them, professionals
           can be as competitive as the ones utilizing proprietary software.
           However, architects are behind. The bast majority of the practice is
           done through proprietary software, which hinders collaboration,
           innovation, and interoperability. Because of these practices, the
-          digital architectural practice has become a{" "}
+          digital architectural practice has become a{' '}
           <Link
             className="italic font-bold"
             href="https://en.wikipedia.org/wiki/Vendor_lock-in"
@@ -96,7 +97,7 @@ export default function CourseDescription({ searchParams }: Props) {
           been used since early 1940s. It has its origins in electronic circuits
           to describe a system that can be understood only in terms of its
           inputs and outputs, but which process is not accessible or even
-          visible to users. To <strong className="italic">de-blackbox</strong>{" "}
+          visible to users. To <strong className="italic">de-blackbox</strong>{' '}
           is to understand the process, parts, and connection of the system. The
           historian Antoine Picon states that
           <i
@@ -106,13 +107,13 @@ export default function CourseDescription({ searchParams }: Props) {
             Foreword by Antoine Picon: Algorithmic Architecture or the Computer
             as a Double?"
           >
-            {" "}
+            {' '}
             “it has become unavoidable to enter into the black box of
             programming in order to make a truly creative use of the computer.”
           </i>
           <sup>1</sup> <span className="br-md" />
           There are several digital processes of architectural representation,
-          one of the most popular today is{" "}
+          one of the most popular today is{' '}
           <Link
             className="italic font-bold"
             href="https://en.wikipedia.org/wiki/Building_information_modeling"
@@ -126,7 +127,7 @@ export default function CourseDescription({ searchParams }: Props) {
           limitations.
           <span className="br-md" />
           Chuck Eastman, one of the fathers of BIM explains in his BIM Handbook
-          that{" "}
+          that{' '}
           <i
             className="cursor-pointer"
             title="Chuck Eastman et al., BIM Handbook: A Guide to Building
@@ -158,7 +159,7 @@ export default function CourseDescription({ searchParams }: Props) {
           This research explores both obstacles—
           <strong>digital oblivion</strong> and <strong>black-boxes</strong>
           —that architects must overcome in order to benefit from a fruitful
-          relationship between programming and architecture. .{" "}
+          relationship between programming and architecture. .{' '}
           <span className="br-md" />
           Coding has the potential to further expand the current limits of our
           imagination. Computers are a tremendous contribution to our
@@ -166,19 +167,19 @@ export default function CourseDescription({ searchParams }: Props) {
           research that includes human input with computer logic and processing
           power to arrive at collaborative solutions. <span className="br-md" />
           In order to overcame these obstacles the epistemic object proposes 4
-          actions:{" "}
+          actions:{' '}
           <Link className="italic font-bold" href="/deblackboxing/learn">
             1) Learn
           </Link>
-          ,{" "}
+          ,{' '}
           <Link className="italic font-bold" href="/deblackboxing/educate">
             2) Educate
           </Link>
-          ,{" "}
+          ,{' '}
           <Link className="italic font-bold" href="/deblackboxing/engage">
             3) Engage
           </Link>
-          ,{" "}
+          ,{' '}
           <Link className="italic font-bold" href="/deblackboxing/build">
             4) Build
           </Link>

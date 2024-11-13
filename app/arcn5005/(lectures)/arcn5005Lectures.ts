@@ -296,19 +296,29 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/BJ5hcpEoMpY?si=FLqUkvV_bBb0O7Qk',
+        title: 'Introduction to JavaScript and Three.js - Fall 2024 - Part2',
+        date: dayjs('2024/10/30'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/9RQhbmcbAfk?si=aZXDQhDv3dQcWJyO',
+        title: 'Introduction to JavaScript - Fall 2024 - Part1',
+        date: dayjs('2024/10/30'),
+      },
+      {
         url: 'https://www.youtube.com/embed/fi_36W2oZfA?si=02doFd78VBxNBQba',
-        title: 'Assignment 2',
+        title: 'Assignment 2 explained - Fall 2023',
         date: dayjs('2023/11/02'),
       },
       {
         url: 'https://www.youtube.com/embed/W4OTcU1AB-A?si=oSW7CwZueWjG0rUf',
-        title: 'Introduction to JavaScript',
+        title: 'Introduction to JavaScript - Fall 2023',
         date: dayjs('2023/11/02'),
       },
       {
         url: 'https://www.youtube.com/embed/3wsFKrYhAHc?si=3KKtMe2XpZpR6eix',
         title:
-          'Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js',
+          'Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js - Fall 2023',
         date: dayjs('2023/11/02'),
       },
     ],
@@ -328,18 +338,29 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/DvjTZDPMCQM?si=TaxSSg2TXzsgAA6I',
+        title: 'Antonio Gonzales Viegas - That Open Company - Fall 2024',
+        date: dayjs('2024/11/06'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/wz5I8SY5FVc?si=1GIwVV241G1bmLG8',
+        title:
+          'That Open Company use Template to create BIM viewer - Fall 2024',
+        date: dayjs('2024/11/06'),
+      },
+      {
         url: 'https://www.youtube.com/embed/rLE9pdzEBsw?si=3ZuwNi6pz6lcC8Dq',
-        title: 'Antonio Gonzales Viegas - That Open Company',
+        title: 'Antonio Gonzales Viegas - That Open Company - Fall 2023',
         date: dayjs('2023/11/09'),
       },
       {
         url: 'https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4',
-        title: 'Three js - Assignment 2 - 1/2',
+        title: 'Three js - Assignment 2 - 1/2 - Fall 2023',
         date: dayjs('2023/11/09'),
       },
       {
         url: 'https://www.youtube.com/embed/bLUMHQRJJyU?si=EGpp1l5QnUQcQmV3',
-        title: 'Three js - Assignment 2 - 2/2',
+        title: 'Three js - Assignment 2 - 2/2 - Fall 2023',
         date: dayjs('2023/11/09'),
       },
     ],
@@ -354,10 +375,12 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       {
         title:
-          '🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js',
+          '🔴 Assignment 2 review - 3d model using Blender, a photogrammetry software and Three.js',
       },
       { title: 'Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)' },
-      { title: 'Q GIS' },
+      { title: "Canada's Digital Twin" },
+      { title: 'QGIS' },
+      { title: 'CloudCompare' },
       { title: '🖥️ LAB 10: Three js continuation' },
     ],
     recordings: [

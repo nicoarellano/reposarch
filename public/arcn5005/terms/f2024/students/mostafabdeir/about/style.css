@@ -1,23 +1,33 @@
 /* ALL IMAGES/GIFS USED ARE NOT MINE BESIDES THE NAME CARD */
-#fax {
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 25pt;
-  font-weight: bold;
-  -webkit-text-stroke-color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke-width: 1pt;
-  text-shadow: 4px 4px 10px rgb(0, 0, 0);
+
+.audio-player {
   position: absolute;
-  left: 6rem;
-  top: 34rem;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#faxlist1 {
+  width: 18rem;
+  height: 20rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 9rem 9rem;
+  position: absolute;
+  top: 28rem;
+  left: 4rem;
+  background-image: url(faxlist.png);
 }
 
 .Int1 {
-  font-size: 30pt;
+  font-size: 20pt;
+  color: white;
   font-family: 'Courier New', Courier, monospace;
   position: absolute;
-  left: 7rem;
-  top: 29rem;
+  left: 15rem;
+  top: 24rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
 
 }
 
@@ -26,36 +36,30 @@ h1 {color: rgb(0, 0, 0);
     text-align: center;
 };    
 
-#lis {
-    width: fit-content;
+.listcontainer {
+  width: auto;
 }
 
-.list1 {
+#list1 {
+    position: relative;
+    top: 2rem;
     list-style: none;
     padding-left: 0;
-    margin-left: 5vw;
-    margin-right: 5vw;
     width: fit-content;
-    position: absolute;
-    left: 29vw;
-    right: 40vw;
-    top: 22rem;
+    margin: auto;
 }
 
-.but1 {
-    color: 0;
-}
 
 /*first button*/
 /* From Uiverse.io by adamgiebl, Partly tweeked by me */
-.button1 {
+#button1 {
     border: 6px solid rgb(255, 255, 255);
     display: block;
     position: relative;
-    padding: 1em 12em;
+    padding: 1.3em 12rem;
     margin-top: 2rem;
     border-radius: 2rem;
-    font-size: 18px;
+    font-size: 30px;
     background: transparent;
     cursor: pointer;
     user-select: none;
@@ -67,11 +71,11 @@ h1 {color: rgb(0, 0, 0);
     background-image: url("sharinganeyes.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-size: 70%;
-    background-position: 5rem;
+    background-size: 100%;
+    background-position: center;
   }
   
-  .button1 span {
+  #button1 span {
     position: absolute;
     left: 0;
     top: 0;
@@ -81,7 +85,7 @@ h1 {color: rgb(0, 0, 0);
     z-index: -1;
   }
   
-  .button1 span::before {
+  #button1 span::before {
     display: block;
     position: absolute;
     width: 8%;
@@ -93,35 +97,35 @@ h1 {color: rgb(0, 0, 0);
     transition: all 0.3s;
   }
   
-  .button1:hover span::before {
+  #button1:hover span::before {
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 100%;
     background: rgba(112, 0, 0, 0.651);
     z-index: -1;
   }
   
-  .button1:hover {
+  #button1:hover {
     color: rgb(255, 255, 255);
     background-image: url("sharinganeyes.gif");
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: 5rem;
+    background-size: 100%;
+    background-position: center;
   }
   
-  .button1:active span::before {
+  #button1:active span::before {
     background: #c2ffd6;
   }
 
 /*Second Button*/
-.button2 {
+#button2 {
     border: 6px solid rgb(255, 255, 255);
     display: block;
     position: relative;
-    padding: 1em 12em;
+    padding: 1.3em 12rem;
     margin-top: 2rem;
     border-radius: 2rem;
-    font-size: 18px;
+    font-size: 30px;
     background: transparent;
     cursor: pointer;
     user-select: none;
@@ -135,7 +139,7 @@ h1 {color: rgb(0, 0, 0);
     background-repeat: no-repeat;
   }
   
-  .button2 span {
+  #button2 span {
     position: absolute;
     left: 0;
     top: 0;
@@ -145,7 +149,7 @@ h1 {color: rgb(0, 0, 0);
     z-index: -1;
   }
   
-  .button2 span::before {
+  #button2 span::before {
     content: "";
     display: block;
     position: absolute;
@@ -158,33 +162,33 @@ h1 {color: rgb(0, 0, 0);
     transition: all 0.3s;
   }
   
-  .button2:hover span::before {
+  #button2:hover span::before {
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 100%;
     background: rgba(112, 0, 0, 0.651);
     z-index: -1;
   }
   
-  .button2:hover {
+  #button2:hover {
     color: rgb(255, 255, 255);
     background-image: url("zorowalk.gif");
     background-size: contain;
     background-repeat: no-repeat;
   }
   
-  .button2:active span::before {
+  #button2:active span::before {
     background: #c2ffd6;
   }
 
 /*Third Button*/
-.button3 {
+#button3 {
     border: 6px solid rgb(255, 255, 255);
     display: block;
     position: relative;
-    padding: 1em 12em;
+    padding: 1.3em 13.1rem;
     margin-top: 2rem;
     border-radius: 2rem;
-    font-size: 18px;
+    font-size: 30px;
     background: transparent;
     cursor: pointer;
     user-select: none;
@@ -199,7 +203,7 @@ h1 {color: rgb(0, 0, 0);
     background-position: right;
   }
   
-  .button3 span {
+  #button3 span {
     position: absolute;
     left: 0;
     top: 0;
@@ -209,7 +213,7 @@ h1 {color: rgb(0, 0, 0);
     z-index: -1;
   }
   
-  .button3 span::before {
+  #button3 span::before {
     content: "";
     display: block;
     position: absolute;
@@ -222,14 +226,14 @@ h1 {color: rgb(0, 0, 0);
     transition: all 0.3s;
   }
   
-  .button3:hover span::before {
+  #button3:hover span::before {
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 100%;
     background: rgba(112, 0, 0, 0.651);
     z-index: -1;
   }
   
-  .button3:hover {
+  #button3:hover {
     color: rgb(255, 255, 255);
     background-image: url("SonicRunCrop.gif");
     background-size: contain;
@@ -239,19 +243,19 @@ h1 {color: rgb(0, 0, 0);
     
   }
   
-  .button3:active span::before {
+  #button3:active span::before {
     background: #c2ffd6;
   }
 
 /*4th Button*/
-.button4 {
+#button4 {
     border: 6px solid rgb(255, 255, 255);
     display: block;
     position: relative;
-    padding: 1em 12em;
+    padding: 1.3em 12rem;
     margin-top: 2rem;
     border-radius: 2rem;
-    font-size: 18px;
+    font-size: 30px;
     background: transparent;
     cursor: pointer;
     user-select: none;
@@ -261,14 +265,13 @@ h1 {color: rgb(0, 0, 0);
     -webkit-text-stroke-width: 1pt;
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
     background-image: url("gokuvsvegeta.png");
-    background-size: cover;
-    background-position-y: center;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: rem;
+    background-position: left;
+    background-size: 55%;
   }
   
-  .button4 span {
+  #button4 span {
     position: absolute;
     left: 0;
     top: 0;
@@ -278,7 +281,7 @@ h1 {color: rgb(0, 0, 0);
     z-index: -1;
   }
   
-  .button4 span::before {
+  #button4 span::before {
     content: "";
     display: block;
     position: absolute;
@@ -291,59 +294,55 @@ h1 {color: rgb(0, 0, 0);
     transition: all 0.3s;
   }
   
-  .button4:hover span::before {
+  #button4:hover span::before {
     transform: translate(-50%, -50%) rotate(-90deg);
     width: 100%;
     background: rgba(112, 0, 0, 0.651);
     z-index: -1;
   }
   
-  .button4:hover {
+  #button4:hover {
     color: rgb(255, 255, 255);
     background-image: url("gokuvsvegeta.gif");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: rem;
+    background-position: left;
+    background-size: 55%;
   }
   
-  .button1:active span::before {
-    background: #c2ffd6;
-  }
-
-
 body {
     background-image: url("sunsetwizz.gif");
     background-size: 100vw;
 }
 
-#title1 {
-    position: absolute;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    left: 40vw;
-    
+#titlecard {
+  background-image: url(backdroptitle2.gif);
+  width: 50vw;
+  height: 16vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-p {color: rgb(255, 255, 255);
+.intro {
+    margin: auto;
+    color: rgb(255, 255, 255);
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    position: relative;
+    top: 1rem;
     font-size: 15pt;
     font-weight: bold;
     -webkit-text-stroke-color: rgba(0, 0, 0, 0);
     -webkit-text-stroke-width: 1pt;
     text-shadow: 3px 3px 5px rgb(0, 0, 0);
-}
-
-.firstsen {
-  position: absolute;
-  top: 16rem;
-  left: 4rem;
-}
-
-.secondsen {
-  position: absolute;
-  top: 18rem;
+    background-color: rgba(0, 0, 0, 0.26); 
+    width: fit-content;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
 }
 
 /*art page link button*/
@@ -351,14 +350,15 @@ p {color: rgb(255, 255, 255);
 .artlink {
   padding: 2em 3em;
   position: absolute;
-  right: 10rem;
-  top: 25rem;
+  right: 5rem;
+  top: 27rem;
   border: 4px solid #fa725a;
   transition: ease-in-out 0.3s;
   background-color: transparent;
   color: #000000;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
  }
  
  .artlink:hover {
@@ -372,14 +372,15 @@ p {color: rgb(255, 255, 255);
 .designlink {
   padding: 2em 3em;
   position: absolute;
-  left: 10rem;
-  top: 25rem;
+  right: 22rem;
+  top: 27rem;
   border: 4px solid #fa725a;
   transition: ease-in-out 0.3s;
   background-color: transparent;
   color: #000000;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
  }
  
  .designlink:hover {
@@ -389,14 +390,14 @@ p {color: rgb(255, 255, 255);
  }
 
 .art1 {
-  width: 6rem;
-  height: 6rem;
+  width: 16rem;
+  height: 16rem;
   background-size: contain;
   background-repeat: no-repeat;
   padding: 5em 10em;
   position: absolute;
-  top: 32rem;
-  right: 1px;
+  top: 36rem;
+  right: 2rem;
   opacity: 0;
   transition: 0.8s;
 }
@@ -407,6 +408,17 @@ p {color: rgb(255, 255, 255);
   background-repeat: no-repeat;
   padding: 5em 10em;  
   opacity: 1;
+}
+
+#eyes {
+  background-image: url(eyeslookin.png);
+  width: 5rem;
+  height: 5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 47rem;
+  right: 18rem;
 }
 
 .pfp1 {
