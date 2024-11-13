@@ -4,202 +4,66 @@ body {
   background-position:center;
 }
 
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgba(43, 81, 36, 0.364);
+  border: 4px solid rgb(0, 6, 1);
+  color: rgb(24, 18, 93);
+  text-align: center;
+  font-size: 50;
+  border-radius: 50%;
+}
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgba(43, 81, 36, 0.364);
+  border: 4px solid rgb(0, 6, 1);
+  color: rgb(24, 18, 93);
+  text-align: center;
+  font-size: 20;
+  border-radius: 50%;
+}
+
+
+
 img {
-  border: 8px solid rgb(192, 143, 52);
+  border: 8px solid rgb(89, 74, 46);
   border-radius: 25%;
 }
 
 button {
-  /* Variables */
-  --button_radius: 0.75em;
-  --button_color: #ffffff;
-  --button_outline_color: #000000;
-  font-size: 17px;
-  font-weight: bold;
-  border: none;
-  border-radius: var(--button_radius);
-  background: var(--button_outline_color);
-}
-
-.button_top {
-  display: block;
-  box-sizing: border-box;
-  border: 2px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.75em 1.5em;
-  background: var(--button_color);
-  color: var(--button_outline_color);
-  transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
-}
-
-button:hover .button_top {
-  /* Pull the button upwards when hovered */
-  transform: translateY(-0.33em);
-}
-
-button:active .button_top {
-  /* Push the button downwards when pressed */
-  transform: translateY(0);
-}
-
-
-#title {
-  color: black;
-}
-
-.subtitle {
-  border: 3px solid white;
-  margin: 20px;
-  padding-right: 20px;
-}
-
-.dropbtn {
-  background-color: wheat;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
   position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: transparent;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.5rem;
+  color: #e0ffff;
+  font-weight: 500;
+  cursor: pointer;
   z-index: 1;
 }
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 12px;
-  text-decoration: none;
-  display: block;
+button:active{
+  transform: scale(0.95);
 }
-
-.dropdown-content a:hover {
-  background-color: #ddd;
+button::before{
+  content: '';
+  position: absolute;
+  inset: -3px 50px;
+  background: #42455a;
+  transition: inset 350ms ease;
+  z-index: -2;
 }
-
-.dropdown:hover .dropdown-content {
-  display: block;
+button:hover::before{
+  inset: -20px 0px;
+  background: darkgreen;
 }
-
-.dropdown:hover .dropbtn {
-  background-color: rgb(205, 145, 34);
+button::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 10px;
+  background: #22232e;
+  z-index: -1;
 }
-
-.rating {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 0.3rem;
-  --stroke: #666;
-  --fill: #ffc73a;
-}
-
-.rating input {
-  appearance: unset;
-}
-
-.rating label {
-  cursor: pointer;
-}
-
-.rating svg {
-  width: 2rem;
-  height: 2rem;
-  overflow: visible;
-  fill: transparent;
-  stroke: var(--stroke);
-  stroke-linejoin: bevel;
-  stroke-dasharray: 12;
-  animation: idle 4s linear infinite;
-  transition: stroke 0.2s, fill 0.5s;
-}
-
-@keyframes idle {
-  from {
-    stroke-dashoffset: 24;
-  }
-}
-
-.rating label:hover svg {
-  stroke: var(--fill);
-}
-
-.rating input:checked~label svg {
-  transition: 0s;
-  animation: idle 4s linear infinite, yippee 0.75s backwards;
-  fill: var(--fill);
-  stroke: var(--fill);
-  stroke-opacity: 0;
-  stroke-dasharray: 0;
-  stroke-linejoin: miter;
-  stroke-width: 8px;
-}
-
-@keyframes yippee {
-  0% {
-    transform: scale(1);
-    fill: var(--fill);
-    fill-opacity: 0;
-    stroke-opacity: 1;
-    stroke: var(--stroke);
-    stroke-dasharray: 10;
-    stroke-width: 1px;
-    stroke-linejoin: bevel;
-  }
-
-  30% {
-    transform: scale(0);
-    fill: var(--fill);
-    fill-opacity: 0;
-    stroke-opacity: 1;
-    stroke: var(--stroke);
-    stroke-dasharray: 10;
-    stroke-width: 1px;
-    stroke-linejoin: bevel;
-  }
-
-  30.1% {
-    stroke: var(--fill);
-    stroke-dasharray: 0;
-    stroke-linejoin: miter;
-    stroke-width: 8px;
-  }
-
-  60% {
-    transform: scale(1.2);
-    fill: var(--fill);
-  }
-}
-
-.arial {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.georgia {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-header {
-  background-color: wheat;
-  border: 3px solid rgb(192, 143, 52);
-  color: black;
-  text-align: center;
-}
-
-
-
-img {
-  border: 8px solid rgb(192, 143, 52);
-  border-radius: 25%;
-}
-
-
