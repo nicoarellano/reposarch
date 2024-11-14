@@ -21,11 +21,7 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-//Creates grids and axes in the scene
-
-
-
-
+//everytime I try deleting anything cube related the entire scene disapears//
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
@@ -50,6 +46,10 @@ gltfLoader.load(
     mesh.scale.x = 100;
     mesh.scale.y = 100;
     mesh.scale.z = 100;
+    mesh.position.y = 2.5;
+    mesh.position.x = -3;
+    mesh.position.z = 2;
+   
   
 
 
@@ -68,8 +68,7 @@ gltfLoader.load(
     mesh.scale.x = 5;
     mesh.scale.y = 5;
     mesh.scale.z = 5;
-  
-
+   
 
     scene.add(mesh);
   },
@@ -97,7 +96,7 @@ function createText(text, elevation = 1, textColor = '0x000000', size = 0.5) {
     const textMaterial = new THREE.MeshLambertMaterial({ color: color });
     const text = new THREE.Mesh(textGeo, textMaterial);
 
-    text.position.x = 2;
+    text.position.x = 4;
     text.position.y = elevation;
 
     scene.add(text);
@@ -105,9 +104,9 @@ function createText(text, elevation = 1, textColor = '0x000000', size = 0.5) {
 }
 
 createText('SUSPECT: MARIA FARES', 6, '0XFF00FF');
-createText("5'2, brown eyes, green ", 5, '0XFF0000');
-createText('loves waffles', 4, '0XFF0000');
-createText('Master of Architecture Student', 3, '0XFF0000');
+createText("5'2, brown eyes, green shirt, jeans ", 5, '0XFF0000');
+createText('Master of Architecture Student', 4, '0XFF0000');
+createText('loves waffles', 3, '0XFF0000');
 createText('favourite colour: red', 2, '0XFF0000');
 
 
