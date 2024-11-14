@@ -355,7 +355,7 @@ createText("     (click + drag sky).", 5, 0x6d4194, 1, 0, 0, 0); // No rotation
 
 
 camera.position.set(6, 9, 25);
-scene.position.set(-5, -3, 5);
+scene.position.set(0, -3, 3);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;

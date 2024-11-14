@@ -419,7 +419,7 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
-        url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2704',
+        url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709',
         title: 'Assignment 3 - Fall 2023',
         date: dayjs('2023/11/23'),
       },
