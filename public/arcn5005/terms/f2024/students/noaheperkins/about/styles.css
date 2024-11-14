@@ -1,0 +1,350 @@
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1px;
+  } 
+
+  html, body {
+    margin: 0;
+    height: 100%;
+    }
+
+  main {
+    margin-top: 1px; /* add some margin to the top of the main content */
+  }
+
+* {
+    padding: 1px;
+    box-sizing: border-box;
+
+    a:link {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+      }
+      
+      a:visited {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      
+      a:active {
+        color: rgb(255, 255, 255);
+        background-color: transparent;
+        text-decoration: underline;
+
+}
+
+body {
+    transform: scale(0.9);
+    transform-origin: 0 0;
+    // add prefixed versions too.
+ }
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+ol,
+ul {
+    list-style-type: disc;
+    margin-left: 2.5rem;
+    font-size: large;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 80px;
+    background-color: #28282857;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .album-cover {
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  .player-controls {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .song-info {
+    margin-bottom: 4px;
+  }
+  
+  .song-title {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .artist {
+    font-size: 12px;
+    color: #b3b3b3;
+    margin: 0;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #4f4f4f;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    width: 50%;
+    height: 100%;
+    background-color: #1db954;
+    transform-origin: left;
+    animation: progress-animation 10s linear infinite;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .play-btn,
+  .pause-btn {
+    font-size: 16px;
+    color: #fff;
+    margin-right: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .play-btn:hover,
+  .pause-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  @keyframes progress-animation {
+    0% {
+      transform: scaleX(0);
+    }
+  
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    text-shadow: 2px 2px #0000008a;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+  }
+
+  
+  .about {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+img {
+    border-radius: 50%;
+  }
+
+button {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 1rem;
+    color: #fff;
+    box-sizing: content-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 10px;
+    min-height: 1em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    font-family:Arial, Helvetica, sans-serif
+
+;
+}
+
+button:disabled {
+    pointer-events: none;
+}
+
+button:hover {
+    color: #ff3b3b;
+    background-color: #1a1a1a31;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+
+
+    #bg-video {
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: fill;
+
+
+
+    <style>
+.scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ background: yellow;
+ color: orange;
+ border: 1px solid orange;
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+
+a:link {
+    color: rgb(255, 159, 159);
+    background-color: transparent;
+    text-decoration: none;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  a:visited {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  a:active {
+    color: rgb(255, 145, 145);
+    background-color: transparent;
+    text-decoration: underline;
+    text-shadow: 2px 2px #000000;
+  }
+  
+
+
+</style>
+
+<div class="scroll-left">
+<p>Scroll left... </p>
+</div>
+
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
