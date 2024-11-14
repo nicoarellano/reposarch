@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(170, 204, 124);
+  }
+  
+  #title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #title h1 {
+    font-size: 2em;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #225101;
+    margin: 5px;
+  }
+  
+  canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .button-container {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+  }
+  
+  .button-container a {
+    text-decoration: none;
+  }
+  
+  .button-container button {
+    padding: 0.8em 1.7em;
+    display: block;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: #9fbd7d;
+    color: #ffffff;
+    transition: 0.4s ease-in-out;
+  }
+  
+  .button-container button:hover {
+    background: hwb(95 0% 68%);
+    color: rgb(159, 189, 125);
+    cursor: pointer;
+  }
+  
