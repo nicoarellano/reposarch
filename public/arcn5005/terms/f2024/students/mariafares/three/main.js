@@ -22,13 +22,9 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
 //Creates grids and axes in the scene
-const grid = new THREE.GridHelper(10, 10);
-scene.add(grid);
 
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
+
+
 
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
 
@@ -54,6 +50,24 @@ gltfLoader.load(
     mesh.scale.x = 100;
     mesh.scale.y = 100;
     mesh.scale.z = 100;
+  
+
+
+    scene.add(mesh);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
+
+gltfLoader.load(
+  'waffle.glb',
+  function (gltf) {
+    mesh = gltf.scene;
+    mesh.scale.x = 5;
+    mesh.scale.y = 5;
+    mesh.scale.z = 5;
   
 
 
@@ -91,11 +105,11 @@ function createText(text, elevation = 1, textColor = '0x000000', size = 0.5) {
 }
 
 createText('SUSPECT: MARIA FARES', 6, '0XFF00FF');
-createText("5'2, brown eyes, green shirt", 5, '0XFF0000');
+createText("5'2, brown eyes, green ", 5, '0XFF0000');
 createText('loves waffles', 4, '0XFF0000');
-createText('Master of Architecutre Student', 3, '0XFF0000');
+createText('Master of Architecture Student', 3, '0XFF0000');
 createText('favourite colour: red', 2, '0XFF0000');
-createText('Wanted for stealing chocolate', 1, '0XFF0000');
+
 
 camera.position.z = 13;
 camera.position.x = 5;
