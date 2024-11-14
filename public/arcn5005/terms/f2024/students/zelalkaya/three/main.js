@@ -16,9 +16,6 @@ function createEnvironment() {
     });
     const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     scene.add(sphere);
-
-    // Add some atmospheric fog
-    scene.fog = new THREE.FogExp2(0x87ceeb, 0.002);
 }
 
 function setupPostProcessing() {
@@ -37,8 +34,7 @@ function init() {
         camera = new THREE.PerspectiveCamera(
             50,
             window.innerWidth / window.innerHeight,
-            0.1,
-            1000
+            0.1,1000
         );
         camera.position.set(0, 0, 10);
 
