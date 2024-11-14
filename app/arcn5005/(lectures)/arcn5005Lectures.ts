@@ -414,18 +414,24 @@ export const arcn5005Lectures: Lectures = [
       { title: 'Coordination Systems' },
       { title: 'Proprietary web GIS - Cesium and Mapbox' },
       { title: 'Open Source web GIS - Leaflet and Maplibre' },
+      { title: '🗺️ GIS day 🌎' },
       { title: '🖥️ LAB 11: Web based GIS software' },
     ],
     recordings: [
       {
-        url: 'https://www.youtube.com/embed/vSejvs1PBNc?si=qAIK45kWVdSQtW-g',
-        title: 'New calendar and Assignment 2 feedback',
+        url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2704',
+        title: 'Assignment 3 - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m',
-        title: 'Web based mapping and Assignment 3',
+        title: 'Web based mapping  - Fall 2023',
         date: dayjs('2023/11/23'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv',
+        title: 'Maps, GIS and Map renderers - Fall 2023',
+        date: dayjs('2023/09/25'),
       },
     ],
   },
