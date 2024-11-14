@@ -1,4 +1,3 @@
-
 const scene = new THREE.Scene();
 const size = {
   width: window.innerWidth,
@@ -28,28 +27,45 @@ renderer.shadowMap.enabled = true;
 //Creates grids and axes in the scene
 const grid = new THREE.GridHelper(40, 10);
 scene.add(grid);
+
 const axes = new THREE.AxesHelper();
 axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
-yellowCube.position.z = -3;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
-yellowCube.isCube = true;
-scene.add(yellowCube);
-scene.add(blueCube);
-scene.add(redCube);
-scene.add(greenCube);
+
+// Add a Torus Knot to the scene
+const torusKnotGeometry = new THREE.TorusKnotGeometry(10, 3.5, 100, 16); // Customize radius, tube, radial segments, and tubular segments
+const torusmaterial = new THREE.MeshStandardMaterial
+({ color: 0xffffff,        // Base color of the glass
+  metalness: 0,           // No metalness for glass
+  roughness: 0,           // Low roughness for a clear surface
+  transmission: 1,        // Full transmission for clear glass
+  opacity: 0.25,          // Adjust to make it semi-transparent
+  transparent: true,      // Enable transparency
+  reflectivity: 0.9,      // Adjust reflectivity for a glass-like reflection
+  clearcoat: 1,           // Adds a shiny, polished effect on top
+  clearcoatRoughness: 0,  // Smooth clearcoat for clean reflections
+});
+
+const torusKnot = new THREE.Mesh(torusKnotGeometry, torusmaterial);
+torusKnot.position.set(0, 10, -25);
+scene.add(torusKnot);
+
+// Reuse the same torus knot geometry and material, or create new ones if needed
+const torusKnotGeometry2 = torusKnotGeometry;  // Reuse existing geometry
+const torusmaterial2 = torusmaterial;          // Reuse existing material
+const torusKnot2 = new THREE.Mesh(torusKnotGeometry2, torusmaterial2);
+torusKnot2.position.set(-20, 10, -8);  // Adjust x, y, z coordinates as needed
+torusKnot2.scale.set(.5,.5,.5);
+scene.add(torusKnot2);
+
+// Reuse the same torus knot geometry and material, or create new ones if needed
+const torusKnotGeometry3 = torusKnotGeometry;  // Reuse existing geometry
+const torusmaterial3 = torusmaterial;          // Reuse existing material
+const torusKnot3 = new THREE.Mesh(torusKnotGeometry3, torusmaterial2);
+torusKnot3.position.set(20, 10, -8);  // Adjust x, y, z coordinates as needed
+torusKnot3.scale.set(.4,.4,.4);
+scene.add(torusKnot3);
 
 //keyboard interaction - move camera
 window.addEventListener("keydown", (event) => {
@@ -81,13 +97,13 @@ window.addEventListener("keydown", (event) => {
 });
 
 //Camera
-camera.position.z = 50;
-camera.position.x = 10;
-camera.position.y = 7;
+camera.position.z = 25;
+camera.position.x = 5;
+camera.position.y = 3;
 
-scene.position.x = 3;
-scene.position.z = 30;
-scene.position.y = -3;
+scene.position.x = -5;
+scene.position.z = 5;
+scene.position.y = -10;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -186,30 +202,15 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-//Toggle Grid visibility
+// Initially set the grid to be invisible
+grid.visible = false;
+
+// Toggle grid visibility with "G" key
 window.addEventListener("keydown", (event) => {
   if (event.key === "g") {
     grid.visible = !grid.visible;
   }
 });
-
-//Stop and Re-start cube and model rotation
-let cubeRotationPaused = false;
-
-window.addEventListener("keydown", (event) => {
-  if (event.key === "c") {
-    cubeRotationPaused = !cubeRotationPaused;
-
-    // Toggle cube rotation
-    yellowCube.rotation.set(0, 0, 0);
-    blueCube.rotation.set(0, 0, 0);
-    redCube.rotation.set(0, 0, 0);
-    greenCube.rotation.set(0, 0, 0);
-    mesh.rotation.set(0,0,0)
-    mesh2.rotation.set(0,0,0)
-  }
-});
-
 
 // turn on and off light
 let lightsOn = true;
@@ -280,12 +281,12 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
 }
 
 createText("press W S A D Q E to move camera", 9, "0X26465F")
-createText("hold C to pause rotation", 8, "0X26465F")
+createText("left-click to rotate + right-click to shift", 8, "0X26465F")
 createText("press B to change background & T for text color", 7, "0X26465F")
 createText("press G to toggle grid & L for light", 6, "0X26465F")
 createText("Bachelor of Interior Design @ TMU", 4, "0XE74C3C");
-createText("have a dog, kkami <3", 3, "0XE74C3C");
-createText("enjoy vlogging", 2, "0XE74C3C");
+createText("i have a dog, kkami <3", 3, "0XE74C3C");
+createText("i enjoy vlogging", 2, "0XE74C3C");
 createText("Sun-Woo Park", 0, "0XE74C3C", 1.5)
 
 
@@ -314,18 +315,16 @@ directionalLight.shadow.camera.far = 500;
 //add animation
 function animate() {
   requestAnimationFrame(animate);
-  if (mesh) mesh.rotation.y += 0.01;
-  if (mesh2) mesh2.rotation.y -= 0.01;
+  if (mesh) mesh.rotation.y -= 0.01;
+  if (mesh2) mesh2.rotation.y += 0.01;
   if (mesh3) mesh3.rotation.y += 0.01;
   if (mesh4) mesh4.rotation.y += 0.01;
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
-  blueCube.rotation.x += 0.02;
-  blueCube.rotation.y -= 0.01;
-  redCube.rotation.x -= 0.01;
-  redCube.rotation.y -= 0.02;
-  greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
+  torusKnot.rotation.x += 0.01;
+  torusKnot.rotation.y += 0.01;
+  torusKnot2.rotation.x -= 0.01;
+  torusKnot2.rotation.y -= 0.01;
+  torusKnot3.rotation.x -= 0.01;
+  torusKnot3.rotation.y -= 0.01;
   renderer.render(scene, camera);
 }
 animate();
