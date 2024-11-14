@@ -385,8 +385,19 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/G0ZCm_6kYx8?si=8k6WMx86nWd4-Pce',
+        title:
+          "Ken Percy - Open-source GIS and Canada's Digital Twin - Fall 2024",
+        date: dayjs('2023/11/16'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/kTHiMCSAzr8?si=1Z_9jatCa6AR4zxx',
+        title: 'Three.js - Committing to Github and Assignment 2 - Fall 2024',
+        date: dayjs('2023/11/16'),
+      },
+      {
         url: 'https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd',
-        title: 'Ken Percy - Open-source GIS',
+        title: 'Ken Percy - Open-source GIS - Fall 2023',
         date: dayjs('2023/11/16'),
       },
     ],

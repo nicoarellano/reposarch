@@ -30,61 +30,14 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd"
-        title="Ken Percy - Open-source GIS"
-        caption={'Ken Percy - Open-source GIS'}
+        src="https://www.youtube.com/embed/G0ZCm_6kYx8?si=8k6WMx86nWd4-Pce"
+        title="Ken Percy - Open-source GIS and Canada's Digital Twin - Fall 2024"
+        caption={
+          "Ken Percy - Open-source GIS and Canada's Digital Twin - Fall 2024"
+        }
       />
     ),
   },
-
-  {
-    element: (
-      <>
-        <Image
-          src="/images/maps/pc1.png"
-          alt="class point cloud"
-          caption="Class point cloud 1"
-        />
-      </>
-    ),
-  },
-
-  {
-    element: (
-      <>
-        <Image
-          src="/images/maps/pc2.png"
-          alt="class point cloud"
-          caption="Class point cloud 2"
-        />
-      </>
-    ),
-  },
-
-  {
-    element: (
-      <>
-        <Image
-          src="/images/maps/pc3.png"
-          alt="class point cloud"
-          caption="Class point cloud 3"
-        />
-      </>
-    ),
-  },
-
-  {
-    element: (
-      <>
-        <Image
-          src="/images/maps/pc4.png"
-          alt="class point cloud"
-          caption="Class point cloud 4"
-        />
-      </>
-    ),
-  },
-
   {
     element: (
       <>
