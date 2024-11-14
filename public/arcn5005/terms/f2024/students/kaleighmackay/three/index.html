@@ -9,25 +9,30 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Kaleigh - THREE</title>
   </head>
+  <header>
+  </header>
   <body>
-    <html>
-      <header>
-        <ul>
-          <img src="../avatar.jpg" alt="Kaleigh Mackay" height="500" />
-          <p>My Assignments:</p>
-          <p>
-            <a href="../about/index.html"><button class="button-2 button-2">ABOUT</button></a>
-            <a href="../three/index.html"><button class="button-2 button-2">THREE</button></a>
-            <a href="../map/index.html"><button class="button-2 button-2">MAP</button></a>
-            <a href="../final/index.html"><button class="button-2 button-2">FINAL</button></a>
-            <link rel="stylesheet" href="script.js"/>
-          </p>
-        </ul>
-      </header>
-      <head lang="en"> 
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-      </head>
+    <div class="leftPanel" style="position:absolute;left:0;width:28%;height:100%;background-color: rgb(248,248,248);justify-content: space-between;">
+      <ul>
+        <img src="../avatar.jpg" alt="Kaleigh Mackay" height="500" />
+        <h2>My Assignments:</h2>
+        <p>
+          <a href="../about/index.html"><button class="button-2 button-2">ABOUT</button></a>
+          <a href="../three/index.html"><button class="button-2 button-2">THREE</button></a>
+          <a href="../map/index.html"><button class="button-2 button-2">MAP</button></a>
+          <a href="../final/index.html"><button class="button-2 button-2">FINAL</button></a>
+        </p>
+      </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+    <script src="three.r134.min.js"></script>
+
+    <script type="module" src="./main.js"></script>
+    <canvas id="three-canvas-f2024"></canvas>
+  </body>
 </html>
