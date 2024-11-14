@@ -42,27 +42,20 @@ const blueCube = new THREE.Mesh(geometry, blueMaterial);
 const redCube = new THREE.Mesh(geometry, redMaterial);
 const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
-yellowCube.position.z = -3;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
-
-scene.add(yellowCube);
-scene.add(blueCube);
-// scene.add(redCube);
-scene.add(greenCube);
 
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
 gltfLoader.load(
-  './models/maria.gltf',
+  'mariaaaa.glb',
   function (gltf) {
     mesh = gltf.scene;
-    mesh.scale.x = 300;
-    mesh.scale.y = 300;
-    mesh.scale.z = 300;
+    mesh.scale.x = 100;
+    mesh.scale.y = 100;
+    mesh.scale.z = 100;
+  
+
 
     scene.add(mesh);
   },
@@ -74,7 +67,7 @@ gltfLoader.load(
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = '0x000000', size = 0.5) {
+function createText(text, elevation = 1, textColor = '0x000000', size = 0.5) {
   const textValue = text;
   const textSize = size;
   fontLoader.load('./fonts/helvetiker_regular.typeface.json', function (font) {
@@ -83,11 +76,6 @@ function createText(text, elevation = 0, textColor = '0x000000', size = 0.5) {
       size: textSize,
       height: 0.1,
       curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
     });
 
     const color = new THREE.Color();
@@ -102,12 +90,12 @@ function createText(text, elevation = 0, textColor = '0x000000', size = 0.5) {
   });
 }
 
-createText('SUSPECT: MARIA FARES', 5, '0XFF00FF');
-createText("5'2, brown eyes, green shirt", 3, '0XFF0000');
-createText('loves waffles', 2, '0XFF0000');
-createText('Master of Architecutre Student', 1, '0XFF0000');
-createText('favourite colour: red', 0, '0XFF0000');
-createText('Wanted for stealing chocolate', -1, '0XFF0000');
+createText('SUSPECT: MARIA FARES', 6, '0XFF00FF');
+createText("5'2, brown eyes, green shirt", 5, '0XFF0000');
+createText('loves waffles', 4, '0XFF0000');
+createText('Master of Architecutre Student', 3, '0XFF0000');
+createText('favourite colour: red', 2, '0XFF0000');
+createText('Wanted for stealing chocolate', 1, '0XFF0000');
 
 camera.position.z = 13;
 camera.position.x = 5;
