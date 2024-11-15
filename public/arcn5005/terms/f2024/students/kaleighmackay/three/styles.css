@@ -1,6 +1,7 @@
 img {
     border-radius: 150px;
-    height: 40rem;
+    height:60%;
+    margin: 30px;
 }
 
 .button-2 {
@@ -71,6 +72,10 @@ p {
     padding-left: 2rem;
 }
 
+.leftPanel {
+    width: 30vw;
+}
+
 body,
 html {
     overflow: hidden;
@@ -80,4 +85,7 @@ html {
 
 canvas {
     background-color: #bc3c33;
+    display: block;
+    width: 70vw;
+    height: 100vh;
 }
