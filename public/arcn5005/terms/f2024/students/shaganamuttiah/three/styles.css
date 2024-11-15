@@ -1,0 +1,176 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body, html {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fixed Avatar */
+.fixed-avatar {
+    position: fixed;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 9999;
+}
+
+/* Button Container */
+.button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Button Styles */
+.box {
+    width: 122px;
+    height: auto;
+    float: left;
+    transition: 0.5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 5px;
+    text-align: center;
+    margin: 2px;
+    background: #eee5f1;
+    text-transform: uppercase;
+    font-weight: 800;
+    left: -20px;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+  }
+  
+  .box:before, .box:after {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    transition: 0.3s transform linear;
+  }
+  
+  .box:before {
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    transform: translateX(100%);}
+  
+  .box:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    transform: translateX(-100%);}
+  
+  .box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:hover:before {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+  }
+  
+  .box:hover:after {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+  }
+  
+  button {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+
+/* Canvas Styling */
+.three-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about-me-text { 
+	width:315px;
+	height:328px;
+	position:fixed;
+	left:0px;
+	top:0px;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  font-style: normal;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.about-me-tittle { 
+	width:815px;
+	height:700px;
+	position:fixed;
+	left:0px;
+	top:0px;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  color:rgb(149, 126, 143);
+  text-shadow: 
+    -6px -6px 0px black, 
+    2px -2px 0px black,  
+    -2px 2px 0px black,  
+    2px 2px 0px black;   
+	text-align:left;
+	letter-spacing:2px; 
+}
+.about-me-text { 
+	width:315px;
+	height:328px;
+	position:fixed;
+	left:0px;
+	top:0px;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  font-style: normal;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.about-me-tittle { 
+	
+	width:315px;
+	height:58px;
+  font-family: "cheesecake", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+	position:fixed;
+	left:30px;
+	top:30px;
+	text-align:left;
+	font-size:30px;
+	letter-spacing:0;
+  z-index: 1000;
+  
+}
