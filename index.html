@@ -1,107 +1,27 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head><link rel="stylesheet" href="https://use.typekit.net/nrz1wel.css"
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>christophersproule about page</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-<div>
+<html>
 
-  <div class="header">
-    <h1>Chris Sproule</h1>
-  <div class="sub-header"
-  <h2>(sounds like crisp roll)</h2>
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="3styles.css" />
+  <title>Mostafa3</title>
+</head>
+<body>
+ 
+</body>
+
+  <!-- Three js Modules -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+
+  <script type="module" src="./main.js"></script>
+  <canvas class="three-canvas" id="MostafaCanvas"></canvas>
   
-  </div>
-  <div class="centered-content">
-    <img src="avatar.jpg" width="200" class="rounded-image"   
-  </div>
-  <div class="centered-content" style="margin-top:20px;">
-      <p class="body-paragraph" style="font-size: 12px;">
-        I am from Winnipeg, Manitoba. Prior to moving east to Ottawa, I attended the University of Manitoba and completed a Bachelor’s of Environmental Design in the Landscape + Urbanism stream and a Master’s of Landscape Architecture. Since completing my landscape architecture studies I worked in both Saskatoon, SK, and Winnipeg, MB, at different landscape architecture firms. When I'm not doing schoolwork, or recovering from doing schoolwork, I enjoy travelling and urban hiking. I like to cross country ski and skate so I am hoping the canal trail will be open this year!   
-  <p 
-</div>
-<div class="button-container"style=margin-top:20px;">
-  <button class="assignment-button">Assignment 1</button>
-  <button class="assignment-button">Assignment 2</button>
-  <button class="assignment-button">Assignment 3</button>
-  <button class="assignment-button">Assignment 4</button>
-</div>
-  <div class="centered-content"
 
+ 
 
-  <div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <img src="prairie.jpg">
-      <div class="text">The tallgrass prairie outside of Winnipeg, MB</div>
-    </div>
-
-    <div class="mySlides fade">
-      <img src="JAR.jpg">
-      <div class="text">John A. Russell Building courtyard, University of Manitoba</div>
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="AireRiver.jpg">
-      <div class="text">The Aire river restoration outside of Geneva</div>
-    </div>
-
-    <div class="mySlides fade">
-      <img src="Skogs.jpg">
-      <div class="text">Skogskyrkogården, Stockholm</div>
-    </div>
-    
-    
-    <div class="mySlides fade">
-      <img src="RiverTrail.jpg">
-      <div class="text">The Red River skating trail, Winnipeg, MB</div>
-    </div>
-
-    <div class="mySlides fade">
-        <img src="Ski.jpg">
-        <div class="text">Cross country skiing</div>
-      </div>
-
-    <div class="mySlides fade">
-        <img src="TheLeaf.jpg">
-        <div class="text">The Leaf conservatory, Winnipeg, MB</div>
-      </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    </div>
-</div>
-
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-</script>
 </html>
