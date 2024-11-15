@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     padding: 0;
     box-sizing: border-box;
 
@@ -29,6 +30,37 @@ h2{
 }
 
 h3{
+=======
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  text-align: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  font-size: 30px;
+  color: #a44706;
+}
+
+h2 {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  align-items: left;
+  font-weight: 100;
+}
+
+h3 {
+>>>>>>> 710565a6f0690ee69fd880e56e81625fc3492d8e
   text-align: left;
   align-items: left;
   font-size: 13px;
@@ -37,6 +69,7 @@ h3{
   font-weight: 100;
 }
 
+<<<<<<< HEAD
 p{
   text-align: left;
   align-items: left;
@@ -57,10 +90,23 @@ h4{
 }
 
 a{
+=======
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font: 10px;
+  text-align: left;
+  align-items: center;
+  position: relative;
+  padding-top: 450px;
+}
+
+a {
+>>>>>>> 710565a6f0690ee69fd880e56e81625fc3492d8e
   text-decoration: none;
 }
 
 ol,
+<<<<<<< HEAD
 ul{
     list-style-type: disc;
     margin-left: 2.5rem;
@@ -70,6 +116,17 @@ ul{
 /* From Uiverse.io by WhiteNervosa */ 
 button {
   display:block;
+=======
+ul {
+  list-style-type: disc;
+  margin-left: 2.5rem;
+  font-size: large;
+}
+
+/* From Uiverse.io by WhiteNervosa */
+button {
+  display: block;
+>>>>>>> 710565a6f0690ee69fd880e56e81625fc3492d8e
   font-size: 13px;
   color: #a44706;
   font-family: Arial, Helvetica, sans-serif;
@@ -97,7 +154,11 @@ button:hover:after {
 }
 
 button:after {
+<<<<<<< HEAD
   content: "";
+=======
+  content: '';
+>>>>>>> 710565a6f0690ee69fd880e56e81625fc3492d8e
   pointer-events: none;
   bottom: -2px;
   left: 50%;
@@ -175,9 +236,16 @@ main {
   opacity: 0.85;
 }
 
+<<<<<<< HEAD
 .overlay,h5{
   font-family: Arial, Helvetica, sans-serif;
   color: white
+=======
+.overlay,
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+>>>>>>> 710565a6f0690ee69fd880e56e81625fc3492d8e
 }
 
 body {
@@ -192,7 +260,11 @@ body {
   top: 217.5px;
   height: 75px;
   width: 75px;
+<<<<<<< HEAD
   background-image: url("chicken.png");
+=======
+  background-image: url('chicken.png');
+>>>>>>> 710565a6f0690ee69fd880e56e81625fc3492d8e
   background-repeat: no-repeat;
   background-size: 75px;
   background-position: center;
@@ -207,4 +279,7 @@ body {
     left: -75px;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 710565a6f0690ee69fd880e56e81625fc3492d8e

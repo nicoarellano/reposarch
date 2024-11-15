@@ -1,0 +1,6 @@
+Background gradient: 
+https://stackoverflow.com/questions/78330119/problem-with-moving-background-positioning
+
+
+Buttons: 
+https://uiverse.io/TISEPSE/perfect-pig-59
