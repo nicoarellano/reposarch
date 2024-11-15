@@ -34,7 +34,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let ufoMesh;
 
 gltfLoader.load(
-  './finalhaseenaufolarge.glb',
+  './haseenaapplymodifiersmetallicc.glb',
   (gltf) => {
     ufoMesh = gltf.scene;
     ufoMesh.scale.set(3, 3, 3);
