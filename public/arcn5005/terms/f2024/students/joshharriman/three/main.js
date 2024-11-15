@@ -23,12 +23,7 @@ document.body.appendChild(renderer.domElement);
 
 //Creates grids and axes in the scene
 const grid = new THREE.GridHelper(10, 10);
-scene.add(grid);
 
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
 
 const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
 
@@ -71,42 +66,6 @@ gltfLoader.load(
     console.error(error);
   }
 );
-
-const fontLoader = new THREE.FontLoader();
-
-function createText(text, elevation = 0, textColor = "0x000000", size = 5) {
-  const textValue = text;
-  const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
-      font: font,
-      size: textSize,
-      height: 0.1,
-      curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
-    });
-
-    const color = new THREE.Color();
-    color.setHex(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
-
-    text.position.x = 2;
-    text.position.y = elevation;
-
-    scene.add(text);
-  });
-}
-
-createText("- Josh Harriman", 5, "0XFF00FF");
-createText("- From Maine", 3, "0XFF0000");
-createText("- Biological builder", 2, "0XFF0000");
-createText("- Ski instructor", 1, "0XFF0000");
-createText("- Neophyte programmer", 0, "0XFF0000");
 
 camera.position.z = 13;
 camera.position.x = 5;
