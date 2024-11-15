@@ -9,7 +9,7 @@ const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(110, aspect, 1, 1000);
 
 //Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas-f2024");
+const threeCanvas = document.getElementById("three-canvas-josh");
 console.log(threeCanvas);
 
 const renderer = new THREE.WebGLRenderer({
@@ -25,24 +25,40 @@ document.body.appendChild(renderer.domElement);
 const grid = new THREE.GridHelper(10, 10);
 
 
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+
+
+const verticesOfCube = [
+  -1,-1,-1,    1,-1,-1,    1, 1,-1,    -1, 1,-1,
+  -1,-1, 1,    1,-1, 1,    1, 1, 1,    -1, 1, 1,
+];
+
+const indicesOfFaces = [
+  2,1,0,    0,3,2,
+  0,4,7,    7,3,0,
+  0,1,5,    5,4,0,
+  1,2,6,    6,5,1,
+  2,3,7,    7,6,2,
+  4,5,6,    6,7,4
+];
+
+const geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 6, 2 );
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x756D6D });
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
 const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
 
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
+const yellowIcosahedron = new THREE.Mesh(geometry, yellowMaterial);
 const blueCube = new THREE.Mesh(geometry, blueMaterial);
 const redCube = new THREE.Mesh(geometry, redMaterial);
 const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
-yellowCube.position.z = -5;
-blueCube.position.x = -5;
-redCube.position.x = 5;
-greenCube.position.z = 5;
+yellowIcosahedron.position.z = -15;
+blueCube.position.x = -15;
+redCube.position.x = 15;
+greenCube.position.z = 15;
 
-scene.add(yellowCube);
+scene.add(yellowIcosahedron);
 scene.add(blueCube);
 scene.add(redCube);
 scene.add(greenCube);
@@ -52,7 +68,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "./models/scene5.glb",
+  "./models/scene8.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 5;
@@ -95,8 +111,8 @@ function animate() {
 
   if (mesh) mesh.rotation.y += 0.01;
 
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
+  yellowIcosahedron.rotation.x += 0.01;
+  yellowIcosahedron.rotation.y += 0.01;
 
   blueCube.rotation.x += 0.02;
   blueCube.rotation.y -= 0.01;
