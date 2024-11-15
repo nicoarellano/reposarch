@@ -1,0 +1,137 @@
+{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+h1{
+  color:#a9a9a9;
+}
+h2{
+  color:#a9a9a9;
+}
+h3{
+  color:#c0c0c0;
+}
+main{
+  background-color: white;
+  justify-content: center;
+}
+.wrapper{
+  margin:10px auto;
+  padding:0 7.5%;
+  text-transform: capitalize;
+}
+.box{
+  margin:26px;
+  width:810px;
+  height:250px;
+  box-shadow:0px 2px 4px rgba(0,0,0,0.2);
+  background-color: white;
+  margin-top:50px;
+  border-radius: 4px;
+}
+.box img{
+  width:250px;
+  height:auto;
+  justify-content: right;
+}
+.img_deg{
+  float: right;
+}
+.box h2{
+  padding: 5px;
+}
+.box p{
+  padding: 6px;
+  line-height: 0.5;
+}
+.card-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1px;
+}
+.card{
+  width: 250px;
+  height: 365px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  margin: 15px;
+}
+.card img{
+  width: 100%;
+  height: auto;
+}
+.card-content{
+  padding: 15px;
+}
+.card-content h3{
+ font-size: 25px;
+ margin-bottom: 10px;
+}
+.card-content .btn{
+  display:inline-block;
+  padding:10px 16px;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top:13px;
+  color:#fff;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 5px;
+  position: relative;
+  right:126px;
+  width: 7.2em;
+  height: 2em;
+  transition: 0.5s;
+  font-size: 17px;
+  border-radius: 0.4em;
+}
+
+button p {
+  position: absolute;
+  top: 0.4em;
+  left: 1.2em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: #0077b5;
+}
+
+button svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff
+}
+
+button:hover p {
+  left: 0.6em;
+  color: #fff
+}
+
+button:hover svg {
+  opacity: 1;
+}
+
+button:hover {
+  background-color: #0077b5;
+}
