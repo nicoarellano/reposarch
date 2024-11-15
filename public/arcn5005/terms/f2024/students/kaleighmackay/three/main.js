@@ -9,7 +9,7 @@ const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
 //Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas-f2024");
+const threeCanvas = document.getElementById("kaleigh-canvas");
 
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
