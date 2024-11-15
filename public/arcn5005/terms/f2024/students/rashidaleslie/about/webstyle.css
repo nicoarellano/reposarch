@@ -1,111 +1,219 @@
-.sniglet-regular {
-  font-family: "Sniglet", system-ui;
-  font-weight: 400;
-  font-style: normal;
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;800&family=Sniglet:wght@400;800&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-.sniglet-extrabold {
-  font-family: "Sniglet", system-ui;
-  font-weight: 800;
-  font-style: normal;
+body {
+  background-color: #ffffff;
+  background-image: linear-gradient(#bebebe 1px, transparent 1px),
+    linear-gradient(to right, #bebebe 1px, #f6f9fa 1px);
+  background-size: 40px 40px;
+  font-family: 'Sniglet', system-ui;
+  margin: 0;
 }
-ul{
-  padding-right: 50px;
-  line-height: 2;
-  font-family: 'sniglet';
-  font-weight: 300;
+
+header {
+  background-color: lightblue;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-h1{
-  text-align: center;
-  font-family: 'sniglet';
+
+h1 {
+  text-align: left;
+  padding-left: 12.5%;
+  margin: 0;
+  font-family: 'Sniglet', system-ui;
   font-weight: 300;
   font-size: 40px;
-  margin-bottom: auto;
- 
 }
 
-h2{
-  
-  font-family: 'sniglet';
+h2 {
+  font-family: 'Sniglet', system-ui;
   font-weight: 300;
-  
-  
 }
 
-
-body{
-background-color: #ffffff;
-background-image:  linear-gradient(#7f7f7f 1px, transparent 1px), linear-gradient(to right, #7f7f7f 1px, #ffffff 1px);
-background-size: 20px 20px;
-}
-  
-  .row {
-    display: flex; /* Use flexbox to place columns side by side */
-  }
-  .column-1{ 
-    flex:2;
-    height: 800px;
-  
-
-  }
-  .column-group {
-    display: flex;
-    flex-direction: column;
-    flex: 2; /* This ensures columns 2, 3, and the bottom section collectively take up more space */
-  }
-  .columns-container {
-    display: flex; 
-  }
-  .column {
-    flex: 1; /* Make each column take up equal space */
-    padding: 10px; 
-    height: 400px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-  }
-
-  .bottom-section {
-    
-    padding: 10px;
-    border: 5px solid #575b82; 
-     border-radius: 5px;
-     background-color: #ffffff;
-     height: 400px;
-  }
-   /* Clear floats after the columns */
-   .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .image-border {
-    border: 5px solid#575b82; 
-    border-radius: 5px; /* Optional: Adds rounded corners to the border */
-    padding: 20px;
-    background-color: #ffffff;
-}
-.new-section {
-  background-color: lightblue; 
-  padding: 20px; /* Add some padding */
-  margin-top: 20px; /* Space above the new section */
-  border: 2px solid #575b82; /* Border around the new section */
-  border-radius: 5px; /* Rounded corners */
-  height: 500px;
-
-}
-
-.button {
-  background-color:#575b82; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
+h3 {
+  font-family: 'Merriweather', serif;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 75%;
+  margin: 0px;
+  color: #575b82;
+  font-weight: bold;
+}
+
+ul {
+  text-align: left;
+  padding-top: 10%;
+  line-height: 2;
+  font-family: 'Sniglet', system-ui;
+  font-weight: 200;
+  font-size: 85%;
+  line-height: 2; /* Adjust the value to increase or decrease space */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border: 5px solid #575b82;
+  transition: transform 0.3s; /* Animation on hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card h2 {
+  font-family: 'Sniglet', system-ui;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.new-section {
+  background-color: #f6f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0px;
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeIn 1s; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.button {
+  background-color: #575b82;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
+  padding: 15px 32px;
+  font-family: 'Sniglet', system-ui;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+.button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.card-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #575b82;
+  color: #f6f9fa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Sniglet', system-ui;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s; /* Transition for button hover effects */
+}
+
+.card-button:hover {
+  background-color: #fdeb85;
+  color: #000;
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.unknown-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #575b82;
+  color: #f6f9fa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Sniglet', system-ui;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s; /* Transition for button hover effects */
+}
+
+.unknown-button:hover {
+  background-color: #fd8585;
+  color: #000;
+  animation: shake3856 0.3s linear infinite both;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/*figured out how to do this from uiverse*/
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+.footer {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
 }
