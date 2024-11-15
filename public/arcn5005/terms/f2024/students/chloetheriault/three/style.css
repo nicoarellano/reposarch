@@ -1,0 +1,42 @@
+
+body {
+    
+    background-color: rgb(154, 198, 197);
+    display: flex;
+    align-content: stretch;
+    height: 100%;
+   
+  
+  }
+  
+  
+  #title {
+    font-family: "Concert One", sans-serif;
+    color: rgb(255, 255, 255);
+    flex-shrink: 3;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    
+    
+  }
+  
+  img {
+   
+    flex-shrink: 3;
+    width: 250px;
+    
+  }
+  
+  .three-canvas {
+    position: fixed;
+    flex-shrink: 3;
+    width: 60%;
+    z-index: 1;
+    right: 220;
+    bottom: 100;
+  }
+  

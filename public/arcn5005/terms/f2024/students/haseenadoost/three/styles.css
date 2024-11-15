@@ -1,0 +1,43 @@
+*{background-color: rgb(255, 255, 255);}
+h1{color: rgb(0, 17, 68);}
+body {font-family: Helvetica, sans-serif; margin:0}
+  
+  button{ display: inline-block;
+    font-family: Helvetica, sans-serif;
+    border-radius: 1px;
+    background-color: #ffffff;
+    border: 2px;
+    color: #000000;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+   }
+   
+   button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   button:hover span {
+    padding-right: 15px;
+   }
+   
+   button:hover span:after {
+    opacity: 1;
+    right: 0;
+   }
