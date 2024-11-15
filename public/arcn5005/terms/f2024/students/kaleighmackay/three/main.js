@@ -6,23 +6,36 @@ const size = {
 };
 
 const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(25, aspect, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
 //Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas-f2024");
+const threeCanvas = document.getElementById('kaleigh-canvas');
 
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
   alpha: true,
 });
 
-renderer.setSize(size.width, size.height);
+renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
+const rgbeLoader = new THREE.RGBELoader();
+rgbeLoader.load(
+  'models/court.hdr',
+  (texture) => {
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+    scene.background = texture;
+    scene.environment = texture;
+  },
+  undefined,
+  (error) => {
+    console.error('Error loading the HDRI background:', error);
+  }
+);
+
 //Creates grids and axes in the scene
 const grid = new THREE.GridHelper(500, 500);
-
 
 const axes = new THREE.AxesHelper();
 axes.material.depthTest = false;
@@ -58,20 +71,16 @@ lightBulb.position.y = 20;
 lightBulb.position.x = -0.85;
 lightBulb.position.z = 0.22;
 
-
 scene.add(floor);
 // scene.add(ceiling);
 scene.add(lightBulb);
-
-
-
 
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh;
 
 gltfLoader.load(
-  "./models/kaleigh.glb",
+  './models/kaleigh.glb',
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 3;
@@ -88,10 +97,10 @@ gltfLoader.load(
 
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0x000000", size = 1) {
+function createText(text, elevation = 0, textColor = '0x000000', size = 1) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+  fontLoader.load('./fonts/helvetiker_regular.typeface.json', function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -116,18 +125,18 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 1) {
   });
 }
 
-createText("SPACE JAM", 0.5, "0Xf88158");
+createText('SPACE JAM', 0.5, '0Xf88158');
 // createText("- it's a bird", 3, "0XFF0000");
 // createText("- it's a plane", 2, "0XFF0000");
 // createText("- ", 1, "0XFF0000");
 // createText("- Lost", 0, "0XFF0000");
 
-camera.position.z = 50;
+camera.position.z = 10;
 camera.position.x = 20;
 camera.position.y = -5;
 
 scene.position.x = 12;
-scene.position.z = 0;
+scene.position.z = 2;
 scene.position.y = -8;
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -145,22 +154,16 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
+let lightBulbVelocity = 0.03;
+let rootrotation = 0;
+let rootvel = 0;
+let ztranslation = 0;
+const gravity = 0.0005;
+
 function animate() {
   requestAnimationFrame(animate);
 
-  if (mesh) mesh.rotation.y += 0.00;
-
-  // yellowCube.rotation.x += 0.01;
-  // yellowCube.rotation.y += 0.01;
-
-  // blueCube.rotation.x += 0.02;
-  // blueCube.rotation.y -= 0.01;
-
-  // redCube.rotation.x -= 0.01;
-  // redCube.rotation.y -= 0.02;
-
-  // greenCube.rotation.x += 0.02;
-  // greenCube.rotation.y -= 0.01;
+  if (mesh) mesh.rotation.y += 0.0;
 
   lightBulb.rotation.y += 0.01;
   lightBulb.position.y -= 0.1;
@@ -169,17 +172,74 @@ function animate() {
     lightBulb.position.y = 4.95;
   }
 
-
   renderer.render(scene, camera);
+
+  increment += 0.001;
+
+  if (lightBulb.position.y > 0) {
+    lightBulb.position.y += lightBulbVelocity;
+    lightBulbVelocity -= gravity;
+  }
+
+  if (lightBulb.position.x > -4) {
+    lightBulb.position.x -= 0.02;
+  } else {
+    lightBulb.position.set(5, 0.5, 0);
+    lightBulbVelocity = 0.03;
+    if (rootrotation == 0) {
+      youscore++;
+    } else {
+      lightBulbscore++;
+    }
+  }
+
+  root.position.y += rootvel;
+
+  if (root.position.y >= 0) {
+    rootvel -= gravity;
+  } else {
+    root.position.y = 0;
+  }
+
+  if (lightBulb.position.x < -0.85 && root.position.y == 4.95) {
+    rootrotation = 0.1;
+    ztranslation = 0.1;
+  }
+
+  if (root.position.z > 10) {
+    ztranslation = 0;
+    rootrotation = 0;
+    root.position.z = 0;
+    root.rotation.x = 0;
+  }
+
+  root.rotation.x += rootrotation;
+  root.position.z += ztranslation;
+  camera.position.x = Math.sin(increment) * 5;
+  camera.position.z = Math.cos(increment) * 5;
+  camera.position.y = 0.5 - [Math.cos(2 * increment) * 0.5];
+  camera.rotation.y = increment;
 }
 
 animate();
 
 //Adjust the viewport to the size of the browser
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
   renderer.setSize(size.width, size.height);
+});
+
+renderer.domElement.addEventListener('click', () => {
+  setTimeout(() => {
+    alert('HEY.');
+  }, 2000);
+  gsap.to(lightBulb.position, { y: 0, duration: 4, ease: 'bounce.out' });
+});
+
+window.addEventListener('resize', () => {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.updateProjectionMatrix();
 });
