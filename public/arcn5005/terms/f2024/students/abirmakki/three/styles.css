@@ -4,7 +4,8 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   overflow: auto;
@@ -14,7 +15,6 @@ p {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   font-size: 18px;
 }
-
 
 .links-container {
   display: flex;
@@ -28,7 +28,10 @@ p {
   text-decoration: none;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   font-size: 16px;
-  color:#fff;
+  color: #fff;
+  z-index: 2;
+  pointer-events: auto;
+  cursor: pointer;
 }
 .link:hover {
   color: rgb(178, 255, 255);
