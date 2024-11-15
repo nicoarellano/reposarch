@@ -385,8 +385,19 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/G0ZCm_6kYx8?si=8k6WMx86nWd4-Pce',
+        title:
+          "Ken Percy - Open-source GIS and Canada's Digital Twin - Fall 2024",
+        date: dayjs('2023/11/16'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/kTHiMCSAzr8?si=1Z_9jatCa6AR4zxx',
+        title: 'Three.js - Committing to Github and Assignment 2 - Fall 2024',
+        date: dayjs('2023/11/16'),
+      },
+      {
         url: 'https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd',
-        title: 'Ken Percy - Open-source GIS',
+        title: 'Ken Percy - Open-source GIS - Fall 2023',
         date: dayjs('2023/11/16'),
       },
     ],
@@ -403,18 +414,24 @@ export const arcn5005Lectures: Lectures = [
       { title: 'Coordination Systems' },
       { title: 'Proprietary web GIS - Cesium and Mapbox' },
       { title: 'Open Source web GIS - Leaflet and Maplibre' },
+      { title: '🗺️ GIS day 🌎' },
       { title: '🖥️ LAB 11: Web based GIS software' },
     ],
     recordings: [
       {
-        url: 'https://www.youtube.com/embed/vSejvs1PBNc?si=qAIK45kWVdSQtW-g',
-        title: 'New calendar and Assignment 2 feedback',
+        url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709',
+        title: 'Assignment 3 - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m',
-        title: 'Web based mapping and Assignment 3',
+        title: 'Web based mapping  - Fall 2023',
         date: dayjs('2023/11/23'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv',
+        title: 'Maps, GIS and Map renderers - Fall 2023',
+        date: dayjs('2023/09/25'),
       },
     ],
   },

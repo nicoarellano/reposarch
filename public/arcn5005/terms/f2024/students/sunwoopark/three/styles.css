@@ -1,0 +1,77 @@
+body,
+html {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+}
+
+body, .custom-cursor {
+  cursor: url(./cursor.png), auto;
+}
+
+.assignment2 {
+    width: 95%;
+    height: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.three-canvas {
+    position: fixed;
+    /* top: 0; */
+    left: 220;
+    bottom: 100;
+    outline: none;
+}
+
+button {
+    font-size: 16px;
+    color: rgb(21, 73, 128);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: url(./cursor.png), pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: lowercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    padding-left: 0px;
+    padding-right: 70px;
+    overflow: hidden;
+    height: 48px;
+    line-height: 1;
+  }
+  
+  button:focus,
+  button:hover {
+    color:rgb(21, 73, 128);
+    transform: translateY(-2px);
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+  

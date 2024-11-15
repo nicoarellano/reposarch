@@ -1,27 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {background-color: rgb(154, 198, 197) ;
-}
-
-img{
-    height: 150px;
-    width: 200px;
-    float:left;
-    margin: 100px ;
-    margin-top: 50px;
-}
-
-#title{
-display: flex;
+body {
+    
+    background-color: rgb(154, 198, 197);
+    display: flex;
+    align-content: stretch;
+    height: 100%;
+   
+  
+  }
+  
+  
+  #title {
     font-family: "Concert One", sans-serif;
-    align-self: left;
-    justify-content: left;
-    margin-top: 2%;
-    margin-left: 25px;
     color: rgb(255, 255, 255);
-
-}
+    flex-shrink: 3;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    
+    
+  }
+  
+  img {
+   
+    flex-shrink: 3;
+    width: 250px;
+    
+  }
+  
+  .three-canvas {
+    position: fixed;
+    flex-shrink: 3;
+    width: 60%;
+    z-index: 1;
+    right: 220;
+    bottom: 100;
+  }
+  
