@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>abirmakki three page</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Magic 8 Ball</title>
   </head>
   <body>
-    ADD YOUR CODE HERE!
+    <svg width="100%" height="20" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern
+          id="squiggly"
+          width="40"
+          height="20"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M0 15 Q 10 7, 20 15 T 40 15"
+            stroke="#ffffff"
+            fill="transparent"
+            stroke-width="2"
+          />
+        </pattern>
+      </defs>
+      <rect width="100%" height="30" fill="url(#squiggly)" />
+    </svg>
+
+    <div class="links-container">
+      <a href="assignment3.html" class="link">ASSIGNMENT 1</a>
+      <img src="flower.png" alt="F" class="flower" />
+      <a class="link active">ASSIGNMENT 2</a>
+      <img src="flower.png" alt="F" class="flower" />
+      <a href="assignment3.html" class="link">ASSIGNMENT 3</a>
+      <img src="flower.png" alt="F" class="flower" />
+      <a href="final-assignment.html" class="link">FINAL ASSIGNMENT</a>
+    </div>
+
+    <svg width="100%" height="20" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern
+          id="squiggly"
+          width="40"
+          height="20"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M0 15 Q 10 7, 20 15 T 40 15"
+            stroke="#ffffff"
+            fill="transparent"
+            stroke-width="2"
+          />
+        </pattern>
+      </defs>
+      <rect width="100%" height="30" fill="url(#squiggly)" />
+    </svg>
+
+    <div id="popup" class="popup"></div>
+
+    <!-- Three.js 3D Canvas -->
+    <canvas class="three-canvas" id="three-canvas"></canvas>
+
+    <!-- Three.js Modules -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="./main.js"></script>
   </body>
 </html>

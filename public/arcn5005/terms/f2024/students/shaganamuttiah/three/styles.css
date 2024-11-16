@@ -1,90 +1,176 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body,
-html {
+/* Basic Styles */
+body, html {
     overflow: hidden;
-    width: 80%;
+    width: 100%;
     height: 100%;
 }
 
-.assignment2 {
-    width: 95%;
-    height: 85%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: end;
-    overflow: hidden;
-    gap: 2rem;
-}
-
-.about section {
-    background-color: #f7f7f7;
-    width: 70%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-}
-
-.vl {
-    border-left: 1px solid rgb(109, 109, 109);
-    height: 150px;
-}
-
-.three-canvas {
+/* Fixed Avatar */
+.fixed-avatar {
     position: fixed;
-    /* top: 0; */
-    left: 220;
-    bottom: 100;
-    outline: none;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 9999;
 }
 
-button {
-    appearance: none;
-    background-color: transparent;
-    border: 0.125em solid #1A1A1A;
-    border-radius: 0.9375em;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
+/* Button Container */
+.button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Button Styles */
+.box {
+    width: 122px;
+    height: auto;
+    float: left;
+    transition: 0.5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 5px;
     text-align: center;
+    margin: 2px;
+    background: #eee5f1;
+    text-transform: uppercase;
+    font-weight: 800;
+    left: -20px;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
+  }
+  
+  .box:before, .box:after {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    transition: 0.3s transform linear;
+  }
+  
+  .box:before {
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    transform: translateX(100%);}
+  
+  .box:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    transform: translateX(-100%);}
+  
+  .box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:hover:before {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+  }
+  
+  .box:hover:after {
+    border-color: #262626;
+    height: 100%;
+    transform: translateX(0);
+  }
+  
+  button {
+    color: black;
     text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+
+/* Canvas Styling */
+.three-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-button:disabled {
-    pointer-events: none;
+.about-me-text { 
+	width:315px;
+	height:328px;
+	position:fixed;
+	left:0px;
+	top:0px;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  font-style: normal;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
 }
-
-button:hover {
-    color: #fff;
-    background-color: #1A1A1A;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
+.about-me-tittle { 
+	width:815px;
+	height:700px;
+	position:fixed;
+	left:0px;
+	top:0px;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  color:rgb(149, 126, 143);
+  text-shadow: 
+    -6px -6px 0px black, 
+    2px -2px 0px black,  
+    -2px 2px 0px black,  
+    2px 2px 0px black;   
+	text-align:left;
+	letter-spacing:2px; 
 }
-
-button:active {
-    box-shadow: none;
-    transform: translateY(0);
+.about-me-text { 
+	width:315px;
+	height:328px;
+	position:fixed;
+	left:0px;
+	top:0px;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  font-style: normal;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.about-me-tittle { 
+	
+	width:315px;
+	height:58px;
+  font-family: "cheesecake", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+	position:fixed;
+	left:30px;
+	top:30px;
+	text-align:left;
+	font-size:30px;
+	letter-spacing:0;
+  z-index: 1000;
+  
 }
