@@ -9,7 +9,7 @@ const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(100, aspect, 1, 2000);
 
 // Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas-f2024");
+const threeCanvas = document.getElementById("three-canvas-shagana");
 console.log(threeCanvas);
 
 const renderer = new THREE.WebGLRenderer({
@@ -77,6 +77,8 @@ scene.add(blueHeart);
 scene.add(greenHeart);
 scene.add(blueHeart);
 
+
+
 const gltfLoader = new THREE.GLTFLoader();
 let deerMesh;
 const moveSpeed = 0.1; // Speed for WASD movement
@@ -113,36 +115,211 @@ gltfLoader.load("./models/grass.glb", function (gltf) {
 });
 
 
-gltfLoader.load("./models/justin.glb", function (gltf) {
+gltfLoader.load("./models/shagana3d.glb", function (gltf) {
   const justinMesh = gltf.scene;
-  justinMesh.scale.set(3, 3, 3);
+  justinMesh.scale.set(3, 3, 3); // Scaling the model
+  
+  // Moving the mesh
+  justinMesh.position.set(0, 0, 0); // Move to (x=5, y=0, z=0)
+
+  // Rotating the mesh
+  justinMesh.rotation.set(0, Math.PI / 0.8, 0); // Rotate 90 degrees around the Y-axis (in radians)
+
   scene.add(justinMesh);
 }, undefined, function (error) { console.error(error); });
 
 
+// Load the clouds model and add an animation on click
+gltfLoader.load("./models/clouds.glb", function (gltf) {
+  const cloudMesh = gltf.scene;
+  const originalScale = new THREE.Vector3(1, 1, 1); // Original scale of the clouds
+  const enlargedScale = new THREE.Vector3(1.2, 1.2, 1.2); // Scale factor when enlarged
+  let isEnlarged = false; // Track if the cloud is currently enlarged
+
+  cloudMesh.scale.copy(originalScale); // Set to original scale initially
+  scene.add(cloudMesh);
+
+  // Function to toggle cloud scale
+  function toggleScale() {
+    const targetScale = isEnlarged ? originalScale : enlargedScale;
+    const duration = 300; // Duration of animation in ms
+    const startTime = performance.now();
+
+    function animate() {
+      const elapsed = performance.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Lerp the scale to the target scale
+      cloudMesh.scale.lerpVectors(isEnlarged ? enlargedScale : originalScale, targetScale, progress);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate); // Continue animation if not yet complete
+      } else {
+        isEnlarged = !isEnlarged; // Toggle the enlargement state
+      }
+    }
+    animate();
+  }
+
+  // Add click event listener to trigger the scale toggle
+  window.addEventListener("click", (event) => {
+    const mouse = new THREE.Vector2();
+    const raycaster = new THREE.Raycaster();
+
+    // Convert mouse position to normalized device coordinates
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    
+    // Update the raycaster with camera and mouse position
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(cloudMesh, true);
+    
+    if (intersects.length > 0) {
+      toggleScale(); // Trigger scale toggle if cloud is clicked
+    }
+  });
+
+}, undefined, function (error) {
+  console.error(error);
+});
+
+
+// Load the clouds model and add an animation on click
+gltfLoader.load("./models/clouds.glb", function (gltf) {
+  const cloudMesh = gltf.scene;
+  const originalScale = new THREE.Vector3(1, 1, 1); // Original scale of the clouds
+  const enlargedScale = new THREE.Vector3(1.2, 1.2, 1.2); // Scale factor when enlarged
+  let isEnlarged = false; // Track if the cloud is currently enlarged
+
+  cloudMesh.scale.set(0.5, 0.5, 0.5); // Set to original scale initially
+  scene.add(cloudMesh);
+
+  // Function to toggle cloud scale
+  function toggleScale() {
+    const targetScale = isEnlarged ? originalScale : enlargedScale;
+    const duration = 300; // Duration of animation in ms
+    const startTime = performance.now();
+
+    function animate() {
+      const elapsed = performance.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Lerp the scale to the target scale
+      cloudMesh.scale.lerpVectors(isEnlarged ? enlargedScale : originalScale, targetScale, progress);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate); // Continue animation if not yet complete
+      } else {
+        isEnlarged = !isEnlarged; // Toggle the enlargement state
+      }
+    }
+    animate();
+  }
+
+  // Add click event listener to trigger the scale toggle
+  window.addEventListener("click", (event) => {
+    const mouse = new THREE.Vector2();
+    const raycaster = new THREE.Raycaster();
+
+    // Convert mouse position to normalized device coordinates
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    
+    // Update the raycaster with camera and mouse position
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(cloudMesh, true);
+    
+    if (intersects.length > 0) {
+      toggleScale(); // Trigger scale toggle if cloud is clicked
+    }
+  });
+
+}, undefined, function (error) {
+  console.error(error);
+});
+
+
+
+
+
+// Load the sword model and add click interaction for a wiggle effect
 gltfLoader.load("./models/sword.glb", function (gltf) {
   const swordMesh = gltf.scene;
   swordMesh.scale.set(1, 1, 1);
   swordMesh.rotation.set(Math.PI / 2, Math.PI, 0);
   swordMesh.position.set(-1, 3, 8);
   scene.add(swordMesh);
-}, undefined, function (error) { console.error(error); });
 
-// Keyboard event listener for WASD movement
+  // Add event listener for the click event
+  swordMesh.userData.isAnimating = false; // Flag to track if it's already animating
+
+  // Detect clicks on the sword and trigger the wiggle animation
+  document.addEventListener("click", (event) => {
+    // Check if sword is clicked
+    const mouse = new THREE.Vector2(
+      (event.clientX / window.innerWidth) * 2 - 1,
+      -(event.clientY / window.innerHeight) * 2 + 1
+    );
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObject(swordMesh);
+
+    if (intersects.length > 0 && !swordMesh.userData.isAnimating) {
+      swordMesh.userData.isAnimating = true; // Set animation flag
+
+      // Define wiggle animation
+      const wiggleAmount = 0.1; // Rotation in radians
+      const wiggleSpeed = 100; // Speed in ms
+      let wiggleCount = 0;
+
+      function wiggle() {
+        if (wiggleCount < 6) { // Number of wiggles
+          swordMesh.rotation.z += (wiggleCount % 2 === 0 ? -wiggleAmount : wiggleAmount);
+          wiggleCount++;
+          setTimeout(wiggle, wiggleSpeed);
+        } else {
+          swordMesh.userData.isAnimating = false; // Reset flag when done
+          swordMesh.rotation.z = 0; // Reset rotation
+        }
+      }
+
+      wiggle(); // Start the wiggle animation
+    }
+  });
+}, undefined, function (error) {
+  console.error(error);
+});
+
+
+// Keyboard event listener for WASD movement and arrow key rotation
 document.addEventListener("keydown", function (event) {
   if (!deerMesh) return; // Ensure deerMesh is loaded before moving it
+  
+  const rotationSpeed = 0.05; // Adjust rotation speed as needed
+  
   switch (event.key) {
+    // WASD for movement
     case "w": deerMesh.position.z -= moveSpeed; break;
     case "s": deerMesh.position.z += moveSpeed; break;
     case "a": deerMesh.position.x -= moveSpeed; break;
     case "d": deerMesh.position.x += moveSpeed; break;
+    
+    // Arrow keys for rotation
+    case "ArrowLeft": // Rotate left
+      deerMesh.rotation.y += rotationSpeed;
+      break;
+    case "ArrowRight": // Rotate right
+      deerMesh.rotation.y -= rotationSpeed;
+      break;
   }
 });
 
+
+
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
+function createText(text, elevation = 0, textColor = "0x957e8f", size = 0.5, angleX = 0, angleY = 0, angleZ = 0) {
+  fontLoader.load("./fonts/Choco Bold_Regular.json", function (font) {
     const textGeo = new THREE.TextGeometry(text, {
       font: font,
       size: size,
@@ -158,19 +335,27 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
     const textMaterial = new THREE.MeshLambertMaterial({ color: new THREE.Color(textColor) });
     const textMesh = new THREE.Mesh(textGeo, textMaterial);
 
-    textMesh.position.set(2, elevation, 0);
+    // Set the position with elevation
+    textMesh.position.set(-25, elevation, 5);
+
+    // Set the rotation with angles in radians (you can adjust these values)
+    textMesh.rotation.set(0, 0.8, 0);
+
     scene.add(textMesh);
   });
 }
 
-createText("Shagana Muttiah", 7, 0x0000FF, 1);
-createText("- Student at Carleton U", 5, 0x0000FF);
-createText("- Artist", 4, 0x0000FF);
-createText("- Urban Design Graduate", 3, 0x0000FF);
-createText("- Figure Skater", 2, 0x0000FF);
+// Create multiple pieces of text with different positions and rotations
+createText("Shagana's To Do's:", 15, 0x6d4194, 2, Math.PI / 4, 0, 0); // Rotate 45 degrees on X-axis
+createText("1. Walk the deer (wasd + < > keys).", 13, 0x6d4194, 1, 0, Math.PI / 6, 0); // Rotate 30 degrees on Y-axis
+createText("2. Make the clouds dance (click).", 11, 0x6d4194, 1, 0, 0, Math.PI / 8); // Rotate 22.5 degrees on Z-axis
+createText("3. Try to pull the sword (click).", 9, 0x6d4194, 1, Math.PI / 8, Math.PI / 8, Math.PI / 8); // Rotate on all axes
+createText("4. Find the fourth heart ", 7, 0x6d4194, 1, 0, 0, 0); // No rotation
+createText("     (click + drag sky).", 5, 0x6d4194, 1, 0, 0, 0); // No rotation
+
 
 camera.position.set(6, 9, 25);
-scene.position.set(-5, -3, 5);
+scene.position.set(0, -3, 3);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -187,8 +372,6 @@ scene.add(directionalLight.target);
 
 function animate() {
   requestAnimationFrame(animate);
-
- 
 
   yellowHeart.rotation.x += 0.0;
   yellowHeart.rotation.y += 0.01;

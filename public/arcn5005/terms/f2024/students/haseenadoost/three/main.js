@@ -1,3 +1,4 @@
+// THREE.js Scene Setup
 const scene = new THREE.Scene();
 
 const size = {
@@ -7,19 +8,19 @@ const size = {
 
 const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+camera.position.set(5, 2, 13); // Initial camera positioning
 
-// Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas");
+// Renderer Setup
+const threeCanvas = document.getElementById('three-canvas');
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
   alpha: true,
 });
-
 renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-// Creates grids and axes in the scene
+// Scene Helpers (Grid and Axes)
 const grid = new THREE.GridHelper(5, 5);
 scene.add(grid);
 
@@ -28,185 +29,159 @@ axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
-// Custom Sinusoidal Curve class for the knot-like structure
-class CustomSinCurve extends THREE.Curve {
-  constructor(scale = 1) {
-    super();
-    this.scale = scale;
-  }
-
-  getPoint(t, optionalTarget = new THREE.Vector3()) {
-    const tx = Math.sin(t * Math.PI * 2) * this.scale;
-    const ty = Math.cos(t * Math.PI * 2) * this.scale;
-    const tz = t * 10 - 5;
-
-    return optionalTarget.set(tx, ty, tz);
-  }
-}
-
-// Create the first knot path using the custom curve
-const path1 = new CustomSinCurve(10);
-const geometry1 = new THREE.TubeGeometry(path1, 100, 1, 8, false);
-const material1 = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
-const knotMesh1 = new THREE.Mesh(geometry1, material1);
-scene.add(knotMesh1);
-
-// Create the second knot path using another custom curve
-const path2 = new CustomSinCurve(8);
-const geometry2 = new THREE.TubeGeometry(path2, 100, 1, 8, false);
-const material2 = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-const knotMesh2 = new THREE.Mesh(geometry2, material2);
-scene.add(knotMesh2);
-
-// Geometry for cubes
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xFFFF00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000FF });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xFF0000 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00FF00 });
-
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
-
-yellowCube.position.z = -5;
-blueCube.position.x = -5;
-redCube.position.x = 5;
-greenCube.position.z = 5;
-
-scene.add(yellowCube);
-scene.add(blueCube);
-// scene.add(redCube);
-scene.add(greenCube);
-
-// Loading GLTF model
+// Load GLTF Model for UFO
 const gltfLoader = new THREE.GLTFLoader();
-
-let mesh;
+let ufoMesh;
 
 gltfLoader.load(
-  "./haseena.glb", // Model path
-  function (gltf) {
-    mesh = gltf.scene;
-    mesh.scale.x = 3;
-    mesh.scale.y = 3;
-    mesh.scale.z = 3;
+  './haseenaapplymodifiersmetallicc.glb',
+  (gltf) => {
+    ufoMesh = gltf.scene;
+    ufoMesh.scale.set(3, 3, 3);
+    scene.add(ufoMesh);
 
-    scene.add(mesh);
+    // Add Point Light at the UFO's position
+    const ufoLight = new THREE.PointLight(0xffaa00, 30, 1); // Warm light color
+    ufoLight.position.set(5, 10, 5); // Position it at the UFO
+    scene.add(ufoLight);
   },
   undefined,
-  function (error) {
-    console.error(error);
-  }
+  (error) => console.error(error)
 );
 
-// Load background texture
+// Load Background Texture
 const loader = new THREE.TextureLoader();
-const texture = loader.load("backgroundd.jpg", () => {
+const texture = loader.load('milkyway_.jpeg', () => {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   texture.colorSpace = THREE.SRGBColorSpace;
   scene.background = texture;
 });
 
-// Load font and create 3D text
+// Load Font and Create 3D Text
 const fontLoader = new THREE.FontLoader();
-
 function createText(text, elevation = 0, textColor = 0x000000, size = 0.5) {
-  const textValue = text;
-  const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
+  fontLoader.load('./fonts/helvetiker_regular.typeface.json', (font) => {
+    const textGeo = new THREE.TextGeometry(text, {
       font: font,
-      size: textSize,
+      size: size,
       height: 0.1,
       curveSegments: 4,
       bevelEnabled: true,
-
-      
       bevelThickness: 0.1,
       bevelSize: 0.0,
       bevelOffset: 0,
       bevelSegments: 5,
     });
-
     const textMaterial = new THREE.MeshLambertMaterial({ color: textColor });
     const textMesh = new THREE.Mesh(textGeo, textMaterial);
-
-    textMesh.position.x = 2;
-    textMesh.position.y = elevation;
-
+    textMesh.position.set(2, elevation, 0);
     scene.add(textMesh);
   });
 }
+// TEXT CREATION
+createText(
+  '                               PRESS SPACEBAR 1X TO SPIN',
+  5,
+  0xffa500
+); // Orange
+createText(
+  '                               PRESS SPACEBAR 2X TO SOAR',
+  3,
+  0xffa500
+); // Orange
+createText(
+  '                               PRESS SPACEBAR 3X TO SLOW DOWN',
+  2,
+  0x000000
+); // Black
+createText('                               HASEENA DOOST', 1, 0x000000); // Black
+createText(
+  '                              Would like to go to Mars one day',
+  0,
+  0xffa500
+); // Orange
 
-// Example text creation
-createText("Haseena Doost", 5, 0xFF00FF);
-createText("- Undergrad at U of T", 3, 0xFF0000);
-createText("- 1st Year Master of Architecture Student", 2, 0xFF0000);
-createText("- From Mississauga", 1, 0xFF0000);
-createText("-Interested in regenerative landscapes and adaptive re-use", 0, 0xFF0000);
+// Gold Star Particle System
+const starGeometry = new THREE.PlaneGeometry(0.5, 0.5);
+const starMaterial = new THREE.MeshBasicMaterial({
+  color: 0xffd700,
+  transparent: true,
+  opacity: 0.8,
+  side: THREE.DoubleSide,
+  map: new THREE.TextureLoader().load('./smallstar__.png'),
+});
 
-// Camera positioning
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
+const stars = [];
+const numStars = 100;
 
-scene.position.x = -5;
-scene.position.z = 5;
-scene.position.y = -3;
+for (let i = 0; i < numStars; i++) {
+  const star = new THREE.Mesh(starGeometry, starMaterial);
+  star.position.set(
+    Math.random() * 20 - 10,
+    Math.random() * 20 + 10,
+    Math.random() * 20 - 10
+  );
+  star.scale.set(Math.random() * 0.5 + 0.5, Math.random() * 0.5 + 0.5, 1);
+  stars.push(star);
+  scene.add(star);
+}
 
+function animateStars() {
+  stars.forEach((star) => {
+    star.position.y -= 0.1;
+    if (star.position.y < -10) {
+      star.position.y = Math.random() * 20 + 10;
+      star.position.x = Math.random() * 20 - 10;
+      star.position.z = Math.random() * 20 - 10;
+    }
+  });
+}
+
+// Controls and Lighting
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-// Light setup
-const lightColor = 0xffffff;
-
-const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(lightColor, 1);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 6);
 directionalLight.position.set(5, 10, 5);
-directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
-scene.add(directionalLight.target);
 
-// Animation function
+// Variables to control the rotation speed
+let spinSpeed = 0.01;
+let pressCount = 0;
+
+window.addEventListener('keydown', (event) => {
+  if (event.code === 'Space') {
+    pressCount++;
+    if (pressCount === 1) {
+      spinSpeed = 0.1;
+    } else if (pressCount === 2) {
+      spinSpeed = 1.0;
+    } else if (pressCount === 3) {
+      spinSpeed = 0.01;
+      pressCount = 0;
+    }
+  }
+});
+
 function animate() {
   requestAnimationFrame(animate);
 
-  if (mesh) mesh.rotation.y += 0.01;
+  if (ufoMesh) {
+    ufoMesh.rotation.y += spinSpeed;
+  }
 
-  yellowCube.rotation.x += 0.0;
-  yellowCube.rotation.y += 0.1;
+  animateStars();
 
-  blueCube.rotation.x += 0.0;
-  blueCube.rotation.y -= 0.1;
-
-  redCube.rotation.x -= 0.0;
-  redCube.rotation.y -= 0.1;
-
-  greenCube.rotation.x += 0.0;
-  greenCube.rotation.y -= 0.1;
-
-  // Rotate the first knot mesh faster
-  knotMesh1.rotation.y += 0.05;
-
-  // Rotate the second knot mesh and make it orbit around the first one
-  knotMesh2.rotation.y += 0.02;
-
-  // Orbit the second mesh around the first knot mesh
-  knotMesh2.position.x = Math.cos(Date.now() * 0.001) * 15;
-  knotMesh2.position.z = Math.sin(Date.now() * 0.001) * 15;
-
+  controls.update();
   renderer.render(scene, camera);
 }
 
 animate();
 
-// Adjust the viewport to the size of the browser
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
   camera.aspect = size.width / size.height;

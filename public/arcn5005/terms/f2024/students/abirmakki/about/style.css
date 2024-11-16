@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-image: url('backdrop.jpg');
   background-size: cover;
@@ -118,4 +119,126 @@ p {
 .gallerypic {
   height: 400px;
   width: auto;
+=======
+body {
+  background-image: url('backdrop.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+}
+p {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+
+
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 10px 0;
+}
+.link {
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 16px;
+  color:#fff;
+}
+.link:hover {
+  color: rgb(178, 255, 255); /* The color you want when hovering */
+}
+.active {
+  text-decoration: white wavy underline;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+.flower {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+
+
+.intro-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 2%;
+  max-width: 80%;
+  margin-bottom: 2%;
+}
+.image-container {
+  flex: 1;
+  max-width: 500px;
+  margin-right: -50px;
+  position: relative;
+}
+.hellopic {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+.intro-container {
+  flex: 1;
+  padding: 15px;
+  position: relative;
+  margin-left: -20px;
+  z-index: 1;
+}
+
+
+
+.parent {
+  display: flex;
+  align-items: flex-end;
+}
+
+.container {
+  flex: 1;
+  max-width: 280px;
+  align-items: right;
+  margin-left: 12%;
+  }
+.wrapper {
+  margin-bottom: 5px;
+  }
+.input {
+  width: 100%;
+  background: #f5e8e8;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgba(150, 137, 173, 0.5);
+  color: #fff;
+  }
+
+
+.gallery-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: -150px;
+}
+.gallerypic {
+  height: 400px;
+  width: auto;
+>>>>>>> 52b7a4cc066f85dcc7817bdbee1d7c6109351948
 }  
