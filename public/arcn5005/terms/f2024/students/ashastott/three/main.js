@@ -5,8 +5,11 @@ const size = {
   height: window.innerHeight,
 };
 
-const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
+const fov = 75;
+const aspect = 2;
+const near = 0.1;
+const far = 2000;
+const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 
 const threeCanvas = document.getElementById("ashathree-canvas-f2024");
 console.log(threeCanvas);
@@ -20,33 +23,16 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-const grid = new THREE.GridHelper(10, 10);
-scene.add(grid);
-
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
-
 const radius = 1.5;  
 const widthSegments = 25;  
 const heightSegments = 20;
 const geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xe6e1d3 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
 
 const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
 yellowCube.position.y = 8;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
 
 scene.add(yellowCube);
 
@@ -76,7 +62,7 @@ let mesh;
 
 
 gltfLoader.load(
-  "./models copy/asha_and_chickens.glb",
+  "./models copy/bigchickenlittleasha.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 3;
@@ -91,9 +77,18 @@ gltfLoader.load(
   }
 );
 
+const rgbeLoader = new THREE.RGBELoader();
+rgbeLoader.load('./models copy/prairiefield.hdr', (texture) => {
+  texture.mapping = THREE.EquirectangularReflectionMapping;
+  scene.background = texture;
+  scene.environment = texture;
+}, undefined, (error) => {
+  console.error('Error loading the HDRI background:', error);
+});
+
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
+function createText(text, elevation = 0, textColor = "0x000000", size = 1) {
   const textValue = text;
   const textSize = size;
   fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
@@ -124,9 +119,9 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
 createText("click the chicken to lay an egg!", 25, "0Xa44706");
 createText("click backspace to reset!", 23, "0Xa44706");
 
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
+camera.position.z = 50;
+camera.position.x = 10;
+camera.position.y = 8;
 
 scene.position.x = -5;
 scene.position.z = 5;
@@ -135,13 +130,12 @@ scene.position.y = -3;
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
-//Creates the lights of the scene
 const lightColor = 0xffffff;
 
 const ambientLight = new THREE.AmbientLight(lightColor, 0.5);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionalLight(lightColor, 1);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 10, 5);
 directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
@@ -150,26 +144,16 @@ scene.add(directionalLight.target);
 function animate() {
   requestAnimationFrame(animate);
 
-  if (mesh) mesh.rotation.y += 0.01;
+  if (mesh) mesh.rotation.y += 0.009;
 
   yellowCube.rotation.x += 0.01;
   yellowCube.rotation.y += 0.01;
-
-  blueCube.rotation.x += 0.02;
-  blueCube.rotation.y -= 0.01;
-
-  redCube.rotation.x -= 0.01;
-  redCube.rotation.y -= 0.02;
-
-  greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
 
   renderer.render(scene, camera);
 }
 
 animate();
 
-//Adjust the viewport to the size of the browser
 window.addEventListener("resize", () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
