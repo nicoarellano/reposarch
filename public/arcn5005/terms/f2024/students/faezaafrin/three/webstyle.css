@@ -4,31 +4,50 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
 canvas {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
 }
 
-.header{
-    float: top;
-    background-color:#141414;
-    width:100%;
-    height: 100px ;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-.pagetitle{
-    padding: 15px;
-    color: azure;
-    font-family: Helvetica;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 60px;
+.header {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    padding: 20px 20px;
+    background-color: #1c1d1d;
+    color: white;
+}
+
+.pagetitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.music-button button {
+    background-color: white;
+    color: #1c1d1d;
+    border: 1px solid #1c1d1d;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.music-button button:hover {
+    background-color: rgb(252,76,220);
+    color: white;
 }
 
 .main-js {
