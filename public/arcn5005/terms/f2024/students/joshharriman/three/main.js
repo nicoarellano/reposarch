@@ -9,7 +9,7 @@ const aspect = size.width / size.height;
 const camera = new THREE.PerspectiveCamera(110, aspect, 1, 1000);
 
 //Sets up the renderer, fetching the canvas of the HTML
-const threeCanvas = document.getElementById("three-canvas-f2024");
+const threeCanvas = document.getElementById("three-canvas-josh");
 console.log(threeCanvas);
 
 const renderer = new THREE.WebGLRenderer({
@@ -23,33 +23,44 @@ document.body.appendChild(renderer.domElement);
 
 //Creates grids and axes in the scene
 const grid = new THREE.GridHelper(10, 10);
-scene.add(grid);
 
-const axes = new THREE.AxesHelper();
-axes.material.depthTest = false;
-axes.renderOrder = 1;
-scene.add(axes);
 
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+
+
+const verticesOfCube = [
+  -1,-1,-1,    1,-1,-1,    1, 1,-1,    -1, 1,-1,
+  -1,-1, 1,    1,-1, 1,    1, 1, 1,    -1, 1, 1,
+];
+
+const indicesOfFaces = [
+  2,1,0,    0,3,2,
+  0,4,7,    7,3,0,
+  0,1,5,    5,4,0,
+  1,2,6,    6,5,1,
+  2,3,7,    7,6,2,
+  4,5,6,    6,7,4
+];
+
+const geometry = new THREE.PolyhedronGeometry( verticesOfCube, indicesOfFaces, 6, 2 );
 
 const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
-const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x756D6D });
+const redMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
 const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
 
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
+const yellowIcosahedron = new THREE.Mesh(geometry, yellowMaterial);
 const blueCube = new THREE.Mesh(geometry, blueMaterial);
 const redCube = new THREE.Mesh(geometry, redMaterial);
 const greenCube = new THREE.Mesh(geometry, greenMaterial);
 
-yellowCube.position.z = -5;
-blueCube.position.x = -5;
-redCube.position.x = 5;
-greenCube.position.z = 5;
+yellowIcosahedron.position.z = -15;
+blueCube.position.x = -15;
+redCube.position.x = 15;
+greenCube.position.z = 15;
 
-scene.add(yellowCube);
+scene.add(yellowIcosahedron);
 scene.add(blueCube);
-// scene.add(redCube);
+scene.add(redCube);
 scene.add(greenCube);
 
 const gltfLoader = new THREE.GLTFLoader();
@@ -57,7 +68,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  "./models/scene4.glb",
+  "./models/scene8.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 5;
@@ -71,42 +82,6 @@ gltfLoader.load(
     console.error(error);
   }
 );
-
-const fontLoader = new THREE.FontLoader();
-
-function createText(text, elevation = 0, textColor = "0x000000", size = 5) {
-  const textValue = text;
-  const textSize = size;
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", function (font) {
-    const textGeo = new THREE.TextGeometry(textValue, {
-      font: font,
-      size: textSize,
-      height: 0.1,
-      curveSegments: 4,
-      bevelEnabled: true,
-      bevelThickness: 0.1,
-      bevelSize: 0.0,
-      bevelOffset: 0,
-      bevelSegments: 5,
-    });
-
-    const color = new THREE.Color();
-    color.setHex(textColor);
-    const textMaterial = new THREE.MeshLambertMaterial({ color: color });
-    const text = new THREE.Mesh(textGeo, textMaterial);
-
-    text.position.x = 2;
-    text.position.y = elevation;
-
-    scene.add(text);
-  });
-}
-
-createText("- Josh Harriman", 5, "0XFF00FF");
-createText("- From Maine", 3, "0XFF0000");
-createText("- Biological builder", 2, "0XFF0000");
-createText("- Ski instructor", 1, "0XFF0000");
-createText("- Neophyte programmer", 0, "0XFF0000");
 
 camera.position.z = 13;
 camera.position.x = 5;
@@ -136,8 +111,8 @@ function animate() {
 
   if (mesh) mesh.rotation.y += 0.01;
 
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
+  yellowIcosahedron.rotation.x += 0.01;
+  yellowIcosahedron.rotation.y += 0.01;
 
   blueCube.rotation.x += 0.02;
   blueCube.rotation.y -= 0.01;
