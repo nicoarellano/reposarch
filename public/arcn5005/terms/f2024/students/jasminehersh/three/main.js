@@ -21,36 +21,38 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
-//Creates grids and axes in the scene
+
 const grid = new THREE.GridHelper(10, 10);
 scene.add(grid);
+grid.visible = false;
+
 
 const axes = new THREE.AxesHelper();
 axes.material.depthTest = false;
 axes.renderOrder = 1;
 scene.add(axes);
 
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+const geometry = new THREE.SphereGeometry(1.5, 1.5, 1.5);
 
-const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffff00 });
-const blueMaterial = new THREE.MeshLambertMaterial({ color: 0x0000ff });
+const yellowMaterial = new THREE.MeshLambertMaterial({ color: 0xffc0cb });
+const blueMaterial = new THREE.MeshLambertMaterial({ color: 0xf0f8ff });
 const redMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
-const greenMaterial = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
+const greenMaterial = new THREE.MeshLambertMaterial({ color: 0xd2b48c });
 
-const yellowCube = new THREE.Mesh(geometry, yellowMaterial);
-const blueCube = new THREE.Mesh(geometry, blueMaterial);
-const redCube = new THREE.Mesh(geometry, redMaterial);
-const greenCube = new THREE.Mesh(geometry, greenMaterial);
+const yellowSphere = new THREE.Mesh(geometry, yellowMaterial);
+const blueSphere = new THREE.Mesh(geometry, blueMaterial);
+const redSphere = new THREE.Mesh(geometry, redMaterial);
+const greenSphere = new THREE.Mesh(geometry, greenMaterial);
 
-yellowCube.position.z = -3;
-blueCube.position.x = -3;
-redCube.position.x = 3;
-greenCube.position.z = 3;
+yellowSphere.position.z = -3;
+blueSphere.position.x = -3;
+redSphere.position.x = 3;
+greenSphere.position.z = 3;
 
-scene.add(yellowCube);
-scene.add(blueCube);
-// scene.add(redCube);
-scene.add(greenCube);
+scene.add(yellowSphere);
+scene.add(blueSphere);
+// scene.add(redSphere);
+scene.add(greenSphere);
 
 const gltfLoader = new THREE.GLTFLoader();
 
@@ -65,7 +67,7 @@ gltfLoader.load(
     mesh.scale.z = 9;
 
     mesh.position.x = 5
-    mesh.position.y = 5
+    mesh.position.y = 0
     mesh.position.z = 5
 
     scene.add(mesh);
@@ -84,7 +86,7 @@ gltfLoader.load(
       mesh.scale.z = 8;
   
       mesh.position.x = 4
-      mesh.position.y = 5
+      mesh.position.y = 0
       mesh.position.z = 5
   
       scene.add(mesh);
@@ -103,7 +105,7 @@ gltfLoader.load(
       mesh.scale.z = 7;
   
       mesh.position.x = 6
-      mesh.position.y = 5
+      mesh.position.y = 0
       mesh.position.z = 5
   
       scene.add(mesh);
@@ -122,7 +124,7 @@ gltfLoader.load(
       mesh.scale.z = 9;
   
       mesh.position.x = 4
-      mesh.position.y = 5
+      mesh.position.y = 0
       mesh.position.z = 4.5
 
   
@@ -132,9 +134,66 @@ gltfLoader.load(
     function (error) {
       console.error(error);
     }
+);
+gltfLoader.load(
+    "./birks.glb", 
+    function (gltf) {
+      mesh = gltf.scene;
+      mesh.scale.x =5;
+      mesh.scale.y = 5;
+      mesh.scale.z = 5;
+
+      mesh.position.x = 8
+  
+      scene.add(mesh);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
   );
 gltfLoader.load(
-    "./untitled.glb", 
+    "./blacksambashort.glb", 
+    function (gltf) {
+      mesh = gltf.scene;
+      mesh.scale.x =5;
+      mesh.scale.y = 5;
+      mesh.scale.z = 5;
+
+      mesh.position.x = 2
+      
+  
+      scene.add(mesh);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+);
+gltfLoader.load(
+    "./bluesamba.glb", 
+    function (gltf) {
+      mesh = gltf.scene;
+      mesh.scale.x =5;
+      mesh.scale.y = 5;
+      mesh.scale.z = 5;
+
+      mesh.position.x = 3
+  
+      scene.add(mesh);
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+);
+
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+gltfLoader.load(
+    "./tallblacksamba.glb", 
     function (gltf) {
       mesh = gltf.scene;
       mesh.scale.x =5;
@@ -147,8 +206,7 @@ gltfLoader.load(
     function (error) {
       console.error(error);
     }
-  );
-
+);
 const fontLoader = new THREE.FontLoader();
 
 function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
@@ -179,13 +237,13 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   });
 }
 
-createText("Jasmine Hersh", 5, "0XFF00FF");
-createText("- M.arch student at Carleton", 3, "0XFF0000");
-createText("- BA in Architecture, Univeristy of San Diego", 2, "0XFF0000");
+createText("Jasmine Hersh", 5, "000080");
+createText("- M.arch student at Carleton", 3, "	483D8B");
+createText("- BA in Architecture, University of San Diego", 2, "2F4F4F");
 
-camera.position.z = 13;
-camera.position.x = 5;
-camera.position.y = 2;
+camera.position.z = 26;
+camera.position.x = 10;
+camera.position.y = 4;
 
 scene.position.x = -5;
 scene.position.z = 5;
@@ -211,17 +269,17 @@ function animate() {
 
   if (mesh) mesh.rotation.y += 0.01;
 
-  yellowCube.rotation.x += 0.01;
-  yellowCube.rotation.y += 0.01;
+  yellowSphere.rotation.x += 0.01;
+  yellowSphere.rotation.y += 0.01;
 
-  blueCube.rotation.x += 0.02;
-  blueCube.rotation.y -= 0.01;
+  blueSphere.rotation.x += 0.02;
+  blueSphere.rotation.y -= 0.01;
 
-  redCube.rotation.x -= 0.01;
-  redCube.rotation.y -= 0.02;
+  redSphere.rotation.x -= 0.01;
+  redSphere.rotation.y -= 0.02;
 
-  greenCube.rotation.x += 0.02;
-  greenCube.rotation.y -= 0.01;
+  greenSphere.rotation.x += 0.02;
+  greenSphere.rotation.y -= 0.01;
 
   renderer.render(scene, camera);
 }
@@ -237,7 +295,7 @@ window.addEventListener("resize", () => {
   renderer.setSize(size.width, size.height);
 });
 const loader = new THREE.TextureLoader();
-const texture = loader.load("IMG_7055.jpg", () => {
+const texture = loader.load("IMG_1252.jpg", () => {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   texture.colorSpace = THREE.SRGBColorSpace;
   scene.background = texture;
