@@ -1,7 +1,7 @@
-.three-canvas {
+#MostafaCanvas {
   position: fixed;
-  /* top: 0; */
-  left: 220;
-  bottom: 100;
+  top: 0; 
+  left: 0;
+  bottom: 0;
   outline: none;
 }
