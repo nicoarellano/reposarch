@@ -15,7 +15,7 @@ export const classListf2024: Students = [
     lastName: 'Makki',
     firstName: 'Abir',
     email: 'AbirMakki@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101194124',
@@ -23,7 +23,7 @@ export const classListf2024: Students = [
     lastName: 'Gawlina',
     firstName: 'Alexis',
     email: 'ALEXISGAWLINA@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101352266',
@@ -39,7 +39,7 @@ export const classListf2024: Students = [
     lastName: 'Cusson',
     firstName: 'Andre',
     email: 'AndreCusson@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101351193',
@@ -79,7 +79,7 @@ export const classListf2024: Students = [
     lastName: 'Sproule',
     firstName: 'Christopher',
     email: 'ChristopherSproule@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '101078481',
@@ -87,7 +87,7 @@ export const classListf2024: Students = [
     lastName: 'Kendall',
     firstName: 'Daniel',
     email: 'DanielKendall@cunet.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101293693',
@@ -95,7 +95,7 @@ export const classListf2024: Students = [
     lastName: 'Avgerinos',
     firstName: 'Dennis',
     email: 'DennisAvgerinos@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three', 'bim'],
   },
   {
     id: '#101114665',
@@ -103,7 +103,7 @@ export const classListf2024: Students = [
     lastName: 'Afrin',
     firstName: 'Faeza',
     email: 'faezaafrin@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101185453',
@@ -167,7 +167,7 @@ export const classListf2024: Students = [
     lastName: 'Joudeh',
     firstName: 'Mais',
     email: 'MAISJOUDEH@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101183487',
@@ -183,7 +183,7 @@ export const classListf2024: Students = [
     lastName: 'Bdeir',
     firstName: 'Mostafa',
     email: 'MostafaBdeir@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101156529',
@@ -191,7 +191,7 @@ export const classListf2024: Students = [
     lastName: 'Perkins',
     firstName: 'Noah',
     email: 'NoahEPerkins@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101345562',
@@ -239,7 +239,7 @@ export const classListf2024: Students = [
     lastName: 'Coman',
     firstName: 'Tess',
     email: 'TessComan@cmail.carleton.ca',
-    assignments: ['about'],
+    assignments: ['about', 'three'],
   },
   {
     id: '#101159867',
