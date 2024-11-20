@@ -172,7 +172,7 @@ export const content: Toc = [
         emoji={'CAD ✏️💻'}
         title={
           <h4>
-            <b> un sistema CAD </b> es una combinación de hardware y software
+            <b> Un sistema CAD </b> es una combinación de hardware y software
             que Permite el modelado tridimensional de artefactos físicos,
             habilitando ingenieros y arquitectos para diseñar artefactos desde
             piezas simples hasta sistemas complejos.
