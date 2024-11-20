@@ -26,7 +26,7 @@ function ServerDay(
 
   const isSelected =
     !outsideCurrentMonth &&
-    highlightedDays.some((date) => date.isSame(day, 'day'));
+    highlightedDays.some((date) => date?.isSame(day, 'day'));
 
   const isClassDay = classDays.some(
     (classDay) => classDay && classDay.isSame(day, 'day')
