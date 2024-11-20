@@ -172,12 +172,13 @@ export const content: Toc = [
         emoji={'CAD ✏️💻'}
         title={
           <h4>
-            <b>A CAD system</b> is a combination of hardware and software that
-            allows three-dimensional modeling of physical artifacts, enabling
-            engineers and architects to design artifacts from simple parts to
-            complex systems. <br />
-            for example: Construction Detail → building element → space →
-            building → site → neibourhood → city
+            <b> Un sistema CAD </b> es una combinación de hardware y software
+            que Permite el modelado tridimensional de artefactos físicos,
+            habilitando ingenieros y arquitectos para diseñar artefactos desde
+            piezas simples hasta sistemas complejos.
+            <br />
+            Por ejemplo: Detalles de construcción → Elemento de construcción →
+            Espacio → Edificio → Sitio → Barrio → Ciudad
           </h4>
         }
       />
@@ -189,7 +190,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Drawing with Pixels ✏️</h2>
+        <h2>Dibujo con píxeles ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -230,7 +231,7 @@ export const content: Toc = [
   },
   {
     element: (
-      <EmojiTitle emoji={'Points ⚫  ⚫  ⚫'} title="¿Qué es un Punto?" />
+      <EmojiTitle emoji={'Puntos ⚫  ⚫  ⚫'} title="¿Qué es un Punto?" />
     ),
   },
   {
@@ -257,7 +258,9 @@ export const content: Toc = [
       />
     ),
   },
-  { element: <EmojiTitle emoji={'♾️'} title="What is a vector image?" /> },
+  {
+    element: <EmojiTitle emoji={'♾️'} title="¿Qué es una imagen vectorial?" />,
+  },
   {
     element: (
       <EmojiTitle
@@ -392,7 +395,7 @@ export const content: Toc = [
       />
     ),
   },
-  { element: <Degree /> },
+  // { element: <Degree /> },
   {
     element: (
       <Image
@@ -404,7 +407,7 @@ export const content: Toc = [
       />
     ),
   },
-  { element: <Curves /> },
+  // { element: <Curves /> },
   {
     element: (
       <EmojiTitle
@@ -447,8 +450,8 @@ export const content: Toc = [
             rendimiento del edificio
           </li>
           <li>
-            Los modelos 3D se pueden usar directamente en fabricación,
-            computadora numérica Control (CNC).
+            Los modelos 3D se pueden usar directamente en fabricación, Computer
+            Numeric Contorl (CNC).
           </li>
           <li> puede usarse para presentaciones y marketing. </li>
         </ul>
@@ -468,7 +471,7 @@ export const content: Toc = [
         <h2> 3 tipos de modelos 3D </h2>
         <br />
         <ul>
-          <li> Modelado de estructura alámbrica 🩻 </li>
+          <li> Modelado de Wireframe 🩻 </li>
           <li> Modelado de superficie 🐚 </li>
           <li> Modelado sólido 🪨 </li>
         </ul>
@@ -1343,12 +1346,12 @@ Pero luego, una cadena de eventos comenzó a abrir la puerta a alternativas \n \
       />
     ),
     notes:
-      "Open Engine: A common free open IFCJS-based technology stack (viewer and parser) \n\
-    Open Store: A marketplace where developers can sell tools, and users can buy them directly for use in their projects. \n\
-    Open Editor: A free web-based geometry editor (CLAY) that allows users to run all apps directly in their web browsers. \n\
-    Open Services: Processing, storage, and analytics services developed by That Open Company to help developers create and release software. \n\
-    That People Community: Meet other members, forums, chats, and meetings every six weeks within That Open Company's team to find out what's happening exclusively things while sharing opinions. \n\
-    Open University: A new(? rebranded) platform built by That Open Company to create a path from zero knowledge about programming to becoming a software developer in less time than possible, with teachers supporting students in their career paths.",
+      "Open Engine: Un conjunto de tecnologías abierta basada en IFCJS gratuita común (viewer and parser) \n\
+    Open Store: Un mercado donde los desarrolladores pueden vender herramientas, y los usuarios pueden comprarlas directamente para su uso en sus proyectos. \n\
+    Open Editor: Un editor gratuito de geometría basado en la web (Clay) que permite a los usuarios ejecutar todas las aplicaciones directamente en sus navegadores web. \n\
+    Open Services: Servicios de procesamiento, almacenamiento y análisis desarrollados por That Open Company para ayudar a los desarrolladores a crear y lanzar software. \n\
+    That People Community: Conocer a otros miembros, foros, chats y reuniones cada seis semanas dentro del equipo de That Open Company's Para averiguar qué está sucediendo exclusivamente cosas mientras comparte opiniones. \n\
+    Open University: Una nueva plataforma construida por That Open Company Para crear una ruta desde cero conocimiento sobre la programación hasta convertirse en desarrollador de software en menos tiempo que posible, con maestros que apoyan a los estudiantes en sus carreras profesionales.",
   },
   {
     element: (
