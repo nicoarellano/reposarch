@@ -24,10 +24,27 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m"
-        title="Web based mapping and Assignment 3"
-        caption={'Web based mapping and Assignment 3'}
+        src="https://www.youtube.com/embed/lFfr5UmHCFE?si=d4DH0oJC--MCQtRC"
+        title="Web-based OS mapping and GIS - Fall 2024"
+        caption={'Web-based OS mapping and GIS - Fall 2024'}
       />
+    ),
+  },
+  {
+    element: (
+      <div className="grow">
+        <h3>
+          🗺️ Homework: Watch this video and start creating a map using Maplibre
+          🌎
+        </h3>
+        <Video
+          src="https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709"
+          title="Assignment 3 - Create a Map application - Recording from Fall 2023"
+          caption={
+            'Assignment 3 - Create a Map application - Recording from Fall 2023'
+          }
+        />
+      </div>
     ),
   },
 
