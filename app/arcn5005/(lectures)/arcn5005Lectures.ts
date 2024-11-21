@@ -420,18 +420,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/lFfr5UmHCFE?si=d4DH0oJC--MCQtRC',
+        title: 'OS Maps, GIS and Map renderers - Fall 2024',
+        date: dayjs('2024/11/20'),
+      },
+      {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709',
         title: 'Assignment 3 - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m',
-        title: 'Web based mapping  - Fall 2023',
+        title: 'OS Maps, GIS and Map renderers  - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv',
-        title: 'Maps, GIS and Map renderers - Fall 2023',
+        title: 'OS Maps, GIS and Map renderers (infrastructure) - Fall 2023',
         date: dayjs('2023/09/25'),
       },
     ],
