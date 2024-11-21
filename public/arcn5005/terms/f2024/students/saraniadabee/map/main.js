@@ -21,6 +21,17 @@ const months = [
   'December'
 ];
 
+// Initialize bomb sound
+const bombSound = new Audio('./bomb.wav'); // Ensure correct path to the bomb.wav file
+
+// Play the bomb sound
+function playBombSound() {
+  bombSound.currentTime = 0; // Reset sound to the beginning
+  bombSound.play().catch((error) => {
+    console.error('Error playing bomb sound:', error);
+  });
+}
+
 function filterBy(month) {
   const filters = ['==', 'month', month];
   map.setFilter('eruption-circles', filters);
@@ -101,6 +112,9 @@ map.on('load', () => {
               .addEventListener('input', (e) => {
                   const month = parseInt(e.target.value, 10);
                   filterBy(month);
+
+                  // Play the bomb sound when the slider changes
+                  playBombSound();
               });
       })
       .catch((err) => console.error('Error loading GeoJSON:', err));
