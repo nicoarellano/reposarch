@@ -22,7 +22,7 @@ const months = [
 ];
 
 // Initialize bomb sound
-const bombSound = new Audio('./bomb.wav'); // Ensure correct path to the bomb.wav file
+const bombSound = new Audio('./Fire.wav'); // Ensure correct path to the bomb.wav file
 
 // Play the bomb sound
 function playBombSound() {
