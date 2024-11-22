@@ -1,7 +1,7 @@
 const map = new maplibregl.Map({
   container: 'map',
   style:
-    'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // ⚠️ Sarania, don't use this token, get your own at https://www.maptiler.com/ that one will work for development but not for production
+    'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // ⚠️⚠️ Sarania, don't use this token, get your own at https://www.maptiler.com/ that one will work for development but not for production
   center: [31.4606, 20.7927],
   zoom: 0.5,
 });
