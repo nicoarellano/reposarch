@@ -1,9 +1,10 @@
 const map = new maplibregl.Map({
   container: 'map',
   style:
-      'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+      'https://api.maptiler.com/maps/streets/style.json?key=v73CsWuZ4JslNyKg3ZEH',
   center: [31.4606, 20.7927],
   zoom: 0.5
+  
 });
 
 const months = [
