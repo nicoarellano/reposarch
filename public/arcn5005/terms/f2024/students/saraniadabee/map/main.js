@@ -1,10 +1,8 @@
 const map = new maplibregl.Map({
   container: 'map',
-  style:
-      'https://api.maptiler.com/maps/streets/style.json?key=v73CsWuZ4JslNyKg3ZEH',
+  style: 'https://api.maptiler.com/maps/backdrop/style.json?key=v73CsWuZ4JslNyKg3ZEH',
   center: [31.4606, 20.7927],
   zoom: 0.5
-  
 });
 
 const months = [
@@ -23,16 +21,16 @@ const months = [
 ];
 
 // Initialize bomb sound
-const bombSound = new Audio('./Fire.wav'); // Ensure correct path to the bomb.wav file
+const bombSound = new Audio('./Fire.wav'); // Ensure correct path to the sound file
 
-// Play the bomb sound
 function playBombSound() {
   bombSound.currentTime = 0; // Reset sound to the beginning
   bombSound.play().catch((error) => {
-    console.error('Error playing bomb sound:', error);
+      console.error('Error playing bomb sound:', error);
   });
 }
 
+// Filter the map based on the selected month
 function filterBy(month) {
   const filters = ['==', 'month', month];
   map.setFilter('eruption-circles', filters);
@@ -73,9 +71,9 @@ map.on('load', () => {
                       'interpolate',
                       ['linear'],
                       ['get', 'ExplosivityIndexMax'],
-                      0, '#FFF5F5',  
-                      2, '#FF9999',  
-                      4, '#FF4D4D',  
+                      0, '#FFF5F5',
+                      2, '#FF9999',
+                      4, '#FF4D4D',
                       6, '#FF0000'
                   ],
                   'circle-opacity': 0.75,
@@ -100,7 +98,7 @@ map.on('load', () => {
                   'text-size': 12
               },
               paint: {
-                  'text-color': 'rgba(0,0,0,0.)'
+                  'text-color': 'rgba(0,0,0,0)'
               }
           });
 
@@ -108,15 +106,48 @@ map.on('load', () => {
           filterBy(0);
 
           // Add event listener for the slider
-          document
-              .getElementById('slider')
-              .addEventListener('input', (e) => {
-                  const month = parseInt(e.target.value, 10);
-                  filterBy(month);
+          document.getElementById('slider').addEventListener('input', (e) => {
+              const month = parseInt(e.target.value, 10);
+              filterBy(month);
 
-                  // Play the bomb sound when the slider changes
-                  playBombSound();
+              // Play the bomb sound when the slider changes
+              playBombSound();
+          });
+
+          // Tooltip for displaying volcano information
+          const tooltip = document.getElementById('tooltip');
+
+          // Show tooltip on hover
+          map.on('mousemove', 'eruption-circles', (e) => {
+              const features = map.queryRenderedFeatures(e.point, {
+                  layers: ['eruption-circles']
               });
+
+              if (features.length > 0) {
+                  const feature = features[0];
+                  const { VolcanoName, ExplosivityIndexMax, StartDate, ContinuingEruption } = feature.properties;
+
+                  // Populate tooltip content
+                  tooltip.innerHTML = `
+                      <strong>${VolcanoName}</strong><br>
+                      Explosivity Index: ${ExplosivityIndexMax}<br>
+                      Start Date: ${StartDate}<br>
+                      Continuing Eruption: ${ContinuingEruption}
+                  `;
+
+                  // Position tooltip near the mouse pointer
+                  tooltip.style.left = `${e.originalEvent.clientX + 15}px`;
+                  tooltip.style.top = `${e.originalEvent.clientY + 15}px`;
+                  tooltip.style.display = 'block';
+              } else {
+                  tooltip.style.display = 'none';
+              }
+          });
+
+          // Hide tooltip when leaving the circles layer
+          map.on('mouseleave', 'eruption-circles', () => {
+              tooltip.style.display = 'none';
+          });
       })
       .catch((err) => console.error('Error loading GeoJSON:', err));
 });
