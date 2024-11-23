@@ -22,16 +22,15 @@ export const AnnouncementsF2024: Resources = [
     url: '',
   },
   {
+    title:
+      'Hi All, 🎥 the recordings have been posted. ⚠️ Please review the dates for Assignment 3 (Dec 04 at 23:59) and Final Assignment 3 (Dec 13th at 9am).',
+  },
+  {
     title: `2024/11/25: On Wednesday 27th we have our second and last quiz at 09:00 am it is open book and covers all the content until today. You will have 30 minutes to complete the quiz. The password is 'q2'. Good luck!.`,
-    url: 'https://brightspace.carleton.ca/d2l/lms/quizzing/user/quizzes_list.d2l?ou=207080',
+    url: 'https://brightspace.carleton.ca/d2l/lms/quizzing/user/quiz_summary.d2l?qi=149389&ou=287246',
   },
   {
-    title:
-      'Hi All, 🎥 the recordings have been posted. ⚠️ Please review the dates for Assignment 3 (Dec 04 at 23:59) and Final Assignment 3 (Dec 13th at 9am).',
-  },
-  {
-    title:
-      'Hi All, 🎥 the recordings have been posted. ⚠️ Please review the dates for Assignment 3 (Dec 04 at 23:59) and Final Assignment 3 (Dec 13th at 9am).',
+    title: 'You can review the assignment rubric in Brightspace.',
   },
   /*
   {
