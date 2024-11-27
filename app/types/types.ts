@@ -50,6 +50,7 @@ export interface Lecture {
   date?: Dayjs;
   toc: Toc;
   recordings?: Recording[];
+  visibleInToc?: boolean;
 }
 
 export type Lectures = Lecture[];

@@ -16,7 +16,7 @@ scene.add( light );
 // FPS CONTROLS
 
 
-
+// FPS CONTROLS
 
 
 //Sets up the renderer, fetching the canvas of the HTML
@@ -32,11 +32,13 @@ renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
+
+
 //SNOWFALL
 let particles;
 let positions = [], velocities = [];
 
-const numSnowflakes = 1500;
+const numSnowflakes = 55000;
 
 const maxRange = 100, minRange = maxRange/2;
 const minHeight = 50;
@@ -56,7 +58,7 @@ function addSnowflakes() {
     
     velocities.push(
       Math.floor(Math.random() * 6 - 3) * 0.1,
-      Math.floor(Math.random() * 5 + 0.12) * 0.18,
+      Math.floor(Math.random() * 5 + 0.12) * 0.01,
       Math.floor(Math.random() * 6 - 3) * 0.1);
   }
 
@@ -69,7 +71,7 @@ function addSnowflakes() {
     blending: THREE.AdditiveBlending,
     depthTest: false,
     transparent: true,
-    opacity: 0.7,
+    opacity: 0.9,
   });
 
   particles = new THREE.Points(geometry, flakeMaterial);
@@ -138,7 +140,7 @@ let mesh;
 
 
 gltfLoader.load(
-  "scenetest1.glb",
+  "scenetest3.glb",
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 3;
@@ -159,7 +161,7 @@ const fontLoader = new THREE.FontLoader();
 function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
   const textValue = text;
   const textSize = size;
-  fontLoader.load("Evil Empire_Regular.json", function (font) {
+  fontLoader.load("helvetiker_regular.typeface.json", function (font) {
     const textGeo = new THREE.TextGeometry(textValue, {
       font: font,
       size: textSize,
@@ -177,7 +179,8 @@ function createText(text, elevation = 0, textColor = "0x000000", size = 0.5) {
     const textMaterial = new THREE.MeshLambertMaterial({ color: color });
     const text = new THREE.Mesh(textGeo, textMaterial);
 
-    text.position.x = 2;
+    text.position.x = -16;
+    text.position.z = -5;
     text.position.y = elevation;
 
     scene.add(text);
@@ -190,15 +193,15 @@ loader.load('nightskypink.jpeg', function (texture) {
 });
 
 
-createText("Mostafa Bdeir", 4, "0Xff7a06");
-createText("- Art/Media Enthusiast", 3, "0X8200ff");
-createText("- Certified Trap Music Enjoyer", 2, "0X8200ff");
-createText("- M.Arch First Year at Carleton", 1, "0X8200ff");
-createText("- Boston Celtics Fan", 0, "0X009102");
+createText("Mostafa Bdeir", 7, "0Xff7a06");
+createText("- Art/Media Enthusiast", 6, "0X8200ff");
+createText("- Certified Trap Music Enjoyer", 5, "0X8200ff");
+createText("- M.Arch First Year at Carleton", 4, "0X8200ff");
+createText("- Boston Celtics Fan", 3, "0X009102");
 
-camera.position.z = 20;
-camera.position.x = 0;
-camera.position.y = 15;
+camera.position.z = 30;
+camera.position.x = 10;
+camera.position.y = 6;
 
 scene.position.x = -5;
 scene.position.z = 5;
