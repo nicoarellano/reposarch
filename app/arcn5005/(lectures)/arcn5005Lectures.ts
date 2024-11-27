@@ -488,10 +488,23 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
+    title: '🏁❓ Optional Final assignment review',
+    id: `final-review`,
+    url: `final-review`,
+    date: initialDate.add(14, 'week'),
+    content: final,
+    toc: [
+      {
+        title:
+          'Optional Final review: We will meet at the Zoom link and if there are questions about the final assignment we can go through them during that time',
+      },
+    ],
+  },
+  {
     title: '🏁 Final Presentation 🏁',
     id: `final`,
     url: `final`,
-    date: initialDate.add(14, 'week'),
+    date: initialDate.add(14, 'week').add(2, 'day'),
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
