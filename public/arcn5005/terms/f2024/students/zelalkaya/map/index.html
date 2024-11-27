@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>Zelal's assignment 3</title>
-</head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="style.css" />
+<title>Zelal's assignment 3</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <img class="profile-pic" src="avatar.jpg" width="100px"/>
-            <h1>Zelal Kaya</h1>
-            <ul class="assignments">      
+  <div class="container">
+    <div class="sidebar">
+        <img class="profile-pic" src="avatar.jpg" width="100px"/>
+        <h1>Zelal Kaya</h1>
+        <ul class="assignments">      
+            <button class="cta">
+                <span class="hover-underline-animation"> Assignment 1 </span>
+                <svg
+                  id="arrow-horizontal"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="10"
+                  viewBox="0 0 46 16"
+                >
+                  <path
+                    id="Path_10"
+                    data-name="Path 10"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    transform="translate(30)"
+                  ></path>
+                </svg>
+              </button>
+              
+              <ul class="assignments">
+           
                 <button class="cta">
-                    <span class="hover-underline-animation"> Assignment 1 </span>
+                  <span class="hover-underline-animation"> Assignment 2 </span>
+                  <svg
+                    id="arrow-horizontal"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="10"
+                    viewBox="0 0 46 16"
+                  >
+                    <path
+                      id="Path_10"
+                      data-name="Path 10"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      transform="translate(30)"
+                    ></path>
+                  </svg>
+                </button>
+                <ul class="assignments">
+           
+                  <button class="cta">
+                    <span class="hover-underline-animation"> Final </span>
                     <svg
                       id="arrow-horizontal"
                       xmlns="http://www.w3.org/2000/svg"
@@ -30,54 +74,9 @@
                       ></path>
                     </svg>
                   </button>
-                  
-                  <ul class="assignments">
-               
-                    <button class="cta">
-                      <span class="hover-underline-animation"> Assignment 2 </span>
-                      <svg
-                        id="arrow-horizontal"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="30"
-                        height="10"
-                        viewBox="0 0 46 16"
-                      >
-                        <path
-                          id="Path_10"
-                          data-name="Path 10"
-                          d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                          transform="translate(30)"
-                        ></path>
-                      </svg>
-                    </button>
-                    <ul class="assignments">
-               
-                      <button class="cta">
-                        <span class="hover-underline-animation"> Final </span>
-                        <svg
-                          id="arrow-horizontal"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="30"
-                          height="10"
-                          viewBox="0 0 46 16"
-                        >
-                          <path
-                            id="Path_10"
-                            data-name="Path 10"
-                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                            transform="translate(30)"
-                          ></path>
-                        </svg>
-                      </button>
-            </ul>
+        </ul>
     </div>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" rel="stylesheet"/>
-
-</head>
-<body>
-    <div id="map"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-    <script type="module" src="./main.js"></script>   
+<div id="map"></div>
+<script src="main.js"></script>
 </body>
 </html>
