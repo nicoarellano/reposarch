@@ -87,7 +87,7 @@ export const classListf2024: Students = [
     lastName: 'Fares',
     firstName: 'Maria',
     email: 'MARIAFARES@cmail.carleton.ca',
-    assignments: ['about', 'three'],
+    assignments: ['about', 'three', 'map'],
   },
   {
     id: '#101194124',
