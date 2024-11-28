@@ -1,6 +1,6 @@
 export const waffles = [
     {
-      name: "Waffle House #1745",
+      name: "Spawning Point",
       city: "Scranton",
       state: "Pennsylvania",
       image: "",
