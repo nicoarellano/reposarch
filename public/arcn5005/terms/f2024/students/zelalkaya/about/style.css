@@ -97,7 +97,7 @@ body {
 
 .main-content {
   flex-grow: 1;
-  padding: 50px;
+  padding: 20px;
   overflow-y: auto;
 }
 
@@ -179,8 +179,8 @@ p {
 }
 
 .slider-container {
-  height: 20%;
-  width: 45%;
+  height: 15%;
+  width: 40%;
   margin-top: 20px;
   position: relative;
   overflow: hidden;
@@ -198,8 +198,8 @@ p {
 }
 
 .slide img {
-  height: 20%;
-  width: 60%;
+  height: 15%;
+  width: 40%;
   object-fit: cover;
 }
 
@@ -210,7 +210,6 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 15px 20px;
   cursor: pointer;
   font-size: 18px;
   transition: background-color var(--transition-speed);
@@ -231,8 +230,8 @@ p {
 
 .about-and-photos {
   display: flex;
-  gap: 120px;
-  margin-top: 40px;
+  gap: 150px;
+  margin-top: 20px;
   align-items: start;
 }
 
@@ -244,7 +243,7 @@ p {
 
 .photos-section {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
   margin-left: 40px;
 }
 
@@ -256,10 +255,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   margin-top: 10px;
   padding: 0;
-  justify-content: flex-start;
+  width: 100%;
 }
 
 .example-2 .icon-content {
@@ -360,7 +358,6 @@ ul {
   background-color: #00a6ff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .prev {
     left: -40px;
