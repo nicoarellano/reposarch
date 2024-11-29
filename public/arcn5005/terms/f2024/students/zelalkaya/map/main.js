@@ -6,14 +6,18 @@ const map = new maplibregl.Map({
 });
 
 function addPointCoordinates(coordinates, properties) {
-  const el = document.createElement('div');
+  const el = document.createElement('img');
+  el.src = 'icon.png';
   el.className = 'marker';
-  el.style.backgroundImage = 'url(icon.png)';
-  el.style.backgroundSize = 'contain';
   el.style.width = '60px';
   el.style.height = '60px';
 
-  const marker = new maplibregl.Marker(el).setLngLat(coordinates).addTo(map);
+  const marker = new maplibregl.Marker({
+    element: el,
+    anchor: 'bottom', // This ensures the icon is positioned at its bottom point
+  })
+    .setLngLat(coordinates)
+    .addTo(map);
 
   marker.setPopup(
     new maplibregl.Popup().setHTML(`
@@ -192,14 +196,4 @@ map.on('load', () => {
 
 function addMarkerWithPopup(coordinates, popupText) {
   const el = document.createElement('div');
-  el.className = 'marker';
-  el.style.backgroundImage = 'url(icon.png)';
-  el.style.backgroundSize = 'contain';
-  el.style.width = '60px';
-  el.style.height = '60px';
-
-  new maplibregl.Marker(el)
-    .setLngLat(coordinates)
-    .setPopup(new maplibregl.Popup().setHTML(`<h3>${popupText}</h3>`))
-    .addTo(map);
 }
