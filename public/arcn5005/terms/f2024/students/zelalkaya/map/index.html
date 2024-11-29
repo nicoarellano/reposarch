@@ -5,16 +5,25 @@
 <link rel="stylesheet" href="style.css" />
 <title>Zelal's assignment 3</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
-<style>
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
+<link href='https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.css' rel='stylesheet' />
+<script src='https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.js'></script>
 </head>
 <body>
   <div class="container">
     <div class="sidebar">
+      <div class="spotify-section">
+        <img src="spotify.jpg" width="110px" style="display: block; margin: 0 auto;" />
+        <p style="text-align: center; margin-top: 10px; margin-bottom: 10px;">Landayn - Bright and breezy</p>
+        <section style="display: flex; align-items: center; justify-content: center;">
+        </section>
+        <section style="display: flex; align-items: center; margin-top: 10px;">
+            <div>
+                <audio controls style="width: 100%;">
+                    <source src="bright and breezy.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+    </div>
         <img class="profile-pic" src="avatar.jpg" width="100px"/>
         <h1>Zelal Kaya</h1>
         <ul class="assignments">      
@@ -35,7 +44,7 @@ body { margin: 0; padding: 0; }
                   ></path>
                 </svg>
               </button>
-              
+             
               <ul class="assignments">
            
                 <button class="cta">
@@ -75,8 +84,12 @@ body { margin: 0; padding: 0; }
                     </svg>
                   </button>
         </ul>
-    </div>
-<div id="map"></div>
+  </div>
+  <div class="main-content">
+    <div id="error-message"></div>
+  </div>
+  <div id="map"></div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>
