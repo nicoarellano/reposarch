@@ -1,11 +1,8 @@
-mapboxgl.accessToken =
-  'pk.eyJ1IjoiemFsaHJlIiwiYSI6ImNtNDAzZ2d1ZzI3Z2YyanEyZDR2ZDZvdnkifQ.qnveqoK2sUyurQd_kTO5lA';
-
-// ⚠️⚠️⚠️⚠️ ZELAL, please remember that we are using Maplibre not Mapbox. ⚠️⚠️⚠️⚠️
-const map = new mapboxgl.Map({
+const map = new maplibregl.Map({
   container: 'map',
   center: [-73.650944, 45.526555],
-  zoom: 11,
+  zoom: 10,
+  style: 'style.json',
 });
 
 function addPointCoordinates(coordinates, properties) {
@@ -16,10 +13,10 @@ function addPointCoordinates(coordinates, properties) {
   el.style.width = '60px';
   el.style.height = '60px';
 
-  const marker = new mapboxgl.Marker(el).setLngLat(coordinates).addTo(map);
+  const marker = new maplibregl.Marker(el).setLngLat(coordinates).addTo(map);
 
   marker.setPopup(
-    new mapboxgl.Popup().setHTML(`
+    new maplibregl.Popup().setHTML(`
             <h3>${properties.name}</h3>
             <p><strong>Type:</strong> ${properties.type}</p>
             <p><strong>Rating:</strong> ${properties.rating}</p>
@@ -168,7 +165,8 @@ map.on('load', () => {
         name: 'CAFÉ LÉO',
         type: 'cafe',
         rating: '3.8/5',
-        comment: 'pretty spacious space and they have a cool theme',
+        comment:
+          'great place for studying as their customers are mostly students',
         address: '1215 Rue Berri, Montréal, QC H2L 0H6',
         website: 'cafeleomtl.com/menu',
       },
@@ -200,8 +198,8 @@ function addMarkerWithPopup(coordinates, popupText) {
   el.style.width = '60px';
   el.style.height = '60px';
 
-  new mapboxgl.Marker(el)
+  new maplibregl.Marker(el)
     .setLngLat(coordinates)
-    .setPopup(new mapboxgl.Popup().setHTML(`<h3>${popupText}</h3>`))
+    .setPopup(new maplibregl.Popup().setHTML(`<h3>${popupText}</h3>`))
     .addTo(map);
 }
