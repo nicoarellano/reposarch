@@ -141,3 +141,28 @@ h1 {
     font-weight: 300;
     text-align: center;
 }
+
+.marker {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.maplibregl-canvas {
+    filter: grayscale(100%);
+}
+
+.sidebar .spotify-section {
+    margin-top: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar .spotify-section audio {
+    width: 60%;
+}
+
+.sidebar .spotify-section img {
+    max-width: 80%;
+    height: auto;
+}
