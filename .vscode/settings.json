@@ -1,6 +1,6 @@
 {
-    "liveServer.settings.port": 5502,
-    "githubPullRequests.ignoredPullRequestBranches": [
-        "dev"
-    ]
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true
 }
