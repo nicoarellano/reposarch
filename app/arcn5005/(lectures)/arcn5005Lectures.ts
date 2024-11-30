@@ -463,6 +463,11 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/b_bWEVienwU?si:eMKgj9UmEMZZcQjC',
+        title: 'Advanced toolbox and GH Pages - Fall 2024',
+        date: dayjs('2024/11/24'),
+      },
+      {
         url: 'https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt',
         title: 'Advanced toolbox',
         date: dayjs('2023/11/30'),
