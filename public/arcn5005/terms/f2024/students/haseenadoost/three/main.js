@@ -34,7 +34,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let ufoMesh;
 
 gltfLoader.load(
-  './finalhaseenaufolarge.glb',
+  './haseenaapplymodifiersmetallicc.glb',
   (gltf) => {
     ufoMesh = gltf.scene;
     ufoMesh.scale.set(3, 3, 3);
@@ -137,7 +137,7 @@ function animateStars() {
   });
 }
 
-// Controls and Lighting
+// Orbit and Light
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
