@@ -1,0 +1,56 @@
+import * as THREE from "three";
+import * as FRAGS from "@thatopen/fragments";
+import * as OBC from "@thatopen/components";
+import { Pass, FullScreenQuad } from "three/examples/jsm/postprocessing/Pass.js";
+export declare class CustomEffectsPass extends Pass {
+    components: OBC.Components;
+    resolution: THREE.Vector2;
+    renderScene: THREE.Scene;
+    renderCamera: THREE.Camera;
+    fsQuad: FullScreenQuad;
+    normalOverrideMaterial: THREE.ShaderMaterial;
+    glossOverrideMaterial: THREE.ShaderMaterial;
+    planeBuffer: THREE.WebGLRenderTarget;
+    glossBuffer: THREE.WebGLRenderTarget;
+    outlineBuffer: THREE.WebGLRenderTarget;
+    excludedMeshes: THREE.Mesh[];
+    outlinedMeshes: {
+        [name: string]: {
+            meshes: Set<THREE.InstancedMesh | THREE.Mesh | FRAGS.FragmentMesh>;
+            material: THREE.MeshBasicMaterial;
+        };
+    };
+    outlineScene: THREE.Scene;
+    private _outlineEnabled;
+    private _lineColor;
+    private _opacity;
+    private _tolerance;
+    private _glossEnabled;
+    private _glossExponent;
+    private _minGloss;
+    private _maxGloss;
+    get lineColor(): number;
+    set lineColor(lineColor: number);
+    get tolerance(): number;
+    set tolerance(value: number);
+    get opacity(): number;
+    set opacity(value: number);
+    get glossEnabled(): boolean;
+    set glossEnabled(active: boolean);
+    get glossExponent(): number;
+    set glossExponent(value: number);
+    get minGloss(): number;
+    set minGloss(value: number);
+    get maxGloss(): number;
+    set maxGloss(value: number);
+    get outlineEnabled(): boolean;
+    set outlineEnabled(active: boolean);
+    constructor(resolution: THREE.Vector2, components: OBC.Components, world: OBC.World, scene: THREE.Scene, camera: THREE.Camera);
+    dispose(): Promise<void>;
+    setSize(width: number, height: number): void;
+    render(renderer: THREE.WebGLRenderer, writeBuffer: any, readBuffer: any): void;
+    get vertexShader(): string;
+    get fragmentShader(): string;
+    createOutlinePostProcessMaterial(): THREE.ShaderMaterial;
+    private newRenderTarget;
+}
