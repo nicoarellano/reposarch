@@ -5,7 +5,7 @@ import Video from '@/components/Common/Video';
 import Quote from '@/components/Common/Quote';
 import EmojiTitle from '@/components/Common/EmojiTitle';
 import PdfViewer from '@/components/Common/PdfViewer';
-// import CartesianPlane from '@/components/CartesianPlane';
+import CartesianPlane from '@/components/CartesianPlane';
 
 import Cartography from './Cartography.mdx';
 import SimpleButton from '@/components/Common/SimpleButton';
@@ -164,12 +164,12 @@ export const content: Toc = [
     notes:
       'In the fifteenth century,  Albrecht Durer revolutionized drawing by adding precision and science to the process.',
   },
-  // {
-  //   element: <CartesianPlane />,
-  //   notes:
-  //     "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'\
-  //     The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637",
-  // },
+  {
+    element: <CartesianPlane />,
+    notes:
+      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'\
+      The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637",
+  },
 
   {
     element: <EmojiTitle emoji={'⛵🗺️'} title={'World mapping'} />,
