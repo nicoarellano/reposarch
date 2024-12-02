@@ -1,11 +1,50 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>alexisgawlina map page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+
+<head>
+
+    <title>Mapping</title>
+
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+      <meta charset='UTF-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <title>Final</title>
+      <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+        
+        #header {
+            font-family: 'roboto', sans serif;
+            background: #ffffff;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+
+        }
+    </style>
+
+<body>
+
+  <div class="buttonbox">
+    <a href="../about/index.html"><button id:"about-button">About</button></a>
+    <a href="../three/"><button id:"assignmen2-button">Assignment 2</button></a>
+  </div>
+  <div id="map"></div>
+  <script src="main.js"></script>
+
+</body>
+
 </html>

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+}
+
+.assignment2 {
+    width: 95%;
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    overflow: hidden;
+    gap: 2rem;
+}
+
+.about section {
+    background-color: #f1f1f1;
+    width: 70%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.vl {
+    border-left: 1px solid lightgray;
+    height: 150px;
+}
+
+.three-canvas {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    bottom: 0;
+    outline: none;
+}
+
+.header{
+    position: fixed;
+    top: 5%;
+    margin-left: 20px;
+    display: flex;
+    z-index: 10;
+    font-family: "podium-soft-variable",sans-serif;
+    font-variation-settings: 'wdth' 80;
+    color: #ffffff;
+      }
+
+
+.button-container {
+    position: fixed;
+    top: 8%;
+    margin-left: 50;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+  }
+  
+  .button-container button {
+    padding: 20px;
+    display: block;
+    border: none;
+    font-family: "podium-soft-variable",sans-serif;
+    font-weight: 150;
+    font-size: 20px;
+    background: #ffffff;
+    color: #000000;
+    transition: background-color 0.5s, color 3s;
+  }
+  
+  .button-container button:hover {
+    background: #000000;
+    color: #c3e700;
+    cursor: pointer;
+  }
+
