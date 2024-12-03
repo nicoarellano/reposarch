@@ -1,0 +1,72 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-123.015, 49.250]
+        },
+        "properties": {
+          "name": "Burnaby Hospital",
+          "category": "Healthcare"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.971, 49.277]
+        },
+        "properties": {
+          "name": "Burnaby North Secondary School",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.8677, 49.139]
+        },
+        "properties": {
+          "name": "Dr. FD Sinclair Elementary",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-71.27, 46.78]
+        },
+        "properties": {
+          "name": "Laval University",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.40, 43.659]
+        },
+        "properties": {
+          "name": "University of Toronto",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.698, 45.383]
+        },
+        "properties": {
+          "name": "Carleton University",
+          "category": "School"
+        }
+      }
+    ]
+  }
+  
