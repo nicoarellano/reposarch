@@ -582,18 +582,11 @@ export const content: Toc = [
           </li>
           <li>
             Puede ser geométrico y físicamente incorrecto, sin propiedades de
-            masa definida y sin espesor.Esto le da al diseñador el único
-            Capacidad para modificar el modelo de manera que los modelos sólidos
-            sean incapaces.
+            masa definida y sin espesor. Esto le da al diseñador una capacidad
+            única para modificar el modelo algo que no es posible con modelos
+            sólidos.
           </li>
-          <li>
-            {' '}
-            no se puede cortar en rodajas como sus contrapartes sólidas → Hollow{' '}
-          </li>
-          <li>
-            Utiliza nurbs, b-splines y ecuaciones de beyer para definir el
-            Características de su objeto de aparición sólido
-          </li>
+          <li>no se pueden seccionar como los sólidas ya que estan huecos</li>
         </ul>
       </>
     ),
@@ -619,8 +612,8 @@ export const content: Toc = [
               <li> u isocurve </li>
               <li> V isocurve </li>
               <li> coordenadas UV </li>
-              <li> Plano perpendicular </li>
-              <li> Vector normal </li>
+              <li> plano perpendicular </li>
+              <li> vector normal </li>
             </ol>
           </div>
           <div className="w-[1000px]">
@@ -634,7 +627,7 @@ export const content: Toc = [
       </div>
     ),
     notes:
-      'Una superficie es una forma matemática definida por una función y dos parámetros, en lugar de T para curvas, usamos U y V para describir el espacio de parámetros correspondiente.Esto significa que tenemos más datos geométricos para extraer cuando trabajamos con este tipo de geometría.Por ejemplo, las curvas tienen vectores tangentes y planos normales (que pueden girar o girar a lo largo de la longitud de la curva), mientras que las superficies tienen vectores normales y planos tangentes que serán consistentes en su orientación.',
+      'Una superficie es una forma matemática definida por una función y dos parámetros, en lugar de T para curvas, usamos U y V para describir el espacio de parámetros correspondiente. Esto significa que tenemos más datos geométricos para extraer cuando trabajamos con este tipo de geometría. Por ejemplo, las curvas tienen vectores tangentes y planos normales (que pueden girar o  lo largo de la longitud de la curva), mientras que las superficies tienen vectores normales y planos tangentes que serán consistentes en su orientación.',
   },
   {
     element: (
@@ -642,7 +635,7 @@ export const content: Toc = [
         src="/images/cad-bim/surface-domain.png"
         alt={'Surface Domain'}
         caption={
-          'Un dominio de la superficie se define como el rango de parámetros (U, V) que se evalúan en un punto tridimensional en esa superficie.El dominio en cada dimensión (u o v) generalmente se describe como dos números (u min a u max) y (v min a v max).- Fuente: Dynamo Primer '
+          'el "domain" o dominio de la superficie se define como el rango de parámetros (U, V) que se evalúan en un punto tridimensional en esa superficie. El dominio en cada dimensión (u o v) generalmente se describe como dos números (u min a u max) y (v min a v max).- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -651,9 +644,9 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/nurbs-surfaces.png"
-        alt={'Nurbs Surfaces'}
+        alt={'NURBS Surfaces'}
         caption={
-          'Las superficies de NURBS son muy similares a las curvas de Nurbs.Puede pensar en las superficies de Nurbs como una cuadrícula de curvas de Nurbs que van en dos direcciones.La forma de una superficie de NURBS se define por una serie de puntos de control y el grado de esa superficie en las direcciones U y V.Los mismos algoritmos se utilizan para calcular la forma, las normales, las tangentes, las curvaturas y otras propiedades a través de puntos de control, pesos y grado.En el caso de las superficies de Nurbs, hay dos direcciones implicadas por la geometría, porque las superficies de Nurbs son, independientemente de la forma que veamos, redes rectangulares de puntos de control.Y a pesar de que estas direcciones a menudo son arbitrarias en relación con el sistema de coordenadas mundiales, las usaremos con frecuencia para analizar nuestros modelos o generar otra geometría basada en la superficie.- Fuente: Dynamo Primer '
+          'Las superficies de NURBS son muy similares a las curvas de NURBS. Puede pensar en las superficies de NURBS como una cuadrícula de curvas de NURBS que van en dos direcciones.La forma de una superficie de NURBS se define por una serie de puntos de control y el grado de esa superficie en las direcciones U y V.Los mismos algoritmos se utilizan para calcular la forma, las normales, las tangentes, las curvaturas y otras propiedades a través de puntos de control, pesos y grado.En el caso de las superficies de NURBS, hay dos direcciones implicadas por la geometría, porque las superficies de NURBS son, independientemente de la forma que veamos, redes rectangulares de puntos de control.Y a pesar de que estas direcciones a menudo son arbitrarias en relación con el sistema de coordenadas mundiales, las usaremos con frecuencia para analizar nuestros modelos o generar otra geometría basada en la superficie.- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -664,7 +657,7 @@ export const content: Toc = [
         src="/images/cad-bim/polysurface.png"
         alt={'Polysurfaces'}
         caption={
-          'Polysurfaces están compuestas de superficies que se unen a través de un borde.Los polisuperfaces ofrecen una definición de UV más de dos dimensiones, ya que ahora podemos movernos a través de las formas conectadas a través de su topología.A veces llamados parches, unir superficies de esta manera nos permite hacer formas más complejas y definir detalles en la costura.Convenientemente, podemos aplicar un filete o una operación de chaflán en los bordes de una polisureza.- Fuente: Dynamo Primer '
+          'Las "Polysurfaces" o polisuperficies están compuestas de superficies que se unen a través de un borde.Los polisuperfaces ofrecen una definición de UV más de dos dimensiones, ya que ahora podemos movernos a través de las formas conectadas a través de su topología.A veces llamados parches, unir superficies de esta manera nos permite hacer formas más complejas y definir detalles en la costura.Convenientemente, podemos aplicar un filete o una operación de chaflán en los bordes de una polisureza.- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -672,7 +665,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2> modelo 3D sólido 🪨 </h2>
+        <h2>Modelo 3D sólido 🪨 </h2>
         <br />
         <ul>
           <li>
@@ -750,7 +743,7 @@ export const content: Toc = [
         src="/images/cad-bim/solid-boolean.png"
         alt={'Solid Boolean Operations'}
         caption={
-          'Hay tres operaciones booleanas sólidas que distinguen qué partes de la geometría se mantienen.1. Unión: Retire las porciones superpuestas de los sólidos y unirse a un solo sólido.2. Diferencia: reste un sólido de otro.El sólido a restarse se conoce como una herramienta.Tenga en cuenta que puede cambiar qué sólido es la herramienta para mantener el volumen inverso.3. Intersección: mantenga solo el volumen de intersección de los dos sólidos.- Fuente: Dynamo Primer '
+          'Hay tres operaciones booleanas sólidas que distinguen qué partes de la geometría se mantienen. 1. Unión: Retire las porciones superpuestas de los sólidos y unirse a un solo sólido. 2. Diferencia: reste un sólido de otro. El sólido a restarse se conoce como una herramienta. Tenga en cuenta que puede cambiar qué sólido es la herramienta para mantener el volumen inverso. 3. Intersección: mantenga solo el volumen de intersección de los dos sólidos.- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -778,7 +771,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2> Comparación de métodos de modelado sólido </h2>
+        <h2>Comparación de métodos de modelado sólido </h2>
         <br />
         <table className="simple-table">
           <thead>
@@ -797,13 +790,13 @@ export const content: Toc = [
             <th> validez </th>
             <td> siempre válido </td>
             <td> siempre válido </td>
-            <td> No siempre válido </td>
+            <td> no siempre válido </td>
           </tr>
           <tr>
-            <th> ineambiganza </th>
+            <th> inambiguo </th>
             <td> ambiguo </td>
             <td> siempre inequívoco </td>
-            <td> Los repeticiones B válidas son inequívocas. </td>
+            <td> los repeticiones B válidas son inequívocas. </td>
           </tr>
           <tr>
             <th> concisión </th>
@@ -827,7 +820,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      'No hace falta decir que está claro ver por qué CAD fue adoptado en tantas industrias.Prácticamente todo en el mundo moderno se crea utilizando tecnología CAD, porque su proceso de diseño es muy elegante y tan poderoso.Obviamente, los pros y los contras de CAD son susceptibles al cambio.CAD todavía está evolucionando, y con él, también lo harán sus ventajas y desventajas.Una década más adelante, ¿quién puede decir de qué CAD será capaz o no?',
+      'No hace falta decir que está claro ver por qué CAD fue adoptado en tantas industrias. Prácticamente todo en el mundo moderno se crea utilizando tecnología CAD, porque su proceso de diseño es muy elegante y tan poderoso. Obviamente, los pros y los contras de CAD son susceptibles al cambio. las technologias CAD todavía están evolucionando, y con ellas, también lo harán sus ventajas y desventajas. Una década más adelante, ¿quién puede decir de qué CAD será capaz o no?',
   },
   {
     element: (
@@ -875,7 +868,7 @@ export const content: Toc = [
           alt={'QCad'}
           href="https://www.qcad.org/en/"
           caption={
-            'Qcad es otra alternativa de código libre y abierto a AutoCAD'
+            'QCAD es otra alternativa de código libre y abierto a AutoCAD'
           }
         />
       </>
@@ -1091,7 +1084,7 @@ export const content: Toc = [
     ),
     notes:
       'Mandatos BIM gubernamentales.\
-Los países de toda la palabra se están convirtiendo en regular el uso de BIM.Entonces, si uno quiere participar en obras públicas e incluso proyectos no públicos, BIM es un requisito.\
+En muchos paises se esta mandatando el uso de BIM. Entonces, si uno quiere participar en obras públicas e incluso proyectos no públicos, BIM es un requisito.\
 Lo que significa que BIM ya no es una opción, sino un mandato.\
 Sabiendo que el software BIM está controlado principalmente por algunos proveedores, esto significa que estas compañías de software tendrán un tremendo impacto en nuestra práctica.',
   },
@@ -1112,7 +1105,7 @@ Sabiendo que el software BIM está controlado principalmente por algunos proveed
   {
     element: (
       <>
-        <h2>Open-source Alternatives? 💸</h2>
+        <h2>Alternativas de código abiertas para BIM? 💸</h2>
         <br />
         <Image
           src="/images/cad-bim/blenderbim.png"
@@ -1344,10 +1337,10 @@ GLTF 2.0 ha sido lanzado como el estándar internacional ISO 12113: 2022.',
       />
     ),
     notes:
-      'Sin embargo, antes de finales de 2019, imaginar una alternativa al software patentado para la industria de la AEC era un desafío. \n\
-La industria era (y sigue siendo) demasiado dependiente de las soluciones del proveedor principal. \n\
-Pero luego, una cadena de eventos comenzó a abrir la puerta a alternativas \n \
-→ En octubre de 2019 Dion Moult libera Blenderbim \n \
+      'Antes del final de 2019, imaginar una alternativa al software patentado para la industria de la AECO era un casi imposible. \n\
+La industria era (y sigue siendo) demasiado dependiente de las soluciones del las grandes empresas proveedoras de software CAD y BIM. \n\
+Pero luego, una serie de eventos comenzó a abrir la puerta a alternativas \n \
+→ En octubre de 2019 Dion Moult libera Blenderbim (ahra BonsaiBIM) \n \
 → En febrero de 2020, se crea el OS Arch: Osarch, es una comunidad en línea que promueve que el entorno construido se puede diseñar, construir, operar y reciclar con software gratuito/libre y de código abierto. \n \
 → En julio de 2020, varias firmas líderes de AEC del Reino Unido e Internacional escribieron una carta abierta a los cambios exigentes de Autodesk relacionados con costos, licencias y prácticas comerciales \n\
 → En diciembre de 2020 se lanza la Biblioteca IFC.JS.La primera biblioteca en línea de Floss para trabajar con BIM e IFC. \n\
