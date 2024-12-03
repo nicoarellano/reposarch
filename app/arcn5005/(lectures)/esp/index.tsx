@@ -112,9 +112,9 @@ export const content: Toc = [
     notes:
       'Las GUIs rápidamente se convirtieron en "el único uso del computador que la mayoría de la gente había conocido".',
   },
-  {
-    element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
-  },
+  // {
+  //   element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
+  // },
   {
     element: (
       <Image
@@ -1412,6 +1412,11 @@ Pero luego, una serie de eventos comenzó a abrir la puerta a alternativas \n \
     ),
   },
   {
-    element: <PdfViewer src="/resources/Blender+2.9+Shortcuts+v1.1.pdf" />,
+    element: (
+      <PdfViewer src="/resources/CH_EJERC05_Subir modelos a internet.pdf" />
+    ),
   },
+  // {
+  //   element: <PdfViewer src="/resources/Blender+2.9+Shortcuts+v1.1.pdf" />,
+  // },
 ];
