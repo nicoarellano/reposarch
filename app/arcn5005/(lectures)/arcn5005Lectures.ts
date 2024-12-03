@@ -549,14 +549,15 @@ export const arcn5005Lectures: Lectures = [
     content: esp,
     visibleInToc: false,
     toc: [
-      { title: 'Herramientas digitales para AEC' },
+      { title: 'Herramientas digitales para AECO' },
       { title: 'Procesos de representación: CAD, 3D CAD, BIM' },
-      { title: 'Software patentado' },
+      { title: 'Software propietario o patentado' },
       { title: 'WebGL - Gráficos 3D basados ​​en la web' },
-      { title: 'GLTF' },
-      { title: 'Tree.js' },
-      { title: 'That Open' },
-
+      { title: 'Formatos de codigo abierto - GLTF, IFC' },
+      {
+        title:
+          'Librerias de codigo abierto - Tree.js, IFC.js, That Open Engine',
+      },
       { title: '🖥️ Lab 3: Blender, Bonsaibim, SketchFab, Three.js, That Open' },
     ],
   },

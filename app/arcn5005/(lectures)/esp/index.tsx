@@ -34,23 +34,32 @@ export const content: Toc = [
         />
         <Quote
           quote={
-            'El arquitecto necesita las herramientas adecuadas para el trabajo. [...] La herramienta más nueva, la computadora, es realmente una caja de herramientas completamente nueva llena de software para resolver problemas antiguos y nuevos.'
+            'The architect needs the right tools for the job. [...] The newest tool, the computer, is really an entirely new toolbox full of software to solve old and new problems.'
           }
           author={'Susan Piedmont Palladino - Tools of the Imagination'}
         />
       </>
     ),
+    notes:
+      'El arquitecto necesita las herramientas adecuadas para el trabajo. [...] La herramienta más nueva, el computador, es realmente una caja de herramientas completamente nueva llena de software para resolver problemas antiguos y nuevos.',
   },
 
   {
     element: (
       <Quote
         quote={
-          'Es a través del dominio de toda la gama de herramientas que las imágenes en la mente del arquitecto se traducen en dibujos y modelos, y de los dibujos y modelos en edificios. Ya sea un simple lápiz o software de computadora, estas herramientas dan forma a los deseos y las instrucciones del arquitecto, pero también son moldeadores activos de lo que es posible.'
+          'It is through the mastery of the full range of tools that the images \
+          in the architect’s mind are translated into drawings and models, and \
+          from the drawings and the models into buildings. Whether a simple \
+          pencil or computer software, these tools give form to the wishes and \
+          the instructions of the architect, but they are also active shapers of \
+          what is possible.'
         }
         author={'Susan Piedmont Palladino - Tools of the Imagination'}
       />
     ),
+    notes:
+      'Es a través del dominio de toda la gama de herramientas que las imágenes en la mente del arquitecto se traducen en dibujos y modelos, y de los dibujos y modelos en edificios. Ya sea un simple lápiz o software en un computador, estas herramientas dan forma a los deseos y las instrucciones del arquitecto, pero también son moldeadores activos de lo que es posible.',
   },
   {
     element: (
@@ -61,11 +70,11 @@ export const content: Toc = [
       />
     ),
     notes:
-      'En 1963, Ivan Sutherland en el MIT desarrolló un programa llamado "Sketchpad", que puede considerarse como el primer programa de dibujo por computadora o la primera interfaz gráfica de usuario (GUI).\
-       Las GUIs son dispositivos de interacción humano-computadora que permiten a los usuarios interactuar con la computadora a través de íconos gráficos en lugar de código escrito.\
+      'En 1963, Ivan Sutherland en el MIT desarrolló un programa llamado "Sketchpad", que puede considerarse como el primer programa de dibujo por computador o la primera interfaz gráfica de usuario (GUI).\
+       Las GUIs son dispositivos de interacción humano-computador que permiten a los usuarios interactuar con el computador a través de íconos gráficos en lugar de código escrito.\
        Con una GUI, el usuario puede hacer clic o tocar y manipular los símbolos mostrados en la pantalla y, por lo tanto, alterar directamente el programa.\
-       Las GUIs hicieron que las computadoras fueran más accesibles para los no programadores, incluidos los arquitectos.\
-       Desde entonces, las GUIs son ciertamente el vehículo preferido para que los arquitectos interactúen con las computadoras.',
+       Las GUIs hicieron que las technologias digitales fueran más accesibles para los no programadores, incluidos los arquitectos.\
+       Desde entonces, las GUIs son ciertamente el vehículo preferido para que los arquitectos interactúen con las technologias digitales.',
   },
   {
     element: (
@@ -80,24 +89,28 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          'Sketchpad fue pionero en la interfaz gráfica de usuario (GUI), que permite \
-          la interacción con el mundo virtual sin escribir largas cadenas de \
-          comandos codificados. En su lugar, el usuario apunta, hace clic y doble clic en \
-          las pantallas de íconos, las herramientas virtuales en la pantalla.'
+          'Sketchpad pioneered the graphical user interface (GUI), which allows \
+          interaction with the virtual world without typing in long strings of \
+          coded commands. Instead, the user points, clicks, and double-clicks on \
+          displays of icons, the virtual tools on the screen.'
         }
-        author={'Susan Piedmont Palladino - Herramientas de la imaginación'}
+        author={'Susan Piedmont Palladino - Tools of the Imagination'}
       />
     ),
+    notes:
+      'Sketchpad fue pionero en la interfaz gráfica de usuario (GUI), que permite la interacción con el mundo virtual sin escribir largas cadenas de comandos codificados. En su lugar, el usuario apunta, hace clic y doble clic en las pantallas de íconos, las herramientas virtuales en la pantalla.',
   },
   {
     element: (
       <Quote
         quote={
-          "Las GUIs rápidamente se convirtieron en 'el único uso de la computadora que la mayoría de la gente había conocido'"
+          'GUIs quickly became "the only computer use that most people had ever known"'
         }
         author={'Mario Carpo - Digital Turn'}
       />
     ),
+    notes:
+      'Las GUIs rápidamente se convirtieron en "el único uso del computador que la mayoría de la gente había conocido".',
   },
   {
     element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
@@ -124,7 +137,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      'Carpo dice que las GUI rápidamente se convirtieron en "el único uso de la computadora que la mayoría de la gente había conocido”.\
+      'Como mencione antes, Carpo dice que las GUI rápidamente se convirtieron en "el único uso del computador que la mayoría de la gente había conocido”.\
       Este fue el momento en que, para la mayoría de los arquitectos, la programación dejó de ser un lenguaje abierto para interactuar con la máquina, y así se convirtió en una herramienta.\
       En algunos casos, una herramienta accesible, pero en la mayoría de los casos, una completamente opaca.',
   },
@@ -200,7 +213,7 @@ export const content: Toc = [
     ),
     notes:
       "Un píxel (px) (abreviatura de 'elemento de imagen') es el punto o cuadrado más pequeño direccionable que compone una imagen raster digital en un dispositivo de visualización.\
-      Cuantos más píxeles, mejor resolución de imagen. La resolución de imagen de un monitor de computadora, teléfono inteligente o pantalla de TV, se refiere al número de píxeles. \
+      Cuantos más píxeles, mejor resolución de imagen. La resolución de imagen de un monitor de un computador, teléfono inteligente o pantalla de TV, se refiere al número de píxeles. \
       La intensidad de cada píxel es variable. \
       En los sistemas de imágenes en color, un color se representa típicamente por tres o cuatro intensidades de componentes como rojo, verde y azul (RGB), o cian, magenta, amarillo y negro.",
   },
@@ -810,11 +823,13 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          'No hace falta decir que está claro ver por qué CAD fue adoptado en tantas industrias.Prácticamente todo en el mundo moderno se crea utilizando tecnología CAD, porque su proceso de diseño es muy elegante y tan poderoso.Obviamente, los pros y los contras de CAD son susceptibles al cambio.CAD todavía está evolucionando, y con él, también lo harán sus ventajas y desventajas.Una década más adelante, ¿quién puede decir de qué CAD será capaz o no?'
+          'Needless to say, it’s clear to see why CAD was adopted across so many industries. Virtually everything in the modern world is created using CAD technology, because its design process is so sleek and so powerful. Obviously, the pros and cons of CAD are susceptible to change. CAD is still evolving, and with it, so too will its advantages and disadvantages. A decade down the line, who’s to say what CAD will or won’t be capable of? '
         }
         author={'https://www.scan2cad.com/blog/cad/cad-evolved-since-1982/'}
       />
     ),
+    notes:
+      'No hace falta decir que está claro ver por qué CAD fue adoptado en tantas industrias.Prácticamente todo en el mundo moderno se crea utilizando tecnología CAD, porque su proceso de diseño es muy elegante y tan poderoso.Obviamente, los pros y los contras de CAD son susceptibles al cambio.CAD todavía está evolucionando, y con él, también lo harán sus ventajas y desventajas.Una década más adelante, ¿quién puede decir de qué CAD será capaz o no?',
   },
   {
     element: (
@@ -931,31 +946,37 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          'para clientes de estate-holding clients,BIM ofrece no solo la posibilidad de una construcción más rápida, más barata y de mejor calidad, sino también una base de datos de información de operación y mantenimiento para respaldar el ciclo de vida.Los clientes que han preferido o requerido estándares para sus propiedades pueden mantener estos estándares en una biblioteca BIM de elementos modelo y proporcionarles a los equipos de diseño de diseño para incorporar a los proyectos '
+          'For estate-holding clients, BIM offers not just the possibility of faster, cheaper and better quality construction but also a database of operation and maintenance information to support the life cycle. Clients who have preferred or required standards for their properties can hold these standards in a BIM library of model elements and provide them to design-build teams to incorporate into projects.'
         }
         author={'Saxon'}
       />
     ),
+    notes:
+      'Para clientes de estate-holding clients, BIM ofrece no solo la posibilidad de una construcción más rápida, más barata y de mejor calidad, sino también una base de datos de información de operación y mantenimiento para respaldar el ciclo de vida. Los clientes que han preferido o requerido estándares para sus propiedades pueden mantener estos estándares en una biblioteca BIM de elementos modelo y proporcionarles a los equipos de diseño de diseño para incorporar a los proyectos',
   },
   {
     element: (
       <Quote
         quote={
-          'La llegada de BIM marca un interruptor para la industria de la construcción de considerar los edificios como proyectos para considerarlos como activos.El modelo circular del ciclo de vida de los activos reemplaza el modelo lineal de un proyecto '
+          'The arrival of BIM marks a switch for the construction industry from considering buildings as projects to considering them as assets. The circular model of the asset life cycle replaces the linear model of a project'
         }
         author={'Saxon'}
       />
     ),
+    notes:
+      'La llegada de BIM marca un cambio para la industria de la construcción de considerar los edificios como proyectos para considerarlos como activos digitales. El modelo circular del ciclo de vida de los activos reemplaza el modelo lineal de un proyecto',
   },
   {
     element: (
       <Quote
         quote={
-          'BIM consiste en una base de datos digital de un edificio particular que contiene información sobre sus objetos.Esto puede incluir su geometría (generalmente definida por reglas paramétricas), su rendimiento, su planificación, su construcción y luego su funcionamiento.Un modelo Revit® y un modelo digital Project® de un edificio son ejemplos de modelos de edificios.El "modelo de construcción" puede considerarse el reemplazo de la próxima generación para "dibujos de construcción" o "dibujos arquitectónicos".Agustream en el proceso, el término "modelo de fabricación" ya es de uso común como reemplazo de "dibujos de taller"'
+          'BIM consists of a digital database of a particular building that contains information about its objects. This may include its geometry (generally defined by parametric rules), its performance, its planning, its construction and later its operation. A Revit® model and a Digital Project® model of a building are examples of building models. “Building model” can be considered the next generation replacement for “construction drawings”, or “architectural drawings”. Downstream in the process, the term “fabrication model” is already in common use as a replacement for “shop drawings”.'
         }
         author={'Eastman'}
       />
     ),
+    notes:
+      'BIM consiste en una base de datos digital de un edificio particular que contiene información sobre sus objetos.Esto puede incluir su geometría (generalmente definida por reglas paramétricas), su rendimiento, su planificación, su construcción y luego su funcionamiento.Un modelo Revit® y un modelo digital Project® de un edificio son ejemplos de modelos de edificios.El "modelo de construcción" puede considerarse el reemplazo de la próxima generación para "dibujos de construcción" o "dibujos arquitectónicos".Agustream en el proceso, el término "modelo de fabricación" ya es de uso común como reemplazo de "dibujos de taller"',
   },
   { element: <Bim /> },
   {
