@@ -163,16 +163,16 @@ export const content: Toc = [
         title={
           <>
             <h2>
-              <b>Diseño Asistido por Computadora</b> o{' '}
-              <b>Dibujo Asistido por Computadora</b>?
+              <b>Diseño Asistido por Computador</b> o{' '}
+              <b>Dibujo Asistido por Computador</b>?
             </h2>
             <br />
             <h2>
-              <b>CADD</b> : Diseño y Dibujo Asistidos por Computadora
+              <b>CADD</b> : Diseño y Dibujo Asistidos por Computador
             </h2>
             <br />
             <h2>
-              <b>CAAD</b> : Diseño Arquitectónico Asistido por Computadora
+              <b>CAAD</b> : Diseño Arquitectónico Asistido por Computador
             </h2>
           </>
         }
@@ -186,12 +186,12 @@ export const content: Toc = [
         title={
           <h4>
             <b> Un sistema CAD </b> es una combinación de hardware y software
-            que Permite el modelado tridimensional de artefactos físicos,
+            que permite el modelado tridimensional de artefactos físicos,
             habilitando ingenieros y arquitectos para diseñar artefactos desde
             piezas simples hasta sistemas complejos.
             <br />
-            Por ejemplo: Detalles de construcción → Elemento de construcción →
-            Espacio → Edificio → Sitio → Barrio → Ciudad
+            ej: Detalles de construcción → Elemento de construcción → Espacio →
+            Edificio → Sitio → Barrio → Ciudad
           </h4>
         }
       />
@@ -228,15 +228,14 @@ export const content: Toc = [
           <h4>
             Las imágenes raster (o de mapa de bits) se compilan utilizando
             píxeles, que contienen información de color y tonal única que se
-            unen para crear la imagen. Son dependientes de la resolución. El
-            número de píxeles que componen una imagen, así como cuántos de esos
-            píxeles se muestran por pulgada, determinan la calidad de una
-            imagen. Cuantos más píxeles en la imagen y mayor sea la resolución,
-            mayor será la calidad de la imagen. Por ejemplo, si escalamos una
-            imagen raster para agrandarla, sin cambiar la resolución, perderá
-            calidad y se verá borrosa o pixelada. Esto se debe a que estamos
-            estirando los píxeles sobre un área más grande, haciéndolos parecer
-            menos nítidos.
+            unen para crear la imagen. Son resolución dependientes. El número de
+            píxeles que componen una imagen, así como cuántos de esos píxeles se
+            muestran por pulgada, determinan la calidad de una imagen. Cuantos
+            más píxeles en la imagen y mayor sea la resolución, mayor será la
+            calidad de la imagen. Por ejemplo, si escalamos una imagen raster
+            para agrandarla, sin cambiar la resolución, perderá calidad y se
+            verá borrosa o pixelada. Esto se debe a que estamos estirando los
+            píxeles sobre un área más grande, haciéndolos parecer menos nítidos.
           </h4>
         }
       />
@@ -254,7 +253,7 @@ export const content: Toc = [
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Points"
         caption={
-          'Un punto se define por nada más que uno o más valores llamados coordenados.Cuántos valores de coordenadas necesitamos para definir el punto depende del sistema o contexto de coordenadas en el que reside.El tipo de punto más común en el software CAD existe en nuestros sistemas de coordenadas bidimensionales (X, Y) o tridimensionales (X, Y, Z) .- Dynamo Primer '
+          'Un punto se define por nada más que uno o más valores llamados coordenados. Cuántos valores de coordenadas necesitamos para definir el punto depende del sistema o contexto de coordenadas en el que reside. El tipo de punto más común en el software CAD existe en nuestros sistemas de coordenadas bidimensionales (X, Y) o tridimensionales (X, Y, Z) .- Dynamo Primer '
         }
       />
     ),
@@ -266,7 +265,7 @@ export const content: Toc = [
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Puntos"
         caption={
-          'Los puntos también pueden existir en un sistema de coordenadas bidimensional.La convención tiene una notación de letra diferente dependiendo del tipo de espacio con el que estemos trabajando: podríamos estar usando [x, y] en un plano o [u, v] si estamos en una superficie.- Dynamo Primer '
+          'Los puntos también pueden existir en un sistema de coordenadas bidimensional. La convención tiene una notación de letra diferente dependiendo del tipo de espacio con el que estemos trabajando: podríamos estar usando [x, y] en un plano o [u, v] si estamos en una superficie.- Dynamo Primer '
         }
       />
     ),
@@ -280,15 +279,14 @@ export const content: Toc = [
         emoji={'Imágenes vectoriales ♾️'}
         title={
           <h4>
-            En lugar de tratar de realizar un seguimiento de los millones de
-            píxeles pequeños en un Imagen de trama, imágenes vectoriales
-            realizan un seguimiento de los puntos y las ecuaciones para las
-            líneas que los conectan.Están formados por caminos o línea arte que
-            puede ser infinitamente escalable porque funcionan en función de
-            algoritmos en lugar de píxeles.Se pueden volver a tamaño
-            infinitamente más grande o más pequeño, y aún se imprimirán con la
-            misma claridad, sin aumento (o disminución) en el tamaño del
-            archivo.
+            En vez de realizar un seguimiento de los millones de píxeles
+            pequeños en un imagen rasterizada, las imágenes vectoriales realizan
+            un seguimiento de los puntos y las ecuaciones para las líneas que
+            los conectan. Están formados por vectores o líneas que pueden ser
+            infinitamente escalable porque funcionan a base de algoritmos en
+            lugar de píxeles. Se pueden escalar infinitamente en ambas
+            direcciones, y aún así se imprimirán con la misma claridad, sin
+            aumento (o disminución) en el tamaño del archivo.
           </h4>
         }
       />
@@ -297,7 +295,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Dibujo con código (P5) ✏️</h2>
+        <h2>Dibujando prgramáticamente (P5) ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -316,7 +314,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Dibujo con código ✏️</h2>
+        <h2>Dibujando prgramáticamente (P5) ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -334,12 +332,12 @@ export const content: Toc = [
             <em>Fuente: Dynamo Primer</em>
             <ol className="flex flex-col w-[300px] ">
               <li> línea </li>
-              <li> Polyline </li>
+              <li> polilínea </li>
               <li> arco </li>
               <li> círculo </li>
-              <li> Ellipse </li>
+              <li> elípse </li>
               <li> NURBS </li>
-              <li> Polycurve </li>
+              <li> policurva </li>
             </ol>
           </div>
           <div className="w-[1000px]">
@@ -359,7 +357,7 @@ export const content: Toc = [
         src="/images/cad-bim/curve.png"
         alt="Curve"
         caption={
-          'Una curva o una línea curva, puede ser el rastro que queda moviendo un punto.No tiene ancho ni profundidad'
+          'Una curva o una línea curva, puede ser el rastro que queda moviendo un punto. No tiene ancho ni profundidad'
         }
       />
     ),
@@ -370,7 +368,7 @@ export const content: Toc = [
         src="/images/cad-bim/line.png"
         alt="Line"
         caption={
-          'Las líneas son la forma más simple de curvas.Es posible que no parezcan curvas, pero de hecho son curvas, solo sin ninguna curvatura.Hay algunas formas diferentes de crear líneas, el ser más intuitivo del punto A al punto B. La forma de la línea AB se dibujará entre los puntos, pero matemáticamente se extiende infinitamente en ambas direcciones.'
+          'Las líneas son la forma más simple de curvas.Es posible que no parezcan curvas, pero de hecho son curvas, solo sin ninguna curvatura. Hay algunas formas diferentes de crear líneas, la manera más intuitiva es un trazo directo del punto A al punto B. La forma de la línea AB se dibujará entre los puntos, pero matemáticamente se extiende infinitamente en ambas direcciones.'
         }
       />
     ),
@@ -381,7 +379,7 @@ export const content: Toc = [
         src="/images/cad-bim/polyline.png"
         alt="Polilínea"
         caption={
-          'Cuando conectamos dos líneas juntas, tenemos una polilínea.Aquí tenemos una representación directa de lo que es un punto de control.La edición de cualquiera de estas ubicaciones de puntos cambiará la forma de la polilínea.Si la polilínea está cerrada, tenemos un polígono.Si las longitudes del borde del polígono son iguales, se describe como regular.'
+          'Cuando conectamos dos líneas juntas, tenemos una polilínea. Aquí tenemos una representación directa de lo que es un punto de control. La edición de cualquiera de estas ubicaciones de puntos cambiará la forma de la polilínea. Si la polilínea está cerrada, tenemos un polígono. Si las longitudes del borde del polígono son iguales, se describe como polígono regular.'
         }
       />
     ),
@@ -392,7 +390,7 @@ export const content: Toc = [
         src="/images/cad-bim/arcs.png"
         alt="Arcs, Circles, Ellipse Arcs, and Ellipses"
         caption={
-          'A medida que agregamos más complejidad a las funciones paramétricas que definen una forma, podemos tomar un paso más allá de una línea para crear un arco, círculo, arco de elipse o elipse describiendo uno o dos radios.Las diferencias entre la versión ARC y el círculo o la elipse es solo si la forma está cerrada o no.'
+          'A medida que agregamos más complejidad a las funciones paramétricas que definen una forma, podemos tomar un paso más allá de una línea para crear un arco, círculo, arco de elipse o elipse describiendo uno o dos radios. Las diferencias entre la versión ARC y el círculo o la elipse es solo si la forma está cerrada o no.'
         }
       />
     ),
@@ -429,10 +427,10 @@ export const content: Toc = [
           <h4>
             El modelado 3D es el proceso de desarrollar una matemática
             representación y objeto basado en coordenadas con un especializado
-            software por bordes manipulados, vértices y polígonos en un Espacio
+            software por bordes manipulados, vértices y polígonos en un espacio
             3D <br />
             La mayoría de las veces se muestran modelos 3D en pantallas planas,
-            pero el La tarjeta gráfica simula la geometría para dar la ilusión
+            pero el la tarjeta gráfica simula la geometría para dar la ilusión
             de profundidad. Este proceso se llama representación 3D.
           </h4>
         }
