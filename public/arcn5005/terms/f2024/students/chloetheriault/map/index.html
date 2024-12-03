@@ -1,11 +1,60 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>chloetheriault map page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<html lang="en">
+
+<head>
+
+    <title>Mapping iceland trip </title>
+
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+      <meta charset='UTF-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <title>Final</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    
+
+<body>
+
+  <style>
+    body { margin: 0; padding: 0; }
+    html, body, #map { height: 100%; }
+
+    .maplibregl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+</style>
+
+  <div id="header">
+    <a href=".\about\index.html">
+      <button class="button button-item">
+        <span class="button-bg">
+          <span class="button-bg-layers">
+            <span
+              class="button-bg-layer button-bg-layer-1 -pink"
+            ></span>
+            <span
+              class="button-bg-layer button-bg-layer-2 -brown"
+            ></span>
+            <span
+              class="button-bg-layer button-bg-layer-3 -green"
+            ></span>
+          </span>
+        </span>
+        <span class="button-inner">
+          <span class="button-inner-static">  MAIN  </span>
+          <span class="button-inner-hover">MENU</span>
+        </span>
+      </button>
+    </a>
+  </div>
+  <div id="map"></div>
+  <script src="main.js"></script>
+
+</body>
+
 </html>
