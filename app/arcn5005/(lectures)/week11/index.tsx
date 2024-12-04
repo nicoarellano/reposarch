@@ -6,7 +6,7 @@ import Quote from '@/components/Common/Quote';
 import EmojiTitle from '@/components/Common/EmojiTitle';
 import PdfViewer from '@/components/Common/PdfViewer';
 
-// import CartesianPlane from '@/components/CartesianPlane';
+import CartesianPlane from '@/components/CartesianPlane';
 import Cartography from './Cartography.mdx';
 import SimpleButton from '@/components/Common/SimpleButton';
 import CodeButton from '@/components/Common/CodeButton';
@@ -24,10 +24,27 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m"
-        title="Web based mapping and Assignment 3"
-        caption={'Web based mapping and Assignment 3'}
+        src="https://www.youtube.com/embed/lFfr5UmHCFE?si=d4DH0oJC--MCQtRC"
+        title="Web-based OS mapping and GIS - Fall 2024"
+        caption={'Web-based OS mapping and GIS - Fall 2024'}
       />
+    ),
+  },
+  {
+    element: (
+      <div className="grow">
+        <h3>
+          🗺️ Homework: Watch this video and start creating a map using Maplibre
+          🌎
+        </h3>
+        <Video
+          src="https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709"
+          title="Assignment 3 - Create a Map application - Recording from Fall 2023"
+          caption={
+            'Assignment 3 - Create a Map application - Recording from Fall 2023'
+          }
+        />
+      </div>
     ),
   },
 
@@ -166,12 +183,12 @@ export const content: Toc = [
     notes:
       'In the fifteenth century,  Albrecht Durer revolutionized drawing by adding precision and science to the process.',
   },
-  // {
-  //   element: <CartesianPlane />,
-  //   notes:
-  //     "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'\
-  //     The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637",
-  // },
+  {
+    element: <CartesianPlane />,
+    notes:
+      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'\
+      The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637",
+  },
 
   {
     element: <EmojiTitle emoji={'⛵🗺️'} title={'World mapping'} />,

@@ -19,9 +19,9 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt"
-        title="Advanced toolbox"
-        caption={'Advanced toolbox'}
+        src="https://www.youtube.com/embed/b_bWEVienwU?si=eMKgj9UmEMZZcQjC"
+        title="Advanced toolbox and GH Pages - Fall 2024"
+        caption={'Advanced toolbox and GH Pages - Fall 2024'}
       />
     ),
   },
@@ -164,27 +164,36 @@ export const content: Toc = [
         src="/images/advanced-toolbox/openbim-components.png"
         alt="obc"
         caption={'IFC.js → openbim-components (OBC)'}
-        href="https://github.com/IFCjs/components"
+        href="https://thatopen.com/"
       />
     ),
     notes: '',
   },
-
   {
     element: (
-      <iframe
-        width="100%"
-        height="100%"
-        src="/arcn5005/terms/f2024/students/nicolasarellanorisop/bim"
-        title="Cesium Js gl"
-      ></iframe>
+      <Image
+        src="/images/advanced-toolbox/webcomponents.png"
+        alt="web components"
+        caption={
+          'Web components is a set of web standards that allow you to create new HTML tags.'
+        }
+        href="https://www.webcomponents.org/introduction"
+      />
     ),
     notes: '',
   },
-  // {
-  //   element: <BimExample fragment="/models/model.frag" />,
-  //   notes: "",
-  // },
+  {
+    element: (
+      <Image
+        src="/images/advanced-toolbox/vite.png"
+        alt="Vite js"
+        caption={'Vite js'}
+        href="https://vite.dev/"
+      />
+    ),
+    notes:
+      'Vite is a front-end build tool that significantly improves the front-end development experience.',
+  },
 
   {
     element: (
@@ -196,8 +205,9 @@ export const content: Toc = [
       />
     ),
     notes:
-      'Next.js is an open-source web development framework created by the private company Vercel providing React-based web applications with server-side rendering and static website generation.',
+      'Next JS is a full-stack open-source web development React framework that enables functionality such as server-side rendering and generating static websites for React based web applications. It is created by the private company Vercel providing React-based web applications with server-side rendering and static website generation ',
   },
+
   {
     element: (
       <Image
@@ -299,7 +309,7 @@ TS allows you to specify the type of the data in your JS code, and will report e
   {
     element: (
       <Image
-        src="/images/advanced-toolbox/cdt-wireframe.png"
+        src="/images/advanced-toolbox/cdt-wireframe2.png"
         alt="CIMS - CDT Wireframe"
         caption={'CIMS - CDT Wireframe'}
       />
@@ -309,17 +319,6 @@ TS allows you to specify the type of the data in your JS code, and will report e
     To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.',
   },
 
-  {
-    element: (
-      <Video
-        src="https://www.youtube.com/embed/BwjUI9U0eQw?si=xaivCtd-Eb_niL-H"
-        title="CIMS - Canada's digital Twin Platform"
-        caption={
-          "CIMS - Canada's digital Twin Platform - 100% web based free and open-source technologies"
-        }
-      />
-    ),
-  },
   {
     element: <EmojiTitle emoji={'🗣️📣🌎'} title={'Go Online!'} />,
   },
