@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>alvinahn map page</title>
-  </head>
+<html lang="en">
+
+<head>
+
+    <title>Champion's Map</title>
+    <meta property="og:description" content="Alvin's Hobby." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+    </style>
+
+    <style>
+       .maplibregl-popup {
+       max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      }
+     </style>
+  <nav id="menu"></nav>
+
+</head>
+
   <body>
-    ADD YOUR CODE HERE!
+
+    <div id="map"></div>
+    <script src="./main.js"></script>
+
   </body>
+
 </html>
