@@ -8,7 +8,7 @@ const map = new maplibregl.Map({
 
 
 
-// description 
+// description box
 map.on('load', () => {
   const textOverlay = document.createElement('div');
   textOverlay.style.position = 'fixed';
