@@ -293,9 +293,6 @@ map.on('idle', () => {
     return;
   }
 
-  // Layer IDs
-  const toggleableLayerIds = ['landmarks'];
-
   // Change the cursor to a pointer when the mouse is over the places layer.
   map.on('mouseenter', 'places', () => {
     map.getCanvas().style.cursor = 'pointer';
