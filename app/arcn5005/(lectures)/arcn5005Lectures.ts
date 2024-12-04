@@ -420,18 +420,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/lFfr5UmHCFE?si=d4DH0oJC--MCQtRC',
+        title: 'OS Maps, GIS and Map renderers - Fall 2024',
+        date: dayjs('2024/11/20'),
+      },
+      {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709',
         title: 'Assignment 3 - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m',
-        title: 'Web based mapping  - Fall 2023',
+        title: 'OS Maps, GIS and Map renderers  - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv',
-        title: 'Maps, GIS and Map renderers - Fall 2023',
+        title: 'OS Maps, GIS and Map renderers (infrastructure) - Fall 2023',
         date: dayjs('2023/09/25'),
       },
     ],
@@ -458,6 +463,11 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/b_bWEVienwU?si:eMKgj9UmEMZZcQjC',
+        title: 'Advanced toolbox and GH Pages - Fall 2024',
+        date: dayjs('2024/11/24'),
+      },
+      {
         url: 'https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt',
         title: 'Advanced toolbox',
         date: dayjs('2023/11/30'),
@@ -483,10 +493,23 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
+    title: '🏁❓ Optional Final assignment review',
+    id: `final-review`,
+    url: `final-review`,
+    date: initialDate.add(14, 'week'),
+    content: final,
+    toc: [
+      {
+        title:
+          'Optional Final review: We will meet at the Zoom link and if there are questions about the final assignment we can go through them during that time',
+      },
+    ],
+  },
+  {
     title: '🏁 Final Presentation 🏁',
     id: `final`,
     url: `final`,
-    date: initialDate.add(14, 'week'),
+    date: initialDate.add(14, 'week').add(2, 'day'),
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
@@ -526,14 +549,15 @@ export const arcn5005Lectures: Lectures = [
     content: esp,
     visibleInToc: false,
     toc: [
-      { title: 'Herramientas digitales para AEC' },
+      { title: 'Herramientas digitales para AECO' },
       { title: 'Procesos de representación: CAD, 3D CAD, BIM' },
-      { title: 'Software patentado' },
+      { title: 'Software propietario o patentado' },
       { title: 'WebGL - Gráficos 3D basados ​​en la web' },
-      { title: 'GLTF' },
-      { title: 'Tree.js' },
-      { title: 'That Open' },
-
+      { title: 'Formatos de codigo abierto - GLTF, IFC' },
+      {
+        title:
+          'Librerias de codigo abierto - Tree.js, IFC.js, That Open Engine',
+      },
       { title: '🖥️ Lab 3: Blender, Bonsaibim, SketchFab, Three.js, That Open' },
     ],
   },
