@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shaganamuttiah map page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head>
+  <link rel="stylesheet" href="https://use.typekit.net/jub7ukz.css">
+  <title>Public Libraries Ottawa</title>
+  <meta property="og:description" content="When a user hovers over a custom marker, show a popup containing more information." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.css" />
+</head>
+
+<div id="map-loader" class="loader">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<body>
+  <header>
+    <br />
+    <div class="about-me-tittle">
+      <h1>Ottawa Public Libraries</h1>
+    </div>
+
+    <!-- ? Button -->
+    <button class="cta" id="helloButton">
+      <span>?</span>
+      <svg width="15px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Assignment Buttons -->
+  <div class="button-container">
+    <a href="https://reposarch.vercel.app/arcn5005/terms/f2024/students/shaganamuttiah/about" class="box">Assignment 1</a>
+    <a href="https://reposarch.vercel.app/arcn5005/terms/f2024/students/shaganamuttiah/three" class="box">Assignment 2</a>
+    <a href="https://reposarch.vercel.app/arcn5005/terms/f2024/students/shaganamuttiah/map" class="box">Assignment 3</a>
+    <a href="https://reposarch.vercel.app/arcn5005/terms/f2024/students/shaganamuttiah/final" class="box">Final Home Page</a>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <script>
+
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
 </html>

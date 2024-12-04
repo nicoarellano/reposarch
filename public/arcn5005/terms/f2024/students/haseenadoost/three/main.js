@@ -137,7 +137,7 @@ function animateStars() {
   });
 }
 
-// Controls and Lighting
+// Orbit and Light
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
