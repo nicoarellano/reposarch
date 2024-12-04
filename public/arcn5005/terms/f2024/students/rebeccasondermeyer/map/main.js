@@ -275,20 +275,7 @@ map.on('click', 'landmarks', (e) => {
     .addTo(map);
 });
 
-// Change the cursor to a pointer when the mouse is over the places layer.
-map.on('mouseenter', 'places', () => {
-  map.getCanvas().style.cursor = 'pointer';
-});
-
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'places', () => {
-  map.getCanvas().style.cursor = '';
-});
-
-//Toggle between the two layers
-// After the last frame rendered before the map enters an "idle" state.
 map.on('idle', () => {
-  // If these two layers were not added to the map, abort
   if (!map.getLayer('landmarks')) {
     return;
   }
@@ -298,26 +285,16 @@ map.on('idle', () => {
     map.getCanvas().style.cursor = 'pointer';
   });
 
-  // Change it back to a pointer when it leaves.
-  map.on('mouseleave', 'places', () => {
-    map.getCanvas().style.cursor = '';
-  });
-
-  // Set up the corresponding toggle button for each layer.
+  
+  // Toggle Layers
   for (const id of toggleableLayerIds) {
-    // Skip layers that already have a button set up.
+    // Skip layers with a button set up.
     if (document.getElementById(id)) {
       continue;
     }
 
-    // Create a link.
-    const link = document.createElement('a');
-    link.id = id;
-    link.href = '#';
-    link.textContent = id;
-    link.className = 'active';
 
-    // Show or hide layer when the toggle is clicked.
+    // Show or hide layer when toggle is clicked.
     link.onclick = function (e) {
       const clickedLayer = this.textContent;
       e.preventDefault();
