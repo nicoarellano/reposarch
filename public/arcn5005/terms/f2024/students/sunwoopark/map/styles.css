@@ -11,7 +11,7 @@ html {
   width: 100%;
   height: 100%;
   background-color:  rgb(21, 73, 128);
-  color: #1c1c1c;
+  color: rgb(21, 73, 128);
   text-align: center;
   width: 100%;
   display: table;
@@ -20,7 +20,7 @@ html {
 }
 
 body, .custom-cursor {
-  cursor: url(./cursor.png), auto;
+  cursor:  url(./cursor.png), auto;
 }
 
 
@@ -49,7 +49,7 @@ html, body, #map {
   height: 20px;
   line-height: 18px;
   text-align: center;
-  cursor: pointer;
+  cursor:  url(./cursor.png), pointer;
   position: absolute; /* Ensures it's positioned relative to the popup */
   top: 5px;           /* Adjusts the vertical position */
   right: 5px;         /* Adjusts the horizontal position */
@@ -66,7 +66,7 @@ button {
   color: rgb(255, 255, 255);
   font-family: inherit;
   font-weight: 600;
-  cursor: url(./cursor.png), pointer;
+  cursor:  url(./cursor.png), pointer;
   position: relative;
   border: none;
   background: none;
@@ -107,3 +107,24 @@ button:after {
   transition-property: width, left;
 }
 
+#zoom-toronto-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: rgb(21, 73, 128);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 11px;
+  cursor:  url(./cursor.png), pointer;
+  z-index: 10;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#zoom-toronto-button:hover {
+  background-color: rgb(21, 73, 128,0.8);
+}
