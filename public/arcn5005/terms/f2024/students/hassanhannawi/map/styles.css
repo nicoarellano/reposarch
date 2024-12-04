@@ -1,0 +1,11 @@
+body { margin: 0; padding: 0; }
+html, body, #map { height: 100%; }
+
+
+ .maplibregl-popup {
+    max-width: 100px;
+    font: 12px/20px 'Courier New', Courier, monospace;
+ }
+
+ .maplibregl-popup-content {
+    background-image: url(gokuvsvegeta.gif);
