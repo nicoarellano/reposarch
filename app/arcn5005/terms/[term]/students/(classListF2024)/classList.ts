@@ -63,7 +63,7 @@ export const classListf2024: Students = [
     lastName: 'Cusson',
     firstName: 'Andre',
     email: 'AndreCusson@cmail.carleton.ca',
-    assignments: ['about', 'three'],
+    assignments: ['about', 'three', 'map'],
   },
   {
     id: '#101052132',
@@ -111,7 +111,7 @@ export const classListf2024: Students = [
     lastName: 'Harriman',
     firstName: 'Josh',
     email: 'joshharriman@cmail.carleton.ca',
-    assignments: ['about', 'three'],
+    assignments: ['about', 'three', 'map'],
   },
   {
     id: '#101195968',
