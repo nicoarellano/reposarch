@@ -7,7 +7,7 @@ const map = new maplibregl.Map({
 });
 
 map.on('load', async () => {
-    const image = await map.loadImage("./pin.png");
+    const image = await map.loadImage("./Pin.png");
     // Add an image to use as a custom marker
     map.addImage('custom-marker', image.data, { pixelRatio: 25 });
 
