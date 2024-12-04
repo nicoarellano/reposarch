@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>saraniadabee map page</title>
-  </head>
-  <body>
-    <h1>Map Assignment</h1>
-  </body>
+<html lang="en">
+<head>
+    <title>Volcanic Eruptions Visualization</title>
+    <meta property="og:description" content="Visualize volcanic eruptions with a time slider." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+
+    <div class="map-overlay top">
+        <div class="map-overlay-inner">
+            <h2>Timelapse of Volcanic Eruptions in 2023</h2>
+            <h3 id="month-header"><span id="month">January</span></h3>
+            <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+        </div>
+        <div class="map-overlay-inner">
+            <div id="legend" class="legend">
+                <div class="bar"></div>
+                <h4>Explosivity Index (VEI)</h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip"></div>
+
+    <script src="main.js"></script>
+</body>
 </html>

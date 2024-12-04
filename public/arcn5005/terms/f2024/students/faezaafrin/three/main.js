@@ -187,7 +187,6 @@ for (let i = 0; i < 800; i++) {
 const gltfLoader = new THREE.GLTFLoader();
 
 let mesh1;
-
 gltfLoader.load(
   "./models/Astronaut3.glb",
   function (gltf) {
@@ -339,6 +338,8 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
+
+
 //Camera!
 camera.position.x = -40;
 camera.position.y = 10;
@@ -351,31 +352,16 @@ scene.position.y = -5;
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
+
+
 //Action!
 function animate() {
   requestAnimationFrame(animate);
-
-  if (mesh1) mesh1.rotation.y += 0.005;
-
-  mesh1.rotation.x += 0.005;
-  mesh1.rotation.y += 0.005;
-  mesh1.position.x += 0.003;
-  mesh1.position.y += 0.001;
-  mesh1.position.z += 0.001;
-
-  if (mesh2) mesh2.rotation.y += 0.001;
-
-  mesh2.rotation.x += 0.003;
-  mesh2.rotation.y += 0.008;
-  mesh2.position.x += 0.003;
-  mesh2.position.y += 0.001;
-  mesh2.position.z += 0.001;
 
   //Speed based on enable/disabled Slow Motion
   const speed = isSlowMotion ? slowSpeed : normalSpeed;
 
   // Rotating geometry
-  
   torus1.rotation.x += speed;
   torus1.rotation.y += speed * 5; 
   torus1.rotation.z += speed;
@@ -404,6 +390,18 @@ function animate() {
   torus7.rotation.y += speed * 2;
   torus7.rotation.z += speed;
 
+  mesh1.rotation.x += speed * 0.5;
+  mesh1.rotation.y += speed * 0.5;
+  mesh1.position.x += speed * 0.2;
+  mesh1.position.y += speed;
+  mesh1.position.z += speed;
+
+  mesh2.rotation.x += speed * 0.5;
+  mesh2.rotation.y += speed;
+  mesh2.position.x += speed * 0.5;
+  mesh2.position.y += speed;
+  mesh2.position.z += speed * 0.2;
+  
   // Animate shooting stars
   shootingStars.forEach(star => {
     star.animate();
