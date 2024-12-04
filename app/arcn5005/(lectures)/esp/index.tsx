@@ -34,23 +34,32 @@ export const content: Toc = [
         />
         <Quote
           quote={
-            'El arquitecto necesita las herramientas adecuadas para el trabajo. [...] La herramienta más nueva, la computadora, es realmente una caja de herramientas completamente nueva llena de software para resolver problemas antiguos y nuevos.'
+            'The architect needs the right tools for the job. [...] The newest tool, the computer, is really an entirely new toolbox full of software to solve old and new problems.'
           }
           author={'Susan Piedmont Palladino - Tools of the Imagination'}
         />
       </>
     ),
+    notes:
+      'El arquitecto necesita las herramientas adecuadas para el trabajo. [...] La herramienta más nueva, el computador, es realmente una caja de herramientas completamente nueva llena de software para resolver problemas antiguos y nuevos.',
   },
 
   {
     element: (
       <Quote
         quote={
-          'Es a través del dominio de toda la gama de herramientas que las imágenes en la mente del arquitecto se traducen en dibujos y modelos, y de los dibujos y modelos en edificios. Ya sea un simple lápiz o software de computadora, estas herramientas dan forma a los deseos y las instrucciones del arquitecto, pero también son moldeadores activos de lo que es posible.'
+          'It is through the mastery of the full range of tools that the images \
+          in the architect’s mind are translated into drawings and models, and \
+          from the drawings and the models into buildings. Whether a simple \
+          pencil or computer software, these tools give form to the wishes and \
+          the instructions of the architect, but they are also active shapers of \
+          what is possible.'
         }
         author={'Susan Piedmont Palladino - Tools of the Imagination'}
       />
     ),
+    notes:
+      'Es a través del dominio de toda la gama de herramientas que las imágenes en la mente del arquitecto se traducen en dibujos y modelos, y de los dibujos y modelos en edificios. Ya sea un simple lápiz o software en un computador, estas herramientas dan forma a los deseos y las instrucciones del arquitecto, pero también son moldeadores activos de lo que es posible.',
   },
   {
     element: (
@@ -61,11 +70,11 @@ export const content: Toc = [
       />
     ),
     notes:
-      'En 1963, Ivan Sutherland en el MIT desarrolló un programa llamado "Sketchpad", que puede considerarse como el primer programa de dibujo por computadora o la primera interfaz gráfica de usuario (GUI).\
-       Las GUIs son dispositivos de interacción humano-computadora que permiten a los usuarios interactuar con la computadora a través de íconos gráficos en lugar de código escrito.\
+      'En 1963, Ivan Sutherland en el MIT desarrolló un programa llamado "Sketchpad", que puede considerarse como el primer programa de dibujo por computador o la primera interfaz gráfica de usuario (GUI).\
+       Las GUIs son dispositivos de interacción humano-computador que permiten a los usuarios interactuar con el computador a través de íconos gráficos en lugar de código escrito.\
        Con una GUI, el usuario puede hacer clic o tocar y manipular los símbolos mostrados en la pantalla y, por lo tanto, alterar directamente el programa.\
-       Las GUIs hicieron que las computadoras fueran más accesibles para los no programadores, incluidos los arquitectos.\
-       Desde entonces, las GUIs son ciertamente el vehículo preferido para que los arquitectos interactúen con las computadoras.',
+       Las GUIs hicieron que las technologias digitales fueran más accesibles para los no programadores, incluidos los arquitectos.\
+       Desde entonces, las GUIs son ciertamente el vehículo preferido para que los arquitectos interactúen con las technologias digitales.',
   },
   {
     element: (
@@ -80,28 +89,32 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          'Sketchpad fue pionero en la interfaz gráfica de usuario (GUI), que permite \
-          la interacción con el mundo virtual sin escribir largas cadenas de \
-          comandos codificados. En su lugar, el usuario apunta, hace clic y doble clic en \
-          las pantallas de íconos, las herramientas virtuales en la pantalla.'
+          'Sketchpad pioneered the graphical user interface (GUI), which allows \
+          interaction with the virtual world without typing in long strings of \
+          coded commands. Instead, the user points, clicks, and double-clicks on \
+          displays of icons, the virtual tools on the screen.'
         }
-        author={'Susan Piedmont Palladino - Herramientas de la imaginación'}
+        author={'Susan Piedmont Palladino - Tools of the Imagination'}
       />
     ),
+    notes:
+      'Sketchpad fue pionero en la interfaz gráfica de usuario (GUI), que permite la interacción con el mundo virtual sin escribir largas cadenas de comandos codificados. En su lugar, el usuario apunta, hace clic y doble clic en las pantallas de íconos, las herramientas virtuales en la pantalla.',
   },
   {
     element: (
       <Quote
         quote={
-          "Las GUIs rápidamente se convirtieron en 'el único uso de la computadora que la mayoría de la gente había conocido'"
+          'GUIs quickly became "the only computer use that most people had ever known"'
         }
         author={'Mario Carpo - Digital Turn'}
       />
     ),
+    notes:
+      'Las GUIs rápidamente se convirtieron en "el único uso del computador que la mayoría de la gente había conocido".',
   },
-  {
-    element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
-  },
+  // {
+  //   element: <PdfViewer src="/resources/may_everythingisalreadyanimage.pdf" />,
+  // },
   {
     element: (
       <Image
@@ -124,7 +137,7 @@ export const content: Toc = [
       />
     ),
     notes:
-      'Carpo dice que las GUI rápidamente se convirtieron en "el único uso de la computadora que la mayoría de la gente había conocido”.\
+      'Como mencione antes, Carpo dice que las GUI rápidamente se convirtieron en "el único uso del computador que la mayoría de la gente había conocido”.\
       Este fue el momento en que, para la mayoría de los arquitectos, la programación dejó de ser un lenguaje abierto para interactuar con la máquina, y así se convirtió en una herramienta.\
       En algunos casos, una herramienta accesible, pero en la mayoría de los casos, una completamente opaca.',
   },
@@ -150,16 +163,16 @@ export const content: Toc = [
         title={
           <>
             <h2>
-              <b>Diseño Asistido por Computadora</b> o{' '}
-              <b>Dibujo Asistido por Computadora</b>?
+              <b>Diseño Asistido por Computador</b> o{' '}
+              <b>Dibujo Asistido por Computador</b>?
             </h2>
             <br />
             <h2>
-              <b>CADD</b> : Diseño y Dibujo Asistidos por Computadora
+              <b>CADD</b> : Diseño y Dibujo Asistidos por Computador
             </h2>
             <br />
             <h2>
-              <b>CAAD</b> : Diseño Arquitectónico Asistido por Computadora
+              <b>CAAD</b> : Diseño Arquitectónico Asistido por Computador
             </h2>
           </>
         }
@@ -172,12 +185,13 @@ export const content: Toc = [
         emoji={'CAD ✏️💻'}
         title={
           <h4>
-            <b>A CAD system</b> is a combination of hardware and software that
-            allows three-dimensional modeling of physical artifacts, enabling
-            engineers and architects to design artifacts from simple parts to
-            complex systems. <br />
-            for example: Construction Detail → building element → space →
-            building → site → neibourhood → city
+            <b> Un sistema CAD </b> es una combinación de hardware y software
+            que permite el modelado tridimensional de artefactos físicos,
+            habilitando ingenieros y arquitectos para diseñar artefactos desde
+            piezas simples hasta sistemas complejos.
+            <br />
+            ej: Detalles de construcción → Elemento de construcción → Espacio →
+            Edificio → Sitio → Barrio → Ciudad
           </h4>
         }
       />
@@ -189,7 +203,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Drawing with Pixels ✏️</h2>
+        <h2>Dibujo con píxeles ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -199,7 +213,7 @@ export const content: Toc = [
     ),
     notes:
       "Un píxel (px) (abreviatura de 'elemento de imagen') es el punto o cuadrado más pequeño direccionable que compone una imagen raster digital en un dispositivo de visualización.\
-      Cuantos más píxeles, mejor resolución de imagen. La resolución de imagen de un monitor de computadora, teléfono inteligente o pantalla de TV, se refiere al número de píxeles. \
+      Cuantos más píxeles, mejor resolución de imagen. La resolución de imagen de un monitor de un computador, teléfono inteligente o pantalla de TV, se refiere al número de píxeles. \
       La intensidad de cada píxel es variable. \
       En los sistemas de imágenes en color, un color se representa típicamente por tres o cuatro intensidades de componentes como rojo, verde y azul (RGB), o cian, magenta, amarillo y negro.",
   },
@@ -214,15 +228,14 @@ export const content: Toc = [
           <h4>
             Las imágenes raster (o de mapa de bits) se compilan utilizando
             píxeles, que contienen información de color y tonal única que se
-            unen para crear la imagen. Son dependientes de la resolución. El
-            número de píxeles que componen una imagen, así como cuántos de esos
-            píxeles se muestran por pulgada, determinan la calidad de una
-            imagen. Cuantos más píxeles en la imagen y mayor sea la resolución,
-            mayor será la calidad de la imagen. Por ejemplo, si escalamos una
-            imagen raster para agrandarla, sin cambiar la resolución, perderá
-            calidad y se verá borrosa o pixelada. Esto se debe a que estamos
-            estirando los píxeles sobre un área más grande, haciéndolos parecer
-            menos nítidos.
+            unen para crear la imagen. Son resolución dependientes. El número de
+            píxeles que componen una imagen, así como cuántos de esos píxeles se
+            muestran por pulgada, determinan la calidad de una imagen. Cuantos
+            más píxeles en la imagen y mayor sea la resolución, mayor será la
+            calidad de la imagen. Por ejemplo, si escalamos una imagen raster
+            para agrandarla, sin cambiar la resolución, perderá calidad y se
+            verá borrosa o pixelada. Esto se debe a que estamos estirando los
+            píxeles sobre un área más grande, haciéndolos parecer menos nítidos.
           </h4>
         }
       />
@@ -230,7 +243,7 @@ export const content: Toc = [
   },
   {
     element: (
-      <EmojiTitle emoji={'Points ⚫  ⚫  ⚫'} title="¿Qué es un Punto?" />
+      <EmojiTitle emoji={'Puntos ⚫  ⚫  ⚫'} title="¿Qué es un Punto?" />
     ),
   },
   {
@@ -240,7 +253,7 @@ export const content: Toc = [
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Points"
         caption={
-          'Un punto se define por nada más que uno o más valores llamados coordenados.Cuántos valores de coordenadas necesitamos para definir el punto depende del sistema o contexto de coordenadas en el que reside.El tipo de punto más común en el software CAD existe en nuestros sistemas de coordenadas bidimensionales (X, Y) o tridimensionales (X, Y, Z) .- Dynamo Primer '
+          'Un punto se define por nada más que uno o más valores llamados coordenados. Cuántos valores de coordenadas necesitamos para definir el punto depende del sistema o contexto de coordenadas en el que reside. El tipo de punto más común en el software CAD existe en nuestros sistemas de coordenadas bidimensionales (X, Y) o tridimensionales (X, Y, Z) .- Dynamo Primer '
         }
       />
     ),
@@ -252,27 +265,28 @@ export const content: Toc = [
         href="https://primer.dynamobim.org/05_Geometry-for-Computational-Design/5-3_points.html"
         alt="Puntos"
         caption={
-          'Los puntos también pueden existir en un sistema de coordenadas bidimensional.La convención tiene una notación de letra diferente dependiendo del tipo de espacio con el que estemos trabajando: podríamos estar usando [x, y] en un plano o [u, v] si estamos en una superficie.- Dynamo Primer '
+          'Los puntos también pueden existir en un sistema de coordenadas bidimensional. La convención tiene una notación de letra diferente dependiendo del tipo de espacio con el que estemos trabajando: podríamos estar usando [x, y] en un plano o [u, v] si estamos en una superficie.- Dynamo Primer '
         }
       />
     ),
   },
-  { element: <EmojiTitle emoji={'♾️'} title="What is a vector image?" /> },
+  {
+    element: <EmojiTitle emoji={'♾️'} title="¿Qué es una imagen vectorial?" />,
+  },
   {
     element: (
       <EmojiTitle
         emoji={'Imágenes vectoriales ♾️'}
         title={
           <h4>
-            En lugar de tratar de realizar un seguimiento de los millones de
-            píxeles pequeños en un Imagen de trama, imágenes vectoriales
-            realizan un seguimiento de los puntos y las ecuaciones para las
-            líneas que los conectan.Están formados por caminos o línea arte que
-            puede ser infinitamente escalable porque funcionan en función de
-            algoritmos en lugar de píxeles.Se pueden volver a tamaño
-            infinitamente más grande o más pequeño, y aún se imprimirán con la
-            misma claridad, sin aumento (o disminución) en el tamaño del
-            archivo.
+            En vez de realizar un seguimiento de los millones de píxeles
+            pequeños en un imagen rasterizada, las imágenes vectoriales realizan
+            un seguimiento de los puntos y las ecuaciones para las líneas que
+            los conectan. Están formados por vectores o líneas que pueden ser
+            infinitamente escalable porque funcionan a base de algoritmos en
+            lugar de píxeles. Se pueden escalar infinitamente en ambas
+            direcciones, y aún así se imprimirán con la misma claridad, sin
+            aumento (o disminución) en el tamaño del archivo.
           </h4>
         }
       />
@@ -281,7 +295,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Dibujo con código (P5) ✏️</h2>
+        <h2>Dibujando prgramáticamente (P5) ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -300,7 +314,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>Dibujo con código ✏️</h2>
+        <h2>Dibujando prgramáticamente (P5) ✏️</h2>
         <br />
         <iframe
           className="w-full h-full"
@@ -318,12 +332,12 @@ export const content: Toc = [
             <em>Fuente: Dynamo Primer</em>
             <ol className="flex flex-col w-[300px] ">
               <li> línea </li>
-              <li> Polyline </li>
+              <li> polilínea </li>
               <li> arco </li>
               <li> círculo </li>
-              <li> Ellipse </li>
+              <li> elípse </li>
               <li> NURBS </li>
-              <li> Polycurve </li>
+              <li> policurva </li>
             </ol>
           </div>
           <div className="w-[1000px]">
@@ -343,7 +357,7 @@ export const content: Toc = [
         src="/images/cad-bim/curve.png"
         alt="Curve"
         caption={
-          'Una curva o una línea curva, puede ser el rastro que queda moviendo un punto.No tiene ancho ni profundidad'
+          'Una curva o una línea curva, puede ser el rastro que queda moviendo un punto. No tiene ancho ni profundidad'
         }
       />
     ),
@@ -354,7 +368,7 @@ export const content: Toc = [
         src="/images/cad-bim/line.png"
         alt="Line"
         caption={
-          'Las líneas son la forma más simple de curvas.Es posible que no parezcan curvas, pero de hecho son curvas, solo sin ninguna curvatura.Hay algunas formas diferentes de crear líneas, el ser más intuitivo del punto A al punto B. La forma de la línea AB se dibujará entre los puntos, pero matemáticamente se extiende infinitamente en ambas direcciones.'
+          'Las líneas son la forma más simple de curvas.Es posible que no parezcan curvas, pero de hecho son curvas, solo sin ninguna curvatura. Hay algunas formas diferentes de crear líneas, la manera más intuitiva es un trazo directo del punto A al punto B. La forma de la línea AB se dibujará entre los puntos, pero matemáticamente se extiende infinitamente en ambas direcciones.'
         }
       />
     ),
@@ -365,7 +379,7 @@ export const content: Toc = [
         src="/images/cad-bim/polyline.png"
         alt="Polilínea"
         caption={
-          'Cuando conectamos dos líneas juntas, tenemos una polilínea.Aquí tenemos una representación directa de lo que es un punto de control.La edición de cualquiera de estas ubicaciones de puntos cambiará la forma de la polilínea.Si la polilínea está cerrada, tenemos un polígono.Si las longitudes del borde del polígono son iguales, se describe como regular.'
+          'Cuando conectamos dos líneas juntas, tenemos una polilínea. Aquí tenemos una representación directa de lo que es un punto de control. La edición de cualquiera de estas ubicaciones de puntos cambiará la forma de la polilínea. Si la polilínea está cerrada, tenemos un polígono. Si las longitudes del borde del polígono son iguales, se describe como polígono regular.'
         }
       />
     ),
@@ -376,7 +390,7 @@ export const content: Toc = [
         src="/images/cad-bim/arcs.png"
         alt="Arcs, Circles, Ellipse Arcs, and Ellipses"
         caption={
-          'A medida que agregamos más complejidad a las funciones paramétricas que definen una forma, podemos tomar un paso más allá de una línea para crear un arco, círculo, arco de elipse o elipse describiendo uno o dos radios.Las diferencias entre la versión ARC y el círculo o la elipse es solo si la forma está cerrada o no.'
+          'A medida que agregamos más complejidad a las funciones paramétricas que definen una forma, podemos tomar un paso más allá de una línea para crear un arco, círculo, arco de elipse o elipse describiendo uno o dos radios. Las diferencias entre la versión ARC y el círculo o la elipse es solo si la forma está cerrada o no.'
         }
       />
     ),
@@ -392,7 +406,7 @@ export const content: Toc = [
       />
     ),
   },
-  { element: <Degree /> },
+  // { element: <Degree /> },
   {
     element: (
       <Image
@@ -404,7 +418,7 @@ export const content: Toc = [
       />
     ),
   },
-  { element: <Curves /> },
+  // { element: <Curves /> },
   {
     element: (
       <EmojiTitle
@@ -413,10 +427,10 @@ export const content: Toc = [
           <h4>
             El modelado 3D es el proceso de desarrollar una matemática
             representación y objeto basado en coordenadas con un especializado
-            software por bordes manipulados, vértices y polígonos en un Espacio
+            software por bordes manipulados, vértices y polígonos en un espacio
             3D <br />
             La mayoría de las veces se muestran modelos 3D en pantallas planas,
-            pero el La tarjeta gráfica simula la geometría para dar la ilusión
+            pero el la tarjeta gráfica simula la geometría para dar la ilusión
             de profundidad. Este proceso se llama representación 3D.
           </h4>
         }
@@ -447,8 +461,8 @@ export const content: Toc = [
             rendimiento del edificio
           </li>
           <li>
-            Los modelos 3D se pueden usar directamente en fabricación,
-            computadora numérica Control (CNC).
+            Los modelos 3D se pueden usar directamente en fabricación, Computer
+            Numeric Contorl (CNC).
           </li>
           <li> puede usarse para presentaciones y marketing. </li>
         </ul>
@@ -468,7 +482,7 @@ export const content: Toc = [
         <h2> 3 tipos de modelos 3D </h2>
         <br />
         <ul>
-          <li> Modelado de estructura alámbrica 🩻 </li>
+          <li> Modelado de Wireframe 🩻 </li>
           <li> Modelado de superficie 🐚 </li>
           <li> Modelado sólido 🪨 </li>
         </ul>
@@ -568,18 +582,11 @@ export const content: Toc = [
           </li>
           <li>
             Puede ser geométrico y físicamente incorrecto, sin propiedades de
-            masa definida y sin espesor.Esto le da al diseñador el único
-            Capacidad para modificar el modelo de manera que los modelos sólidos
-            sean incapaces.
+            masa definida y sin espesor. Esto le da al diseñador una capacidad
+            única para modificar el modelo algo que no es posible con modelos
+            sólidos.
           </li>
-          <li>
-            {' '}
-            no se puede cortar en rodajas como sus contrapartes sólidas → Hollow{' '}
-          </li>
-          <li>
-            Utiliza nurbs, b-splines y ecuaciones de beyer para definir el
-            Características de su objeto de aparición sólido
-          </li>
+          <li>no se pueden seccionar como los sólidas ya que estan huecos</li>
         </ul>
       </>
     ),
@@ -605,8 +612,8 @@ export const content: Toc = [
               <li> u isocurve </li>
               <li> V isocurve </li>
               <li> coordenadas UV </li>
-              <li> Plano perpendicular </li>
-              <li> Vector normal </li>
+              <li> plano perpendicular </li>
+              <li> vector normal </li>
             </ol>
           </div>
           <div className="w-[1000px]">
@@ -620,7 +627,7 @@ export const content: Toc = [
       </div>
     ),
     notes:
-      'Una superficie es una forma matemática definida por una función y dos parámetros, en lugar de T para curvas, usamos U y V para describir el espacio de parámetros correspondiente.Esto significa que tenemos más datos geométricos para extraer cuando trabajamos con este tipo de geometría.Por ejemplo, las curvas tienen vectores tangentes y planos normales (que pueden girar o girar a lo largo de la longitud de la curva), mientras que las superficies tienen vectores normales y planos tangentes que serán consistentes en su orientación.',
+      'Una superficie es una forma matemática definida por una función y dos parámetros, en lugar de T para curvas, usamos U y V para describir el espacio de parámetros correspondiente. Esto significa que tenemos más datos geométricos para extraer cuando trabajamos con este tipo de geometría. Por ejemplo, las curvas tienen vectores tangentes y planos normales (que pueden girar o  lo largo de la longitud de la curva), mientras que las superficies tienen vectores normales y planos tangentes que serán consistentes en su orientación.',
   },
   {
     element: (
@@ -628,7 +635,7 @@ export const content: Toc = [
         src="/images/cad-bim/surface-domain.png"
         alt={'Surface Domain'}
         caption={
-          'Un dominio de la superficie se define como el rango de parámetros (U, V) que se evalúan en un punto tridimensional en esa superficie.El dominio en cada dimensión (u o v) generalmente se describe como dos números (u min a u max) y (v min a v max).- Fuente: Dynamo Primer '
+          'el "domain" o dominio de la superficie se define como el rango de parámetros (U, V) que se evalúan en un punto tridimensional en esa superficie. El dominio en cada dimensión (u o v) generalmente se describe como dos números (u min a u max) y (v min a v max).- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -637,9 +644,9 @@ export const content: Toc = [
     element: (
       <Image
         src="/images/cad-bim/nurbs-surfaces.png"
-        alt={'Nurbs Surfaces'}
+        alt={'NURBS Surfaces'}
         caption={
-          'Las superficies de NURBS son muy similares a las curvas de Nurbs.Puede pensar en las superficies de Nurbs como una cuadrícula de curvas de Nurbs que van en dos direcciones.La forma de una superficie de NURBS se define por una serie de puntos de control y el grado de esa superficie en las direcciones U y V.Los mismos algoritmos se utilizan para calcular la forma, las normales, las tangentes, las curvaturas y otras propiedades a través de puntos de control, pesos y grado.En el caso de las superficies de Nurbs, hay dos direcciones implicadas por la geometría, porque las superficies de Nurbs son, independientemente de la forma que veamos, redes rectangulares de puntos de control.Y a pesar de que estas direcciones a menudo son arbitrarias en relación con el sistema de coordenadas mundiales, las usaremos con frecuencia para analizar nuestros modelos o generar otra geometría basada en la superficie.- Fuente: Dynamo Primer '
+          'Las superficies de NURBS son muy similares a las curvas de NURBS. Puede pensar en las superficies de NURBS como una cuadrícula de curvas de NURBS que van en dos direcciones.La forma de una superficie de NURBS se define por una serie de puntos de control y el grado de esa superficie en las direcciones U y V.Los mismos algoritmos se utilizan para calcular la forma, las normales, las tangentes, las curvaturas y otras propiedades a través de puntos de control, pesos y grado.En el caso de las superficies de NURBS, hay dos direcciones implicadas por la geometría, porque las superficies de NURBS son, independientemente de la forma que veamos, redes rectangulares de puntos de control.Y a pesar de que estas direcciones a menudo son arbitrarias en relación con el sistema de coordenadas mundiales, las usaremos con frecuencia para analizar nuestros modelos o generar otra geometría basada en la superficie.- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -650,7 +657,7 @@ export const content: Toc = [
         src="/images/cad-bim/polysurface.png"
         alt={'Polysurfaces'}
         caption={
-          'Polysurfaces están compuestas de superficies que se unen a través de un borde.Los polisuperfaces ofrecen una definición de UV más de dos dimensiones, ya que ahora podemos movernos a través de las formas conectadas a través de su topología.A veces llamados parches, unir superficies de esta manera nos permite hacer formas más complejas y definir detalles en la costura.Convenientemente, podemos aplicar un filete o una operación de chaflán en los bordes de una polisureza.- Fuente: Dynamo Primer '
+          'Las "Polysurfaces" o polisuperficies están compuestas de superficies que se unen a través de un borde.Los polisuperfaces ofrecen una definición de UV más de dos dimensiones, ya que ahora podemos movernos a través de las formas conectadas a través de su topología.A veces llamados parches, unir superficies de esta manera nos permite hacer formas más complejas y definir detalles en la costura.Convenientemente, podemos aplicar un filete o una operación de chaflán en los bordes de una polisureza.- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -658,7 +665,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2> modelo 3D sólido 🪨 </h2>
+        <h2>Modelo 3D sólido 🪨 </h2>
         <br />
         <ul>
           <li>
@@ -736,7 +743,7 @@ export const content: Toc = [
         src="/images/cad-bim/solid-boolean.png"
         alt={'Solid Boolean Operations'}
         caption={
-          'Hay tres operaciones booleanas sólidas que distinguen qué partes de la geometría se mantienen.1. Unión: Retire las porciones superpuestas de los sólidos y unirse a un solo sólido.2. Diferencia: reste un sólido de otro.El sólido a restarse se conoce como una herramienta.Tenga en cuenta que puede cambiar qué sólido es la herramienta para mantener el volumen inverso.3. Intersección: mantenga solo el volumen de intersección de los dos sólidos.- Fuente: Dynamo Primer '
+          'Hay tres operaciones booleanas sólidas que distinguen qué partes de la geometría se mantienen. 1. Unión: Retire las porciones superpuestas de los sólidos y unirse a un solo sólido. 2. Diferencia: reste un sólido de otro. El sólido a restarse se conoce como una herramienta. Tenga en cuenta que puede cambiar qué sólido es la herramienta para mantener el volumen inverso. 3. Intersección: mantenga solo el volumen de intersección de los dos sólidos.- Fuente: Dynamo Primer '
         }
       />
     ),
@@ -764,7 +771,7 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2> Comparación de métodos de modelado sólido </h2>
+        <h2>Comparación de métodos de modelado sólido </h2>
         <br />
         <table className="simple-table">
           <thead>
@@ -783,13 +790,13 @@ export const content: Toc = [
             <th> validez </th>
             <td> siempre válido </td>
             <td> siempre válido </td>
-            <td> No siempre válido </td>
+            <td> no siempre válido </td>
           </tr>
           <tr>
-            <th> ineambiganza </th>
+            <th> inambiguo </th>
             <td> ambiguo </td>
             <td> siempre inequívoco </td>
-            <td> Los repeticiones B válidas son inequívocas. </td>
+            <td> los repeticiones B válidas son inequívocas. </td>
           </tr>
           <tr>
             <th> concisión </th>
@@ -807,11 +814,13 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          'No hace falta decir que está claro ver por qué CAD fue adoptado en tantas industrias.Prácticamente todo en el mundo moderno se crea utilizando tecnología CAD, porque su proceso de diseño es muy elegante y tan poderoso.Obviamente, los pros y los contras de CAD son susceptibles al cambio.CAD todavía está evolucionando, y con él, también lo harán sus ventajas y desventajas.Una década más adelante, ¿quién puede decir de qué CAD será capaz o no?'
+          'Needless to say, it’s clear to see why CAD was adopted across so many industries. Virtually everything in the modern world is created using CAD technology, because its design process is so sleek and so powerful. Obviously, the pros and cons of CAD are susceptible to change. CAD is still evolving, and with it, so too will its advantages and disadvantages. A decade down the line, who’s to say what CAD will or won’t be capable of? '
         }
         author={'https://www.scan2cad.com/blog/cad/cad-evolved-since-1982/'}
       />
     ),
+    notes:
+      'No hace falta decir que está claro ver por qué CAD fue adoptado en tantas industrias. Prácticamente todo en el mundo moderno se crea utilizando tecnología CAD, porque su proceso de diseño es muy elegante y tan poderoso. Obviamente, los pros y los contras de CAD son susceptibles al cambio. las technologias CAD todavía están evolucionando, y con ellas, también lo harán sus ventajas y desventajas. Una década más adelante, ¿quién puede decir de qué CAD será capaz o no?',
   },
   {
     element: (
@@ -859,7 +868,7 @@ export const content: Toc = [
           alt={'QCad'}
           href="https://www.qcad.org/en/"
           caption={
-            'Qcad es otra alternativa de código libre y abierto a AutoCAD'
+            'QCAD es otra alternativa de código libre y abierto a AutoCAD'
           }
         />
       </>
@@ -928,31 +937,37 @@ export const content: Toc = [
     element: (
       <Quote
         quote={
-          'para clientes de estate-holding clients,BIM ofrece no solo la posibilidad de una construcción más rápida, más barata y de mejor calidad, sino también una base de datos de información de operación y mantenimiento para respaldar el ciclo de vida.Los clientes que han preferido o requerido estándares para sus propiedades pueden mantener estos estándares en una biblioteca BIM de elementos modelo y proporcionarles a los equipos de diseño de diseño para incorporar a los proyectos '
+          'For estate-holding clients, BIM offers not just the possibility of faster, cheaper and better quality construction but also a database of operation and maintenance information to support the life cycle. Clients who have preferred or required standards for their properties can hold these standards in a BIM library of model elements and provide them to design-build teams to incorporate into projects.'
         }
         author={'Saxon'}
       />
     ),
+    notes:
+      'Para clientes de estate-holding clients, BIM ofrece no solo la posibilidad de una construcción más rápida, más barata y de mejor calidad, sino también una base de datos de información de operación y mantenimiento para respaldar el ciclo de vida. Los clientes que han preferido o requerido estándares para sus propiedades pueden mantener estos estándares en una biblioteca BIM de elementos modelo y proporcionarles a los equipos de diseño de diseño para incorporar a los proyectos',
   },
   {
     element: (
       <Quote
         quote={
-          'La llegada de BIM marca un interruptor para la industria de la construcción de considerar los edificios como proyectos para considerarlos como activos.El modelo circular del ciclo de vida de los activos reemplaza el modelo lineal de un proyecto '
+          'The arrival of BIM marks a switch for the construction industry from considering buildings as projects to considering them as assets. The circular model of the asset life cycle replaces the linear model of a project'
         }
         author={'Saxon'}
       />
     ),
+    notes:
+      'La llegada de BIM marca un cambio para la industria de la construcción de considerar los edificios como proyectos para considerarlos como activos digitales. El modelo circular del ciclo de vida de los activos reemplaza el modelo lineal de un proyecto',
   },
   {
     element: (
       <Quote
         quote={
-          'BIM consiste en una base de datos digital de un edificio particular que contiene información sobre sus objetos.Esto puede incluir su geometría (generalmente definida por reglas paramétricas), su rendimiento, su planificación, su construcción y luego su funcionamiento.Un modelo Revit® y un modelo digital Project® de un edificio son ejemplos de modelos de edificios.El "modelo de construcción" puede considerarse el reemplazo de la próxima generación para "dibujos de construcción" o "dibujos arquitectónicos".Agustream en el proceso, el término "modelo de fabricación" ya es de uso común como reemplazo de "dibujos de taller"'
+          'BIM consists of a digital database of a particular building that contains information about its objects. This may include its geometry (generally defined by parametric rules), its performance, its planning, its construction and later its operation. A Revit® model and a Digital Project® model of a building are examples of building models. “Building model” can be considered the next generation replacement for “construction drawings”, or “architectural drawings”. Downstream in the process, the term “fabrication model” is already in common use as a replacement for “shop drawings”.'
         }
         author={'Eastman'}
       />
     ),
+    notes:
+      'BIM consiste en una base de datos digital de un edificio particular que contiene información sobre sus objetos.Esto puede incluir su geometría (generalmente definida por reglas paramétricas), su rendimiento, su planificación, su construcción y luego su funcionamiento.Un modelo Revit® y un modelo digital Project® de un edificio son ejemplos de modelos de edificios.El "modelo de construcción" puede considerarse el reemplazo de la próxima generación para "dibujos de construcción" o "dibujos arquitectónicos".Agustream en el proceso, el término "modelo de fabricación" ya es de uso común como reemplazo de "dibujos de taller"',
   },
   { element: <Bim /> },
   {
@@ -1069,7 +1084,7 @@ export const content: Toc = [
     ),
     notes:
       'Mandatos BIM gubernamentales.\
-Los países de toda la palabra se están convirtiendo en regular el uso de BIM.Entonces, si uno quiere participar en obras públicas e incluso proyectos no públicos, BIM es un requisito.\
+En muchos paises se esta mandatando el uso de BIM. Entonces, si uno quiere participar en obras públicas e incluso proyectos no públicos, BIM es un requisito.\
 Lo que significa que BIM ya no es una opción, sino un mandato.\
 Sabiendo que el software BIM está controlado principalmente por algunos proveedores, esto significa que estas compañías de software tendrán un tremendo impacto en nuestra práctica.',
   },
@@ -1090,7 +1105,7 @@ Sabiendo que el software BIM está controlado principalmente por algunos proveed
   {
     element: (
       <>
-        <h2>Open-source Alternatives? 💸</h2>
+        <h2>Alternativas de código abiertas para BIM? 💸</h2>
         <br />
         <Image
           src="/images/cad-bim/blenderbim.png"
@@ -1322,10 +1337,10 @@ GLTF 2.0 ha sido lanzado como el estándar internacional ISO 12113: 2022.',
       />
     ),
     notes:
-      'Sin embargo, antes de finales de 2019, imaginar una alternativa al software patentado para la industria de la AEC era un desafío. \n\
-La industria era (y sigue siendo) demasiado dependiente de las soluciones del proveedor principal. \n\
-Pero luego, una cadena de eventos comenzó a abrir la puerta a alternativas \n \
-→ En octubre de 2019 Dion Moult libera Blenderbim \n \
+      'Antes del final de 2019, imaginar una alternativa al software patentado para la industria de la AECO era un casi imposible. \n\
+La industria era (y sigue siendo) demasiado dependiente de las soluciones del las grandes empresas proveedoras de software CAD y BIM. \n\
+Pero luego, una serie de eventos comenzó a abrir la puerta a alternativas \n \
+→ En octubre de 2019 Dion Moult libera Blenderbim (ahra BonsaiBIM) \n \
 → En febrero de 2020, se crea el OS Arch: Osarch, es una comunidad en línea que promueve que el entorno construido se puede diseñar, construir, operar y reciclar con software gratuito/libre y de código abierto. \n \
 → En julio de 2020, varias firmas líderes de AEC del Reino Unido e Internacional escribieron una carta abierta a los cambios exigentes de Autodesk relacionados con costos, licencias y prácticas comerciales \n\
 → En diciembre de 2020 se lanza la Biblioteca IFC.JS.La primera biblioteca en línea de Floss para trabajar con BIM e IFC. \n\
@@ -1343,12 +1358,12 @@ Pero luego, una cadena de eventos comenzó a abrir la puerta a alternativas \n \
       />
     ),
     notes:
-      "Open Engine: A common free open IFCJS-based technology stack (viewer and parser) \n\
-    Open Store: A marketplace where developers can sell tools, and users can buy them directly for use in their projects. \n\
-    Open Editor: A free web-based geometry editor (CLAY) that allows users to run all apps directly in their web browsers. \n\
-    Open Services: Processing, storage, and analytics services developed by That Open Company to help developers create and release software. \n\
-    That People Community: Meet other members, forums, chats, and meetings every six weeks within That Open Company's team to find out what's happening exclusively things while sharing opinions. \n\
-    Open University: A new(? rebranded) platform built by That Open Company to create a path from zero knowledge about programming to becoming a software developer in less time than possible, with teachers supporting students in their career paths.",
+      "Open Engine: Un conjunto de tecnologías abierta basada en IFCJS gratuita común (viewer and parser) \n\
+    Open Store: Un mercado donde los desarrolladores pueden vender herramientas, y los usuarios pueden comprarlas directamente para su uso en sus proyectos. \n\
+    Open Editor: Un editor gratuito de geometría basado en la web (Clay) que permite a los usuarios ejecutar todas las aplicaciones directamente en sus navegadores web. \n\
+    Open Services: Servicios de procesamiento, almacenamiento y análisis desarrollados por That Open Company para ayudar a los desarrolladores a crear y lanzar software. \n\
+    That People Community: Conocer a otros miembros, foros, chats y reuniones cada seis semanas dentro del equipo de That Open Company's Para averiguar qué está sucediendo exclusivamente cosas mientras comparte opiniones. \n\
+    Open University: Una nueva plataforma construida por That Open Company Para crear una ruta desde cero conocimiento sobre la programación hasta convertirse en desarrollador de software en menos tiempo que posible, con maestros que apoyan a los estudiantes en sus carreras profesionales.",
   },
   {
     element: (
@@ -1397,6 +1412,11 @@ Pero luego, una cadena de eventos comenzó a abrir la puerta a alternativas \n \
     ),
   },
   {
-    element: <PdfViewer src="/resources/Blender+2.9+Shortcuts+v1.1.pdf" />,
+    element: (
+      <PdfViewer src="/resources/CH_EJERC05_Subir modelos a internet.pdf" />
+    ),
   },
+  // {
+  //   element: <PdfViewer src="/resources/Blender+2.9+Shortcuts+v1.1.pdf" />,
+  // },
 ];
