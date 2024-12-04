@@ -40,6 +40,7 @@ mailbutton.addEventListener('click', function(){
         document.querySelector('h6').textContent = "Your passwords are safe with me";
         document.querySelector('h3').textContent = "Your passwords are safe with me";
         document.body.style.backgroundImage = "none";
+        wwindow.open()
     }, 3000);
     setTimeout(function(){
         document.getElementById('hidden').style.display = "none";
