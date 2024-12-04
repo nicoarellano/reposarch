@@ -1,6 +1,6 @@
 const map = new maplibregl.Map({
     container: 'map',
-    style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+    style: 'https://api.maptiler.com/maps/b7a80311-369e-46ab-9ba1-959248e92dfa/style.json?key=uq65uxq7TdtxVACz1H3W',
     center: [35.895355, 33.922211],
     zoom: 8
 });
@@ -19,7 +19,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Lost Love</strong><p>Baalbak</p><img src="DRAWING ONE.jpg"width=200px>'
+                            '<strong>Lost Love</strong><p>BAALBAK - This drawing was done during my visit of Baalbak historic ruins - Year 2017</p><img src="DRAWING ONE.jpg"width=200px>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -30,7 +30,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Hold My Hand</strong><p>Saida</p><img src="DRAWING TWO.jpg"width=200px>'
+                            '<strong>Hold My Hand</strong><p>SAIDA - My Home Town - Year 2019</p><img src="DRAWING TWO.jpg"width=200px>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -41,7 +41,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>My Heart</strong><p>Beirut</p><img src="DRAWING THREE.jpg"width=200px>'
+                            '<strong>My Heart</strong><p>BEIRUT - I drew this for my eldest sister who lives in Beirut - Year 2019 </p><img src="DRAWING THREE.jpg"width=200px>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -52,7 +52,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Shattered Dreams</strong><p>Tyre</p><img src="DRAWING FOUR.jpg"width=200px>'
+                            '<strong>Shattered Dreams</strong><p>TYRE - I drew this during my stay at Sour Beach - Year 2019</p><img src="DRAWING FOUR.jpg"width=200px>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -63,7 +63,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Sweatest Flower</strong><p>Jezzine</p><img src="DRAWING FIVE.jpg"width=200px>'
+                            '<strong>Sweatest Flower</strong><p>JEZZINE - Known for its beautiful weather, fresh air, and flower aroma - Year 2019 </p><img src="DRAWING FIVE.jpg"width=200px>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -74,7 +74,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>All Seeing Eyes</strong><p>Tripoli</p><img src="DRAWING SIX.jpg"width=200px>'
+                            '<strong>All Seeing Eyes</strong><p>TRIPOLI - During the two hour car ride to Tripoli I drew this - Year 2017 </p><img src="DRAWING SIX.jpg"width=200px>'
                     },
                     'geometry': {
                         'type': 'Point',
