@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-	transition:1s;
 }
 
 body{
@@ -29,7 +28,6 @@ h3{
 }
 
 h2:hover{
-	transform:rotate(-10deg)scale(0);
 	color:red;
 	text-shadow:3px 3px 3px;
 }
@@ -51,7 +49,6 @@ p, li, h6{
 }
 
 h6:hover{
-	transform:scale(0.2)rotate(10deg);
 	color:red;
 	text-shadow:3px 3px 3px grey;
 }
@@ -67,8 +64,15 @@ li{font-size:12px;}
     overflow: hidden;
 }
 
-#avatar{
-	background-image:url('avatar.jpg');
+#aud2{
+	border-radius:100px;
+}
+
+#bldginfo img{
+	width:400px;
+}
+
+#avatar, #mapimage, #threeimage{
 	background-size:cover;
 	background-position:center;
 	width:110px;
@@ -80,17 +84,16 @@ li{font-size:12px;}
 	border:solid white 0px;
 }
 
+#avatar{
+	background-image:url('avatar.jpg');
+}
+
 #threeimage{
 	background-image:url('Project 2 Thumbnail.png');
-	background-size:cover;
-	background-position:center;
-	width:110px;
-	min-height:110px;
-	max-height:500px;
-	margin-top:0;
-	border-radius:500px;
-	transition:5s;
-	border:solid white 0px;
+}
+
+#mapimage{
+	background-image:url('almonte.jpg');
 }
 
 #avatar{
@@ -141,6 +144,28 @@ li{font-size:12px;}
 	transform:scale(1.01);
 	box-shadow:10px 5px 5px #5552;
 
+}
+
+#a1,#a2,#a3,#a4,#a5,#a6{
+	border:0px;
+	background-color:#fff0;
+	color:rgb(57, 57, 57);
+	text-decoration:underline;
+}
+
+#header {
+	font-family: 'Arial', sans-serif;
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	z-index: 1;
+	top: 10px;
+	left: 10px;
+	width: 10%;
+	padding: 10px;
+	text-align: center;
+	font-size: 13px;
+	color: rgb(54, 52, 52);
+	border-bottom: 1px solid #ccc;
 }
 
 .phone, .email{
