@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+}
+#three-canvas-f2024 {
+    background: url('textures/sky.jpg') no-repeat center center;
+    background-size: cover; 
+  }

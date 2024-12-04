@@ -11,7 +11,7 @@ const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 camera.position.set(5, 2, 13); // Initial camera positioning
 
 // Renderer Setup
-const threeCanvas = document.getElementById("three-canvas");
+const threeCanvas = document.getElementById('three-canvas');
 const renderer = new THREE.WebGLRenderer({
   canvas: threeCanvas,
   alpha: true,
@@ -34,7 +34,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let ufoMesh;
 
 gltfLoader.load(
-  "./haseenaapplymodifiersmetallicc.glb", 
+  './haseenaapplymodifiersmetallicc.glb',
   (gltf) => {
     ufoMesh = gltf.scene;
     ufoMesh.scale.set(3, 3, 3);
@@ -42,7 +42,7 @@ gltfLoader.load(
 
     // Add Point Light at the UFO's position
     const ufoLight = new THREE.PointLight(0xffaa00, 30, 1); // Warm light color
-    ufoLight.position.set(5, 10, 5) ; // Position it at the UFO
+    ufoLight.position.set(5, 10, 5); // Position it at the UFO
     scene.add(ufoLight);
   },
   undefined,
@@ -51,7 +51,7 @@ gltfLoader.load(
 
 // Load Background Texture
 const loader = new THREE.TextureLoader();
-const texture = loader.load("milkyway_.jpeg", () => {
+const texture = loader.load('milkyway_.jpeg', () => {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   texture.colorSpace = THREE.SRGBColorSpace;
   scene.background = texture;
@@ -60,7 +60,7 @@ const texture = loader.load("milkyway_.jpeg", () => {
 // Load Font and Create 3D Text
 const fontLoader = new THREE.FontLoader();
 function createText(text, elevation = 0, textColor = 0x000000, size = 0.5) {
-  fontLoader.load("./fonts/helvetiker_regular.typeface.json", (font) => {
+  fontLoader.load('./fonts/helvetiker_regular.typeface.json', (font) => {
     const textGeo = new THREE.TextGeometry(text, {
       font: font,
       size: size,
@@ -79,20 +79,36 @@ function createText(text, elevation = 0, textColor = 0x000000, size = 0.5) {
   });
 }
 // TEXT CREATION
-createText("                               PRESS SPACEBAR 1X TO SPIN", 5, 0xFFA500);  // Orange
-createText("                               PRESS SPACEBAR 2X TO SOAR", 3, 0xFFA500);  // Orange
-createText("                               PRESS SPACEBAR 3X TO SLOW DOWN", 2, 0x000000);  // Black
-createText("                               HASEENA DOOST", 1, 0x000000);  // Black
-createText("                              Would like to go to Mars one day", 0, 0xFFA500);  // Orange
+createText(
+  '                               PRESS SPACEBAR 1X TO SPIN',
+  5,
+  0xffa500
+); // Orange
+createText(
+  '                               PRESS SPACEBAR 2X TO SOAR',
+  3,
+  0xffa500
+); // Orange
+createText(
+  '                               PRESS SPACEBAR 3X TO SLOW DOWN',
+  2,
+  0x000000
+); // Black
+createText('                               HASEENA DOOST', 1, 0x000000); // Black
+createText(
+  '                              Would like to go to Mars one day',
+  0,
+  0xffa500
+); // Orange
 
 // Gold Star Particle System
 const starGeometry = new THREE.PlaneGeometry(0.5, 0.5);
 const starMaterial = new THREE.MeshBasicMaterial({
-  color: 0xFFD700,
+  color: 0xffd700,
   transparent: true,
   opacity: 0.8,
   side: THREE.DoubleSide,
-  map: new THREE.TextureLoader().load('./smallstar__.png')
+  map: new THREE.TextureLoader().load('./smallstar__.png'),
 });
 
 const stars = [];
@@ -111,7 +127,7 @@ for (let i = 0; i < numStars; i++) {
 }
 
 function animateStars() {
-  stars.forEach(star => {
+  stars.forEach((star) => {
     star.position.y -= 0.1;
     if (star.position.y < -10) {
       star.position.y = Math.random() * 20 + 10;
@@ -121,7 +137,7 @@ function animateStars() {
   });
 }
 
-// Controls and Lighting
+// Orbit and Light
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
