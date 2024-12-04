@@ -1,6 +1,6 @@
 const map = new maplibregl.Map({
   container: 'map',
-  style: 'https://api.maptiler.com/maps/openstreetmap/style.json?key=tgBO5aQe2pu9PwiQjIYN',
+  style: 'https://api.maptiler.com/maps/05a6b83f-8c0f-4eb3-945c-267d64699e4f/style.json?key=tgBO5aQe2pu9PwiQjIYN',
   center: [-76.194, 45.226],
   zoom: 15,
   pitch: 0,
