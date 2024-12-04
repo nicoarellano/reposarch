@@ -67,6 +67,39 @@
         #map {
             margin-top: 90px; /* Account for header height */
         }
+
+        #legend-box {
+            position: absolute;
+            top: 120px; /* Adjust based on header height */
+            left: 20px;
+            background-color: #333; /* Dark gray background */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 25px;
+            width: 350px; /* Larger width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-family: 'Playfair Display', serif;
+            color: #fff; /* White text for contrast */
+            z-index: 2;
+            transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition on hover */
+        }
+
+        #legend-box:hover {
+            transform: scale(1.1); /* Slightly enlarge the box */
+            width: 400px; /* Make it wider when hovered */
+        }
+
+        #legend-icon {
+            display: block;
+            width: 80px; /* Larger icon size */
+            margin: 0 auto 20px;
+        }
+
+        #legend-text {
+            font-size: 18px; /* Larger text size for better readability */
+            line-height: 1.6;
+            text-align: justify;
+        }
     </style>
 </head>
 
@@ -80,6 +113,16 @@
             <a href="../map/index.html" class="nav-button">Map</a>
             <a href="../bim/index.html" class="nav-button">BIM</a>
         </div>
+    </div>
+
+    <div id="legend-box">
+        <img src="postindustrialactualfinalagain.png" alt="Legend Icon" id="legend-icon">
+        <p id="legend-text">
+            This map highlights 26 regenerated post-industrial landscapes worldwide. 
+            These locations were once landfills, lake fills, brownfields, gas plants, 
+            or heavily industrialized areas. Now, they are vibrant parks contributing 
+            to the public realm and communities on different scales.
+        </p>
     </div>
 
     <div id="map"></div>
