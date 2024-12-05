@@ -19,7 +19,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Fundy National Park</strong><p>Make it Mount Pleasant is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>'
+                            '<strong>Fundy National Park</strong> <p><em>New Brunswick</em></p> <img src="../images/fundy.jpg" alt="Fundy National Park" style="width:100%; height:auto;"> <p>Fundy National Park was recently designated as a Dark-Sky Preserve. In the past year, the park saved 69% of energy via reduction in light pollution.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -30,7 +30,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Kouchibouguac National Park</strong><p>Head to Lounge 201 (201 Massachusetts Avenue NE) Sunday for a Mad Men Season Five Finale Watch Party, complete with 60s costume contest, Mad Men trivia, and retro food and drink. 8:00-11:00 p.m. $10 general admission, $20 admission and two hour open bar.</p>'
+                            '<strong>Kouchibouguac National Park</strong><p><em>New Brunswick</em></p> <img src="../images/kouch.jpg" alt="National Park image" style="width:100%; height:auto;"><p>Kouchibouguac National Park Dark-sky Preserve is a great spot for stargazing, but it also benefits local nocturnal ecology including birds, bats and insects.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -41,7 +41,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Kejimkujik National Park and National Historic Site</strong><p>EatBar (2761 Washington Boulevard Arlington VA) is throwing a Big Backyard Beach Bash and Wine Fest on Saturday, serving up conch fritters, fish tacos and crab sliders, and Red Apron hot dogs. 12:00-3:00 p.m. $25.</p>'
+                            '<strong>Kejimkujik National Park and National Historic Site</strong><p><em>Nova Scotia</em></p> <img src="../images/keji.jpg" alt="National Park image" style="width:100%; height:auto;"><p>At Kejimkujik National Park, you can stargaze and learn how stars have inspired centuries of story, song, and legend.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -52,7 +52,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Terra Nova National Park</strong><p>The Ballston Arts & Crafts Market sets up shop next to the Ballston metro this Saturday for the first of five dates this summer. Nearly 35 artists and crafters will be on hand selling their wares. 10:00-4:00 p.m.</p>'
+                            '<strong>Terra Nova National Park</strong><p><em>Newfoundland & Labrador</em></p> <img src="../images/terra.jpg" alt="National Park image" style="width:100%; height:auto;"><p>Terra Nova was designated as a Dark Sky Preserve in 2018, and continues to retrofit light fixtures to reduce energy, protect ecology, and provide atronomy education.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -63,7 +63,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Point Pelee National Park</strong><p>Feeling dandy? Get fancy, grab your bike, and take part in this year\'s Seersucker Social bike ride from Dandies and Quaintrelles. After the ride enjoy a lawn party at Hillwood with jazz, cocktails, paper hat-making, and more. 11:00-7:00 p.m.</p>'
+                            '<strong>Point Pelee National Park</strong><p><em>Ontario</em></p> <img src="../images/pelee.jpg" alt="National Park image" style="width:100%; height:auto;"><p>At Point Pelee, there are focused efforts to educate visitors about the ecological and cultural importance of preserving the night sky.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -74,7 +74,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Bruce Peninsula National Park</strong><p>The annual Capital Pride Parade makes its way through Dupont this Saturday. 4:30 p.m. Free.</p>'
+                            '<strong>Bruce Peninsula National Park</strong><p><em>Ontario</em></p> <img src="../images/bruce.jpg" alt="National Park image" style="width:100%; height:auto;"><p>This park is in the traditional territory of the Saugeen Ojibway Nation. The Bruce trail runs through it - a world famous hiking trail known for cliffs, orchids, ferns and black bears.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -85,7 +85,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Fathom Five National Marine Park</strong><p>Jazz-influenced hip hop artist Muhsinah plays the Black Cat (1811 14th Street NW) tonight with Exit Clov and Gods’illa. 9:00 p.m. $12.</p>'
+                            '<strong>Fathom Five National Marine Park</strong><p><em>Ontario</em></p> <img src="../images/five.jpg" alt="National Park image" style="width:100%; height:auto;"><p>This site is the traditional territory of the Saugeen Ojibway Nation. The Dark Sky preserve sees sparkling blue water during the day, and dark quiet waves at night. </p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -96,7 +96,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Fort Walsh National Historic Site</strong><p>The Arlington Players\' production of Stephen Sondheim\'s <em>A Little Night Music</em> comes to the Kogod Cradle at The Mead Center for American Theater (1101 6th Street SW) this weekend and next. 8:00 p.m.</p>'
+                            '<strong>Fort Walsh National Historic Site</strong><p><em>Saskatchewan</em></p> <img src="../images/walsh.jpg" alt="National Park image" style="width:100%; height:auto;"><p>This site is part of the Cypress Dark Sky Preserve, and is also a National Historic Site that tells the story of settlers impact on the Nakoda people since the 1800s. </p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -107,7 +107,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Grasslands National Park</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>'
+                            '<strong>Grasslands National Park</strong><p><em>Saskatchewan</em></p> <img src="../images/grasslands.jpg" alt="National Park image" style="width:100%; height:auto;"><p>This park works with both dark sky organizations and the local community to limit light pollution and protect the views of the night sky. </p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -118,7 +118,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Elk Island National Park</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>'
+                            '<strong>Elk Island National Park</strong><p><em>Alberta</em></p> <img src="../images/elk.jpg" alt="National Park image" style="width:100%; height:auto;"><p> This site is part of the Beaver Hills Dark Sky Preserve. Experience seasonal meteor showers and northern lights!</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -129,7 +129,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Jasper National Park</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>'
+                            '<strong>Jasper National Park</strong><p><em>Alberta</em></p> <img src="../images/jasper.jpg" alt="National Park image" style="width:100%; height:auto;"><p>Visit this park in October for the Annual Jasper Dark Sky Festival. Encompassing over 11,000 km2, Jasper National Park is the second largest dark sky preserve in the world!  </p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -140,7 +140,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Waterton-Glacier International Peace Park</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>'
+                            '<strong>Waterton-Glacier International Peace Park</strong><p><em>Alberta</em></p> <img src="../images/waterton.jpg" alt="National Park image" style="width:100%; height:auto;"><p>Craters and mountains on the surface of the moon can been easily seen at a dark sky preserve of this size.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -151,7 +151,7 @@ map.on('load', async () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Wood Buffalo National Park</strong><p>Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.</p>'
+                            '<strong>Wood Buffalo National Park</strong><p><em>Northwest Territories</em></p> <img src="../images/wood.jpg" alt="National Park image" style="width:100%; height:auto;"><p>This spot is unique for stargazing because there is a good chance of seeing the northern lights too. It is the largest protected dark sky on Earth!</p>'
                     },
                     'geometry': {
                         'type': 'Point',
