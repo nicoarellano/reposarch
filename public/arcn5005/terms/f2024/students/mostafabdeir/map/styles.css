@@ -1,0 +1,56 @@
+body { margin: 0; padding: 0; }
+html, body, #map { height: 100%; }
+
+
+ .maplibregl-popup {
+    max-width: auto;
+    font: 12px/20px 'Courier New', Courier, monospace;
+    font-size: 15pt;
+    font-weight: lighter;
+    background-color: transparent;
+    border-width: 2pt;
+    color: white;
+ }
+
+ .maplibregl-popup-content {
+    background-color: rgba(0, 0, 0, 0.76);
+    border: 2px solid rgb(255, 166, 0);
+    border-radius: 1rem;
+    width: 250px;
+    /*background-image: url(gokuvsvegeta.gif);
+    /* border-top: transparent;
+    border-left: transparent;
+    border-right: transparent; */
+ }
+
+ #introyap {
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    z-index: 3;
+    top: 0rem;
+    left: 1rem;
+    font-size: 20pt;
+    font-weight: 5pt;
+    letter-spacing: 1pt;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1pt;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.36); 
+    width: fit-content;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+ }
+
+ strong {
+    font-weight: 1pt;
+    letter-spacing: 1pt;
+    -webkit-text-stroke-color: black;
+}
+
+p {
+   font-size: 8pt;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

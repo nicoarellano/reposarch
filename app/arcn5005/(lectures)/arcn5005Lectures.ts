@@ -15,6 +15,7 @@ import { content as week12 } from './week12';
 import { content as week13 } from './week13';
 import { content as final } from './final';
 import { content as maps } from './maps';
+import { content as esp } from './esp';
 import { startingDate } from '../terms/currentTerm';
 
 const initialDate = dayjs(startingDate); // for Fall 2024
@@ -290,8 +291,8 @@ export const arcn5005Lectures: Lectures = [
       { title: 'JavaScript (js)' },
       { title: 'WebGL - Web based 3D graphics' },
       { title: 'GLTF' },
-      { title: 'Tree.js, intro to ifc.js' },
-      { title: 'Intro to ifc.js' },
+      { title: 'Tree.js' },
+      { title: 'Intro to That Open' },
       { title: '🖥️ LAB 8: Javascript and Three.js, uploading mesh' },
     ],
     recordings: [
@@ -419,18 +420,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/lFfr5UmHCFE?si=d4DH0oJC--MCQtRC',
+        title: 'OS Maps, GIS and Map renderers - Fall 2024',
+        date: dayjs('2024/11/20'),
+      },
+      {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709',
         title: 'Assignment 3 - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m',
-        title: 'Web based mapping  - Fall 2023',
+        title: 'OS Maps, GIS and Map renderers  - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv',
-        title: 'Maps, GIS and Map renderers - Fall 2023',
+        title: 'OS Maps, GIS and Map renderers (infrastructure) - Fall 2023',
         date: dayjs('2023/09/25'),
       },
     ],
@@ -457,6 +463,11 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/b_bWEVienwU?si:eMKgj9UmEMZZcQjC',
+        title: 'Advanced toolbox and GH Pages - Fall 2024',
+        date: dayjs('2024/11/24'),
+      },
+      {
         url: 'https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt',
         title: 'Advanced toolbox',
         date: dayjs('2023/11/30'),
@@ -482,20 +493,32 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
+    title: '🏁❓ Optional Final assignment review',
+    id: `final-review`,
+    url: `final-review`,
+    date: initialDate.add(14, 'week'),
+    content: final,
+    toc: [
+      {
+        title:
+          'Optional Final review: We will meet at the Zoom link and if there are questions about the final assignment we can go through them during that time',
+      },
+    ],
+  },
+  {
     title: '🏁 Final Presentation 🏁',
     id: `final`,
     url: `final`,
-    date: initialDate.add(14, 'week'),
+    date: initialDate.add(14, 'week').add(2, 'day'),
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
-  /*
   {
     title: '🗺️ Maps and GIS 🌎',
-    id: `maps`,
-    url: `maps`,
-    date: dayjs('2024-09-25'),
+    id: `week-maps`,
+    url: `week-maps`,
     content: maps,
+    visibleInToc: false,
     toc: [
       { title: 'History of Mapping' },
       { title: 'Map Projections' },
@@ -518,5 +541,24 @@ export const arcn5005Lectures: Lectures = [
         date: dayjs('2023/09/25'),
       },
     ],
-  },*/
+  },
+  {
+    title: '🏛️ BIM-GIS y graficas 3D 🏗️',
+    id: `week-esp`,
+    url: `week-esp`,
+    content: esp,
+    visibleInToc: false,
+    toc: [
+      { title: 'Herramientas digitales para AECO' },
+      { title: 'Procesos de representación: CAD, 3D CAD, BIM' },
+      { title: 'Software propietario o patentado' },
+      { title: 'WebGL - Gráficos 3D basados ​​en la web' },
+      { title: 'Formatos de codigo abierto - GLTF, IFC' },
+      {
+        title:
+          'Librerias de codigo abierto - Tree.js, IFC.js, That Open Engine',
+      },
+      { title: '🖥️ Lab 3: Blender, Bonsaibim, SketchFab, Three.js, That Open' },
+    ],
+  },
 ];
