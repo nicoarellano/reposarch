@@ -148,28 +148,6 @@ directionalLight.target.position.set(0, 3, 0);
 scene.add(directionalLight);
 scene.add(directionalLight.target);
 
-function animate() {
-  requestAnimationFrame(animate);
-
-  if (mesh) mesh.rotation.y += 0.01;
-
-  yellowCube.rotation.x += 0.0;
-  yellowCube.rotation.y += 0.1;
-
-  blueCube.rotation.x += 0.0;
-  blueCube.rotation.y -= 0.1;
-
-  redCube.rotation.x -= 0.0;
-  redCube.rotation.y -= 0.1;
-
-  greenCube.rotation.x += 0.0;
-  greenCube.rotation.y -= 0.1;
-
-  torusKnot.rotation.x += 0.02;
-  torusKnot.rotation.y -= 0.02;
-
-  renderer.render(scene, camera);
-}
 
 animate();
 

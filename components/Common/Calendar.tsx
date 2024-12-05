@@ -26,7 +26,7 @@ function ServerDay(
 
   const isSelected =
     !outsideCurrentMonth &&
-    highlightedDays.some((date) => date.isSame(day, 'day'));
+    highlightedDays.some((date) => date?.isSame(day, 'day'));
 
   const isClassDay = classDays.some(
     (classDay) => classDay && classDay.isSame(day, 'day')
@@ -34,13 +34,17 @@ function ServerDay(
   const isAssignmentDay = assignments.some((assignmentDay) =>
     assignmentDay.isSame(day, 'day')
   );
+
   const isQuizDay = quizes.some((quizDay) => quizDay.isSame(day, 'day'));
   const isFallBreakDay = fallBreak.some((fallBreakDay) =>
     fallBreakDay.isSame(day, 'day')
   );
 
-  const isOnline = day.isSame(dayjs('2024-10-30'), 'day');
-  const isFinalAssignmentDay = day.isSame(dayjs('2024-12-16'), 'day');
+  const isOnline =
+    day.isSame(dayjs('2024-10-30'), 'day') ||
+    day.isSame(dayjs('2024-12-11'), 'day');
+
+  const isFinalAssignmentDay = day.isSame(dayjs('2024-12-13'), 'day');
 
   return (
     <Badge

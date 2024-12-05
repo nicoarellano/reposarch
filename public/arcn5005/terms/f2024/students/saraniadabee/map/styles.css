@@ -1,0 +1,126 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Ensure the map container occupies the full screen */
+html, body, #map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Tooltip styles */
+#tooltip {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Map overlay styles */
+.map-overlay {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  position: absolute;
+  width: 25%;
+  top: 10px;
+  left: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(86, 113, 173, 0.5);
+}
+
+.map-overlay .map-overlay-inner {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(86, 113, 173, 0.5);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* Main heading styles */
+.map-overlay h2 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Month header styles */
+.map-overlay h3#month-header {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  color: #2e2727;
+  font-style: italic;
+  margin-bottom: 15px;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+}
+
+/* Legend heading styles */
+.map-overlay h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  color: #2e2727;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* Legend bar styles */
+.map-overlay .legend .bar {
+  flex-grow: 1;
+  height: 12px;
+  margin-right: 10px;
+  background: linear-gradient(to right, #FFF5F5, #FF0000);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider styling */
+.map-overlay input {
+  background-color: transparent;
+  display: block;
+  width: 90%; /* Increase slider width */
+  margin: 10px auto; /* Center slider and add spacing */
+  cursor: ew-resize;
+  height: 8px;
+  appearance: none;
+}
+
+.map-overlay input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.map-overlay input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

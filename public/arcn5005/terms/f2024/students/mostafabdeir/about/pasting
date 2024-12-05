@@ -57,3 +57,18 @@ button {
   button:active span::before {
     background: #c2ffd6;
   }
+
+
+
+  /*#fax {      MIGHT USE LATER
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25pt;
+  font-weight: bold;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 1pt;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  position: absolute;
+  left: 6rem;
+  top: 36rem;
+} */

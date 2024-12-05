@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-  color: aliceblue;
+  color: rgb(180, 103, 147);
 }
 
 header {
@@ -113,18 +113,18 @@ button:before {
 }
 
 .photo-gallery figcaption {
-  display: none; /* Make sure this is hidden by default */
+  display: none; 
   font-size: 14px;
   color: #ffffff;
   position: absolute;
-  bottom: 0; /* Adjust position as needed */
+  bottom: 0; 
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: for better visibility */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .photo-gallery figure:hover figcaption {
-  display: block; /* Show caption on hover */
+  display: block; 
 }
 
 .photo-gallery img:hover {

@@ -1,20 +1,47 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basil Currie's About Page</title>
+
+<head>
+
+    <title>Almonte</title>
+    <meta property="og:description" content="Historic Sites in Almonte" />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <div class="maincontent">
-      <div id="title">
-        <div id="avatar">
-        </div>
-        <div id="words">
-          <h2>ASSG 3</h2>
-          <h6 style="padding:3px;">Map Project</h6>
-        </div>
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    <style>
+        html, body, #map { height: 100%; }
+    </style>
+
+<body>
+  <div class="maincontent" style="position:absolute;margin:10px;z-index:1;">
+    <div id="title">
+      <div id="mapimage">
       </div>
-      <hr>
-  </body>
+      <div id="words">
+        <h2 style="padding-left:10px;">ALMONTE</h2>
+        <h6 style="padding:10px;">Historic Buildings</h6>
+      </div>
+    </div>
+    <hr>
+    <h6>Music by Cindy Thompson, an Almonte fiddler/tap dancer:</h6>
+    <audio id='aud2' controls autoplay muted>
+      <source src="Cindy Thompson Almonte Celtfest.mp3" type="audio/mp3">
+    </audio>
+    <ul style="list-style-type: none;padding-left:0;">
+        <li><button id="a1">Almonte City Hall</button></li>
+        <li><button id="a2">Black Watch Building</button></li>
+        <li><button id="a3">County Registry Office</button></li>
+        <li><button id="a4">Dungarvon Building</button></li>
+        <li><button id="a5">Gatehouse at Mill of Kintail</button></li>
+        <li><button id="a6">Textile Museum</button></li>
+    </ul>
+    <div id="bldginfo"></div>
+  </div>
+  <div id="map"></div>
+  <script src="main.js" style="background-attachment:fixed;"></script>
+
+</body>
+
+</html>

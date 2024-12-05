@@ -3,7 +3,7 @@ import { Toc } from '@/app/types/types';
 import Image from '@/components/Common/Image';
 import Video from '@/components/Common/Video';
 
-// import CartesianPlane from '@/components/CartesianPlane';
+import CartesianPlane from '@/components/CartesianPlane';
 import TOC from '@/app/arcn5005/(main)/toc/page';
 import SimpleButton from '@/components/Common/SimpleButton';
 
@@ -125,7 +125,10 @@ export const content: Toc = [
         src="/images/computer-graphics/albertis-grid.png"
         alt="Alberti's grid"
         caption={
-          'Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)'
+          'Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura) \n\
+          Alberti knew that the manuscript transmission of texts and images was risky; copyists make mistakes, interpret, and sometimes even invent (65) \n\
+          None of Alberti’s three famous treatises on painting, architecture, and sculpture was illustrated, he replaced images by digitizing them. \n\
+          Replacing pictures with a list of numbers and a set of computational instructions (algorithms), to convert a visual image into a digital file (Carpo, The Alphabet and the Algorithm)'
         }
       />
     ),
@@ -168,11 +171,11 @@ export const content: Toc = [
     notes:
       'The Cartesian refers to the French mathematician and philosopher René Descartes, who published this idea in 1637',
   },
-  // {
-  //   element: <CartesianPlane />,
-  //   notes:
-  //     "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
-  // },
+  {
+    element: <CartesianPlane />,
+    notes:
+      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
+  },
   {
     element: (
       <Image
@@ -641,7 +644,7 @@ export const content: Toc = [
         <br />
         <SimpleButton
           title="Download Node js"
-          href="https://nodejs.org/en/download"
+          href="https://nodejs.org/en/download/prebuilt-installer"
         />
       </>
     ),
@@ -727,6 +730,7 @@ export const content: Toc = [
       </>
     ),
   },
+
   {
     element: (
       <>

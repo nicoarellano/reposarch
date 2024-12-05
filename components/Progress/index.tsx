@@ -23,7 +23,7 @@ const currentLectures = arcn5005Lectures.filter(
 );
 
 export default function Progress() {
-  const announcements = AnnouncementsF2024;
+  const announcements = AnnouncementsF2024.reverse();
 
   const isMobile = useMediaQuery('(max-width: 600px)');
   return (

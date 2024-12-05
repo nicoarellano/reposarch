@@ -1,63 +1,80 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>rashidaleslie about page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rashida Leslie About Page</title>
     <link rel="stylesheet" href="webstyle.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2d843ace68.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
- 
+    <audio id="background-music" src="PeanutsTheme.mp3" autoplay loop></audio>
 
+    <header>
+      <h1>ALL ABOUT ME</h1>
+      <button id="music-toggle" class="button" onclick="toggleMusic()">
+        <i class="fa-solid fa-music"></i>
+      </button>
+    </header>
 
-    <div class="row">
-      <div class="column-1" >
-        <h1>ALL ABOUT</h1>
-        <h1>ME</h1>
-        <img src="SNOOPY.png" alt="ME" style = width:80%;  height:auto; >
+    <div class="container">
+      <div class="card snoopy">
+        <img src="SNOOPY.png" alt="Snoopy" />
+        <h2>Snoopy is Life</h2>
       </div>
-      <div class="column-group">
-        <div class="columns-container">
-        <div class="column">
-          <img src="RL.jpg" alt="ME" class="image-border" width="400" height="300">
-        </div>
-        <div class="column">
-          <img src="youngme.jpg" alt="ME" class="image-border" width="400" height="300">
-        </div>
+      <div class="card rl">
+        <img src="RL.jpg" alt="RL" />
+        <h2>That's Me</h2>
       </div>
-        <div class="bottom-section">
-          
-          <h2>WHO IS RASHIDA LESLIE? </h2>
-          <ul>
-            <li>UNIVERSITY OF TORONTO ALUMNI</li>
-            <li>VANCOUVER NATIVE</li>
-            <li>ANIMAL LOVER</li>
-            <li>CHRONICALLY ONLINE</li>
+      <div class="card youngme">
+        <img src="youngme.jpg" alt="Youngme" />
+        <h2>Diva From a Young Age</h2>
+      </div>
+      <div class="card info">
+        <h3>WHO IS RASHIDA LESLIE?</h3>
+        <ul>
+          <li>UofT ALUMNI</li>
+          <li>VANCOUVER NATIVE</li>
+          <li>ANIMAL LOVER</li>
+          <li>CHRONICALLY ONLINE</li>
         </ul>
-        
-        </div>
       </div>
+
+      <button class="card-button A1">ASSIGNMENT 1</button>
+      <button class="card-button new-services">ASSIGNMENT 2</button>
+      <button class="card-button company-culture">ASSIGNMENT 3</button>
+      <a href="https://rick.nerial.uk/video.mp4" target="_blank">
+        <button class="card-button new-button" onclick="stopMusic()">
+          SURPRISE ME
+        </button>
+      </a>
     </div>
+
     <div class="new-section">
-      <h2>IMPORANT LINKS</h2>
-      <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">
-        <button class="button">SURPRISE ME................</button>
-    </a>
-    <a href="about:blank" target="_blank">
-        <button class="button">ASSIGNMENT 1..............</button>
-    </a>
-    <a href="about:blank" target="_blank">
-        <button class="button">ASSIGNMENT 2.............</button>
-    </a>
-    <a href="about:blank" target="_blank">
-        <button class="button">ASSIGNMENT 3.............</button>
-    </a>
-    <a href="about:blank" target="_blank">
-        <button class="button">PORTFOLIO....................</button>
-    </a>
-</div>
+      <h2>There's More to Come</h2>
+      <p>Don't be so impatient!</p>
+      <img src="dancesnoopy.gif" />
+      <button class="unknown-button">Wouldn't You Like to Know</button>
+    </div>
+
+    <footer class="footer">
+      <h2>Follow Me</h2>
+      <a href="https://www.instagram.com/rashida.arch/" target="_blank">
+        <i
+          class="fab fa-instagram"
+          style="font-size: 24px; color: black; margin-left: 10px"
+        ></i>
+      </a>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
