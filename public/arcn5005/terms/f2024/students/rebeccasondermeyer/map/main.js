@@ -182,19 +182,25 @@ map.on('load', () => {
             coordinates: [
               [
                 [2.279887068088954, 48.878575884299934],
+                [2.2869384117223484, 48.88893020686787],
                 [2.3202842821268423, 48.90104428197504],
                 [2.387131680646371, 48.90212922809091],
                 [2.396070494441452, 48.897155962645996],
                 [2.3990814510707037, 48.882605258062384],
+                [2.4127929739391365, 48.88093896964123],                
                 [2.4146766660801955, 48.84394931070708],
+                [2.4371745247366166, 48.840842631948234],
+                [2.4375894570388583, 48.84688553751989],
                 [2.4701908758039193, 48.84021819684164],
                 [2.4609130699915656, 48.817632167150286],
-                [2.402498644002849, 48.82894943657759],
-                [2.359031132004155, 48.81558303564634],
+                [2.4377699518124425, 48.818138270506026],
+                [2.402498644002849, 48.82894943657759],                
                 [2.356143416225143, 48.815242248075464],
                 [2.352281951792631, 48.81826157952045],
                 [2.34642537393851, 48.81574488424608],
+                [2.2938057423121423, 48.82648612098203],           
                 [2.2794736284204107, 48.83296715483079],
+                [2.271274273272443, 48.82722694571067], 
                 [2.2670823608703095, 48.827832951869986],
                 [2.266835505954082, 48.83454780243171],
                 [2.252042610020919, 48.83727667372018],
@@ -202,7 +208,7 @@ map.on('load', () => {
                 [2.2223650130196244, 48.85386981913002],
                 [2.2439580703399145, 48.8777008262405],
                 [2.255409092812111, 48.87450704015577],
-                [2.2585616399691566, 48.88089921077905],
+                [2.2585616399691566, 48.88089921077905],                
                 [2.279887068088954, 48.878575884299934],
               ],
             ],
@@ -270,25 +276,13 @@ map.on('click', 'landmarks', (e) => {
               <p>Hours: ${landmark.properties.Hours}</p>
               <p>Location: ${landmark.properties.Location}</p>
               <p>Description: ${landmark.properties.Description}</p>
-              `
-    )
+              <img src="${landmark.properties.Image || 'images/Eiffel_Tower.jpg'}" 
+       alt="${landmark.properties.Place}" style="width:50%;height:auto;">
+`)
     .addTo(map);
 });
 
-// Change the cursor to a pointer when the mouse is over the places layer.
-map.on('mouseenter', 'places', () => {
-  map.getCanvas().style.cursor = 'pointer';
-});
-
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'places', () => {
-  map.getCanvas().style.cursor = '';
-});
-
-//Toggle between the two layers
-// After the last frame rendered before the map enters an "idle" state.
 map.on('idle', () => {
-  // If these two layers were not added to the map, abort
   if (!map.getLayer('landmarks')) {
     return;
   }
@@ -298,26 +292,16 @@ map.on('idle', () => {
     map.getCanvas().style.cursor = 'pointer';
   });
 
-  // Change it back to a pointer when it leaves.
-  map.on('mouseleave', 'places', () => {
-    map.getCanvas().style.cursor = '';
-  });
-
-  // Set up the corresponding toggle button for each layer.
+  
+  // Toggle Layers
   for (const id of toggleableLayerIds) {
-    // Skip layers that already have a button set up.
+    // Skip layers with a button set up.
     if (document.getElementById(id)) {
       continue;
     }
 
-    // Create a link.
-    const link = document.createElement('a');
-    link.id = id;
-    link.href = '#';
-    link.textContent = id;
-    link.className = 'active';
 
-    // Show or hide layer when the toggle is clicked.
+    // Show or hide layer when toggle is clicked.
     link.onclick = function (e) {
       const clickedLayer = this.textContent;
       e.preventDefault();
