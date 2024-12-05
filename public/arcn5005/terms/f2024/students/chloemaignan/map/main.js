@@ -6,7 +6,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Agricultural',
-                'description': '<h2>Canada Agriculture and Food Museum</h2> <p>Established: 1983</p> <p>Location: Experimental Farm</p><p>Note: Canada Agriculture museum, demonstrating advances in farming science and technology.</p>'
+                'description': '<h2>Canada Agriculture and Food Museum</h2> <p>Established: 1983</p> <p>Location: Experimental Farm</p><p>Note: Canada Agriculture museum, demonstrating advances in farming science and technology.</p><img src = "agriculture1.jpg"width=200px>'
             },
             'geometry': {
                 'type': 'Point',
@@ -17,7 +17,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Aviation',
-                'description': '<h2>Canada Aviation and Space Museum</h2> <p>Established: 1982</p> <p>Location: Rockcliffe Park</p><p>Note: Canada National aviation and space museum, with the most extensive aviation collection in Canada.</p>'
+                'description': '<h2>Canada Aviation and Space Museum</h2> <p>Established: 1982</p> <p>Location: Rockcliffe Park</p><p>Note: Canada National aviation and space museum, with the most extensive aviation collection in Canada.</p><img src = "aviation1.jpg"width=200px>'
             },
             'geometry': {
                 'type': 'Point',
@@ -28,7 +28,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Science',
-                'description': "<h2>Canada Science and Technology Museum</h2> <p>Established: 1967</p> <p>Location: St. Laurent</p><p>Note: Canada’s National Science Museum displays the technological and scientific history of Canada.</p>"
+                'description': "<h2>Canada Science and Technology Museum</h2> <p>Established: 1967</p> <p>Location: St. Laurent</p><p>Note: Canada’s National Science Museum displays the technological and scientific history of Canada.</p><img src = 'science-tech1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -39,7 +39,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'History',
-                'description': "<h2>Canadian Museum of History</h2> <p>Established: 1856</p> <p>Location: Hull</p><p>Note: Canada’s National History Museum; has a collection, study, and preservation of materials illuminating Canada's human history.</p>"
+                'description': "<h2>Canadian Museum of History</h2> <p>Established: 1856</p> <p>Location: Hull</p><p>Note: Canada’s National History Museum; has a collection, study, and preservation of materials illuminating Canada's human history.</p><img src = 'history1.jpeg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -50,7 +50,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Science',
-                'description': "<h2>Canadian Museum of Nature</h2> <p>Established: 1968</p> <p>Location: Centretown</p><p>Note: Canada’s National Natural History and Natural Sciences museum.</p>"
+                'description': "<h2>Canadian Museum of Nature</h2> <p>Established: 1968</p> <p>Location: Centretown</p><p>Note: Canada’s National Natural History and Natural Sciences museum.</p><img src = 'nature1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -61,7 +61,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Military',
-                'description': "<h2>Canadian War Museum</h2> <p>Established: 1942</p> <p>Location: LeBreton Flats</p><p>Note: Canada’s National Museum of Military History.</p>"
+                'description': "<h2>Canadian War Museum</h2> <p>Established: 1942</p> <p>Location: LeBreton Flats</p><p>Note: Canada’s National Museum of Military History.</p><img src = 'war1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -72,7 +72,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Art',
-                'description': "<h2>National Arts Centre</h2> <p>Established: 1965</p> <p>Location: Centretown</p><p>Note: Canada’s Center for the Performing Arts.</p>"
+                'description': "<h2>National Arts Centre</h2> <p>Established: 1965</p> <p>Location: Centretown</p><p>Note: Canada’s Center for the Performing Arts.</p><img src = 'NAC1.png'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -83,7 +83,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Art',
-                'description': "<h2>National Gallery of Canada</h2> <p>Established: 1880</p> <p>Location: Lower Town</p><p>Note: One of the largest art museums in North America.</p>"
+                'description': "<h2>National Gallery of Canada</h2> <p>Established: 1880</p> <p>Location: Lower Town</p><p>Note: One of the largest art museums in North America.</p><img src = 'gallery1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -94,7 +94,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'History',
-                'description': "<h2>Bytown Museum</h2> <p>Established: 1917</p> <p>Location: Centretown</p><p>Note: The city’s early history and building of the Rideau Canal.</p>"
+                'description': "<h2>Bytown Museum</h2> <p>Established: 1917</p> <p>Location: Centretown</p><p>Note: The city’s early history and building of the Rideau Canal.</p><img src = 'bytown1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -105,7 +105,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Military',
-                'description': "<h2>Cameron Highlanders of Ottawa Museum</h2> <p>Inaugurated: 1879</p> <p>Location: Centretown</p><p>Note: Canadian Army Primary Reserve infantry regiment, established as military training facility and museum.</p>"
+                'description': "<h2>Cameron Highlanders of Ottawa Museum</h2> <p>Inaugurated: 1879</p> <p>Location: Centretown</p><p>Note: Canadian Army Primary Reserve infantry regiment, established as military training facility and museum.</p><img src = 'highlanders1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -116,7 +116,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Nature',
-                'description': "<h2>Dominion Arboretum</h2> <p>Established: 1889</p> <p>Location: Experimental Farm</p><p>Note: An arboretum part of the Central Experimental Farm of Agriculture and Agri-food Canada.</p>"
+                'description': "<h2>Dominion Arboretum</h2> <p>Established: 1889</p> <p>Location: Experimental Farm</p><p>Note: An arboretum part of the Central Experimental Farm of Agriculture and Agri-food Canada.</p><img src = 'dominion1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -127,18 +127,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Art',
-                'description': "<h2>SAW Gallery</h2> <p>Established: 1973</p> <p>Location: Centretown</p><p>Note: Artist-run gallery.</p>"
-            },
-            'geometry': {
-                'type': 'Point',
-                'coordinates': [-75.688670, 45.425313]
-            }
-        },
-        {
-            'type': 'Feature',
-            'properties': {
-                'icon': 'Art',
-                'description': "<h2>Ottawa Art Gallery (OAG)</h2> <p>Established: 1988</p> <p>Location: Centretown</p><p>Note: Contemporary and 20th-century art.</p>"
+                'description': "<h2>Ottawa Art Gallery (OAG)</h2> <p>Established: 1988</p> <p>Location: Centretown</p><p>Note: Contemporary and 20th-century art.</p><img src = 'OAG1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -149,7 +138,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'History',
-                'description': "<h2>Billings House National Historic Site of Canada (Estate Museum)</h2> <p>Established: 1975</p> <p>Location: Alta Vista</p><p>Note: Historic house from 1828 home of early settlers.</p>"
+                'description': "<h2>Billings House National Historic Site of Canada (Estate Museum)</h2> <p>Established: 1975</p> <p>Location: Alta Vista</p><p>Note: Historic house from 1828 home of early settlers.</p><img src = 'billings1.jpg'width=200px>"
             },
             'geometry': {
                 'type': 'Point',
@@ -162,9 +151,8 @@ const places = {
 const filterGroup = document.getElementById("filter-group");
 const map = new maplibregl.Map({
     container: "map",
-    style:
-        'https://api.maptiler.com/maps/satellite/style.json?key=42hWlNIdOqEy0E4oMcxo#1/0/0',
-    center: [-75.7, 45.4],
+    style: 'https://api.maptiler.com/maps/satellite/style.json?key=42hWlNIdOqEy0E4oMcxo#1/0/0',
+    center: [-75.655979, 45.426988],
     zoom: 12
 });
 
@@ -202,75 +190,82 @@ map.on('load', () => {
         const symbol = feature.properties['icon'];
         const layerID = `poi-${symbol}`;
 
-        // Add a layer for this symbol type if it hasn't been added already.
-        if (!map.getLayer(layerID)) {
-            map.addLayer({
-                'id': layerID,
-                'type': 'circle',
-                'source': 'places',
-                'paint': {
-                    'circle-radius': 8,
-                    'circle-color': '#FFFFFF',
-                    'circle-stroke-width': 1,
-                    'circle-stroke-color': '#3386c0',
-                },
-                'filter': ['==', 'icon', symbol]
-            });
-           let popup;
-           
-            map.on('mouseenter', layerID, (e) => {
-                map.getCanvas().style.cursor = 'pointer';
+        // Load a unique icon image for each category
+        const iconURL = 'museum-icon.png'; // Ensure you have the icons stored
+        map.loadImage(iconURL, (error, image) => {
+            if (error) throw error;
+            if (!map.hasImage(symbol)) {
+                map.addImage(symbol, image);
+            }
 
-                const coordinates = e.features[0].geometry.coordinates.slice();
-                const description = e.features[0].properties.description;
+            // Add a layer for this symbol type if it hasn't been added already.
+            if (!map.getLayer(layerID)) {
+                map.addLayer({
+                    'id': layerID,
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        'icon-image': symbol,
+                        'icon-size': 0.08, // Adjust size if necessary
+                        'icon-allow-overlap': true
+                    },
+                    'filter': ['==', 'icon', symbol]
+                });
 
-                if (!popup) {
-                    popup = new maplibregl.Popup({
-                        closeButton: false,
-                        closeOnClick: false
-                    }).setLngLat(coordinates)
-                      .setHTML(description)
-                      .addTo(map);
-                } else {
-                    popup.setLngLat(coordinates)
-                         .setHTML(description);
-                }
-            });
+                let popup;
 
-            map.on('mouseleave', layerID, () => {
-                map.getCanvas().style.cursor = '';
-                if (popup) {
-                    popup.remove(); 
-                    popup = undefined; 
-                }
-            });
+                map.on('mouseenter', layerID, (e) => {
+                    map.getCanvas().style.cursor = 'pointer';
 
-            map.on('click', layerID, (e) => {
-                const coordinates = e.features[0].geometry.coordinates;
-                map.flyTo({ center: coordinates, zoom: 15 });
-            });
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const description = e.features[0].properties.description;
 
-            // Add checkbox and label elements for the layer.
-            const input = document.createElement('input');
-            input.type = 'checkbox';
-            input.id = layerID;
-            input.checked = true;
-            filterGroup.appendChild(input);
+                    if (!popup) {
+                        popup = new maplibregl.Popup({
+                            closeButton: false,
+                            closeOnClick: false
+                        }).setLngLat(coordinates)
+                          .setHTML(description)
+                          .addTo(map);
+                    } else {
+                        popup.setLngLat(coordinates)
+                             .setHTML(description);
+                    }
+                });
 
-            const label = document.createElement('label');
-            label.setAttribute('for', layerID);
-            label.textContent = symbol;
-            filterGroup.appendChild(label);
-            //
-            
-            input.addEventListener('change', (e) => {
-                map.setLayoutProperty(
-                    layerID,
-                    'visibility',
-                    e.target.checked ? 'visible' : 'none'
-                );
-            });
-        }
+                map.on('mouseleave', layerID, () => {
+                    map.getCanvas().style.cursor = '';
+                    if (popup) {
+                        popup.remove();
+                        popup = undefined;
+                    }
+                });
+
+                map.on('click', layerID, (e) => {
+                    const coordinates = e.features[0].geometry.coordinates;
+                    map.flyTo({ center: coordinates, zoom: 15 });
+                });
+
+                // Add checkbox and label elements for the layer.
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = layerID;
+                input.checked = true;
+                filterGroup.appendChild(input);
+
+                const label = document.createElement('label');
+                label.setAttribute('for', layerID);
+                label.textContent = symbol;
+                filterGroup.appendChild(label);
+
+                input.addEventListener('change', (e) => {
+                    map.setLayoutProperty(
+                        layerID,
+                        'visibility',
+                        e.target.checked ? 'visible' : 'none'
+                    );
+                });
+            }
+        });
     });
-
 });
