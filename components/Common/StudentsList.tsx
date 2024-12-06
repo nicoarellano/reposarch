@@ -17,6 +17,7 @@ import AboutIcon from '@mui/icons-material/AccountCircle';
 import ThreeIcon from '@mui/icons-material/ThreeDRotationRounded';
 import MapIcon from '@mui/icons-material/PublicRounded';
 import BIMIcon from '@mui/icons-material/MapsHomeWorkRounded';
+import FinalIcon from '@mui/icons-material/SportsScore';
 
 interface Props {
   students: Students;
@@ -86,6 +87,13 @@ export default function StudentsList({ students }: Props) {
               <Link href={`${path}/${student.username}/bim`}>
                 <IconButton title="BIM">
                   <BIMIcon />
+                </IconButton>
+              </Link>
+            )}
+            {student.assignments.includes('final') && (
+              <Link href={`${path}/${student.username}/final`}>
+                <IconButton title="Final Assignment">
+                  <FinalIcon />
                 </IconButton>
               </Link>
             )}
