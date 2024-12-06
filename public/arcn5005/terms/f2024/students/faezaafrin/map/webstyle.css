@@ -20,8 +20,8 @@ body {
 }
 
 .header {
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Align items vertically */
+    display: flex; 
+    align-items: center; 
     padding: 20px 20px;
     background-color: #1c1d1d;
     color: white;
@@ -32,6 +32,22 @@ body {
     font-weight: bold;
     margin-right: 0px;
     width: 100%;
+}
+
+.maptitle {
+    position: absolute;    
+    top: 20px;             
+    left: 50%;             
+    transform: translateX(-50%); 
+    width: fit-content;
+    text-align: center;
+    font-size: 25px;    
+    font-weight: bold;   
+    font-family: Arial, sans-serif; 
+    padding: 10px;
+    border: 3px solid rgb(252,76,220);
+    border-radius: 10px;
+    background-color: none; /* Optional: adds a background to make the text stand out */
 }
 
 .musicButton button {
@@ -71,4 +87,84 @@ body {
     border-radius: 50%;
     cursor: pointer;
     padding: 0;
+}
+
+/* Override default MapLibre default popup styles */
+.maplibregl-popup {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Override default MapLibre default container styles */
+.maplibregl-popup-content {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+/* Override default MapLibre default tip */
+.maplibregl-popup-tip {
+    display: none !important;
+}
+
+/* Circular popup */
+.custom-popup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px; 
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 50%; 
+    border: 5px solid rgba(131,252,244,1); 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.785); /* Glow Effect */
+    text-align: center;
+    transform: translate(-2%, -10%); /* Position Above Dot */
+}
+
+/*Triangular tip*/
+.custom-popup::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: rgba(131,252,244,1) transparent transparent transparent;
+}
+
+/*Image in Popup*/
+.custom-popup img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/*Text in popup*/
+.custom-popup strong {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding: 0 10px;
+    word-wrap: break-word;
+}
+
+.custom-popup p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0 10px;
+    word-wrap: break-word;
 }
