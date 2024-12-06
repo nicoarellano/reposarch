@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.header {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    padding: 20px 20px;
+    background-color: #1c1d1d;
+    color: white;
+}
+
+.pagetitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.musicButton button {
+    background-color: white;
+    color: #1c1d1d;
+    border: 1px solid #1c1d1d;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.musicButton button:hover {
+    background-color: rgb(252,76,220);
+    color: white;
+}
+
+.main-js {
+    min-height: -100rem;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+}
+
+#map {
+    border-style: solid;
+    border-color: rgb(252,76,220);
+    border-width: 5px;
+    width: 100%;
+    height: 88.3vh
+}
+
+.marker {
+    display: block;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+}
