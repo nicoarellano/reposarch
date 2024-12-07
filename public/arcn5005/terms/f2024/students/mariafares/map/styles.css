@@ -1,0 +1,114 @@
+body { margin: 0; padding: 0; }
+html, body, #map { 
+  height: 1080px;
+  position: relative;
+  z-index: 1800;
+  
+}
+*
+
+{
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar {
+  width: 300px;
+  height: 100%;
+  background: cornflowerblue;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li {
+  padding: 15px;
+  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wrapper .sidebar ul li a {
+  color: white;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas {
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover {
+  background-color: #f4d800;
+}
+
+.wrapper .sidebar ul li:hover a {
+  color: white;
+}
+
+.wrapper .sidebar .social_media {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a {
+  display: block;
+  width: 40px;
+  background: navy;
+  height: 50px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content {
+  width: 100%;
+  margin-left: 300px;
+}
+
+.wrapper .main_content .header {
+  padding: 10px;
+  background: #fff;
+  color: black;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info {
+  margin: 5px;
+  color: black;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div {
+  margin-bottom: 1rem;
+}
+
+.profile-pic {
+  position: center;
+}
+
