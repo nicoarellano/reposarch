@@ -14,7 +14,7 @@ function addPointCoordinates(coordinates, properties) {
 
     const marker = new maplibregl.Marker({
         element: el,
-        anchor: 'bottom' // This ensures the icon is positioned at its bottom point
+        anchor: 'bottom'
     })
         .setLngLat(coordinates)
         .addTo(map);
