@@ -824,7 +824,7 @@ export const content: Toc = [
         alt={"Autodesk's AutoCad"}
         href="https://www.autodesk.ca/en/products/autocad/overview?mktvar002=5656878%7CSEM%7C16183926843%7C137132251670%7Cpla-933128653804_autocad&plc=ACDIST&term=1-YEAR&support=ADVANCED&quantity=1&utm_source=GGL&utm_medium=SEM&utm_term=pla-933128653804&utm_id=5656878&utm_campaign=GGL_DEC_All-Products_AMER_CA_eComm_PLA_BR_New_NA_0000_4424459_&mkwid=s|pcrid|581813781112|pkw||pmt||pdv|c|slid||pgrid|137132251670|ptaid|pla-933128653804|pid|Autodesk%20AutoCAD%20(1%20year%20subscription)&utm_medium=cpc&utm_source=google&utm_campaign&utm_term&utm_content=s|pcrid|581813781112|pkw||pmt||pdv|c|slid||pgrid|137132251670|ptaid|pla-933128653804|&gclid=EAIaIQobChMIoovk042ogQMVP_uUCR2dig90EAYYAiABEgJY2PD_BwE&ef_id=ZQHwuAAABOyV0B@V:20230913172616:s&tab=subscription"
         caption={
-          "Autodesk's AutoCad pricing in 2023 - CA$2575 per year per 1 user"
+          "Autodesk's AutoCad pricing in 2024 - CA$2720 per year per 1 user (CA$2575 in 2023 - 5% increase in 1 year)"
         }
       />
     ),
@@ -839,6 +839,21 @@ export const content: Toc = [
           alt={'LibreCad'}
           href="https://wiki.librecad.org/index.php"
           caption={'LibreCad is a free and open source alternative to AutoCad'}
+        />
+      </>
+    ),
+  },
+
+  {
+    element: (
+      <>
+        <Image
+          src="/images/cad-bim/qcad-logo.png"
+          alt={'QCad'}
+          href="https://www.qcad.org/en/"
+          caption={
+            'Qcad is another free and open source alternative to AutoCad'
+          }
         />
       </>
     ),
@@ -1054,7 +1069,7 @@ The status quo is to work with proprietary solutions and closed file formats.'
         alt={"Autodesk's Revit 2023 price"}
         href="https://www.autodesk.ca/en/products/revit/overview?us_oa=dotcom-us&us_si=8abb21ea-6ba6-46ac-929b-39cecb847ed0&us_st=revit&us_pt=RVT&term=1-YEAR&tab=subscription&plc=RVT"
         caption={
-          "Autodesk's Revit pricing in 2023 - CA$3695 per year per 1 user"
+          "Autodesk's Revit pricing in 2024 - CA$3905 per year per 1 user (CA$3695 in 2023 - 5% increase in 1 year)"
         }
       />
     ),
