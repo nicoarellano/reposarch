@@ -119,14 +119,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 250px; 
-    height: 250px;
+    width: 300px; 
+    height: 300px;
     background-color: rgba(255, 255, 255, 0.95); 
     border-radius: 50%; 
     border: 5px solid rgba(131,252,244,1); 
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.785); /* Glow Effect */
+    box-shadow: 0 4px 8px rgba(241, 155, 155, 0.785); /* Glow Effect */
     text-align: center;
-    transform: translate(-2%, -10%); /* Position Above Dot */
+    transform: translate(-10%, -5%); /* Position Above Dot */
 }
 
 /*Triangular tip*/
@@ -144,16 +144,16 @@ body {
 }
 
 /*Image in Popup*/
-.custom-popup img {
-    width: 80%;
-    height: auto;
+.custom-popup img {;
+    width: 200px;
+    height: 200px;
+    align-content: bottom;
     border-radius: 50%;
-    margin-bottom: 10px;
 }
 
 /*Text in popup*/
 .custom-popup strong {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: #333;
     margin: 0;
@@ -162,9 +162,9 @@ body {
 }
 
 .custom-popup p {
-    font-size: 16px;
+    font-size: 13px;
     color: #333;
     margin: 0;
-    padding: 0 10px;
+    padding: 0 5px;
     word-wrap: break-word;
 }
