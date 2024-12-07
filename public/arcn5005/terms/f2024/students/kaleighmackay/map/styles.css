@@ -95,7 +95,8 @@ li {
     overflow-y: auto;
 }
 
-.maplibregl.Popup {
-    background-color: black;
-    border-radius: 10px;
-}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
