@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+<head>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>faezaafrin map page</title>
+    <title>Assignment 3: Map</title>
+    <meta property="og:description" content="Initialize a map in an HTML element with MapLibre GL JS." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="webstyle.css" />
+    <script type="module" src="./main.js"></script>
+
+    <script src=https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js></script>
+    <link href=https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css rel="stylesheet" />
+
   </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+
+<body>
+  <div class="header">
+    <div class="pagetitle">Map.</div>
+    <div class="maptitle">My Top Foodventures in Ottawa</div>
+   
+    <label class="musicButton">
+      <button onclick="
+          var audio = document.getElementById('audioPlayer'); 
+          if (audio.paused) {2
+              audio.play(); 
+          } else {
+              audio.pause(); 
+          }">♪</button>
+    </label>
+  </div>
+    
+  <div id="map"></div>   
+
+  <audio id="audioPlayer" autoplay loop>
+      <source src="track1.mp3" type="audio/mpeg">
+  </audio>
+</body>
+
 </html>
