@@ -1,8 +1,6 @@
 <html lang="en">
-
-<head>
-
-    <title>Mapping iceland trip </title>
+  <head>
+    <title>Mapping iceland trip</title>
 
     <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
     <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
@@ -18,19 +16,23 @@
     />
     </head>
 
-    
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
 
-<body>
-
-  <style>
-    body { margin: 0; padding: 0; }
-    html, body, #map { height: 100%; }
-
-    .maplibregl-popup {
-    max-width: 400px;
-    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    }
-</style>
+      .maplibregl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      }
+    </style>
 
   <div id="header">
     <div id = "headerContent">

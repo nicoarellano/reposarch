@@ -9,31 +9,27 @@ h1 {
 #header {
   font-family: 'Concert One', sans-serif;
 
-        background: rgb(254, 250, 224);
-        z-index: 1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        
-
-        
-        }
-#headerContent{
+  background: rgb(254, 250, 224);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+#headerContent {
   display: flex;
-       
+
   flex-direction: row;
   margin-right: auto;
 }
-#Title{
- 
-  margin-left:35%;
+#Title {
+  margin-left: 35%;
 }
-a{
+a {
   justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
-  float :left;
+  float: left;
 }
 
 button {
