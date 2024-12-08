@@ -11,7 +11,7 @@
       rgba(255, 255, 255, 0.5) 50%,
       rgba(255, 255, 255, 0.5) 50%
     ),
-    url('./background.jpg');
+    url('./TempBackground2.jpg');
   background-position: center;
   background-size: cover;
   height: 100vh;
