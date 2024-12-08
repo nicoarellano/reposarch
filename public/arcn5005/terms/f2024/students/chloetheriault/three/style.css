@@ -1,7 +1,7 @@
 
 body {
     
-    background-color: rgb(154, 198, 197);
+    background-color:  rgb(212, 153, 115);
     display: flex;
     align-content: stretch;
     height: 100%;
@@ -12,7 +12,7 @@ body {
   
   #title {
     font-family: "Concert One", sans-serif;
-    color: rgb(255, 255, 255);
+    color: rgb(254, 250, 224);
     flex-shrink: 3;
     align-items: center;
     margin-top: 10%;
@@ -40,3 +40,20 @@ body {
     bottom: 100;
   }
   
+  ::-webkit-scrollbar{
+    width: 1.5em;
+    
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(30 53% 64% / 1);
+    border-radius: 100vw;
+    margin-block: .5em;
+    
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(52 94% 94% / 1);
+    border: .25em solid hsl(30 53% 64% / 1);
+    border-radius: 100vw;
+  }

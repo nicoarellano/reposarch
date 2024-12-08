@@ -1,5 +1,11 @@
 
-
+h1 {
+  text-align: center;
+  color: rgb(212, 153, 115);
+  font-family: 'Concert One', sans-serif;
+  font-size: 3em;
+  margin: 3px;
+}
 #header {
   font-family: 'Concert One', sans-serif;
 
@@ -160,3 +166,20 @@ button {
     transform: scale(1);
   }
   
+  ::-webkit-scrollbar{
+    width: 1.5em;
+    
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(30 53% 64% / 1);
+    border-radius: 100vw;
+    margin-block: .5em;
+    
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(52 94% 94% / 1);
+    border: .25em solid hsl(30 53% 64% / 1);
+    border-radius: 100vw;
+  }
