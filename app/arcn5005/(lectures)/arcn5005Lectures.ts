@@ -15,6 +15,7 @@ import { content as week12 } from './week12';
 import { content as week13 } from './week13';
 import { content as final } from './final';
 import { content as maps } from './maps';
+import { content as esp } from './esp';
 import { startingDate } from '../terms/currentTerm';
 
 const initialDate = dayjs(startingDate); // for Fall 2024
@@ -216,13 +217,23 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/a7hWyWWJ3oQ?si=qxNqEVF2Q99S7Bfb',
+        title: 'OSArch - Open source for architects community - Fall 2024',
+        date: dayjs('2024/10/09'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/Qe2Bdh8Tpoc?si=5hVQ7_MVfWYrDovm',
+        title: 'Introduction to CSS - Fall 2024',
+        date: dayjs('2024/10/09'),
+      },
+      {
         url: 'https://www.youtube.com/embed/mBQb2ILySfg?si=CBeJKdvHX9_VV_h3',
-        title: 'OSArch - Open source for architects community',
+        title: 'OSArch - Open source for architects community - Fall 2023',
         date: dayjs('2023/10/12'),
       },
       {
         url: 'https://www.youtube.com/embed/nJAVn_VEt58?si=fZhMLNeyMfVlDfIg',
-        title: 'Introduction to CSS',
+        title: 'Introduction to CSS - Fall 2023',
         date: dayjs('2023/10/12'),
       },
     ],
@@ -246,8 +257,19 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/RjMWyDfLOwY?si=6rM9SCsHUbW04BWN',
+        title:
+          'Assignment 1 That Open Engine template   BIM software - Fall 2024',
+        date: dayjs('2023/10/19'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/g3GxMstbgDc?si=5VXjfc2G_5JrnTCU',
+        title: 'Raphael Vouilloz - BonsaiBIM - Fall 2024',
+        date: dayjs('2024/10/16'),
+      },
+      {
         url: 'https://www.youtube.com/embed/GCYKolrSog0?si=TjahHdVCEB41w9B7',
-        title: 'Raphael Vouilloz - BonsaiBIM',
+        title: 'Raphael Vouilloz - BlenderBIM - Fall 2023',
         date: dayjs('2023/10/19'),
       },
     ],
@@ -269,25 +291,35 @@ export const arcn5005Lectures: Lectures = [
       { title: 'JavaScript (js)' },
       { title: 'WebGL - Web based 3D graphics' },
       { title: 'GLTF' },
-      { title: 'Tree.js, intro to ifc.js' },
-      { title: 'Intro to ifc.js' },
+      { title: 'Tree.js' },
+      { title: 'Intro to That Open' },
       { title: '🖥️ LAB 8: Javascript and Three.js, uploading mesh' },
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/BJ5hcpEoMpY?si=FLqUkvV_bBb0O7Qk',
+        title: 'Introduction to JavaScript and Three.js - Fall 2024 - Part2',
+        date: dayjs('2024/10/30'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/9RQhbmcbAfk?si=aZXDQhDv3dQcWJyO',
+        title: 'Introduction to JavaScript - Fall 2024 - Part1',
+        date: dayjs('2024/10/30'),
+      },
+      {
         url: 'https://www.youtube.com/embed/fi_36W2oZfA?si=02doFd78VBxNBQba',
-        title: 'Assignment 2',
+        title: 'Assignment 2 explained - Fall 2023',
         date: dayjs('2023/11/02'),
       },
       {
         url: 'https://www.youtube.com/embed/W4OTcU1AB-A?si=oSW7CwZueWjG0rUf',
-        title: 'Introduction to JavaScript',
+        title: 'Introduction to JavaScript - Fall 2023',
         date: dayjs('2023/11/02'),
       },
       {
         url: 'https://www.youtube.com/embed/3wsFKrYhAHc?si=3KKtMe2XpZpR6eix',
         title:
-          'Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js',
+          'Introduction to 3D graphics on the web browser:  WebGL, GLTF and Three.js - Fall 2023',
         date: dayjs('2023/11/02'),
       },
     ],
@@ -307,18 +339,29 @@ export const arcn5005Lectures: Lectures = [
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/DvjTZDPMCQM?si=TaxSSg2TXzsgAA6I',
+        title: 'Antonio Gonzales Viegas - That Open Company - Fall 2024',
+        date: dayjs('2024/11/06'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/wz5I8SY5FVc?si=1GIwVV241G1bmLG8',
+        title:
+          'That Open Company use Template to create BIM viewer - Fall 2024',
+        date: dayjs('2024/11/06'),
+      },
+      {
         url: 'https://www.youtube.com/embed/rLE9pdzEBsw?si=3ZuwNi6pz6lcC8Dq',
-        title: 'Antonio Gonzales Viegas - That Open Company',
+        title: 'Antonio Gonzales Viegas - That Open Company - Fall 2023',
         date: dayjs('2023/11/09'),
       },
       {
         url: 'https://www.youtube.com/embed/BlMH1L8-joI?si=Vd-saGr0Wtnf6sj4',
-        title: 'Three js - Assignment 2 - 1/2',
+        title: 'Three js - Assignment 2 - 1/2 - Fall 2023',
         date: dayjs('2023/11/09'),
       },
       {
         url: 'https://www.youtube.com/embed/bLUMHQRJJyU?si=EGpp1l5QnUQcQmV3',
-        title: 'Three js - Assignment 2 - 2/2',
+        title: 'Three js - Assignment 2 - 2/2 - Fall 2023',
         date: dayjs('2023/11/09'),
       },
     ],
@@ -333,16 +376,29 @@ export const arcn5005Lectures: Lectures = [
     toc: [
       {
         title:
-          '🔴 Assignment 2 presentation - 3d model using Blender, a photogrammetry software and Three.js',
+          '🔴 Assignment 2 review - 3d model using Blender, a photogrammetry software and Three.js',
       },
       { title: 'Open Source GIS - QGIS - Guess lecturer: Ken Percy (CIMS)' },
-      { title: 'Q GIS' },
+      { title: "Canada's Digital Twin" },
+      { title: 'QGIS' },
+      { title: 'CloudCompare' },
       { title: '🖥️ LAB 10: Three js continuation' },
     ],
     recordings: [
       {
+        url: 'https://www.youtube.com/embed/G0ZCm_6kYx8?si=8k6WMx86nWd4-Pce',
+        title:
+          "Ken Percy - Open-source GIS and Canada's Digital Twin - Fall 2024",
+        date: dayjs('2023/11/16'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/kTHiMCSAzr8?si=1Z_9jatCa6AR4zxx',
+        title: 'Three.js - Committing to Github and Assignment 2 - Fall 2024',
+        date: dayjs('2023/11/16'),
+      },
+      {
         url: 'https://www.youtube.com/embed/LBPLWOyyLUs?si=smhmUoCtn1Ptq6Kd',
-        title: 'Ken Percy - Open-source GIS',
+        title: 'Ken Percy - Open-source GIS - Fall 2023',
         date: dayjs('2023/11/16'),
       },
     ],
@@ -359,18 +415,29 @@ export const arcn5005Lectures: Lectures = [
       { title: 'Coordination Systems' },
       { title: 'Proprietary web GIS - Cesium and Mapbox' },
       { title: 'Open Source web GIS - Leaflet and Maplibre' },
+      { title: '🗺️ GIS day 🌎' },
       { title: '🖥️ LAB 11: Web based GIS software' },
     ],
     recordings: [
       {
-        url: 'https://www.youtube.com/embed/vSejvs1PBNc?si=qAIK45kWVdSQtW-g',
-        title: 'New calendar and Assignment 2 feedback',
+        url: 'https://www.youtube.com/embed/lFfr5UmHCFE?si=d4DH0oJC--MCQtRC',
+        title: 'OS Maps, GIS and Map renderers - Fall 2024',
+        date: dayjs('2024/11/20'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709',
+        title: 'Assignment 3 - Fall 2023',
         date: dayjs('2023/11/23'),
       },
       {
         url: 'https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m',
-        title: 'Web based mapping and Assignment 3',
+        title: 'OS Maps, GIS and Map renderers  - Fall 2023',
         date: dayjs('2023/11/23'),
+      },
+      {
+        url: 'https://www.youtube.com/embed/nc-7jJRwUP8?si=MSMT1beQ56ThJkxv',
+        title: 'OS Maps, GIS and Map renderers (infrastructure) - Fall 2023',
+        date: dayjs('2023/09/25'),
       },
     ],
   },
@@ -395,6 +462,11 @@ export const arcn5005Lectures: Lectures = [
       },
     ],
     recordings: [
+      {
+        url: 'https://www.youtube.com/embed/b_bWEVienwU?si:eMKgj9UmEMZZcQjC',
+        title: 'Advanced toolbox and GH Pages - Fall 2024',
+        date: dayjs('2024/11/24'),
+      },
       {
         url: 'https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt',
         title: 'Advanced toolbox',
@@ -421,20 +493,32 @@ export const arcn5005Lectures: Lectures = [
     ],
   },
   {
+    title: '🏁❓ Optional Final assignment review',
+    id: `final-review`,
+    url: `final-review`,
+    date: initialDate.add(14, 'week'),
+    content: final,
+    toc: [
+      {
+        title:
+          'Optional Final review: We will meet at the Zoom link and if there are questions about the final assignment we can go through them during that time',
+      },
+    ],
+  },
+  {
     title: '🏁 Final Presentation 🏁',
     id: `final`,
     url: `final`,
-    date: initialDate.add(14, 'week'),
+    date: initialDate.add(14, 'week').add(2, 'day'),
     content: final,
     toc: [{ title: '🏁 Final presentations' }],
   },
-  /*
   {
     title: '🗺️ Maps and GIS 🌎',
-    id: `maps`,
-    url: `maps`,
-    date: dayjs('2024-09-25'),
+    id: `week-maps`,
+    url: `week-maps`,
     content: maps,
+    visibleInToc: false,
     toc: [
       { title: 'History of Mapping' },
       { title: 'Map Projections' },
@@ -457,5 +541,24 @@ export const arcn5005Lectures: Lectures = [
         date: dayjs('2023/09/25'),
       },
     ],
-  },*/
+  },
+  {
+    title: '🏛️ BIM-GIS y graficas 3D 🏗️',
+    id: `week-esp`,
+    url: `week-esp`,
+    content: esp,
+    visibleInToc: false,
+    toc: [
+      { title: 'Herramientas digitales para AECO' },
+      { title: 'Procesos de representación: CAD, 3D CAD, BIM' },
+      { title: 'Software propietario o patentado' },
+      { title: 'WebGL - Gráficos 3D basados ​​en la web' },
+      { title: 'Formatos de codigo abierto - GLTF, IFC' },
+      {
+        title:
+          'Librerias de codigo abierto - Tree.js, IFC.js, That Open Engine',
+      },
+      { title: '🖥️ Lab 3: Blender, Bonsaibim, SketchFab, Three.js, That Open' },
+    ],
+  },
 ];

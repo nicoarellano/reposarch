@@ -1,10 +1,10 @@
-"use client";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import * as THREE from "three";
-import { Slider } from "@mui/material";
-import { useContext, useState } from "react";
-import { ThemeContext } from "../../middleware/Theme/context";
+'use client';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import * as THREE from 'three';
+import { Slider } from '@mui/material';
+import { useContext, useState } from 'react';
+import { ThemeContext } from '../../middleware/Theme/context';
 
 export default function CartesianPlane() {
   const [xPosition, setXPosition] = useState<number>(0);
@@ -23,7 +23,7 @@ export default function CartesianPlane() {
     setZPosition(value as number);
   };
 
-  const { mode } = useContext(ThemeContext)["state"]["theme"];
+  const { mode } = useContext(ThemeContext)['state']['theme'];
 
   return (
     <section className="w-full overflow-hidden grow flex flex-col">
@@ -34,7 +34,7 @@ export default function CartesianPlane() {
         </h5>
         X
         <Slider
-          sx={{ width: "200px", color: "red" }}
+          sx={{ width: '200px', color: 'red' }}
           min={0}
           max={10}
           aria-label="X"
@@ -44,7 +44,7 @@ export default function CartesianPlane() {
         />
         Y
         <Slider
-          sx={{ width: "200px", color: "green" }}
+          sx={{ width: '200px', color: 'green' }}
           aria-label="Y"
           defaultValue={0}
           min={0}
@@ -54,7 +54,7 @@ export default function CartesianPlane() {
         />
         Z
         <Slider
-          sx={{ width: "200px", color: "blue" }}
+          sx={{ width: '200px', color: 'blue' }}
           aria-label="Z"
           defaultValue={0}
           min={0}
@@ -72,11 +72,11 @@ export default function CartesianPlane() {
           <OrbitControls />
           <ambientLight intensity={0.1} />
           <directionalLight
-            color={mode === "light" ? "#0e0e0e" : "#f1f1f1"}
+            color={mode === 'light' ? '#0e0e0e' : '#f1f1f1'}
             position={[2, 2, 5]}
           />
           <ambientLight
-            color={mode === "light" ? "#0e0e0e" : "#f1f1f1"}
+            color={mode === 'light' ? '#0e0e0e' : '#f1f1f1'}
             intensity={0.1}
           />
 
@@ -84,9 +84,9 @@ export default function CartesianPlane() {
           <gridHelper args={[10]} />
           <mesh position={[xPosition, yPosition, zPosition]}>
             <meshStandardMaterial
-              color={mode === "light" ? "#0e0e0e" : "#f1f1f1"}
+              color={mode === 'light' ? '#0e0e0e' : '#f1f1f1'}
             />
-            <sphereGeometry args={[0.1]} />
+            <sphereGeometry args={[0.15]} />
           </mesh>
         </Canvas>
       </section>

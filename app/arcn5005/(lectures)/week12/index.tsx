@@ -1,27 +1,27 @@
-import { Toc } from "@/app/types/types";
+import { Toc } from '@/app/types/types';
 
-import Image from "@/components/Common/Image";
-import Video from "@/components/Common/Video";
-import Quote from "@/components/Common/Quote";
-import EmojiTitle from "@/components/Common/EmojiTitle";
-import PdfViewer from "@/components/Common/PdfViewer";
-import BimExample from "@/components/Common/Bim";
+import Image from '@/components/Common/Image';
+import Video from '@/components/Common/Video';
+import Quote from '@/components/Common/Quote';
+import EmojiTitle from '@/components/Common/EmojiTitle';
+import PdfViewer from '@/components/Common/PdfViewer';
+// import BimExample from "@/components/Common/Bim";
 
 export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"🦾🧰🔧🗺️🏗️⁉️"}
-        title={"What can we do with this new toolbox?"}
+        emoji={'🦾🧰🔧🗺️🏗️⁉️'}
+        title={'What can we do with this new toolbox?'}
       />
     ),
   },
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/kKrYBqN3en8?si=2af8sUvxXNvRK3mt"
-        title="Advanced toolbox"
-        caption={"Advanced toolbox"}
+        src="https://www.youtube.com/embed/b_bWEVienwU?si=eMKgj9UmEMZZcQjC"
+        title="Advanced toolbox and GH Pages - Fall 2024"
+        caption={'Advanced toolbox and GH Pages - Fall 2024'}
       />
     ),
   },
@@ -29,8 +29,8 @@ export const content: Toc = [
   {
     element: (
       <EmojiTitle
-        emoji={"🦾🧰🔧🌐"}
-        title={"Advance toolbox for web development"}
+        emoji={'🦾🧰🔧🌐'}
+        title={'Advance toolbox for web development'}
       />
     ),
   },
@@ -39,27 +39,27 @@ export const content: Toc = [
       <Image
         src="/images/advanced-toolbox/frontend-frameworks.png"
         alt="fronted frameworks"
-        caption={"Best Frontend Development Frameworks for Web Development"}
+        caption={'Best Frontend Development Frameworks for Web Development'}
         href="https://www.aceinfoway.com/blog/best-frontend-frameworks"
       />
     ),
     notes:
-      "Front End Frameworks make it much easier for developers to build the user interfaces of their web and mobile apps as web development evolves.",
+      'Front End Frameworks make it much easier for developers to build the user interfaces of their web and mobile apps as web development evolves.',
   },
   {
     element: (
       <Image
         src="/images/advanced-toolbox/reactjs.png"
         alt="React js"
-        caption={"React js"}
+        caption={'React js'}
         href="https://react.dev/"
       />
     ),
     notes:
-      "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on components. \n\
+      'React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on components. \n\
     It is maintained by Meta (formerly Facebook) and a community of individual developers and companies. \n\
     React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js. \n\
-    Because React is only concerned with the user interface and rendering components to the DOM, React applications often rely on libraries for routing and other client-side functionality.",
+    Because React is only concerned with the user interface and rendering components to the DOM, React applications often rely on libraries for routing and other client-side functionality.',
   },
 
   {
@@ -67,15 +67,15 @@ export const content: Toc = [
       <Image
         src="/images/advanced-toolbox/jsx.png"
         alt="JSX"
-        caption={"JSX"}
+        caption={'JSX'}
         href="https://react.dev/learn/writing-markup-with-jsx"
       />
     ),
     notes:
-      "JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. \n\
+      'JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. \n\
     Although there are other ways to write components, most React developers prefer the conciseness of JSX, and most codebases use it. \n\
     But as the Web became more interactive, logic increasingly determined content. \n\
-    JavaScript was in charge of the HTML! This is why in React, rendering logic and markup live together in the same place—components.",
+    JavaScript was in charge of the HTML! This is why in React, rendering logic and markup live together in the same place—components.',
   },
 
   {
@@ -83,7 +83,7 @@ export const content: Toc = [
       <Image
         src="/images/advanced-toolbox/reactjs-example1.png"
         alt="React js"
-        caption={"React js - Usage Example"}
+        caption={'React js - Usage Example'}
         href="https://en.wikipedia.org/wiki/React_(software)"
       />
     ),
@@ -98,8 +98,8 @@ export const content: Toc = [
     element: (
       <>
         <EmojiTitle
-          emoji={"📚 → ⚛️"}
-          title={"JavaScript libraries turned into react libraries:"}
+          emoji={'📚 → ⚛️'}
+          title={'JavaScript libraries turned into react libraries:'}
         />
         <br />
         <h3>1. Three.js → react-three-fiber (r3f)</h3>
@@ -117,11 +117,11 @@ export const content: Toc = [
       <Image
         src="/images/advanced-toolbox/three-js-logo.png"
         alt="React three fiber"
-        caption={"Three.js → react-three-fiber (r3f)"}
+        caption={'Three.js → react-three-fiber (r3f)'}
         href="https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
       />
     ),
-    notes: "",
+    notes: '',
   },
 
   {
@@ -140,11 +140,11 @@ export const content: Toc = [
       <Image
         src="/images/advanced-toolbox/react-map-gl.png"
         alt="react map gl"
-        caption={"Mapbox GL JS and Maplibre GL JS → react-map-gl"}
+        caption={'Mapbox GL JS and Maplibre GL JS → react-map-gl'}
         href="https://visgl.github.io/react-map-gl/"
       />
     ),
-    notes: "",
+    notes: '',
   },
 
   {
@@ -163,16 +163,36 @@ export const content: Toc = [
       <Image
         src="/images/advanced-toolbox/openbim-components.png"
         alt="obc"
-        caption={"IFC.js → openbim-components (OBC)"}
-        href="https://github.com/IFCjs/components"
+        caption={'IFC.js → openbim-components (OBC)'}
+        href="https://thatopen.com/"
       />
     ),
-    notes: "",
+    notes: '',
   },
-
   {
-    element: <BimExample fragment="/models/model.frag" />,
-    notes: "",
+    element: (
+      <Image
+        src="/images/advanced-toolbox/webcomponents.png"
+        alt="web components"
+        caption={
+          'Web components is a set of web standards that allow you to create new HTML tags.'
+        }
+        href="https://www.webcomponents.org/introduction"
+      />
+    ),
+    notes: '',
+  },
+  {
+    element: (
+      <Image
+        src="/images/advanced-toolbox/vite.png"
+        alt="Vite js"
+        caption={'Vite js'}
+        href="https://vite.dev/"
+      />
+    ),
+    notes:
+      'Vite is a front-end build tool that significantly improves the front-end development experience.',
   },
 
   {
@@ -180,47 +200,48 @@ export const content: Toc = [
       <Image
         src="/images/advanced-toolbox/nextjs.png"
         alt="Next js"
-        caption={"Next js"}
+        caption={'Next js'}
         href="https://nextjs.org/"
       />
     ),
     notes:
-      "Next.js is an open-source web development framework created by the private company Vercel providing React-based web applications with server-side rendering and static website generation.",
+      'Next JS is a full-stack open-source web development React framework that enables functionality such as server-side rendering and generating static websites for React based web applications. It is created by the private company Vercel providing React-based web applications with server-side rendering and static website generation ',
   },
+
   {
     element: (
       <Image
         src="/images/advanced-toolbox/typescript.png"
         alt="TypeScript"
-        caption={"TypeScript"}
+        caption={'TypeScript'}
         href="https://www.typescriptlang.org/"
       />
     ),
     notes:
-      "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. \n\
+      'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. \n\
       Javascript is an amazing programming language, but is a loosely typed one. \n\
       Sometimes, it can be difficult to understand what types of data we are using and moving around. \n\
       In JS, functions and variables don’t have any information and developers need to search for documentation or just make a guess based on the current implementation \n\
-TS allows you to specify the type of the data in your JS code, and will report errors when there is a type mismatch",
+TS allows you to specify the type of the data in your JS code, and will report errors when there is a type mismatch',
   },
   {
     element: (
       <Image
         src="/images/advanced-toolbox/TypeScript Types.png"
         alt="TypeScript"
-        caption={"TypeScript - Cheat Sheet - Types"}
+        caption={'TypeScript - Cheat Sheet - Types'}
         href="https://www.typescriptlang.org/"
       />
     ),
     notes:
-      "TS allows you to specify the type of the data in your JS code, and will report errors when there is a type mismatch",
+      'TS allows you to specify the type of the data in your JS code, and will report errors when there is a type mismatch',
   },
   {
     element: (
       <Image
         src="/images/advanced-toolbox/TypeScript Interfaces.png"
         alt="TypeScript"
-        caption={"TypeScript - Cheat Sheet - Interfaces"}
+        caption={'TypeScript - Cheat Sheet - Interfaces'}
         href="https://www.typescriptlang.org/cheatsheets"
       />
     ),
@@ -230,7 +251,7 @@ TS allows you to specify the type of the data in your JS code, and will report e
       <Image
         src="/images/advanced-toolbox/TypeScript Control Flow Analysis.png"
         alt="TypeScript"
-        caption={"TypeScript - Cheat Sheet - Control Flow Analysis"}
+        caption={'TypeScript - Cheat Sheet - Control Flow Analysis'}
         href="https://www.typescriptlang.org/cheatsheets"
       />
     ),
@@ -240,7 +261,7 @@ TS allows you to specify the type of the data in your JS code, and will report e
       <Image
         src="/images/advanced-toolbox/TypeScript Classes.png"
         alt="TypeScript"
-        caption={"TypeScript - Cheat Sheet - Classes"}
+        caption={'TypeScript - Cheat Sheet - Classes'}
         href="https://www.typescriptlang.org/cheatsheets"
       />
     ),
@@ -250,7 +271,7 @@ TS allows you to specify the type of the data in your JS code, and will report e
       <Image
         src="/images/advanced-toolbox/TypeScript Types.png"
         alt="TypeScript"
-        caption={"TypeScript - Cheat Sheet - Interfaces"}
+        caption={'TypeScript - Cheat Sheet - Interfaces'}
         href="https://www.typescriptlang.org/cheatsheets"
       />
     ),
@@ -261,7 +282,7 @@ TS allows you to specify the type of the data in your JS code, and will report e
       <Image
         src="/images/advanced-toolbox/tailwind-css.png"
         alt="Tailwind CSS"
-        caption={"Tailwind CSS"}
+        caption={'Tailwind CSS'}
         href="https://tailwindcss.com/"
       />
     ),
@@ -276,66 +297,55 @@ TS allows you to specify the type of the data in your JS code, and will report e
       <Image
         src="/images/advanced-toolbox/tailwind-example.png"
         alt="Tailwind CSS"
-        caption={"Tailwind CSS - example"}
+        caption={'Tailwind CSS - example'}
         href="https://en.wikipedia.org/wiki/Tailwind_CSS"
       />
     ),
     notes:
-      "For example, in other traditional systems, there would be a class message-warning that would apply a yellow background color and bold text. \n\
-    To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.",
+      'For example, in other traditional systems, there would be a class message-warning that would apply a yellow background color and bold text. \n\
+    To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.',
   },
 
   {
     element: (
       <Image
-        src="/images/advanced-toolbox/cdt-wireframe.png"
+        src="/images/advanced-toolbox/cdt-wireframe2.png"
         alt="CIMS - CDT Wireframe"
-        caption={"CIMS - CDT Wireframe"}
+        caption={'CIMS - CDT Wireframe'}
       />
     ),
     notes:
-      "For example, in other traditional systems, there would be a class message-warning that would apply a yellow background color and bold text. \n\
-    To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.",
+      'For example, in other traditional systems, there would be a class message-warning that would apply a yellow background color and bold text. \n\
+    To achieve this result in Tailwind, one would have to apply a set of classes created by the library: bg-yellow-300 and font-bold.',
   },
 
   {
-    element: (
-      <Video
-        src="https://www.youtube.com/embed/BwjUI9U0eQw?si=xaivCtd-Eb_niL-H"
-        title="CIMS - Canada's digital Twin Platform"
-        caption={
-          "CIMS - Canada's digital Twin Platform - 100% web based free and open-source technologies"
-        }
-      />
-    ),
-  },
-  {
-    element: <EmojiTitle emoji={"🗣️📣🌎"} title={"Go Online!"} />,
+    element: <EmojiTitle emoji={'🗣️📣🌎'} title={'Go Online!'} />,
   },
   {
     element: (
       <Image
         src="/images/advanced-toolbox/ghpages.png"
         alt="gh pages"
-        caption={"GitHub Pages"}
+        caption={'GitHub Pages'}
       />
     ),
-    notes: "",
+    notes: '',
   },
   {
     element: (
       <Video
         src="https://www.youtube.com/embed/QyFcl_Fba-k?si=v7hj7_V-xMgHCteY"
         title="Getting Started with GitHub Pages"
-        caption={"Getting Started with GitHub Pages"}
+        caption={'Getting Started with GitHub Pages'}
       />
     ),
   },
   {
     element: (
       <EmojiTitle
-        emoji={"Lab 12 💻🗣️📣🌎"}
-        title={"Deploying a web based BIM software and Assignment 3"}
+        emoji={'Lab 12 💻🗣️📣🌎'}
+        title={'Deploying a web based BIM software and Assignment 3'}
       />
     ),
   },

@@ -1,4 +1,4 @@
-import { Dayjs } from "dayjs";
+import { Dayjs } from 'dayjs';
 // Interfaces
 export interface Identified {
   _id?: string; //Mongo db id
@@ -50,9 +50,12 @@ export interface Lecture {
   date?: Dayjs;
   toc: Toc;
   recordings?: Recording[];
+  visibleInToc?: boolean;
 }
 
 export type Lectures = Lecture[];
+
+type assignments = 'about' | 'three' | 'map' | 'bim' | 'final';
 
 export interface Student {
   id: string;
@@ -60,8 +63,9 @@ export interface Student {
   lastName: string;
   firstName: string;
   email: string;
+  assignments: assignments[];
 }
 
 export type Students = Student[];
 
-export type Mode = "light" | "dark";
+export type Mode = 'light' | 'dark';

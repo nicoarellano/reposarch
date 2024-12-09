@@ -125,7 +125,10 @@ export const content: Toc = [
         src="/images/computer-graphics/albertis-grid.png"
         alt="Alberti's grid"
         caption={
-          'Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura)'
+          'Leon Battista Alberti’s De Pictura (Treatise on Painting) 1435 (Figures from the 1804 edition of Della pittura) \n\
+          Alberti knew that the manuscript transmission of texts and images was risky; copyists make mistakes, interpret, and sometimes even invent (65) \n\
+          None of Alberti’s three famous treatises on painting, architecture, and sculpture was illustrated, he replaced images by digitizing them. \n\
+          Replacing pictures with a list of numbers and a set of computational instructions (algorithms), to convert a visual image into a digital file (Carpo, The Alphabet and the Algorithm)'
         }
       />
     ),
@@ -641,7 +644,7 @@ export const content: Toc = [
         <br />
         <SimpleButton
           title="Download Node js"
-          href="https://nodejs.org/en/download"
+          href="https://nodejs.org/en/download/prebuilt-installer"
         />
       </>
     ),
@@ -727,6 +730,7 @@ export const content: Toc = [
       </>
     ),
   },
+
   {
     element: (
       <>
