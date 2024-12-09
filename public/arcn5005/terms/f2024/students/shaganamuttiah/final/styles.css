@@ -1,0 +1,586 @@
+body { margin: 0; padding: 0; }
+        html,
+        body, 
+       
+
+    h1 {
+        color:  rgb(149, 126, 143);
+        font-family: "cheesecake", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        text-align: center;}
+
+    h2 {
+        color: rgb(149, 126, 143);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;}
+   h3 {
+     color: rgb(149, 126, 143);
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-align: Left;}
+
+     
+
+     .title {
+      position: fixed; /* Keeps the title fixed in position */
+      top: 100px; /* Adjust this value to move the title vertically */
+      left: 500%; /* Centers the title horizontally */
+      width: auto; /* Automatically adjusts width */
+      font-family: "cheesecake", sans-serif;
+      font-weight: 1200;
+      font-style: normal;
+      font-size: 50px; /* Increased from 30px to 50px */
+      letter-spacing: 2px;
+      color: rgb(149, 126, 143);
+      text-shadow: 
+        -6px -6px 0px black, 
+        2px -2px 0px black,  
+        -2px 2px 0px black,  
+        2px 2px 0px black;
+      z-index: 1000; /* Ensures the title stays above other elements */
+      text-align: center; /* Aligns text to center */
+    }
+    
+    
+ 
+
+
+body {
+  font-family: "ivysoft-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wght" 700;
+  color: #333;
+  background-color: #eee5f1;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.about-me-text { 
+	
+	width:415px;
+	height:328px;
+	position:fixed;
+	left:-80px;
+	top:0px;
+  font-family: "ivysoft-variable", sans-serif;
+  font-variation-settings: "slnt" 0, "wght" 400;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.about-me-tittle { 
+	
+	width:315px;
+	height:58px;
+  font-family: "cheesecake", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+	position:fixed;
+	left:500px;
+	top:100px;
+	text-align:left;
+	font-size:35px;
+	letter-spacing:10;
+  
+}
+
+.slidebox { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	width:638px;
+	height:425px;
+	position:absolute;
+	left:783px;
+	top:590px;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+	background-image:url(images/avatar.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.slidebox{ 
+	border:1px solid rgba(0, 0, 0, 1)1px solid rgba(0, 0, 0, 1);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  height: 600px;
+}
+/* Main heading styling */
+.main-heading {
+  padding: 0rem 0;
+  text-align: center;
+}
+
+
+/* socials - start */ 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  flex-direction: column; /* Stack icons vertically */
+  height: auto; /* Remove fixed height */
+  width: auto; /* Adjust width dynamically */
+  padding-top: 0;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  justify-content: right; /* Align items in the vertical direction */
+  align-items: right; /* Center items horizontally */
+  position: fixed; 
+  bottom: 100px; /* Offset from the bottom */
+  right: 15px; /* Move to the right corner */
+  z-index: 10000; 
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 15%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* LinkedIn hover */
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0077b5;
+  color: #fff;
+}
+
+/* Instagram hover */
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #ff42c6;
+  color: #fff;
+}
+
+/* YouTube hover */
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+/* Email hover */
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background: #62687a;
+  color: #fff;
+}
+
+
+
+
+/* Viewers Container */
+#viewers {
+  position: fixed; /* Fix position relative to the viewport */
+  bottom: 0; /* Stick to the bottom of the page */
+  left: 50%; /* Start positioning from the center */
+  transform: translateX(-50%); /* Center horizontally */
+  height: 50%; /* Occupy half the height of the viewport */
+  display: flex; /* Arrange children side by side */
+  align-items: center; /* Vertically align overlapping */
+  gap: -100px; /* Negative gap for slight overlap */
+  pointer-events: none; /* Prevent interference with other content */
+  overflow: hidden; /* Prevent overflow content */
+  
+
+}
+
+/* Individual Viewers */
+.viewer {
+  height: 100%; /* Full height of the container */
+  width: 900px; /* Fixed width for viewers */
+  pointer-events: all; /* Allow interactions within the viewers */
+  border: none; /* Optional: Add consistent border for both */
+  box-sizing: border-box; /* Ensure border doesn't affect size */
+}
+
+#maplibre {
+  z-index: 1; /* Slightly above for overlap */
+  height: 110%; /* Full height of the container */
+}
+
+#threejs {
+  z-index: 2; /* Below the map for overlap */
+  margin: 0 -200px; /* Negative margin to create slight overlap */
+}
+
+
+  
+
+
+/* Buttons Container */
+.buttons-container {
+  position: fixed; /* Fixed position to float on top, even when scrolling */
+  top: 10px; /* Offset from the top of the page */
+  right: 10px; /* Offset from the right edge */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Add spacing between buttons */
+  z-index: 9999; /* Ensure buttons stay above all other content */
+}
+
+
+
+/* Button Styles */
+.box {
+  width: 122px;
+  height: auto;
+  float: left;
+  transition: 0.5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 5px;
+  text-align: center;
+  margin: 2px;
+  background: #ffffff;
+  text-transform: uppercase;
+  font-weight: 800;
+  left: -20px;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
+.box:before, .box:after {
+  position: absolute;
+  content: '';
+  box-sizing: border-box;
+  transition: 0.3s transform linear;
+}
+
+.box:before {
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transform: translateX(100%);}
+
+.box:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  transform: translateX(-100%);}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.title { 
+
+  width:315px;
+  height:58px;
+  font-family: "cheesecake", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  position:absolute;
+  left:30px;
+  top:30px;
+  text-align:left;
+  font-size:40px;
+  letter-spacing:0;
+  z-index: 1000;
+
+}
+/* Main Container Styling */
+.main-container {
+  display: flex;
+  flex-direction: row; /* Horizontal alignment */
+  align-items: flex-start; /* Align all content from the top */
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the maximum width of the content */
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px; /* Space between the image and the text container */
+}
+
+/* Image Styling */
+img {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  width: 300px; /* Fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 100px 0 0 -120px; /* Add a 100px top margin, no side margin, and move 50px to the left */
+  border: 8px solid rgb(149, 126, 143); /* Thick border */
+  box-sizing: border-box; /* Ensures border doesn't affect dimensions */
+  border-radius: 0px; /* Optional: Add rounded corners for a smoother look */
+}
+
+
+
+/* Content Container Styling */
+.content-container {
+  display: flex;
+  flex-direction: column; /* Stack the text vertically */
+  justify-content: flex-start; /* Align items to the top */
+  text-align: left; /* Align all text to the left */
+  margin-top: 100px; /* Adjust this value to move the text down */
+  margin-left: 20px; /* Adjust this value to move the text down */
+}
+
+/* Title Styling */
+.title h1 {
+  margin: 0 0 20px; /* Add spacing below the title */
+}
+
+/* Description Styling */
+.final2 {
+  margin: 0 0 30px; /* Add spacing below the description */
+  max-width: 800px; /* Limit the width of the text */
+}
+
+/* Hobbies List Styling */
+h4 ul {
+  margin: 0;
+  padding-left: 20px; /* Indent the list for better readability */
+  list-style-type: disc; /* Use bullets for the list */
+  
+}
+
+/* Party Button Styling */
+#party-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+#party-button:hover {
+  background-color: rgb(149, 126, 143);
+}
+
+/* Falling Heart */
+.heart {
+  position: absolute;
+  z-index: 1000;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(184, 40, 57);
+  clip-path: polygon(
+    50% 0%,
+    61% 14%,
+    75% 8%,
+    85% 20%,
+    91% 34%,
+    88% 48%,
+    74% 66%,
+    50% 100%,
+    26% 66%,
+    12% 48%,
+    9% 34%,
+    15% 20%,
+    25% 8%,
+    39% 14%
+  );
+  animation: fall 4s linear infinite;
+}
+
+/* Animation for falling hearts */
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) scale(1); /* Start off-screen, above the viewport */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(0.8); /* Fall to the bottom */
+    opacity: 0;
+  }
+}
+.party-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+  color:rgb(149, 126, 143);
+  
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 10000; /* Ensure it stays above other elements */
+  
+  animation: slide-down 0.5s ease-in-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Slideshow (Carousel) Container */
+.carousel-container {
+  position: fixed;
+  top: 25%; /* Adjust the vertical position */
+  left: 50%; /* Adjust the horizontal position */
+ 
+  z-index: 9999; /* Ensures the carousel stays above other content */
+  width: 400px; /* Adjusted width of the carousel */
+  height: 200px; /* Adjusted height of the carousel */
+  overflow: clip;
+ background-color: rgb(149, 126, 143);
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carousel Content */
+.carousel {
+  display: flex;
+  animation: slide 12s infinite;
+}
+
+/* Individual Carousel Items (Images) */
+.carousel-item {
+  flex-shrink: 0; /* Prevents the images from shrinking */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the images cover the entire area */
+  object-position: center; /* Ensures the image is centered */
+}
+
+/* Animation for sliding the images */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Independent border */
+#independent-border {
+  border: 8px solid rgb(149, 126, 143); /* Thick border */
+  box-sizing: border-box; /* Ensures border doesn't affect dimensions */
+  position: fixed; /* Allows positioning anywhere on the screen */
+  top: 50%; /* Adjust the top position */
+  left: 2.5%; /* Adjust the left position */
+  width: 1404px; /* Adjustable width */
+  height: 416px; /* Adjustable height */
+  z-index: 999; /* Ensure it stays above most elements */
+  background-color: transparent; /* Transparent background */
+}
+
+
+/* Thick border for shagana.jpg */
+img[src="shagana.jpg"] {
+  border: 8px solid rgb(149, 126, 143); /* Adjust thickness and color as needed */
+  box-sizing: border-box; /* Ensures the border doesn't affect the size */
+}
+
+/* Adjusted carousel with offset and smaller height */
+.carousel-container {
+  border: 8px solid rgb(149, 126, 143); /* Adjust thickness and color as needed */
+  box-sizing: content-box; /* Ensures the border doesn't affect the size */
+  top: 30%; /* Moves the carousel further down the page */
+  height: 148px; /* Reduces the height of the carousel */
+}
