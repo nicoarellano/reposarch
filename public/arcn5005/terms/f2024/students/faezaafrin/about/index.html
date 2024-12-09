@@ -15,13 +15,15 @@
   <section class="background">
 
     <nav class="header">
-      <div class="webtitle">Portfolio</div>
+      <div class="webtitle">01 About</div>
       <div class="pagetitle">About Me</div>
       <div class="nav-icons">
-        <button class="icon-button"><span class="material-symbols-outlined">home</span></button>
+        <button class="icon-button" onclick="window.location.href = '../about/index.html';">
+          <span class="material-symbols-outlined">home</span>
+        </button>
         <button class="icon-button" onclick="
-            var audio = document.getElementById('audioPlayer'); 
-            if (audio.paused) { audio.play(); } else { audio.pause(); }
+          var audio = document.getElementById('audioPlayer'); 
+          if (audio.paused) { audio.play(); } else { audio.pause(); }
         ">
           <span class="material-symbols-outlined">music_note</span>
         </button>
