@@ -8,7 +8,7 @@ body {
   font-family: "salo-variable", sans-serif;
   font-variation-settings: "opsz" 1;
   color: #000000;
-  background-color: rgb(238, 229, 241);
+  background-color: #eee5f1;
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }

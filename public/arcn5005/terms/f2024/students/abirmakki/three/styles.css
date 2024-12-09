@@ -29,6 +29,9 @@ p {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   font-size: 16px;
   color: #fff;
+  z-index: 2;
+  pointer-events: auto;
+  cursor: pointer;
 }
 .link:hover {
   color: rgb(178, 255, 255);

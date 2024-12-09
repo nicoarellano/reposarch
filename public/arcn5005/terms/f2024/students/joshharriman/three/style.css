@@ -39,6 +39,8 @@ h2 {
   color: rgb(141, 136, 188);
   text-align: left;
   font-size: 20;
+  
+  
 }
 
 
@@ -46,8 +48,6 @@ img {
   border: 8px solid rgb(89, 74, 46);
   border-radius: 25%;
 }
-
-
 
 button {
   position: relative;
