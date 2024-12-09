@@ -61,11 +61,12 @@ export const Arcn5005F2024Evaluations = [
     description: 'Custom map using maplibre',
   },
   {
-    evaluation: '🏁 Final Assignment (9am to 12pm)',
+    evaluation: '🏁 Final Assignment (8:30am to 11.30am)',
     weight: '30%',
     week: 'week14',
     date: dayjs('2024/12/13'),
     type: 'final-assignment',
-    description: 'Combine all together into a GIS platform',
+    description:
+      'Combine all together into an interactive 3d CAD / BIM / GIS platform',
   },
 ];

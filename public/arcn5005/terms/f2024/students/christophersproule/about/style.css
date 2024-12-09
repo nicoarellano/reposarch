@@ -1,0 +1,142 @@
+.header{
+    text-align: center;
+    font-family: "podium-soft-variable",sans-serif;
+    font-variation-settings: 'wdth' 129;
+      }
+
+
+.sub-header{
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 60, 255);
+}    
+           
+.body-paragraph {
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.centered-content {
+   text-align: center;
+}
+
+.rounded-image {
+    border-radius: 180px;
+    margin-top: 20px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.assignment-button {
+    background-color: rgb(0, 0, 0);
+    border: 1px;
+    color: white;
+    height: 30px;
+    width: 125px;
+    font-family: "podium-soft-variable",sans-serif;
+    font-weight: 150;
+    font-size: 15px;
+    margin-left: -5px;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 3s;
+}
+
+.assignment-button:hover {
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    color: rgb(0, 60, 255);
+}
+
+
+img {
+    max-width: 500px;
+    margin-top: 20px;
+  }
+  
+  .description {
+    padding: left 100px;
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 475px;
+    position: relative;
+    margin: auto;
+  
+  }
+  
+  /* Next & previous buttons */
+  .prev {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: white;
+    height: 30px;
+    width: 150px;
+    font-family: "podium-soft-variable",sans-serif;
+    font-weight: 150;
+    font-size: 30px;
+    margin-left: -5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 3s;
+    padding-right: 190px;
+    padding-left: 50px;
+    padding-top: 5px;
+  }
+  
+  
+  .next {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: white;
+    height: 30px;
+    width: 150px;
+    font-family: "podium-soft-variable",sans-serif;
+    font-weight: 150;
+    font-size: 30px;
+    margin-left: -5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 3s;
+    padding-left: 190px;
+    padding-right: 50px;
+    padding-top: 5px;
+  }
+  .prev:hover {    
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    color: rgb(0, 60, 255);
+  } 
+  
+  .next:hover {
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    color: rgb(0, 60, 255);
+}
+
+  /* Caption text */
+  .text {
+    color: rgb(0, 60, 255);
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttonbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1016,7 +1016,7 @@ export const content: Toc = [
         <br />
         <SimpleButton
           title="Download Node js"
-          href="https://nodejs.org/en/download"
+          href="https://nodejs.org/en/download/prebuilt-installer"
         />
       </>
     ),
