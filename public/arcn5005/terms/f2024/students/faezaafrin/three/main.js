@@ -228,6 +228,27 @@ gltfLoader.load(
   }
 );
 
+let mesh3
+gltfLoader.load(
+  "./models/Meeee2.glb",
+  function (gltf) {
+    mesh3 = gltf.scene;
+    mesh3.scale.x = 8;
+    mesh3.scale.y = 8;
+    mesh3.scale.z = 8;
+    
+    mesh3.position.x = 0;
+    mesh3.position.y = 15;
+    mesh3.position.z = 25;
+
+    scene.add(mesh3);
+  },
+  undefined,
+  function (error) {
+    console.error(error);
+  }
+);
+
 
 
 
@@ -401,7 +422,13 @@ function animate() {
   mesh2.position.x += speed * 0.5;
   mesh2.position.y += speed;
   mesh2.position.z += speed * 0.2;
-  
+
+  mesh3.rotation.x += speed * 0.1;
+  mesh3.rotation.y += speed * 0.1;
+  mesh3.position.x += speed * 0.1;
+  mesh3.position.y += speed * 0.1;
+  mesh3.position.z += speed * 0.1;
+    
   // Animate shooting stars
   shootingStars.forEach(star => {
     star.animate();
