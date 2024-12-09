@@ -1,0 +1,82 @@
+* {
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+header .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered-left {
+  position: absolute;
+  top: 50%;
+  left: 500px;
+  transform: translate(-50%, -50%);
+  font-size: x-large;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.centered-left:hover {
+  transform: translate(-50%, -50%) scale(1.1); /* Enlarge and hover */
+  font-size: larger; /* Increase font size on hover */
+}
+
+.centered-right {
+  position: absolute;
+  top: 50%;
+  left: 920px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.centered-right:hover {
+  transform: translate(-50%, -50%) scale(1.1); /* Enlarge and hover */
+  font-size: larger; /* Increase font size on hover */
+}
+
+.centered-rightagain {
+  position: absolute;
+  top: 50%;
+  left: 990px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.centered-rightagain:hover {
+  transform: translate(-50%, -50%) scale(1.1); /* Enlarge and hover */
+  font-size: larger; /* Increase font size on hover */
+}
+
+body,
+html {
+  font-family: 'arvo';
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  color: #1c1c1c;
+  text-align: center;
+  width: 100%;
+  display: table;
+  margin: auto;
+  font-size: large;
+  overflow-y: scroll;
+}
+
+ol,
+ul {
+  list-style-type: disc;
+  margin-left: 2.5rem;
+  font-size: large;
+}
+
+.about {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}

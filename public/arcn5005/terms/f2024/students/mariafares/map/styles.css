@@ -1,4 +1,12 @@
-* 
+body { margin: 0; padding: 0; }
+html, body, #map { 
+  height: 1080px;
+  position: relative;
+  z-index: 1800;
+  
+}
+*
+
 {
   margin: 0;
   padding: 0;
@@ -97,9 +105,10 @@ body {
 }
 
 .wrapper .main_content .info div {
-  margin-bottom: 300px;
+  margin-bottom: 1rem;
 }
 
 .profile-pic {
   position: center;
 }
+
