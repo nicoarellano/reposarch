@@ -3,69 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Museums in Ottawa</title>
-    <meta property="og:description" content="Filter a set of symbols based on a property value in the data." />
-    <meta property="og:description" content="When a user hovers over a custom marker, show a popup containing more information." />
-    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
-    <link rel="stylesheet" href="./styles.css"/>
-    <link href='https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.css' rel='stylesheet' />
-    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
-    <style>
-        body { margin: 0; padding: 0; }
-        html, body, #map { height: 100%; }
-        #start-button {
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          padding: 15px 30px;
-          background-color: #3386c0;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          font-size: 16px;
-          cursor: pointer;
-          z-index: 1000;
-        }
-        #start-button.hidden {
-          display: none;
-        }
-    </style>
+    <title>chloemaignan map page</title>
   </head>
   <body>
-    <h1>Museums in Ottawa</h1>
-    <div id="map"></div>
-    <nav id="filter-group" class="filter-group"></nav>
-    
-    <!-- Audio element -->
-    <audio id="background-music" loop>
-      <source src="Art Gallery Music.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-
-    <!-- Start button -->
-    <button id="start-button">Click to Start Your Museum Experience</button>
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const audio = document.getElementById('background-music');
-        const startButton = document.getElementById('start-button');
-
-        audio.play().catch(() => {
-          startButton.classList.remove('hidden');
-        });
-
-        // Start button event listener
-        startButton.addEventListener('click', () => {
-          audio.play().then(() => {
-            startButton.classList.add('hidden');
-          }).catch(error => {
-            console.error('Audio playback failed:', error);
-          });
-        });
-      });
-    </script>
-
-    <script src="./main.js"></script>
+    ADD YOUR CODE HERE!
   </body>
 </html>

@@ -17,7 +17,6 @@ import AboutIcon from '@mui/icons-material/AccountCircle';
 import ThreeIcon from '@mui/icons-material/ThreeDRotationRounded';
 import MapIcon from '@mui/icons-material/PublicRounded';
 import BIMIcon from '@mui/icons-material/MapsHomeWorkRounded';
-import FinalIcon from '@mui/icons-material/SportsScore';
 
 interface Props {
   students: Students;
@@ -42,67 +41,57 @@ export default function StudentsList({ students }: Props) {
       aria-labelledby="nested-list-subheader"
       subheader={<ListSubheader component="div">Students List</ListSubheader>}
     >
-      {students.map((student: Student, index) => {
-        const finalPath = `${path}/${student.username}${
-          isF2023 ? '' : '/final'
-        }`;
-        return (
-          <div key={index} title={student.username}>
-            <ListItemButton
-              sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
-            >
-              <ListItemIcon>
-                <Link href={finalPath}>
-                  <IconButton>
-                    <Avatar
-                      src={`${path}/${student.username}/avatar.jpg`}
-                      sx={{ width: 30, height: 30 }}
-                    />
-                  </IconButton>
-                </Link>
-              </ListItemIcon>
-              <ListItemText
-                primary={`${student.firstName} ${student.lastName}`}
-              />
-              {student.assignments.includes('about') && (
-                <Link href={`${path}/${student.username}/about`}>
-                  <IconButton title="About">
-                    <AboutIcon />
-                  </IconButton>
-                </Link>
-              )}
-              {student.assignments.includes('three') && (
-                <Link href={`${path}/${student.username}/three`}>
-                  <IconButton title="Three">
-                    <ThreeIcon />
-                  </IconButton>
-                </Link>
-              )}
-              {student.assignments.includes('map') && (
-                <Link href={`${path}/${student.username}/map`}>
-                  <IconButton title="Map">
-                    <MapIcon />
-                  </IconButton>
-                </Link>
-              )}
-              {student.assignments.includes('bim') && (
-                <Link href={`${path}/${student.username}/bim`}>
-                  <IconButton title="BIM">
-                    <BIMIcon />
-                  </IconButton>
-                </Link>
-              )}
-              {student.assignments.includes('final') && (
-                <Link href={finalPath}>
-                  <IconButton title="Final Assignment">
-                    <FinalIcon />
-                  </IconButton>
-                </Link>
-              )}
-            </ListItemButton>
-          </div>
-        );
-      })}
+      {students.map((student: Student, index) => (
+        <div key={index} title={student.username}>
+          <ListItemButton
+            sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
+          >
+            <ListItemIcon>
+              <Link
+                href={`${path}/${student.username}${isF2023 ? '' : '/final'}`}
+              >
+                <IconButton>
+                  <Avatar
+                    src={`${path}/${student.username}/avatar.jpg`}
+                    sx={{ width: 30, height: 30 }}
+                  />
+                </IconButton>
+              </Link>
+            </ListItemIcon>
+            <ListItemText
+              primary={`${student.firstName} ${student.lastName}`}
+            />
+            {student.assignments.includes('about') && (
+              <Link href={`${path}/${student.username}/about`}>
+                <IconButton title="About">
+                  <AboutIcon />
+                </IconButton>
+              </Link>
+            )}
+            {student.assignments.includes('three') && (
+              <Link href={`${path}/${student.username}/three`}>
+                <IconButton title="Three">
+                  <ThreeIcon />
+                </IconButton>
+              </Link>
+            )}
+            {student.assignments.includes('map') && (
+              <Link href={`${path}/${student.username}/map`}>
+                <IconButton title="Map">
+                  <MapIcon />
+                </IconButton>
+              </Link>
+            )}
+            {student.assignments.includes('bim') && (
+              <Link href={`${path}/${student.username}/bim`}>
+                <IconButton title="BIM">
+                  <BIMIcon />
+                </IconButton>
+              </Link>
+            )}
+          </ListItemButton>
+        </div>
+      ))}
     </List>
   );
 }
