@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#map {
+  height: 100%;
+}
+
+.maplibregl-popup {
+  max-width: 100px;
+  font: 12px/20px 'Courier New', Courier, monospace;
+}
+
+#introyap {
+  color: rgb(0, 208, 0);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  z-index: 3;
+  top: 0rem;
+  left: 1rem;
+  font-size: 20pt;
+  font-weight: 5pt;
+  letter-spacing: 1pt;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1pt;
+  text-shadow: 3px 3px 5px rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.763);
+  width: fit-content;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
