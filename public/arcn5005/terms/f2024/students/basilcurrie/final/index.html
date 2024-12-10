@@ -2,17 +2,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basil Currie's Final Project</title>
+    <title>Basil Currie's About Page</title>
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
     <link rel="stylesheet" href="../styles.css" />
+    <style>
+        html, body, #map { height: 100%; }
+    </style>
   </head>
-  <body>
-    <div class="maincontent">
+  <body style="background-image:url('../Road.webp');">
+    <div class="maincontent" style="z-index:2;position:absolute;margin:10px;">
       <div id="title">
         <div id="avatar">
         </div>
         <div id="words">
-          <h2>FINAL PROJECT</h2>
+          <h2>BASIL CURRIE</h2>
+          <h6 style="padding:3px;">Assignment Portal</h6>
         </div>
       </div>
       <hr>
+      <br>
+      <h3>Final Assignment</h3>
+      <p>I'm Basil, a student of architecture with a specialty in climate change. I worked at CIMS for two summers, and I've been working at Architecture 49 for over a year. In my free time I cook, make art and read science fiction.</p>
+      <br>
+      <div class="scorebar" id="cubecount">
+      </div>
+      <div class="scorebar" id="youcount">
+      </div>
+      <ul style="list-style-type: none;padding-left:0;">
+          <li><button id="a7">Route to Work</button></li>
+          <li><br></li>
+          <li><button id="a1">Almonte City Hall</button></li>
+          <li><button id="a2">Black Watch Building</button></li>
+          <li><button id="a3">County Registry Office</button></li>
+          <li><button id="a4">Dungarvon Building</button></li>
+          <li><button id="a5">Gatehouse at Mill of Kintail</button></li>
+          <li><button id="a6">Textile Museum</button></li>
+      </ul>
+    </div>
+    <div id="hidden"></div>
+    <div id="map" style="z-index:1;"></div>
+
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.150.1/build/three.module.js", 
+        "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"}
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+    <script src="./main.js"></script>
+    <script type="module" src="./app.js"></script>
   </body>
+</html>
