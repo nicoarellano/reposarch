@@ -1,0 +1,84 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-123.015, 49.250]
+        },
+        "properties": {
+          "name": "Burnaby Hospital",
+        "imageUrl": "IMAGES/baby.jpg",
+        "description": "This is where I was born!!!",
+        "category": "Healthcare"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.971, 49.277]
+        },
+        "properties": {
+          "name": "Burnaby North Secondary School",
+          "imageUrl": "IMAGES/BNS.jpg",
+        "description": "I graduated from this high school",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-122.8677, 49.139]
+        },
+        "properties": {
+          "name": "Dr. FD Sinclair Elementary",
+          "imageUrl": "IMAGES/Elementary.jpg",
+        "description": "I made some long-standing friendships here",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-71.27, 46.78]
+        },
+        "properties": {
+          "name": "Laval University",
+          "imageUrl": "IMAGES/LAVAL.jpeg",
+        "description": "I spent five weeks at this school doing a french-immersion program",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.4011, 43.659517]
+        },
+        "properties": {
+          "name": "University of Toronto",
+          "imageUrl": "IMAGES/UofT.JPG",
+        "description": "I graduated from UofT with a BA in Architectural Studies and a minor in French Studies",
+          "category": "School"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-75.698, 45.383]
+        },
+        "properties": {
+          "name": "Carleton University",
+          "imageUrl": "IMAGES/Carleton.JPG",
+        "description": "Currently working towards an M.Arch",
+          "category": "School"
+        }
+      }
+    ]
+  }
+  

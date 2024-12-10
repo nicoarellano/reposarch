@@ -152,6 +152,15 @@ button {
   top: -130px;
 }
 
+.button__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
 button:focus,
 button:hover {
   color: rgb(21, 73, 128);

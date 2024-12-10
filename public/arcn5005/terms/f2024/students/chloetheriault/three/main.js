@@ -64,7 +64,7 @@ gltfLoader.load("./models/scene.gltf", (gltf) => {
   scene.add(ground);
 });
 
-const light = new THREE.DirectionalLight(0xffffff, 2);
+const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(10, 50, 10);
 light.castShadow = true;
 light.shadow.mapSize.width = 1024;
@@ -148,7 +148,7 @@ animate();
 //Adding 3D Text
 const fontLoader = new THREE.FontLoader();
 
-function createText(text, elevation = 0, textColor = "0xD49973", size = 10) {
+function createText(text, elevation = 0, textColor = "0x7785AC", size = 10) {
   fontLoader.load("./fonts/helvetiker_regular.typeface.json", (font) => {
     const textGeo = new THREE.TextGeometry(text, {
       font,
