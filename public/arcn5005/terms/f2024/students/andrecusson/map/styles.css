@@ -14,7 +14,7 @@ html, body, #map {
 
 #header {
   font-family: 'Montserrat-Light';
-  background: rgba(147, 112, 219, .9); 
+  background: #5b4b8c; 
   position: absolute;
   z-index: 1;
   top: 0;
@@ -45,7 +45,7 @@ header{
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(147, 112, 219, .9); 
+  background: #5b4b8c; 
   z-index: 1;
   text-align: center;
   padding: 10px;
