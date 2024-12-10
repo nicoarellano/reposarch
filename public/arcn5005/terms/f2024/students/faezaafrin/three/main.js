@@ -26,6 +26,8 @@ const renderer = new THREE.WebGLRenderer({
 //Renderer size and pixel ratio
 renderer.setSize(size.width, size.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+/*renderer.gammaOutput = true;*/
+
 document.body.appendChild(renderer.domElement);
 
 // Load Background Texture
@@ -228,26 +230,27 @@ gltfLoader.load(
   }
 );
 
-let mesh3
+let mesh3;
 gltfLoader.load(
-  "./models/Meeee2.glb",
+  "./models/Meeee10.glb",
   function (gltf) {
-    mesh3 = gltf.scene;
-    mesh3.scale.x = 8;
-    mesh3.scale.y = 8;
-    mesh3.scale.z = 8;
-    
-    mesh3.position.x = 0;
-    mesh3.position.y = 15;
-    mesh3.position.z = 25;
+    if (gltf.scene) {
+      mesh3 = gltf.scene;
+      mesh3.scale.set(8, 8, 8); 
+      mesh3.position.set(0, 15, 25);
 
-    scene.add(mesh3);
+      console.log("Model loaded: ", mesh3);
+
+      scene.add(mesh3);
+    } else {
+      console.error("Failed to load the model", gltf);
+    }
   },
   undefined,
   function (error) {
-    console.error(error);
+    console.error("Error loading the model:", error); 
   }
-);
+);  /**/ 
 
 
 
@@ -427,7 +430,7 @@ function animate() {
   mesh3.rotation.y += speed * 0.1;
   mesh3.position.x += speed * 0.1;
   mesh3.position.y += speed * 0.1;
-  mesh3.position.z += speed * 0.1;
+  mesh3.position.z += speed * 0.1; /**/
     
   // Animate shooting stars
   shootingStars.forEach(star => {
