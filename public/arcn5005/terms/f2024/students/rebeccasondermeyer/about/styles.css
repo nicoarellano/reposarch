@@ -2,6 +2,20 @@
 {
     transition:0.3s;
 }
+body {
+    color: white;
+  }
+  
+  h1 {
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+
+html {
+    color:  white;
+}
 @font-face {
     font-family: 'ChunkFiveRegular';
     src: url('font/chunkfive.eot')}
