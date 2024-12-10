@@ -155,7 +155,11 @@ body {
 }
 
 /*Image in Popup*/
+<<<<<<< HEAD
 .custom-popup img {
+=======
+.custom-popup img {;
+>>>>>>> 2fd54fe0dc7be0a8608cf78c28aae8953dbce130
     width: 200px;
     height: 200px;
     align-content: bottom;

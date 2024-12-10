@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,4 +44,51 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <title>Assignment 3: Map</title>
+    <meta property="og:description" content="Initialize a map in an HTML element with MapLibre GL JS." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="webstyle.css" />
+    <script type="module" src="./main.js"></script>
+
+    <script src=https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js></script>
+    <link href=https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+  <nav class="header">
+    <div class="webtitle">03 Map</div>
+    <div class="pagetitle">My Top Foodventures</div>
+      
+    <div class="nav-icons">
+      <button class="icon-button" onclick="window.location.href = '../about/index.html';">
+        <span class="material-symbols-outlined">home</span>
+      </button>
+      <button class="icon-button" onclick="
+        var audio = document.getElementById('audioPlayer'); 
+        if (audio.paused) { audio.play(); } else { audio.pause(); }
+      ">
+        <span class="material-symbols-outlined">music_note</span>
+      </button>
+    </div>
+    
+    <audio id="audioPlayer" autoplay loop>
+      <source src="track1.mp3" type="audio/mpeg">
+    </audio>
+  </nav>
+    
+  <div id="map"></div> 
+
+</body>
+
+>>>>>>> 2fd54fe0dc7be0a8608cf78c28aae8953dbce130
 </html>
