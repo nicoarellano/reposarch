@@ -235,10 +235,11 @@ body {
 
 /* Viewers Container */
 #viewers {
-  position: fixed; /* Fix position relative to the viewport */
+  position: absolute; /* Fix position relative to the viewport */
   bottom: 0; /* Stick to the bottom of the page */
   left: 50%; /* Start positioning from the center */
   transform: translateX(-50%); /* Center horizontally */
+  top: 433px;
   height: 50%; /* Occupy half the height of the viewport */
   display: flex; /* Arrange children side by side */
   align-items: center; /* Vertically align overlapping */
@@ -256,16 +257,19 @@ body {
   pointer-events: all; /* Allow interactions within the viewers */
   border: none; /* Optional: Add consistent border for both */
   box-sizing: border-box; /* Ensure border doesn't affect size */
+  
 }
 
 #maplibre {
-  z-index: 1; /* Slightly above for overlap */
+  z-index: 1000; /* Slightly above for overlap */
   height: 110%; /* Full height of the container */
+ 
 }
 
 #threejs {
-  z-index: 2; /* Below the map for overlap */
+  z-index: 2000; /* Below the map for overlap */
   margin: 0 -200px; /* Negative margin to create slight overlap */
+ 
 }
 
 
@@ -512,7 +516,7 @@ h4 ul {
 
 /* Slideshow (Carousel) Container */
 .carousel-container {
-  position: fixed;
+  position: absolute;
   top: 25%; /* Adjust the vertical position */
   left: 50%; /* Adjust the horizontal position */
  
@@ -557,18 +561,6 @@ h4 ul {
     transform: translateX(0);
   }
 }
-/* Independent border */
-#independent-border {
-  border: 8px solid rgb(149, 126, 143); /* Thick border */
-  box-sizing: border-box; /* Ensures border doesn't affect dimensions */
-  position: fixed; /* Allows positioning anywhere on the screen */
-  top: 50%; /* Adjust the top position */
-  left: 2.5%; /* Adjust the left position */
-  width: 1404px; /* Adjustable width */
-  height: 416px; /* Adjustable height */
-  z-index: 999; /* Ensure it stays above most elements */
-  background-color: transparent; /* Transparent background */
-}
 
 
 /* Thick border for shagana.jpg */
@@ -583,4 +575,43 @@ img[src="shagana.jpg"] {
   box-sizing: content-box; /* Ensures the border doesn't affect the size */
   top: 30%; /* Moves the carousel further down the page */
   height: 148px; /* Reduces the height of the carousel */
+}
+/* Social Media Buttons */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  flex-direction: column; /* Stack icons vertically */
+  height: auto;
+  width: auto;
+  padding-top: 0;
+  font-family: "salo-variable", sans-serif;
+  font-variation-settings: "opsz" 1;
+  justify-content: right; /* Align items in the vertical direction */
+  align-items: left; /* Align items to the left */
+  position: fixed; 
+  bottom: 100px;
+  left: 15px; /* Move to the left corner */
+  z-index: 10000;
+}
+
+/* Party Button */
+#party-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Move the party button to the left */
+  background-color: #ffffff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+#party-button:hover {
+  background-color: rgb(149, 126, 143);
 }
