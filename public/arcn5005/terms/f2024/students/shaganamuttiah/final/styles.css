@@ -1,107 +1,97 @@
-body { margin: 0; padding: 0; }
-        html,
-        body, 
-       
+body {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+h1 {
+  color: rgb(149, 126, 143);
+  font-family: 'cheesecake', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-align: center;
+}
 
-    h1 {
-        color:  rgb(149, 126, 143);
-        font-family: "cheesecake", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-        text-align: center;}
+h2 {
+  color: rgb(149, 126, 143);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+h3 {
+  color: rgb(149, 126, 143);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: Left;
+}
 
-    h2 {
-        color: rgb(149, 126, 143);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-align: center;}
-   h3 {
-     color: rgb(149, 126, 143);
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     text-align: Left;}
-
-     
-
-     .title {
-      position: fixed; /* Keeps the title fixed in position */
-      top: 100px; /* Adjust this value to move the title vertically */
-      left: 500%; /* Centers the title horizontally */
-      width: auto; /* Automatically adjusts width */
-      font-family: "cheesecake", sans-serif;
-      font-weight: 1200;
-      font-style: normal;
-      font-size: 50px; /* Increased from 30px to 50px */
-      letter-spacing: 2px;
-      color: rgb(149, 126, 143);
-      text-shadow: 
-        -6px -6px 0px black, 
-        2px -2px 0px black,  
-        -2px 2px 0px black,  
-        2px 2px 0px black;
-      z-index: 1000; /* Ensures the title stays above other elements */
-      text-align: center; /* Aligns text to center */
-    }
-    
-    
- 
-
+.title {
+  position: fixed; /* Keeps the title fixed in position */
+  top: 100px; /* Adjust this value to move the title vertically */
+  left: 500%; /* Centers the title horizontally */
+  width: auto; /* Automatically adjusts width */
+  font-family: 'cheesecake', sans-serif;
+  font-weight: 1200;
+  font-style: normal;
+  font-size: 50px; /* Increased from 30px to 50px */
+  letter-spacing: 2px;
+  color: rgb(149, 126, 143);
+  text-shadow: -6px -6px 0px black, 2px -2px 0px black, -2px 2px 0px black,
+    2px 2px 0px black;
+  z-index: 1000; /* Ensures the title stays above other elements */
+  text-align: center; /* Aligns text to center */
+}
 
 body {
-  font-family: "ivysoft-variable", sans-serif;
-  font-variation-settings: "slnt" 0, "wght" 700;
+  font-family: 'ivysoft-variable', sans-serif;
+  font-variation-settings: 'slnt' 0, 'wght' 700;
   color: #333;
   background-color: #eee5f1;
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
 
-
-
-.about-me-text { 
-	
-	width:415px;
-	height:328px;
-	position:fixed;
-	left:-80px;
-	top:0px;
-  font-family: "ivysoft-variable", sans-serif;
-  font-variation-settings: "slnt" 0, "wght" 400;
-	text-align:left;
-	font-size:20px;
-	letter-spacing:0;
+.about-me-text {
+  width: 415px;
+  height: 328px;
+  position: fixed;
+  left: -80px;
+  top: 0px;
+  font-family: 'ivysoft-variable', sans-serif;
+  font-variation-settings: 'slnt' 0, 'wght' 400;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 0;
 }
-.about-me-tittle { 
-	
-	width:315px;
-	height:58px;
-  font-family: "cheesecake", sans-serif;
+.about-me-tittle {
+  width: 315px;
+  height: 58px;
+  font-family: 'cheesecake', sans-serif;
   font-weight: 900;
   font-style: normal;
-	position:fixed;
-	left:500px;
-	top:100px;
-	text-align:left;
-	font-size:35px;
-	letter-spacing:10;
-  
+  position: fixed;
+  left: 500px;
+  top: 100px;
+  text-align: left;
+  font-size: 35px;
+  letter-spacing: 10;
 }
 
-.slidebox { 
-	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-	width:638px;
-	height:425px;
-	position:absolute;
-	left:783px;
-	top:590px;
-	border-top-left-radius:4px;
-	border-top-right-radius:4px;
-	border-bottom-left-radius:4px;
-	border-bottom-right-radius:4px;
-	background-image:url(images/avatar.png);
-	background-repeat:no-repeat;
-	background-size:cover;
+.slidebox {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 638px;
+  height: 425px;
+  position: absolute;
+  left: 783px;
+  top: 590px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-image: url(images/avatar.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.slidebox{ 
-	border:1px solid rgba(0, 0, 0, 1)1px solid rgba(0, 0, 0, 1);
+.slidebox {
+  border: 1px solid rgba(0, 0, 0, 1) 1px solid rgba(0, 0, 0, 1);
 }
 * {
   box-sizing: border-box;
@@ -125,8 +115,7 @@ body {
   text-align: center;
 }
 
-
-/* socials - start */ 
+/* socials - start */
 .wrapper {
   display: inline-flex;
   list-style: none;
@@ -134,14 +123,14 @@ body {
   height: auto; /* Remove fixed height */
   width: auto; /* Adjust width dynamically */
   padding-top: 0;
-  font-family: "salo-variable", sans-serif;
-  font-variation-settings: "opsz" 1;
+  font-family: 'salo-variable', sans-serif;
+  font-variation-settings: 'opsz' 1;
   justify-content: right; /* Align items in the vertical direction */
   align-items: right; /* Center items horizontally */
-  position: fixed; 
+  position: fixed;
   bottom: 100px; /* Offset from the bottom */
   right: 15px; /* Move to the right corner */
-  z-index: 10000; 
+  z-index: 10000;
 }
 
 .wrapper .icon {
@@ -177,7 +166,7 @@ body {
 
 .wrapper .tooltip::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 8px;
   width: 8px;
   background: #fff;
@@ -230,9 +219,6 @@ body {
   color: #fff;
 }
 
-
-
-
 /* Viewers Container */
 #viewers {
   position: absolute; /* Fix position relative to the viewport */
@@ -246,8 +232,6 @@ body {
   gap: -100px; /* Negative gap for slight overlap */
   pointer-events: none; /* Prevent interference with other content */
   overflow: hidden; /* Prevent overflow content */
-  
-
 }
 
 /* Individual Viewers */
@@ -257,24 +241,17 @@ body {
   pointer-events: all; /* Allow interactions within the viewers */
   border: none; /* Optional: Add consistent border for both */
   box-sizing: border-box; /* Ensure border doesn't affect size */
-  
 }
 
 #maplibre {
   z-index: 1000; /* Slightly above for overlap */
   height: 110%; /* Full height of the container */
- 
 }
 
 #threejs {
   z-index: 2000; /* Below the map for overlap */
   margin: 0 -200px; /* Negative margin to create slight overlap */
- 
 }
-
-
-  
-
 
 /* Buttons Container */
 .buttons-container {
@@ -286,8 +263,6 @@ body {
   gap: 10px; /* Add spacing between buttons */
   z-index: 9999; /* Ensure buttons stay above all other content */
 }
-
-
 
 /* Button Styles */
 .box {
@@ -305,12 +280,13 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   left: -20px;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  
 }
 
-.box:before, .box:after {
+.box:before,
+.box:after {
   position: absolute;
   content: '';
   box-sizing: border-box;
@@ -324,7 +300,8 @@ body {
   width: 100%;
   border-bottom: 4px solid transparent;
   border-left: 4px solid transparent;
-  transform: translateX(100%);}
+  transform: translateX(100%);
+}
 
 .box:after {
   top: 0;
@@ -333,7 +310,8 @@ body {
   height: 4px;
   border-top: 4px solid transparent;
   border-right: 4px solid transparent;
-  transform: translateX(-100%);}
+  transform: translateX(-100%);
+}
 
 .box:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -360,21 +338,19 @@ button {
   background: transparent;
 }
 
-.title { 
-
-  width:315px;
-  height:58px;
-  font-family: "cheesecake", sans-serif;
+.title {
+  width: 315px;
+  height: 58px;
+  font-family: 'cheesecake', sans-serif;
   font-weight: 900;
   font-style: normal;
-  position:absolute;
-  left:30px;
-  top:30px;
-  text-align:left;
-  font-size:40px;
-  letter-spacing:0;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  text-align: left;
+  font-size: 40px;
+  letter-spacing: 0;
   z-index: 1000;
-
 }
 /* Main Container Styling */
 .main-container {
@@ -398,8 +374,6 @@ img {
   box-sizing: border-box; /* Ensures border doesn't affect dimensions */
   border-radius: 0px; /* Optional: Add rounded corners for a smoother look */
 }
-
-
 
 /* Content Container Styling */
 .content-container {
@@ -427,7 +401,6 @@ h4 ul {
   margin: 0;
   padding-left: 20px; /* Indent the list for better readability */
   list-style-type: disc; /* Use bullets for the list */
-  
 }
 
 /* Party Button Styling */
@@ -493,15 +466,15 @@ h4 ul {
   position: fixed;
   top: 0;
   width: 100%;
-  
-  color:rgb(149, 126, 143);
-  
+
+  color: rgb(149, 126, 143);
+
   font-weight: bold;
   font-size: 20px;
   text-align: center;
   padding: 10px 0;
   z-index: 10000; /* Ensure it stays above other elements */
-  
+
   animation: slide-down 0.5s ease-in-out;
 }
 
@@ -519,13 +492,13 @@ h4 ul {
   position: absolute;
   top: 25%; /* Adjust the vertical position */
   left: 50%; /* Adjust the horizontal position */
- 
+
   z-index: 9999; /* Ensures the carousel stays above other content */
   width: 400px; /* Adjusted width of the carousel */
   height: 200px; /* Adjusted height of the carousel */
   overflow: clip;
- background-color: rgb(149, 126, 143);
- 
+  background-color: rgb(149, 126, 143);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -562,9 +535,8 @@ h4 ul {
   }
 }
 
-
 /* Thick border for shagana.jpg */
-img[src="shagana.jpg"] {
+img[src='shagana.jpg'] {
   border: 8px solid rgb(149, 126, 143); /* Adjust thickness and color as needed */
   box-sizing: border-box; /* Ensures the border doesn't affect the size */
 }
@@ -584,11 +556,11 @@ img[src="shagana.jpg"] {
   height: auto;
   width: auto;
   padding-top: 0;
-  font-family: "salo-variable", sans-serif;
-  font-variation-settings: "opsz" 1;
+  font-family: 'salo-variable', sans-serif;
+  font-variation-settings: 'opsz' 1;
   justify-content: right; /* Align items in the vertical direction */
   align-items: left; /* Align items to the left */
-  position: fixed; 
+  position: fixed;
   bottom: 100px;
   left: 15px; /* Move to the left corner */
   z-index: 10000;
