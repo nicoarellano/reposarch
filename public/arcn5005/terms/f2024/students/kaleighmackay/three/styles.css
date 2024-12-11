@@ -1,9 +1,8 @@
 img {
-    border-radius: 150px;
-    height:60%;
-    margin: 30px;
+    border-radius: 100px;
+    height: 25rem;
 }
-
+  
 .button-2 {
     background-color: rgb(255, 255, 255);
     color: #bc3c33;
@@ -13,80 +12,95 @@ img {
     width: 100px;
     height: 45px;
     transition: 0.3s;
-    padding: 10px;
+    padding: 0px;
+    margin-right: 20px;
 }
-
+  
 .button-2:hover {
     color: #ffffff;
     background-color: #BC3C33;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     transform: translateY(-2px);
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 50%;
-    background-color: rgb(248,248,248);
-    left: 0px;
+  
+.button-2:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
   
-ul {
+body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #BC3C33;
-    padding-left: 30px;
+    height: 50%;
+    background-color: rgb(248,248,248);
 }
   
 h1 {
     font-family: 'Pacifico', cursive;
     font-size: 44px;
-    color:#BC3C33
+    color:#BC3C33;
 }
-  
+    
 h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
     font-weight: 600;
+    font-size: 24px;
     color: #bc3c33;
-    display: inline-block;
     padding-left: 2rem;
-    padding-top: 2rem;
-    bottom: 0;
-    margin-bottom: 0;
+    padding-top: 4rem;
 }
-  
+    
 h3 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     color: #bc3c33;
     text-align: center;
 }
-  
+    
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     font-size: 24px;
     color: #bc3c33;
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
-
-.leftPanel {
-    width: 30vw;
+  
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #bc3c33;
+    padding-left: 15px;
+    list-style-type: none;
 }
-
-
-body,
-html {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+  
+ul {
+    padding-left: 10px;
 }
-
-canvas {
-    background-color: #bc3c33;
-    display: block;
-    width: 70vw;
+  
+.canvas {
+    flex-grow: 1;
     height: 100vh;
+    width: calc(100vw - 210px);
+}
+  
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(248, 248, 248, 1);
+    padding: 50px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
