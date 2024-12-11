@@ -1,11 +1,40 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>noaheperkins map page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
-</html>
+        <!-- <h3>🔴 = stadium (hover to see description)</h3> -->
+           <!-- <script type="module" src="./main.js"></script> -->
+           <!DOCTYPE html>
+           <html lang="en">
+           <head>
+               <title>Add a default marker</title>
+               <meta property="og:description" content="Add a default marker to the map." />
+               <meta charset='utf-8'>
+               <meta name="viewport" content="width=device-width, initial-scale=1">
+               <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+               <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+               <style>
+                   body { margin: 0; padding: 0; }
+                   html, body, #map { height: 100%; }
+               </style>
+           </head>
+           <header>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Styled H1 Example</title>
+                <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+              </head>
+            <h1>Mapping Record Stores & Music Venues I've visited in Ottawa
+            </h1>
+        </header>
+           <body>
+            <style>
+              .maplibregl-popup {
+                  max-width: 1000px;
+                  width: 1000px;
+                  height: 1000px;
+                  font: 16px/30px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+              }
+          </style>
+           <div id="map"></div>
+             <h3></h3>
+           <script type="module" src="./main.js"></script>
+           </body>
+           </html>
