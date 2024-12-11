@@ -4,8 +4,102 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>faezaafrin final page</title>
+    
+    <!-- Links to Reference Files -->
+    <link rel="stylesheet" href="finalwebstyle.css" />
+    <script type="module" src="./finalmain.js"></script>
+
+    <!-- Three js Modules -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+
+    <!-- MapLibre Modules -->
+    <script src=https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js></script>
+    <link href=https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+    
   </head>
+
+<body>
+
+  <section class="background">
+
+    <nav class="header">
+      <div class="webtitle">04 Final</div>
+      <div class="pagetitle">Home</div>
+      <div class="nav-icons">
+        <button class="icon-button" onclick="window.location.href = '../index.html';">
+          <span class="material-symbols-outlined">home</span>
+        </button>
+        <button class="icon-button" onclick="
+          var audio = document.getElementById('audioPlayer'); 
+          if (audio.paused) { audio.play(); } else { audio.pause(); }
+        ">
+          <span class="material-symbols-outlined">music_note</span>
+        </button>
+      </div>
+
+      <audio id="audioPlayer" autoplay loop>
+        <source src="jheneaiko.mp3" type="audio/mpeg">
+      </audio>
+    </nav>
+
+    <section class="main">
+      <div class="main-header">
+        <h1>Faeza Afrin</h1>
+      </div>
+    
+      <div class="navbar">
+        <ul>
+          <li><a href="../about/index.html"><button><span>01 About</span></button></a></li>
+          <li><a href="../three/index.html"><button><span>02 Three</span></button></a></li>
+          <li><a href="../map/index.html"><button><span>03 Map</span></button></a></li>
+          <li><a href="../final/index.html"><button><span>04 Final</span></button></a></li>
+        </ul>
+      </div>
+    
+      <div class="content-row">
+        <div class="main-left">
+          <img src="./img/avatar.jpg" alt="Faeza Afrin" />
+        </div>
+        <div class="main-middle">
+          <h1>Intro</h1>
+          <h2>Hi, I'm Faeza! Welcome to the homepage of my mini-folio for ARCN5005. Feel free to check out my assignments and explore the links!</h2>  
+        </div>
+        <div class="main-right">
+          <h2>Useful Links</h2>
+          <ul>
+            <li><a href="https://github.com/FaezaA21/reposarch-FA.git" target="_blank" rel="noopener noreferrer"><button><span>Git Hub</span></button></a></li>
+            <li><button id="donutButton"><span>?</span></button></a></li>
+            <li><a href="https://architecture.carleton.ca/" target="_blank" rel="noopener noreferrer"><button><span>CU Arch</span></button></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <section class="main2">
+      <div class="viewer">
+        <h2><a href="../map/index.html">My Top Foodventures in Ottawa</a></h2>
+        <div id="map-canvas"></div>
+
+        <h2><a href="../three/index.html">Master of the Donutverse</a></h2>
+        <div class="iframe-container">
+          <iframe class="viewer-frame" allow="autoplay 'none'" src="../three/index.html" frameborder="0"></iframe>
+        </div>
+      </div>
+      
+
+    </section>
+    </section>
+    
+      
   <body>
-    ADD YOUR CODE HERE!
-  </body>
+
 </html>

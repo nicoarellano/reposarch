@@ -3,74 +3,22 @@
 <head>
     <link rel="stylesheet" href="style.css" />
     <title>Zelal's assignment 2</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            height: 100vh;
-        }
-        
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .container {
-            position: relative;
-            z-index: 2;
-            pointer-events: none; /* Allow clicking through to canvas by default */
-        }
-        
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            height: 100vh;
-            width: 200px;
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(5px);
-            pointer-events: auto; /* Re-enable interactions only for sidebar */
-            padding: 50px;
-        }
-        
-        /* Only enable pointer events for specific interactive elements */
-        .sidebar *, 
-        audio,
-        .main-content img,
-        .main-content p {
-            pointer-events: auto;
-        }
-        
-        .main-content {
-            position: relative;
-            margin-left: 300px;
-            padding: 50px;
-        }
-        
-        /* Make sure buttons are clickable */
-        .cta {
-            pointer-events: auto;
-        }
-        
-        /* Ensure the profile pic is clickable if needed */
-        .profile-pic {
-            pointer-events: auto;
-        }
-    </style>
 </head>
 <body>
-    <!-- Rest of your HTML remains the same -->
     <div class="container">
         <div class="sidebar">
+          <img src="spotify.jpg" width="100px" style="vertical-align: middle;" />
+          <p style="margin: 0; padding-left: 10px;">Chairten - Orange Juice</p>
+          <audio controls class="audio-player">
+            <source src="orange juice.mp3" type="audio/mpeg">
+        </audio>
+
             <img class="profile-pic" src="avatar.jpg" width="100px"/>
             <h1>Zelal Kaya</h1>
             <ul class="assignments">      
                 <button class="cta">
-                    <span class="hover-underline-animation"> Assignment 2 </span>
+                  <a href="../about/index.html" class="cta">
+                    <span class="hover-underline-animation"> Assignment 1 </span>
                     <svg
                       id="arrow-horizontal"
                       xmlns="http://www.w3.org/2000/svg"
@@ -85,11 +33,13 @@
                         transform="translate(30)"
                       ></path>
                     </svg>
+                  </a>
                   </button>
                   
                   <ul class="assignments">
                
                     <button class="cta">
+                      <a href="../map/index.html" class="cta">
                       <span class="hover-underline-animation"> Assignment 3 </span>
                       <svg
                         id="arrow-horizontal"
@@ -105,10 +55,12 @@
                           transform="translate(30)"
                         ></path>
                       </svg>
+                    </a>
                     </button>
                     <ul class="assignments">
                
                       <button class="cta">
+                        <a href="../final/index.html" class="cta">
                         <span class="hover-underline-animation"> Final </span>
                         <svg
                           id="arrow-horizontal"
@@ -124,22 +76,9 @@
                             transform="translate(30)"
                           ></path>
                         </svg>
+                      </a>
                       </button>
             </ul>
-        </div>
-        <div class="main-content">
-            <div id="error-message"></div>
-            <section style="display: flex; align-items: center;">
-                <img src="spotify.jpg" width="110px" style="vertical-align: middle;" />
-                <p style="margin: 0; padding-left: 10px;">Chairten - Orange Juice</p>
-            </section>
-            <section style="display: flex; align-items: center; margin-top: 10px;">
-                <div>
-                    <audio controls>
-                        <source src="orange juice.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-            </section>
         </div>
     </div>
 
