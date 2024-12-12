@@ -2,7 +2,7 @@ import { recordstores } from "./Recordstores.js";
 import { venues } from "./Venues.js";
 const map = (window.map = new maplibregl.Map({
   container: 'map',
-  style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+  style: 'https://api.maptiler.com/maps/streets/style.json?key=BsQV9nh1HzSGX3QZmgDL',
   center: [-75.697193, 45.421530],
   zoom: 10,
   antialias: true,
