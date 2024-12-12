@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>joshharriman final page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css" />
+  <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+
+  <title>Final Assignment</title>
+</head>
+<body style="background-image: url('nunavut.jpg')">
+
+  <div class="content-wrapper">
+        <div class="text-box">
+             <header>
+            <span class="course-name">ARCN5005</span>
+            <span class="course-description">Theory & Practice of Architectural Representation</span>
+            </header>
+        </div>
+
+        <div class="text-box2">
+            <header>
+           <h1>Josh Harriman</h1>
+           <ul>
+            <li>Ecological-friendly building specialist</li>
+            <li>Attending Masters in Architecture, Carleton University</li>
+            <li>Ski instructor</li>
+            <li>Amateur viticulturist</li>
+            <li>Neophyte programmer</li>
+           </ul>
+           <br>
+           </header>
+       </div>
+
+       <div class="text-box3">
+            <header>
+            <h2>Inspirations for ecological building<h2></h2>
+            <h3>Yasmeen Lari</h3>
+            <ul>
+                <li>Oxford graduate</li>
+                <li>First female architect in Pakistan</li>
+                <li>Co-founder of Heritage Foundation of Pakistan</li>
+                <li>Retired to design sustainble housing</li>
+                <li>Elegant combinations of design and materials</li>
+            </ul>
+            <h3>Franz Volhard</h3>
+            <ul>
+                <li>German Architect</li>
+                <li>Designed ecological-friendly buildings throughout Europe</li>
+                <li>Author of "Light Earth Building"</li>
+            </ul>
+            <br>
+            </header>
+        </div>
+
+
+
+
+
+
+        <div class="content-wrapper">
+        <div class="profile-picture-container">
+            <img src="nunavut.jpg" alt="Profile Picture" class="profile-picture">
+        </div>
+
+        
+        <div class="photo-container">
+            <img src="cellardoorvineyard.jpg" alt="Photo" class="rectangular-photo">
+        </div>
+
+
+
+
+
+
+        <div class="button-container">
+
+
+
+
+
+            <button class="button type1" onclick="window.location.href='';">About Me</button>
+            <button class="button type1"> Three </button>
+            <button class="button type1">   Map   </button>
+            </button> 
+    
+  
+  
+    </div>
+
+    <div class="container">
+      <div class="three-container" id="three-container"></div>
+    </div>
+
+    <div class="text-box4">
+        <header>
+       <span>🟢 = Natural Builders in Canada (hover to see description)</span>
+       </header>
+   </div>
+
+    <div id="map"></div>
+
+    <div id="map-picture">
+        <img src=".jpg" alt="Map Picture" style="width: 100%;">
+      </div>
+    
+      <div class="content-wrapper">
+
+
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  <script type="module" src="./main.js"></script>
+
+  <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+  <script src="main.js"></script>
+
+
 </html>
