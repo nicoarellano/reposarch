@@ -9,6 +9,8 @@ html {
   overflow: auto;
   width: 100%;
   height: 120%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 body,
@@ -35,7 +37,7 @@ body::before {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  max-width: 170%;
+  max-width: 100%;
 }
 
 .text-container {
@@ -57,8 +59,8 @@ h1 {
     width: 100%;
     position: relative;
     margin-bottom: 2px;
-    margin-left: 600px;
-    margin-top: -330px;
+    margin-left: 0px;
+    margin-top: -360px;
     top: 0;
   }
 
@@ -69,7 +71,7 @@ h2 {
   font-style: italic;
   text-align: right;
   position: relative;
-  margin-left: 550px;
+  margin-left: 520px;
   margin-top: 5px;
 }
 
@@ -80,7 +82,7 @@ h2 {
   width: 260px;        
   text-align:left; 
   position: relative;
-  margin-left: 550px;
+  margin-left: 480px;
   margin-top: -20px;
 }
 
@@ -108,8 +110,8 @@ ul {
   border: 2px solid rgb(13, 53, 128);
   border-radius: 50%;
   position: absolute;
-  left:930px;
-  top:-320px;
+  left:780px;
+  top:-350px;
 }
 
 h3 {
@@ -123,11 +125,17 @@ h3 {
   padding: 0;
   position: relative;
   line-height: normal;
-  left: -735px;
-  top: 30px;
+  left: -850px;
+  top: -10px;
 }
 
 /* From Uiverse.io by WhiteNervosa */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px;
+}
+
 button {
   font-size: 18px;
   color: #ffffff;
@@ -148,8 +156,8 @@ button {
   line-height: 200%;
   margin-left:90px;
   margin-top: -0px;
-  left: -1040px;
-  top: -130px;
+  left: -1160px;
+  top: -167px;
 }
 
 .button__text {
@@ -190,20 +198,44 @@ button:after {
   display: flex;
   flex-direction: row;
   justify-content: space-between, center;
-  margin-top: 500px;
-  margin-left: 575px;
+  margin-top: 380px;
+  margin-left: 440px;
+  transform: translateX(14px);   
   z-index: 2;
 }
 
 .image2 {
-  width: 270px;
-  height: 270px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   display: block;
   position: relative;
-  margin-right: 80px;
+  margin-right: 90px;
   margin-left: 0px;
 }
+
+.spotify-iframe {
+    position: fixed; 
+    top: -30px;    
+    right: 20px;    
+    z-index: 100; 
+    transform: translateY(50px)   
+}
+
+/* Viewers Container */
+#viewers {
+  position: absolute; /* Fix position relative to the viewport */
+  bottom: 0; /* Stick to the bottom of the page */
+  left: 50%; /* Start positioning from the center */
+  transform: translateX(-50%); /* Center horizontally */
+  height: 50%; /* Occupy half the height of the viewport */
+  display: flex; /* Arrange children side by side */
+  align-items: center; /* Vertically align overlapping */
+  gap: 0px; /* Negative gap for slight overlap */
+  pointer-events: none; /* Prevent interference with other content */
+  overflow: hidden; /* Prevent overflow content */
+}
+
 
 /* From Uiverse.io by david-mohseni */
 .wrapper {
@@ -217,6 +249,7 @@ button:after {
   font-family: 'Poppins', sans-serif;
   justify-content: center;
   transform: translateY(-2px);
+  z-index: 10000;
 }
 
 .wrapper .icon {
@@ -233,7 +266,7 @@ button:after {
   vertical-align: middle;
   flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  cursor: url('cursor.png'), pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -282,4 +315,201 @@ button:after {
 .wrapper .instagram:hover .tooltip::before {
   background: rgb(21, 73, 128);
   color: #fff;
+}
+
+/* Viewers Container */
+#viewers {
+  position: absolute; /* Fix position relative to the viewport */
+  left: 50%; /* Start positioning from the center */
+  transform: translateX(-50%); /* Center horizontally */
+  height: 70%; /* Occupy half the height of the viewport */
+  display: flex; /* Arrange children side by side */
+  align-items: center; /* Vertically align overlapping */
+  gap: 0px; /* Negative gap for slight overlap */
+  pointer-events: none; /* Prevent interference with other content */
+  overflow: hidden; /* Prevent overflow content */
+  top: 900px;
+  bottom: 0px;
+  margin-bottom: 50px; /* Add space under the viewers */
+}
+
+/* Individual Viewers */
+.viewer {
+  height: 900px; /* Full height of the container */
+  width: 800px; /* Fixed width for viewers */
+  pointer-events: all; /* Allow interactions within the viewers */
+  border: none; /* Optional: Add consistent border for both */
+  box-sizing: border-box; /* Ensure border doesn't affect size */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+
+}
+
+#maplibre {
+  align: left;
+  margin-left: 150px;
+  z-index: 5; /* Slightly above for overlap */
+  height: 448px; /* Set to match the container height */
+  clip-path: inset(50px 22px 0px 90px); /* 1 for top, 3rd for the bottom crop, last for left crop */
+  transform: translateY(-68px);
+
+}
+
+/* Ensure the viewer and box are in the same container or positioned accordingly */
+.viewer-container {
+  position: relative; /* Allow absolute positioning within */
+  width: 100%; /* Or use a specific width that fits your layout */
+}
+
+/* Three.js viewer */
+#threejs {
+  align: left;
+  margin-left: 0px;
+  width: 890px;
+  height: 510px; /* Set to match the container height */
+  z-index: 2; /* Slightly above for overlap */
+  margin: 0; /* Ensure there's no margin affecting positioning */
+  background-color: #ffffff;
+  transform: translateX(-230px);
+  clip-path: inset(0px 0 100px 220px); /* 3rd for the bottom crop, last for left crop */
+}
+
+#text-below-mapping {
+  position: absolute; /* Position it below the viewers */
+  transform: translateY(810px);
+  margin-top: 5px;
+  margin-left: -600px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+#text-below-three {
+  position: absolute; /* Position it below the viewers */
+  transform: translateY(810px);
+  margin-top: 5px;
+  margin-left: 860px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+#stars {
+  position: fixed;  /* Fixed positioning to stay in place */
+  top: 0;           /* Start from the top of the page */
+  left: 0;          /* Start from the left of the page */
+  width: 100vw;     /* Take the full width of the viewport */
+  height: 100vh;    /* Take the full height of the viewport */
+  z-index: 100;       /* Ensure it stays behind other content */
+  display: none;    /* Initially hidden */
+  pointer-events: none;  /* Prevent interaction with stars */
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkle 1.5s infinite ease-in-out;  /* Faster animation */
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);  /* Bigger stars */
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+#stars-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background */
+  pointer-events: none; /* Prevent interference with other elements */
+  z-index: -3; /* Below the button but above other content */
+  display: none; /* Hidden by default */
+}
+
+
+/* Toggle Switch Container */
+.toggle-container {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Larger visible switch */
+  height: 26px;
+  z-index: 10000;
+}
+
+.switch input {
+  opacity: 0;
+  position: absolute;
+  width: 50px; /* Match or exceed slider width */
+  height: 26px; /* Match or exceed slider height */
+  top: 0;
+  left: 0;
+  cursor: url('cursor.png');
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(21, 73, 128);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px); /* Adjust based on larger switch size */
+}
+
+/* Label Styles */
+.toggle-label {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
 }

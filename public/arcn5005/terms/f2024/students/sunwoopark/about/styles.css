@@ -13,7 +13,7 @@ html {
 
 body,
 .custom-cursor {
-  cursor: url('cursor.png'), auto;
+  cursor: url('../cursor.png'), auto;
 }
 
 body::before {
@@ -27,7 +27,7 @@ body::before {
   background-size: cover;
   background-position: center;
   opacity: 0.5;
-  z-index: 0;
+  z-index: -1;
 }
 
 .introduction {
@@ -133,7 +133,7 @@ button {
   color: #ffffff;
   font-family: inherit;
   font-weight: 600;
-  cursor: url('cursor.png'), pointer;
+  cursor: url('../cursor.png'), pointer;
   position: relative;
   border: none;
   background: none;
@@ -203,63 +203,6 @@ button:after {
   position: relative;
   margin-right: 80px;
   margin-left: 0px;
-}
-
-#viewers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  height: 950px;
-  padding: 1rem;
-}
-
-.main-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  overflow: hidden;
-  gap: 2rem;
-}
-
-
-.viewer1 {
-  right: 0;
-  border-radius: 1rem;
-  border-color: rgb(97, 0, 45);
-  width: 100%;
-  height: 100%;
-}
-
-.viewer2 {
-  right: 0;
-  border-radius: 1rem;
-  border-color: rgb(97, 0, 45);
-  width: 100%;
-  height: 100%;
-}
-
-
-.legend {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  width: fit-content;
-  height: 1rem;
-}
-
-#map {
-  position: absolute;
-  height: 100%;
-  width: 100%;
 }
 
 /* From Uiverse.io by david-mohseni */
