@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>dennisavgerinos map page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Mapping (Canadian National Parks)</title>
+
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+      <meta charset='UTF-8' />
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+      <title>Final</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+    <style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; }
+        
+        #header {
+            font-family: 'Arial', sans-serif;
+            background: #1c1c1c;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+
+<body>
+
+  <div id="map"></div>
+  <script src="main.js"></script>
+
+</body>
+
 </html>

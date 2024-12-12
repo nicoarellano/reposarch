@@ -24,10 +24,27 @@ export const content: Toc = [
   {
     element: (
       <Video
-        src="https://www.youtube.com/embed/SIZWzM5N6T8?si=kqgrpZZYSGWcNe-m"
-        title="Web based mapping and Assignment 3"
-        caption={'Web based mapping and Assignment 3'}
+        src="https://www.youtube.com/embed/lFfr5UmHCFE?si=d4DH0oJC--MCQtRC"
+        title="Web-based OS mapping and GIS - Fall 2024"
+        caption={'Web-based OS mapping and GIS - Fall 2024'}
       />
+    ),
+  },
+  {
+    element: (
+      <div className="grow">
+        <h3>
+          🗺️ Homework: Watch this video and start creating a map using Maplibre
+          🌎
+        </h3>
+        <Video
+          src="https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709"
+          title="Assignment 3 - Create a Map application - Recording from Fall 2023"
+          caption={
+            'Assignment 3 - Create a Map application - Recording from Fall 2023'
+          }
+        />
+      </div>
     ),
   },
 
@@ -653,119 +670,42 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/coding/devices-diagram.png"
-        alt="Physical input and output hardware"
-        caption={'Physical input and output hardware'}
-      />
-    ),
-    notes:
-      'Now our dialogue with design is in part mediated by computers.\
-    This mediation occurs through multiple devices.\
-    > There are different ways to interact with computers. \
-    > Physical input hardware. translate our body expressions into digital language. \
-        > The mouse or touchscreen. \
-        > The Keyboard that allows us to type words that are then translated into machine code to get executed by the computer, that action is called programming.',
-  },
-  {
-    element: (
-      <Image
-        src="/images/coding/interaction.png"
-        alt="Human computer interaction"
-        caption={'Interfaces'}
-      />
-    ),
-    notes:
-      '> Interfaces are devices or programs that allow users to interact with the code. \
-      > Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. \
-      the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium.\
-     makes the interaction with the computer more intuitive for the designers.',
-  },
-  {
-    element: (
-      <>
-        <h1>GUI</h1>
-        <br />
-        <h1>🖱️ ➡️ 💻</h1>
-        <br />
-        <h1>Graphical user interface</h1>
-      </>
-    ),
-    notes:
-      'Graphical user interfaces (GUIs)—they use icons and symbols, there is no code knowledge required, instead, “the user points, clicks on displays of virtual icons on the computer screen. the most popular interfaces for designers. Most BIM platforms are GUIs, The main way architects have to input their creativity process into the digital medium. makes the interaction with the computer more intuitive for the designers.',
-  },
-
-  {
-    element: (
-      <>
-        <h1>TUI</h1>
-        <br />
-        <h1>⌨️ ➡️ 💻</h1>
-        <br />
-        <h1>Text-based user interface</h1>
-      </>
-    ),
-    notes:
-      '> Text-based user interfaces (TUIs) use characters, text and symbols.',
-  },
-
-  {
-    element: (
-      <Image
-        src="/images/computer-graphics/vsCode.png"
-        alt="Visual Studio Code"
-        href="https://code.visualstudio.com/download"
-        caption={'Visual Studio Code, free IDE from Microsoft.'}
-      />
-    ),
-    notes:
-      'we are going to use Visual Studio Code, which is a free IDE from Microsoft. It’s one of the most widely used in the web development world.',
-  },
-  {
-    element: (
-      <Image
-        src="/images/computer-graphics/extensions.png"
-        alt="Visual Studio Code"
-        href="https://code.visualstudio.com/download"
-        caption={
-          'We are going to download 5 extensions: \
-        1. Live Server\
-        2. Prettier\
-        3. Material Icon \
-        4. Console Ninja\
-        5. Auto Import'
-        }
-      />
-    ),
-  },
-  {
-    element: (
-      <>
-        <h1>What is Node.js?</h1>
-        <br />
-        <Image
-          src="/images/computer-graphics/nodejs.png"
-          alt="Node.js"
-          href="https://en.wikipedia.org/wiki/Nodejs#"
-          caption={'Node.js - Wikipedia'}
-        />
-        <br />
-        <SimpleButton
-          title="Download Node js"
-          href="https://nodejs.org/en/download"
-        />
-      </>
-    ),
-  },
-
-  {
-    element: (
-      <Image
         src="/images/maps/npm-maplibre.gif"
         alt="npm maplibre"
         caption={'Npm example - Installing Maplibre-gl'}
       />
     ),
   },
+
+  {
+    element: (
+      <div className="grow">
+        <h3>
+          🗺️ Homework: Watch this video and start creating a map using Maplibre
+          🌎
+        </h3>
+        <Video
+          src="https://www.youtube.com/embed/SIZWzM5N6T8?si=FjN8uEHo9vLrhSnK&amp;start=2709"
+          title="Assignment 3 - Create a Map application - Recording from Fall 2023"
+          caption={
+            'Assignment 3 - Create a Map application - Recording from Fall 2023'
+          }
+        />
+      </div>
+    ),
+  },
+
+  {
+    element: (
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://library.carleton.ca/find/gis/gis-day"
+        title="GIS Day"
+      ></iframe>
+    ),
+  },
+
   {
     element: (
       <EmojiTitle
@@ -796,7 +736,6 @@ export const content: Toc = [
     notes:
       'JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.',
   },
-
   {
     element: (
       <Image

@@ -1,11 +1,38 @@
-<!DOCTYPE html>
-<html lang='en'>
+<html>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>basilcurrie three page</title>
+    <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
-    ADD YOUR CODE HERE!
+  <body style="background-image: url('Horsehead.jpg')">
+    <div class="maincontent" style="position: absolute; margin: 10px">
+      <div id="title">
+        <div id="threeimage"></div>
+        <div id="words">
+          <h2 style="color: lightgrey">CLICK ANYWHERE</h2>
+          <h6 style="padding: 3px; color: lightgrey">TO JUMP OVER THE CUBE</h6>
+        </div>
+      </div>
+      <audio id="aud" autoplay muted>
+        <source src="valleyofthesun.mp3" type="audio/mp3" />
+      </audio>
+      <hr />
+      <div class="scorebar" id="cubecount"></div>
+      <div class="scorebar" id="youcount"></div>
+    </div>
   </body>
 </html>
+
+<script
+  async
+  src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"
+></script>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+    }
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+<script type="module" src="main.js"></script>

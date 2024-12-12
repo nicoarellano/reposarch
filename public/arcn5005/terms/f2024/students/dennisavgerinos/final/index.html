@@ -1,11 +1,159 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>dennisavgerinos final page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head lang="en">
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Dennis Avgerinos - Final</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="main-container">
+  <div class="final">
+    <img src="../about/avatar.png" alt="Dennis Avgerinos" height="250"/>
+    <p>
+      <a href="https://www.instagram.com/dennis_eh/"><button><img src="../Icons/instagram-icon.png" alt="Instagram Logo" style="width: 50px;"></button></a>
+      <a href="https://ca.linkedin.com/in/dennisavgerinos?trk=people-guest_people_search-card"><button><img src="../Icons/linkedin-icon.png" alt="" style="width: 50px;"></button></a>
+    </p>
+    <div class="title">
+      <div class="titletext"></div>
+    </div>
+    <p>
+      Theory and Practice of Architectural Representation
+      </p>
+      <p>
+        Click on the "About Page" button to view projects individually
+        </p>
+        <div class="arrow bounce"></div>
+    <br />
+    <div class="container-finallinks">
+      <a href="../about/index.html" class="button type--C">
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">About Page</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </a>
+      <a href="https://reposarch.vercel.app/" class="button type--C">
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">Reposarch</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </a>
+      <a href="https://github.com/nicoarellano/reposarch" class="button type--C">
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">GitHub</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </a>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="../Slideshow/Toronto.png" style="width: 100%" />
+          <div class="text">Born & Raised in Toronto</div>
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="../Slideshow/Lens.png" style="width: 100%" />
+          <div class="text">Photography Hobby</div>
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="../Slideshow/Athens.png" style="width: 100%" />
+          <div class="text">Greek Ancestry</div>
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="../Slideshow/Thesis.png" style="width: 100%" />
+          <div class="text">Studying Architecture</div>
+        </div>
+  
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+  
+      <br />
+  
+      <div style="text-align: left">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+  
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+  
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+  
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+  
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName('mySlides');
+          let dots = document.getElementsByClassName('dot');
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+          }
+          slides[slideIndex - 1].style.display = 'block';
+          dots[slideIndex - 1].className += ' active';
+        }
+      </script>
+  
+      <br />
+        </div>
+
+    </div>
+  </div>
+  <div id="viewers">
+    <div width='50vw' height="80vh">
+      <div id="three-container-f2024" ></div>
+    </div>
+    
+    <iframe class="viewer1" src="../map/index.html" frameborder="0"></iframe>
+    <div class="legend"><span class="dot"></span><p>(GIS Mapping) National Parks Across Canada</p></div>
+
+    <iframe class="viewer2" src="../three/index.html" frameborder="0"></iframe>
+    <div class="legend"><p>(Three.js) Blender Scaling Test</p></div>
+  </div>
+  
+</section>
+</body>
+
+<!-- Three js Modules -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+
+<canvas class="three-canvas" id="three-canvas-f2024"></canvas>
+
+  <script type="module" src="main.js"></script>
+  
+
 </html>

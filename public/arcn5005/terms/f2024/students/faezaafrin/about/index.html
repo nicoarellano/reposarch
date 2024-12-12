@@ -4,8 +4,69 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>faezaafrin about page</title>
+    <link rel="stylesheet" href="webstyle.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
+
+<body>
+
+  <section class="background">
+
+    <nav class="header">
+      <div class="webtitle">01 About</div>
+      <div class="pagetitle">About Me</div>
+      <div class="nav-icons">
+        <button class="icon-button" onclick="window.location.href = '../final/index.html';">
+          <span class="material-symbols-outlined">home</span>
+        </button>
+        <button class="icon-button" onclick="
+          var audio = document.getElementById('audioPlayer'); 
+          if (audio.paused) { audio.play(); } else { audio.pause(); }
+        ">
+          <span class="material-symbols-outlined">music_note</span>
+        </button>
+      </div>
+
+      <audio id="audioPlayer" autoplay loop>
+        <source src="track2.mp3" type="audio/mpeg">
+      </audio>
+    </nav>
+
+    <section class="main">
+      <div class="leftside">
+          <img src="./images/avatar2.png" alt="Faeza Afrin" />
+      </div>
+  
+      <div class="rightside">
+        <h1>Faeza Afrin</h1>
+        <div class="aboutme">
+          <ul>
+            <li><img src="./images/school.png"><span>Architectural Studies, University of Toronto</span></li>
+            <li><img src="./images/location.png"><span>Dhaka, BD  →  Ottawa, CA</span></li>
+            <li><img src="./images/interest.png"><span>Certified foodie, bookworm, and extroverted homebody?</span></li>
+          </ul>
+        </div>
+
+        <div class="assignments">
+          <img src="./images/assignments.png">
+        </div>
+
+        <div class="bottom-nav">
+          <ul>
+            <li><a href="../about/index.html"><button><span>01 About</span></button></li>
+            <li><a href="../three/index.html"><button><span>02 Three</span></button></li>          
+            <li><a href="../map/index.html"><button><span>03 Map</span></button></li>
+            <li><a href="../final/index.html"><button><span>04 Final</span></button></li>
+          </ul>
+        </div>
+       
+      </div>
+    </section>
+
+  </section>
+
   <body>
-    ADD YOUR CODE HERE!
-  </body>
+
 </html>

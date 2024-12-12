@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang='en'>
+  <link rel="stylesheet" href="webstyle.css" />
+  <script type="module" src="./main.js"></script>
+  <canvas class="three-canvas" id="three-canvas-f2024"></canvas>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+    <!-- Three js Modules -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>faezaafrin three page</title>
   </head>
+
   <body>
-    ADD YOUR CODE HERE!
+    <nav class="header">
+      <div class="webtitle">02 Three</div>
+      <div class="pagetitle">Master of the Donutverse</div>
+        
+      <div class="nav-icons">
+        <button class="icon-button" onclick="window.location.href = '../final/index.html';">
+          <span class="material-symbols-outlined">home</span>
+        </button>
+        <button class="icon-button" onclick="
+          var audio = document.getElementById('audioPlayer'); 
+          if (audio.paused) { audio.play(); } else { audio.pause(); }
+        ">
+          <span class="material-symbols-outlined">music_note</span>
+        </button>
+      </div>
+      
+      <audio id="audioPlayer" autoplay loop>
+        <source src="Gasoline_TheWeeknd.mp3" type="audio/mpeg">
+      </audio>
+    </nav>
   </body>
 </html>
+
+
+
+
