@@ -1,106 +1,75 @@
 <html>
-  <head lang="en">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tess coman final page</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <section class="main-container">
-      <div class="final">
-        <ul>
-          <li>about things</li>
-        </ul>
-        <br />
-        <div>
-          <!-- <a href=""><button id:"three-button">Reposarch</button></a> -->
-          <!-- <a href="https://github.com/tesscoman/reposarch"><button id:"three-button">GitHub</button></a> -->
-        </div>
-        <img src="../images/tctc2.png" alt="Photo of Tess" height="300" />
-      </div>
-      <div id="viewers">
-        <div width="50vw" height="80vh">
-          <div id="three-container-f2024"></div>
-        </div>
 
-        <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
-      </div>
-    </section>
-  </body>
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tess coman final page</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-  <style>
-    #viewers {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 50%;
-      flex-direction: column;
-      align-items: start;
-      gap: 1rem;
-      height: 100%;
-      padding: 1rem;
-    }
+<body>
 
-    .main-container {
-      width: 95%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      overflow: hidden;
-      gap: 2rem;
-    }
+  <header>
+    <strong>Tess Coman</strong>
 
-    .viewer {
-      right: 0;
-      /* outline: 1px solid black; */
-      border-radius: 1rem;
-      width: 100%;
-      height: 45%;
-      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    }
+    <div>
+    <a href="../about/index.html"><button>ABOUT</button></a>
+    <a href="../three/index.html"><button>3D</button></a>
+    <a href="../map/index.html"><button>MAPPING</button></a>
+  </div>
 
-    .dot {
-      height: 15px;
-      width: 15px;
-      background-color: red;
-      outline: 3px solid yellow;
-      border-radius: 50%;
-      z-index: 99;
-    }
+  </header>
 
-    .legend {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      align-items: center;
-      width: fit-content;
-      height: 1rem;
-    }
+<section class="main-container">
 
-    #map {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
+  <div class="final">
+    <ul>
+      <li>Masters of Architecture student at Carleton University</li>
+      <li>B.Arch Conservation & Sustainability at Carleton University</li>
+    </ul>
 
-  <!-- Three js Modules -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
-    rel="stylesheet"
-  />
+    <br />
+    
+    <img src="../images/tctc2.png" alt="Photo of Tess" height="200" /> 
+    <p class="gallery-intro">
+      <em>*Hover over images*</em>
+      <br />
+      I like to...
+    </p>
 
-  <canvas class="three-canvas" id="three-canvas-f2024"></canvas>
+    <div class="photo-gallery">
 
-  <script type="module" src="./final/main.js"></script>
+      <figure>
+        <img src="../images/img1.jpg" alt="Ottawa photo" />
+        <figcaption>EXPLORE OTTAWA</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/img2.jpg" alt="Hosting photo" />
+        <figcaption>HOST DINNER PARTIES</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/img3.jpg" alt="Outdoors photo" />
+        <figcaption>GO CAMPING</figcaption>
+      </figure>
+
+    </div>
+
+  </div>
+
+  <div class="viewer-container">
+    <iframe class="viewer" src="../map/index.html" frameborder="0"></iframe>
+    <iframe class="viewer" src="../three/index.html" frameborder="0"></iframe>
+  </div>
+  
+</section>
+
+<div>
+<audio controls>
+  <source src="./skylullaby.mp3" type="audio/mpeg">
+</audio> 
+</div>
+
+</body>
+
 </html>
