@@ -2,32 +2,40 @@
 <html lang='en'>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <script type="module" src="../three/main.js"></script>
-  <head>
+  <link href='https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.css' rel='stylesheet' />
+  <script src='https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.js'></script>
+  <script type="module" src="../map/main.js"></script>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Kaleigh - THREE</title>
   </head>
   <body>
-    <html>
-      <header>
-        <ul>
+    <script src="https://unpkg.com/three@0.147.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+    <div class="container">
+      <div class="sidebar">
           <img src="../avatar.jpg" alt="Kaleigh Mackay" height="500" />
-          <p>My Assignments:</p>
+          <h2>My Assignments:</h2>
           <p>
             <a href="../about/index.html"><button class="button-2 button-2">ABOUT</button></a>
             <a href="../three/index.html"><button class="button-2 button-2">THREE</button></a>
+            <br></br>
             <a href="../map/index.html"><button class="button-2 button-2">MAP</button></a>
             <a href="../final/"><button class="button-2 button-2">FINAL</button></a>
-            <link rel="stylesheet" href="script.js"/>
+            <br></br>
+            <a href=""><button class="button-2 button-2">BIM</button></a>
+            <a href=""><button class="button-2 button-2">MY PAGE</button></a>
+            <link rel="stylesheet" href="../map/main.js"/>
           </p>
-        </ul>
-      </header>
-      <head lang="en"> 
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-      </head>
+      </div>
+    </div>
+    <div class="main-content"></div>
+    <div id="map"></div>
+  <script src="../map/main.js"></script>
+  </body>
 </html>
