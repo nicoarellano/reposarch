@@ -6,7 +6,7 @@ const size = {
 };
 
 const aspect = size.width / size.height;
-const camera = new THREE.PerspectiveCamera(110, aspect, 1, 1000);
+const camera = new THREE.PerspectiveCamera(125, aspect, 1, 1000);
 
 //Renderer
 const threeCanvas = document.getElementById("three-canvas-f2024");
@@ -95,7 +95,7 @@ gltfLoader.load(
   }
 );
 
-camera.position.set(3, 1, 15);
+camera.position.set(7, 1, 15);
 scene.position.set(-5, -3, 5);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
