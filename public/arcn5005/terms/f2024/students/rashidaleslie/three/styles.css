@@ -31,8 +31,8 @@ body, html {
     left: 0;
     width: 100%;
     padding: 15px;
-    background-color: white;
-    color: orange; /*  text color */
+    background-color: lightblue;
+    color: black; /*  text color */
     text-align: center;
     display: flex;
      font-family: 'Sniglet', system-ui;
@@ -46,10 +46,10 @@ body, html {
 }
 
 button {
-    background-color: orange;
+    background-color: black;
     background-size: cover;
     background-position: center;
-    color: black;
+    color: white;
     border: none;
     cursor: pointer;
     padding: 15px 32px;
