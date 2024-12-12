@@ -6,19 +6,16 @@
 }
 
 body {
+  background-image: -webkit-linear-gradient(to bottom right, #5e718a, #4c2618);
+  background-image: linear-gradient(to bottom right, #5e718a, #4c2618);
+  cursor: url('../images/star.png'), auto;
   font-family: 'CustomFont', sans-serif;
-}
-
-body {
-  background-image: url(../images/background-tc.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   justify-content: center;
   align-items: center;
   display: flex;
-  color: rgb(180, 103, 147);
+  color: rgb(255, 255, 255);
 }
 
 header {
@@ -26,7 +23,7 @@ header {
   text-align: center;
   top: 0;
   width: 100%;
-  background-color: #b1c4cd;
+  background-color: #5e718a;
   z-index: 1000;
   padding-left: 30px;
   color:rgb(22, 68, 101)
@@ -44,6 +41,11 @@ main {
     margin: 0 auto; 
     text-align: left; 
   
+}
+
+p {
+  margin: 0; /* Removes all margin */
+  margin-bottom: 5px; /* Optional: Add a small space below each paragraph */
 }
 
 .container {
@@ -70,7 +72,7 @@ button {
   height: 2.6em;
   line-height: 2.5em;
   overflow: hidden;
-  cursor: pointer;
+  cursor: url('../images/star.png'), auto;
   margin: 20px;
   font-size: 17px;
   z-index: 1;
@@ -109,18 +111,18 @@ button:before {
 .photo-gallery img {
   width: 180px;
   height: 180px;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .photo-gallery figcaption {
   display: none; 
   font-size: 14px;
+  font-weight: bold;
   color: #ffffff;
   position: absolute;
-  bottom: 0; 
+  top: 5px; 
   left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  right: 0; 
 }
 
 .photo-gallery figure:hover figcaption {
