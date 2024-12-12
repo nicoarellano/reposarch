@@ -1,0 +1,140 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Green Gradient Background */
+.main-container {
+  background: linear-gradient(-45deg, #e6ffe6, #ffffff, #9eafb0, #9ca8a5);
+  background-size: 400% 400%;
+  animation: gradientBackground 5s ease infinite;
+  display: flex;
+  flex-direction: row; /* Keeps content in horizontal layout */
+  justify-content: space-between; /* Distributes content evenly */
+  align-items: stretch;
+  height: 100%;
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Canvas */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Ensures the canvas doesn't block interactions */
+}
+
+/* Avatar */
+.avatar {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Content Section */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.link {
+  font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.8rem 1.5rem;
+  border-radius: 15px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.link:hover {
+  background: #333;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Pineapple Button */
+.pineapple-button {
+  background: #ffe066;
+  font-weight: bold;
+}
+
+.pineapple-button:hover {
+  background: #ffcc33;
+}
+
+/* Map Section */
+.map-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  padding: 20px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.map-iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 90%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
