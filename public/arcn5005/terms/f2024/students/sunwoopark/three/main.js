@@ -115,7 +115,7 @@ scene.background = new THREE.Color(0xCFE2F3); // Replace 0x000000 with your desi
 const loader = new THREE.GLTFLoader();
 let mesh;
 loader.load(
-  "./Park_Sun-Woo.glb",
+  "Park_Sun-Woo.glb",
   function (gltf) {
     gltf.scene.scale.x = 3;
     gltf.scene.scale.y = 3;
