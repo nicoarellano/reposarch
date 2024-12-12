@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Rebecca's About Page</title>
+    <link rel="icon" type="image/x-icon" href="Cat_Icon.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <script src="main.js"></script>
+
+    <header>
+      <h1 id="line-1 anim-typewriter">REBECCA'S FINAL ASSIGNMENT</h1>
+
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="../about/index.html">Assignment 1</a>
+        <a href="../three/index.html">Assignment 2</a>
+        <a href="../map/index.html">Assignment 3</a>
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <nav>
+        <h1>Rebecca Sondermeyer</h1>
+
+        <br />
+        <div class="container">
+          <div class="image">
+            <img src="avatar.jpg" alt="Rebecca Sondermeyer" height="200" />
+          </div>
+
+          <div class="description">
+            <ul>
+              <li>From Toronto Ontario</li>
+              <li>Background in Conservation and Sustainability.</li>
+              <li>Favourite color is orange.</li>
+              <li>Enjoy playing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="buttonbox">
+          <a href="https://github.com/rebeccasondermeyer/reposarch-rs"
+            ><button>Reposarch</button></a
+          >
+          <a onclick="window.open('Rebecca_Sondermeyer_Portfolio.pdf', '_blank')"><button>Portfolio</button></a>
+                 </div>
+          <!-- Slideshow Content -->
+        <br />
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./images/Fall.jpg" style="width: 100%" />
+            <div class="text">My favourite season is Fall.</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./images/Doritos.jpg" style="width: 100%" />
+            <div class="text">My favourite snack is Doritos.</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./images/Orange_Carnations.jpg" style="width: 100%" />
+            <div class="text">My favourite flower orange carnations.</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/English_Breakfast.jpg" style="width: 100%" />
+            <div class="text">My favorite drink is English Breakfast tea with milk.</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br />
+
+        <div style="text-align: left">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </nav>
+        <!-- Referencing Map and Three from other folders to show up on final page -->
+      <section>
+        <article>
+          <div id="viewers">
+            <iframe
+              class="viewer"
+              src="../map/index.html"
+            ></iframe>
+            <iframe
+              class="viewer"
+              src="../three/index.html"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </article>
+      </section>
+
+
+        <!-- Three js Modules -->
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+        
+      </article>
+    </section>
+  </body>
+
+  <footer>
+    <p>Thank you for reviewing my page!</p>
+  </footer>
+
+  <br />
+</html>

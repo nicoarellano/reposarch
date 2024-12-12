@@ -249,6 +249,7 @@ button:after {
   font-family: 'Poppins', sans-serif;
   justify-content: center;
   transform: translateY(-2px);
+  z-index: 10000;
 }
 
 .wrapper .icon {
@@ -339,6 +340,8 @@ button:after {
   pointer-events: all; /* Allow interactions within the viewers */
   border: none; /* Optional: Add consistent border for both */
   box-sizing: border-box; /* Ensure border doesn't affect size */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+
 }
 
 #maplibre {
