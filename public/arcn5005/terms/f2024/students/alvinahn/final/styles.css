@@ -1,0 +1,261 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #09163d;
+}
+
+/* Title Section */
+.title h1 {
+    font-size: 3em; 
+    color: #FFD700;
+    border-bottom: 3px solid #c92a1d;
+    padding-bottom: 5px; 
+    margin-bottom: 15px; 
+}
+
+.title h2 {
+    font-size: 2.5em; 
+    color: #FFD700; 
+    padding-bottom: 5px;
+    margin-bottom: 15px; 
+}
+
+.title p {
+    font-size: 1.2em; 
+    color: #FFFFFF; 
+}
+
+/* Image Section */
+.image img {
+    border-radius: 50%; 
+    border: 5px solid #c92a1d;
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    outline: none;
+}
+
+/* Layout - Grid Container */
+.container {
+    width: 80%;
+    display: grid;
+    grid-template-areas: 
+        "image title"
+        "image buttons"
+        "viewer1 buttons"
+        "viewer1 buttons"
+        "map map"
+        "viewer2 gallery"; 
+    grid-gap: 10px;
+    align-items: start; 
+}
+
+/* Image */
+.image {
+    grid-area: image;
+    border: none;
+    height: 550px;
+}
+
+/* Title */
+.title {
+    grid-area: title;
+}
+
+/* Button Styles (Global) */
+button {
+    background-color: #f4c844;
+    color: #c92a1d;
+    border-radius: 10em;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+}
+
+button:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 #c92a1d;
+}
+
+button:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/* Viewers */
+.viewer1 {
+    grid-area: viewer1;
+    height: 150px;
+    border: none;
+}
+
+.viewer2 {
+    grid-area: viewer2;
+    border: none; 
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.viewer2 iframe {
+    flex-grow: 1; 
+    height: 100%; 
+    border: none; 
+}
+
+/* Map */
+.item.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.item.map {
+    grid-area: map;
+    height: 700px;
+    border: 1px solid black;
+}
+
+/* Image Gallery */
+.image-gallery {
+    grid-area: gallery;
+    position: relative;
+    width: 100%; 
+}
+
+/* Image Slideshow */
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #c92a1d;
+}
+
+.numbertext {
+    color: #FFD700;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.mySlides {
+    display: none;
+    animation: fade 1.5s ease-in-out; 
+}
+
+.caption-container {
+    text-align: center;
+    font-weight: bold;
+    background-color: #FFD700;
+    padding: 2px 18px;
+    color: #c92a1d;
+}
+
+/* Card Container */
+.card-container {
+    width: 330px;
+    background-color: #FFD700;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #c92a1d;
+    color: #FFD700;
+    padding: 8px;
+    font-size: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Mute and Unmute Buttons */
+.mute-button, .unmute-button {
+    background-color: #c92a1d;
+    color: #FFD700;
+    padding: 12px;  /* Square shape */
+    width: 150px;    /* Set width */
+    height: 50px;   /* Set height */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;  /* Optional: Slightly rounded corners */
+}
+
+
+/* Layout Helpers */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
