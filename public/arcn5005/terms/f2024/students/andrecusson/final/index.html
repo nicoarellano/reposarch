@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>andrecusson final page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>André's Final Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   </head>
+
   <body>
-    ADD YOUR CODE HERE!
+    
+    <header>
+
+      <div class="header">
+
+        <h2><span><span>And</span></span><span><span>re</span></span><span><span>&nbsp;Cus</span></span><span><span>son</span></span></h2>
+        
+        <div class="footprint-animation">
+          <div class="upper">
+            <img src="./Images/top.png" />
+            <img src="./Images/top.png" />
+            <img src="./Images/top.png" />
+            <img src="./Images/top.png" />
+            <img src="./Images/top.png" />
+            <img src="./Images/top.png" />
+            <img src="./Images/top.png" />
+            <img src="./Images/top.png" />
+          </div>
+
+          <div class="lower">
+            <img src="./Images/bottom.png" />
+            <img src="./Images/bottom.png" />
+            <img src="./Images/bottom.png" />
+            <img src="./Images/bottom.png" />
+            <img src="./Images/bottom.png" />
+            <img src="./Images/bottom.png" />
+            <img src="./Images/bottom.png" />
+            <img src="./Images/bottom.png" />
+          </div>
+        </div>
+
+        <h6><small>Click Anywhere!</small></h6>
+        <h5>• Part-Time Nomad • Part-Time Wishing I Was A Full-Time Nomad •</h5>
+      </div>
+
+      </header>
+
+      <div class="first-row">
+        <div class="media-container">
+          <div class="left-container">
+            <div class="slideshow-container">
+            <div id="profile-pic-container">
+              <img class="profile-pic" src="./Images/Myrtle.jpg" alt="Picture of Andre" />
+              <img class="profile-pic" src="../Images/olga.JPG" alt="The Olgas, NT"/>
+              <img class="profile-pic" src="../Images/eagle.jpg" alt="Eagle Rays"/>
+              <img class="profile-pic" src="../Images/wallaby.JPG" alt="Rock Wallaby, QSLD"/>
+
+              <div class="hover-text">
+                Fun Facts: Travel Edition
+                <ul>
+                  <li>I lived off of crackers and 2kg of hummus each week, for 3 months</li>
+                  <li>I camped in the Outback without a tent for a week</li>
+                  <li>I am a collector of foreign liquor</li>
+                </ul>
+              </div>
+
+            </div>
+            </div>
+            </div>
+
+            <div class="map-container">
+            <iframe id="maplibre" class="viewer" src="../map/index.html" frameborder="0"></iframe>
+            <iframe id="threejs" class=viewer src="../three/index.html" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+       <a href="../about/index.html"><button class="button-1">About Page</button></a>
+       <a href="../three/index.html"><button class="button-2">Three.js</button></a>
+        <a href="../map/index.html"><button class="button-3">Map Libre</button></a>
+        <button id="toggleButton" class="button-4">The Fellowship</button>
+      </div>
+
+
+    <footer>
+      <div class="card">
+        <div id="Socials">Keep Up to Date</div>
+        <a class="socialContainer containerOne" href="https://www.instagram.com/co.llectivethoughts/">
+          <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-.276.145-.373.319-.64.599-.92.28-.28.546-.453.92-.599.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.44-.044zm.5 3.88c.754 0 1.528.22 2.088.61s.888.957.888 1.592-.336 1.221-.888 1.592c-.56.39-1.334.61-2.088.61-.754 0-1.528-.22-2.088-.61-.56-.391-.888-.957-.888-1.592s.336-1.221.888-1.592c.56-.39 1.334-.61 2.088-.61z"></path>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
   </body>
+  
 </html>
