@@ -165,12 +165,12 @@
 }
 
 /* Position each button individually */
-.slide-btn-1 { left: 35%; }
-.slide-btn-2 { left: 41%; }
-.slide-btn-3 { left: 47%; }
-.slide-btn-4 { left: 53%; }
-.slide-btn-5 { left: 59%; }
-.slide-btn-6 { left: 65%; }
+.slide-btn-1 { left: 29%; }
+.slide-btn-2 { left: 37%; }
+.slide-btn-3 { left: 45%; }
+.slide-btn-4 { left: 55%; }
+.slide-btn-5 { left: 63%; }
+.slide-btn-6 { left: 71%; }
 
 /* Stop animation when focused on buttons */
 .slide-btn-1:focus ~ .slideshow-wrapper { animation: none; left: 0; }

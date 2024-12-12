@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap');
+
+body {
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    flex-direction: column; 
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+        url('./images/wood.JPG');
+}
+
+.domine-regular {
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    background-color: #868686;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Domine", serif;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    
+}
+
+.map-container,
+#threejs-container {
+    width: 75%;        
+    height: 100%;     
+    margin: 20px 0;  
+
+}
+
+#maplibre, 
+#threejs {
+    width: 100%;
+    height:300px;
+    border-radius: 15px;
+    overflow: hidden; 
+    align-items: center;
+}
+
+.viewer {
+    width: 100%;
+    height: 100%;
+}
+
+#profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+#avatar-container {
+    flex: 1;
+    text-align: center;
+}
+
+#avatar {
+    width: 150px;
+    height: auto;
+    border-radius: 15px; 
+    display:block;
+    margin: 0
+}
+
+.card {
+    width: 180px;
+    height: 250px;
+    border-radius: 15px;
+    background: rgba(211, 211, 211, 0.199);
+    position: absolute;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+  }
+  
+  #c1 {
+    background-image: url('./images/dog.JPG');
+    background-size: cover;
+    background-position: center;
+  }
+  #c2 {
+    background-image: url('./images/ball.JPG');
+    background-size: cover;
+    background-position: center;
+  }
+  #c3 {
+    background-image: url('./images/drum.JPG');
+    background-size: cover;
+    background-position: center;
+  }
+  #c4 {
+    background-image: url('./images/bike.JPG');
+    background-size: cover;
+    background-position: center; 
+  }
+  #c5 {
+    background-image: url('./images/sprott.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  #c6 {
+    background-image: url('./images/pres.JPG');
+    background-size: cover;
+    background-position: center;
+  }
+  #c7 {
+    background-image: url('./images/avatar.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .main:hover #c1 {
+    transform: translateX(-100px) rotate(-10deg);
+  }
+  .main:hover #c2 {
+    transform: translateX(-50px) rotate(-10deg);
+  }
+  .main:hover #c3 {
+    transform: translateX(0) rotate(-10deg);
+  }
+  .main:hover #c4 {
+    transform: translateX(50px) rotate(-10deg);
+  }
+  .main:hover #c5 {
+    transform: translateX(100px) rotate(-10deg);
+  }
+  .main:hover #c6 {
+    transform: translateX(150px) rotate(-10deg);
+  }
+  .main:hover #c7 {
+    transform: translateX(200px) rotate(-10deg);
+  }
+
+  #c1:hover {
+    transform: translateX(-150px) rotate(0deg) !important;
+    z-index: 10;
+  }
+  #c2:hover {
+    transform: translateX(-100px) rotate(0deg) !important;
+    z-index: 10;
+  }
+  #c3:hover {
+    transform: translateX(-50px) rotate(0deg) !important;
+    z-index: 10;
+  }
+  #c4:hover {
+    transform: translateX(50px) rotate(0deg) !important;
+    z-index: 10;
+  }
+  #c5:hover {
+    transform: translateX(100px) rotate(0deg) !important;
+    z-index: 10;
+  }
+  #c6:hover {
+    transform: translateX(150px) rotate(0deg) !important;
+    z-index: 10;
+  }
+  #c7:hover {
+    transform: translateX(200px) rotate(0deg) !important;
+    z-index: 10;
+  }
+  
+  .main {
+    display: grid;
+    height: 300px;
+    place-items: center;
+  }
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}

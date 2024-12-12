@@ -1,11 +1,91 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>rashidaleslie final page</title>
+    <meta charset="UTF-8" />
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rashida Leslie's Portfolio</title>
+    <link rel="stylesheet" href="../webstyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2d843ace68.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    ADD YOUR CODE HERE!
+    <audio id="background-music" src="PeanutsTheme.mp3" autoplay loop></audio>
+
+    <header>
+      <h1>RASHIDA LESLIE</h1>
+      <button id="music-toggle" class="button" onclick="toggleMusic()">
+        <i class="fa-solid fa-music"></i>
+      </button>
+    </header>
+
+    <div class="container">
+      <div class="card snoopy">
+        <img src="./IMAGES/Tents.png" alt="Image 0" class="slide" />
+        <img src="./IMAGES/ARC200.png" alt="Image 1" class="slide" />
+        <img src="./IMAGES/Library.png" alt="Image 2" class="slide" />
+        <img src="./IMAGES/Map Contour.png" alt="Image 3" class="slide" />
+        <img src="./IMAGES/Map River.png" alt="Image 4" class="slide" />
+        <img src="./IMAGES/Massing.png" alt="Image 5" class="slide" />
+        <img src="./IMAGES/Model.png" alt="Image 6" class="slide" />
+        <img src="./IMAGES/Site Hintonburg.png" alt="Image 7" class="slide" />
+        <img src="./IMAGES/Site Park.png" alt="Image 8" class="slide" />
+        <img src="./IMAGES/Site Waterloo.png" alt="Image 9" class="slide" />
+        <img src="./IMAGES/Somalia.png" alt="Image 10" class="slide" />
+
+      </div>
+      
+      <div class="card youngme">
+        <img src="/about/RL.jpg" alt="Photo of Me" />
+        <h3>Rashida Leslie is an M.arch 1 Student at Carleton University</h3>
+      </div>
+      <div class="card info">
+        <h3>PROGRAM PROFICIENCIES</h3>
+        <ul>
+          <li>REVIT</li>
+          <li>RHINO</li>
+          <li>ILLUSTRATOR</li>
+          <li>QGIS</li>
+        </ul>
+      </div>
+
+      <button class="card-button A1">ASSIGNMENT 1</button>
+      <button class="card-button new-services">ASSIGNMENT 2</button>
+      <button class="card-button company-culture">ASSIGNMENT 3</button>
+      <a href="https://rick.nerial.uk/video.mp4" target="_blank">
+        <button class="card-button new-button" onclick="stopMusic()">
+          SURPRISE ME
+        </button>
+      </a>
+    </div>
+
+    <div class="new-section">
+      <h2>There's More to Come</h2>
+      <p>Don't be so impatient!</p>
+      <img src="/about/dancesnoopy.gif" />
+      <button class="unknown-button">Wouldn't You Like to Know</button>
+    </div>
+
+    <div class="new-section">
+      <div class="item map"><iframe class="viewer" src="../map/index.html" frameborder="0"></iframe></div>   </div>
+
+    <footer class="footer">
+      <h2>Follow Me</h2>
+      <a href="https://www.instagram.com/rashida.arch/" target="_blank">
+        <i
+          class="fab fa-instagram"
+          style="font-size: 24px; color: black; margin-left: 10px"
+        ></i>
+      </a>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>
