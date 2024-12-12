@@ -162,6 +162,14 @@ li {
   text-decoration: underline;
 }
 
+#a7{
+	border:0px;
+	background-color:#fff0;
+	color:rgb(219, 58, 58);
+	text-decoration:underline;
+	font-size:large;
+}
+
 #header {
   font-family: 'Arial', sans-serif;
   background: rgba(255, 255, 255, 0.7);

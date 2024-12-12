@@ -5,6 +5,7 @@
 }
 
 canvas {
+    margin-bottom: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -18,53 +19,66 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-
+  
 .header {
-    display: flex; 
-    align-items: center; 
-    padding: 20px 20px;
-    background-color: #1c1d1d;
+    background: url('./Photos/background.jpg');   
     color: white;
-}
-
-.pagetitle {
-    font-size: 40px;
-    font-weight: bold;
-    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px;  
     width: 100%;
+    box-sizing: border-box;
+    position: fixed;  
+    top: 0;  
+    left: 0; 
+    z-index: 1000; 
 }
-
-.maptitle {
-    position: absolute;    
-    top: 20px;             
-    left: 50%;             
-    transform: translateX(-50%); 
-    width: fit-content;
+  
+.webtitle {
+    font-size: 18px;  
+    font-weight: bold;  
+    font-family: Arial, sans-serif;  
+    padding: 10px;
+}
+  
+.pagetitle {
     text-align: center;
-    font-size: 25px;    
-    font-weight: bold;   
+    font-stretch: extra-expanded;  
+    font-size: 25px;  
+    font-weight: bold;  
     font-family: Arial, sans-serif; 
     padding: 10px;
-    border: 3px solid rgb(252,76,220);
     border-radius: 10px;
-    background-color: none; /* Optional: adds a background to make the text stand out */
-}
+    background-color: none;  
+}  
 
-.musicButton button {
-    background-color: white;
-    color: #1c1d1d;
-    border: 1px solid #1c1d1d;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
+.nav-icons {
+    display: flex; 
+    gap: 20px; 
+    align-items: center; 
+  }
+  
+.icon-button {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.musicButton button:hover {
-    background-color: rgb(252,76,220);
+  }
+  
+  .icon-button .material-symbols-outlined {
+    font-size: 25px;
     color: white;
-}
+  }
+  
+  .icon-button:hover {
+    transform: scale(1.3); 
+    transition: 0.3s;
+  }
 
 .main-js {
     min-height: -100rem;
@@ -74,11 +88,8 @@ body {
 }
 
 #map {
-    border-style: solid;
-    border-color: rgb(252,76,220);
-    border-width: 5px;
-    width: 100%;
-    height: 88.3vh
+    width: 100vw;
+    height: 100vh; 
 }
 
 .marker {
@@ -144,7 +155,11 @@ body {
 }
 
 /*Image in Popup*/
+<<<<<<< HEAD
+.custom-popup img {
+=======
 .custom-popup img {;
+>>>>>>> 2fd54fe0dc7be0a8608cf78c28aae8953dbce130
     width: 200px;
     height: 200px;
     align-content: bottom;

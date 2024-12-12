@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>danielkendall final page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content-wrapper">
+        
+        <header>
+            <h2>Daniel Kendall</h2>
+          <div class="header-buttons">
+              <a href="../about/index.html" class="button-link">
+                  <button id="btn1">Assignment 1</button>
+              </a>
+              <a href="../three/index.html" class="button-link">
+                  <button id="btn2">Assignment 2</button>
+              </a>
+              <a href="../map/index.html" class="button-link">
+                  <button id="btn3">Assignment 3</button>
+              </a>
+          </div>
+      </header>
+
+      <h1>Photo Gallery</h1>
+
+        <section id="profile-section">
+            <div id="avatar-container">
+          <div class="main">
+            <div class="card" id="c1"></div>
+            <div class="card" id="c2"></div>
+            <div class="card" id="c3"></div>
+            <div class="card" id="c4"></div>
+            <div class="card" id="c5"></div>
+            <div class="card" id="c6"></div>
+            <div class="card" id="c7"></div>
+          </div>
+            </div>
+          </section>
+
+        <section class="map-container">
+            <iframe id="maplibre" class="viewer" src="../map/index.html" frameborder="0"></iframe>
+        </section>
+
+        <section id="threejs-container">
+            <iframe id="threejs" class="viewer" src="../three/index.html" frameborder="0"></iframe>
+        </section>
+    </div> 
+    <script src="main.js"></script>
+</body>
 </html>
