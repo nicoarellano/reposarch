@@ -80,6 +80,12 @@ li {
     margin-left: 400px;
 }
 
+.viewer {
+    width: calc(100vw - 450px);
+    height: 65vh;
+    overflow: hidden;
+  }
+
 .sidebar {
     position: fixed;
     left: 0;
@@ -93,7 +99,7 @@ li {
     flex-direction: column;
     z-index: 1000;
     overflow-y: auto;
-}
+  }
 
 img {
     max-width: 100%;
