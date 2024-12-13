@@ -3,9 +3,113 @@
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>hassanhannawi final page</title>
+    <title>final page</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    ADD YOUR CODE HERE!
-  </body>
+    <header>
+      <div id="title">
+        <h1>Hassan Al Taher Hannawi</h1>
+      </div>
+    </header>
+
+    <section> 
+      <nav>
+        <h1>M.Arch - Carleton University</h1>
+
+        <br />
+      <div class="card"> 
+        <div class="myimage">
+          <img src="../avatar.jpg" class="small-avatar"/>
+        </div> 
+
+        <div id="aboutme"> 
+
+          <ul>
+          <li>Football Fanatic</li>
+          <li>Mechanic Lover</li>
+          <li>Born in Ottawa - Heritage from Lebanon</li>
+          <li>Birthday - October 20th 1998</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div>
+        <h3>Assignments</h3>
+      </div>
+
+  <div class="buttonsection"> 
+        <a href="../about/index.html">
+          <button class="boton-elegante">ABOUT<span></span></button>
+        <a href="../three/index.html">
+          <button class="boton-elegante">3D<span></span></button>
+        <a href="../map/index.html">
+          <button class="boton-elegante">MAP<span></span></button>
+  </nav>          
+</div>
+
+  <article >
+    <!-- MAP -->
+        <div id="viewers">
+          
+          <iframe
+            class="viewer"
+            src="../map/index.html"
+            frameborder="0"
+            ></iframe>
+
+        <script type="module" src="../map/main.js"></script>
+
+        <script>
+          document.querySelector('.viewer').addEventListener('load', function () {
+            const iframe = this;
+        
+            try {
+              // Access the iframe's document
+              const iframeDoc = iframe.contentWindow.document;
+        
+              // Select all audio elements within the iframe and mute them
+              const audioElements = iframeDoc.querySelectorAll('audio');
+              audioElements.forEach(audio => {
+                audio.muted = true; // Mute the audio
+              });
+            } catch (e) {
+              console.error('Unable to access iframe content. This may be due to CORS restrictions.', e);
+            }
+          });
+        </script>
+  </article>
+
+  <article> 
+      <!-- ThreeJS -->
+  <iframe
+   class="threedcanvas"
+   src="../three/index.html"
+   frameborder="0"
+ ></iframe>
+ <script>
+  // Mute audio in the Three.js iframe
+  document.querySelector('.threedcanvas').addEventListener('load', function () {
+    const iframe = this;
+
+    try {
+      // Access the iframe's document
+      const iframeDoc = iframe.contentWindow.document;
+
+      // Select all audio elements within the iframe and mute them
+      const audioElements = iframeDoc.querySelectorAll('audio');
+      audioElements.forEach(audio => {
+        audio.muted = true; // Mute the audio
+      });
+    } catch (e) {
+      console.error('Unable to access iframe content. This may be due to CORS restrictions.', e);
+    }
+  });
+</script>
+  </article>
+
+
+    </section>
+  </body>
 </html>

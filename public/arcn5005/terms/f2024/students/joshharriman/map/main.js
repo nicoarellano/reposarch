@@ -87,9 +87,7 @@ const addLayers = () => {
     source: "places",
     paint: {
       "circle-color": "green",
-      "circle-radius": 4,
-      "circle-stroke-width": 1,
-      "circle-stroke-color": "blue",
+      "circle-radius": 8,
     },
   });
 

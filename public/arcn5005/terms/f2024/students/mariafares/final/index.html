@@ -76,11 +76,14 @@
     </head>
     <body>
     <!-- Rectangle displaying another page -->
+
+        <!-- ⚠️⚠️ Nico: I made a little adjustment here. I changed the src attribute of the iframe element to point to the canvas.html file in the three folder and the map.html in the map folder, so you don't get duplicated menus. ⚠️⚠️ -->
     <div class="rectangle">
-        <iframe src="/public/arcn5005/terms/f2024/students/mariafares/three/index.html" width="100%" height="100%" style="border: none;"></iframe>
+        <iframe src="../three/canvas.html" width="100%" height="100%" style="border: none; overflow: hidden;"></iframe>
+        <!-- <canvas class="three-canvas" id="three-canvas-f2024"></canvas> -->
     </div>
     <div class="button">
-      <a href="/public/arcn5005/terms/f2024/students/mariafares/three/index.html">
+      <a href="../three/index.html">
       <button>
         DIGITAL SELF
       </button>
@@ -91,10 +94,10 @@
     <body>
       <!-- Rectangle displaying another page -->
       <div class="rectangle">
-          <iframe src="/public/arcn5005/terms/f2024/students/mariafares/map/index.html" width="100%" height="100%" style="border: none;"></iframe>
+          <iframe src="../map/map.html" width="100%" height="100%" style="border: none;"></iframe>
       </div>
       <div class="button"> 
-        <a href="/public/arcn5005/terms/f2024/students/mariafares/map/index.html">
+        <a href="../map/index.html">
       <button>
         BIO MAPPING
       </button>

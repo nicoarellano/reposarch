@@ -1,14 +1,21 @@
-// Donut Cursor
-const donutButton = document.getElementById("donutButton");
+// Donut Cursor //
+const donutButton = document.getElementById('donutButton');
+let isDonutCursor = false; // Track cursor state
 
-donutButton.addEventListener("click", () => {
-  if (document.body.classList.contains("donut-cursor")) {
-    document.body.classList.remove("donut-cursor");
-  } else {
-    document.body.classList.add("donut-cursor");
-  }
+// 'Click' Event Listener
+donutButton.addEventListener('click', function () {
+    const imageUrl = 'https://img.icons8.com/?size=100&id=Lp28ZUdhGtAX&format=png&color=000000';
+
+    if (isDonutCursor) {
+        // Reset to default pointer
+        document.body.style.cursor = 'default';
+        isDonutCursor = false;
+    } else {
+        // Change to donut cursor
+        document.body.style.cursor = `url(${imageUrl}), auto`;
+        isDonutCursor = true;
+    }
 });
-
 
 const map = new maplibregl.Map({
     container: 'map-canvas',
