@@ -1,4 +1,5 @@
 body {
+
     background-size:cover; 
     background-position:center;
 
@@ -66,7 +67,6 @@ body {
 
 
 
-
   .button-container {
     display: flex;
     flex-direction: column;
@@ -114,9 +114,121 @@ body {
     z-index: -1;
   }
 
- .builder-image {
-    max-width: 50%
- }
+
+
+
+
+
+
+/* Image Gallery */
+.image-gallery {
+  grid-area: gallery;
+  position: relative;
+  width: 100%; 
+}
+
+/* Image Slideshow */
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #c92a1d;
+}
+
+.numbertext {
+  color: #FFD700;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.mySlides {
+  display: none;
+  animation: fade .05s ease-in-out; 
+}
+
+.photo-container {
+  float: right;
+  width: 100%;
+  margin-top: 2em;
+
+}
+
+/* Viewers */
+.viewer1 {
+  grid-area: viewer1;
+
+  height: 150px;
+  border: none;
+}
+
+.viewer2 {
+  float: left;
+  border: none; 
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 500px; 
+  height: 500px; 
+}
+
+.viewer2 iframe {
+  flex-grow: 1; 
+  height: 100%; 
+  border: none; 
+}
+
+/* Map */
+.item.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.item.map {
+  grid-area: map;
+  height: 700px;
+  border: 1px solid black;
+}
+
+
+
+
 
 
 

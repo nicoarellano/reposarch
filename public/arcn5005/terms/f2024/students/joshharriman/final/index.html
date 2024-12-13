@@ -55,69 +55,68 @@
         </div>
 
 
-
-
-
-
         <div class="content-wrapper">
         <div class="profile-picture-container">
             <img src="nunavut.jpg" alt="Profile Picture" class="profile-picture">
         </div>
 
         
+        
+          <!-- Image Gallery -->
         <div class="photo-container">
-            <img src="cellardoorvineyard.jpg" alt="Photo" class="rectangular-photo">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="nunavut.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="labri.jpg" style="width:50%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="cellardoorvineyard.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="hempcrete.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="deck.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="biofiber.jpg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+           
+            </div>
+       
+            <script src="main3.js"></script>
+        </div>
+
+        <div class="viewer2">
+            <iframe class="viewer2" src="../three/index.html" frameborder="0"></iframe>
         </div>
 
 
 
-
-
-
         <div class="button-container">
-
-
-
-
-
             <button class="button type1" onclick="window.location.href='';">About Me</button>
             <button class="button type1"> Three </button>
             <button class="button type1">   Map   </button>
             </button> 
-    
-  
-  
-    </div>
+        </div>
 
-    <div class="container">
-      <div class="three-container" id="three-container"></div>
-    </div>
+        <!-- Map and 3D Space -->
+        <div class="item map">
+            <iframe class="viewer1" src="../map/index.html" frameborder="0"></iframe>
+        </div>
 
-    <div class="text-box4">
-        <header>
-       <span>🟢 = Natural Builders in Canada (hover to see description)</span>
-       </header>
-   </div>
-
-    <div id="map"></div>
-
-    <div id="map-picture">
-        <img src=".jpg" alt="Map Picture" style="width: 100%;">
-      </div>
-    
-      <div class="content-wrapper">
-
-
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-  <script type="module" src="main.js"></script>
-
-  <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
-  <script src="main.js"></script>
 
 
 </html>
