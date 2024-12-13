@@ -28,7 +28,7 @@ const places = {
             'type': 'Feature',
             'properties': {
                 'icon': 'Science',
-                'description': "<h2>Canada Science and Technology Museum</h2> <p>Established: 1967</p> <p>Location: St. Laurent</p><p>Note: Canada’s National Science Museum displays the technological and scientific history of Canada.</p><img src = 'science-tech1.jpg'width=200px>"
+                'description': '<h2>Canada Science and Technology Museum</h2> <p>Established: 1967</p> <p>Location: St. Laurent</p><p>Note: Canada’s National Science Museum displays the technological and scientific history of Canada.</p><img src = "science-tech1.jpg"width=200px>'
             },
             'geometry': {
                 'type': 'Point',
