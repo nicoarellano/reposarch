@@ -7,7 +7,7 @@ html {
 }
 
 body, .custom-cursor {
-  cursor: url(./cursor.png), auto;
+  cursor: url(../cursor.png), auto;
 }
 
 .assignment2 {
@@ -34,7 +34,7 @@ button {
     color: rgb(21, 73, 128);
     font-family: inherit;
     font-weight: 600;
-    cursor: url(./cursor.png), pointer;
+    cursor: url(../cursor.png), auto;
     position: relative;
     border: none;
     background: none;

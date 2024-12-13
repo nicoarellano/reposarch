@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shaganamuttiah final page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://use.typekit.net/jub7ukz.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shagana Home Final</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="main-container">
+    <!-- Image on the left -->
+    <img src="../shagana.jpeg" alt="Shagana Muttiah" />
+  
+    <!-- Content container on the right -->
+    <div class="content-container">
+      <div class="title">
+        <h1>Home Page</h1>
+      </div>
+  
+      <div class="final2">
+        <h4>
+          Graduate student from the University of Waterloo. Bachelor in Environmental Studies (BES) in Honours Planning,
+          and a Urban Design Specialization, and a Minor in Psychology.<br><br>
+          Currently studying in the Masters of Architecture program at Carleton University.
+          
+        </h4>
+      </div>
+  
+      <h4>Hobbies:</h4>
+      <ul>
+        <li>Figure Skating</li>
+        <li>Painting</li>
+        <li>Drawing</li>
+        <li>Eating Good Food!</li>
+      </ul>
+    
+      <h3>Click the party button!</h3>
+    </div>
+  </section>
+  <!-- Slideshow (Carousel) -->
+<div class="carousel-container">
+  <div class="carousel">
+    <img src="image1.jpg" alt="Image 1" class="carousel-item">
+    <img src="image2.jpg" alt="Image 2" class="carousel-item">
+    <img src="image3.jpg" alt="Image 3" class="carousel-item">
+    <img src="image4.jpg" alt="Image 3" class="carousel-item">
+  </div>
+</div>
+
+  <div class="buttons-container">
+    <a class="box" href="../about">Assignment 1</a>
+    <a class="box" href="../three">Assignment 2</a>
+    <a class="box" href="../map">Assignment 3</a>
+    <a class="box" href="../final">Final</a>
+    <a class="box" href="https://shaganamuttiah.github.io/SUM/">Deploy</a>
+  </div>
+
+  <!-- Canvas for Three.js Scene -->
+  <canvas id="three-canvas-shagana" style="width: 100%; height: 400px;"></canvas>
+
+  <div id="viewers">
+    <iframe id="maplibre" class="viewer" src="../map/index.html" frameborder="0"></iframe>
+    <iframe id="threejs" class="viewer" src="../three/index.html" frameborder="0"></iframe>
+  </div>
+
+  <!-- Party Button -->
+  <button id="party-button">🎉</button>
+
+  <!-- Your other HTML content -->
+  <script src="party.js"></script> <!-- External JS file -->
+  
+  <!-- Scripts -->
+  <script>
+    const themeSwitcher = document.getElementById('theme-switcher');
+    themeSwitcher.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+  <script src="./path-to-your-3d-scene-script.js"></script>
+
+  <div id="independent-border"></div>
+
+  
+</body>
+   <!-- socials - start -->
+   <ul class="wrapper">
+    <li class="icon linkedin">
+      <a href="https://www.linkedin.com/in/shagana-muttiah/" target="_blank" rel="noopener noreferrer">
+        <span class="tooltip">LinkedIn</span>
+        <svg
+          viewBox="0 0 448 512"
+          width="20" 
+          height="" 
+          fill="black"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M100.28 448H7.4V148.9h92.88zm-46.44-342.1C24.18 105.9 0 81.72 0 52.54 0 23.35 24.18 0 53.84 0s53.84 23.35 53.84 52.54c0 29.18-24.18 53.36-53.84 53.36zM447.8 448h-92.68V302.4c0-34.7-12.7-58.4-44.48-58.4-24.24 0-38.68 16.3-45.04 32.2-2.32 5.6-2.88 13.4-2.88 21.3V448h-92.8V148.9h92.8v40.8c12.3-18.8 34.4-45.7 83.68-45.7 61 0 106.8 39.8 106.8 125.4V448z"
+          ></path>
+        </svg>
+      </a>
+    </li>
+    <li class="icon instagram">
+      <a href="https://www.instagram.com/sketchsum/" target="_blank" rel="noopener noreferrer">
+        <span class="tooltip">Instagram</span>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="20" 
+          height="" 
+          fill="black" 
+          class="bi bi-instagram" 
+          viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg>
+      </a>
+    </li>
+    <li class="icon youtube">
+      <a href="https://www.youtube.com/@sketchsum" target="_blank" rel="noopener noreferrer">
+        <span class="tooltip">YouTube</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24" 
+          height="" 
+          fill="black"
+          viewBox="0 0 576 512"
+        >
+          <path
+            d="M549.655 124.083c-6.281-23.655-24.788-42.279-48.573-49.101C454.764 64 288 64 288 64s-166.764 0-213.082 10.981c-23.785 6.822-42.292 25.446-48.573 49.101C16 171.604 16 256 16 256s0 84.396 10.345 131.917c6.281 23.655 24.788 42.279 48.573 49.101C121.236 448 288 448 288 448s166.764 0 213.082-10.981c23.785-6.822 42.292-25.446 48.573-49.101C560 340.396 560 256 560 256s0-84.396-10.345-131.917zM232 336V176l144 80-144 80z"
+          ></path>
+        </svg>
+      </a>
+    </li>
+    <li class="icon email">
+      <a href="mailto:shagana.muttiah@gmail.com" target="_blank" rel="noopener noreferrer">
+        <span class="tooltip">Email</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20" 
+          height="" 
+          fill="none" stroke="black"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M2 4h20a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+          <path d="M2 6l10 8 10-8" />
+          <!-- socials - end --> 
+           
+        </svg>
+      </a>
+    </li>
+  </ul>
+  
+</footer>
+
 </html>

@@ -316,9 +316,9 @@ map.on('load', () => {
         // Slide the camera to center on the clicked dot
         map.flyTo({
             center: coordinates,
-            zoom: 12, 
+            zoom: 14, 
             speed: 0.25, 
-            curve: 1.0, 
+            curve: 1.5, 
             essential: true 
         });
     });

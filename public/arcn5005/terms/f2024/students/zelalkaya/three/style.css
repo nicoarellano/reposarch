@@ -95,6 +95,13 @@ canvas {
   overflow-y: auto;
 }
 
+.canvas {
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0;
+  margin-left: 0 !important;
+}
+
 .cta {
   border: none;
   background: none;

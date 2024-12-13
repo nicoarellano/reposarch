@@ -1,0 +1,158 @@
+body {
+position: relative;
+width: 100vw;
+height: 100vh;
+background-image: url('pinx.gif');
+background-size: cover;
+width: 1920px;
+background-repeat: no-repeat;
+}
+
+h3{font-size: 30pt;
+    text-align: justify;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+    color: rgb(29, 251, 0);
+   
+}
+
+.cont1 {
+  height: 1080px;
+}
+
+#aboutme {
+    position: relative;
+    top: 6rem;
+    font-size: 40pt;
+}
+
+h1{font-size: 5rem;
+    width: center ;
+    left : 25rem;
+    text-align: center;
+    color: rgb(29, 251, 0);
+    -webkit-text-stroke: 0.75pt black;
+    
+}
+
+.viewer
+{
+    width: 100vw;
+    height: 40rem;
+}
+
+.threedcanvas {
+    width: 98vw;
+    height: 40rem;
+}
+
+.buttonsection {
+    position: relative;
+    top: -15rem;
+    display: flex;
+    justify-content: center ;
+    gap: 5rem;
+    padding-bottom: 3rem;
+    padding-left: 5rem;
+}
+
+.animated-button {
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1rem 10rem;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 20pt;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: greenyellow;
+    box-shadow: 0 0 0 2px greenyellow;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: greenyellow;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 2rem;
+    background-color: greenyellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #212121;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+  }
+  
+  .animated-button:hover .circle {
+    width: 30rem;
+    height: 15rem;
+    opacity: 1;
+  }
+  
+
+.small-avatar { 
+    position: relative;
+    margin: auto;
+    width: 50rem;
+    left: 38rem;
+    top: 4rem;
+}
+
+.card {
+    height: 1080px;
+}

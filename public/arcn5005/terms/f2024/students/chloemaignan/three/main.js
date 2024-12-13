@@ -24,7 +24,7 @@ stage.position.y = -2.95;
 scene.add(stage);
 
 const TextureLoader = new THREE.TextureLoader();
-const backgroundTexture = TextureLoader.load('dark-galaxy-background.jpg');
+const backgroundTexture = TextureLoader.load('Dark-galaxy-background.jpg');
 scene.background = backgroundTexture;
 
 // Mesh (body model)

@@ -1,49 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-    rel="stylesheet"
-  />
+<html lang='en'>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script type="module" src="../three/main.js"></script>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Kaleigh - THREE</title>
   </head>
-  <header></header>
+  <header>
+  </header>
   <body>
-    <div
-      class="leftPanel"
-      style="
-        position: absolute;
-        left: 0;
-        width: 28%;
-        height: 100%;
-        background-color: rgb(248, 248, 248);
-        justify-content: space-between;
-      "
-    >
-      <img src="../avatar.jpg" alt="Kaleigh Mackay" height="500" />
-      <h2>My Assignments:</h2>
-      <p>
-        <a href="../about/index.html"
-          ><button class="button-2 button-2">ABOUT</button></a
-        >
-        <a href="../three/index.html"
-          ><button class="button-2 button-2">THREE</button></a
-        >
-        <a href="../map/index.html"
-          ><button class="button-2 button-2">MAP</button></a
-        >
-        <a href="../final/index.html"
-          ><button class="button-2 button-2">FINAL</button></a
-        >
-      </p>
-    </div>
+    <div class="container">
+      <div class="sidebar">
+        <img src="../avatar.jpg" alt="Kaleigh Mackay" height="500" />
+        <h2>My Assignments:</h2>
+        <p>
+          <a href="../about/index.html"><button class="button-2 button-2">ABOUT</button></a>
+          <a href="../three/index.html"><button class="button-2 button-2">THREE</button></a>
+          <br></br>
+          <a href="../map/index.html"><button class="button-2 button-2">MAP</button></a>
+          <a href="../final/"><button class="button-2 button-2">FINAL</button></a>
+          <br></br>
+          <link rel="stylesheet" href="../map/main.js"/>
+      </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
@@ -52,8 +35,9 @@
     <script src="three.r134.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/RGBELoader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
     <script type="module" src="./main.js"></script>
-    <canvas id="kaleigh-canvas"></canvas>
+    <div class="main-content">
+      <canvas id="kaleigh-canvas"></canvas>
+    </div>
   </body>
 </html>

@@ -1,10 +1,9 @@
-
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;800&family=Sniglet:wght@400;800&display=swap');
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 /* Want to figure out how to have one combined webstyle for website and Map
 body {
   background-color: #ffffff;
@@ -15,214 +14,268 @@ body {
   margin: 0;
 }*/
 header {
-    background-color: lightblue;
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  background-color: lightblue;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+h1 {
+  text-align: left;
+  padding-left: 12.5%;
+  margin: 0;
+  font-family: 'Sniglet', system-ui;
+  font-weight: 300;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: 'Sniglet', system-ui;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  font-size: 75%;
+  margin: 0px;
+  color: #575b82;
+  font-weight: bold;
+}
+
+ul {
+  text-align: left;
+  padding-top: 10%;
+  line-height: 2;
+  font-family: 'Sniglet', system-ui;
+  font-weight: 200;
+  font-size: 85%;
+  line-height: 2; /* Adjust the value to increase or decrease space */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border: 5px solid #575b82;
+  transition: transform 0.3s; /* Animation on hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card h2 {
+  font-family: 'Sniglet', system-ui;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.new-section {
+  background-color: #f6f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0px;
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeIn 1s; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  h1 {
-    text-align: left;
-    padding-left: 12.5%;
-    margin: 0;
-    font-family: 'Sniglet', system-ui;
-    font-weight: 300;
-    font-size: 40px;
+  to {
+    opacity: 1;
   }
-  
-  h2 {
-    font-family: 'Sniglet', system-ui;
-    font-weight: 300;
+}
+.button {
+  background-color: #575b82;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 15px 32px;
+  font-family: 'Sniglet', system-ui;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+.button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.card-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #575b82;
+  color: #f6f9fa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Sniglet', system-ui;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s; /* Transition for button hover effects */
+}
+
+.card-button:hover {
+  background-color: #fdeb85;
+  color: #000;
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.unknown-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #575b82;
+  color: #f6f9fa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Sniglet', system-ui;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s; /* Transition for button hover effects */
+}
+
+.unknown-button:hover {
+  background-color: #fd8585;
+  color: #000;
+  animation: shake3856 0.3s linear infinite both;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/*figured out how to do this from uiverse*/
+@keyframes shake3856 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
   }
-  
-  h3 {
-    font-family: 'Merriweather', serif;
-    text-align: center;
-    font-size: 75%;
-    margin: 0px;
-    color: #575b82;
-    font-weight: bold;
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
-  
-  ul {
-    text-align: left;
-    padding-top: 10%;
-    line-height: 2;
-    font-family: 'Sniglet', system-ui;
-    font-weight: 200;
-    font-size: 85%;
-    line-height: 2; /* Adjust the value to increase or decrease space */
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: auto;
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
-  
-  .card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    border: 5px solid #575b82;
-    transition: transform 0.3s; /* Animation on hover */
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
-  
-  .card:hover {
-    transform: scale(1.05); /* Enlarge on hover */
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
   }
-  
-  .card img {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-  
-  .card h2 {
-    font-family: 'Sniglet', system-ui;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  
-  .new-section {
-    background-color: #f6f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 0px;
-    margin-top: 20px;
-    text-align: center;
-    animation: fadeIn 1s; /* Fade-in effect */
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .button {
-    background-color: #575b82;
-    background-size: cover;
-    background-position: center;
-    color: black;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 15px 32px;
-    font-family: 'Sniglet', system-ui;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .button i {
-    margin-right: 8px;
-  }
-  
-  .button:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
-  }
-  
-  .card-button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #575b82;
-    color: #f6f9fa;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    font-family: 'Sniglet', system-ui;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s; /* Transition for button hover effects */
-  }
-  
-  .card-button:hover {
-    background-color: #fdeb85;
-    color: #000;
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  }
-  
-  .unknown-button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #575b82;
-    color: #f6f9fa;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    font-family: 'Sniglet', system-ui;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s; /* Transition for button hover effects */
-  }
-  
-  .unknown-button:hover {
-    background-color: #fd8585;
-    color: #000;
-    animation: shake3856 0.3s linear infinite both;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  }
-  
-  /*figured out how to do this from uiverse*/
-  @keyframes shake3856 {
-    0% {
-      -webkit-transform: translate(0);
-      transform: translate(0);
-    }
-  
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-      transform: translate(-2px, 2px);
-    }
-  
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-      transform: translate(-2px, -2px);
-    }
-  
-    60% {
-      -webkit-transform: translate(2px, 2px);
-      transform: translate(2px, 2px);
-    }
-  
-    80% {
-      -webkit-transform: translate(2px, -2px);
-      transform: translate(2px, -2px);
-    }
-  
-    100% {
-      -webkit-transform: translate(0);
-      transform: translate(0);
-    }
-  }
-  .footer {
-    background-color: lightblue;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
+}
+.footer {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card.snoopy {
+  grid-column: span 2; /* This will make the snoopy card take up the width of two columns */
+  position: relative;
+  height: 300px; /* Set a fixed height for consistency */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Ensure the card has a background */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow to match other cards */
+  text-align: center;
+}
+
+.card.snoopy img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images fill the container without distortion */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.card.snoopy img.active {
+  opacity: 1;
+}
+/* Style for the container */
+.item.map {
+  position: relative; /* Allows for absolute positioning of child elements */
+  width: 100%; /* Make it span the full width of the parent */
+  height: 600px; /* Define a fixed height for the container */
+  background-color: #f0f0f0; /* Optional background color */
+  border: 1px solid #ccc; /* Optional border for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+  overflow: hidden; /* Prevent content overflow */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Style for the iframe */
+.viewer {
+  width: 100%; /* Make iframe fill the container's width */
+  height: 100%; /* Make iframe fill the container's height */
+  border: none; /* Remove any default border */
+  border-radius: 8px; /* Match the container's rounded corners */
+  background-color: #ffffff; /* Optional background */
+  height: 600px;
+}
+
+/* Optional: Style iframe content when hovered (via parent container) */
+.item.map:hover .viewer {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+  transform: scale(1.01); /* Slight zoom effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
