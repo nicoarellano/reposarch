@@ -345,7 +345,6 @@ button:after {
 }
 
 #maplibre {
-  align: left;
   margin-left: 150px;
   z-index: 5; /* Slightly above for overlap */
   height: 448px; /* Set to match the container height */
@@ -362,7 +361,6 @@ button:after {
 
 /* Three.js viewer */
 #threejs {
-  align: left;
   margin-left: 0px;
   width: 890px;
   height: 510px; /* Set to match the container height */
