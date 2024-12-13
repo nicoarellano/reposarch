@@ -89,8 +89,7 @@ function animate() {
   requestAnimationFrame(animate);
 
   if (myModel) {
-    myModel.rotation.y += 0.01;
-    myModel.rotation.x += 0.005;
+    myModel.rotation.y += 0.003;
   }
 
   controls.update();
