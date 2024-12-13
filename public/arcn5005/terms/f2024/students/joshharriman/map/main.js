@@ -2,7 +2,7 @@ import { builders } from "./builderlist.js";
 
 const map = (window.map = new maplibregl.Map({
   container: 'map',
-  style:'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+  style:'https://api.maptiler.com/maps/satellite/style.json?key=y7eVB4YCD5CCSpo4wjSi',
   center: [-98.74, 57.415],
   zoom: .005,
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
@@ -87,9 +87,7 @@ const addLayers = () => {
     source: "places",
     paint: {
       "circle-color": "green",
-      "circle-radius": 4,
-      "circle-stroke-width": 1,
-      "circle-stroke-color": "blue",
+      "circle-radius": 8,
     },
   });
 
