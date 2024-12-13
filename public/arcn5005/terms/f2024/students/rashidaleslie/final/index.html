@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
-    <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rashida Leslie's Portfolio</title>
     <link rel="stylesheet" href="../webstyles.css" />
@@ -22,12 +25,17 @@
 
     <header>
       <h1>RASHIDA LESLIE</h1>
-      <button id="music-toggle" class="button" onclick="toggleMusic()">
+      <!--...<button id="music-toggle" class="button" onclick="toggleMusic()">
         <i class="fa-solid fa-music"></i>
-      </button>
+      </button>-->
     </header>
 
     <div class="container">
+      <div class="card youngme">
+        <img src="../about/RL.jpg" alt="Photo of Me" />
+        <h3>Rashida Leslie is an M.arch 1 Student at Carleton University</h3>
+      </div>
+
       <div class="card snoopy">
         <img src="./IMAGES/Tents.png" alt="Image 0" class="slide" />
         <img src="./IMAGES/ARC200.png" alt="Image 1" class="slide" />
@@ -40,13 +48,8 @@
         <img src="./IMAGES/Site Park.png" alt="Image 8" class="slide" />
         <img src="./IMAGES/Site Waterloo.png" alt="Image 9" class="slide" />
         <img src="./IMAGES/Somalia.png" alt="Image 10" class="slide" />
+      </div>
 
-      </div>
-      
-      <div class="card youngme">
-        <img src="/about/RL.jpg" alt="Photo of Me" />
-        <h3>Rashida Leslie is an M.arch 1 Student at Carleton University</h3>
-      </div>
       <div class="card info">
         <h3>PROGRAM PROFICIENCIES</h3>
         <ul>
@@ -68,14 +71,33 @@
     </div>
 
     <div class="new-section">
-      <h2>There's More to Come</h2>
-      <p>Don't be so impatient!</p>
-      <img src="/about/dancesnoopy.gif" />
-      <button class="unknown-button">Wouldn't You Like to Know</button>
+      <div class="flex-container">
+        <!--<div class="text-holder">
+          <h2>There's More to Come</h2>
+          <p>Don't be so impatient!</p>
+        </div>-->
+        <div class="snoopy-container">
+          <img src="../about/dancesnoopy.gif" alt="Dancing Snoopy" />
+        </div>
+        <div class="frame-holder">
+          <iframe
+            class="viewer"
+            src="../three/index.html"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
     </div>
 
     <div class="new-section">
-      <div class="item map"><iframe class="viewer" src="../map/index.html" frameborder="0"></iframe></div>   </div>
+      <div class="item map">
+        <iframe
+          class="mapviewer"
+          src="../map/index.html"
+          style="height: 100%; width: 100%"
+        ></iframe>
+      </div>
+    </div>
 
     <footer class="footer">
       <h2>Follow Me</h2>

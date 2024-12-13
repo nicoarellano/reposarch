@@ -6,7 +6,25 @@ const map = new maplibregl.Map({
     zoom: 3
 });
 
+//description box
 map.on('load', () => {
+  const textOverlay = document.createElement('div');
+    textOverlay.style.position = 'fixed';
+    textOverlay.style.top = '70px';
+    textOverlay.style.right = '30px';
+    textOverlay.style.backgroundColor = 'rgb(255, 255, 255 ,0.5)';
+    textOverlay.style.colour = 'rgb(97, 0, 45);'
+    textOverlay.style.padding = '15px';
+    textOverlay.style.borderRadius = '20px';
+    textOverlay.innerHTML = 
+    '<strong style="font-size: 16px;">Explore 30 of the Largest Lakes in Canada<br><strong style= "font-size: 14px; font-weight: normal;">click the star icons for more information!</strong>';
+  
+    document.getElementById('map').appendChild(textOverlay);})
+    
+
+
+map.on('load', () => {
+  
     //lake picture
     map.loadImage(
       'pin.png',
@@ -501,7 +519,8 @@ map.on('load', () => {
         });
       }
     );
-  
+
+      
     // Create a new popup instance
     const popup = new maplibregl.Popup();
   
