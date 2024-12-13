@@ -46,7 +46,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 document.body.appendChild(renderer.domElement);
 
 const rgbeLoader = new THREE.RGBELoader();
-rgbeLoader.load('creepy_bathroom_4k.hdr', (texture) => {
+rgbeLoader.load('skybackground.hdr', (texture) => {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   scene.background = texture;
   scene.environment = texture;
@@ -117,7 +117,7 @@ createText('Click Me', 1.5, '0xFF9900');
 
 //spotlights ref: https://github.com/mrdoob/three.js/blob/master/examples/webgl_lights_spotlights.html
 
-const spotLight1 = new THREE.SpotLight(0xFF7F00, 10);
+const spotLight1 = new THREE.SpotLight(0xffffff, 10);
 spotLight1.position.set(10, 2, 10);
 spotLight1.angle=0.025;
 spotLight1.penumbra = 0.25;  
@@ -126,7 +126,7 @@ spotLight1.distance = 20;
 spotLight1.castShadow = true;
 scene.add(spotLight1);
 
-const spotLight2 = new THREE.SpotLight(0xFF0000, 10);
+const spotLight2 = new THREE.SpotLight(0x8E7CC3, 10);
 spotLight2.position.set(50, 2, 50);
 spotLight2.angle=0.025;
 spotLight2.penumbra = 0.25;  
@@ -134,7 +134,7 @@ spotLight2.decay = 2;
 spotLight2.distance = 20; 
 scene.add(spotLight2);
 
-const spotLight3 = new THREE.SpotLight(0x9900FF, 10);
+const spotLight3 = new THREE.SpotLight(0x9FC5E8, 10);
 spotLight3.position.set(5, 2, 5);
 spotLight3.angle=0.025;
 spotLight3.penumbra = 0.25;  
