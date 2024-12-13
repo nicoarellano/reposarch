@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ashastott's About Page</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css' />
+    <script src="./main.js"></script>
+    <title>Final Assignment</title>
   </head>
-  <body>
-    <header>
-      <h1 id="title">About Page</h1>
-      <h2 class="subtitle">Subtitle</h2>
-    </header>
-    <h2>Asha Stott</h2>
-    <a href=""><button>Assignment 2</button></a>
-    <a href=""><button>Assignment 3</button></a>
-    <a href=""><button>Assignment 4</button></a>
-    <a href=""><button>Final Assignment</button></a>
+      
+        <body>
+          <main>
+            <header>
+              <h1> ASHA STOTT</h1>
+              </header>
+              <h2>
+                B.Env.D. '24, University of Manitoba<br>
+                M.Arch Student, Carleton University
+                </h2>
+              <h3> my final assignment for ARCN5005!<br>
+                thank you for a fun class :D<br>
+              </h3>
+            <h4>
+              + [OTHER]<br>
+          <a href="../about/index.html"><button id="three-button">About Page</button></a>
+          <a href="../bim/index.html"><button>3D Assignment</button></a>
+          <a href="../map/index.html"><button>Map Assignment</button></a>
+            </h4>
+            <section>
+              <div class="photo-container">
+                <img src="cowboyhatasha.jpg" alt="Photo" class="image_wrapper">
+              </div>
+            </section>
+            <section>
+              <div id="chicken"></div>
+            </section>
+          </main>
+        </body>
 
-    <img src="photo.png" width="100px" alt="profile picture" />
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur facere
-      molestiae sequi aliquid totam. Expedita in voluptate eaque quos nisi
-    </p>
-  </body>
-</html>
+        <div class="fullscreen-photo" id="fullscreenPhoto">
+          <img src="ochi.jpg" alt="Fullscreen Photo">
+        </div>
+
+        <div class="container map-container">
+          <iframe class="viewer" src="./map/index.html" frameborder="0"></iframe>
+        </div>
+        
+        <div class="container three-container">
+          <iframe class="viewer" src="./three/index.html" frameborder="0"></iframe>
+        </div>
+
+        <div class="container about-container">
+          <iframe class="viewer" src="./about/index.html" frameborder="0"></iframe>
+        </div>
+
+
+        </div>
+      </html>
