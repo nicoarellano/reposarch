@@ -1,200 +1,704 @@
 * {
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
+
+}
+
+
+button {
+width: 50px;
+height: 50px;
+background: transparent;
+border: none;
+}
+
+button:hover {
+  animation: bounce1 .3s infinite alternate;
+}
+
+@keyframes bounce1 {
+  to { transform: scale(1.2); }
+}
+
+header
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+
   }
   
-  body,
-  html {
-    font-family: 'Roboto', sans-serif;
+  .centered-left {
+    position: absolute;
+    top: 50%;
+    left: 500px;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+  }
+  .centered-right {
+    position: absolute;
+    top: 50%;
+    left: 920px;
+    transform: translate(-50%, -50%);
+  }
+  .centered-rightagain {
+    position: absolute;
+    top: 50%;
+    left: 990px;
+    transform: translate(-50%, -50%);
+  }
+
+body,
+html {
+    font-family: 'arvo';
     overflow: hidden;
     width: 100%;
     height: 100%;
-  }
-  
-  ol,
-  ul {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: table;
+    margin: auto;
+    font-size: large;
+    overflow-y: scroll;
+
+}
+
+
+ol,
+ul {
     list-style-type: disc;
     margin-left: 2.5rem;
     font-size: large;
-  }
-  
-  h1 {
+}
+
+
+
+h1 {
     color: red;
-  }
-  
-  .about {
+}
+
+.about {
     width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+
+/* I don't know how to cite in css so credit to user himanshu9682 from uiverse.io */ 
+.type--A {
+    --line_color: #555555;
+    --back_color: white;
   }
-  
-  .assignment2 {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: end;
-    overflow: hidden;
-    gap: 2rem;
+  .type--B {
+    --line_color: #1b1919;
+    --back_color: white;
   }
-  
-  .main-container {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    gap: 2rem;
+  .type--C {
+    --line_color: white;
+    --back_color: white;
   }
-  
-  .final {
-    width: 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    gap: 2rem;
-  }
-  
-  .about {
-    background-color: #f1f1f1;
-    width: 70%;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  }
-  
-  .vl {
-    border-left: 1px solid lightgray;
-    height: 150px;
-  }
-  
-  .three-canvas {
-    bottom: 0;
-  }
-  
-  #viewers {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1rem;
-    height: 100%;
-    padding: 1rem;
-  }
-  
-  #full-screen {
-    width: 29px;
-    height: 29px;
+  .button {
     position: relative;
-    top: 40px;
-    z-index: 99;
-    left: 8px;
-    padding: 0.3rem;
-    pointer-events: all;
-    cursor: pointer;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-  }
-  
-  .viewer {
-    right: 0;
-    /* outline: 1px solid black; */
-    border-radius: 1rem;
-    width: 100%;
-    height: 45%;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  }
-  
-  .dot {
-    height: 15px;
-    width: 15px;
-    background-color: red;
-    outline: 3px solid yellow;
-    border-radius: 50%;
-    z-index: 99;
-  }
-  
-  .legend {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-    width: fit-content;
-    height: 1rem;
-  }
-  
-  #map {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-  
-  #p5 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-  
-  #p5-container {
-    display: block;
-  }
-  
-  button {
-    appearance: none;
-    background-color: white;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 5px;
-    min-height: 3.75em;
-    min-width: 0;
-    outline: none;
-    padding: 1em 2.3em;
-    text-align: center;
+    z-index: 0;
+    width: 250px;
+    height: 56px;
     text-decoration: none;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--line_color);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+  .button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .button::before,
+  .button::after,
+  .button__text::before,
+  .button__text::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--line_color);
+    transition: all 0.5s ease;
+  }
+  .button::before {
+    top: 0;
+    left: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+  }
+  .button::after {
+    top: 0;
+    right: 54px;
+    width: 8px;
+  }
+  .button__text::before {
+    bottom: 0;
+    right: 54px;
+    width: calc(100% - 56px * 2 - 16px);
+  }
+  .button__text::after {
+    bottom: 0;
+    left: 54px;
+    width: 8px;
+  }
+  .button__line {
+    position: absolute;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .button__line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+    border: solid 3px var(--line_color);
+  }
+  .button__line:nth-child(1),
+  .button__line:nth-child(1)::before {
+    left: 0;
+  }
+  .button__line:nth-child(2),
+  .button__line:nth-child(2)::before {
+    right: 0;
+  }
+  .button:hover {
+    letter-spacing: 6px;
+  }
+  .button:hover::before,
+  .button:hover .button__text::before {
+    width: 8px;
+  }
+  .button:hover::after,
+  .button:hover .button__text::after {
+    width: calc(100% - 56px * 2 - 16px);
+  }
+  .button__drow1,
+  .button__drow2 {
+    position: absolute;
+    z-index: -1;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+  }
+  .button__drow1 {
+    top: -16px;
+    left: 40px;
+    width: 32px;
+    height: 0;
+    transform: rotate(30deg);
+  }
+  .button__drow2 {
+    top: 44px;
+    left: 77px;
+    width: 32px;
+    height: 0;
+    transform: rotate(-127deg);
+  }
+  .button__drow1::before,
+  .button__drow1::after,
+  .button__drow2::before,
+  .button__drow2::after {
+    content: "";
+    position: absolute;
+  }
+  .button__drow1::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-60deg);
+  }
+  .button__drow1::after {
+    top: -10px;
+    left: 45px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(69deg);
+  }
+  .button__drow2::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-146deg);
+  }
+  .button__drow2::after {
+    bottom: 26px;
+    left: -40px;
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    transform-origin: 16px 16px;
+    transform: rotate(-262deg);
+  }
+  .button__drow1,
+  .button__drow1::before,
+  .button__drow1::after,
+  .button__drow2,
+  .button__drow2::before,
+  .button__drow2::after {
+    background: var(--back_color);
+  }
+  .button:hover .button__drow1 {
+    animation: drow1 ease-in 0.06s;
+    animation-fill-mode: forwards;
+  }
+  .button:hover .button__drow1::before {
+    animation: drow2 linear 0.08s 0.06s;
+    animation-fill-mode: forwards;
+  }
+  .button:hover .button__drow1::after {
+    animation: drow3 linear 0.03s 0.14s;
+    animation-fill-mode: forwards;
+  }
+  .button:hover .button__drow2 {
+    animation: drow4 linear 0.06s 0.2s;
+    animation-fill-mode: forwards;
+  }
+  .button:hover .button__drow2::before {
+    animation: drow3 linear 0.03s 0.26s;
+    animation-fill-mode: forwards;
+  }
+  .button:hover .button__drow2::after {
+    animation: drow5 linear 0.06s 0.32s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes drow1 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100px;
+    }
+  }
+  @keyframes drow2 {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    11% {
+      opacity: 1;
+    }
+    100% {
+      width: 120px;
+    }
+  }
+  @keyframes drow3 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 80px;
+    }
+  }
+  @keyframes drow4 {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 120px;
+    }
+  }
+  @keyframes drow5 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 124px;
+    }
   }
   
-  button:disabled {
-    pointer-events: none;
+  .container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .container-about {
+    width: 100%;
+    height: 100px;
+    background-image: url(about-bg.png);
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  .button:not(:last-child) {
+    margin-bottom: 64px;
+    }
+  }
+
+  .container-finallinks {
+    width: 100%;
+    height: 50%;
+    background-image: url(about-bg.png);
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  .button:not(:last-child) {
+    margin-bottom: 64px;
+    }
+  }
+
+  .container-three {
+    width: 100%;
+    height: 250px;
+    background-image: url(three-bg.png);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  .button:not(:last-child) {
+    margin-bottom: 64px;
+    }
+  }
+
+  .container-map {
+    width: 100%;
+    height: 250px;
+    background-image: url(map-bg.png);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  .button:not(:last-child) {
+    margin-bottom: 64px;
+    }
+  }
+
+.container-photo {
+  padding: 64px
+}
+
+  .container-final {
+    width: 100%;
+    height: 250px;
+    background-image: url(final-bg.png);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  .button:not(:last-child) {
+    margin-bottom: 64px;
+    }
+  }
+
+  .arvo-regular {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
   }
   
-  button:hover {
+  .arvo-bold {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .arvo-regular-italic {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .arvo-bold-italic {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  /* Slideshow container */
+.slideshow-container {
+  max-width: 450px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "previous button" to the left */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.271);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 12px;
+  font-family: Arvo;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  font-family: Arvo;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 10%;
+  }
+}
+
+h1 {
+  color: white
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  min-height: 4vh;
+  display: flex;
+  align-items: center;
+  background-color: #1c1c1c;
+}
+
+.titletext {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titletext::after {
+  position: absolute;
+  content: "";
+  font-size: 2vw;
+  color: #1c1c1c;
+  opacity: 0;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  animation: change-text 10s linear infinite;
+}
+
+@keyframes change-text {
+  10% {
+    opacity: 1;
+    content: "Dennis Avgerinos";
+    color: white;
+    letter-spacing: 10px;
+  }
+
+  35% {
+    content: "ARCN 5005 Final";
+    color: white;
+    opacity: 1;
+    letter-spacing: 10px;
+  }
+
+  60% {
+    content: "Dennis Avgerinos";
+    color: white;
+    opacity: 1;
+    letter-spacing: 10px;
+  }
+
+  85% {
+    content: "ARCN 5005 Final";
+    color: white;
+    opacity: 1;
+    letter-spacing: 10px;
+  }
+
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    opacity: 0;
+    letter-spacing: 0;
     color: #fff;
-    background-color: #1a1a1a;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    transform: translateY(-2px);
+    content: "";
   }
-  
-  button:active {
-    box-shadow: none;
+}
+
+.arrow
+{
+  position: relative;
+  bottom: -2rem;
+  left: 50%;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+
+  background-image: url(../Icons/Arrow.png);
+  background-size: contain;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+#viewers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 1rem;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+
+.viewer1 {
+  right: 0;
+  /* outline: 1px solid black; */
+  border-radius: 1rem;
+  width: 100%;
+  height: 720px;
+}
+
+.viewer2 {
+  right: 0;
+  /* outline: 1px solid black; */
+  border-radius: 1rem;
+  width: 100%;
+  height: 720px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #1c1c1c;
+  outline: 3px solid white;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.legend {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  width: fit-content;
+  height: 1rem;
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+

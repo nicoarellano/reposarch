@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Haseena Doost</title>
+    <!-- Google Font for Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="aboutstyles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1 class="playfair-display-title typing-effect">Haseena Doost</h1>
+      <h2 class="playfair-display-subheading hover-effect">
+        Welcome to my portfolio
+      </h2>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+      <!-- Profile Section -->
+      <section class="profile">
+        <div class="profile-pic-container">
+          <img
+            src="HeadshotforID.jpg"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+        </div>
+        <div class="profile-info">
+          <p>
+            Hello! I'm Haseena, a passionate first-year Master of Architecture
+            student at Carleton University. ...
+          </p>
+          <p class="secondary-text">
+            Feel free to explore my assignments below!
+          </p>
+        </div>
+      </section>
+
+      <!-- Assignments Section -->
+      <section class="assignments">
+        <h3 class="hover-effect">My Assignments</h3>
+        <div class="button-container">
+          <button id="threejs-button" class="playfair-button">📚 ThreeJS</button>
+          <button class="playfair-button">🗺️ Map</button>
+          <button class="playfair-button">💻 BIM</button>
+          <button class="playfair-button">📝 FINAL</button>
+        </div>
+      </section>
+
+      <!-- Resume Section -->
+      <section class="resume">
+        <h3 class="hover-effect">Curriculum Vitae</h3>
+        <a href="haseenadoostTSA_CV (2).pdf" class="resume-button" download
+          >Download CV</a
+        >
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact">
+        <h3 class="hover-effect">Contact Me</h3>
+        <a href="mailto:haseenadoost0512@gmail.com" class="contact-button"
+          ><i class="fas fa-envelope"></i> Email Me</a
+        >
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>Designed by Haseena</p>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+      // Link the "ThreeJS" button to the Three.js project
+      document
+        .getElementById("threejs-button")
+        .addEventListener("click", function () {
+          window.location.href = "http://127.0.0.1:5500/three/index.html";
+        });
+    </script>
+  </body>
+</html>

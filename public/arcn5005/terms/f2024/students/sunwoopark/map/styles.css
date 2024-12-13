@@ -51,7 +51,7 @@ body,
   height: 20px;
   line-height: 18px;
   text-align: center;
-  cursor: url(./cursor.png), pointer;
+  cursor: url(./cursor.png), auto;
   position: absolute; /* Ensures it's positioned relative to the popup */
   top: 5px; /* Adjusts the vertical position */
   right: 5px; /* Adjusts the horizontal position */
@@ -68,7 +68,7 @@ button {
   color: rgb(255, 255, 255);
   font-family: inherit;
   font-weight: 600;
-  cursor: url(./cursor.png), pointer;
+  cursor: url(./cursor.png), auto;
   position: relative;
   border: none;
   background: none;
@@ -121,7 +121,7 @@ button:after {
   font-weight: bold;
   border: none;
   border-radius: 11px;
-  cursor: url(./cursor.png), pointer;
+  cursor: url(./cursor.png), auto;
   z-index: 10;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

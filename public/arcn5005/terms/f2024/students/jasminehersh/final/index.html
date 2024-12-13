@@ -1,11 +1,137 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jasminehersh final page</title>
+    <title>Jasmine Hersh Final Assingment</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    ADD YOUR CODE HERE!
+    <script src="main.js"></script>
+
+    <header>
+      <h1 id="line-1 anim-typewriter">ABOUT ME!</h1>
+
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="../about/index.html">Assignment 1</a>
+        <a href="../three/index.html">Assignment 2</a>
+        <a href="../map/index.html">Assignment 3</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <nav>
+        <h1>Jasmine Hersh</h1>
+
+        <br />
+        <div class="container">
+          <div class="image">
+            <img src="IMG_8900.JPG" alt="Jasmine Hersh" height="150" />
+          </div>
+
+          <div class="description">
+            <ul>
+              <li>BA in Architecture</li>
+              <li>Univeristy of San Diego🌴</li>
+              <li>My favourite city I've been to is Rome!</li>
+              <li>I love the ocean!🌊</li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+         
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./images/sd.jpg" style="width: 100%" />
+            <div class="text">San Diego, CA</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./images/jordan.jpg" style="width: 100%" />
+            <div class="text">Petra, Jordan</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./images/ocean.jpg" style="width: 100%" />
+            <div class="text">The Pacific Ocean!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/friends.JPG" style="width: 100%" />
+            <div class="text">My very best friends!.</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/italy.jpg" style="width: 100%" />
+            <div class="text">Rome, Italy</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <br />
+
+        <div style="text-align: left">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </nav>
+
+      <article>
+        <div id="viewers1">
+          <div>
+            <div id="map-container"></div>
+          </div> 
+          <iframe
+            class="viewer"
+            src="../map/index.html"
+            frameborder="0"
+          ></iframe>
+        </div>
+
+        <div id="viewers1">
+          <div>
+            <div id="map-container"></div>
+          </div> 
+          <iframe
+            class="viewer"
+            src="../three/index.html"
+            frameborder="0"
+          ></iframe>
+        </div>
+
+      
+      
+
+        <!-- Three js Modules -->
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+        <script src="../three/index.html" ></script>
+      </article>
+    </section>
   </body>
+
+  <footer>
+    <p>Photogrammetry</p>
+  </footer>
+
+  <br />
 </html>

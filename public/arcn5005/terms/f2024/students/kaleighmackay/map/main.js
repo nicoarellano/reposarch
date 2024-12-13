@@ -58,17 +58,21 @@ async function main() {
 
   async function loadModel() {
     const loader = new THREE.GLTFLoader();
-    const gltf = await loader.loadAsync(
-      'https://maplibre.org/maplibre-gl-js/docs/assets/34M_17/34M_17.gltf'
-    );
-    const model = gltf.scene;
-    return model;
+    try {
+      const gltf = await loader.loadAsync(
+        'https://maplibre.org/maplibre-gl-js/docs/assets/34M_17/34M_17.gltf'
+      );
+      const model = gltf.scene;
+      return model;
+    } catch (error) {
+      console.error('Error loading model:', error);
+      console.log('Loaded Model:', model1);
+    }
   }
 
   // Known locations. We'll infer the elevation of those locations once terrain is loaded.
-  const sceneOrigin = new maplibregl.LngLat(11.5255, 47.6677);
-  const model1Location = new maplibregl.LngLat(11.527, 47.6678);
-  const model2Location = new maplibregl.LngLat(11.5249, 47.6676);
+  const sceneOrigin = new maplibregl.LngLat(-63.287523, 46.53);
+  const model1Location = new maplibregl.LngLat(-63.287523, 46.53);
 
   // Configuration of the custom layer for a 3D model, implementing `CustomLayerInterface`.
   const customLayer = {
@@ -87,7 +91,7 @@ async function main() {
       // In threejs, y points up - we're rotating the scene such that it's y points along maplibre's up.
       this.scene.rotateX(Math.PI / 2);
       // In threejs, z points toward the viewer - mirroring it such that z points along maplibre's north.
-      this.scene.scale.multiply(new THREE.Vector3(1, 1, -1));
+      this.scene.scale.multiply(new THREE.Vector3(10, 10, -10));
       // We now have a scene with (x=east, y=up, z=north)
 
       const light = new THREE.DirectionalLight(0xffffff);
@@ -109,22 +113,29 @@ async function main() {
         maplibregl.MercatorCoordinate.fromLngLat(sceneOrigin);
       const model1Mercator =
         maplibregl.MercatorCoordinate.fromLngLat(model1Location);
-      const model2Mercator =
-        maplibregl.MercatorCoordinate.fromLngLat(model2Location);
       const { dEastMeter: model1east, dNorthMeter: model1north } =
         calculateDistanceMercatorToMeters(sceneOriginMercator, model1Mercator);
-      const { dEastMeter: model2east, dNorthMeter: model2north } =
-        calculateDistanceMercatorToMeters(sceneOriginMercator, model2Mercator);
 
-      model1.position.set(-63.129366, 1, 46.190501);
-
+      model1.position.set(mercator.x, mercator.z, mercator.y);
       this.scene.add(model1);
+      this.scene.scale.multiply(new THREE.Vector3(100, 100, 100));
 
       // Use the MapLibre GL JS map canvas for three.js.
       this.renderer = new THREE.WebGLRenderer({
         canvas: map.getCanvas(),
         context: gl,
         antialias: true,
+      });
+
+      loadModel().then((model) => {
+        if (model) {
+          model.position.set(mercator.x, mercator.z, mercator.y);
+          model.scale.set(10, 10, 10);
+          this.scene.add(model);
+          console.log('Model added to scene');
+        } else {
+          console.error('Model failed to load');
+        }
       });
 
       this.renderer.autoClear = false;
@@ -149,6 +160,21 @@ async function main() {
         translateZ: sceneOriginMercator.z,
         scale: sceneOriginMercator.meterInMercatorCoordinateUnits(),
       };
+      const mapMatrix = new THREE.Matrix4().fromArray(mercatorMatrix);
+      const transformMatrix = new THREE.Matrix4()
+        .makeTranslation(
+          transform.translateX,
+          transform.translateY,
+          transform.translateZ
+        )
+        .scale(
+          new THREE.Vector3(transform.scale, -transform.scale, transform.scale)
+        );
+
+      this.camera.projectionMatrix = mapMatrix.multiply(transformMatrix);
+      this.renderer.resetState();
+      this.renderer.render(this.scene, this.camera);
+      map.triggerRepaint();
 
       const m = new THREE.Matrix4().fromArray(mercatorMatrix);
       const l = new THREE.Matrix4()
@@ -169,6 +195,9 @@ async function main() {
       this.renderer.resetState();
       this.renderer.render(this.scene, this.camera);
       map.triggerRepaint();
+
+      const axesHelper = new THREE.AxesHelper(100);
+      this.scene.add(axesHelper);
     },
   };
 
@@ -182,9 +211,10 @@ main();
 
 const map = new maplibregl.Map({
   container: 'map',
-  center: [-63.287523, 46.53],
-  zoom: 8.4,
+  center: [-63.18752, 46.53],
+  zoom: 8.5,
   style: 'style.json',
+  pitch: 60,
 });
 
 function addPointCoordinates(coordinates, properties) {
@@ -203,11 +233,12 @@ function addPointCoordinates(coordinates, properties) {
 
   marker.setPopup(
     new maplibregl.Popup().setHTML(`
-              <h3>${properties.name}</h3>
-              <li><strong>Construction Date:</strong> ${properties.constructiondate}</li>
-              <li><strong>Address:</strong> ${properties.address}</li>
-              <li><strong>Website:</strong> <a href="${properties.website}" target="_blank">${properties.website}</a></li>
-          `)
+          <img src="${properties.image}" alt="${properties.name}" style="width:100%;height:auto;justify:center"/>
+          <h3>${properties.name}</h3>
+          <li><strong>Construction Date:</strong> ${properties.constructiondate}</li>
+          <li><strong>Address:</strong> ${properties.address}</li>
+          <li><strong>More Historic Info:</strong> <a href="${properties.website}" target="_blank">${properties.website}</a></li>
+      `)
   );
 }
 
@@ -222,8 +253,11 @@ map.on('load', () => {
   textOverlay.style.borderRadius = '25px';
   textOverlay.style.boxShadow = '0 0 0 4px rgba(248,248,248,0.5)';
   textOverlay.style.zIndex = '1';
+  textOverlay.style.width = '300px';
+  textOverlay.style.fontSize = '12pt';
+  textOverlay.style.fontFamily = 'Arial, Helvetica, sans-serif';
   textOverlay.innerHTML =
-    '<strong>Map of Recognized Heritage Lighthouses in Prince Edward Island</strong><br>Explore the key ports on the Island!<br>Click on the icons for more information on each lighthouse';
+    '<strong>Map of Recognized Heritage Lighthouses in Prince Edward Island</strong><br><br>Learn more about each lighthouse by clicking the lighthouse markers.';
 
   document.getElementById('map').appendChild(textOverlay);
 
@@ -231,7 +265,7 @@ map.on('load', () => {
     {
       coordinates: [-63.129366, 46.190501],
       properties: {
-        image: '../images/blockhouse.png',
+        image: './images/blockhouse.png',
         name: 'Blockhouse Lighthouse',
         constructiondate: '1876',
         address: '285 Blockhouse Rd, Rocky Point, PE C0A 1H2',
@@ -242,7 +276,7 @@ map.on('load', () => {
     {
       coordinates: [-62.747747, 46.441988],
       properties: {
-        image: '../images/stpeters.png',
+        image: './images/stpeters.png',
         name: 'St. Peters Harbour Lighthouse',
         constructiondate: '1878',
         address: '302 Lighthouse Rd, Morell, PE C0A 1S0',
@@ -253,7 +287,7 @@ map.on('load', () => {
     {
       coordinates: [-62.466539, 46.144196],
       properties: {
-        image: '../images/panmure.png',
+        image: './images/panmure.png',
         name: 'Panmure Head Lighthouse',
         constructiondate: '1853',
         address:
@@ -265,7 +299,7 @@ map.on('load', () => {
     {
       coordinates: [-62.436785, 46.26622],
       properties: {
-        image: '../images/annandale.png',
+        image: './images/annandale.png',
         name: 'Annandale Rear Range Lighthouse',
         constructiondate: '1901',
         address: '222 Nortons Rd, Cardigan, PE C0A 1G0',
@@ -276,7 +310,7 @@ map.on('load', () => {
     {
       coordinates: [-63.147495, 46.230688],
       properties: {
-        image: '../images/brighton.png',
+        image: './images/brighton.png',
         name: 'Brighton Beach Front Range Lighthouse',
         constructiondate: '1889',
         address: '160 York Ln, Charlottetown, PE C1A 7W5',
@@ -287,7 +321,7 @@ map.on('load', () => {
     {
       coordinates: [-62.457855, 46.003564],
       properties: {
-        image: '../images/capebear.png',
+        image: './images/capebear.png',
         name: 'Cape Bear Lighthouse',
         constructiondate: '1881',
         address: '42 Black Brook Rd, Murray Harbour, PE C0A 1V0',
@@ -298,7 +332,7 @@ map.on('load', () => {
     {
       coordinates: [-63.506196, 46.534006],
       properties: {
-        image: '../images/capetryon.png',
+        image: './images/capetryon.png',
         name: 'Cape Tryon Lighthouse',
         constructiondate: '1964',
         address: 'Cape Tryon Rd, French River, PE C0A 2B0',
@@ -309,7 +343,7 @@ map.on('load', () => {
     {
       coordinates: [-63.143225, 46.430027],
       properties: {
-        image: '../images/covehead.png',
+        image: './images/covehead.png',
         name: 'Covehead Harbour Lighthouse',
         constructiondate: '1975',
         address:
@@ -321,7 +355,7 @@ map.on('load', () => {
     {
       coordinates: [-64.062366, 46.793978],
       properties: {
-        image: '../images/covehead.png',
+        image: './images/northport.png',
         name: 'Northport Rear Range Lighhouse',
         constructiondate: '1885',
         address: '224 Rte. 152, Northport, Prince Edward Island, C0B, Canada',
@@ -332,7 +366,7 @@ map.on('load', () => {
     {
       coordinates: [-63.039079, 46.050233],
       properties: {
-        image: '../images/pointprim.png',
+        image: './images/pointprim.png',
         name: 'Point Prim Lighthouse',
         constructiondate: '1845',
         address: 'Point Prim Road, Point Prim, Belfast, Prince Edward Island',
@@ -344,7 +378,7 @@ map.on('load', () => {
     {
       coordinates: [-61.9718, 46.452428],
       properties: {
-        image: '../images/eastpoint.png',
+        image: './images/eastpoint.png',
         name: 'East Point Lighthouse',
         constructiondate: '1867',
         address:
@@ -356,7 +390,7 @@ map.on('load', () => {
     {
       coordinates: [-63.810162, 46.315838],
       properties: {
-        image: '../images/seacowhead.png',
+        image: './images/seacowhead.png',
         name: 'Seacow Head Lighthouse',
         constructiondate: '1863',
         address:
@@ -368,7 +402,7 @@ map.on('load', () => {
     {
       coordinates: [-62.745623, 45.949902],
       properties: {
-        image: '../images/woodislands.png',
+        image: './images/woodislands.png',
         name: 'Wood Islands Lighthouse',
         constructiondate: '1876',
         address:
@@ -380,7 +414,7 @@ map.on('load', () => {
     {
       coordinates: [-63.817286, 46.379643],
       properties: {
-        image: '../images/indianhead.png',
+        image: './images/indianhead.png',
         name: 'Indian Head Lighthouse',
         constructiondate: '1881',
         address:
@@ -392,19 +426,19 @@ map.on('load', () => {
     {
       coordinates: [-63.487297, 46.510196],
       properties: {
-        image: '../images/newlondon.png',
+        image: './images/newlondon.png',
         name: 'New London Lighthouse',
         constructiondate: '1876',
         address:
           '821 Cape Road, Park Corner, Prince Edward Island, C0B, Canada',
         website:
-          'https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=19730&pid=0',
+          'https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=19731',
       },
     },
     {
       coordinates: [-64.134128, 46.401791],
       properties: {
-        image: '../images/capeegmont.png',
+        image: './images/capeegmont.png',
         name: 'Cape Egmont Lighthouse',
         constructiondate: '1883',
         address:
@@ -416,7 +450,7 @@ map.on('load', () => {
     {
       coordinates: [-63.996927, 47.057652],
       properties: {
-        image: '../images/northcape.png',
+        image: './images/northcape.png',
         name: 'North Cape Lighthouse',
         constructiondate: '1866',
         address: '2183 Rte. 12, Seacow Pond, Prince Edward Island, C0B, Canada',
@@ -427,7 +461,7 @@ map.on('load', () => {
     {
       coordinates: [-62.247511, 46.345866],
       properties: {
-        image: '../images/souris.png',
+        image: './images/souris.png',
         name: 'Souris Historic Lighthouse',
         constructiondate: '1880',
         address: '134 Breakwater Street, Souris, Prince Edward Island, Canada',
@@ -438,7 +472,7 @@ map.on('load', () => {
     {
       coordinates: [-63.488943, 46.214049],
       properties: {
-        image: '../images/leards.png',
+        image: './images/leards.png',
         name: 'Leards Range Front Lighthouse',
         constructiondate: '1879',
         address:
@@ -450,7 +484,7 @@ map.on('load', () => {
     {
       coordinates: [-64.386854, 46.620252],
       properties: {
-        image: '../images/westpoint.png',
+        image: './images/westpoint.png',
         name: 'West Point Lighthouse',
         constructiondate: '1876',
         address:
@@ -462,7 +496,7 @@ map.on('load', () => {
     {
       coordinates: [-63.292818, 46.455105],
       properties: {
-        image: '../images/northrustico.png',
+        image: './images/northrustico.png',
         name: 'North Rustico Lighthouse',
         constructiondate: '1876',
         address:
@@ -474,7 +508,7 @@ map.on('load', () => {
     {
       coordinates: [-63.772267, 46.391138],
       properties: {
-        image: '../images/summerside.png',
+        image: './images/summerside.png',
         name: 'Summerside Back Range Light',
         constructiondate: '1895',
         address:

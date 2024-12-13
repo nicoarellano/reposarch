@@ -1,0 +1,201 @@
+body {
+    background-size:cover; 
+    background-position:center;
+
+  }
+
+  .background-img {
+
+    background-image: url(nunavut.jpg);
+    background-size: cover;
+    /* Without z-index the background seems to cover the content*/
+    z-index: -1;
+}
+  
+  .text-box {
+    background-color: rgba(4, 29, 219, 0.466); 
+    padding: 10px; 
+    border-radius: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 40px; 
+    text-align: center; 
+  }
+
+  .text-box2 {
+    background-color: #0397197e;
+    margin: auto;
+    width: 50%;
+    border: 5px solid green;
+    padding: 10px;
+    margin-top: 2em;
+    border-radius: 20%;
+    z-index: 6;
+  }
+
+
+  .text-box3 {
+    background-color: rgba(203, 199, 74, 0.265);
+    margin: auto;
+    width: 50%;
+    border: 5px solid green;
+    padding: 10px;
+    margin-top: 2em;
+    border-radius: 20%;
+    text-align: left;
+  }
+
+  .text-box4 {
+    background-color: rgba(243, 243, 238, 0.8);
+    margin: auto;
+    width: 50%;
+    border: 0px solid green;
+    padding: 10px;
+    margin-top: 2em;
+    border-radius: 0%;
+    text-align: center;
+  }
+
+  header {
+    font-family: Arial, sans-serif;
+    color: #212224;
+    text-align: center;
+    }
+
+
+
+
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 300px;
+
+  }
+  
+  .button {
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    background: transparent;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    color: #e0ffff;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .button:active{
+    transform: scale(0.95);
+  }
+  .button::before{
+    content: '';
+    position: absolute;
+    inset: -3px 50px;
+    background: #42455a;
+    transition: inset 350ms ease;
+    z-index: -2;
+  }
+  .button:hover::before{
+    inset: -20px 0px;
+    background: rgb(51, 179, 51);
+  }
+  .button::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 10px;
+    background: #22232e;
+    z-index: -1;
+  }
+
+ 
+
+
+
+
+  .profile-picture-container {
+    width: 160px; 
+    height: 160px;
+    position: absolute;
+    top: 100px; 
+    left: 33px; 
+    border-radius: 40%;
+    overflow: hidden;
+  }
+
+  
+  .profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }   
+
+  
+
+  .photo-container {
+    width: 600px; 
+    height: 500px; 
+    float: right;
+    position: relative;
+    right: 20px;
+    top: 10px;
+    overflow: hidden; 
+  }
+  
+  .rectangular-photo {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+  } 
+  
+  #three-container {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+    top: -498px; 
+  }
+  
+  .container {
+    position: left;
+    top: 10px;
+    left: 20px;
+    width: 550px;
+    height: 500px;
+    border: 10px solid #ccc;
+  
+  }
+
+  #mapheadertext {
+    font-family: 'Arial', sans-serif;
+        background: rgba(255, 255, 255, 0.7); 
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        margin-top: 1100px;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        font-size: 13px;
+        font-style: italic; 
+        color: rgb(54, 52, 52); 
+        
+    }
+    body { margin: 0; padding: 0; z-index: 2;}
+    html, body, #map { height: 100%; z-index: 2;}
+
+
+#map {
+    top: 0px;
+  height: 800px;
+  z-index: 2;   
+
+}
