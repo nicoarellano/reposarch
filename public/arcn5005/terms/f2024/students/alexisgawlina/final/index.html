@@ -1,11 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>alexisgawlina final page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<head lang="en">
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Alexis Gawlina- Final</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+ </head>
+
+<!-- Toggle Button -->
+<button id="toggleEffect">Turn On Ladybugs</button>
+<script src="./main.js"></script>
+
+<body>
+
+  <style>
+    body {
+      font-family: 'roboto', sans serif;
+    }
+  </style>
+<section class="main-container">
+  <style>
+    body {
+      background-image: url('background low opacity 2.jpg');
+    }
+  </style>
+
+  <div class="final">
+    <img src="./photo-01.jpg" alt="Alexis Gawlina" height="200"/>
+   
+    <div class="header">
+      <h1 class="title">
+        <span class="title-word title-word-1">Alexis</span>
+        <span class="title-word title-word-2">Gawlina</span>
+      </h1>
+    </div>
+
+    <div class="title">
+      <div class="titletext"></div>
+    </div>
+    <p>
+      ARCN5005
+      </p>
+      <p>
+        View my projects individually below!
+        </p>
+    <br />
+
+    <div class="buttonbox">
+      <a href="../about/index.html"><button id:"assignment1-button">Assignment 1</button></a>
+      <a href="../three/"><button id:"assignmen2-button">Assignment 2</button></a>
+      <a href="../map/"><button id:"assignmen3-button">Assignment 3</button></a>
+      <br>
+    </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <img src="./burlington on.jpg" style="width: 100%" />
+          <div class="text">Burlington, ON.</div>
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <img src="./interior design.jpg" style="width: 100%" />
+          <div class="text">Interior Design Backgroud.</div>
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img src="./willow.jpg" style="width: 100%" />
+          <div class="text">Willow.</div>
+        </div>
+  
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 6</div>
+          <img src="./nature.jpg" style="width: 100%" />
+          <div class="text">Love for Nature</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"> 5 / 6</div>
+          <img src="./st martin.jpg" style="width: 100%" />
+          <div class="text">St.Martin.</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"> 6 / 6</div>
+          <img src="./photography.jpg" style="width: 100%" />
+          <div class="text">My Favourite Photograph.</div>
+        </div>
+  
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+  
+      <br />
+  
+      <div style="text-align: left">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+  
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+  
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+  
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+  
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName('mySlides');
+          let dots = document.getElementsByClassName('dot');
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+          }
+          slides[slideIndex - 1].style.display = 'block';
+          dots[slideIndex - 1].className += ' active';
+        }
+      </script>
+  
+      <br />
+        </div>
+
+    </div>
+  </div>
+  <div id="viewers">
+    <div width='50vw' height="80vh">
+      <div id="three-container-f2024" ></div>
+    </div>
+
+  
+    <iframe class="viewer1" src="../map/index.html" frameborder="0"></iframe> 
+    <div class="legend"><p>GIS Mapping 30 of Canada's Largest Lakes</p></div>
+    
+    <iframe class="viewer2" src="../three/index.html" frameborder="0"></iframe>
+    <div class="legend"><p>3D Modeling with Luma AI, Blender and Three.js </p></div>
+    
+  </div>
+  
+</section>
+</body>
+
+<!-- Three js Modules -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+
+<canvas class="three-canvas" id="three-canvas-f2024"></canvas>
+
+<script type="module" src="./final/main.js"></script>
+  
+
 </html>

@@ -2,9 +2,8 @@ import { recordstores } from './Recordstores.js';
 import { venues } from './Venues.js';
 const map = (window.map = new maplibregl.Map({
   container: 'map',
-  // ⚠️⚠️ Change it to your own API key ⚠️⚠️
   style:
-    'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
+    'https://api.maptiler.com/maps/streets/style.json?key=BsQV9nh1HzSGX3QZmgDL',
   center: [-75.697193, 45.42153],
   zoom: 10,
   antialias: true,

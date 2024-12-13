@@ -34,6 +34,7 @@ map.on('load', () => {
                 Location: 'Louvre Museum, 75001 Paris, France',
                 Description:
                   "Former historic palace housing huge art collection, from Roman sculptures to da Vinci's Mona Lisa.",
+                  Image: 'images/Louvre_Museum.jpg',
               },
             },
             {
@@ -50,6 +51,7 @@ map.on('load', () => {
                   'Arc de Triomphe, Pl. Charles de Gaulle, 75008 Paris, France',
                 Description:
                   "Iconic triumphal arch built to commemorate Napoleon's victories, with an observation deck.",
+                Image: 'images/Arc_de_Triomphe.jpg',
               },
             },
             {
@@ -66,6 +68,7 @@ map.on('load', () => {
                   'Eiffel Tower, Av. Gustave Eiffel, 75007 Paris, France',
                 Description:
                   "Gustave Eiffel's iconic, wrought-iron 1889 tower, with steps and elevators to observation decks.",
+                Image: 'images/Eiffel_Tower.jpg',
               },
             },
             {
@@ -81,6 +84,7 @@ map.on('load', () => {
                 Location: 'Panthéon, Pl. du Panthéon, 75005 Paris, France',
                 Description:
                   '18th-century mausoleum with colonnaded facade, housing remains of notable French citizens.',
+                Image: 'images/Panthéon.jpg',
               },
             },
             {
@@ -95,6 +99,7 @@ map.on('load', () => {
                 Hours: '8am - 5:30pm',
                 Location: 'Pl. Valhubert, 75000 Paris, France',
                 Description: 'Beautiful Parc in the heart of Paris.',
+                Image: 'images/Jardin_de_roches.jpg',
               },
             },
             {
@@ -111,6 +116,7 @@ map.on('load', () => {
                   '6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris, France',
                 Description:
                   "Towering, 12th-century cathedral with flying buttresses & gargoyles, setting for Hugo's novel.",
+                Image: 'images/Notre-Dame.jpg',
               },
             },
             {
@@ -126,6 +132,7 @@ map.on('load', () => {
                 Location: 'Pont Neuf, 75001 Paris, France',
                 Description:
                   'Arched stone bridge, opened in 1607, with 2 spans & a bronze, equine statue of King Henri IV.',
+                Image: 'images/Pont_Neuf.jpg',
               },
             },
             {
@@ -141,6 +148,7 @@ map.on('load', () => {
                 Location: 'Pont des Arts, 75006 Paris, France',
                 Description:
                   'Picturesque bridge over the Seine connecting the Louvre & the Institut de France.',
+                Image: 'images/Pont_des_Arts.jpg',
               },
             },
           ],
@@ -154,7 +162,20 @@ map.on('load', () => {
         source: 'landmarks',
         layout: {
           'icon-image': 'landmark-marker',
-          'icon-size': 0.1,
+              'icon-size': [
+              'interpolate', 
+              ['linear'],
+              ['zoom'],
+              // When zoom is 10, icon size is 0.5
+              10, 0.05,
+              // When zoom is 15, icon size is 2
+              15, .25,
+              // When zoom is 20, icon size is 3
+              20, .5
+          ],
+          'text-field': ['get', 'name'], 
+          'text-offset': [0, 1.5],
+          'text-anchor': 'top'
         },
       });
     }
@@ -177,6 +198,7 @@ map.on('load', () => {
             'stroke-opacity': 1,
             fill: '#ff5c5c',
             'fill-opacity': 0.5,
+            
           },
           geometry: {
             coordinates: [
@@ -268,18 +290,19 @@ map.on('click', 'landmarks', (e) => {
   }
 
   new maplibregl.Popup()
-    .setLngLat(coordinates)
-    .setHTML(
-      `
-              <h3>${landmark.properties.Place}</h3>
-              <p>Neighbourhood: ${landmark.properties.Neighbourhood}</p>
-              <p>Hours: ${landmark.properties.Hours}</p>
-              <p>Location: ${landmark.properties.Location}</p>
-              <p>Description: ${landmark.properties.Description}</p>
-              <img src="${landmark.properties.Image || 'images/Eiffel_Tower.jpg'}" 
-       alt="${landmark.properties.Place}" style="width:50%;height:auto;">
-`)
-    .addTo(map);
+  .setLngLat(coordinates)
+  .setHTML(
+    `
+      <h3>${landmark.properties.Place}</h3>
+      <p>Neighbourhood: ${landmark.properties.Neighbourhood}</p>
+      <p>Hours: ${landmark.properties.Hours}</p>
+      <p>Location: ${landmark.properties.Location}</p>
+      <p>Description: ${landmark.properties.Description}</p>
+      <img src="${landmark.properties.Image}" 
+           alt="${landmark.properties.Place}" style="width:50%;height:auto;">
+    `
+  )
+  .addTo(map);
 });
 
 map.on('idle', () => {
