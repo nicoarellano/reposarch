@@ -43,7 +43,7 @@ canvas {
   display: block;
   margin: 0 auto;
   width: 180px;
-  height: 180px;
+  height: 220px;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -108,11 +108,11 @@ canvas {
   justify-content: center;
   align-items: flex-end;
   text-align: center;
-  padding: 20px;
+  padding: 300px;
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: 0.5rem;
   color: #333;
   margin-bottom: 10px;
 }

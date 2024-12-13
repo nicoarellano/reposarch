@@ -52,8 +52,8 @@ html, body, #map {
 
 /* Main heading styles */
 .map-overlay h2 {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 0.5 rem;
+  line-height: 1.5rem;
   margin-bottom: 10px;
   text-align: center;
 }
