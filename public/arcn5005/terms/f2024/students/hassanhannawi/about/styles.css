@@ -13,6 +13,16 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
+h2 {
+   text-align: center; 
+}
+
+.logo {
+    position: relative;
+    left: 38vw;
+ }
+
+ 
 nav ul {
     list-style: none;
     display: flex;
@@ -133,3 +143,4 @@ h2 {
 
 .active {
 }
+
