@@ -87,32 +87,64 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0; /* Add spacing */
 }
 
-button {
-  background-color: white;
-  color: olive;
+.buttonbox a {
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  background-color: #e5b4ff; /* Lilac shade */
+  color: white;
+  font-family: 'Playfair Display', serif;
   border-radius: 9em;
-  font-size: 11px;
-  font-weight: 500;
-  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 600;
   padding: 1em 2em;
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  border: 1px solid black;
-  box-shadow: 0 0 0 0 black;
+  border: none;
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
 }
 
-button:hover {
-  transform: translateY(-4px) translateX(-2px);
+.buttonbox a:hover {
+  background-color: #9e93e7; /* Darker lilac */
+  transform: translateY(-4px);
   box-shadow: 2px 5px 0 0 black;
 }
 
-button:active {
-  transform: translateY(2px) translateX(1px);
+.buttonbox a:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
+}
+/* Gradient button */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #6a5acd, #eecaff); /* Gradient button color */
+  color: white;
+  font-family: 'Playfair Display', serif;
+  border-radius: 9em;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1em 2em;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
   box-shadow: 0 0 0 0 black;
 }
+
+.btn:hover {
+  background: linear-gradient(135deg, #f1efff, #a99bff); /* Reversed gradient for hover */
+  transform: translateY(-4px); /* Slight lift effect */
+  box-shadow: 2px 5px 0 0 black; /* Shadow effect */
+}
+
+.btn:active {
+  transform: translateY(2px); /* When clicked */
+  box-shadow: 0 0 0 0 black;
+}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -215,6 +247,7 @@ button:active {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: 'Playfair Display', serif;
 }
 
 .topnav a:hover {
@@ -264,4 +297,3 @@ button:active {
     border-color: transparent;
   }
 }
-
