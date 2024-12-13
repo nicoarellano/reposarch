@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>ashastott final page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css' />
+    <script src="./main.js"></script>
+    <title>Final Assignment</title>
   </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
-</html>
+      
+        <body>
+          <main>
+            <header>
+              <h1> ASHA STOTT</h1>
+              </header>
+              <h2>
+                B.Env.D. '24, University of Manitoba<br>
+                M.Arch Student, Carleton University
+                </h2>
+              <h3> my final assignment for ARCN5005!<br>
+                thank you for a fun class :D<br>
+              </h3>
+            <h4>
+              + [OTHER]<br>
+          <a href="../about/index.html"><button id="three-button">About Page</button></a>
+          <a href="../bim/index.html"><button>3D Assignment</button></a>
+          <a href="../map/index.html"><button>Map Assignment</button></a>
+            </h4>
+            <section>
+              <div class="photo-container">
+                <img src="cowboyhatasha.jpg" alt="Photo" class="image_wrapper">
+              </div>
+            </section>
+            <section>
+              <div id="chicken"></div>
+            </section>
+          </main>
+        </body>
+
+        <div class="fullscreen-photo" id="fullscreenPhoto">
+          <img src="ochi.jpg" alt="Fullscreen Photo">
+        </div>
+
+        <div class="container map-container">
+          <iframe class="viewer" src="../map/index.html" frameborder="0"></iframe>
+        </div>
+        
+        <div class="container three-container">
+          <iframe class="viewer" src="../three/index.html" frameborder="0"></iframe>
+        </div>
+
+        <div class="container about-container">
+          <iframe class="viewer" src="../about/index.html" frameborder="0"></iframe>
+        </div>
+
+
+        </div>
+      </html>
