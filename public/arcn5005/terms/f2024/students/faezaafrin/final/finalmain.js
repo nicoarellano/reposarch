@@ -84,7 +84,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>J:Unique</strong><p>Cuisine: Japanese</p>',                        
-                        'image': './Photos/junique.jpg'
+                        'image': '../Map/Photos/junique.jpg'
                     }
                 },
                 {
@@ -96,7 +96,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Dreamland Cafe</strong><p>Cuisine: Italian</p>',                        
-                        'image': './Photos/dreamland.jpg'
+                        'image': '../Map/Photos/dreamland.jpg'
                     }
                 },
                 {
@@ -107,7 +107,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Raphaël</strong><p>Cuisine: Peruvian</p>',                        
-                        'image': './Photos/raphael.jpg'
+                        'image': '../Map/Photos/raphael.jpg'
                     }
                 },
                 {
@@ -118,7 +118,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>SuzyQ Donuts</strong><p>Cuisine: Dessert</p>',                        
-                        'image': './Photos/suzyq.jpg'
+                        'image': '../Map/Photos/suzyq.jpg'
                     }
                 },
                 {
@@ -129,7 +129,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Trofí</strong><p>Cuisine: Greek</p>',                        
-                        'image': './Photos/trofi.jpg'
+                        'image': '../Map/Photos/trofi.jpg'
                     }
                 },
                 {
@@ -140,7 +140,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Tirweka</strong><p>Cuisine: Middle Eastern</p>',                        
-                        'image': './Photos/tirweka.jpg'
+                        'image': '../Map/Photos/tirweka.jpg'
                     }
                 },
                 {
@@ -151,7 +151,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Restaurant E18teen</strong><p>Cuisine: French</p>',                        
-                        'image': './Photos/e18teen.jpg'
+                        'image': '../Map/Photos/e18teen.jpg'
                     }
                 },
                 {
@@ -162,7 +162,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Delysées</strong><p>Cuisine: Dessert</p>',                        
-                        'image': './Photos/delysees.jpg'
+                        'image': '../Map/Photos/delysees.jpg'
                     }                    
                 },
                 {
@@ -173,7 +173,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>The Momo Spot</strong><p>Cuisine: Nepalese</p>',                        
-                        'image': './Photos/momo.jpg'
+                        'image': '../Map/Photos/momo.jpg'
                     }                       
                 },
                 {
@@ -184,7 +184,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Fuwa Fuwa</strong><p>Cuisine: Dessert</p>',                        
-                        'image': './Photos/fuwa.jpg'
+                        'image': '../Map/Photos/fuwa.jpg'
                     }                        
                 },
                 {
@@ -195,7 +195,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Karahi Point</strong><p>Cuisine: Pakistani</p>',                        
-                        'image': './Photos/karahi.jpg'
+                        'image': '../Map/Photos/karahi.jpg'
                     }                        
                 },
                 {
@@ -206,7 +206,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Pelican Seafood Market & Grill</strong><p>Cuisine: Seafood</p>',                        
-                        'image': './Photos/pelican.jpg'
+                        'image': '../Map/Photos/pelican.jpg'
                     }                        
                 },
                 {
@@ -217,7 +217,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Idriss Mediterranean</strong><p>Cuisine: Algerian</p>',                        
-                        'image': './Photos/idriss.jpg'
+                        'image': '../Map/Photos/idriss.jpg'
                     }                        
                 },
                 {
@@ -228,7 +228,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Delysées</strong><p>Cuisine: Neopolitan/New York Fusion</p>',                        
-                        'image': './Photos/lilz.jpg'
+                        'image': '../Map/Photos/lilz.jpg'
                     }                        
                 },
                 {
@@ -239,7 +239,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Cocotte Bistro</strong><p>Cuisine: French</p>',                        
-                        'image': './Photos/cocotte.jpg'
+                        'image': '../Map/Photos/cocotte.jpg'
                     }                    
                 },
                 {
@@ -250,7 +250,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Pasticceria Gelateria Italiana</strong><p>Cuisine: Dessert</p>',                        
-                        'image': './Photos/pasticceria.jpg'
+                        'image': '../Map/Photos/pasticceria.jpg'
                     }                    
                 },
                 {
@@ -261,7 +261,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Dao Café</strong><p>Cuisine: Dessert</p>',                        
-                        'image': './Photos/dao.jpg'
+                        'image': '../Map/Photos/dao.jpg'
                     }                     
                 },
                 {
@@ -272,7 +272,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Allô mon Coco</strong><p>Cuisine: Brunch</p>',                        
-                        'image': './Photos/allomoncoco.jpg'
+                        'image': '../Map/Photos/allomoncoco.jpg'
                     }                     
                 },
                 {
@@ -283,7 +283,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Caravela Restaurante</strong><p>Cuisine: Portuguese</p>',                        
-                        'image': './Photos/caravela.jpg'
+                        'image': '../Map/Photos/caravela.jpg'
                     }  
                                       
                 },
@@ -295,7 +295,7 @@ map.on('load', () => {
                     },
                     'properties': {
                         'description': '<strong>Alhalabi</strong><p>Cuisine: Syrian</p>',                        
-                        'image': './Photos/alhalabi.jpg'
+                        'image': '../Map/Photos/alhalabi.jpg'
                     }                  
                 }
             ]
