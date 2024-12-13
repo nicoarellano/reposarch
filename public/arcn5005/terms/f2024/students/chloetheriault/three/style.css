@@ -1,27 +1,59 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+body {
+    
+  background-color:  rgb(212, 153, 115);
+  display: flex;
+  align-content: stretch;
+  height: 100%;
+ 
+
 }
 
-body {background-color: rgb(154, 198, 197) ;
+
+#title {
+  font-family: "Concert One", sans-serif;
+  color: rgb(254, 250, 224);
+  flex-shrink: 3;
+  align-items: center;
+  margin-top: 10%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  
+  
 }
 
-img{
-    height: 150px;
-    width: 200px;
-    float:left;
-    margin: 100px ;
-    margin-top: 50px;
+img {
+ 
+  flex-shrink: 3;
+  width: 250px;
+  
 }
 
-#title{
-display: flex;
-    font-family: "Concert One", sans-serif;
-    align-self: left;
-    justify-content: left;
-    margin-top: 2%;
-    margin-left: 25px;
-    color: rgb(255, 255, 255);
+.three-canvas {
+  position: fixed;
+  flex-shrink: 3;
+  width: 60%;
+  z-index: 1;
+  right: 220;
+  bottom: 100;
+}
 
+::-webkit-scrollbar{
+  width: 1.5em;
+  
+}
+::-webkit-scrollbar-track {
+  background: hsl(30 53% 64% / 1);
+  border-radius: 100vw;
+  margin-block: .5em;
+  
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(52 94% 94% / 1);
+  border: .25em solid hsl(30 53% 64% / 1);
+  border-radius: 100vw;
 }

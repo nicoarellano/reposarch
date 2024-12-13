@@ -1,11 +1,148 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>haseenadoost map page</title>
+    <title>Mapping (Canadian Post-Industrial Landscapes)</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css"
+    />
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Import Playfair Display font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body,
+      #map {
+        height: 100%;
+      }
+
+      #header {
+        font-family: 'Playfair Display', serif;
+        background: #ffc5f1;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #header-title {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .nav-button {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #fbd2fb;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .nav-button:hover {
+        background-color: #a690ff;
+        transform: scale(1.1);
+      }
+
+      #map {
+        margin-top: 90px; /* Account for header height */
+      }
+
+      #legend-box {
+        position: absolute;
+        top: 120px; /* Adjust based on header height */
+        left: 20px;
+        background-color: #a690ff; /* Dark gray background */
+        border: 1px solid #f5d8f5;
+        border-radius: 10px;
+        padding: 25px;
+        width: 350px; /* Larger width */
+        box-shadow: 0 4px 8px rgba(207, 191, 255, 0.301);
+        font-family: 'Playfair Display', serif;
+        color: #fff; /* White text for contrast */
+        z-index: 2;
+        transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition on hover */
+      }
+
+      #legend-box:hover {
+        transform: scale(1.1); /* Slightly enlarge the box */
+        width: 400px; /* Make it wider when hovered */
+      }
+
+      #legend-icon {
+        display: block;
+        width: 80px; /* Larger icon size */
+        margin: 0 auto 20px;
+      }
+
+      #legend-text {
+        font-size: 18px; /* Larger text size for better readability */
+        line-height: 1.6;
+        text-align: justify;
+      }
+    </style>
   </head>
+
   <body>
-    ADD YOUR CODE HERE!
+    <div id="header">
+      <div id="header-title">
+        Mapping Post-Industrial Landscapes Around the World
+      </div>
+      <div class="nav-buttons">
+        <a href="../about/index.html" class="nav-button">About</a>
+        <a href="../assignments/assignment2.html" class="nav-button"
+          >Assignment 2</a
+        >
+        <a href="../assignments/assignment3.html" class="nav-button"
+          >Assignment 3</a
+        >
+        <a href="../map/index.html" class="nav-button">Map</a>
+        <a href="../bim/index.html" class="nav-button">BIM</a>
+      </div>
+    </div>
+
+    <div id="legend-box">
+      <img
+        src="postindustrialactualfinalagain.png"
+        alt="Legend Icon"
+        id="legend-icon"
+      />
+      <p id="legend-text">
+        This map highlights 26 regenerated post-industrial landscapes worldwide.
+        These locations were once landfills, lake fills, brownfields, gas
+        plants, or heavily industrialized areas. Now, they are vibrant parks
+        contributing to the public realm and communities on different scales.
+      </p>
+    </div>
+
+    <div id="map"></div>
+    <script src="main.js"></script>
   </body>
 </html>

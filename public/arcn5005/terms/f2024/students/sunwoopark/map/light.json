@@ -4473,9 +4473,9 @@
                 "text-rotation-alignment": "map",
                 "text-size": 14,
                 "text-transform": "uppercase",
-                "text-font": ["Inter Bold"]
-                
-
+                "text-font": [
+                    "Inter Bold"
+                ]
             },
             "paint": {
                 "text-color": "#74aee9",
@@ -4513,7 +4513,6 @@
                 "text-rotation-alignment": "map",
                 "text-size": 14,
                 "text-transform": "uppercase"
-
             },
             "paint": {
                 "text-color": "#7bb1ea",
@@ -5389,7 +5388,6 @@
                             11,
                             24
                         ]
-                
                     ]
                 },
                 "visibility": "visible"

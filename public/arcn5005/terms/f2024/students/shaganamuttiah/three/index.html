@@ -1,21 +1,33 @@
 <html>
-
 <head lang="en">
+  <link rel="stylesheet" href="https://use.typekit.net/jub7ukz.css">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
-  <title>About</title>
+  <title>My World - Assignment 2</title>
 </head>
 <body>
-  <div class="assignment2">
-    <img src="../avatar.jpg" alt="Shagana Muttiah" height="300" />
-    <a href="https://github.com/shaganamuttiah/reposarch"><button id:"three-button">GitHub</button></a>
-    
-  </div>
-  </body>
+  <main>
+    <header>
+      <br/>
+    <div class="about-me-tittle"> 
+      <h1>My World</h1>
+    </div>
+    </header>
 
-  <!-- Three js Modules -->
+  <!-- Button Container -->
+  <div class="button-container">
+    <a href="../about" class="box">Assignment 1</a>
+    <a href="./three" class="box">Assignment 2</a>
+    <a href="../map" class="box">Assignment 3</a>
+    <a href="../final" class="box">Final Home Page</a>
+  </div>
+
+  <!-- Three.js Canvas -->
+  <canvas class="three-canvas" id="three-canvas-shagana"></canvas>
+
+  <!-- Three.js Modules -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
@@ -23,7 +35,5 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
 
   <script type="module" src="./main.js"></script>
-  <canvas class="three-canvas" id="three-canvas-f2024"></canvas>
-
-  
+</body>
 </html>

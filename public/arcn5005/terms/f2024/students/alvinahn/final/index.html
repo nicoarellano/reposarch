@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <title>alvinahn final page</title>
-  </head>
-  <body>
-    ADD YOUR CODE HERE!
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALVIN AHN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Content -->
+        <div class="image">
+            <img src="./Images/Profile.jpg" alt="Alvin Ahn" style="width: 95%; height: 95%; object-fit: cover;">
+        </div>
+        <div class="title">
+            <h1>ALVIN AHN</h1>
+            <p>Hey everyone!</p>
+            <p>From bachelor of economics in Korea, architectural technician program in Ottawa,</p>
+            <p>and here I am studying master of architecture with you guys!</p>
+            <p>Apart from studying architecture, I have so many hobbies to enjoy.</p>
+            <p>But if I have to choose, I think I never get tired of traveling and watching Red Bull BC One!!</p>
+            <h2>But what is Red Bull BC One?</h2>
+        </div>
+
+        <div class="buttons">
+            <a href="https://alvinkhahn.myportfolio.com/" target="_blank"><button>PORTFOLIO</button></a>
+            <a href="https://ca.linkedin.com/in/alvinkhahn" target="_blank"><button>Linked In</button></a>
+            <a href="https://github.com/alvinkhahn?tab=repositories" target="_blank"><button>Git Hub</button></a>
+            <a href="https://youtube.com/@redbullbcone?si=5gCXYRKnRdi48oPd" target="_blank"><button>Red Bull BC One</button></a>
+        </div>
+
+        <!-- Map and 3D Space -->
+        <div class="item map">
+            <iframe class="viewer1" src="../map/index.html" frameborder="0"></iframe>
+        </div>
+        <div class="viewer2">
+            <iframe class="viewer2" src="../three/index.html" frameborder="0"></iframe>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="./Images/b-girl paulina.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="./Images/b-girl nicka.jfif" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="./Images/b-girl ami2.avif" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="./Images/b-boy sunni.avif" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="./Images/b-boy hong10.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="./Images/b-boy samuka.avif" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+            
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="./Images/b-girl paulina.jpg" style="width:100%" onclick="currentSlide(1)" alt="B-girl Paulina">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./Images/b-girl nicka.jfif" style="width:100%" onclick="currentSlide(2)" alt="B-girl Nicka">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./Images/b-girl ami2.avif" style="width:100%" onclick="currentSlide(3)" alt="B-girl Ami">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./Images/b-boy sunni.avif" style="width:100%" onclick="currentSlide(4)" alt="B-boy Sunni">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./Images/b-boy hong10.jpg" style="width:100%" onclick="currentSlide(5)" alt="B-boy Hong10">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="./Images/b-boy samuka.avif" style="width:100%" onclick="currentSlide(6)" alt="B-boy Samuka">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
 </html>

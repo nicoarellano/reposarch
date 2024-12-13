@@ -20,7 +20,7 @@
 
 .slideshow-wrapper {
   display: flex;
-  width: 400%; /* 4 images -> 400% width */
+  width: 600%; /* 4 images -> 400% width */
   height: 100%;
   position: relative; /* Ensure keyframes 'left' works */
   left: 0;
@@ -40,12 +40,16 @@
 
 @keyframes slideshow {
   0%, 10% { left: 0; }
-  15%, 25% { left: -100%; }
-  30%, 40% { left: -200%; }
-  45%, 55% { left: -300%; }
-  60%, 70% { left: -200%; }
-  75%, 85% { left: -100%; }
-  90%, 100% { left: 0; }
+  10%, 20% { left: -100%; }
+  20%, 30% { left: -200%; }
+  30%, 40% { left: -300%; }
+  40%, 50% { left: -400%; }
+  50%, 60% { left: -500%; }
+  60%, 70% { left: -400%; }
+  70%, 80% { left: -300%; }
+  80%, 90% { left: -200%; }
+  90%, 99% { left: -100%; }
+  99%, 100% { left: 0; }
 }
 
 .slide-btn {
@@ -161,12 +165,12 @@
 }
 
 /* Position each button individually */
-.slide-btn-1 { left: 35%; }
-.slide-btn-2 { left: 41%; }
-.slide-btn-3 { left: 47%; }
-.slide-btn-4 { left: 53%; }
-.slide-btn-5 { left: 59%; }
-.slide-btn-6 { left: 65%; }
+.slide-btn-1 { left: 29%; }
+.slide-btn-2 { left: 37%; }
+.slide-btn-3 { left: 45%; }
+.slide-btn-4 { left: 55%; }
+.slide-btn-5 { left: 63%; }
+.slide-btn-6 { left: 71%; }
 
 /* Stop animation when focused on buttons */
 .slide-btn-1:focus ~ .slideshow-wrapper { animation: none; left: 0; }

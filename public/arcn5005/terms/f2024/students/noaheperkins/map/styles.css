@@ -1,0 +1,11 @@
+h1 {
+    font-family: 'Arial', sans-serif; /* Sets a clean font style */
+    font-size: 2.5rem; /* Adjusts the size of the text */
+    color: #333333; /* A dark gray color for the text */
+    text-align: center; /* Centers the text */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    margin: 20px 0; /* Adds spacing above and below the heading */
+    border-bottom: 2px solid #333333; /* Adds a border below the text */
+    padding-bottom: 10px; /* Adds space between text and border */
+}

@@ -4,8 +4,111 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>mostafabdeir final page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* For smoother scroll animation */
+      html {
+        scroll-behavior: smooth;
+      }
+      .hidden-section {
+        display: none;
+      }
+
+      
+    </style>
   </head>
   <body>
-    ADD YOUR CODE HERE!
+    <header>
+      <div id="title">
+        <h1>Adventure awaits, will you take the chance?</h1>
+      </div>
+    </header>
+
+    <section>
+      <div class="clicker">(CLICK)</div>
+      <nav>
+        <div class="container1">
+          <div class="myimage">
+            <img src="swordpull1.gif" class="small-avatar" id="avatarImage" />
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="second-half" class="hidden-section">
+      <div id="storyz">
+        <img src="storyboardz2.png" alt="erm">
+      </div>
+      <div class="canvascontainers">
+        <article id="viewers" class="hidden-section">
+          <div>
+            <iframe
+              class="viewer"
+              src="../map/index.html"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </article>
+
+        <article id="threeCanvas" class="hidden-section">
+          <iframe
+            class="threedcanvas"
+            src="../three/index.html"
+            frameborder="0"
+          ></iframe>
+        </article>
+      </div>
+
+      <div id="buttonsection" class="hidden-section">
+        <a href="../about/index.html">
+          <button class="button1">A DEEPER LEGACY<span></span></button>
+        </a>
+        <a href="../three/index.html">
+          <button class="button1">EXPLORE THE REALM<span></span></button>
+        </a>
+        <a href="../map/index.html">
+          <button class="button1">ELIXIRS OF LIFE<span></span></button>
+        </a>
+      </div>
+    </section>
+
+    <script>
+      // Auto-scroll functionality when the image is clicked
+      document.getElementById("avatarImage").addEventListener("click", function() {
+        // Unhide the next sections and scroll to the 'viewers' section
+        const viewersSection = document.getElementById("viewers");
+        const threeCanvasSection = document.getElementById("threeCanvas");
+        const buttonSection = document.getElementById("buttonsection");
+
+        viewersSection.classList.remove("hidden-section");
+        threeCanvasSection.classList.remove("hidden-section");
+        buttonSection.classList.remove("hidden-section");
+
+        viewersSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the 'viewers' section
+      });
+
+      const muteAudioInIframe = (iframeClass) => {
+        document.querySelector(iframeClass).addEventListener('load', function () {
+          const iframe = this;
+
+          try {
+            const iframeDoc = iframe.contentWindow.document;
+            const audioElements = iframeDoc.querySelectorAll('audio');
+            audioElements.forEach(audio => {
+              audio.muted = true;
+            });
+          } catch (e) {
+            console.error('Unable to access iframe content for muting. CORS restrictions may apply.', e);
+          }
+        });
+      };
+
+      muteAudioInIframe('.viewer');
+      muteAudioInIframe('.threedcanvas');
+    </script>
+    <div class="audio-player2">
+      <audio controls autoplay hidden>
+          <source src="ffuzi.mp3" type="audio/mpeg" >
+      </audio>
   </body>
 </html>
