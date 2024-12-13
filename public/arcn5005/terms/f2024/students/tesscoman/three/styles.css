@@ -6,7 +6,7 @@
 }
 
 body{
-  background-image: url(../images/library.jpg);
+  background-image: url(../images/librarybackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -104,7 +104,7 @@ button:before {
 }
 
 body{
-  background-image: url(../images/library.jpg);
+  background-image: url(../images/librarybackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -178,7 +178,6 @@ button {
   top: 10px;
   left: 10px;
 }
-
 
 button:hover {
   color: white;
