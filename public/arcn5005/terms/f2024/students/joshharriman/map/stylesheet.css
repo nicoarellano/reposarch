@@ -8,12 +8,13 @@
 
 audio {
   position: center;
+  max-width: 80%;
 }
 
 .sidebar {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 120px;
     height: 120vh;
     width: 300px;
     text-align: center;
