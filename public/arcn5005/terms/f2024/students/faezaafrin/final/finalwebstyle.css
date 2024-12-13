@@ -25,6 +25,12 @@ body {
   background-size: cover; 
 }
 
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer; /* Default cursor */
+}
+
 .header {
     /*border: 5px solid blue;*/
     color: white;
@@ -267,9 +273,13 @@ body {
   line-height: 1.6;
 }
 
-/* Donut cursor */
-.donut-cursor {
-  cursor: url('./img/donut.png'), auto;
+#donutButton {
+  background-color: rgba(76, 174, 79, 0); 
+  color: white; 
+  border-radius: 10px; 
+  font-size: 16px; 
+  padding: 10px 20px; 
+  cursor: pointer; 
 }
 
 .main-right ul {
