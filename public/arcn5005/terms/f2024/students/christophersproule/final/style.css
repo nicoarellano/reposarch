@@ -1,0 +1,166 @@
+.header{
+    text-align: center;
+    font-family: "podium-soft-variable",sans-serif;
+    font-variation-settings: 'wdth' 129;
+      }
+
+
+.sub-header{
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 174, 0);
+}    
+           
+.body-paragraph {
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.centered-content {
+   text-align: center;
+}
+
+.rounded-image {
+    border-radius: 180px;
+    margin-top: 20px;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.assignment-button {
+    background-color: rgb(0, 0, 0);
+    border: 1px;
+    color: white;
+    height: 40px;
+    width: 250px;
+    font-family: "podium-soft-variable",sans-serif;
+    font-weight: 150;
+    font-size: 15px;
+    margin-left: -5px;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 3s;
+}
+
+.assignment-button:hover {
+    background-color: rgb(255, 174, 0);
+    color: rgb(0, 0, 0);
+}
+
+
+img {
+    max-width: 500px;
+    margin-top: 20px;
+  }
+  
+  .description {
+    padding: left 100px;
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 475px;
+    position: relative;
+    margin: auto;
+  
+  }
+  
+  /* Next & previous buttons */
+  .prev {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: white;
+    height: 30px;
+    width: 150px;
+    font-family: "podium-soft-variable",sans-serif;
+    font-weight: 150;
+    font-size: 30px;
+    margin-left: -5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 3s;
+    padding-right: 190px;
+    padding-left: 50px;
+    padding-top: 5px;
+  }
+  
+  
+  .next {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: white;
+    height: 30px;
+    width: 150px;
+    font-family: "podium-soft-variable",sans-serif;
+    font-weight: 150;
+    font-size: 30px;
+    margin-left: -5px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 3s;
+    padding-left: 190px;
+    padding-right: 50px;
+    padding-top: 5px;
+  }
+  .prev:hover {    
+    background-color: rgb(255, 174, 0);
+    color: rgb(0, 0, 0);
+  } 
+  
+  .next:hover {
+    background-color: rgb(255, 174, 0);
+    color: rgb(0, 0, 0);
+}
+
+  /* Caption text */
+  .text {
+    color: rgb(255, 174, 0);
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .buttonbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .viewerthree {
+    position: relative; 
+    justify-content: center;
+    margin-right: 1000px;
+    margin-top: -1100px; /* Adjusted margin-top as needed */
+    padding: 0px; /* Adjusted padding as needed */
+    width: 400px;
+    height: 1100px; /* Used max-height instead of height to allow content overflow */
+    overflow: scroll; /* Added overflow property to allow scrolling if content exceeds the height */
+    filter: grayscale(100%); /* Start with fully grayscale */
+    transition: filter 2s ease; /* Smooth transition for the grayscale filter */
+}
+.viewerthree:hover {
+  filter: grayscale(0%); /* Fade to no grayscale on hover */
+}
+
+.viewermap {
+    position: relative; 
+    justify-content: center;
+    margin-left: 1000px;
+    margin-top: -1100px; /* Adjusted margin-top as needed */
+    padding: 0px; /* Adjusted padding as needed */
+    width: 400px;
+    height: 1100px; /* Used max-height instead of height to allow content overflow */
+    overflow: auto; /* Added overflow property to allow scrolling if content exceeds the height */;
+    filter: grayscale(100%); /* Start with fully grayscale */
+    transition: filter 2s ease; /* Smooth transition for the grayscale filter */
+}
+
+.viewermap:hover {
+  filter: grayscale(0%); /* Fade to no grayscale on hover */
+}

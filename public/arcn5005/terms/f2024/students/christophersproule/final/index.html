@@ -5,7 +5,123 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>christophersproule final page</title>
   </head>
-  <body>
-    ADD YOUR CODE HERE!
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/nrz1wel.css"
   </body>
+
+  <div class="header">
+    <h1>Chris Sproule</h1>
+  <div class="sub-header"
+  <h2>(sounds like crisp roll)</h2>
+  </div>
+  
+  <div class="centered-content">
+    <img src="../about/avatar.jpg" width="200" class="rounded-image"   
+  </div>
+  <div class="centered-content" style="margin-top:20px;">
+      <p class="body-paragraph" style="font-size: 12px;">
+        Spot any patterns?   
+  <p 
+
+</div>
+<div class="button-container"style=margin-top:20px;">
+  <a href="../about/index.html"><button role="button" class="assignment-button">01 ABOUT</button></a>
+  <a href="../three/index.html"><button role="button" class="assignment-button">02 THREE</button></a>  
+</div>
+  <a href="../map/index.html"><button role="button" class="assignment-button">03 MAPPING</button></a> 
+  <a href="https://github.com/URBANsproule/SprouleCR"></a><button class="assignment-button">04 GIT HUB</button>
+</div>
+  <div class="centered-content"
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="../about/prairie.jpg">
+      <div class="text">The tallgrass prairie outside of Winnipeg, MB</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="../about/JAR.jpg">
+      <div class="text">John A. Russell Building courtyard, University of Manitoba</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="../about/AireRiver.jpg">
+      <div class="text">The Aire river restoration outside of Geneva</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="../about/Skogs.jpg">
+      <div class="text">Skogskyrkogården, Stockholm</div>
+    </div>
+    
+    
+    <div class="mySlides fade">
+      <img src="../about/RiverTrail.jpg">
+      <div class="text">The Red River skating trail, Winnipeg, MB</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../about/Ski.jpg">
+        <div class="text">Cross country skiing</div>
+      </div>
+
+    <div class="mySlides fade">
+        <img src="../about/TheLeaf.jpg">
+        <div class="text">The Leaf conservatory, Winnipeg, MB</div>
+      </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+</html>
+
+
+
+  <div id="viewers">
+    <iframe id="maplibre" class="viewermap" src="../map/index.html" style="border: none;"></iframe>
+    <iframe id="threejs" class="viewerthree" src="../three/index.html" style="border: none;"></iframe>
+
+    <script src="./main.js"></script>
+
+    
+    <script type="module" src="./main.js"></script>
+  </div>  
+    <canvas id="three-canvas"></canvas>
+      
+  </div>
+
+
+
 </html>

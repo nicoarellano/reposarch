@@ -66,7 +66,7 @@ const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphere);
 
 // Dot Particle System (Falling Dots with Irregular Movement)
-const dotTexture = new THREE.TextureLoader().load('./dot.png'); 
+const dotTexture = new THREE.TextureLoader().load('./Dot.png'); 
 const dots = [];
 const numDots = 300; // Number of dots
 
