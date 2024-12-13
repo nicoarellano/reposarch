@@ -1,0 +1,173 @@
+.container1 {
+  width: 1920px;
+  height: 1070px;
+}
+
+body {
+  background-image: url("sunsetback.gif");
+  background-size: contain;
+  background-size: 1920px, 1080px;
+  background-repeat: no-repeat;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.clicker {
+  font-size: 15pt;
+  color: white;
+  position: absolute;
+  top: 40rem;
+  left: 57.2rem;
+}
+
+ /* New styles for second-half section */
+.second-half {
+  background-image: url('ghost3.gif'); /* Replace with your desired background */
+  background-size: cover; /* Ensures the image covers the section */
+  width: 1920px;
+  height: 1080px;
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  padding: 0px;
+  margin: 0px;
+  color: #8e0000;
+  border: none; /* Remove any unintended borders */
+}
+
+#storyz {
+  position: absolute;
+  z-index: 6;
+}
+
+#title {
+  font-size: 20pt;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  z-index: 5;
+  left: 15rem;
+  top: 24rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.small-avatar {
+  width: 30rem;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  top: 37rem;
+  margin: auto;
+  
+}
+
+.small-avatar {
+  transition: 0.3s ease;
+}
+
+.small-avatar:hover {
+  content: url("swordpull.gif"); /* Change the image on hover */
+}
+
+.canvascontainers {
+  display: flex; /* Use flexbox to align items side by side */
+  justify-content: space-around; /* Distribute space between viewers */
+  align-items: center; /* Align viewers vertically in the middle */
+  height: 60vh; /* Ensure the container takes up the full height of the viewport */
+  padding: 0px;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  top: 22rem;
+  
+}
+
+.viewer {
+    width: 45vw;
+    height: 30rem;
+}
+
+
+.threedcanvas {
+    width: 45vw;
+    height: 30rem;
+}
+
+/*buttons */
+
+#buttonsection {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  align-items: center;
+  gap: 30rem;
+  padding-top: 20px;
+  position: absolute;
+  top: 125rem;
+}
+
+.button1 {
+    border: 6px solid rgb(255, 255, 255);
+    display: block;
+    position: relative;
+    padding: 1rem 5rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    font-size: 20px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-text-stroke-width: 1pt;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    background-size: 100%;
+    background-position: center;
+  }
+  
+  .button1 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+  }
+  
+  .button1 span::before {
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 700%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  .button1:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgba(112, 0, 0, 0.651);
+    z-index: -1;
+  }
+  
+  .button1:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  
+  .button1:active span::before {
+    background: #c2ffd6;
+  }
