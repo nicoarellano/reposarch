@@ -211,7 +211,7 @@ gltfLoader.load(
 
 let mesh3;
 gltfLoader.load(
-  './models/Meeee10.glb',
+  './models/Meeee4.glb',
   function (gltf) {
     if (gltf.scene) {
       mesh3 = gltf.scene;
