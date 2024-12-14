@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css' />
 
   <title>Final Assignment</title>
@@ -23,9 +23,9 @@
             <header>
            <h1>Josh Harriman</h1>
            <ul>
-            <li>Ecological-friendly building specialist</li>
+            <li>Ecological-friendly builder</li>
             <li>Attending Masters in Architecture, Carleton University</li>
-            <li>Ski instructor</li>
+            <li>Ski enthusiast</li>
             <li>Amateur viticulturist</li>
             <li>Neophyte programmer</li>
            </ul>
@@ -41,7 +41,7 @@
                 <li>Oxford graduate</li>
                 <li>First female architect in Pakistan</li>
                 <li>Co-founder of Heritage Foundation of Pakistan</li>
-                <li>Retired to design sustainble housing</li>
+                <li>Retired to design sustainble housing (slides 1 and 2 below)</li>
                 <li>Elegant combinations of design and materials</li>
             </ul>
             <h3>Franz Volhard</h3>
@@ -55,69 +55,75 @@
         </div>
 
 
-
-
-
-
         <div class="content-wrapper">
         <div class="profile-picture-container">
-            <img src="nunavut.jpg" alt="Profile Picture" class="profile-picture">
+            <img src="MeandEva.jpg" alt="Profile Picture" class="profile-picture">
         </div>
 
         
+        
+          <!-- Image Gallery -->
         <div class="photo-container">
-            <img src="cellardoorvineyard.jpg" alt="Photo" class="rectangular-photo">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="lari2.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="lari3.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="gazebo1.JPG" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="cellardoorvineyard.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="deck.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="flagstone.jpeg" style="width:100%">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+           
+            </div>
+       
+            <script src="main.js"></script>
         </div>
 
-
-
+        <div class="viewer2">
+            <iframe class="viewer2" src="../three/index.html" frameborder="0"></iframe>
+        </div>
 
 
 
         <div class="button-container">
-
-
-
-
-
-            <button class="button type1" onclick="window.location.href='';">About Me</button>
-            <button class="button type1"> Three </button>
-            <button class="button type1">   Map   </button>
+            <button class="button type1" onclick="window.location.href='https://reposarch.vercel.app/arcn5005/terms/f2024/students/joshharriman/about';">About</button>
+            <button class="button type1" onclick="window.location.href='https://reposarch.vercel.app/arcn5005/terms/f2024/students/joshharriman/three';"> Three </button>
+            <button class="button type1" onclick="window.location.href='https://reposarch.vercel.app/arcn5005/terms/f2024/students/joshharriman/map';">   Map   </button>
             </button> 
-    
-  
-  
-    </div>
+            <br>
+            <div class="audio"></div>
+                <audio controls>
+                    <source src="Tryo - Greenwashing.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
 
-    <div class="container">
-      <div class="three-container" id="three-container"></div>
-    </div>
+        <!-- Map and 3D Space -->
+        <div class="item map">
+            <iframe class="viewer1" src="../map/index.html" frameborder="0"></iframe>
+        </div>
 
-    <div class="text-box4">
-        <header>
-       <span>🟢 = Natural Builders in Canada (hover to see description)</span>
-       </header>
-   </div>
-
-    <div id="map"></div>
-
-    <div id="map-picture">
-        <img src=".jpg" alt="Map Picture" style="width: 100%;">
-      </div>
-    
-      <div class="content-wrapper">
-
-
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
-  <script type="module" src="./main.js"></script>
-
-  <script src='https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js'></script>
-  <script src="main.js"></script>
 
 
 </html>
