@@ -15,7 +15,7 @@ html {
 
 body,
 .custom-cursor {
-  cursor: url('cursor.png'), auto;
+  cursor: url('./cursor.png'), auto;
 }
 
 body::before {
@@ -141,7 +141,7 @@ button {
   color: #ffffff;
   font-family: inherit;
   font-weight: 600;
-  cursor: url('cursor.png'), pointer;
+  cursor: url('./cursor.png'), auto;
   position: relative;
   border: none;
   background: none;
@@ -266,7 +266,7 @@ button:after {
   vertical-align: middle;
   flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: url('cursor.png'), pointer;
+  cursor: url('./cursor.png'), auto;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -345,7 +345,6 @@ button:after {
 }
 
 #maplibre {
-  align: left;
   margin-left: 150px;
   z-index: 5; /* Slightly above for overlap */
   height: 448px; /* Set to match the container height */
@@ -362,7 +361,6 @@ button:after {
 
 /* Three.js viewer */
 #threejs {
-  align: left;
   margin-left: 0px;
   width: 890px;
   height: 510px; /* Set to match the container height */
@@ -470,7 +468,7 @@ button:after {
   height: 26px; /* Match or exceed slider height */
   top: 0;
   left: 0;
-  cursor: url('cursor.png');
+  cursor: url('./cursor.png'), auto;
 }
 
 .slider {
