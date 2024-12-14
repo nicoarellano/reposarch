@@ -52,7 +52,7 @@ html, body, #map {
 
 /* Main heading styles */
 .map-overlay h2 {
-  font-size: 0.5 rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 10px;
   text-align: center;
@@ -60,7 +60,7 @@ html, body, #map {
 
 /* Month header styles */
 .map-overlay h3#month-header {
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: 1.8rem;
   font-weight: bold;
   text-align: left;
@@ -73,7 +73,7 @@ html, body, #map {
 
 /* Legend heading styles */
 .map-overlay h4 {
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: 1.5rem;
   font-style: italic;
   font-weight: bold;
