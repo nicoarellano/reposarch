@@ -1,5 +1,6 @@
 /* General Reset */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -16,15 +17,22 @@ body, html {
   display: flex;
   flex-direction: row; /* Keeps content in horizontal layout */
   justify-content: space-between; /* Distributes content evenly */
+
   align-items: stretch;
   height: 100%;
 }
 
 /* Keyframes for Gradient Animation */
 @keyframes gradientBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Canvas */
@@ -43,7 +51,7 @@ canvas {
   display: block;
   margin: 0 auto;
   width: 180px;
-  height: 180px;
+  height: 220px;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -102,17 +110,18 @@ canvas {
 
 /* Map Section */
 .map-section {
+  width: 100%;
+  height: 95%;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: 0.5rem;
   color: #333;
   margin-bottom: 10px;
 }

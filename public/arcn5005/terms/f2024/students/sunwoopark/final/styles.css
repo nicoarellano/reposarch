@@ -15,7 +15,7 @@ html {
 
 body,
 .custom-cursor {
-  cursor: url('cursor.png'), auto;
+  cursor: url('./cursor.png'), auto;
 }
 
 body::before {
@@ -50,19 +50,19 @@ body::before {
   text-align: right;
   box-sizing: border-box;
   position: absolute;
-  }
+}
 
 h1 {
-    color: rgb(21, 73, 128);
-    font-size: 50px;
-    text-align: right;
-    width: 100%;
-    position: relative;
-    margin-bottom: 2px;
-    margin-left: 0px;
-    margin-top: -360px;
-    top: 0;
-  }
+  color: rgb(21, 73, 128);
+  font-size: 50px;
+  text-align: right;
+  width: 100%;
+  position: relative;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  margin-top: -360px;
+  top: 0;
+}
 
 h2 {
   color: rgb(255, 255, 255);
@@ -76,11 +76,11 @@ h2 {
 }
 
 .rounded-box {
-  background-color: rgb(255, 255, 255, 0.5); 
-  border-radius: 20px; 
-  padding: 7px;       
-  width: 260px;        
-  text-align:left; 
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 7px;
+  width: 260px;
+  text-align: left;
   position: relative;
   margin-left: 480px;
   margin-top: -20px;
@@ -110,8 +110,8 @@ ul {
   border: 2px solid rgb(13, 53, 128);
   border-radius: 50%;
   position: absolute;
-  left:780px;
-  top:-350px;
+  left: 780px;
+  top: -350px;
 }
 
 h3 {
@@ -141,7 +141,7 @@ button {
   color: #ffffff;
   font-family: inherit;
   font-weight: 600;
-  cursor: url('cursor.png'), pointer;
+  cursor: url('../cursor.png'), auto;
   position: relative;
   border: none;
   background: none;
@@ -154,7 +154,7 @@ button {
   overflow: visible;
   height: auto;
   line-height: 200%;
-  margin-left:90px;
+  margin-left: 90px;
   margin-top: -0px;
   left: -1160px;
   top: -167px;
@@ -167,7 +167,6 @@ button {
   width: 100%;
   height: 100%;
 }
-
 
 button:focus,
 button:hover {
@@ -200,7 +199,7 @@ button:after {
   justify-content: space-between, center;
   margin-top: 380px;
   margin-left: 440px;
-  transform: translateX(14px);   
+  transform: translateX(14px);
   z-index: 2;
 }
 
@@ -215,11 +214,11 @@ button:after {
 }
 
 .spotify-iframe {
-    position: fixed; 
-    top: -30px;    
-    right: 20px;    
-    z-index: 100; 
-    transform: translateY(50px)   
+  position: fixed;
+  top: -30px;
+  right: 20px;
+  z-index: 100;
+  transform: translateY(50px);
 }
 
 /* Viewers Container */
@@ -235,7 +234,6 @@ button:after {
   pointer-events: none; /* Prevent interference with other content */
   overflow: hidden; /* Prevent overflow content */
 }
-
 
 /* From Uiverse.io by david-mohseni */
 .wrapper {
@@ -266,7 +264,7 @@ button:after {
   vertical-align: middle;
   flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  cursor: url('cursor.png'), pointer;
+  cursor: url('./cursor.png'), auto;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -341,17 +339,16 @@ button:after {
   border: none; /* Optional: Add consistent border for both */
   box-sizing: border-box; /* Ensure border doesn't affect size */
   overflow-x: hidden; /* Prevent horizontal scroll */
-
 }
 
 #maplibre {
-  align: left;
   margin-left: 150px;
   z-index: 5; /* Slightly above for overlap */
   height: 448px; /* Set to match the container height */
-  clip-path: inset(50px 22px 0px 90px); /* 1 for top, 3rd for the bottom crop, last for left crop */
+  clip-path: inset(
+    50px 22px 0px 90px
+  ); /* 1 for top, 3rd for the bottom crop, last for left crop */
   transform: translateY(-68px);
-
 }
 
 /* Ensure the viewer and box are in the same container or positioned accordingly */
@@ -362,7 +359,6 @@ button:after {
 
 /* Three.js viewer */
 #threejs {
-  align: left;
   margin-left: 0px;
   width: 890px;
   height: 510px; /* Set to match the container height */
@@ -370,7 +366,9 @@ button:after {
   margin: 0; /* Ensure there's no margin affecting positioning */
   background-color: #ffffff;
   transform: translateX(-230px);
-  clip-path: inset(0px 0 100px 220px); /* 3rd for the bottom crop, last for left crop */
+  clip-path: inset(
+    0px 0 100px 220px
+  ); /* 3rd for the bottom crop, last for left crop */
 }
 
 #text-below-mapping {
@@ -398,14 +396,14 @@ button:after {
 }
 
 #stars {
-  position: fixed;  /* Fixed positioning to stay in place */
-  top: 0;           /* Start from the top of the page */
-  left: 0;          /* Start from the left of the page */
-  width: 100vw;     /* Take the full width of the viewport */
-  height: 100vh;    /* Take the full height of the viewport */
-  z-index: 100;       /* Ensure it stays behind other content */
-  display: none;    /* Initially hidden */
-  pointer-events: none;  /* Prevent interaction with stars */
+  position: fixed; /* Fixed positioning to stay in place */
+  top: 0; /* Start from the top of the page */
+  left: 0; /* Start from the left of the page */
+  width: 100vw; /* Take the full width of the viewport */
+  height: 100vh; /* Take the full height of the viewport */
+  z-index: 100; /* Ensure it stays behind other content */
+  display: none; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction with stars */
 }
 
 .star {
@@ -413,7 +411,7 @@ button:after {
   background-color: white;
   border-radius: 50%;
   opacity: 0;
-  animation: sparkle 1.5s infinite ease-in-out;  /* Faster animation */
+  animation: sparkle 1.5s infinite ease-in-out; /* Faster animation */
 }
 
 @keyframes sparkle {
@@ -423,7 +421,7 @@ button:after {
   }
   50% {
     opacity: 1;
-    transform: scale(2);  /* Bigger stars */
+    transform: scale(2); /* Bigger stars */
   }
   100% {
     opacity: 0.2;
@@ -442,7 +440,6 @@ button:after {
   z-index: -3; /* Below the button but above other content */
   display: none; /* Hidden by default */
 }
-
 
 /* Toggle Switch Container */
 .toggle-container {
@@ -470,7 +467,7 @@ button:after {
   height: 26px; /* Match or exceed slider height */
   top: 0;
   left: 0;
-  cursor: url('cursor.png');
+  cursor: url('./cursor.png'), auto;
 }
 
 .slider {
@@ -486,7 +483,7 @@ button:after {
 
 .slider:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 20px;
   width: 20px;
   left: 3px;
