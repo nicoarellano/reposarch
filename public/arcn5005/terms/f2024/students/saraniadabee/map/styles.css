@@ -6,7 +6,9 @@ body {
 }
 
 /* Ensure the map container occupies the full screen */
-html, body, #map {
+html,
+body,
+#map {
   height: 100%;
   width: 100%;
 }
@@ -52,7 +54,7 @@ html, body, #map {
 
 /* Main heading styles */
 .map-overlay h2 {
-  font-size: 0.5 rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 10px;
   text-align: center;
@@ -60,7 +62,7 @@ html, body, #map {
 
 /* Month header styles */
 .map-overlay h3#month-header {
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: 1.8rem;
   font-weight: bold;
   text-align: left;
@@ -73,7 +75,7 @@ html, body, #map {
 
 /* Legend heading styles */
 .map-overlay h4 {
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: 1.5rem;
   font-style: italic;
   font-weight: bold;
@@ -89,7 +91,7 @@ html, body, #map {
   flex-grow: 1;
   height: 12px;
   margin-right: 10px;
-  background: linear-gradient(to right, #FFF5F5, #FF0000);
+  background: linear-gradient(to right, #fff5f5, #ff0000);
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
