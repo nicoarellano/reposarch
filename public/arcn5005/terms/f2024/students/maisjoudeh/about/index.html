@@ -1,134 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mais Joudeh </title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mais Joudeh</title>
+
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+
+  <!-- Link to your custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <!-- Three.js Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+</head>
+<body>
+
+  <!-- Title Section -->
   <div id="title">
     <h1>Mais Joudeh</h1>
     <div class="moe">___________________________________________________</div>
+  </div>
+
+  <!-- Card Section with Image and LinkedIn -->
   <div id="card">
     <div>
-      <img src="img.jpeg" width="80" height="150"/>
+      <img src="img.jpeg" width="80" height="150" />
       <div class="Linkedin">
-        <a href="www.linkedin.com/in/mais-joudeh">LinkedIn</a>
-     </div>
-    </div>
-    
-    <div id="aboutme">
-      <div>
-        <h2>Fun Facts About Me :)</h2>
-          <li>The 's' in 'Mais' is not silent'</li>
-          <li>I am Palestinian/ Jordanian</li>
-          <li>Studied BArch - Cons & Sustainability at CarletonU</li>
-          <li>Worked as a Barista at Second cup for more than 2 years</li>
-          <li>Lived in Dubai until I was 13 years old, where I found my passion for Architecture!</li>  
-      </div>
-    
-      <div>
-        <br>
-        <br>
-        <div>
-          <a href="ASSIGNMENT02.HTML">
-            <button class="button button-item">
-              <span class="button-bg">
-                <span class="button-bg-layers">
-                  <span
-                    class="button-bg-layer button-bg-layer-1 -brown"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-2 -pink"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-3 "
-                  ></span>
-                </span>
-              </span>
-              <span class="button-inner">
-                <span class="button-inner-static">Assignment 2</span>
-                <span class="button-inner-hover">TWO</span>
-              </span>
-            </button>
-          </a>
-          <br>
-          <br>
-          <a href="ASSIGNMENT02.HTML">
-            <button class="button button-item">
-              <span class="button-bg">
-                <span class="button-bg-layers">
-                  <span
-                    class="button-bg-layer button-bg-layer-1 -pink"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-2 -brown"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-3 -green"
-                  ></span>
-                </span>
-              </span>
-              <span class="button-inner">
-                <span class="button-inner-static">Assignment 3</span>
-                <span class="button-inner-hover">BIM</span>
-              </span>
-            </button>
-          </a>
-          <br>
-          <br>
-          <a href="ASSIGNMENT02.HTML">
-            <button class="button button-item">
-              <span class="button-bg">
-                <span class="button-bg-layers">
-                  <span
-                    class="button-bg-layer button-bg-layer-1 -pink"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-2 -brown"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-3 -green"
-                  ></span>
-                </span>
-              </span>
-              <br>
-          <br>
-          <br>
-              <span class="button-inner">
-                <span class="button-inner-static">Assignment 4</span>
-                <span class="button-inner-hover">MAP</span>
-              </span>
-            </button>
-          </a>
-          <br>
-          <br>
-          <a href="ASSIGNMENT02.HTML">
-            <button class="button button-item">
-              <span class="button-bg">
-                <span class="button-bg-layers">
-                  <span
-                    class="button-bg-layer button-bg-layer-1 -pink"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-2 -brown"
-                  ></span>
-                  <span
-                    class="button-bg-layer button-bg-layer-3 -green"
-                  ></span>
-                </span>
-              </span>
-              <span class="button-inner">
-                <span class="button-inner-static">Final</span>
-                <span class="button-inner-hover">   :) </span>
-              </span>
-            </button>
-          </a>
-        </div>
+        <a href="https://www.linkedin.com/in/mais-joudeh" target="_blank">LinkedIn</a>
       </div>
     </div>
   </div>
+
+  <!-- About Me Section -->
+  <div id="aboutme">
+    <h2>Fun Facts About Me :)</h2>
+    <ul>
+      <li>The 's' in 'Mais' is not silent</li>
+      <li>I am Palestinian/Jordanian</li>
+      <li>Studied BArch - Cons & Sustainability at CarletonU</li>
+      <li>Worked as a Barista at Second cup for more than 2 years</li>
+      <li>Lived in Dubai until I was 13 years old, where I found my passion for Architecture!</li>
+    </ul>
+  </div>
+
+  <!-- Continent Filter -->
+  <select id="continent-filter">
+    <option value="All">All Continents</option>
+    <option value="Asia">Asia</option>
+    <option value="Europe">Europe</option>
+    <option value="Africa">Africa</option>
+    <option value="South America">South America</option>
+    <option value="North America">North America</option>
+  </select>
+
+  <!-- Assignment Buttons -->
+  <div>
+    <a href="ASSIGNMENT02.HTML">
+      <button class="button button-item">
+        <span class="button-bg">
+          <span class="button-bg-layers">
+            <span class="button-bg-layer button-bg-layer-1 -brown"></span>
+            <span class="button-bg-layer button-bg-layer-2 -pink"></span>
+            <span class="button-bg-layer button-bg-layer-3 "></span>
+          </span>
+        </span>
+        <span class="button-inner">
+          <span class="button-inner-static">Assignment 2</span>
+          <span class="button-inner-hover">TWO</span>
+        </span>
+      </button>
+    </a>
+    <br>
+    <a href="ASSIGNMENT02.HTML">
+      <button class="button button-item">
+        <span class="button-bg">
+          <span class="button-bg-layers">
+            <span class="button-bg-layer button-bg-layer-1 -pink"></span>
+            <span class="button-bg-layer button-bg-layer-2 -brown"></span>
+            <span class="button-bg-layer button-bg-layer-3 -green"></span>
+          </span>
+        </span>
+        <span class="button-inner">
+          <span class="button-inner-static">Assignment 3</span>
+          <span class="button-inner-hover">BIM</span>
+        </span>
+      </button>
+    </a>
+    <br>
+    <a href="ASSIGNMENT02.HTML">
+      <button class="button button-item">
+        <span class="button-bg">
+          <span class="button-bg-layers">
+            <span class="button-bg-layer button-bg-layer-1 -pink"></span>
+            <span class="button-bg-layer button-bg-layer-2 -brown"></span>
+            <span class="button-bg-layer button-bg-layer-3 -green"></span>
+          </span>
+        </span>
+        <span class="button-inner">
+          <span class="button-inner-static">Assignment 4</span>
+          <span class="button-inner-hover">MAP</span>
+        </span>
+      </button>
+    </a>
+    <br>
+    <a href="ASSIGNMENT02.HTML">
+      <button class="button button-item">
+        <span class="button-bg">
+          <span class="button-bg-layers">
+            <span class="button-bg-layer button-bg-layer-1 -pink"></span>
+            <span class="button-bg-layer button-bg-layer-2 -brown"></span>
+            <span class="button-bg-layer button-bg-layer-3 -green"></span>
+          </span>
+        </span>
+        <span class="button-inner">
+          <span class="button-inner-static">Final</span>
+          <span class="button-inner-hover">:) </span>
+        </span>
+      </button>
+    </a>
+  </div>
+
+  <!-- Map container -->
+  <div id="map" style="height: 500px;"></div>
+
+  <!-- 3D Scene Section -->
+  <div id="3d-scene">
+    <canvas id="three-canvas-f2024"></canvas>
+  </div>
+
+  <!-- External JS Libraries -->
+  <script src="map.js"></script>
+  <script src="main.js"></script>
+
 </body>
 </html>
-
- 
