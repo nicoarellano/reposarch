@@ -2,21 +2,21 @@
 const canvas = document.getElementById('background');
 const ctx = canvas.getContext('2d');
 
-// Set canvas to full screen
+// Set canvas size to full screen
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Resize canvas on window resize
+// Resize canvas dynamically
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     initPoints(); // Reinitialize points
 });
 
-// Create points array
+// Points array and settings
 let points = [];
-const numPoints = 50; // Number of points
-const pointRadius = 5; // Radius of each dot
+const numPoints = 50;
+const pointRadius = 4; // Increased radius
 
 // Initialize points
 function initPoints() {
@@ -25,63 +25,22 @@ function initPoints() {
         points.push({
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 2, // Random velocity x
-            vy: (Math.random() - 0.5) * 2, // Random velocity y
-            url: `https://example.com/link-${i + 1}`, // Assign unique links
+            vx: (Math.random() - 0.5) * 2,
+            vy: (Math.random() - 0.5) * 2,
         });
     }
+    console.log("Points initialized:", points); // Debugging
 }
 
-// Check if a point is hovered over
-function isPointHovered(x, y, point) {
-    const dx = x - point.x;
-    const dy = y - point.y;
-    return Math.sqrt(dx * dx + dy * dy) < pointRadius;
-}
-
-// Add hover interaction
-canvas.addEventListener('mousemove', (event) => {
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
-
-    // Check if mouse is over any point
-    let hovered = false;
-    for (const point of points) {
-        if (isPointHovered(mouseX, mouseY, point)) {
-            canvas.style.cursor = 'pointer';
-            hovered = true;
-            break;
-        }
-    }
-
-    if (!hovered) canvas.style.cursor = 'default';
-});
-
-// Add click interaction
-canvas.addEventListener('click', (event) => {
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
-
-    // Check if any point is clicked
-    for (const point of points) {
-        if (isPointHovered(mouseX, mouseY, point)) {
-            window.open(point.url, '_blank'); // Open link in a new tab
-            break;
-        }
-    }
-});
-
-// Draw and animate points
+// Animate points and connections
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw and update points
-    for (const point of points) {
+    points.forEach((point) => {
         point.x += point.vx;
         point.y += point.vy;
 
+        // Bounce off edges
         if (point.x <= 0 || point.x >= canvas.width) point.vx *= -1;
         if (point.y <= 0 || point.y >= canvas.height) point.vy *= -1;
 
@@ -90,7 +49,7 @@ function animate() {
         ctx.arc(point.x, point.y, pointRadius, 0, Math.PI * 2);
         ctx.fillStyle = '#ffffff';
         ctx.fill();
-    }
+    });
 
     // Draw connections
     for (let i = 0; i < points.length; i++) {
@@ -103,7 +62,7 @@ function animate() {
                 ctx.beginPath();
                 ctx.moveTo(points[i].x, points[i].y);
                 ctx.lineTo(points[j].x, points[j].y);
-                ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / 100})`;
+                ctx.strokeStyle = `rgba(50, 205, 50, ${1 - distance / 100})`; // Greenish lines
                 ctx.stroke();
             }
         }
@@ -112,6 +71,6 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Start animation
+// Initialize and start animation
 initPoints();
 animate();
