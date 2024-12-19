@@ -4,70 +4,77 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   font-family: 'Helvetica', sans-serif;
-}
-
-/* Green Gradient Background */
-.main-container {
+  overflow: hidden;
   background: linear-gradient(-45deg, #e6ffe6, #ffffff, #9eafb0, #9ca8a5);
   background-size: 400% 400%;
-  animation: gradientBackground 5s ease infinite;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100%;
-  gap: 50px; /* Space between sections */
-  padding: 20px; /* Ensure spacing for layout */
+  animation: gradientAnimation 15s ease infinite;
 }
 
-/* Keyframes for Gradient Animation */
-@keyframes gradientBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Background Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Canvas */
+/* Background Canvas */
 canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
-  pointer-events: none; /* Ensures the canvas doesn't block interactions */
+  pointer-events: none;
 }
 
-/* Avatar */
+/* Main Container */
+.main-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-wrap: wrap; /* Allow stacking on smaller screens */
+  height: 80vh; /* Slightly reduce height for tighter layout */
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  gap: 20px; /* Add space between sections */
+}
+
+/* Content Section */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 500px; /* Limit width for better layout */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .avatar {
-  display: block;
-  margin: 0 auto;
-  width: 180px;
-  height: 220px;
+  width: 150px;
+  height: 180px;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
-/* Content Section */
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .title {
-  font-size: 3rem;
-  letter-spacing: 1px;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
 }
 
 .links {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -79,42 +86,36 @@ canvas {
   text-decoration: none;
   background: rgba(255, 255, 255, 0.8);
   padding: 0.8rem 1.5rem;
-  border-radius: 15px;
-  transition: background 0.3s, color 0.3s, transform 0.3s;
+  border-radius: 10px;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .link:hover {
-  background: #333;
-  color: #fff;
   transform: translateY(-3px);
+  background: #7f7f7f;
+  color: #fff;
 }
 
-/* Pineapple Button */
 .pineapple-button {
-  background: #ffe066;
-  font-weight: bold;
-}
-
-.pineapple-button:hover {
-  background: #ffcc33;
+  background: rgb(255, 255, 255);
 }
 
 /* Map Section */
 .map-section {
+  flex: 1;
   display: flex;
-  justify-content: center; /* Center map horizontally */
-  align-items: center; /* Center map vertically */
-  width: 90%;
-  max-width: 800px; /* Increased max width */
-  height: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Larger Map Box */
 .map-iframe {
   width: 100%;
-  max-width: 800px; /* Increased max width */
-  height: 500px; /* Increased height */
+  max-width: 600px;
+  height: 400px;
   border: 2px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -126,9 +127,26 @@ canvas {
   bottom: 0;
   width: 100%;
   text-align: center;
-  padding: 10px 0;
-  font-size: 0.9rem;
   color: #333;
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    height: auto; /* Adjust height for stacked layout */
+    gap: 10px; /* Reduce gap for smaller screens */
+  }
+
+  .content,
+  .map-section {
+    max-width: 90%; /* Reduce max-width for smaller viewports */
+  }
+
+  .map-iframe {
+    width: 100%; /* Full width for map iframe */
+    height: 300px; /* Adjust height for smaller screens */
+  }
 }
