@@ -4,7 +4,8 @@ body {
   margin-right: 15%;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -24,7 +25,7 @@ html, body {
 
 h1 {
   text-align: left;
-  color: #6F4F37;
+  color: #6f4f37;
   font-size: 4em;
 }
 
@@ -35,23 +36,21 @@ img {
   clip-path: circle();
 }
 
-
 a {
   text-decoration: none;
-  color: #6F4F37;  
-  font-family: 'Concert One', sans-serif; 
-  font-size: 1.2rem; 
+  color: #6f4f37;
+  font-family: 'Concert One', sans-serif;
+  font-size: 1.2rem;
   font-weight: 640;
   letter-spacing: -0.06em;
-  margin-right: 1.5rem; 
-  
+  margin-right: 1.5rem;
 }
 
 .top-links {
-  display: flex;         
-  margin-left: 1rem;    
-  margin-top: 0rem;      
-  position: absolute;   
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 0rem;
+  position: absolute;
   top: 0;
   left: 0;
 }
@@ -64,47 +63,45 @@ button {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   font-family: 'Concert One', sans-serif;
   font-size: 1.2rem;
   font-weight: 640;
-  color: #6F4F37;
+  color: #6f4f37;
   letter-spacing: -0.06em;
 }
 
 .container {
   display: flex;
-  justify-content: center; 
-  align-items: flex-start; 
-  flex-wrap: wrap;                  
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
-
 
 a {
   text-decoration: none;
-  color: #6F4F37;  
+  color: #6f4f37;
   font-family: 'Concert One', sans-serif;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   font-weight: 640;
   letter-spacing: -0.06em;
- 
 }
 
 .container {
   display: flex;
-  justify-content: center; 
-  align-items: flex-start; 
-  flex-wrap: wrap;        
-  gap: 1rem;              
-  height: 10vh;                
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: 10vh;
 }
 
 #aboutme {
   font-family: 'Concert One', sans-serif;
   font-size: 1.2rem;
-  color: #6F4F37;
-  line-height: 1.8rem; 
-  margin-right: 2rem; 
+  color: #6f4f37;
+  line-height: 1.8rem;
+  margin-right: 2rem;
   margin-bottom: 1rem;
   list-style-type: disc;
   margin-left: 1.5rem;
@@ -113,17 +110,17 @@ a {
 }
 
 #map {
-  width: 50%; 
-  height: 500px; 
-  border: 10px solid #6F4F37; 
+  width: 50%;
+  height: 500px;
+  border: 10px solid #6f4f37;
+  overflow: hidden;
 }
 
 #about-map-container {
-  display: flex;        
-  justify-content: space-between; 
-  gap: 2rem;       
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
 }
-
 
 #continent-filter {
   font-family: Arial, sans-serif;
@@ -131,18 +128,17 @@ a {
   padding: 8px;
   border-radius: 4px;
   background-color: #fff;
-  color: #6F4F37;
-  border: 1px solid #6F4F37;
+  color: #6f4f37;
+  border: 1px solid #6f4f37;
   margin-left: 190px;
 }
-
 
 #3d-scene {
   width: 600px;
   height: 400px;
   margin: auto;
-  background-color: #f0f0f0; 
-  border: 10px solid #6F4F37; 
+  background-color: #f0f0f0;
+  border: 10px solid #6f4f37;
   border-radius: 5px;
 }
 
@@ -154,12 +150,11 @@ a {
   font-size: 36px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
-  color: #6F4F37;
+  color: #6f4f37;
   text-align: center;
   z-index: 10;
   background-color: #fff;
 }
-
 
 .mapboxgl-ctrl-bottom-right {
   bottom: 20px !important;
@@ -167,12 +162,12 @@ a {
 }
 
 .mapboxgl-ctrl button {
-  background-color: #6F4F37 !important;
+  background-color: #6f4f37 !important;
   color: white !important;
   border-radius: 50% !important;
   padding: 10px !important;
 }
 
 .mapboxgl-ctrl button:hover {
-  background-color: #4B3A2B !important;
+  background-color: #4b3a2b !important;
 }
