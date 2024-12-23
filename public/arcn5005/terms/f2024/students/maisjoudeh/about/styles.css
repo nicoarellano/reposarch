@@ -1,206 +1,101 @@
-#card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -5%;
-  }
-  body {
-    background-color: rgb(194, 194, 182);
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-  
-  #title {
-    display: flex;
-    font-family: 'Concert One', Verdana, Geneva, Tahoma, sans-serif;
-    overflow: hidden;
-    align-self: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 0%;
-  }
-  #evil-button {
-    font-family: 'Concert One', Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    align-self: center;
-   margin-top: 1%;
-  }
-  
-  h1 {
-    text-align: center;
-    color: rgb(151, 25, 25);
-    font-size: 4em;
-    margin: 3px;
-  }
-  .moe {
-    position: relative;
-    height: 40px;
-    width: 70%;
-    top: -40px;
-  
-    color: rgb(151, 25, 25);
-    font-size: 4em;
-    text-decoration-style:solid;
-    text-decoration-color: rgb(151, 25, 25);
-    text-decoration-line:underline;
-    animation: animate 2s infinite alternate-reverse;
-  }
-  @keyframes animate {
-    0% {
-      left: -5%;
-    }
-    100% {
-      left: 0%;
-    }
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  img {
-    height: 400px;
-    width: 300px;
-    float: left;
-    margin: 40px;
-    clip-path:circle();
-  }
-  #aboutme {
-    align-self: flex-start;
-    margin-top: 75px;
-    font-family: 'concert one', sans-serif;
-    color: rgb(151, 25, 25);
-  }
-  .Linkedin a {
-    color: rgb(151, 25, 25);
-    text-align: center; 
+body {
+  background-color: rgb(194, 194, 182);
+  font-family: 'Concert One', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-  button {
-    all:unset;
-  }
-  
-  .button {
-    position:relative;
-    display: inline-flex;
-    height: 3.5rem;
-    align-items: center;
-    border-radius: 9999px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-family: 'Concert One', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 640;
-    color: rgb(151, 25, 25);
-    letter-spacing: -0.06em;
-  }
-  
-  .button-item {
-    background-color: transparent;
-    color: (204, 213, 174);
-  }
-  
-  .button-item .button-bg {
-    border-color: rgb(204, 213, 174);
-    background-color: rgba(204, 213, 174);
-  }
-  
-  .button-inner,
-  .button-inner-hover,
-  .button-inner-static {
-    pointer-events: none;
-    display: block;
-  }
-  
-  .button-inner {
-    position: relative;
-  }
-  
-  .button-inner-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  
-  .button-bg {
-    overflow: hidden;
-    border-radius: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1);
-    transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  
-  .button-bg,
-  .button-bg-layer,
-  .button-bg-layers {
-    display: block;
-  }
-  
-  .button-bg-layers {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: -60%;
-    aspect-ratio: 1 / 1;
-    width: max(200%, 10rem);
-  }
-  
-  .button-bg-layer {
-    border-radius: 500px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(0);
-  }
-  
-  .button-bg-layer.-pink {
-    background-color: rgb(196, 199, 156);
-  }
-  
-  .button-bg-layer.-brown {
-    background-color: rgba(151, 25, 25);
-  }
-  
-  .button-bg-layer.-green {
-    --tw-bg-opacity: 1;
-    background-color: rgba(204, 213, 174, var(--tw-bg-opacity));
-  }
-  
-  .button:hover .button-inner-static {
-    opacity: 0;
-    transform: translateY(-70%);
-    transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
-  }
-  
-  .button:hover .button-inner-hover {
-    opacity: 1;
-    transform: translateY(0);
-    transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
-      opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  
-  .button:hover .button-bg-layer {
-    transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
-  }
-  
-  .button:hover .button-bg-layer-1 {
-    transform: scale(1);
-  }
-  
-  .button:hover .button-bg-layer-2 {
-    transition-delay: 0.1s;
-    transform: scale(1);
-  }
-  
-  .button:hover .button-bg-layer-3 {
-    transition-delay: 0.2s;
-    transform: scale(1);
-  }
-  
+
+#title {
+  margin: 20px 0;
+}
+
+#title h1 {
+  color: rgb(151, 25, 25);
+  font-size: 4em;
+  margin: 5px 0;
+}
+
+.moe {
+  color: rgb(151, 25, 25);
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+#card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+#card img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.LinkedIn a {
+  color: rgb(151, 25, 25);
+  font-size: 1.2em;
+  text-decoration: none;
+  border: 2px solid rgb(151, 25, 25);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.LinkedIn a:hover {
+  background-color: rgb(151, 25, 25);
+  color: #fff;
+}
+
+#aboutme {
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#aboutme h2 {
+  color: rgb(151, 25, 25);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#aboutme ul {
+  list-style-type: square;
+  padding-left: 20px;
+  text-align: left;
+  font-size: 1.2em;
+  color: rgb(90, 90, 90);
+}
+
+
+button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: rgb(151, 25, 25);
+  color: #fff;
+  font-size: 1.2em;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 10px 5px;
+}
+
+button:hover {
+  background-color: rgb(200, 50, 50);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+

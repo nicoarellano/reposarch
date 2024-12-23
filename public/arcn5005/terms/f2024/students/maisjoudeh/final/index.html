@@ -1,55 +1,77 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mais Joudeh</title>
 
+
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/loaders/FontLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.138.0/examples/js/geometries/TextGeometry.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+
+  <div id="card">
+    <img src="img.jpeg" alt="Profile Image" />
+    <div id="title">
+      <h1>Mais Joudeh</h1>
+    </div>
+  </div>
+
+<div class="container">
+  <a href="https://www.linkedin.com/in/mais-joudeh" target="_blank" rel="noopener noreferrer">
+    LinkedIn
+  </a>
+  <a href="https://issuu.com/maisjoudeh/docs/maisjoudeh-architectureportfolio1" target="_blank" rel="noopener noreferrer">
+    Portfolio
+  </a>
+  <a href="../about/index.html">
+    <button class="button button-item">
+      <span class="button-inner">
+        Assignment 1
+      </span>
+    </button>
+  </a>
+  <a href="../three/index.html">
+    <button class="button button-item">
+      <span class="button-inner">
+        Assignment 2
+      </span>
+    </button>
+  </a>
+  <a href="../map/index.html">
+    <button class="button button-item">
+      <span class="button-inner">
+        Assignment 3
+      </span>
+    </button>
+  </a>
+</div>
+<div id="about-map-container">
+ 
+  <div id="aboutme">
+    <h2>Fun Facts About Me</h2>
+    <ul>
+      <li>The 's' in 'Mais' is not silent</li>
+      <li>I am Palestinian/Jordanian</li>
+      <li>Studied BArch - Cons & Sustainability at CarletonU</li>
+      <li>Worked as a Barista at Second Cup for more than 2 years</li>
+      <li>Lived in Dubai until I was 13 years old, where I found my passion for Architecture!</li>
+    </ul>
+  </div>
+    <iframe id="map" src="../map/index.html " ></iframe>
+    <div id="3d-scene">
+      <canvas id="three-canvas-f2024"></canvas>
+    </div>
+    <script src="../three/main.js"></script>
   
-    
-    
-    
-  
-  
 
-     <h1 style="color: rgb(0, 0, 0);">Mais Joudeh</h1>
-    <img src="img.jpeg" alt="" width="200" height="300"/>
-    <br/>
-    <br/>
-     <b> M.Arch </b>
-     <br/> 
-     <br/>
-      Assignment 2
-      <br/>  
-      <br/>
-      Assignment 3
-      <br/>  
-      <br/>
-      Assignment 4
-      <br/>  
-      <br/>
-      Final Assignment
-
-    
-     
-   
-    
-
-    <h1></h1>
-
-  
-
-<script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/mathjax.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-						if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
-							document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
-								elm.setAttribute('style', 'display: block; height: 0.5rem;');
-							});
-
-							window.D2L.MathJax.loadMathJax({
-								outputScale: 1.3,
-								renderLatex: true,
-								enableMML3Support: false
-							});
-						}
-					});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/prism.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					document.querySelectorAll('.d2l-code').forEach(code => {
-						window.D2L.Prism.formatCodeElement(code);
-					});
-				});</script><script type="module" src="https://s.brightspace.com/lib/bsi/2024.10.207/unbundled/embeds.js"></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() {
-					window.D2L.EmbedRenderer.renderEmbeds(document.body);
-				});</script></body></html>
+</body>
+</html>

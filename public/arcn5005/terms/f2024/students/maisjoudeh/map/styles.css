@@ -1,107 +1,107 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html, body, #map {
-    height: 100%;
+  height: 100%;
 }
 
 .map-title {
-    position: absolute;
-    top: 550px; 
-    left: 50%;
-    transform: translateX(-50%); 
-    font-size: 36px; 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: #6F4F37; 
-    text-align: center;
-    z-index: 10; 
-    background-color: #fff;
+  position: absolute;
+  top: 550px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  font-size: 36px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #6F4F37; 
+  text-align: center;
+  z-index: 10; 
+  background-color: #fff;
 }
 
 #continent-filter {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #6F4F37; 
-    border: 1px solid #6F4F37;
-    z-index: 11;
-   
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #6F4F37; 
+  border: 1px solid #6F4F37;
+  z-index: 11;
+ 
 }
 
 .popup-content {
-    text-align: center;
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    border-radius: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .maplibregl-popup {
-    max-width: 500px;
-    padding: 20px;
+  max-width: 500px;
+  padding: 20px;
 }
 
 .popup-description {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    text-align:left;
-    color: #6F4F37;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align:left;
+  color: #6F4F37;
 }
 
 .popup-title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #6F4F37;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #6F4F37;
 }
 
 .popup-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .mapboxgl-ctrl-bottom-right {
-    bottom: 20px !important;  
-    right: 20px !important;   
+  bottom: 20px !important;  
+  right: 20px !important;   
 }
 
 .mapboxgl-ctrl button {
-    background-color: #6F4F37 !important;  
-    color: white !important;              
-    border-radius: 50% !important;        
-    padding: 10px !important;              
+  background-color: #6F4F37 !important;  
+  color: white !important;              
+  border-radius: 50% !important;        
+  padding: 10px !important;              
 }
 
 .mapboxgl-ctrl button:hover {
-    background-color: #4B3A2B !important;  
+  background-color: #4B3A2B !important;  
 }
 #map-title-container {
-    position: fixed;
-    top: 500px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    z-index: 1;
-    font-family: Arial, sans-serif;
-    text-align: center; 
-    background-color: #ffffff;
+  position: fixed;
+  top: 500px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 1;
+  font-family: Arial, sans-serif;
+  text-align: center; 
+  background-color: #ffffff;
 }
 
 
 #map-description {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #6F4F37 ;
+  font-size: 14px;
+  margin: 5px 0;
+  color: #6F4F37 ;
 }
