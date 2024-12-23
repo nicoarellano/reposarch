@@ -1,0 +1,178 @@
+body {
+  background-color: rgb(202, 202, 198);
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5%;
+}
+
+#title {
+  font-family: 'Concert One', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: left;
+  color: #6F4F37;
+  font-size: 4em;
+}
+
+img {
+  height: 200px;
+  width: 150px;
+  margin: 10px;
+  clip-path: circle();
+}
+
+
+a {
+  text-decoration: none;
+  color: #6F4F37;  
+  font-family: 'Concert One', sans-serif; 
+  font-size: 1.2rem; 
+  font-weight: 640;
+  letter-spacing: -0.06em;
+  margin-right: 1.5rem; 
+  
+}
+
+.top-links {
+  display: flex;         
+  margin-left: 1rem;    
+  margin-top: 0rem;      
+  position: absolute;   
+  top: 0;
+  left: 0;
+}
+
+button {
+  all: unset;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  font-family: 'Concert One', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 640;
+  color: #6F4F37;
+  letter-spacing: -0.06em;
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  flex-wrap: wrap;                  
+}
+
+
+a {
+  text-decoration: none;
+  color: #6F4F37;  
+  font-family: 'Concert One', sans-serif;
+  font-size: 1.2rem; 
+  font-weight: 640;
+  letter-spacing: -0.06em;
+ 
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  flex-wrap: wrap;        
+  gap: 1rem;              
+  height: 10vh;                
+}
+
+#aboutme {
+  font-family: 'Concert One', sans-serif;
+  font-size: 1.2rem;
+  color: #6F4F37;
+  line-height: 1.8rem; 
+  margin-right: 2rem; 
+  margin-bottom: 1rem;
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#map {
+  width: 50%; 
+  height: 500px; 
+  border: 10px solid #6F4F37; 
+}
+
+#about-map-container {
+  display: flex;        
+  justify-content: space-between; 
+  gap: 2rem;       
+}
+
+
+#continent-filter {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #6F4F37;
+  border: 1px solid #6F4F37;
+  margin-left: 190px;
+}
+
+
+#3d-scene {
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  background-color: #f0f0f0; 
+  border: 10px solid #6F4F37; 
+  border-radius: 5px;
+}
+
+.map-title {
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: #6F4F37;
+  text-align: center;
+  z-index: 10;
+  background-color: #fff;
+}
+
+
+.mapboxgl-ctrl-bottom-right {
+  bottom: 20px !important;
+  right: 20px !important;
+}
+
+.mapboxgl-ctrl button {
+  background-color: #6F4F37 !important;
+  color: white !important;
+  border-radius: 50% !important;
+  padding: 10px !important;
+}
+
+.mapboxgl-ctrl button:hover {
+  background-color: #4B3A2B !important;
+}
