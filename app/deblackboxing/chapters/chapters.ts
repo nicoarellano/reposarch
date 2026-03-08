@@ -1,107 +1,123 @@
-import dayjs from "dayjs";
 import { Lectures } from "../../types/types";
-// import { content as week01 } from "./arcn5005/(lectures)/week01";
-// import { content as week02 } from "./arcn5005/(lectures)/week02";
-// import { content as week03 } from "./arcn5005/(lectures)/week03";
-// import { content as week04 } from "./arcn5005/(lectures)/week04";
-// import { content as week05 } from "./arcn5005/(lectures)/week05";
-// import { content as week06 } from "./arcn5005/(lectures)/week06";
-// import { content as week07 } from "./arcn5005/(lectures)/week07";
-// import { content as week08 } from "./arcn5005/(lectures)/week08";
-// import { content as week09 } from "./arcn5005/(lectures)/week09";
-// import { content as week10 } from "./arcn5005/(lectures)/week10";
-// import { content as week11 } from "./arcn5005/(lectures)/week11";
-// import { content as week12 } from "./arcn5005/(lectures)/week12";
-// import { content as week13 } from "./arcn5005/(lectures)/week13";
-// import { content as final } from "./arcn5005/(lectures)/final";
-// import { content as maps } from "./arcn5005/(lectures)/maps";
 
 export const chapters: Lectures = [
   {
     title: "Introduction",
-    id: `introduction`,
-    url: `introduction`,
-    toc: [
-      { title: "Digital tools for architects" },
-      {
-        title: "Building Information Modeling (BIM): The new tool in hand (?)",
-      },
-      { title: "Open-source: One way out" },
-      { title: "Digital education for architects" },
-    ],
-  },
-  {
-    title: "Literature Review",
-    id: `literature-review`,
-    url: `literature-review`,
-    toc: [
-      { title: "Coding as a language" },
-      { title: "Coding as a tool" },
-
-      { title: "Coding as an apparatus" },
-      { title: "Conclusions" },
-    ],
-  },
-
-  {
-    title:
-      "Chapter 1: BIM properly using computers for architectural representation",
-    id: `chapter01`,
-    url: `chapter01`,
-    // content: week01,
-    toc: [{ title: "History of BIM and IFC" }],
-  },
-  {
-    title: "Chapter 2: BIM Adoption",
-    id: `chapter02`,
-    url: `chapter02`,
-    // date: initialDate.add(2, "week"),
-    // content: week02,
-    toc: [{ title: "Sharing Blender experience" }],
-  },
-  {
-    title: "Chapter 3: Black boxes",
-    id: `chapter03`,
-    url: `chapter03`,
-    // date: initialDate.add(3, "week"),
-    // content: week03,
-    toc: [{ title: "Closed source formats" }],
-  },
-
-  {
-    title: "Chapter 4: Coding",
-    id: `chapter04`,
-    url: `chapter04`,
-    // date: initialDate.add(4, "week"),
-    // content: week04,
-    toc: [
-      {
-        title:
-          "Open source. History of open-source and the free software society",
-      },
-    ],
-  },
-  {
-    title: "Chapter 5: Open source software for architects",
-    id: `chapter05`,
-    url: `chapter05`,
-    // date: initialDate.add(5, "week"),
-    // content: week05,
-    toc: [{ title: "Open vs Closed BIM" }],
-  },
-  {
-    title: "Chapter 6: De-blackboxing BIM",
-    id: `chapter06`,
-    url: `chapter06`,
-    // date: initialDate.add(6, "week"),
-    // content: week06,
-    toc: [{ title: "Native IFC" }],
-  },
-  {
-    title: "Conclusions",
-    id: `conclusions`,
-    url: `conclusions`,
-    // date: initialDate.add(7, "week"),
+    id: "introduction",
+    url: "introduction",
     toc: [],
+  },
+  {
+    title: "Chapter 1: Deblackboxing the Digital Toolbox for Architects",
+    id: "chapter01",
+    url: "chapter01",
+    toc: [
+      { title: "1.1 The New Toolbox" },
+      { title: "1.2 Trapped in the Black Box" },
+      {
+        title: "1.3 Thinking Outside the Black Box",
+        children: [
+          {
+            title:
+              "1.3.1 Open-Source Software and the Common Language of Open Standards",
+          },
+          { title: "1.3.2 Open-Source Software for AECO" },
+          { title: "1.3.3 Open-Source Standards for AECO" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Chapter 2: Teaching Open-Source Toolmaking for Architects",
+    id: "chapter02",
+    url: "chapter02",
+    toc: [
+      { title: "2.1 Digital Tools in Architectural Education" },
+      { title: "2.2 The Course" },
+      { title: "2.3 Course Portal" },
+      { title: "2.4 The Course GitHub Repository" },
+      {
+        title: "2.5 Lectures",
+        children: [
+          { title: "2.5.1 Lecture 1: The Art of Computer Graphics" },
+          { title: "2.5.2 Lecture 2: Digitalization of the Physical World" },
+          { title: "2.5.3 Lecture 3: Drawing with Computers" },
+          { title: "2.5.4 Lecture 4: Tools and Processes for AECO" },
+          { title: "2.5.5 Lecture 5: Visual Programming and Scripting" },
+          { title: "2.5.6 Lecture 6: Internet and the Open-Source Movements" },
+          { title: "2.5.7 Lecture 7: Open-Source Software for Architects" },
+          { title: "2.5.8 Lecture 8: Open-Source GIS" },
+          { title: "2.5.9 Lecture 9: Going Online and Scaling Up" },
+        ],
+      },
+      { title: "2.6 Beyond the Course" },
+    ],
+  },
+  {
+    title: "Chapter 3: Developing a BIM/GIS Open-Source Tool",
+    id: "chapter03",
+    url: "chapter03",
+    toc: [
+      { title: "3.1 History of the Project" },
+      { title: "3.2 What is a Digital Twin?" },
+      {
+        title: "3.3 The Platform",
+        children: [
+          { title: "3.3.1 Web-Based" },
+          { title: "3.3.2 Based on Open Standards" },
+          { title: "3.3.3 Non-Proprietary, Free and Open-Source" },
+          { title: "3.3.4 Build with Open Technology" },
+          { title: "3.3.5 BIM/GIS Integration" },
+          { title: "3.3.6 National and Federated" },
+        ],
+      },
+      {
+        title: "3.4 Tech Stack",
+        children: [
+          { title: "3.4.1 The Languages" },
+          { title: "3.4.2 The Tooling" },
+          { title: "3.4.3 The Libraries" },
+          { title: "3.4.4 BIM and the 3D Graphics" },
+          { title: "3.4.5 Point Clouds and Photomeshes" },
+          { title: "3.4.6 CAD" },
+          { title: "3.4.7 Web-Based GIS" },
+          { title: "3.4.8 The Standards" },
+          { title: "3.4.9 Backend" },
+        ],
+      },
+      {
+        title: "3.5 Features Up to Date",
+        children: [
+          { title: "3.5.1 Authentication" },
+          { title: "3.5.2 Bilingual Interface" },
+          { title: "3.5.3 Map Viewer" },
+          { title: "3.5.4 Open Data Integration" },
+          { title: "3.5.5 User Input" },
+          { title: "3.5.6 BIM Viewer" },
+          { title: "3.5.7 Point Cloud Viewer" },
+        ],
+      },
+      {
+        title: "3.6 Use Cases",
+        children: [
+          { title: "3.6.1 Development: Downsview Airport Lands" },
+          { title: "3.6.2 Environmental Visualization: Wildfires" },
+          { title: "3.6.3 Social Impact: Affordable Housing" },
+          { title: "3.6.4 Envirocentre" },
+          { title: "3.6.5 Federal Asset Management Tool" },
+          { title: "3.6.6 Canada’s Digital Twin" },
+        ],
+      },
+      { title: "3.7 Recognition" },
+      { title: "3.8 Governance Structure: Not-For-Profit" },
+      { title: "3.9 Release" },
+      { title: "3.10 Next Steps" },
+    ],
+  },
+  {
+    title: "Conclusion",
+    id: "conclusions",
+    url: "conclusions",
+    toc: [{ title: "In Summary" }, { title: "An Open Future" }],
   },
 ];

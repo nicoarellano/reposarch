@@ -8,5 +8,5 @@ interface Props {
 export default function Section({ params }: Props) {
   const { section } = params;
 
-  if (section && section.startsWith("week")) redirect(`${section}/1`);
+  if (section && (section.startsWith("week") || section === "defence")) redirect(`${section}/1`);
 }

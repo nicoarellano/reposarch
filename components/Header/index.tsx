@@ -30,7 +30,8 @@ export function Header({ title }): ReactElement<Props> {
           {title}
         </h1>
         <nav className="w-90px z-50">
-          <CourseSpeedDial />
+          {/* <CourseSpeedDial /> */}
+          <DeblackboxingSpeedDial />
         </nav>
       </header>
     </nav>

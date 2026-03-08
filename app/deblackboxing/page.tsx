@@ -3,8 +3,8 @@ import Box from "../../components/Common/Box";
 
 export default function Deblackboxing() {
   return (
-    <div className="flex flex-col gap-14 justify-center items-center w-[510px] text-center">
-      <h1>DE-BLACKBOXING BIM</h1>
+    <div className="flex flex-col gap-20 justify-center items-center text-center">
+      <h1>Deblackboxing the Architect’s Toolbox</h1>
       <Image
         priority
         src={"/images/openBox.png"}
@@ -13,10 +13,7 @@ export default function Deblackboxing() {
         alt={"De-blackboxing"}
       />
       <h3>
-        TO DE-BLACKBOX IS TO SHORTEN THE GAP BETWEEN TOOL USERS AND THEIR TOOLS
-        FOR REPRESENTATION. <br />
-        THIS RESEARCH EXPLORES WAYS TO DE-BLACKBOXING DIGITAL TOOLS FOR
-        ARCHITECTS
+        Open-Source Toolmaking for Architects Beyond Proprietary Software and Closed File Formats
       </h3>
     </div>
   );

@@ -4,14 +4,14 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import Link from 'next/link';
 
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import InfoIcon from '@mui/icons-material/HelpOutlineRounded';
+import AbstractIcon from '@mui/icons-material/ShortTextRounded';
 import MenuIcon from '@mui/icons-material/MenuRounded';
 import CloseIcon from '@mui/icons-material/CloseRounded';
 import HomeIcon from '@mui/icons-material/HomeRounded';
 import TocIcon from '@mui/icons-material/ListAltRounded';
-import BookIcon from '@mui/icons-material/MenuBookRounded';
 import ToolboxIcon from '@mui/icons-material/HomeRepairService';
 import Educate from '@mui/icons-material/RecordVoiceOverRounded';
+import Code from '@mui/icons-material/CodeRounded';
 
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
@@ -19,13 +19,10 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 // Context
 import { useContext } from 'react';
 import { ThemeContext } from '../../middleware/Theme/context';
-import { useRouter } from 'next/navigation';
 
 export default function DeblackboxingSpeedDial() {
-  const themeDispatch = useContext(ThemeContext)['dispatch'];
-  const { mode } = useContext(ThemeContext)['state']['theme'];
 
-  const router = useRouter();
+  const { mode } = useContext(ThemeContext)['state']['theme'];
 
   const actionStyle = {
     backgroundColor: mode === 'light' ? '#f1f1f195' : '#090c1495',
@@ -48,11 +45,11 @@ export default function DeblackboxingSpeedDial() {
     },
     {
       icon: (
-        <Link href={'/deblackboxing/course-description'}>
-          <InfoIcon sx={actionStyle} />
+        <Link href={'/deblackboxing/abstract'}>
+          <AbstractIcon sx={actionStyle} />
         </Link>
       ),
-      name: 'Course Description',
+      name: 'Abstract',
     },
     {
       icon: (
@@ -64,14 +61,6 @@ export default function DeblackboxingSpeedDial() {
     },
     {
       icon: (
-        <Link href={'/deblackboxing/bibliography'}>
-          <BookIcon sx={actionStyle} />
-        </Link>
-      ),
-      name: 'Bibliography',
-    },
-    {
-      icon: (
         <Link href={'/deblackboxing/epistemic-object'}>
           <ToolboxIcon sx={actionStyle} />
         </Link>
@@ -80,32 +69,41 @@ export default function DeblackboxingSpeedDial() {
     },
     {
       icon: (
-        <Link href={'/arcn5005'}>
+        <Link href={'/arcn5005/defence-edu/1'}>
           <Educate sx={actionStyle} />
         </Link>
       ),
-      name: 'Education',
+      name: 'Education: Reposarch',
     },
     {
       icon: (
-        <div
-          onClick={() => {
-            router.push(`?mode=${mode === 'light' ? 'dark' : 'light'}`);
-            themeDispatch({
-              type: 'TOGGLE-DARK-MODE',
-              payload: { mode: mode === 'light' ? 'dark' : 'light' },
-            });
-          }}
-        >
-          {mode === 'dark' ? (
-            <Brightness7Icon sx={actionStyle} />
-          ) : (
-            <Brightness4Icon sx={actionStyle} />
-          )}
-        </div>
+        <Link href={'/arcn5005/defence-dev/1'}>
+          <Code sx={actionStyle} />
+        </Link>
       ),
-      name: mode === 'light' ? 'Toggle Dark mode' : 'Toggle Light mode',
+      name: 'Development: CDT',
     },
+
+    // {
+    //   icon: (
+    //     <div
+    //       onClick={() => {
+    //         router.push(`?mode=${mode === 'light' ? 'dark' : 'light'}`);
+    //         themeDispatch({
+    //           type: 'TOGGLE-DARK-MODE',
+    //           payload: { mode: mode === 'light' ? 'dark' : 'light' },
+    //         });
+    //       }}
+    //     >
+    //       {mode === 'dark' ? (
+    //         <Brightness7Icon sx={actionStyle} />
+    //       ) : (
+    //         <Brightness4Icon sx={actionStyle} />
+    //       )}
+    //     </div>
+    //   ),
+    //   name: mode === 'light' ? 'Toggle Dark mode' : 'Toggle Light mode',
+    // },
   ];
 
   return (

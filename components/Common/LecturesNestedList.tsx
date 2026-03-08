@@ -48,13 +48,14 @@ export default function LecturesNestedList({ list, title }: Props) {
       {list.map((item: Lecture, index) => (
         <Fragment key={item.title}>
           <ListItemButton
-            onClick={() => handleClick(index)}
+            onClick={() => {
+              if (item.toc && item.toc.length > 0) handleClick(index);
+            }}
             sx={{ borderBottom: 1, borderTop: 1, borderColor: '#ddd' }}
           >
             <ListItemText
-              primary={`${item.title}${
-                item.date ? ` (${item.date.format('YYYY/MM/DD')})` : ''
-              }`}
+              primary={`${item.title}${item.date ? ` (${item.date.format('YYYY/MM/DD')})` : ''
+                }`}
             />
             <Link
               hidden={!item.date || item.date >= dayjs()}
@@ -67,9 +68,10 @@ export default function LecturesNestedList({ list, title }: Props) {
                 </IconButton>
               </ListItemIcon>
             </Link>
-            {open[index] ? <ExpandLess /> : <ExpandMore />}
+            {item.toc && item.toc.length > 0 &&
+              (open[index] ? <ExpandLess /> : <ExpandMore />)}
           </ListItemButton>
-          {Boolean(item.toc) && (
+          {Boolean(item.toc && item.toc.length > 0) && (
             <Collapse in={open[index]} timeout="auto" unmountOnExit>
               <ScrollableList toc={item.toc} />
             </Collapse>

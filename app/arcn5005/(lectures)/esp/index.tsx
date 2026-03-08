@@ -1350,23 +1350,6 @@ Pero luego, una serie de eventos comenzó a abrir la puerta a alternativas \n \
 
   {
     element: (
-      <Image
-        src="/images/obc/thatopencompany.png"
-        alt="That Open Company - Welcome to the AECOsystem."
-        caption={'That Open Company - Welcome to the AECOsystem.'}
-        href="https://thatopen.com/"
-      />
-    ),
-    notes:
-      "Open Engine: Un conjunto de tecnologías abierta basada en IFCJS gratuita común (viewer and parser) \n\
-    Open Store: Un mercado donde los desarrolladores pueden vender herramientas, y los usuarios pueden comprarlas directamente para su uso en sus proyectos. \n\
-    Open Editor: Un editor gratuito de geometría basado en la web (Clay) que permite a los usuarios ejecutar todas las aplicaciones directamente en sus navegadores web. \n\
-    Open Services: Servicios de procesamiento, almacenamiento y análisis desarrollados por That Open Company para ayudar a los desarrolladores a crear y lanzar software. \n\
-    That People Community: Conocer a otros miembros, foros, chats y reuniones cada seis semanas dentro del equipo de That Open Company's Para averiguar qué está sucediendo exclusivamente cosas mientras comparte opiniones. \n\
-    Open University: Una nueva plataforma construida por That Open Company Para crear una ruta desde cero conocimiento sobre la programación hasta convertirse en desarrollador de software en menos tiempo que posible, con maestros que apoyan a los estudiantes en sus carreras profesionales.",
-  },
-  {
-    element: (
       <div>
         <h3>That Open Company enlaces útiles</h3>
         <br />
@@ -1400,22 +1383,77 @@ Pero luego, una serie de eventos comenzó a abrir la puerta a alternativas \n \
     ),
   },
 
+
   {
     element: (
-      <>
-        <h1>💻 Lab </h1>
-        <br />
-        <h2>Blender</h2>
-        <h2>Sketchfab</h2>
-        <h2>si tenemos tiempo Three.js</h2>
-      </>
+      <EmojiTitle
+        emoji={'♊'}
+        title={'Que es un Gemelo Digital?'}
+      />
     ),
   },
   {
     element: (
-      <PdfViewer src="/resources/CH_EJERC05_Subir modelos a internet.pdf" />
+      <Image
+        src="/images/dt/house bricks.png"
+        alt="Producto físico"
+        caption={'Producto físico (deficinición de Michael Grieves - Digital Twin Institute)'}
+      />
     ),
   },
+  {
+    element: (
+      <Image
+        src="/images/dt/house bits.png"
+        alt="Producto digital"
+        caption={'Producto digital (deficinición de Michael Grieves - Digital Twin Institute)'}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/dt/dt.png"
+        alt="Conexión dinámica entre producto físico y digital"
+        caption={'Conexión dinámica entre producto físico y digital (deficinición de Michael Grieves - Digital Twin Institute)'}
+      />
+    ),
+  },
+  {
+    element: (
+      <Image
+        src="/images/dt/dt.png"
+        alt="Conexión dinámica entre producto físico y digital"
+        caption={'Conexión dinámica entre producto físico y digital (deficinición de Michael Grieves - Digital Twin Institute)'}
+      />
+    ),
+  },
+  {
+    element: (
+      <Video
+        title='Canada’s Digital Twin'
+        src="/images/dt/dt.png"
+      />
+    ),
+  },
+
+
+  // {
+  //   element: (
+  //     <>
+  //       <h1>💻 Lab </h1>
+  //       <br />
+  //       <h2>Blender</h2>
+  //       <h2>Sketchfab</h2>
+  //       <h2>si tenemos tiempo Three.js</h2>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   element: (
+  //     <PdfViewer src="/resources/CH_EJERC05_Subir modelos a internet.pdf" />
+  //   ),
+  // },
   // {
   //   element: <PdfViewer src="/resources/Blender+2.9+Shortcuts+v1.1.pdf" />,
   // },

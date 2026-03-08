@@ -3,51 +3,28 @@ import { Slides } from "../types/types";
 export const dbbSlides: Slides = [
   {
     id: "deblackboxing",
-    title: "Nicolás Arellano Risopatrón | PhD in Architecture ASAU",
+    title: "Nicolás Arellano Risopatrón | PhD in Architecture",
     url: "/deblackboxing",
   },
   {
     id: "abstract",
-    title: "Abstract: De-blackboxing BIM ",
+    title: "Abstract",
     url: "/deblackboxing/abstract",
   },
-
+  { id: "chapters", title: "Table of Contents", url: "/deblackboxing/chapters" },
+  {
+    id: "obstacles",
+    title: "Obstacles: black boxes and digital oblivion?",
+    url: "/deblackboxing/obstacles",
+  },
   {
     id: "epistemic-object",
-    title: "EPISTEMIC OBJECT and THEORY from InterViews",
+    title: "Epistemic Objects: How to overcome the black boxes and digital oblivion?",
     url: "/deblackboxing/epistemic-object",
   },
   {
-    id: "action",
-    title: "Action: how to overcome Black boxes",
-    url: "/deblackboxing/action",
-  },
-  {
-    id: "learn",
-    title: "Self educate in the craft of coding",
-    url: "/deblackboxing/learn",
-  },
-  {
-    id: "educate",
-    title:
-      "Teaching Open-source digital tools for architectural representation",
-    url: "/deblackboxing/educate",
-  },
-  {
-    id: "engage",
-    title:
-      "Get involve and participate in the open source Architecture community",
-    url: "/deblackboxing/engage",
-  },
-  {
-    id: "build",
-    title: "Build a open source library for BIM",
-    url: "/deblackboxing/build",
-  },
-  { id: "chapters", title: "Chapters", url: "/deblackboxing/chapters" },
-  {
-    id: "bibliography",
-    title: "Bibliography",
-    url: "/deblackboxing/bibliography",
+    id: "conclusion",
+    title: "Conclusion",
+    url: "/deblackboxing/conclusion",
   },
 ];

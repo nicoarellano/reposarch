@@ -257,13 +257,14 @@ export const content: Toc = [
     element: (
       <h4>
         <em>
-          This is called machine language programing. It is not very convinient,
-          however, to think in terms of binary numbers and elementary operantion
-          and to express programs in the cryptic binary notation. Machine
-          language programming is like trying to describe how to construct a
-          complex building by specifying the coordinates of each brick; it is
-          better, if possible, to structure your thoughts and expressions in
-          terms of higher-level, more immediately understandable constructs.
+          This is called machine language programming. It is not very
+          convenient, however, to think in terms of binary numbers and
+          elementary operation and to express programs in the cryptic binary
+          notation. Machine language programming is like trying to describe how
+          to construct a complex building by specifying the coordinates of each
+          brick; it is better, if possible, to structure your thoughts and
+          expressions in terms of higher-level, more immediately understandable
+          constructs
         </em>
         <h5>
           <br />
@@ -592,7 +593,7 @@ export const content: Toc = [
         <h2>Reality Scan App (Unreal Engine)</h2>
         <br />
         <Image
-          src="/images/coding/logo-reality_scan.jpeg"
+          src="/images/coding/logo-reality_scan.png"
           alt="Reality Scan App"
           caption={'Reality Scan App'}
           href="https://www.unrealengine.com/en-US/realityscan"

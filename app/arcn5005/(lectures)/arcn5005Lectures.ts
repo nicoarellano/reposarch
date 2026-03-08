@@ -16,6 +16,8 @@ import { content as week13 } from './week13';
 import { content as final } from './final';
 import { content as maps } from './maps';
 import { content as esp } from './esp';
+import { content as edu } from '../../deblackboxing/defence/edu';
+import { content as dev } from '../../deblackboxing/defence/dev';
 import { startingDate } from '../terms/currentTerm';
 
 const initialDate = dayjs(startingDate); // for Fall 2024
@@ -559,6 +561,34 @@ export const arcn5005Lectures: Lectures = [
           'Librerias de codigo abierto - Tree.js, IFC.js, That Open Engine',
       },
       { title: '🖥️ Lab 3: Blender, Bonsaibim, SketchFab, Three.js, That Open' },
+    ],
+  },
+  {
+    title: 'Teaching Open-Source Toolmaking for Architects',
+    id: `defence-edu`,
+    url: `defence-edu`,
+    content: edu,
+    visibleInToc: false,
+    toc: [
+      { title: 'Abstract' },
+      { title: 'The Problem & The Epistemic Object' },
+      { title: 'The Pedagogical Framework' },
+      { title: 'Canada’s Digital Twin (CDT) & Applied Toolmaking' },
+      { title: 'Conclusion: An Open Future' },
+    ],
+  },
+  {
+    title: 'Developing a BIM/GIS Open-Source Tool',
+    id: `defence-dev`,
+    url: `defence-dev`,
+    content: dev,
+    visibleInToc: false,
+    toc: [
+      { title: 'What is a DT' },
+      { title: 'Why is CDT' },
+      { title: 'What is CDT' },
+      { title: 'Demo' },
+      { title: 'Use Cases' },
     ],
   },
 ];
