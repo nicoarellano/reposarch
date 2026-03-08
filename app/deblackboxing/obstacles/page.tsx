@@ -2,63 +2,57 @@ import Image from "next/image";
 
 import WestIcon from "@mui/icons-material/WestRounded";
 import EastIcon from "@mui/icons-material/EastRounded";
+import Obstacles from "@mui/icons-material/BlockRounded";
 
 import Link from "next/link";
 
 export default function Home() {
   const blackBox = "/images/blackBox.png";
-  const cdt = "/images/cdt/cdt-logo-stroke.png";
-  const reposarch = "/images/reposarch.png";
+  const proprietary = "/images/defence/proprietaryBoxes.png";
+  const interfaces = "/images/defence/interaction.png";
 
   return (
-    <section className="flex-col flex justify-center items-center w-full h-full">
-      <div className="flex items-center gap-20 ">
-        <div className="flex flex-col gap-20 justify-center items-center">
-          <div className="flex flex-col gap-4 justify-center items-center">
-            <h1>REPOSARCH</h1>
-            <h3>Teaching open-source toolmaking for architects</h3>
-          </div>
-          <Link href={"/arcn5005/defence-edu/1"}>
-            <Image
-              priority
-              src={reposarch}
-              height={300}
-              width={300}
-              alt="Epistemic Object: The medium is the message - Marshall McLuhan" //https://en.wikipedia.org/wiki/The_medium_is_the_message
-            />
-          </Link>
-        </div>
-        <div className="flex flex-col gap-12">
-          <WestIcon fontSize="large" />
-        </div>
-        <div className="flex flex-col gap-20 justify-center items-center w-96">
-          <h1>DEBLACKBOXING</h1>
-          <Image
-            priority
-            src={blackBox}
-            height={300}
-            width={300}
-            alt="Epistemic Object: The medium is the message - Marshall McLuhan" //https://en.wikipedia.org/wiki/The_medium_is_the_message
-          />
-        </div>
-        <div className="flex flex-col gap-12">
-          <EastIcon fontSize="large" />
-        </div>
-        <div className="flex flex-col gap-20 justify-center items-center">
-          <div className="flex flex-col gap-4 justify-center items-center">
-            <h1>CDT</h1>
-            <h3>Developing a BIM/GIS Open-Source Tool</h3>
-          </div>
-          <Link href={"/arcn5005/defence-dev/1"}>
-            <Image
-              priority
-              src={cdt}
-              height={300}
-              width={300}
-              alt="Epistemic Object: The medium is the message - Marshall McLuhan" //https://en.wikipedia.org/wiki/The_medium_is_the_message
-            />
-          </Link>
-        </div>
+    <section className="flex justify-center items-center w-full h-full">
+      {/* 5 columns: content | arrow | content | arrow | content — 3 rows: title | subtitle | image */}
+      <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-12 gap-y-6 items-center justify-items-center">
+        {/* Row 1 — Titles */}
+        <h1 className="text-center">Digital Oblivion</h1>
+        <span />
+        <h1 className="text-center">DEBLACKBOXING</h1>
+        <span />
+        <h1 className="text-center">Black boxes</h1>
+
+        {/* Row 2 — Subtitles */}
+        <h3 className="text-center">Passive acceptance of proprietary tools</h3>
+        <span />
+        <span />
+        <span />
+        <h3 className="text-center">Proprietary software and closed file formats</h3>
+
+        {/* Row 3 — Images */}
+        <Image
+          priority
+          src={interfaces}
+          height={300}
+          width={300}
+          alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+        />
+        <WestIcon fontSize="large" />
+        <Image
+          priority
+          src={blackBox}
+          height={300}
+          width={300}
+          alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+        />
+        <EastIcon fontSize="large" />
+        <Image
+          priority
+          src={proprietary}
+          height={300}
+          width={300}
+          alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+        />
       </div>
     </section>
   );
