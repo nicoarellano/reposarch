@@ -7,7 +7,7 @@ export default function CourseCalendar() {
   return (
     <section className="grow flex items-center ">
       <Calendar />
-      <div className="absolute m-8">
+      <div className="absolute m-8 w-44">
         <CalendarLegend />
       </div>
     </section>

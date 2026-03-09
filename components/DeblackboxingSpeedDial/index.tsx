@@ -69,7 +69,7 @@ export default function DeblackboxingSpeedDial() {
     },
     {
       icon: (
-        <Link href={'/arcn5005/defence-edu/1'}>
+        <Link href={'/arcn5005/defence-edu/2'}>
           <Educate sx={actionStyle} />
         </Link>
       ),
@@ -77,7 +77,7 @@ export default function DeblackboxingSpeedDial() {
     },
     {
       icon: (
-        <Link href={'/arcn5005/defence-dev/1'}>
+        <Link href={'/arcn5005/defence-dev/2'}>
           <Code sx={actionStyle} />
         </Link>
       ),

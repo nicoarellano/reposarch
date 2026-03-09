@@ -29,7 +29,7 @@ export default function Home() {
         <h3 className="text-center">Developing a BIM/GIS Open-Source Tool</h3>
 
         {/* Row 3 — Images */}
-        <Link href={"/arcn5005/defence-edu/1"} className="transition-transform duration-200 hover:scale-110">
+        <Link href={"/arcn5005/defence-edu/2"} className="transition-transform duration-200 hover:scale-110">
           <Image
             priority
             src={reposarch}
@@ -47,7 +47,7 @@ export default function Home() {
           alt="Epistemic Object: The medium is the message - Marshall McLuhan"
         />
         <EastIcon fontSize="large" />
-        <Link href={"/arcn5005/defence-dev/1"} className="transition-transform duration-200 hover:scale-110">
+        <Link href={"/arcn5005/defence-dev/2"} className="transition-transform duration-200 hover:scale-110">
           <Image
             priority
             src={cdt}

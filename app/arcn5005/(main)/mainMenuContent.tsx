@@ -1,0 +1,56 @@
+"use client";
+import Image from "next/image";
+import Calendar from "@/components/Common/Calendar";
+import ProgressPage from "@/components/Progress";
+import CalendarLegend from "@/app/arcn5005/(main)/calendar/calendarLegend";
+
+import useMediaQuery from "@mui/material/useMediaQuery";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Button } from "@mui/material";
+import Link from "next/link";
+
+export default function MainMenuContent() {
+    const photo = "/images/reposarch.png";
+    const title = "reposarch";
+    const isMobile = useMediaQuery("(max-width: 600px)");
+
+    return (
+        <section className=" flex flex-col items-center justify-between w-full m-5">
+            <section
+                className={
+                    isMobile ? "" : "grid grid-cols-3 uneven-grid divide-x gap-5"
+                }
+            >
+                <div className=" flex items-center justify-center ">
+                    <ProgressPage />
+                </div>
+                <div
+                    className={
+                        isMobile ? "hidden" : "flex items-center justify-center flex-col"
+                    }
+                >
+                    <h3 className="text-center">
+                        <em>
+                            Open source digital tools for <b>Architects</b>
+                        </em>
+                    </h3>
+                    <Link href={"/arcn5005"}>
+                        <Image priority src={photo} height={400} width={350} alt={title} />
+                    </Link>
+                    <Button
+                        className="px-5"
+                        aria-label="Go To Github"
+                        href={"https://github.com/nicoarellano/reposarch"}
+                        color="inherit"
+                    >
+                        <GitHubIcon /> &nbsp; Go To Github
+                    </Button>
+                </div>
+                <div className=" flex items-center justify-center flex-col">
+                    <Calendar />
+                    {!isMobile && <CalendarLegend />}
+                </div>
+            </section>
+        </section>
+    );
+}
