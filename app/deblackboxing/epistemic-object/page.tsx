@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   const openBox = "/images/openBox.png";
-  const cdt = "/images/cdt/cdt-logo-stroke.png";
+  const cdt = "/images/cdt/canada-logo.png";
   const reposarch = "/images/reposarch.png";
 
   return (
@@ -51,8 +51,8 @@ export default function Home() {
           <Image
             priority
             src={cdt}
-            height={250}
-            width={250}
+            height={300}
+            width={300}
             alt="Epistemic Object: The medium is the message - Marshall McLuhan"
           />
         </Link>

@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/MenuRounded';
 import CloseIcon from '@mui/icons-material/CloseRounded';
 import HomeIcon from '@mui/icons-material/HomeRounded';
 import TocIcon from '@mui/icons-material/ListAltRounded';
-import ToolboxIcon from '@mui/icons-material/HomeRepairService';
+import ToolboxIcon from '@mui/icons-material/HomeRepairServiceRounded';
 import Educate from '@mui/icons-material/RecordVoiceOverRounded';
 import Code from '@mui/icons-material/CodeRounded';
 
