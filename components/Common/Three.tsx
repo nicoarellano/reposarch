@@ -3,10 +3,15 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three-stdlib';
 import { OrbitControls } from 'three-stdlib';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+const SPEED_CYCLE = [1, 2, 4, 10];
 
 export default function Three(): JSX.Element {
   const refContainer = useRef<HTMLDivElement>(null);
+  const speedIndexRef = useRef(0);
+  const [speedLabel, setSpeedLabel] = useState(1);
+
   useEffect(() => {
     const scene: THREE.Scene = new THREE.Scene();
 
@@ -24,8 +29,6 @@ export default function Three(): JSX.Element {
 
     renderer.setSize(size.width, size.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-    document.body.appendChild(renderer.domElement);
 
     //Creates grids and axes in the scene
     const grid = new THREE.GridHelper(50, 30);
@@ -54,17 +57,45 @@ export default function Three(): JSX.Element {
 
     const loader = new GLTFLoader();
 
-    let mesh;
+    let mixer: THREE.AnimationMixer | undefined;
+    const clock = new THREE.Clock();
+
+    const onDblClick = () => {
+      speedIndexRef.current = (speedIndexRef.current + 1) % SPEED_CYCLE.length;
+      const nextSpeed = SPEED_CYCLE[speedIndexRef.current];
+      if (mixer) mixer.timeScale = nextSpeed;
+      setSpeedLabel(nextSpeed);
+    };
+    renderer.domElement.addEventListener('dblclick', onDblClick);
 
     loader.load(
-      '/models/justin.glb',
+      '/models/wind_turbine_small.glb',
       function (gltf) {
-        gltf.scene.scale.x = 3;
-        gltf.scene.scale.y = 3;
-        gltf.scene.scale.z = 3;
-
-        mesh = gltf.scene;
+        gltf.scene.scale.setScalar(0.15);
         scene.add(gltf.scene);
+
+        // Play all built-in animations
+        if (gltf.animations && gltf.animations.length > 0) {
+          mixer = new THREE.AnimationMixer(gltf.scene);
+          gltf.animations.forEach((clip) => mixer!.clipAction(clip).play());
+        }
+
+        // Fit camera to the loaded model
+        const box = new THREE.Box3().setFromObject(gltf.scene);
+        const center = box.getCenter(new THREE.Vector3());
+        const sizeVec = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(sizeVec.x, sizeVec.y, sizeVec.z);
+        const fovRad = camera.fov * (Math.PI / 180);
+        const dist = Math.abs(maxDim / 2 / Math.tan(fovRad / 2)) * 2.0;
+
+        camera.position.set(
+          center.x + dist * 0.4,
+          center.y + dist * 0.35,
+          center.z + dist
+        );
+        controls.target.copy(center);
+        camera.lookAt(center);
+        controls.update();
       },
       undefined,
       function (error) {
@@ -84,7 +115,7 @@ export default function Three(): JSX.Element {
 
     camera.position.z = 7;
     camera.position.x = 4;
-    camera.position.y = 6;
+    camera.position.y = 5;
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
@@ -97,14 +128,15 @@ export default function Three(): JSX.Element {
 
     const directionalLight = new THREE.DirectionalLight(lightColor, 1);
     directionalLight.position.set(5, 10, 5);
-    directionalLight.target.position.set(0, 3, 0);
+    directionalLight.target.position.set(0, 3, 5);
     scene.add(directionalLight);
     scene.add(directionalLight.target);
 
     function animate() {
       requestAnimationFrame(animate);
 
-      if (mesh) mesh.rotation.y += 0.01;
+      const delta = clock.getDelta();
+      if (mixer) mixer.update(delta);
 
       yellowCube.rotation.x += 0.01;
       yellowCube.rotation.y += 0.01;
@@ -130,6 +162,32 @@ export default function Three(): JSX.Element {
     });
     refContainer.current &&
       refContainer.current.appendChild(renderer.domElement);
+
+    return () => {
+      renderer.domElement.removeEventListener('dblclick', onDblClick);
+    };
   }, []);
-  return <div ref={refContainer}></div>;
+
+  return (
+    <div style={{ position: 'relative' }}>
+      <div ref={refContainer} />
+      <p
+        style={{
+          position: 'absolute',
+          bottom: '1rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          color: 'white',
+          background: 'rgba(0,0,0,0.45)',
+          padding: '0.3rem 0.8rem',
+          borderRadius: '0.4rem',
+          fontSize: '0.9rem',
+          userSelect: 'none',
+          pointerEvents: 'none',
+        }}
+      >
+        Double-click to rotate faster &mdash; current speed: <strong>x{speedLabel}</strong>
+      </p>
+    </div>
+  );
 }

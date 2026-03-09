@@ -4,7 +4,7 @@
     "name": "Google satellite",
     "sources": {
         "openmaptiles": {
-            "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=VwEIy1NDSOiSGeTOXMr1",
+            "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=q54cDjzBUzfxYseOWe5v",
             "type": "vector"
         },
         "raster-tiles": {
@@ -15,19 +15,13 @@
             "tileSize": 256,
             "attribution": "Map tiles by <a target=\"_top\" rel=\"noopener\" href=\"http://stamen.com\">Stamen Design</a>, under <a target=\"_top\" rel=\"noopener\" href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>. Data by <a target=\"_top\" rel=\"noopener\" href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a target=\"_top\" rel=\"noopener\" href=\"http://creativecommons.org/licenses/by-sa/3.0\">CC BY SA</a>"
         },
+        "satellite": {
+            "url": "https://api.maptiler.com/tiles/satellite-v2/tiles.json?key=q54cDjzBUzfxYseOWe5v",
+            "type": "raster"
+        },
         "maptiler_planet": {
-            "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=VwEIy1NDSOiSGeTOXMr1",
+            "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=q54cDjzBUzfxYseOWe5v",
             "type": "vector"
-        },
-        "terrainSource": {
-            "type": "raster-dem",
-            "url": "https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=VwEIy1NDSOiSGeTOXMr1",
-            "tileSize": 256
-        },
-        "hillshadeSource": {
-            "type": "raster-dem",
-            "url": "https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=VwEIy1NDSOiSGeTOXMr1",
-            "tileSize": 256
         }
     },
     "layers": [
@@ -66,19 +60,6 @@
             "source": "raster-tiles",
             "minzoom": 0,
             "maxzoom": 24
-        },
-        {
-            "id": "hillshade",
-            "type": "hillshade",
-            "source": "hillshadeSource",
-            "layout": {
-                "visibility": "visible"
-            },
-            "paint": {
-                "hillshade-shadow-color": "rgba(0, 0, 0, 0.3)",
-                "hillshade-highlight-color": "rgba(255, 255, 255, 0.3)",
-                "hillshade-exaggeration": 0.5
-            }
         },
         {
             "id": "tunnel",
@@ -458,6 +439,37 @@
                     "==",
                     "$type",
                     "LineString"
+                ]
+            ]
+        },
+        {
+            "id": "building-3d",
+            "type": "fill-extrusion",
+            "source": "openmaptiles",
+            "source-layer": "building",
+            "minzoom": 14,
+            "maxzoom": 15.5,
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-extrusion-base": {
+                    "type": "identity",
+                    "property": "render_min_height"
+                },
+                "fill-extrusion-color": "rgba(200,200,200,0.9)",
+                "fill-extrusion-height": {
+                    "type": "identity",
+                    "property": "render_height"
+                },
+                "fill-extrusion-opacity": 0.8
+            },
+            "metadata": {},
+            "filter": [
+                "all",
+                [
+                    "!has",
+                    "hide_3d"
                 ]
             ]
         },
@@ -886,38 +898,9 @@
             ]
         }
     ],
-    "sky": {
-        "atmosphere-blend": [
-            "interpolate",
-            [
-                "linear"
-            ],
-            [
-                "zoom"
-            ],
-            0,
-            1,
-            5,
-            1,
-            7,
-            0
-        ]
-    },
-    "light": {
-        "anchor": "map",
-        "position": [
-            1.5,
-            90,
-            80
-        ]
-    },
-    "terrain": {
-        "source": "terrainSource",
-        "exaggeration": 0.6
-    },
     "metadata": {
         "maptiler:copyright": "This style was generated on MapTiler Cloud. Usage outside of MapTiler Cloud requires valid MapTiler Data Package: https://www.maptiler.com/data/package/ -- please contact us."
     },
-    "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=VwEIy1NDSOiSGeTOXMr1",
+    "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=q54cDjzBUzfxYseOWe5v",
     "zoom": 1
 }
