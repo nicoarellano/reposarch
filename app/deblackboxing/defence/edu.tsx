@@ -68,6 +68,23 @@ export const content: Toc = [
       "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
   },
   {
+    element: (
+      <>
+        <h2>Drawing with Pixels ✏️</h2>
+        <br />
+        <iframe
+          className="w-full h-full"
+          src="https://acepixels.netlify.app/"
+        />
+      </>
+    ),
+    notes:
+      "A pixel (px) (short for 'picture element') is the smallest addresable dot or square that make up an digital raster image on a display device.\
+      The more pixels the better image resolution. Image resolution of a computer monitor, smartphone, or TV screen, refers to the number of pixels. \
+      The intensity of each pixel is variable. \
+      In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue (RGB), or cyan, magenta, yellow, and black.",
+  },
+  {
     element: <CustomizedTables data={Arcn5005F2024Evaluations} />,
     notes: '',
   },
