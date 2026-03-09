@@ -35,7 +35,7 @@ export default function Home() {
             src={reposarch}
             height={300}
             width={300}
-            alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+            alt="Education"
           />
         </Link>
         <WestIcon fontSize="large" />
@@ -44,7 +44,7 @@ export default function Home() {
           src={openBox}
           height={300}
           width={300}
-          alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+          alt="Epistemic Object"
         />
         <EastIcon fontSize="large" />
         <Link href={"/arcn5005/defence-dev/2"} className="transition-transform duration-200 hover:scale-110">
@@ -53,7 +53,7 @@ export default function Home() {
             src={cdt}
             height={300}
             width={300}
-            alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+            alt="Canada’s Digital Twin"
           />
         </Link>
       </div>
