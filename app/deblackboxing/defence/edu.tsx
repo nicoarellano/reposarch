@@ -1,11 +1,8 @@
 import { Toc } from '@/app/types/types';
 
 import Image from '@/components/Common/Image';
-import Video from '@/components/Common/Video';
-
 import CartesianPlane from '@/components/CartesianPlane';
 import TOC from '@/app/arcn5005/(main)/toc/page';
-import SimpleButton from '@/components/Common/SimpleButton';
 import dynamic from 'next/dynamic';
 import PdfViewer from '@/components/Common/PdfViewer';
 import CustomizedTables from '@/components/Common/Table';
@@ -16,6 +13,7 @@ import { classListf2024 } from '@/app/arcn5005/terms/[term]/students/(classListF
 import Tags from '@/app/arcn5005/(lectures)/week05/Tags';
 import Elements from '@/app/arcn5005/(lectures)/week05/Elements';
 import Three from '@/components/Common/Three';
+import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
 
 const MainMenuContent = dynamic(() => import('@/app/arcn5005/(main)/mainMenuContent'), { ssr: false });
 
@@ -332,10 +330,20 @@ button.addEventListener('click', () => {\n
     element:
       <div className="w-full flex flex-col items-center justify-center grow gap-8 mdx">
         <StudentsList students={classListf2024} />
-        <SimpleButton
-          href={`/arcn5005/terms/f2023/students`}
-          title={`Assignments from Fall 2023`}
-        />
       </div>
   },
+  {
+    element:
+      <div className='flex flex-col items-center justify-center h-full gap-2'>
+        <h4 className='w-full text-center'>Return to Epistemic Objects:</h4>
+        <a
+          href={'/deblackboxing/epistemic-object'}
+          className="cursor-pointer"
+          aria-label="Open Epistemic Object page"
+        >
+          <EpistemicObjectIcon style={{ fontSize: '20rem' }} />
+        </a>
+      </div>
+  }
+
 ];

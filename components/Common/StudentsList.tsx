@@ -21,11 +21,15 @@ import FinalIcon from '@mui/icons-material/SportsScore';
 
 interface Props {
   students: Students;
+  isPresentationMode?: boolean;
 }
 
-export default function StudentsList({ students }: Props) {
+export default function StudentsList({ students, isPresentationMode = true }: Props) {
   const path = usePathname();
   const isF2023 = path?.includes('f2023');
+
+  const manualPath = `/arcn5005/terms/${isF2023 ? 'f2023' : 'f2024'}/students/`
+
 
   const isMobile = useMediaQuery('(max-width:600px)');
 
@@ -43,9 +47,11 @@ export default function StudentsList({ students }: Props) {
       subheader={<ListSubheader component="div">Students List</ListSubheader>}
     >
       {students.map((student: Student, index) => {
-        const finalPath = `${path}/${student.username}${
-          isF2023 ? '' : '/final'
-        }`;
+
+        const studentsPath = isPresentationMode ? `${manualPath}${student.username}` : `${path}${student.username}`;
+
+        const finalPath = isF2023 ? studentsPath : `${studentsPath}/final`
+
         return (
           <div key={index} title={student.username}>
             <ListItemButton
@@ -55,7 +61,7 @@ export default function StudentsList({ students }: Props) {
                 <Link href={finalPath}>
                   <IconButton>
                     <Avatar
-                      src={`${path}/${student.username}/avatar.jpg`}
+                      src={`${studentsPath}/avatar.jpg`}
                       sx={{ width: 30, height: 30 }}
                     />
                   </IconButton>
@@ -65,28 +71,28 @@ export default function StudentsList({ students }: Props) {
                 primary={`${student.firstName} ${student.lastName}`}
               />
               {student.assignments.includes('about') && (
-                <Link href={`${path}/${student.username}/about`}>
+                <Link href={`${studentsPath}/about`}>
                   <IconButton title="About">
                     <AboutIcon />
                   </IconButton>
                 </Link>
               )}
               {student.assignments.includes('three') && (
-                <Link href={`${path}/${student.username}/three`}>
+                <Link href={`${studentsPath}/three`}>
                   <IconButton title="Three">
                     <ThreeIcon />
                   </IconButton>
                 </Link>
               )}
               {student.assignments.includes('map') && (
-                <Link href={`${path}/${student.username}/map`}>
+                <Link href={`${studentsPath}/map`}>
                   <IconButton title="Map">
                     <MapIcon />
                   </IconButton>
                 </Link>
               )}
               {student.assignments.includes('bim') && (
-                <Link href={`${path}/${student.username}/bim`}>
+                <Link href={`${studentsPath}/bim`}>
                   <IconButton title="BIM">
                     <BIMIcon />
                   </IconButton>

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   const openBox = "/images/openBox.png";
-  const cdt = "/images/cdt/cdt-logo-stroke.png";
+  const cdt = "/images/cdt/canada-logo.png";
   const reposarch = "/images/reposarch.png";
 
   return (
@@ -35,7 +35,7 @@ export default function Home() {
             src={reposarch}
             height={300}
             width={300}
-            alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+            alt="Education"
           />
         </Link>
         <WestIcon fontSize="large" />
@@ -44,16 +44,16 @@ export default function Home() {
           src={openBox}
           height={300}
           width={300}
-          alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+          alt="Epistemic Object"
         />
         <EastIcon fontSize="large" />
         <Link href={"/arcn5005/defence-dev/2"} className="transition-transform duration-200 hover:scale-110">
           <Image
             priority
             src={cdt}
-            height={250}
-            width={250}
-            alt="Epistemic Object: The medium is the message - Marshall McLuhan"
+            height={300}
+            width={300}
+            alt="Canada’s Digital Twin"
           />
         </Link>
       </div>
