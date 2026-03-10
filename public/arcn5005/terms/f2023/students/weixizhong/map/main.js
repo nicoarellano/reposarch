@@ -1,9 +1,9 @@
-import { chinatowns } from "/arcn5005/terms/f2023/students/weixizhong/map/maplibre/chinatowns/chinatowns-list.js";
+import { chinatowns } from '/arcn5005/terms/f2023/students/weixizhong/map/maplibre/chinatowns/chinatowns-list.js';
 
 const map = (window.map = new maplibregl.Map({
-  container: "map",
+  container: 'map',
   style:
-    "https://api.maptiler.com/maps/ec847ff3-3c4a-4e49-b950-d572fd38fcbc/style.json?key=tsXILlKT33fdQiqtvY70",
+    'https://api.maptiler.com/maps/ec847ff3-3c4a-4e49-b950-d572fd38fcbc/style.json?key=tsXILlKT33fdQiqtvY70',
   center: [-98.74, 56.415], // starting position [lng, lat]
   zoom: 3, // starting zoom
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
@@ -11,7 +11,7 @@ const map = (window.map = new maplibregl.Map({
   minZoom: 3,
 }));
 
-map.addControl(new maplibregl.FullscreenControl(), "top-left");
+map.addControl(new maplibregl.FullscreenControl(), 'top-left');
 
 // parameters to ensure the model is georeferenced correctly on the map
 const modelOrigin = [-75.69435, 45.38435];
@@ -20,7 +20,7 @@ const modelRotate = [Math.PI / 2, 0, 0];
 
 const modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
   modelOrigin,
-  modelAltitude
+  modelAltitude,
 );
 
 // transformation parameters to position, rotate and scale the 3D model onto the map
@@ -41,9 +41,9 @@ const THREE = window.THREE;
 
 // configuration of the custom layer for a 3D model per the CustomLayerInterface
 const customLayer = {
-  id: "3d-model",
-  type: "custom",
-  renderingMode: "3d",
+  id: '3d-model',
+  type: 'custom',
+  renderingMode: '3d',
   onAdd(map, gl) {
     this.camera = new THREE.Camera();
     this.scene = new THREE.Scene();
@@ -61,10 +61,10 @@ const customLayer = {
     const loader = new THREE.GLTFLoader();
 
     const buldings = [
-      "../three/models/AA/on_ott_arc_220485353_walls.glb",
-      "../three/models/AA/on_ott_arc_220485353_roofs.glb",
-      "../three/models/AA/on_ott_arc_220485353_slabs.glb",
-      "../three/models/AA/on_ott_arc_220485353_windows.glb",
+      '../three/models/AA/on_ott_arc_220485353_walls.glb',
+      '../three/models/AA/on_ott_arc_220485353_roofs.glb',
+      '../three/models/AA/on_ott_arc_220485353_slabs.glb',
+      '../three/models/AA/on_ott_arc_220485353_windows.glb',
     ];
 
     buldings.forEach((building) => {
@@ -73,7 +73,7 @@ const customLayer = {
       });
     });
 
-    loader.load("../three/models/justin.glb", (gltf) => {
+    loader.load('/models/wind_turbine_small.glb', (gltf) => {
       const model = gltf.scene;
 
       const scale = 50;
@@ -99,15 +99,15 @@ const customLayer = {
   render(gl, matrix) {
     const rotationX = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(1, 0, 0),
-      modelTransform.rotateX
+      modelTransform.rotateX,
     );
     const rotationY = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(0, 1, 0),
-      modelTransform.rotateY
+      modelTransform.rotateY,
     );
     const rotationZ = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(0, 0, 1),
-      modelTransform.rotateZ
+      modelTransform.rotateZ,
     );
 
     const m = new THREE.Matrix4().fromArray(matrix);
@@ -115,14 +115,14 @@ const customLayer = {
       .makeTranslation(
         modelTransform.translateX,
         modelTransform.translateY,
-        modelTransform.translateZ
+        modelTransform.translateZ,
       )
       .scale(
         new THREE.Vector3(
           modelTransform.scale,
           -modelTransform.scale,
-          modelTransform.scale
-        )
+          modelTransform.scale,
+        ),
       )
       .multiply(rotationX)
       .multiply(rotationY)
@@ -135,26 +135,26 @@ const customLayer = {
   },
 };
 
-map.on("style.load", () => {
+map.on('style.load', () => {
   map.addLayer(customLayer);
   addLayers();
 });
 
-map.on("mousemove", () => {
-  const layer = map.getLayer("places");
+map.on('mousemove', () => {
+  const layer = map.getLayer('places');
   if (!layer) addLayers();
 });
 
 // Go To Site 🏢
-const goTo = document.getElementById("go-to");
+const goTo = document.getElementById('go-to');
 let toggleGoTo = 0;
 
 // Add image elements for the icons
-const goToIconImg = document.createElement("img");
-goToIconImg.id = "go-to-icon-img";
+const goToIconImg = document.createElement('img');
+goToIconImg.id = 'go-to-icon-img';
 
 // Set the initial image source to chinatown.png
-updateButtonStyle(goToIconImg, "./images/chinatown.png");
+updateButtonStyle(goToIconImg, './images/chinatown.png');
 goTo.appendChild(goToIconImg);
 
 // Set initial position for the button
@@ -163,28 +163,28 @@ setButtonPosition(goTo, { bottom: 10, left: 10 });
 goTo.onclick = function () {
   switch (toggleGoTo) {
     case 0:
-      this.setAttribute("title", "Go to China");
-      updateButtonStyle(goToIconImg, "./images/china.png");
+      this.setAttribute('title', 'Go to China');
+      updateButtonStyle(goToIconImg, './images/china.png');
       // Fly to Chinatown
       flyTo(map, -75.708, 45.411, 15.6, 60, 4);
       map.setStyle(
-        "https://api.maptiler.com/maps/b8d97f5e-18db-42d0-9b96-bbd717462f5c/style.json?key=tsXILlKT33fdQiqtvY70"
+        'https://api.maptiler.com/maps/b8d97f5e-18db-42d0-9b96-bbd717462f5c/style.json?key=tsXILlKT33fdQiqtvY70',
       );
       toggleGoTo = 1;
       break;
     case 1:
-      this.setAttribute("title", "Go to Canada");
-      updateButtonStyle(goToIconImg, "./images/canada.png");
+      this.setAttribute('title', 'Go to Canada');
+      updateButtonStyle(goToIconImg, './images/canada.png');
       // Fly to China
       flyTo(map, 104.1954, 35.8617, 3, 0, 4);
       map.setStyle(
-        "https://api.maptiler.com/maps/ec847ff3-3c4a-4e49-b950-d572fd38fcbc/style.json?key=tsXILlKT33fdQiqtvY70"
+        'https://api.maptiler.com/maps/ec847ff3-3c4a-4e49-b950-d572fd38fcbc/style.json?key=tsXILlKT33fdQiqtvY70',
       );
       toggleGoTo = 2;
       break;
     case 2:
-      this.setAttribute("title", "Go to Chinatown (Ottawa)");
-      updateButtonStyle(goToIconImg, "./images/chinatown.png");
+      this.setAttribute('title', 'Go to Chinatown (Ottawa)');
+      updateButtonStyle(goToIconImg, './images/chinatown.png');
       // Fly to your original location (Canada)
       flyTo(map, -98.74, 56.415, 3.2, 0, 1);
       toggleGoTo = 0;
@@ -203,32 +203,32 @@ function updateButtonStyle(button, imageSrc) {
   const borderRadius = 10;
 
   // Additional fancy styles
-  button.style.width = size + "px";
-  button.style.height = size + "px";
-  button.style.borderRadius = borderRadius + "px";
-  button.style.transition = "transform 0.3s ease-in-out";
-  button.style.transform = "scale(3)";
+  button.style.width = size + 'px';
+  button.style.height = size + 'px';
+  button.style.borderRadius = borderRadius + 'px';
+  button.style.transition = 'transform 0.3s ease-in-out';
+  button.style.transform = 'scale(3)';
 
   // Reset styles after a short delay (for the animation effect)
   setTimeout(() => {
-    button.style.transform = "";
+    button.style.transform = '';
   }, 300);
 }
 
 // Function to set button position
 function setButtonPosition(button, position) {
-  button.style.position = "fixed";
-  button.style.bottom = position.bottom + "px";
-  button.style.left = position.left + "px";
+  button.style.position = 'fixed';
+  button.style.bottom = position.bottom + 'px';
+  button.style.left = position.left + 'px';
 }
 
 const chinatownsFeatureCollection = chinatowns.map((chinatown) => {
-  const image = chinatown.image || "";
+  const image = chinatown.image || '';
   const { code, name, province, city, longitude, latitude } = chinatown;
 
   return {
     code,
-    type: "Feature",
+    type: 'Feature',
     properties: {
       description: `
         <div class="popup-container">
@@ -242,7 +242,7 @@ const chinatownsFeatureCollection = chinatowns.map((chinatown) => {
       `,
     },
     geometry: {
-      type: "Point",
+      type: 'Point',
       coordinates: [longitude, latitude],
     },
   };
@@ -292,15 +292,15 @@ const popupStyle = `
 `;
 
 // Apply the popup style to the map
-const style = document.createElement("style");
+const style = document.createElement('style');
 style.textContent = popupStyle;
 document.head.appendChild(style);
 
 const addLayers = () => {
-  map.addSource("places", {
-    type: "geojson",
+  map.addSource('places', {
+    type: 'geojson',
     data: {
-      type: "FeatureCollection",
+      type: 'FeatureCollection',
       features: chinatownsFeatureCollection,
     },
   });
@@ -308,25 +308,25 @@ const addLayers = () => {
   // Add a layer showing the places.
   map.addLayer({
     id: `places`,
-    type: "symbol",
-    source: "places",
+    type: 'symbol',
+    source: 'places',
     layout: {
-      "icon-image": "custom-marker",
-      "icon-allow-overlap": true,
-      "icon-size": 0.2,
-      "icon-offset": [0, -70],
-      "icon-anchor": "center",
+      'icon-image': 'custom-marker',
+      'icon-allow-overlap': true,
+      'icon-size': 0.2,
+      'icon-offset': [0, -70],
+      'icon-anchor': 'center',
     },
   });
 
-  map.loadImage("./images/location.png", (error, image) => {
+  map.loadImage('./images/location.png', (error, image) => {
     if (error) throw error;
 
-    map.addImage("custom-marker", image);
+    map.addImage('custom-marker', image);
 
-    map.on("click", "places", (e) => {
+    map.on('click', 'places', (e) => {
       // Change the cursor style as a UI indicator.
-      map.getCanvas().style.cursor = "pointer";
+      map.getCanvas().style.cursor = 'pointer';
 
       const coordinates = e.features[0].geometry.coordinates.slice();
       const description = e.features[0].properties.description;
@@ -348,12 +348,12 @@ const addLayers = () => {
       updatePopupStyle(popup);
 
       // Close the popup when the map is clicked.
-      map.on("click", closePopup);
+      map.on('click', closePopup);
 
       function closePopup() {
-        map.getCanvas().style.cursor = "";
+        map.getCanvas().style.cursor = '';
         popup.remove();
-        map.off("click", closePopup);
+        map.off('click', closePopup);
       }
     });
   });
@@ -361,8 +361,8 @@ const addLayers = () => {
 
 // Function to update the style of the popup to make it smaller
 function updatePopupStyle(popup) {
-  const smallerMaxWidth = "150px";
-  const smallerMaxHeight = "100px";
+  const smallerMaxWidth = '150px';
+  const smallerMaxHeight = '100px';
 
   const popupContainer = popup._container;
 
