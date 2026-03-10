@@ -20,7 +20,7 @@ const modelRotate = [Math.PI / 2, 0, 0];
 
 const modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
   modelOrigin,
-  modelAltitude
+  modelAltitude,
 );
 
 // transformation parameters to position, rotate and scale the 3D model onto the map
@@ -73,7 +73,7 @@ const customLayer = {
       });
     });
 
-    loader.load('../three/models/justin.glb', (gltf) => {
+    loader.load('/models/wind_turbine_small.glb', (gltf) => {
       const model = gltf.scene;
 
       const scale = 50;
@@ -99,15 +99,15 @@ const customLayer = {
   render(gl, matrix) {
     const rotationX = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(1, 0, 0),
-      modelTransform.rotateX
+      modelTransform.rotateX,
     );
     const rotationY = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(0, 1, 0),
-      modelTransform.rotateY
+      modelTransform.rotateY,
     );
     const rotationZ = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(0, 0, 1),
-      modelTransform.rotateZ
+      modelTransform.rotateZ,
     );
 
     const m = new THREE.Matrix4().fromArray(matrix);
@@ -115,14 +115,14 @@ const customLayer = {
       .makeTranslation(
         modelTransform.translateX,
         modelTransform.translateY,
-        modelTransform.translateZ
+        modelTransform.translateZ,
       )
       .scale(
         new THREE.Vector3(
           modelTransform.scale,
           -modelTransform.scale,
-          modelTransform.scale
-        )
+          modelTransform.scale,
+        ),
       )
       .multiply(rotationX)
       .multiply(rotationY)

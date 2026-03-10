@@ -1,9 +1,9 @@
-import { icons } from "../assets/icons.js";
-import { airports } from "./airports/airports-list.js";
+import { icons } from '../assets/icons.js';
+import { airports } from './airports/airports-list.js';
 
 const map = (window.map = new maplibregl.Map({
-  container: "map-f2024",
-  style: "/map-styles/satellite.json",
+  container: 'map-f2024',
+  style: '/map-styles/satellite.json',
   center: [-98.74, 56.415], // starting position [lng, lat]
   zoom: 3, // starting zoom
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
@@ -11,7 +11,7 @@ const map = (window.map = new maplibregl.Map({
   minZoom: 3,
 }));
 
-map.addControl(new maplibregl.FullscreenControl(), "top-left");
+map.addControl(new maplibregl.FullscreenControl(), 'top-left');
 
 // parameters to ensure the model is georeferenced correctly on the map
 const modelOrigin = [-75.69435, 45.38435];
@@ -20,7 +20,7 @@ const modelRotate = [Math.PI / 2, 0, 0];
 
 const modelAsMercatorCoordinate = maplibregl.MercatorCoordinate.fromLngLat(
   modelOrigin,
-  modelAltitude
+  modelAltitude,
 );
 
 // transformation parameters to position, rotate and scale the 3D model onto the map
@@ -41,9 +41,9 @@ const THREE = window.THREE;
 
 // configuration of the custom layer for a 3D model per the CustomLayerInterface
 const customLayer = {
-  id: "3d-model",
-  type: "custom",
-  renderingMode: "3d",
+  id: '3d-model',
+  type: 'custom',
+  renderingMode: '3d',
   onAdd(map, gl) {
     this.camera = new THREE.Camera();
     this.scene = new THREE.Scene();
@@ -61,10 +61,10 @@ const customLayer = {
     const loader = new THREE.GLTFLoader();
 
     const buldings = [
-      "../three/models/AA/on_ott_arc_220485353_walls.glb",
-      "../three/models/AA/on_ott_arc_220485353_roofs.glb",
-      "../three/models/AA/on_ott_arc_220485353_slabs.glb",
-      "../three/models/AA/on_ott_arc_220485353_windows.glb",
+      '../three/models/AA/on_ott_arc_220485353_walls.glb',
+      '../three/models/AA/on_ott_arc_220485353_roofs.glb',
+      '../three/models/AA/on_ott_arc_220485353_slabs.glb',
+      '../three/models/AA/on_ott_arc_220485353_windows.glb',
     ];
 
     buldings.forEach((building) => {
@@ -73,7 +73,7 @@ const customLayer = {
       });
     });
 
-    loader.load("../three/models/justin.glb", (gltf) => {
+    loader.load('/models/wind_turbine_small.glb', (gltf) => {
       const model = gltf.scene;
 
       const scale = 50;
@@ -99,15 +99,15 @@ const customLayer = {
   render(gl, matrix) {
     const rotationX = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(1, 0, 0),
-      modelTransform.rotateX
+      modelTransform.rotateX,
     );
     const rotationY = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(0, 1, 0),
-      modelTransform.rotateY
+      modelTransform.rotateY,
     );
     const rotationZ = new THREE.Matrix4().makeRotationAxis(
       new THREE.Vector3(0, 0, 1),
-      modelTransform.rotateZ
+      modelTransform.rotateZ,
     );
 
     const m = new THREE.Matrix4().fromArray(matrix);
@@ -115,14 +115,14 @@ const customLayer = {
       .makeTranslation(
         modelTransform.translateX,
         modelTransform.translateY,
-        modelTransform.translateZ
+        modelTransform.translateZ,
       )
       .scale(
         new THREE.Vector3(
           modelTransform.scale,
           -modelTransform.scale,
-          modelTransform.scale
-        )
+          modelTransform.scale,
+        ),
       )
       .multiply(rotationX)
       .multiply(rotationY)
@@ -135,28 +135,28 @@ const customLayer = {
   },
 };
 
-map.on("style.load", () => {
+map.on('style.load', () => {
   map.addLayer(customLayer);
   addLayers();
 });
 
-map.on("mousemove", () => {
-  const layer = map.getLayer("places");
+map.on('mousemove', () => {
+  const layer = map.getLayer('places');
   if (!layer) addLayers();
 });
 
 // Go To Site 🏢
-const goTo = document.getElementById("go-to");
+const goTo = document.getElementById('go-to');
 let toggleGoTo = true;
 goTo.onclick = function () {
   if (toggleGoTo) {
-    this.setAttribute("title", "Go to Canada");
-    document.getElementById("go-to-icon").setAttribute("d", icons.worldIcon);
+    this.setAttribute('title', 'Go to Canada');
+    document.getElementById('go-to-icon').setAttribute('d', icons.worldIcon);
     // Fly to Carleton
     flyTo(map, -75.697, 45.384, 15.6);
   } else {
-    this.setAttribute("title", "Go to site");
-    document.getElementById("go-to-icon").setAttribute("d", icons.goToIcon);
+    this.setAttribute('title', 'Go to site');
+    document.getElementById('go-to-icon').setAttribute('d', icons.goToIcon);
     // Fly to Canada
     flyTo(map, -98.74, 56.415, 3, 0);
   }
@@ -167,18 +167,18 @@ let airporsFeatureCollection = [];
 
 airports.forEach((airport) => {
   const image =
-    airport.image === ""
-      ? "https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg"
+    airport.image === ''
+      ? 'https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg'
       : airport.image;
 
   let airportFeature = {
     code: `${airport.code}`,
-    type: "Feature",
+    type: 'Feature',
     properties: {
       description: `<h2>${airport.name}</h2><ul><li>Code: ${airport.code}</li><li>Province: ${airport.province}</li><li>City: ${airport.city}</li></ul><img src="${image}" alt="${airport.code}" width=100px>`,
     },
     geometry: {
-      type: "Point",
+      type: 'Point',
       coordinates: [airport.longitude, airport.latitude],
     },
   };
@@ -186,29 +186,29 @@ airports.forEach((airport) => {
   airporsFeatureCollection.push(airportFeature);
   // Map Style
   // Toggle Map view
-  const mapView = document.getElementById("map-view");
+  const mapView = document.getElementById('map-view');
   let toggleMapView = true;
   mapView.onclick = function () {
     if (toggleMapView) {
-      const mapIcon = document.getElementById("map-icon");
-      mapIcon.setAttribute("d", icons.satelliteIcon);
-      this.setAttribute("title", "Satellite view");
-      map.setStyle("/map-styles/streets.json");
+      const mapIcon = document.getElementById('map-icon');
+      mapIcon.setAttribute('d', icons.satelliteIcon);
+      this.setAttribute('title', 'Satellite view');
+      map.setStyle('/map-styles/streets.json');
     } else {
-      const mapIcon = document.getElementById("map-icon");
-      this.setAttribute("title", "Map view");
-      mapIcon.setAttribute("d", icons.mapIcon);
-      map.setStyle("/map-styles/satelliteHybrid.json");
+      const mapIcon = document.getElementById('map-icon');
+      this.setAttribute('title', 'Map view');
+      mapIcon.setAttribute('d', icons.mapIcon);
+      map.setStyle('/map-styles/satelliteHybrid.json');
     }
     toggleMapView = !toggleMapView;
   };
 });
 
 const addLayers = () => {
-  map.addSource("places", {
-    type: "geojson",
+  map.addSource('places', {
+    type: 'geojson',
     data: {
-      type: "FeatureCollection",
+      type: 'FeatureCollection',
       features: airporsFeatureCollection,
     },
   });
@@ -216,13 +216,13 @@ const addLayers = () => {
   // Add a layer showing the places.
   map.addLayer({
     id: `places`,
-    type: "circle",
-    source: "places",
+    type: 'circle',
+    source: 'places',
     paint: {
-      "circle-color": "red",
-      "circle-radius": 6,
-      "circle-stroke-width": 2,
-      "circle-stroke-color": "yellow",
+      'circle-color': 'red',
+      'circle-radius': 6,
+      'circle-stroke-width': 2,
+      'circle-stroke-color': 'yellow',
     },
   });
 
@@ -232,9 +232,9 @@ const addLayers = () => {
     closeOnClick: false,
   });
 
-  map.on("mouseenter", "places", (e) => {
+  map.on('mouseenter', 'places', (e) => {
     // Change the cursor style as a UI indicator.
-    map.getCanvas().style.cursor = "pointer";
+    map.getCanvas().style.cursor = 'pointer';
 
     const coordinates = e.features[0].geometry.coordinates.slice();
     const description = e.features[0].properties.description;
@@ -250,42 +250,42 @@ const addLayers = () => {
     popup.setLngLat(coordinates).setHTML(description).addTo(map);
   });
 
-  map.on("mouseleave", "places", () => {
-    map.getCanvas().style.cursor = "";
+  map.on('mouseleave', 'places', () => {
+    map.getCanvas().style.cursor = '';
     popup.remove();
   });
 };
 
 let slideIndex = 1;
-        showSlides(slideIndex);
-  
-        function plusSlides(n) {
-          showSlides((slideIndex += n));
-        }
-  
-        function currentSlide(n) {
-          showSlides((slideIndex = n));
-        }
-  
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName('mySlides');
-          let dots = document.getElementsByClassName('dot');
-          if (n > slides.length) {
-            slideIndex = 1;
-          }
-          if (n < 1) {
-            slideIndex = slides.length;
-          }
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(' active', '');
-          }
-          slides[slideIndex - 1].style.display = 'block';
-          dots[slideIndex - 1].className += ' active';
-        }
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName('mySlides');
+  let dots = document.getElementsByClassName('dot');
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' active';
+}
 
 // FUNCTIONS _____________________________________________________________________________________________________
 
@@ -297,4 +297,3 @@ function flyTo(map, lng, lat, zoom = 15, pitch = 50) {
     duration: 2000,
   });
 }
-
