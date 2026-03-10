@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const captions = [
@@ -19,6 +19,23 @@ const stepPos = [
 
 export default function DTDefinition() {
   const [step, setStep] = useState(0)
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.key === ' ' || e.key === 'ArrowRight') && step < 2) {
+        e.stopImmediatePropagation()
+        e.preventDefault()
+        setStep(s => s + 1)
+      } else if (e.key === 'ArrowLeft' && step > 0) {
+        e.stopImmediatePropagation()
+        e.preventDefault()
+        setStep(s => s - 1)
+      }
+      // Space/ArrowRight at step === 2: don't intercept — let the global handler change the slide
+    }
+    window.addEventListener('keydown', handler, { capture: true })
+    return () => window.removeEventListener('keydown', handler, { capture: true })
+  }, [step])
 
   return (
     <div className="flex flex-col h-full w-full select-none">
