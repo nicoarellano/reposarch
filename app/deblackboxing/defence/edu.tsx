@@ -15,21 +15,31 @@ import Elements from '@/app/arcn5005/(lectures)/week05/Elements';
 import Three from '@/components/Common/Three';
 import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
 
+const BimViewer = dynamic(() => import('@/components/Common/BimViewer'), { ssr: false });
+
 const MainMenuContent = dynamic(() => import('@/app/arcn5005/(main)/mainMenuContent'), { ssr: false });
 
 export const content: Toc = [
   {
     element: <MainMenuContent />
   },
-  {
-    element: <PdfViewer src="/arcn5005/terms/f2024/ARCN5005 f2024 - Course Outline.pdf" />
-  },
-
+  // {
+  //   element: <PdfViewer src="/arcn5005/terms/f2024/ARCN5005 f2024 - Course Outline.pdf" />
+  // },
   {
     element: <>
       <h4 className='mb-8' >Resources:</h4>
       <ResourcesContent />
     </>
+  },
+  {
+    element: (
+      <>
+        <h4>📖 Eric Raymond - The Cathedral and the Bazaar (1999)</h4>
+        <br />
+        <PdfViewer src="/resources/Raymond, Erik - The Cathedral and the Bazaar Musings on Linux and Open Source by an Accidental Revolutionary (1999).pdf" />
+      </>
+    ),
   },
   {
     element: <>
@@ -49,28 +59,20 @@ export const content: Toc = [
       'We have been using analogue tools for centuries to express our creativity.\
     This allows a particular relationship with the object.',
   },
-  {
-    element: (
-      <Image
-        src="/images/computer-graphics/process-with-gui.png"
-        alt="Digital Creative Process"
-        caption={'Digital creative process with GUI'}
-      />
-    ),
-    notes:
-      'Just as the new representational technology of pencil and paper challenged Renaissance architects to rethink the nature of their work away from the construction site,\
-       today’s new representational technology must find ways to nurture the material imagination.\
-        - Susan Piedmon-Palladino - Tools of the Imagination',
-  },
-  {
-    element: (
-      <>
-        <h4>📖 Eric Raymond - The Cathedral and the Bazaar (1999)</h4>
-        <br />
-        <PdfViewer src="/resources/Raymond, Erik - The Cathedral and the Bazaar Musings on Linux and Open Source by an Accidental Revolutionary (1999).pdf" />
-      </>
-    ),
-  },
+  // {
+  //   element: (
+  //     <Image
+  //       src="/images/computer-graphics/process-with-gui.png"
+  //       alt="Digital Creative Process"
+  //       caption={'Digital creative process with GUI'}
+  //     />
+  //   ),
+  //   notes:
+  //     'Just as the new representational technology of pencil and paper challenged Renaissance architects to rethink the nature of their work away from the construction site,\
+  //      today’s new representational technology must find ways to nurture the material imagination.\
+  //       - Susan Piedmon-Palladino - Tools of the Imagination',
+  // },
+
   // {
   //   element: <Freedoms />,
   //   notes:
@@ -164,7 +166,7 @@ button.addEventListener('click', () => {\n
       </>
     ),
     notes:
-      "A pixel (px) (short for 'picture element') is the smallest addresable dot or square that make up an digital raster image on a display device.\
+      "A pixel (px) (short for 'picture element') is the smallest addressable dot or square that make up an digital raster image on a display device.\
       The more pixels the better image resolution. Image resolution of a computer monitor, smartphone, or TV screen, refers to the number of pixels. \
       The intensity of each pixel is variable. \
       In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue (RGB), or cyan, magenta, yellow, and black.",
@@ -208,14 +210,12 @@ button.addEventListener('click', () => {\n
   },
   {
     element: (
-      <>
-        <h4 className='w-full text-left' >BIM viewer (ifc):</h4>
-        <br />
-        <iframe
-          className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
-          src="/utils/bim/index.html"
-        />
-      </>
+      <div className="flex flex-col w-full h-full overflow-hidden">
+        <h4 className='p-2 shrink-0'>BIM viewer (ifc):</h4>
+        <div className="flex-1 overflow-hidden">
+          <BimViewer />
+        </div>
+      </div>
     ),
   },
   {

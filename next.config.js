@@ -10,7 +10,7 @@ const withMDX = require('@next/mdx')({
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: false,
-  transpilePackages: ['three'],
+  transpilePackages: ['three', '@thatopen/components', '@thatopen/components-front', '@thatopen/fragments'],
 };
 
 const withTM = require('next-transpile-modules')(['three']);
