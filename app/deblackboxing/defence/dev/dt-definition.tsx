@@ -1,11 +1,11 @@
 'use client'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const captions = [
-  'A physical thing in real space, such as a building and its urban context and landscape',
-  'The digital version of that product in virtual space, such as a BIM, GIS and all related metadata',
-  'And synchronized data connections between the two: sensors, IoT, cameras, etc',
+  <>A <strong>physical thing in real space</strong>, such as a building and its urban context and landscape</>,
+  <>The <strong>digital version of that product in virtual space</strong>, such as a BIM, GIS and all related metadata</>,
+  <>And <strong>synchronized data connections between the two</strong>: sensors, IoT, cameras, etc</>,
 ]
 
 // Column centres as % of stage width. 3 equal cols → centres at 1/6, 3/6, 5/6
@@ -50,9 +50,9 @@ export default function DTDefinition() {
         <div
           className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
           style={{
-            left: stepPos[step][0],
+            left: stepPos[step][0] === COL.hidden ? '50%' : stepPos[step][0],
             width: '33.33%',
-            transform: 'translateX(-50%)',
+            transform: stepPos[step][0] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
             opacity: stepPos[step][0] === COL.hidden ? 0 : 1,
             pointerEvents: stepPos[step][0] === COL.hidden ? 'none' : 'auto',
           }}
@@ -66,9 +66,9 @@ export default function DTDefinition() {
         <div
           className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
           style={{
-            left: stepPos[step][1],
+            left: stepPos[step][1] === COL.hidden ? '50%' : stepPos[step][1],
             width: '33.33%',
-            transform: 'translateX(-50%)',
+            transform: stepPos[step][1] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
             opacity: stepPos[step][1] === COL.hidden ? 0 : 1,
             pointerEvents: stepPos[step][1] === COL.hidden ? 'none' : 'auto',
           }}
@@ -82,9 +82,9 @@ export default function DTDefinition() {
         <div
           className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
           style={{
-            left: stepPos[step][2],
+            left: stepPos[step][2] === COL.hidden ? '50%' : stepPos[step][2],
             width: '33.33%',
-            transform: 'translateX(-50%)',
+            transform: stepPos[step][2] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
             opacity: stepPos[step][2] === COL.hidden ? 0 : 1,
             pointerEvents: stepPos[step][2] === COL.hidden ? 'none' : 'auto',
           }}
@@ -99,7 +99,7 @@ export default function DTDefinition() {
                   top: '50%',
                   left: '50%',
                   width: '35%',
-                  height: '35%',
+                  aspectRatio: '1 / 1',
                   borderRadius: '50%',
                   border: '2px solid currentColor',
                   animation: step === 2 ? `dt-wave 2.4s ease-out ${n * 0.8}s infinite` : 'none',
@@ -115,15 +115,32 @@ export default function DTDefinition() {
         </div>
       </div>
 
-      {/* Captions — reveal one by one */}
-      <div className="flex flex-col gap-1 mt-3">
+      {/* Large caption for the currently active (centred) image */}
+      <div className="relative h-10 mt-2 mb-1">
+        {captions.map((caption, i) => (
+          <h4
+            key={i}
+            className="absolute inset-0 text-xl font-semibold text-center transition-all duration-500 leading-snug"
+            style={{
+              opacity: step === i ? 1 : 0,
+              transform: step === i ? 'translateY(0)' : 'translateY(6px)',
+              pointerEvents: 'none',
+            }}
+          >
+            {caption}
+          </h4>
+        ))}
+      </div>
+
+      {/* Small captions — appear once each image has settled into its position */}
+      <div className="flex flex-col gap-1">
         {captions.map((caption, i) => (
           <p
             key={i}
-            className="text-sm transition-all duration-1000"
+            className="text-base transition-all duration-700 mt-5"
             style={{
-              opacity: step >= i ? 1 : 0,
-              transform: step >= i ? 'translateY(0)' : 'translateY(6px)',
+              opacity: step > i ? 1 : 0,
+              transform: step > i ? 'translateY(0)' : 'translateY(6px)',
             }}
           >
             <span className="font-semibold">{i + 1}.</span> {caption}

@@ -68,6 +68,12 @@ export default function Three(): JSX.Element {
     };
     renderer.domElement.addEventListener('dblclick', onDblClick);
 
+    renderer.domElement.style.cursor = 'grab';
+    const onMouseDown = () => { renderer.domElement.style.cursor = 'grabbing'; };
+    const onMouseUp = () => { renderer.domElement.style.cursor = 'grab'; };
+    renderer.domElement.addEventListener('mousedown', onMouseDown);
+    renderer.domElement.addEventListener('mouseup', onMouseUp);
+
     loader.load(
       '/models/wind_turbine_small.glb',
       function (gltf) {
@@ -165,6 +171,8 @@ export default function Three(): JSX.Element {
 
     return () => {
       renderer.domElement.removeEventListener('dblclick', onDblClick);
+      renderer.domElement.removeEventListener('mousedown', onMouseDown);
+      renderer.domElement.removeEventListener('mouseup', onMouseUp);
     };
   }, []);
 

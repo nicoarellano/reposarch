@@ -4,6 +4,8 @@ import { Toc } from '@/app/types/types';
 import Image from '@/components/Common/Image';
 import DTDefinition from './dt-definition';
 import ClickList from './click-list';
+import CdtWhat from './cdt-what';
+import CdtWhy from './cdt-why';
 import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
 
 export const content: Toc = [
@@ -21,30 +23,10 @@ export const content: Toc = [
   },
   { element: <DTDefinition /> },
   {
-    element: (
-      <ClickList
-        title="Why CDT?"
-        items={[
-          <>Fragmented data silos</>,
-          <>Big dependency on <strong>proprietary</strong> solutions, <strong>closed file formats</strong> and <strong>black boxed opaque processes</strong></>,
-          <><strong>Interoperability failures</strong> and poor BIM/GIS integration</>,
-          <><strong>Technical knowledge barriers</strong> exclude non-technical stakeholders</>,
-        ]}
-      />
-    ),
+    element: <CdtWhy />,
   },
   {
-    element: (
-      <ClickList
-        title="What is CDT?"
-        items={[
-          <><strong>Web-based, open-source</strong> data visualization platform</>,
-          <>Federates diverse data sets including BIM, GIS, open data, and <strong>multimedia</strong>.</>,
-          <>Based on <strong>open and international standards</strong></>,
-          <><strong>Accessible</strong>, and <strong>community-driven</strong>, governed and maintained by a <strong>not-for-profit</strong></>,
-        ]}
-      />
-    ),
+    element: <CdtWhat />,
   },
   {
     element: <>
