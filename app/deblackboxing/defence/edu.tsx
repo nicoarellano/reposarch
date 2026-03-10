@@ -59,29 +59,6 @@ export const content: Toc = [
       'We have been using analogue tools for centuries to express our creativity.\
     This allows a particular relationship with the object.',
   },
-  // {
-  //   element: (
-  //     <Image
-  //       src="/images/computer-graphics/process-with-gui.png"
-  //       alt="Digital Creative Process"
-  //       caption={'Digital creative process with GUI'}
-  //     />
-  //   ),
-  //   notes:
-  //     'Just as the new representational technology of pencil and paper challenged Renaissance architects to rethink the nature of their work away from the construction site,\
-  //      today’s new representational technology must find ways to nurture the material imagination.\
-  //       - Susan Piedmon-Palladino - Tools of the Imagination',
-  // },
-
-  // {
-  //   element: <Freedoms />,
-  //   notes:
-  //     'Specifically, free software means users have the four essential freedoms: \
-  // (0) to run the program, \
-  // (1) to study and change the program in source code form, \
-  // (2) to redistribute exact copies, and \
-  // (3) to distribute modified versions.',
-  // },
   {
     element: <Tags />,
     notes:
@@ -188,10 +165,13 @@ button.addEventListener('click', () => {\n
       <>
         <h4 className='w-full text-left' >CAD viewer (dxf):</h4>
         <br />
-        <iframe
-          className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
-          src="https://vagran.github.io/dxf-viewer-example/"
-        />
+        <div className="w-11/12 h-full border-solid border-2 border-dark rounded-lg bg-light shadow-md mx-10 overflow-hidden">
+          <iframe
+            className="w-full border-none"
+            style={{ height: 'calc(100% + 60px)', marginTop: '-60px' }}
+            src="https://vagran.github.io/dxf-viewer-example/"
+          />
+        </div>
       </>
     ),
   },

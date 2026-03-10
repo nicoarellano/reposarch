@@ -23,9 +23,8 @@ export default function Three(): JSX.Element {
     const aspect = size.width / size.height;
     const camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
 
-    const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({
-      alpha: true,
-    });
+    const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({});
+    scene.background = new THREE.Color(0xffffff);
 
     renderer.setSize(size.width, size.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
