@@ -66,46 +66,43 @@ export const content: Toc = [
   },
   {
     element: (
-      <>
-        <video
-          src="https://cdtminiodevcluster.ca-east.onfullhost.cloud/cdt-homepage/cdt-demo-home.mp4"
-          title="Canada’s Digital Twin Demo"
-          controls
-        />
-      </>
+      <video
+        src="https://cimsminio.ca-east.onfullhost.cloud/cdt-homepage/cdt-demo-home.mp4"
+        title="Canada’s Digital Twin Demo"
+        controls
+        autoPlay
+      />
     ),
   },
   {
     element: (
-      <>
-        <video
-          src="https://cdtminiodevcluster.ca-east.onfullhost.cloud/cdt-homepage/safeandaffordable.mp4"
-          title="Canada’s Digital Twin Demo"
-          controls
-        />
-      </>
+      <video
+        src="https://cimsminio.ca-east.onfullhost.cloud/cdt-homepage/safeandaffordable.mp4"
+        title="CDT - Safe and Affordable demo"
+        controls
+        autoPlay
+      />
     ),
   },
   {
     element: (
-      <>
-        <video
-          src="https://cdtminiodevcluster.ca-east.onfullhost.cloud/cdt-homepage/wildfires.mp4"
-          title="Canada’s Digital Twin Demo"
-          controls
-        />
-      </>
+      <video
+        src="https://cimsminio.ca-east.onfullhost.cloud/cdt-homepage/wildfires.mp4"
+        title="CDT - Wildfires demo"
+        controls
+        autoPlay
+      />
     ),
   },
   {
     element: (
-      <>
-        <video
-          src="https://cdtminiodevcluster.ca-east.onfullhost.cloud/cdt-homepage/dnd.mp4"
-          title="Canada’s Digital Twin Demo"
-          controls
-        />
-      </>
+      <video
+        src="https://cimsminio.ca-east.onfullhost.cloud/cdt-homepage/dnd.mp4"
+        title="CDT - Digital Twin for Federal Assets"
+        controls
+        autoPlay
+        muted
+      />
     ),
   },
   {
