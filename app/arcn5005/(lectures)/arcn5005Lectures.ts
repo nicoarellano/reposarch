@@ -571,7 +571,6 @@ export const arcn5005Lectures: Lectures = [
     visibleInToc: false,
     toc: [
       { title: 'Course Overview & Resources' },
-      { title: 'Computer Graphics: Analog to Digital' },
       { title: 'Web Technologies: HTML, CSS & JavaScript' },
       { title: '2D Drawing: Raster & Vector (P5.js)' },
       { title: 'CAD (DXF viewer)' },
