@@ -32,6 +32,21 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Large student binary assets - host these on an external CDN instead
+public/arcn5005/terms/**/*.glb
+public/arcn5005/terms/**/*.gltf
+public/arcn5005/terms/**/*.mp4
+public/arcn5005/terms/**/*.mp3
+public/arcn5005/terms/**/*.wav
+public/arcn5005/terms/**/*.blend
+public/arcn5005/terms/**/*.blend1
+public/arcn5005/terms/**/*.psd
+public/arcn5005/terms/**/*.ifc
+public/arcn5005/terms/**/*.frag
+public/arcn5005/terms/**/*.zip
+public/arcn5005/terms/**/*.mov
+public/arcn5005/terms/**/*.avi
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

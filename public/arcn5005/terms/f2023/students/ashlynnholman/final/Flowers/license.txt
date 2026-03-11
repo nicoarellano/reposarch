@@ -1,8 +1,0 @@
-Model Information:
-* title:	Low poly flowers pack game ready
-* source:	https://sketchfab.com/3d-models/low-poly-flowers-pack-game-ready-89ff43d324ee41c199adda86c3947425
-* author:	assetfactory (https://sketchfab.com/assetfactory)
-
-Model License:
-* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
-* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

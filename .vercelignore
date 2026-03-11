@@ -1,0 +1,17 @@
+# Exclude large student binary assets from Vercel deployment.
+# These files bloat the deployment to ~4 GB and cause build timeouts.
+# Student 3D models should be hosted on an external CDN (e.g. AWS S3, Cloudinary).
+
+public/arcn5005/terms/**/*.glb
+public/arcn5005/terms/**/*.gltf
+public/arcn5005/terms/**/*.mp4
+public/arcn5005/terms/**/*.mp3
+public/arcn5005/terms/**/*.wav
+public/arcn5005/terms/**/*.blend
+public/arcn5005/terms/**/*.blend1
+public/arcn5005/terms/**/*.psd
+public/arcn5005/terms/**/*.ifc
+public/arcn5005/terms/**/*.frag
+public/arcn5005/terms/**/*.zip
+public/arcn5005/terms/**/*.mov
+public/arcn5005/terms/**/*.avi
