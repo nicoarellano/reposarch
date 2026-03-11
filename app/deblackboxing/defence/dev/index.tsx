@@ -12,12 +12,16 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h3 className='my-16'>Canada’s Digital Twin</h3>
+        <br />
+        <br />
         <br />
         <Image
           src={"/images/cdt/canada-logo.png"}
           alt="Canada’s Digital Twin"
         />
+        <br />
+        <br />
+        <br />
       </>
     ),
   },

@@ -33,9 +33,9 @@ const QUADRANTS = [
     { left: '75%', top: '75%' },
 ]
 
-// step 0-3: image i is "active" (centered, large) when step===i; settled in quadrant when step>i
-// step 4: all images in quadrants + canada logo at centre
-// step 5: don't intercept keys → let global handler advance the slide
+// step 0:   intro title "What is CDT?"
+// step 1-4: image i is "active" when step === i+1; settled when step > i+1
+// step 5:   all images in quadrants — next key press lets global handler advance the slide
 const MAX_STEP = items.length + 1
 
 export default function CdtWhat() {
@@ -59,81 +59,107 @@ export default function CdtWhat() {
 
     return (
         <div className="flex flex-col h-full w-full select-none">
-            <h3>What is CDT?</h3>
 
-            {/* Image stage — fills space between title and captions */}
+            {/* Image stage */}
             <div
                 className="relative flex-1 min-h-0 overflow-hidden cursor-pointer"
                 onClick={() => setStep(s => Math.min(s + 1, MAX_STEP))}
             >
-                {items.map((item, i) => {
-                    const isActive = step === i  // centred, large
-                    const isSettled = step > i    // shrunk into its quadrant
-                    const shown = step >= i
-
-                    const pos = isSettled ? QUADRANTS[i] : { left: '50%', top: '50%' }
-                    const size = isActive ? '62%' : '32%'
-
-                    return (
-                        <div
-                            key={i}
-                            className="absolute transition-all duration-700 ease-in-out"
-                            style={{
-                                left: '50%',
-                                top: shown ? pos.top : '50%',
-                                // settled images shift to their quadrant left; hidden ones stay centred but are invisible
-                                marginLeft: isSettled ? `calc(${pos.left} - 50%)` : '0px',
-                                width: size,
-                                height: size,
-                                transform: shown
-                                    ? 'translate(-50%, -50%)'
-                                    : 'translate(-50%, -50%) scale(0.4)',
-                                opacity: shown ? 1 : 0,
-                                zIndex: isActive ? 10 : 1,
-                            }}
-                        >
-                            <div className="relative w-full h-full">
-                                <Image src={item.src} alt={item.alt} fill className="object-contain" />
-                            </div>
-
-                            {/* Big caption shown only while this image is active at centre */}
-                            <div
-                                className="absolute left-1/2 transition-all duration-500"
-                                style={{
-                                    top: '100%',
-                                    transform: 'translateX(-50%)',
-                                    width: '160%',
-                                    textAlign: 'center',
-                                    opacity: isActive ? 1 : 0,
-                                    marginTop: '0.5rem',
-                                    pointerEvents: 'none',
-                                }}
-                            >
-                                <h4 className="text-xl font-semibold leading-snug">{item.caption}</h4>
-                            </div>
-                        </div>
-                    )
-                })}
-
-                {/* Canada logo — appears at centre once all 4 images are settled */}
+                {/* Single animated title: large+centred at step 0, small+top at step > 0 */}
                 <div
-                    className="absolute transition-all duration-700 ease-in-out"
-                    style={{
-                        left: '50%',
+                    className="absolute transition-all duration-700 ease-in-out pointer-events-none"
+                    style={step === 0 ? {
                         top: '50%',
-                        width: '36%',
-                        height: '36%',
-                        transform: step >= 4
-                            ? 'translate(-50%, -50%) scale(1)'
-                            : 'translate(-50%, -50%) scale(0.4)',
-                        opacity: step >= 4 ? 1 : 0,
-                        zIndex: 5,
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        fontSize: '5rem',
+                        zIndex: 20,
+                        whiteSpace: 'nowrap',
+                    } : {
+                        top: 0,
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        fontSize: '3rem',
+                        zIndex: 20,
+                        whiteSpace: 'nowrap',
                     }}
                 >
-                    <div className="relative w-full h-full">
-                        <Image src="/images/cdt/canada-logo.png" alt="Canada's Digital Twin" fill className="object-contain" />
-                    </div>
+                    What is CDT?
                 </div>
+
+                {/* Inner container — shifts down to leave room for the title */}
+                <div
+                    className="absolute inset-0 transition-all duration-700 ease-in-out"
+                    style={{ top: step > 0 ? '3.5rem' : 0 }}
+                >
+                    {items.map((item, i) => {
+                        const isActive = step === i + 1
+                        const isSettled = step > i + 1
+                        const shown = step > i
+
+                        const pos = isSettled ? QUADRANTS[i] : { left: '50%', top: '50%' }
+                        const size = isActive ? '62%' : '32%'
+
+                        return (
+                            <div
+                                key={i}
+                                className="absolute transition-all duration-700 ease-in-out"
+                                style={{
+                                    left: '50%',
+                                    top: shown ? pos.top : '50%',
+                                    marginLeft: isSettled ? `calc(${pos.left} - 50%)` : '0px',
+                                    width: size,
+                                    height: size,
+                                    transform: shown
+                                        ? 'translate(-50%, -50%)'
+                                        : 'translate(-50%, -50%) scale(0.4)',
+                                    opacity: shown ? 1 : 0,
+                                    zIndex: isActive ? 10 : 1,
+                                }}
+                            >
+                                <div className="relative w-full h-full">
+                                    <Image src={item.src} alt={item.alt} fill className="object-contain" />
+                                </div>
+
+                                {/* Big caption shown only while this image is active at centre */}
+                                <div
+                                    className="absolute left-1/2 transition-all duration-500"
+                                    style={{
+                                        top: '100%',
+                                        transform: 'translateX(-50%)',
+                                        width: '160%',
+                                        textAlign: 'center',
+                                        opacity: isActive ? 1 : 0,
+                                        marginTop: '0.5rem',
+                                        pointerEvents: 'none',
+                                    }}
+                                >
+                                    <h4 className="text-xl font-semibold leading-snug">{item.caption}</h4>
+                                </div>
+                            </div>
+                        )
+                    })}
+
+                    {/* Canada logo — appears at centre once all 4 images are settled */}
+                    <div
+                        className="absolute transition-all duration-700 ease-in-out"
+                        style={{
+                            left: '50%',
+                            top: '50%',
+                            width: '36%',
+                            height: '36%',
+                            transform: step >= items.length + 1
+                                ? 'translate(-50%, -50%) scale(1)'
+                                : 'translate(-50%, -50%) scale(0.4)',
+                            opacity: step >= items.length + 1 ? 1 : 0,
+                            zIndex: 5,
+                        }}
+                    >
+                        <div className="relative w-full h-full">
+                            <Image src="/images/cdt/canada-logo.png" alt="Canada's Digital Twin" fill className="object-contain" />
+                        </div>
+                    </div>
+                </div>{/* end inner container */}
             </div>
 
             {/* Small caption list — each line appears once its image has settled into the corner */}
@@ -143,8 +169,8 @@ export default function CdtWhat() {
                         key={i}
                         className="text-xl transition-all duration-700"
                         style={{
-                            opacity: step > i ? 1 : 0,
-                            transform: step > i ? 'translateY(0)' : 'translateY(6px)',
+                            opacity: step > i + 1 ? 1 : 0,
+                            transform: step > i + 1 ? 'translateY(0)' : 'translateY(6px)',
                         }}
                     >
                         <span className="font-semibold">{i + 1}.</span> {item.caption}

@@ -22,7 +22,7 @@ export default function DTDefinition() {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if ((e.key === ' ' || e.key === 'ArrowRight') && step < 2) {
+      if ((e.key === ' ' || e.key === 'ArrowRight') && step < 3) {
         e.stopImmediatePropagation()
         e.preventDefault()
         setStep(s => s + 1)
@@ -31,7 +31,7 @@ export default function DTDefinition() {
         e.preventDefault()
         setStep(s => s - 1)
       }
-      // Space/ArrowRight at step === 2: don't intercept — let the global handler change the slide
+      // Space/ArrowRight at step === 3: don't intercept — let the global handler change the slide
     }
     window.addEventListener('keydown', handler, { capture: true })
     return () => window.removeEventListener('keydown', handler, { capture: true })
@@ -39,80 +39,107 @@ export default function DTDefinition() {
 
   return (
     <div className="flex flex-col h-full w-full select-none">
-      <h3>What is a Digital Twin?</h3>
 
-      {/* Image stage — fills all space between title and captions */}
+      {/* Image stage */}
       <div
         className="relative flex-1 min-h-0 overflow-hidden cursor-pointer"
-        onClick={() => setStep(s => Math.min(s + 1, 2))}
+        onClick={() => setStep(s => Math.min(s + 1, 3))}
       >
-        {/* Image 1 — physical building */}
+        {/* Single animated title: large+centred at step 0, small+top at step > 0 */}
         <div
-          className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
-          style={{
-            left: stepPos[step][0] === COL.hidden ? '50%' : stepPos[step][0],
-            width: '33.33%',
-            transform: stepPos[step][0] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
-            opacity: stepPos[step][0] === COL.hidden ? 0 : 1,
-            pointerEvents: stepPos[step][0] === COL.hidden ? 'none' : 'auto',
+          className="absolute transition-all duration-700 ease-in-out pointer-events-none"
+          style={step === 0 ? {
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            fontSize: '5rem',
+            zIndex: 20,
+            whiteSpace: 'nowrap',
+          } : {
+            top: 0,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            fontSize: '3rem',
+            zIndex: 20,
+            whiteSpace: 'nowrap',
           }}
         >
-          <div className="relative w-full h-full">
-            <Image src="/images/dt/house bricks.png" alt="physical" fill className="object-contain" />
-          </div>
+          What is a Digital Twin?
         </div>
 
-        {/* Image 2 — digital building */}
+        {/* Inner container — shifts down to leave room for the title */}
         <div
-          className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
-          style={{
-            left: stepPos[step][1] === COL.hidden ? '50%' : stepPos[step][1],
-            width: '33.33%',
-            transform: stepPos[step][1] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
-            opacity: stepPos[step][1] === COL.hidden ? 0 : 1,
-            pointerEvents: stepPos[step][1] === COL.hidden ? 'none' : 'auto',
-          }}
+          className="absolute inset-0 transition-all duration-700 ease-in-out"
+          style={{ top: step > 0 ? '3.5rem' : 0 }}
         >
-          <div className="relative w-full h-full">
-            <Image src="/images/dt/house bits.png" alt="digital" fill className="object-contain" />
-          </div>
-        </div>
-
-        {/* Image 3 — data icon with expanding wave rings */}
-        <div
-          className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
-          style={{
-            left: stepPos[step][2] === COL.hidden ? '50%' : stepPos[step][2],
-            width: '33.33%',
-            transform: stepPos[step][2] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
-            opacity: stepPos[step][2] === COL.hidden ? 0 : 1,
-            pointerEvents: stepPos[step][2] === COL.hidden ? 'none' : 'auto',
-          }}
-        >
-          <div className="relative w-full h-full flex items-center justify-center">
-            {/* Wave rings emanating from centre */}
-            {[0, 1, 2].map(n => (
-              <span
-                key={n}
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  width: '35%',
-                  aspectRatio: '1 / 1',
-                  borderRadius: '50%',
-                  border: '2px solid currentColor',
-                  animation: step === 2 ? `dt-wave 2.4s ease-out ${n * 0.8}s infinite` : 'none',
-                  opacity: 0,
-                }}
-              />
-            ))}
-            {/* Data / wifi icon */}
-            <div className="relative w-1/4 h-1/4 animate-pulse ">
-              <Image src="/images/dt/data.png" alt="data" fill className="object-contain" />
+          {/* Image 1 — physical building */}
+          <div
+            className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
+            style={{
+              left: step === 0 || stepPos[step - 1][0] === COL.hidden ? '50%' : stepPos[step - 1][0],
+              width: '33.33%',
+              transform: step === 0 || stepPos[step - 1][0] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
+              opacity: step === 0 || stepPos[step - 1][0] === COL.hidden ? 0 : 1,
+              pointerEvents: step === 0 || stepPos[step - 1][0] === COL.hidden ? 'none' : 'auto',
+            }}
+          >
+            <div className="relative w-full h-full">
+              <Image src="/images/dt/house bricks.png" alt="physical" fill className="object-contain" />
             </div>
           </div>
-        </div>
+
+          {/* Image 2 — digital building */}
+          <div
+            className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
+            style={{
+              left: step === 0 || stepPos[step - 1][1] === COL.hidden ? '50%' : stepPos[step - 1][1],
+              width: '33.33%',
+              transform: step === 0 || stepPos[step - 1][1] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
+              opacity: step === 0 || stepPos[step - 1][1] === COL.hidden ? 0 : 1,
+              pointerEvents: step === 0 || stepPos[step - 1][1] === COL.hidden ? 'none' : 'auto',
+            }}
+          >
+            <div className="relative w-full h-full">
+              <Image src="/images/dt/house bits.png" alt="digital" fill className="object-contain" />
+            </div>
+          </div>
+
+          {/* Image 3 — data icon with expanding wave rings */}
+          <div
+            className="absolute top-0 bottom-0 transition-all duration-700 ease-in-out"
+            style={{
+              left: step === 0 || stepPos[step - 1][2] === COL.hidden ? '50%' : stepPos[step - 1][2],
+              width: '33.33%',
+              transform: step === 0 || stepPos[step - 1][2] === COL.hidden ? 'translateX(-50%) scale(0.4)' : 'translateX(-50%)',
+              opacity: step === 0 || stepPos[step - 1][2] === COL.hidden ? 0 : 1,
+              pointerEvents: step === 0 || stepPos[step - 1][2] === COL.hidden ? 'none' : 'auto',
+            }}
+          >
+            <div className="relative w-full h-full flex items-center justify-center">
+              {/* Wave rings emanating from centre */}
+              {[0, 1, 2].map(n => (
+                <span
+                  key={n}
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    width: '35%',
+                    aspectRatio: '1 / 1',
+                    borderRadius: '50%',
+                    border: '2px solid currentColor',
+                    animation: step === 3 ? `dt-wave 2.4s ease-out ${n * 0.8}s infinite` : 'none',
+                    opacity: 0,
+                  }}
+                />
+              ))}
+              {/* Data / wifi icon */}
+              <div className="relative w-1/4 h-1/4 animate-pulse ">
+                <Image src="/images/dt/data.png" alt="data" fill className="object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>{/* end inner container */}
       </div>
 
       {/* Large caption for the currently active (centred) image */}
@@ -122,8 +149,8 @@ export default function DTDefinition() {
             key={i}
             className="absolute inset-0 text-xl font-semibold text-center transition-all duration-500 leading-snug"
             style={{
-              opacity: step === i ? 1 : 0,
-              transform: step === i ? 'translateY(0)' : 'translateY(6px)',
+              opacity: step === i + 1 ? 1 : 0,
+              transform: step === i + 1 ? 'translateY(0)' : 'translateY(6px)',
               pointerEvents: 'none',
             }}
           >
@@ -139,8 +166,8 @@ export default function DTDefinition() {
             key={i}
             className="text-base transition-all duration-700 mt-5"
             style={{
-              opacity: step > i ? 1 : 0,
-              transform: step > i ? 'translateY(0)' : 'translateY(6px)',
+              opacity: step > i + 1 ? 1 : 0,
+              transform: step > i + 1 ? 'translateY(0)' : 'translateY(6px)',
             }}
           >
             <span className="font-semibold">{i + 1}.</span> {caption}

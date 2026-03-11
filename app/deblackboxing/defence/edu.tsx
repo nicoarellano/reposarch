@@ -126,11 +126,7 @@ button.addEventListener('click', () => {\n
   }\n
 });`
   },
-  {
-    element: <CartesianPlane />,
-    notes:
-      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
-  },
+
   {
     element: (
       <>
@@ -147,6 +143,11 @@ button.addEventListener('click', () => {\n
       The more pixels the better image resolution. Image resolution of a computer monitor, smartphone, or TV screen, refers to the number of pixels. \
       The intensity of each pixel is variable. \
       In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue (RGB), or cyan, magenta, yellow, and black.",
+  },
+  {
+    element: <CartesianPlane />,
+    notes:
+      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
   },
   {
     element: (
