@@ -123,11 +123,10 @@ export default function CdtWhat() {
 
                                 {/* Big caption shown only while this image is active at centre */}
                                 <div
-                                    className="absolute left-1/2 transition-all duration-500"
+                                    className="absolute left-1/2 transition-all duration-500 bg-light/50 p-1 rounded w-fit"
                                     style={{
                                         top: '100%',
                                         transform: 'translateX(-50%)',
-                                        width: '160%',
                                         textAlign: 'center',
                                         opacity: isActive ? 1 : 0,
                                         marginTop: '0.5rem',
@@ -163,7 +162,7 @@ export default function CdtWhat() {
             </div>
 
             {/* Small caption list — each line appears once its image has settled into the corner */}
-            <div className="flex flex-col gap-1 mt-3">
+            <div className="flex flex-col gap-1 mt-6">
                 {items.map((item, i) => (
                     <p
                         key={i}
