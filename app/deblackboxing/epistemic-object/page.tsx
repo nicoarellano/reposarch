@@ -26,7 +26,7 @@ export default function Home() {
         <span />
         <span />
         <span />
-        <h3 className="text-center">Developing a BIM/GIS Open-Source Tool</h3>
+        <h3 className="text-center">Developing a BIM/GIS oOpen-source tool</h3>
 
         {/* Row 3 — Images */}
         <Link href={"/arcn5005/defence-edu/2"} className="transition-transform duration-200 hover:scale-110">

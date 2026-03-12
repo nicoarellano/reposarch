@@ -50,14 +50,18 @@ export const content: Toc = [
   {
     element: (
       <Image
-        src="/images/computer-graphics/analog-process.png"
-        alt="Analog Process"
-        caption={'Analog creative process'}
+        src="/images/computer-graphics/sketchpad.png"
+        alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
+        caption={'a) In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, the first GUI.  b) Sketchpad interface. source: Sdegno, Alberto. 2017. "For an Archeology of the Digital Iconography" Proceedings 1, no. 9: 1093.'}
       />
     ),
     notes:
-      'We have been using analogue tools for centuries to express our creativity.\
-    This allows a particular relationship with the object.',
+      'In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
+       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
+       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
+       GUIs made computer more accessible for non-programmers, including architects.\
+       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\
+       Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.',
   },
   {
     element: <Tags />,

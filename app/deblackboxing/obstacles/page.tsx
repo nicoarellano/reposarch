@@ -16,11 +16,11 @@ export default function Home() {
       {/* 5 columns: content | arrow | content | arrow | content — 3 rows: title | subtitle | image */}
       <div className="grid grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-12 gap-y-6 items-center justify-items-center">
         {/* Row 1 — Titles */}
-        <h1 className="text-center">Digital Oblivion</h1>
+        <h1 className="text-center">Oblivion</h1>
         <span />
-        <h1 className="text-center">DEBLACKBOXING</h1>
+        <h1 className="text-center">BLACK BOXES</h1>
         <span />
-        <h1 className="text-center">Black boxes</h1>
+        <h1 className="text-center">Dependency</h1>
 
         {/* Row 2 — Subtitles */}
         <h3 className="text-center">Passive acceptance of proprietary tools</h3>
