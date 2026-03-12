@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Real-Time Editor</title>
@@ -12,16 +12,37 @@
     ></script>
   </head>
   <body>
+    <style>
+      .textarea-wrapper {
+        position: relative;
+        height: 50%;
+      }
+    </style>
     <div class="container split">
       <!-- Text area for Html Code  -->
-      <textarea
-        style="height: 50%"
-        id="htmlCode"
-        placeholder="Type HTML code here"
-        spellcheck="false"
-        oninput="update(0)"
-        onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}if(event.keyCode==8){update(1);}"
-      ></textarea>
+      <div class="textarea-wrapper">
+        <button class="example-btn" onclick="insertHtmlExample()">✓</button>
+        <textarea
+          style="height: 100%"
+          id="htmlCode"
+          placeholder="Type HTML code here"
+          spellcheck="false"
+          oninput="update(0)"
+          onkeydown="
+            if (event.keyCode === 9) {
+              var v = this.value,
+                s = this.selectionStart,
+                e = this.selectionEnd;
+              this.value = v.substring(0, s) + '\t' + v.substring(e);
+              this.selectionStart = this.selectionEnd = s + 1;
+              return false;
+            }
+            if (event.keyCode == 8) {
+              update(1);
+            }
+          "
+        ></textarea>
+      </div>
       <!-- Text area for Css Code  -->
       <textarea
         style="height: 50%"
@@ -29,7 +50,19 @@
         placeholder="Type CSS code here"
         spellcheck="false"
         oninput="update(0)"
-        onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}if(event.keyCode==8){update(1);}"
+        onkeydown="
+          if (event.keyCode === 9) {
+            var v = this.value,
+              s = this.selectionStart,
+              e = this.selectionEnd;
+            this.value = v.substring(0, s) + '\t' + v.substring(e);
+            this.selectionStart = this.selectionEnd = s + 1;
+            return false;
+          }
+          if (event.keyCode == 8) {
+            update(1);
+          }
+        "
       ></textarea>
       <!-- Text area for Javascript Code  -->
       <textarea
@@ -38,11 +71,36 @@
         spellcheck="false"
         placeholder="Type JavaScript code here"
         oninput="update(0)"
-        onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}if(event.keyCode==8){update(1);}"
+        onkeydown="
+          if (event.keyCode === 9) {
+            var v = this.value,
+              s = this.selectionStart,
+              e = this.selectionEnd;
+            this.value = v.substring(0, s) + '\t' + v.substring(e);
+            this.selectionStart = this.selectionEnd = s + 1;
+            return false;
+          }
+          if (event.keyCode == 8) {
+            update(1);
+          }
+        "
       ></textarea>
     </div>
     <div class="iframe-container split">
       <iframe id="viewer"></iframe>
     </div>
+    <script>
+      function insertHtmlExample() {
+        const htmlCode = document.getElementById('htmlCode');
+        const cssCode = document.getElementById('cssCode');
+        const htmlBoilerplate =
+          '<div class="card">\n  <h1 id="greeting">Hello, Class!</h1>\n  <p>Click the button to change my color.</p>\n  <button id="magicButton">Change Color</button>\n</div>';
+        const cssBoilerplate =
+          '.card {\n  border: 2px solid #333;\n  padding: 20px;\n  text-align: center;\n  border-radius: 12px;\n  font-family: sans-serif;\n  background-color: #f9f9f9;\n}\n\nbutton {\n  background-color: #007bff;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 5px;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #0056b3;\n}';
+        htmlCode.value = htmlBoilerplate;
+        cssCode.value = cssBoilerplate;
+        htmlCode.oninput({ target: htmlCode });
+      }
+    </script>
   </body>
 </html>
