@@ -17,7 +17,7 @@ export default function Home() {
         {/* Row 1 — Titles */}
         <h1 className="text-center">REPOSARCH</h1>
         <span />
-        <h1 className="text-center">DEBLACKBOXING</h1>
+        <span />
         <span />
         <h1 className="text-center">CDT</h1>
 

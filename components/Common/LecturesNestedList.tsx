@@ -59,7 +59,7 @@ export default function LecturesNestedList({ list, title }: Props) {
             />
             <Link
               hidden={!item.date || item.date >= dayjs()}
-              href={item.url ? item.url : item.id}
+              href={`/arcn5005/${item.id}`}
               title={item.title}
             >
               <ListItemIcon>

@@ -14,6 +14,7 @@ import Tags from '@/app/arcn5005/(lectures)/week05/Tags';
 import Elements from '@/app/arcn5005/(lectures)/week05/Elements';
 import Three from '@/components/Common/Three';
 import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
+import HtmlEditorTabs from '@/components/Common/HtmlEditorTabs';
 
 const BimViewer = dynamic(() => import('@/components/Common/BimViewer'), { ssr: false });
 
@@ -79,10 +80,7 @@ export const content: Toc = [
       <>
         <h2>HTML Editor</h2>
         <br />
-        <iframe
-          className="w-11/12 h-full border-solid border-2 border-dark p-5 rounded-lg bg-light shadow-md mx-10"
-          src="/utils/code-editors/html-css-js.html"
-        />
+        <HtmlEditorTabs />
       </>
     ),
     notes:
