@@ -14,7 +14,7 @@ import Tags from '@/app/arcn5005/(lectures)/week05/Tags';
 import Elements from '@/app/arcn5005/(lectures)/week05/Elements';
 import Three from '@/components/Common/Three';
 import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
-import HtmlEditorTabs from '@/components/Common/HtmlEditorTabs';
+import CodeEditor from '@/components/Common/CodeEditor';
 
 const BimViewer = dynamic(() => import('@/components/Common/BimViewer'), { ssr: false });
 
@@ -78,9 +78,10 @@ export const content: Toc = [
   {
     element: (
       <>
-        <h2>HTML Editor</h2>
+        <h2>CODE Editor</h2>
         <br />
-        <HtmlEditorTabs />
+        <CodeEditor />
+
       </>
     ),
     notes:

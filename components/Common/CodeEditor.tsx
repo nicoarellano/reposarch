@@ -10,13 +10,13 @@ const editorMap: Record<string, string> = {
 
 const tabs = Object.keys(editorMap);
 
-export default function HtmlEditorTabs() {
+export default function CodeEditor() {
     const [tab, setTab] = useState(0);
 
     return (
         <div className="w-full h-full flex flex-col">
             {/* Tab bar */}
-            <div className="flex items-end gap-1 px-4 pt-2" role="tablist" aria-label="HTML Editor tabs">
+            <div className="flex items-end gap-1 px-4 pt-2" role="tablist" aria-label="Code Editor">
                 {tabs.map((label, i) => {
                     const active = i === tab;
                     return (
