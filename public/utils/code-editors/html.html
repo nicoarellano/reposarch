@@ -92,9 +92,7 @@
     <script>
       function insertHtmlExample() {
         const htmlCode = document.getElementById('htmlCode');
-        const boilerplate =
-          '<div class="card">\n  <h1 id="greeting">Hello, Class!</h1>\n  <p>Click the button to change my color.</p>\n  <button id="magicButton">Change Color</button>\n</div>';
-        htmlCode.value = boilerplate;
+        htmlCode.value = window.htmlBoilerplate || '';
         htmlCode.oninput({ target: htmlCode });
       }
     </script>

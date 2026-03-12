@@ -43,3 +43,26 @@ function update(i) {
     j = 1;
   }
 }
+
+const htmlBoilerplate =
+  '<div class="card">\n  <h1 id="greeting">Deblackboxing:</h1>\n  <p>Open-source toolmaking for architects.</p>\n  <button id="magicButton">Open Black Box!</button>\n  <br /><br />\n  <img id="boxImage" src="/images/blackBox.png" alt="Black-Box" width="180" />\n</div>';
+const cssBoilerplate =
+  '.card {\n  border: 2px solid #333;\n  padding: 20px;\n  text-align: center;\n  border-radius: 12px;\n  font-family: sans-serif;\n  background-color: #f9f9f9;\n}\n\nbutton {\n  background-color: #007bff;\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 5px;\n  cursor: pointer;\n}\n\nbutton:hover {\n  background-color: #0056b3;\n}';
+const jsBoilerplate = `const button = document.getElementById('magicButton');
+const boxImage = document.getElementById('boxImage');
+let isOpen = false;
+
+button.addEventListener('click', () => {
+  isOpen = !isOpen;
+  if (isOpen) {
+    boxImage.src = '/images/openBox.png';
+    button.textContent = 'Close Box!';
+  } else {
+    boxImage.src = '/images/blackBox.png';
+    button.textContent = 'Open Black-Box!';
+  }
+});`;
+
+window.htmlBoilerplate = htmlBoilerplate;
+window.cssBoilerplate = cssBoilerplate;
+window.jsBoilerplate = jsBoilerplate;
