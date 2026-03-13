@@ -36,18 +36,25 @@ export const dbbSlides: Slides = [
     id: "obstacles",
     title: "Obstacles: black boxes and digital oblivion?",
     url: "/deblackboxing/obstacles",
-    notes: "The architecture profession faces a crisis of agency.\n\
-        My dissertation traces this to a dependency on Black Boxes, which are opaque systems that can be understood in terms of their inputs and outputs, but whose processes are not accessible to users.\n\
-        For example, proprietary software.\n\
-        Our digital workflows are controlled by restrictive licenses and closed file formats, transferring design control from the architect to the software vendors.\n\
-        This is made worse by Digital Oblivion, which I define as the passive acceptance of these tools in our offices and schools.\n\
-        We focus instruction and training on mastering interfaces instead of teaching how to understand the underlying system behind them."
+    notes: "Let me know describe to you the problem that I have identified in my research\n\
+    The architecture profession faces a crisis of agency.\n\
+    My dissertation traces this to a dependency on Black Boxes, which are opaque systems that can be understood in terms of their inputs and outputs, but whose processes are not accessible to users.\n\
+    For example, proprietary software.\n\
+    Our digital workflows are controlled by restrictive licenses and closed file formats, transferring design control from the architect to the software vendors.\n\
+    This is made worse by Digital Oblivion, which I define as the passive acceptance of these tools in our offices and schools.\n\
+    We ofter focus instruction and training on mastering interfaces instead of teaching how to understand the underlying system behind them."
   },
   {
     id: "epistemic-object",
     title: "Epistemic Objects: How to overcome the black boxes and digital oblivion?",
     url: "/deblackboxing/epistemic-object",
-    notes: ""
+    notes: "For this dissertation, I didn't want to stay in the theory only.\n\
+My research is grounded in two epistemic objects.\n\
+In this case, an epistemic object it’s the blend between theory and practice. Exploring the research question through diverse media. Or as Federica defines it in her book, an entwined process of thinking, writing, and making.\n\
+______________________________________________________________________________________\n\
+1) I will now move into the first epistemic object. The course that I developed to teach open-source digital toolmaking to architecture students.\n\
+______________________________________________________________________________________\n\
+2) I will now move into my second epistemic object. The developed of an open-source digital tool for architectural representation."
   },
   {
     id: "conclusion",

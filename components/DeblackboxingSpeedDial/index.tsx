@@ -61,7 +61,7 @@ export default function DeblackboxingSpeedDial() {
     },
     {
       icon: (
-        <Link href={'/deblackboxing/epistemic-object'}>
+        <Link href={'/deblackboxing/epistemic-object/?animation=false'}>
           <ToolboxIcon sx={actionStyle} />
         </Link>
       ),

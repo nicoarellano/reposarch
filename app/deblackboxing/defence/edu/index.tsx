@@ -278,7 +278,7 @@ export const content: Toc = [
       <div className='flex flex-col items-center justify-center h-full gap-2'>
         <h4 className='w-full text-center'>Return to Epistemic Objects:</h4>
         <a
-          href={'/deblackboxing/epistemic-object'}
+          href={'/deblackboxing/epistemic-object/?animation=false'}
           className="cursor-pointer"
           aria-label="Open Epistemic Object page"
         >

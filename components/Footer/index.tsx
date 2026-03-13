@@ -138,7 +138,7 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
     const currentSlide = slides[page - 1];
     if (currentSlide?.notes) {
       console.log(
-        `%c${page} - ==================================`,
+        `%c${page} - ${currentSlide.title} ==================================`,
         'color: red; font-size: 30px'
       );
       console.log(
