@@ -57,18 +57,18 @@ export const content: Toc = [
       />
     ),
     notes:
-      'In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\
-       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\
-       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\
-       GUIs made computer more accessible for non-programmers, including architects.\
-       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\
+      'In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\n\
+       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\n\
+       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\n\
+       GUIs made computer more accessible for non-programmers, including architects.\n\
+       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\n\
        Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.',
   },
   {
     element: <Tags />,
     notes:
-      'HTML tags are keywords used in HTML to display web-pages with certain properties. They are further used for defining HTML elements. \
-        An HTML element consists of a starting tag, some content, and an ending tag. The web browser reads the HTML document from top to bottom, left to right. \
+      'HTML tags are keywords used in HTML to display web-pages with certain properties. They are further used for defining HTML elements. \n\
+        An HTML element consists of a starting tag, some content, and an ending tag. The web browser reads the HTML document from top to bottom, left to right. \n\
         Each HTML tag defines a new property that helps in rendering the website.',
   },
   {
@@ -84,50 +84,7 @@ export const content: Toc = [
 
       </>
     ),
-    notes:
-      `HTML EXAMPLE _________________________________________\n
-<div class="card">\n
-  <h1 id="greeting">Hello, Class!</h1>\n
-  <p>Click the button to change my color.</p>\n
-  <button id="magicButton">Change Color</button>\n
-</div>\n
-\n
-CSS EXAMPLE __________________________________________________\n
-.card {\n
-  border: 2px solid #333;\n
-  padding: 20px;\n
-  text-align: center;\n
-  border-radius: 12px;\n
-  font-family: sans-serif;\n
-  background-color: #f9f9f9;\n
-}\n
-\n
-button {\n
-  background-color: #007bff;\n
-  color: white;\n
-  border: none;\n
-  padding: 10px 20px;\n
-  border-radius: 5px;\n
-  cursor: pointer;\n
-}\n
-\n
-button:hover {\n
-  background-color: #0056b3;\n
-}\n
-\n
-JS EXAMPLE_____________________________________________________\n
-const button = document.getElementById('magicButton');\n
-const title = document.getElementById('greeting');\n
-\n
-button.addEventListener('click', () => {\n
-  if (title.style.color === 'blueviolet') {\n
-    title.style.color = 'black';\n
-    title.style.backgroundColor = 'transparent';\n
-  } else {\n
-    title.style.color = 'blueviolet';\n
-    title.style.backgroundColor = 'yellow';\n
-  }\n
-});`
+    notes: ""
   },
 
   {
@@ -142,9 +99,9 @@ button.addEventListener('click', () => {\n
       </>
     ),
     notes:
-      "A pixel (px) (short for 'picture element') is the smallest addressable dot or square that make up an digital raster image on a display device.\
-      The more pixels the better image resolution. Image resolution of a computer monitor, smartphone, or TV screen, refers to the number of pixels. \
-      The intensity of each pixel is variable. \
+      "A pixel (px) (short for 'picture element') is the smallest addressable dot or square that make up an digital raster image on a display device.\n\
+      The more pixels the better image resolution. Image resolution of a computer monitor, smartphone, or TV screen, refers to the number of pixels. \n\
+      The intensity of each pixel is variable. \n\
       In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue (RGB), or cyan, magenta, yellow, and black.",
   },
   {

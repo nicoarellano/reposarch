@@ -80,9 +80,8 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
     <>
       {Boolean(list && list.length > 1) && (
         <footer
-          className={`bottom-0 static w-screen justify-center flex h-16 items-center z-50 ${
-            mode === 'light' ? 'bg-light' : 'bg-dark '
-          }`}
+          className={`bottom-0 static w-screen justify-center flex h-16 items-center z-50 ${mode === 'light' ? 'bg-light' : 'bg-dark '
+            }`}
         >
           <Stack
             spacing={2}
@@ -134,6 +133,21 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
   });
 
   useEffect(() => {
+    // 🎶 Speaker notes as console log
+    console.clear();
+    const currentSlide = slides[page - 1];
+    if (currentSlide?.notes) {
+      console.log(
+        `%c${page} - ==================================`,
+        'color: red; font-size: 30px'
+      );
+      console.log(
+        `%c${currentSlide.notes}`,
+        'color: #0b3d91; font-size: 35px; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 600;'
+      );
+    }
+
+
     function handleKeyDown(event: KeyboardEvent) {
       event.stopPropagation();
 
@@ -167,9 +181,8 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
 
   return (
     <footer
-      className={`bottom-0 static w-screen flex justify-center h-16 items-center z-50 ${
-        mode === 'light' ? 'bg-light' : 'bg-dark '
-      }`}
+      className={`bottom-0 static w-screen flex justify-center h-16 items-center z-50 ${mode === 'light' ? 'bg-light' : 'bg-dark '
+        }`}
     >
       <Stack spacing={2} visibility={slides.length > 1 ? 'visible' : 'hidden'}>
         <Pagination

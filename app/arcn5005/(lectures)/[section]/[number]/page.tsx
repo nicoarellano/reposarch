@@ -78,8 +78,8 @@ export default function Page({ params }): ReactElement<Props> {
           paramsNumber < 1
             ? 1
             : paramsNumber > fullContent.length
-            ? fullContent.length
-            : paramsNumber;
+              ? fullContent.length
+              : paramsNumber;
 
         setCurrentSlideNumber(index);
         setContent(fullContent);
@@ -91,14 +91,6 @@ export default function Page({ params }): ReactElement<Props> {
     if (content.length > 0) {
       const currentContent = content[currentSlideNumber - 1];
       console.clear();
-      if (currentContent?.notes) {
-        // 🎶 Speaker notes as console log
-        console.log(
-          `%c${currentSlideNumber}- ==================================`,
-          'color: red; font-size: 30px'
-        );
-        console.log(`%c${currentContent.notes}`, 'font-size: 35px');
-      }
       setCurrentSlideElement(currentContent.element);
     }
   }, [content, currentSlideNumber]);

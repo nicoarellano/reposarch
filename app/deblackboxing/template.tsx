@@ -11,12 +11,9 @@ interface Props {
 
 export default function NestedTemplate({
   children,
-  params,
-  searchParams,
 }: Props) {
-  console.log(params, searchParams);
-  // const { mode } = useContext(ThemeContext)["state"]["theme"];
   const mode = "light";
+
   return (
     <main className={`flex flex-col h-screen justify-between `}>
       <header
