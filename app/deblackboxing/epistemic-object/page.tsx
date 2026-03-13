@@ -1,5 +1,5 @@
 ﻿"use client";
-import React, { useState, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from 'next/navigation';
 
@@ -8,7 +8,7 @@ import EastIcon from "@mui/icons-material/EastRounded";
 
 import Link from "next/link";
 
-export default function Home() {
+function EpistemicObjectContent() {
   const openBox = "/images/openBox.png";
   const cdt = "/images/cdt/canada-logo.png";
   const reposarch = "/images/reposarch.png";
@@ -105,5 +105,13 @@ export default function Home() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={null}>
+      <EpistemicObjectContent />
+    </Suspense>
   );
 }

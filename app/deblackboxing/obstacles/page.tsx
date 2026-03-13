@@ -1,12 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 
 import WestIcon from "@mui/icons-material/WestRounded";
 import EastIcon from "@mui/icons-material/EastRounded";
 
-export default function Home() {
+function ObstaclesContent() {
   const blackBox = "/images/blackBox.png";
   const proprietary = "/images/defence/proprietaryBoxes.png";
   const interfaces = "/images/defence/interaction.png";
@@ -113,5 +113,13 @@ export default function Home() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={null}>
+      <ObstaclesContent />
+    </Suspense>
   );
 }
