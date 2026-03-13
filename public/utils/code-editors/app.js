@@ -59,7 +59,7 @@ button.addEventListener('click', () => {
     button.textContent = 'Close Box!';
   } else {
     boxImage.src = '/images/blackBox.png';
-    button.textContent = 'Open Black-Box!';
+    button.textContent = 'Open Black Box!';
   }
 });`;
 
