@@ -26,30 +26,37 @@ export const dbbSlides: Slides = [
     title: "Table of Contents",
     url: "/deblackboxing/chapters",
     notes: "The dissertation is organized into three main chapters.\n\
+    ______________________________________________________________________________________\n\
           - Chapter 1 establishes the problem and the need for a reflection on the relationship between architects and their representation software.\n\
+    ______________________________________________________________________________________\n\
           It also studies alternatives to the existing tools we have and use.\n\
           - Chapter 2 details the educational framework I have developed and taught at Carleton University.\n\
+    ______________________________________________________________________________________\n\
           - Chapter 3 documents the creation and deployment of an open-source BIM/GIS platform, called Canada's Digital Twin.\n\
+    ______________________________________________________________________________________\n\
           - And the conclusion is an optimistic invitation to a more open relationship with digital tools, one in which architects are active shapers of these instruments."
   },
   {
     id: "obstacles",
-    title: "Obstacles: black boxes and digital oblivion?",
+    title: "Obstacles: black boxes and digital oblivion (Chapter 1)",
     url: "/deblackboxing/obstacles",
     notes: "Let me know describe to you the problem that I have identified in my research\n\
     The architecture profession faces a crisis of agency.\n\
-    My dissertation traces this to a dependency on Black Boxes, which are opaque systems that can be understood in terms of their inputs and outputs, but whose processes are not accessible to users.\n\
+    This crises of agency is presented through two interrelated phenomena:\n\
+    ______________________________________________________________________________________\n\
+    1) Digital Oblivion, which I define as the passive acceptance of these tools in our offices and schools.\n\
+    We ofter focus instruction and training on mastering interfaces instead of teaching how to understand the underlying system behind them.\n\
+    ______________________________________________________________________________________\n\
+    2) And the dependency on Black Boxes, which are opaque systems that can be understood in terms of their inputs and outputs, but whose processes are not accessible to users.\n\
     For example, proprietary software.\n\
-    Our digital workflows are controlled by restrictive licenses and closed file formats, transferring design control from the architect to the software vendors.\n\
-    This is made worse by Digital Oblivion, which I define as the passive acceptance of these tools in our offices and schools.\n\
-    We ofter focus instruction and training on mastering interfaces instead of teaching how to understand the underlying system behind them."
+    Our digital workflows are controlled by restrictive licenses and closed file formats, transferring design control from the architect to the software vendors."
   },
   {
     id: "epistemic-object",
     title: "Epistemic Objects: How to overcome the black boxes and digital oblivion?",
     url: "/deblackboxing/epistemic-object",
     notes: "For this dissertation, I didn't want to stay in the theory only.\n\
-My research is grounded in two epistemic objects.\n\
+In order to address these two obstacles, my research is grounded in two epistemic objects.\n\
 In this case, an epistemic object it’s the blend between theory and practice. Exploring the research question through diverse media. Or as Federica defines it in her book, an entwined process of thinking, writing, and making.\n\
 ______________________________________________________________________________________\n\
 1) I will now move into the first epistemic object. The course that I developed to teach open-source digital toolmaking to architecture students.\n\

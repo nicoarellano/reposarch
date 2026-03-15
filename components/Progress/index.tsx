@@ -1,15 +1,13 @@
 'use client';
 
-import AnnouncementsdIcon from '@mui/icons-material/CampaignRounded';
+import AnnouncementsIcon from '@mui/icons-material/CampaignRounded';
 import SlideshowIcon from '@mui/icons-material/Slideshow';
 
-import { AnnouncementsF2023 } from '../../app/arcn5005/terms/[term]/announcements/arcn5005F2023Anouncements';
 import { AnnouncementsF2024 } from '../../app/arcn5005/terms/[term]/announcements/arcn5005F2024Anouncements';
 import ListWithIcon from '../Common/ListWithIcon';
 import dayjs from 'dayjs';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useParams } from 'next/navigation';
 import { startingDate } from '@/app/arcn5005/terms/currentTerm';
 import { arcn5005Lectures } from '@/app/arcn5005/(lectures)/arcn5005Lectures';
 
@@ -28,14 +26,13 @@ export default function Progress() {
   const isMobile = useMediaQuery('(max-width: 600px)');
   return (
     <section
-      className={`grid grid-row-2 divide-y gap-8 overflow-hidden p-2 ${
-        isMobile ? 'h-[380px]' : 'h-[500px]'
-      }`}
+      className={`grid grid-row-2 divide-y gap-8 overflow-hidden p-2 ${isMobile ? 'h-[380px]' : 'h-[500px]'
+        }`}
     >
       <div className=" overflow-y-auto overflow-x-hidden flex align-middle">
         <ListWithIcon
           list={announcements}
-          icon={<AnnouncementsdIcon />}
+          icon={<AnnouncementsIcon />}
           subheader="📢 Announcements:"
         />
       </div>

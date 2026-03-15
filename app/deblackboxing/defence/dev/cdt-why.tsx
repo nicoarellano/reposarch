@@ -7,21 +7,25 @@ const items = [
         src: '/images/defence/silos.png',
         alt: 'Fragmented data silos',
         caption: <>Fragmented <strong>data silos</strong></>,
+        longCaption: false,
     },
     {
         src: '/images/defence/proprietaryBoxes.png',
         alt: 'Proprietary solutions',
         caption: <>Big dependency on <strong>proprietary</strong> solutions, <strong>closed file formats</strong> and <strong>black boxed opaque processes</strong></>,
+        longCaption: true,
     },
     {
         src: '/images/defence/bim-gis.png',
         alt: 'BIM/GIS interoperability',
         caption: <><strong>Interoperability failures</strong> and poor <strong>BIM/GIS</strong> integration</>,
+        longCaption: false,
     },
     {
         src: '/images/defence/interaction.png',
         alt: 'Technical knowledge barriers',
         caption: <><strong>Technical knowledge barriers</strong> exclude non-technical stakeholders</>,
+        longCaption: true,
     },
 ]
 
@@ -37,6 +41,7 @@ const QUADRANTS = [
 // step 1-4: image i is "active" when step === i+1; settled when step > i+1
 // step 5:   all images in quadrants — next key press lets global handler advance the slide
 const MAX_STEP = items.length + 1
+const BOTTOM_CLEARANCE = '5.5rem'
 
 export default function CdtWhy() {
     const [step, setStep] = useState(0)
@@ -90,7 +95,7 @@ export default function CdtWhy() {
                 {/* Inner container — shifts down to leave room for the title */}
                 <div
                     className="absolute inset-0 transition-all duration-700 ease-in-out"
-                    style={{ top: step > 0 ? '3.5rem' : 0 }}
+                    style={{ top: step > 0 ? '3.5rem' : 0, bottom: BOTTOM_CLEARANCE }}
                 >
                     {items.map((item, i) => {
                         const isActive = step === i + 1
@@ -123,7 +128,7 @@ export default function CdtWhy() {
 
                                 {/* Big caption shown only while this image is active at centre */}
                                 <div
-                                    className="absolute left-1/2 transition-all duration-500 bg-light/50 p-1 rounded w-fit"
+                                    className="absolute left-1/2 transition-all duration-500 bg-light/50 p-1 rounded"
                                     style={{
                                         top: '100%',
                                         transform: 'translateX(-50%)',
@@ -131,9 +136,23 @@ export default function CdtWhy() {
                                         opacity: isActive ? 1 : 0,
                                         marginTop: '0.5rem',
                                         pointerEvents: 'none',
+                                        width: item.longCaption ? 'min(82vw, 34rem)' : 'max-content',
                                     }}
                                 >
-                                    <h4 className="text-xl font-semibold leading-snug">{item.caption}</h4>
+                                    <h4
+                                        className="text-xl font-semibold leading-snug"
+                                        style={item.longCaption
+                                            ? {
+                                                whiteSpace: 'normal',
+                                                display: '-webkit-box',
+                                                WebkitLineClamp: 2,
+                                                WebkitBoxOrient: 'vertical',
+                                                overflow: 'hidden',
+                                            }
+                                            : { whiteSpace: 'nowrap' }}
+                                    >
+                                        {item.caption}
+                                    </h4>
                                 </div>
                             </div>
                         )

@@ -18,7 +18,7 @@ export default function ListWithIcon({
   icon,
   subheader = 'Topics',
 }: Props) {
-  const path = usePathname();
+  const path = '/arcn5005';
   return (
     <List
       sx={{
@@ -33,20 +33,23 @@ export default function ListWithIcon({
     >
       {list.map((item: { title: string; url?: string }, index) => {
         return (
-          <ListItem key={index}>
+          <ListItem key={index} className="flex items-center jus">
             <ListItemIcon>
               {Boolean(item.url) ? (
-                <Link
+                <Link className='flex'
                   href={
                     item.url?.startsWith('http') || item.url?.startsWith('/')
                       ? item.url
                       : `${path}/${item.url}`
                   }
-                >
-                  <IconButton>{icon}</IconButton>
+                ><IconButton>
+                    {icon}
+                  </IconButton>
                 </Link>
               ) : (
-                <IconButton>{icon}</IconButton>
+                <IconButton>
+                  {icon}
+                </IconButton>
               )}
             </ListItemIcon>
             <ListItemText primary={item.title} />

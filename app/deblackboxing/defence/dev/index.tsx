@@ -3,7 +3,6 @@ import { Toc } from '@/app/types/types';
 
 import Image from '@/components/Common/Image';
 import DTDefinition from './dt-definition';
-import ClickList from './click-list';
 import CdtWhat from './cdt-what';
 import CdtWhy from './cdt-why';
 import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
@@ -24,13 +23,18 @@ export const content: Toc = [
         <br />
       </>
     ),
+    notes: 'Canada’s Digital Twin project is the empirical validation of my dissertation. Is a project that I have been leading at CIMS for the last few years. It describes all the elements of toolmaking that I have been testing in this dissertation'
   },
-  { element: <DTDefinition /> },
+  { element: <DTDefinition />,
+    notes: ''
+  },
   {
-    element: <CdtWhy />,
+    element: <CdtWhy />, 
+    notes: '',
   },
   {
     element: <CdtWhat />,
+    notes: '',
   },
   {
     element: <>
@@ -38,17 +42,19 @@ export const content: Toc = [
       <Image
         src={"/images/defence/dt diagram.png"}
         alt="CDT diagram"
-      />
-    </>
-  },
-  {
-    element: <>
+        />
+    </>,
+        notes: '',
+      },
+      {
+        element: <>
       <h4 className='w-2/3 text-left mb-8'>CDT Platform Architecture:</h4>
       <Image
         src={"/images/defence/dt arch.png"}
         alt="CDT platform architecture"
-      />
-    </>
+        />
+    </>,
+        notes: '',
   },
   {
     element: (

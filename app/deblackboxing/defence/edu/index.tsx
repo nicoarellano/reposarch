@@ -22,16 +22,19 @@ const MainMenuContent = dynamic(() => import('@/app/arcn5005/(main)/mainMenuCont
 
 export const content: Toc = [
   {
-    element: <MainMenuContent />
+    element: <MainMenuContent />,
+    notes: "Because you have already read the theory, I wanted to explain why it was so important to teach the course through a custom portal.\n\
+My decision to develop this presentation tool as well as the course portal, rather than using traditional software like PowerPoint, directly reflects my central methodological claim.\n\
+Existing software do not adequately support the interactive demonstrations that are essential for teaching and explaining my work.\n\
+This conscious choice of medium highlights a foundational principle of the research: the architect can and will benefit by designing their own tools. So, in this context, the medium is a core element of the research message.\n\
+The portal is a web-based, open-source platform that serves as the course's didactic infrastructure. It contains everything from the course calendar and announcements to the list of lectures to date and relevant links (like the course GitHub repository), etc."
   },
-  // {
-  //   element: <PdfViewer src="/arcn5005/terms/f2024/ARCN5005 f2024 - Course Outline.pdf" />
-  // },
   {
     element: <>
       <h4 className='mb-8' >Resources:</h4>
       <ResourcesContent />
-    </>
+    </>,
+    notes: "It also includes multiple resources to access and download, such as websites, influential videos and lectures, free software, papers, and peer-reviewed articles."
   },
   {
     element: (
@@ -41,12 +44,14 @@ export const content: Toc = [
         <PdfViewer src="/resources/Raymond, Erik - The Cathedral and the Bazaar Musings on Linux and Open Source by an Accidental Revolutionary (1999).pdf" />
       </>
     ),
+    notes: "For example, students can access some ebooks and resources directly through the portal."
   },
   {
     element: <>
       <h4 >Lectures:</h4>
       <TOC />
-    </>
+    </>,
+    notes: "All the lecture to date including all slides and class recordings are available through the portal as well."
   },
   {
     element: (
@@ -57,7 +62,10 @@ export const content: Toc = [
       />
     ),
     notes:
-      'In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\n\
+      'This is an example of one of the theory slides; the portal also acts as a slideshow.\n\
+      Speaker notes are also available, for example:\n\
+      _____________________________________________________________________________________\n\
+      In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\n\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\n\
        With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\n\
        GUIs made computer more accessible for non-programmers, including architects.\n\
@@ -67,9 +75,7 @@ export const content: Toc = [
   {
     element: <Tags />,
     notes:
-      'HTML tags are keywords used in HTML to display web-pages with certain properties. They are further used for defining HTML elements. \n\
-        An HTML element consists of a starting tag, some content, and an ending tag. The web browser reads the HTML document from top to bottom, left to right. \n\
-        Each HTML tag defines a new property that helps in rendering the website.',
+      '',
   },
   {
     element: <Elements />,

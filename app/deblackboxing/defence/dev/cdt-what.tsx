@@ -7,21 +7,25 @@ const items = [
         src: '/images/defence/web-based.png',
         alt: 'Web-based',
         caption: <><strong>Web-based, open-source</strong> data visualization platform</>,
+        longCaption: false,
     },
     {
         src: '/images/defence/dt-federated.png',
         alt: 'Federated data',
         caption: <>Federates diverse data sets including BIM, GIS, open data, and <strong>multimedia</strong>.</>,
+        longCaption: true,
     },
     {
         src: '/images/defence/dt-standards.png',
         alt: 'Open standards',
         caption: <>Based on <strong>open and international standards</strong></>,
+        longCaption: false,
     },
     {
         src: '/images/defence/nfp.png',
         alt: 'Not-for-profit',
         caption: <><strong>Accessible</strong>, and <strong>community-driven</strong>, governed by a <strong>not-for-profit</strong></>,
+        longCaption: true,
     },
 ]
 
@@ -37,6 +41,7 @@ const QUADRANTS = [
 // step 1-4: image i is "active" when step === i+1; settled when step > i+1
 // step 5:   all images in quadrants — next key press lets global handler advance the slide
 const MAX_STEP = items.length + 1
+const BOTTOM_CLEARANCE = '5.5rem'
 
 export default function CdtWhat() {
     const [step, setStep] = useState(0)
@@ -90,7 +95,7 @@ export default function CdtWhat() {
                 {/* Inner container — shifts down to leave room for the title */}
                 <div
                     className="absolute inset-0 transition-all duration-700 ease-in-out"
-                    style={{ top: step > 0 ? '3.5rem' : 0 }}
+                    style={{ top: step > 0 ? '3.5rem' : 0, bottom: BOTTOM_CLEARANCE }}
                 >
                     {items.map((item, i) => {
                         const isActive = step === i + 1
@@ -123,7 +128,7 @@ export default function CdtWhat() {
 
                                 {/* Big caption shown only while this image is active at centre */}
                                 <div
-                                    className="absolute left-1/2 transition-all duration-500 bg-light/50 p-1 rounded w-fit"
+                                    className="absolute left-1/2 transition-all duration-500 bg-light/50 p-1 rounded"
                                     style={{
                                         top: '100%',
                                         transform: 'translateX(-50%)',
@@ -131,9 +136,15 @@ export default function CdtWhat() {
                                         opacity: isActive ? 1 : 0,
                                         marginTop: '0.5rem',
                                         pointerEvents: 'none',
+                                        width: item.longCaption ? 'min(82vw, 34rem)' : 'max-content',
                                     }}
                                 >
-                                    <h4 className="text-xl font-semibold leading-snug">{item.caption}</h4>
+                                    <h4
+                                        className="text-xl font-semibold leading-snug"
+                                        style={{ whiteSpace: item.longCaption ? 'normal' : 'nowrap' }}
+                                    >
+                                        {item.caption}
+                                    </h4>
                                 </div>
                             </div>
                         )
@@ -162,7 +173,7 @@ export default function CdtWhat() {
             </div>
 
             {/* Small caption list — each line appears once its image has settled into the corner */}
-            <div className="flex flex-col gap-1 mt-6">
+            <div className="flex flex-col gap-1">
                 {items.map((item, i) => (
                     <p
                         key={i}

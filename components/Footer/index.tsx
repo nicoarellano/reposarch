@@ -9,15 +9,30 @@ import PaginationItem from '@mui/material/PaginationItem';
 import BackIcon from '@mui/icons-material/ArrowBackIosRounded';
 import ForwardIcon from '@mui/icons-material/ArrowForwardIosRounded';
 
-import { Slides } from '../../app/types/types';
+import { Slide, Slides } from '../../app/types/types';
 import { ThemeContext } from '../../middleware/Theme/context';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { useSwipeable } from 'react-swipeable';
 
 interface Props {
-  list: [];
+  list: Slide[];
   currentPage: number;
+}
+
+export const speakerNotes = (page: number, currentSlide: Slide) => {
+  console.clear();
+
+  if (currentSlide?.notes) {
+    console.log(
+      `%c${page}) ${currentSlide.title ?? ''}${'\u2003'.repeat(80)}`,
+      'color: red; font-size: 30px; display:block; width:100vw; box-sizing:border-box; border-bottom: 3px solid red; padding:6px 8px; white-space: pre;'
+    );
+    console.log(
+      `%c${currentSlide.notes}`,
+      'color: #0b3d91; font-size: 30px; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 600;'
+    );
+  }
 }
 
 export function Footer({ list, currentPage }): ReactElement<Props> {
@@ -49,6 +64,12 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
   });
 
   useEffect(() => {
+    // Mirror slide footer behavior: log speaker notes for the current page.
+    const currentSlide = list[page - 1];
+    if (currentSlide) {
+      speakerNotes(page, currentSlide);
+    }
+
     function handleKeyDown(event: KeyboardEvent) {
       event.key === 'ArrowRight' ||
         event.key === ' ' ||
@@ -70,7 +91,7 @@ export function Footer({ list, currentPage }): ReactElement<Props> {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [page]);
+  }, [page, list, newPath, router]);
 
   function handlePaginationChange(e, value) {
     setPage(value);
@@ -134,18 +155,8 @@ export function SlidesFooter({ slides }): ReactElement<SlideProps> {
 
   useEffect(() => {
     // 🎶 Speaker notes as console log
-    console.clear();
     const currentSlide = slides[page - 1];
-    if (currentSlide?.notes) {
-      console.log(
-        `%c${page} - ${currentSlide.title} ==================================`,
-        'color: red; font-size: 30px'
-      );
-      console.log(
-        `%c${currentSlide.notes}`,
-        'color: #0b3d91; font-size: 35px; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 600;'
-      );
-    }
+    speakerNotes(page, currentSlide)
 
 
     function handleKeyDown(event: KeyboardEvent) {

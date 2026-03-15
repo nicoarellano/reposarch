@@ -73,11 +73,11 @@ function EpistemicObjectContent() {
         <h1 className="text-center" style={rightStyle}>CDT</h1>
 
         {/* Row 2  Subtitles */}
-        <h3 className="text-center" style={leftStyle}>Teaching open-source toolmaking for architects</h3>
+        <h3 className="text-center" style={leftStyle}>Teaching open-source toolmaking for architects (Chapter 2)</h3>
         <span />
         <span />
         <span />
-        <h3 className="text-center" style={rightStyle}>Developing a BIM/GIS open-source tool</h3>
+        <h3 className="text-center w-96" style={rightStyle}>Developing a BIM/GIS open-source tool (Chapter 3)</h3>
 
         {/* Row 3  Images */}
         <div style={leftStyle}>
