@@ -23,7 +23,7 @@ export const content: Toc = [
         <br />
       </>
     ),
-    notes: 'Canada’s Digital Twin project is the empirical validation of my dissertation. Is a project that I have been leading at CIMS for the last few years. It describes all the elements of toolmaking that I have been testing in this dissertation'
+    notes: 'Canada’s Digital Twin project is the empirical validation of my dissertation. Is a project that I have been leading at CIMS for the last few years. It describes all the elements of toolmaking that I have been testing in this dissertation.'
   },
   { element: <DTDefinition />,
     notes: ''

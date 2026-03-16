@@ -11,7 +11,6 @@ import ResourcesContent from '@/app/arcn5005/(main)/resources/ResourcesContent';
 import StudentsList from '@/components/Common/StudentsList';
 import { classListf2024 } from '@/app/arcn5005/terms/[term]/students/(classListF2024)/classList';
 import Tags from '@/app/arcn5005/(lectures)/week05/Tags';
-import Elements from '@/app/arcn5005/(lectures)/week05/Elements';
 import Three from '@/components/Common/Three';
 import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
 import CodeEditor from '@/components/Common/CodeEditor';
@@ -75,11 +74,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
   {
     element: <Tags />,
     notes:
-      '',
-  },
-  {
-    element: <Elements />,
-    notes: '',
+      'There are also interactive features that the students can use to test their knowledge when studing for the quizes.',
   },
   {
     element: (
@@ -90,7 +85,10 @@ The portal is a web-based, open-source platform that serves as the course's dida
 
       </>
     ),
-    notes: ""
+    notes: 'More importantly, I have created interactive features to practice their programming skills.\n\
+    This exmple is a simple real-time  sandbox for them to test the different languages taught in the course.\n\
+    It is progressive because first we talk about HTML, then CSS and finally JavaScript.\n\
+    At the end they can test the 3 languages together and see in real time how they interact.'
   },
 
   {
@@ -105,15 +103,13 @@ The portal is a web-based, open-source platform that serves as the course's dida
       </>
     ),
     notes:
-      "A pixel (px) (short for 'picture element') is the smallest addressable dot or square that make up an digital raster image on a display device.\n\
-      The more pixels the better image resolution. Image resolution of a computer monitor, smartphone, or TV screen, refers to the number of pixels. \n\
-      The intensity of each pixel is variable. \n\
-      In color imaging systems, a color is typically represented by three or four component intensities such as red, green, and blue (RGB), or cyan, magenta, yellow, and black.",
+      "We then tackle the dominant paradigms of computer graphics. Students use this embedded raster tool to experiment with pixel-based drawing, making the 2D coordinate grid tangible.",
   },
   {
     element: <CartesianPlane />,
     notes:
-      "Cartesian or analytic geometry, which uses algebra to describe geometry. Descartes 'invented the convention of representing unknowns in equations by x, y, and z'",
+      "We then move to the 3D space with an interactive Cartesian Plane. Built with Three.js, it allows students to manipulate XYZ coordinates and see the results in real-time.\n\
+      This is a much more dynamic and graphic way of understanding the tri-dimentional digital world. Which is hard to grasp with a PowerPoint presentation",
   },
   {
     element: (
@@ -126,6 +122,9 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    notes: 'This leads to procedural drawing. Using P5.js, we generate vector graphics through scripts, showing that architectural marks can be defined as repeatable procedures rather than static traces.\n\
+    Vectorial drawing is an important concept since it is at the base of CAD and parametric modelling\n\
+    This tools allow students to understand the basic functions of geometry creation and dynamically interact with them.'
   },
   {
     element: (
@@ -141,6 +140,18 @@ The portal is a web-based, open-source platform that serves as the course's dida
         </div>
       </>
     ),
+    notes: 'Having explained the basic concept of computer graphics, the course pivots towards specific tools for architects. So students can experience real toolmaking for architectural representation.\n\
+    After grasping the theory behind CAD, 3D CAD, and BIM, we experiment firsthand with custom tools\n\
+    _____________________________________________________________________________________________\n\
+    The first example is a CAD viewer that works with the open format DXF.'
+  },
+  {
+    element: (
+      <iframe className="w-full h-full" src="https://threejs.org/editor/" />
+    ),
+    notes: 'Moving into 3D modelling, we utilize the Three.js library to handle scenes, lights, and textures natively in the browser.\n\
+    This is the engine behind many industry cloud platforms such as Autodesk Forge, and it is free and open-source.\n\
+    In this feature, the students can test with the different elements and see directly.'
   },
   {
     element: (
@@ -149,11 +160,30 @@ The portal is a web-based, open-source platform that serves as the course's dida
         <Three />
       </>
     ),
+    notes: 'Then we move to a more custom 3D viewer built with Three.js, which allows students to create their own scenes from scratch and to load and manipulate 3D models in real-time, demonstrating the core principles of 3D representation and interaction.'
   },
   {
     element: (
-      <iframe className="w-full h-full" src="https://threejs.org/editor/" />
+      <Image
+        src="/images/three/f2024-render.png"
+        alt="students photogrammetry models"
+        caption={'Composition of some of the student’s 3D models created for the photogrammetry exercise, class Fall 2024.'}
+      />
     ),
+    notes:
+      'This is an example of the students’ work with the 3D viewer. They created 3D models using photogrammetry and then loaded them in the viewer to manipulate them and create compositions.',
+  },
+  {
+    element: (
+      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/three/index.html" />
+    ),
+    notes: ''
+  },
+  {
+    element: (
+      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/maisjoudeh/three/index.html" />
+    ),
+    notes: ''
   },
   {
     element: (
@@ -164,6 +194,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         </div>
       </div>
     ),
+    notes: ''
   },
   {
     element: (
@@ -177,6 +208,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    notes: ''
   },
   {
     element: (
@@ -190,6 +222,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    notes: ''
   },
   {
     element: (
@@ -203,6 +236,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    notes: ''
   },
   {
     element: (
@@ -216,13 +250,44 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    notes: ''
   },
-
+  {
+    element: (
+      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/faezaafrin/map/index.html" />
+    ),
+    notes: ''
+  },
+  {
+    element: (
+      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/mostafabdeir/map/index.html " />
+    ),
+    notes: ''
+  },
+  {
+    element: (
+      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/map/index.html" />
+    ),
+    notes: ''
+  },
+  {
+    element: (
+      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/saraniadabee/map/index.html" />
+    ),
+    notes: ''
+  },
+  {
+    element: (
+      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/williamlozides/map/index.html" />
+    ),
+    notes: ''
+  },
   {
     element: <>
       <h4 className='mb-8' >Evaluations:</h4>
       <CustomizedTables data={Arcn5005F2024Evaluations} />
-    </>
+    </>,
+    notes: ''
   },
   {
     element: (
@@ -241,6 +306,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    notes: ''
   },
   {
     element: (
@@ -257,6 +323,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    notes: ''
   },
   {
     element: (
@@ -272,12 +339,14 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    notes: ''
   },
   {
     element:
       <div className="w-full flex flex-col items-center justify-center grow gap-8 mdx">
         <StudentsList students={classListf2024} />
-      </div>
+      </div>,
+    notes: ''
   },
   {
     element:
@@ -290,7 +359,8 @@ The portal is a web-based, open-source platform that serves as the course's dida
         >
           <EpistemicObjectIcon style={{ fontSize: '20rem' }} />
         </a>
-      </div>
+      </div>,
+    notes: ''
   }
 
 ];
