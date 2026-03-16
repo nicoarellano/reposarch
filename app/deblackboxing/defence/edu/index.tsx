@@ -211,7 +211,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
-    notes: ''
+    notes: 'We then expand to the urban scale. I show students a spectrum of GIS web engines—from the 3D global visualization of Cesium JS...'
   },
   {
     element: (
@@ -225,7 +225,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
-    notes: ''
+    notes: 'To the more traditional 2D mapping of Leaflet...'
   },
   {
     element: (
@@ -239,7 +239,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
-    notes: ''
+    notes: 'I also show them Mapbox GL JS, which is a powerful tool for 3D mapping and visualization, and it is widely used in the industry. It allows users to create interactive maps with custom styles and data layers, making it a versatile choice for architectural and urban applications.'
   },
   {
     element: (
@@ -253,7 +253,8 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
-    notes: ''
+    notes: 'Finally, we explore Maplibre GL JS, an open-source alternative to Mapbox GL JS, which offers similar functionality for creating interactive 3D maps.\n\
+    Let me now show you a few examples from Assignment 3 where students experiment with maplibre and open datasets to create custom maps'
   },
   {
     element: (
@@ -290,7 +291,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
       <h4 className='mb-8' >Evaluations:</h4>
       <CustomizedTables data={Arcn5005F2024Evaluations} />
     </>,
-    notes: ''
+    notes: 'These are the evaluations, Assignment 1 is a portfolio type work, Assignment 2 involves 3d models, Assignment 3 involves maps, and finally everything combined. The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.'
   },
   {
     element: (
@@ -309,7 +310,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
-    notes: ''
+    notes: 'The evaluation itself is an act of toolmaking. This is the GitHub repository. Where students will submit their work using the same tools as software developers use to collaborate in real projects.'
   },
   {
     element: (
@@ -326,7 +327,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
-    notes: ''
+    notes: 'Students are required to fork this repository, making a personal copy to experiment with'
   },
   {
     element: (
@@ -342,14 +343,15 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
-    notes: ''
+    notes: 'This is an example of a submission day, all the different colour lines are students merging their work.\n\
+    All students can see eachother work and learn from eachoder. Collaboration is encourage. I even give extra points to students that help their classmates to solve problems.'
   },
   {
     element:
       <div className="w-full flex flex-col items-center justify-center grow gap-8 mdx">
         <StudentsList students={classListf2024} />
       </div>,
-    notes: ''
+    notes: 'At the end of the term, the students have created a 4 websites, for portfolio type work, 3d models, maps, bim and finaly everything combined'
   },
   {
     element:
@@ -363,7 +365,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
           <EpistemicObjectIcon style={{ fontSize: '20rem' }} />
         </a>
       </div>,
-    notes: ''
+    notes: 'Let’s go back to look at the second epistemic object'
   }
 
 ];
