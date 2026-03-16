@@ -3,7 +3,7 @@ const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
   0.1,
-  1000
+  1000,
 );
 camera.position.z = 5;
 camera.position.y = 3;
@@ -16,9 +16,11 @@ document.body.appendChild(renderer.domElement);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
+const modelsPath = '/arcn5005/terms/f2024/students/maisjoudeh/three/models/';
+
 const loader = new THREE.GLTFLoader();
 loader.load(
-  './models/cafe.glb',
+  `${modelsPath}cafe.glb`,
   (gltf) => {
     scene.add(gltf.scene);
   },
@@ -28,7 +30,7 @@ loader.load(
   },
   (error) => {
     console.error('An error occurred while loading the model', error);
-  }
+  },
 );
 const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
 scene.add(ambientLight);
@@ -36,7 +38,7 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 10, 7);
 scene.add(directionalLight);
 let person;
-loader.load('./models/me3d.glb', (gltf) => {
+loader.load(`${modelsPath}me3d.glb`, (gltf) => {
   person = gltf.scene;
   person.position.set(2, 1.5, 0);
   person.rotation.y = Math.PI * 2;
@@ -71,9 +73,9 @@ textureLoader.load('textures/sky.jpg', function (texture) {
 
 let drinks = [];
 const drinkModels = [
-  './models/drink1.glb',
-  './models/drink2.glb',
-  './models/drink3.glb',
+  `${modelsPath}drink1.glb`,
+  `${modelsPath}drink2.glb`,
+  `${modelsPath}drink3.glb`,
 ];
 let currentDrinkIndex = 0;
 drinkModels.forEach((modelPath, index) => {

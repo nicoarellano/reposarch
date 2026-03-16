@@ -181,7 +181,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
   },
   {
     element: (
-      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/maisjoudeh/three/index.html" />
+      <iframe className="w-full h-full overflow-hidden" src="/arcn5005/terms/f2024/students/maisjoudeh/three/index.html" />
     ),
     notes: ''
   },
