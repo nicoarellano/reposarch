@@ -44,25 +44,24 @@ scene.add(light2);
 
 let root;
 
+const modelsPath = '/models/basilcurrie/';
+
 const loader = new GLTFLoader();
-loader.load(
-  '/arcn5005/terms/f2024/students/basilcurrie/three/models/testGLTF.glb',
-  function (glb) {
-    root = glb.scene;
-    root.scale.x = 0.2;
-    root.scale.y = 0.2;
-    root.scale.z = 0.2;
-    root.position.x = -3;
+loader.load(`${modelsPath}testGLTF.glb`, function (glb) {
+  root = glb.scene;
+  root.scale.x = 0.2;
+  root.scale.y = 0.2;
+  root.scale.z = 0.2;
+  root.position.x = -3;
 
-    root.traverse(function (child) {
-      if (child.isMesh) {
-        child.castShadow = true;
-      }
-    });
+  root.traverse(function (child) {
+    if (child.isMesh) {
+      child.castShadow = true;
+    }
+  });
 
-    scene.add(root);
-  },
-);
+  scene.add(root);
+});
 
 const basebox = new THREE.BoxGeometry(10, 2, 3);
 const baseboxmaterial = new THREE.MeshLambertMaterial({ color: 0xffffff });

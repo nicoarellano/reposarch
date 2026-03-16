@@ -6,7 +6,7 @@ const map = new maplibregl.Map({
   zoom: 12.2,
 });
 
-const videosPath = '/arcn5005/terms/f2024/students/williamlozides/map/';
+const videosPath = '/videos/williamlozides/';
 
 map.on('load', async () => {
   const image = await map.loadImage('drumicon.png');

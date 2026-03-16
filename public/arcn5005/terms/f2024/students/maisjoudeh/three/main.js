@@ -16,7 +16,7 @@ document.body.appendChild(renderer.domElement);
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-const modelsPath = '/arcn5005/terms/f2024/students/maisjoudeh/three/models/';
+const modelsPath = '/models/maisjoudeh/';
 
 const loader = new THREE.GLTFLoader();
 loader.load(

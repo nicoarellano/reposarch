@@ -171,19 +171,20 @@ The portal is a web-based, open-source platform that serves as the course's dida
       />
     ),
     notes:
-      'This is an example of the students’ work with the 3D viewer. They created 3D models using photogrammetry and then loaded them in the viewer to manipulate them and create compositions.',
+      'This is an example of the students’ work with the 3D viewer. for assignment 2, I asked them to create fotogrametric models of themselves. This composition shows some of the models from Fall 2024\n\
+      Now let me show you the result of some of those assignments where they embeded their models in interactive 3D scenes',
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/three/index.html" />
     ),
-    notes: ''
+    notes: 'For example this student created a video game where his avatar was collecting points by jumping obstacles.'
   },
   {
     element: (
       <iframe className="w-full h-full overflow-hidden" src="/arcn5005/terms/f2024/students/maisjoudeh/three/index.html" />
     ),
-    notes: ''
+    notes: 'Or this student that designed a cafeteria where she used her avatar to embed herself in the design'
   },
   {
     element: (
@@ -194,12 +195,14 @@ The portal is a web-based, open-source platform that serves as the course's dida
         </div>
       </div>
     ),
-    notes: ''
+    notes: 'This exercise was a bonus track, where they used a library called open bim components to create their own BIM viewers.\n\
+    In this example, I wanted to show a super simple BIM viewer that allows user to load IFC models really quickly and access the metadata.\n\
+    This example was developed with just a few lines of code'
   },
   {
     element: (
       <>
-        <h4 className='w-full text-left' >GIS viewer (Cesium JS GL):</h4>
+        <h4 className='w-full text-left'>GIS viewer (Cesium JS):</h4>
         <iframe
           width="100%"
           height="100%"
@@ -227,7 +230,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
   {
     element: (
       <>
-        <h4 className='w-full text-left' >GIS viewer (Mapbox):</h4>
+        <h4 className='w-full text-left' >GIS viewer (Mapbox GL JS):</h4>
         <iframe
           width="100%"
           height="100%"
@@ -241,7 +244,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
   {
     element: (
       <>
-        <h4 className='w-full text-left' >GIS viewer (Maplibre):</h4>
+        <h4 className='w-full text-left' >GIS viewer (Maplibre GL JS):</h4>
         <iframe
           width="100%"
           height="100%"

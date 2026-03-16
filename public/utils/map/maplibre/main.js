@@ -9,6 +9,7 @@ const map = (window.map = new maplibregl.Map({
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
   maxPitch: 70,
   minZoom: 3,
+  maplibreLogo: true
 }));
 
 map.addControl(new maplibregl.FullscreenControl(), 'top-left');
