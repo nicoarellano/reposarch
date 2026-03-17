@@ -67,6 +67,24 @@ ________________________________________________________________________________
     id: "conclusion",
     title: "Conclusion",
     url: "/deblackboxing/conclusion",
-    notes: ""
+    notes: "To conclude, my dissertation argues that for the contemporary architect, toolmaking is a fundamental competence. It is the key to securing the profession's agency in a world that is now mostly digital.\n\
+I have examined the shift from a practice rooted in analog tools to one of digital dependence. Increasingly, architects have become passive users of 'black-boxed' software, where the internal logic is hidden. This opacity doesn't just limit the tools available; it diminishes the architect's ability to define how they design and communicate design.\n\
+Through this research, I have demonstrated a different path:\n\
+______________________________________________________________________________________\n\
+1) Architects will benefit by viewing the tool as a site for creative intervention rather than a fixed boundary.\n\
+______________________________________________________________________________________\n\
+2) The research shows that programming can be taught as a form of architectural literacy, turning students into software developers.\n\
+______________________________________________________________________________________\n\
+3) And through Canada’s Digital Twin, I have shown that open-source toolmaking solves real-world problems that proprietary systems cannot.\n\
+______________________________________________________________________________________\n\
+Digital tools are the environment in which architectural representation happens. Often, the influence of these systems is so constant that it becomes unperceivable. I propose that architects gain a critical perspective by looking past the polished user interface. This allows them to understand the underlying logic of their tools and actively rewrite their biases.\n\
+This research lies in its specific call to action:\n\
+______________________________________________________________________________________\n\
+1) Education serves as the primary site of intervention, training authors rather than operators.\n\
+______________________________________________________________________________________\n\
+2) Open-source collaboration keeps tools aligned with professional values rather than commercial profit.\n\
+______________________________________________________________________________________\n\
+Ultimately, the question is not whether architects will use software, but whether they will use it to define their own direction. By combining open-source collaboration with computational pedagogy, I believe the profession can transform its relationship with technology from one of dependency to one of true sovereignty.\n\
+Thank you so much. I look forward to your questions."
   },
 ];
