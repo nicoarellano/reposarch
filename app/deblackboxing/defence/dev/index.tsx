@@ -83,11 +83,12 @@ Smaller organizations without extensive infrastructure can securely access dedic
         controls
       />
     ),
-    notes: ' Now let’s demo the capabilities of the platform.\n\
+    notes: ' Now let me demonstrate the capabilities of the platform.\n\
 Starting with our secure login, the authentication system assigns role-based credentials with differentiated permissions based on organizational requirements.\n\
 One of our most significant technical achievement is our seamless BIM-GIS integration. This addresses one of the central challenges we faced: bridging fundamentally different data paradigms in a web environment.\n\
 Watch as I add BIM models to the campus. Here we have all 45 buildings on the campus, totalling 4 GB of BIM models. Each model loads with sub-2-second performance—even for files exceeding 500 megabytes.\n\
-Next, I’ll add GIS infrastructure data showing campus tunnels, demonstrating how building- scale and infrastructure - scale information coexist within our integrated environment.This cross - scale integration required solving complex coordinate transformation challenges by extracting information from the ifc geolocation properties for accurate coordinate conversions.\n\
+Next, I’ll add GIS infrastructure data showing campus tunnels, demonstrating how building- scale and infrastructure - scale information coexist within our integrated environment.\n\
+This cross - scale integration required solving complex coordinate transformation challenges by extracting information from the ifc geolocation properties for accurate coordinate conversions.\n\
 Users can also add comments, photos, videos, and models directly to the map to share with other users, enhancing collaboration.\n\
 _____________________________________________________________________________________________\n\
 Zooming out to Ottawa reveals our open data federation capabilities.\n\
