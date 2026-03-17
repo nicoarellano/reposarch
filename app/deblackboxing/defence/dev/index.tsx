@@ -29,6 +29,7 @@ export const content: Toc = [
   },
   {
     element: <DTDefinition />,
+    title: "What is a Digital Twin?",
     notes: 'Before we jump into the project, let me start by defining what a digital twin is for me.\n\
 This definition is based on the one by the Digital Twin Institute.\n\
 Michael Grieves, its director, states that a Digital Twin requires three parts:\n\
@@ -50,6 +51,7 @@ This is straightforward when you think about something like a digital twin of a 
         alt="CDT diagram"
       />
     </>,
+    title: "A National Digital Twin of Canada",
     notes: 'In the CDT project, tries to capture the real Canada containing both\n\
     _____________________________________________________________________________________________\n\
     1) The Physical, such as people, buildings, infrastructure, lakes, rivers, etc\n\
@@ -60,6 +62,7 @@ This is straightforward when you think about something like a digital twin of a 
   },
   {
     element: <CdtWhy />,
+    title: "Why a National Digital Twin?",
     notes: '1) Organizations, struggle with fragmented data silos where BIM models, GIS datasets, operational information, and maintenance records exist in isolation, making comprehensive decision-making nearly impossible.\n\
     _____________________________________________________________________________________________\n\
 2) Proprietary lock-in traps organizations in expensive software ecosystems that limit flexibility and force dependency on specific vendors.\n\
@@ -73,6 +76,7 @@ By democratizing access to digital twin technologies the project creates an incl
   },
   {
     element: <CdtWhat />,
+    title: "What is CDT?",
     notes: 'What is our response to this?\n\
     _____________________________________________________________________________________________\n\
 1) A web-based data visualization platforms with BIM/GIS capabilities\n\
@@ -91,6 +95,7 @@ ________________________________________________________________________________
         alt="CDT platform architecture"
       />
     </>,
+    title: "CDT Platform Architecture",
     notes: 'The two most important aspect of the CDT platform’s architecture, are\n\
     _____________________________________________________________________________________________\n\
     1) That it is 100% built with free and open-source technologies.\n\
@@ -109,6 +114,7 @@ Smaller organizations without extensive infrastructure can securely access dedic
         controls
       />
     ),
+    title: "CDT Demo",
     notes: ' Now let me demonstrate the capabilities of the platform.\n\
 Starting with our secure login, the authentication system assigns role-based credentials with differentiated permissions based on organizational requirements.\n\
 One of our most significant technical achievement is our seamless BIM-GIS integration. This addresses one of the central challenges we faced: bridging fundamentally different data paradigms in a web environment.\n\
@@ -151,6 +157,7 @@ The viewer graphically highlights which model elements conform or do not conform
         controls
         autoPlay
       />),
+    title: "Safe and Affordable Housing Map",
     notes: 'The second project that uses the platform is the Safe and Affordable Housing map.\n\
 Which is a tool for visualizing affordable housing across Canada.\n\
 The map uses a variety of open datasets (such as affordable housing from multiple municipalities and household income database from the 2021 Canadian census).\n\
@@ -166,6 +173,7 @@ Housing affordability is a critical issue in Canada, and we are proud that the p
         autoPlay
       />
     ),
+    title: "Visualizing Wildfires Map",
     notes: 'Another big crisis is the environmental one.\n\
 For that one, we have collaborated with a research group that was looking at the impact of wildfires.\n\
 The Visualizing Wildfires map is an interactive tool to monitor the fire conditions across Canada.\n\
@@ -184,6 +192,7 @@ In this case, user data can generate a layer of data that can be use to help mit
         muted
       />
     ),
+    title: "Digital Twin for Federal Assets",
     notes: 'Currently, our largest project is in partnership with the National Research Council and the Department of National Defence to solve a crisis of asset information management. In response to this, we’ve developed a prototype for asset management, for the federal government.\n\
 The Department of National Defence, manages 21,000 built assets located across approximately 100 million hectares—spanning every province and territory. These assets are both geographically and typologically diverse— from military bases in the Arctic to heritage buildings in downtown Ottawa.  This massive portfolio is managed through fragmented information systems, siloed data practices, and incompatible proprietary technologies.\n\
 This isn’t just a Canadian or DND problem—it’s a global challenge that we believe digital twins are uniquely positioned to solve.\n\

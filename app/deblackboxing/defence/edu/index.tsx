@@ -22,6 +22,7 @@ const MainMenuContent = dynamic(() => import('@/app/arcn5005/(main)/mainMenuCont
 export const content: Toc = [
   {
     element: <MainMenuContent />,
+    title: "Course Portal, Main menu",
     notes: "Because you have already read the theory, I wanted to explain why it was so important to teach the course through a custom portal.\n\
 My decision to develop this presentation tool as well as the course portal, rather than using traditional software like PowerPoint, directly reflects my central methodological claim.\n\
 Existing software do not adequately support the interactive demonstrations that are essential for teaching and explaining my work.\n\
@@ -33,6 +34,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
       <h4 className='mb-8' >Resources:</h4>
       <ResourcesContent />
     </>,
+    title: "Course Resources",
     notes: "It also includes multiple resources to access and download, such as websites, influential videos and lectures, free software, papers, and peer-reviewed articles."
   },
   {
@@ -50,6 +52,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
       <h4 >Lectures:</h4>
       <TOC />
     </>,
+    title: "Course Lectures",
     notes: "All the lecture to date including all slides and class recordings are available through the portal as well."
   },
   {
@@ -60,6 +63,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         caption={'a) In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, the first GUI.  b) Sketchpad interface. source: Sdegno, Alberto. 2017. "For an Archeology of the Digital Iconography" Proceedings 1, no. 9: 1093.'}
       />
     ),
+    title: "Example of a slide",
     notes:
       'This is an example of one of the theory slides; the portal also acts as a slideshow.\n\
       Speaker notes are also available, for example:\n\
@@ -73,6 +77,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
   },
   {
     element: <Tags />,
+    title: "Interactive features",
     notes:
       'There are also interactive features that the students can use to test their knowledge when studing for the quizes.',
   },
@@ -85,6 +90,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
 
       </>
     ),
+    title: "Code Editor",
     notes: 'More importantly, I have created interactive features to practice their programming skills.\n\
     This exmple is a simple real-time  sandbox for them to test the different languages taught in the course.\n\
     It is progressive because first we talk about HTML, then CSS and finally JavaScript.\n\
@@ -102,11 +108,13 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    title: "Drawing with Pixels (raster)",
     notes:
       "We then tackle the dominant paradigms of computer graphics. Students use this embedded raster tool to experiment with pixel-based drawing, making the 2D coordinate grid tangible.",
   },
   {
     element: <CartesianPlane />,
+    title: "Interactive Cartesian Plane",
     notes:
       "We then move to the 3D space with an interactive Cartesian Plane. Built with Three.js, it allows students to manipulate XYZ coordinates and see the results in real-time.\n\
       This is a much more dynamic and graphic way of understanding the tri-dimentional digital world. Which is hard to grasp with a PowerPoint presentation",
@@ -122,6 +130,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    title: "Drawing with Code (vectorial)",
     notes: 'This leads to procedural drawing. Using P5.js, we generate vector graphics through scripts, showing that architectural marks can be defined as repeatable procedures rather than static traces.\n\
     Vectorial drawing is an important concept since it is at the base of CAD and parametric modelling\n\
     This tools allow students to understand the basic functions of geometry creation and dynamically interact with them.'
@@ -140,6 +149,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         </div>
       </>
     ),
+    title: "CAD viewer (dxf)",
     notes: 'Having explained the basic concept of computer graphics, the course pivots towards specific tools for architects. So students can experience real toolmaking for architectural representation.\n\
     After grasping the theory behind CAD, 3D CAD, and BIM, we experiment firsthand with custom tools\n\
     _____________________________________________________________________________________________\n\
@@ -149,6 +159,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
     element: (
       <iframe className="w-full h-full" src="https://threejs.org/editor/" />
     ),
+    title: "Three.js Editor",
     notes: 'Moving into 3D modelling, we utilize the Three.js library to handle scenes, lights, and textures natively in the browser.\n\
     This is the engine behind many industry cloud platforms such as Autodesk Forge, and it is free and open-source.\n\
     In this feature, the students can test with the different elements and see directly.'
@@ -160,6 +171,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         <Three />
       </>
     ),
+    title: "Custom 3D scene (three.js)",
     notes: 'Then we move to a more custom 3D viewer built with Three.js, which allows students to create their own scenes from scratch and to load and manipulate 3D models in real-time, demonstrating the core principles of 3D representation and interaction.'
   },
   {
@@ -170,6 +182,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         caption={'Composition of some of the student’s 3D models created for the photogrammetry exercise, class Fall 2024.'}
       />
     ),
+    title: "Students photogrammetry models for assignment 2",
     notes:
       'This is an example of the students’ work with the 3D viewer. for assignment 2, I asked them to create fotogrametric models of themselves. This composition shows some of the models from Fall 2024\n\
       Now let me show you the result of some of those assignments where they embeded their models in interactive 3D scenes',
@@ -178,12 +191,14 @@ The portal is a web-based, open-source platform that serves as the course's dida
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/three/index.html" />
     ),
+    title: "Student Project: Interactive Video Game",
     notes: 'For example this student created a video game where his avatar was collecting points by jumping obstacles.'
   },
   {
     element: (
       <iframe className="w-full h-full overflow-hidden" src="/arcn5005/terms/f2024/students/maisjoudeh/three/index.html" />
     ),
+    title: "Student Project: Interactive Cafeteria Design",
     notes: 'Or this student that designed a cafeteria where she used her avatar to embed herself in the design'
   },
   {
@@ -195,6 +210,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         </div>
       </div>
     ),
+    title: "BIM viewer (ifc)",
     notes: 'This exercise was a bonus track, where they used a library called open bim components to create their own BIM viewers.\n\
     In this example, I wanted to show a super simple BIM viewer that allows user to load IFC models really quickly and access the metadata.\n\
     This example was developed with just a few lines of code'
@@ -211,6 +227,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    title: "GIS viewer (Cesium JS)",
     notes: 'We then expand to the urban scale. I show students a spectrum of GIS web engines—from the 3D global visualization of Cesium JS...'
   },
   {
@@ -225,6 +242,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    title: "GIS viewer (Leaflet)",
     notes: 'To the more traditional 2D mapping of Leaflet...'
   },
   {
@@ -239,6 +257,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    title: "GIS viewer (Mapbox GL JS)",
     notes: 'I also show them Mapbox GL JS, which is a powerful tool for 3D mapping and visualization, and it is widely used in the industry. It allows users to create interactive maps with custom styles and data layers, making it a versatile choice for architectural and urban applications.'
   },
   {
@@ -253,6 +272,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         ></iframe>
       </>
     ),
+    title: "GIS viewer (Maplibre GL JS)",
     notes: 'Finally, we explore Maplibre GL JS, an open-source alternative to Mapbox GL JS, which offers similar functionality for creating interactive 3D maps.\n\
     Let me now show you a few examples from Assignment 3 where students experiment with maplibre and open datasets to create custom maps'
   },
@@ -260,30 +280,35 @@ The portal is a web-based, open-source platform that serves as the course's dida
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/faezaafrin/map/index.html" />
     ),
+    title: "Student Project: Interactive Map",
     notes: ''
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/mostafabdeir/map/index.html " />
     ),
+    title: "Student Project: Interactive Map",
     notes: ''
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/map/index.html" />
     ),
+    title: "Student Project: Interactive Map",
     notes: ''
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/saraniadabee/map/index.html" />
     ),
+    title: "Student Project: Interactive Map",
     notes: ''
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/williamlozides/map/index.html" />
     ),
+    title: "Student Project: Interactive Map",
     notes: ''
   },
   {
@@ -291,6 +316,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
       <h4 className='mb-8' >Evaluations:</h4>
       <CustomizedTables data={Arcn5005F2024Evaluations} />
     </>,
+    title: "Course Evaluations",
     notes: 'These are the evaluations, Assignment 1 is a portfolio type work, Assignment 2 involves 3d models, Assignment 3 involves maps, and finally everything combined. The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.'
   },
   {
@@ -310,6 +336,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    title: "Course GitHub",
     notes: 'The evaluation itself is an act of toolmaking. This is the GitHub repository. Where students will submit their work using the same tools as software developers use to collaborate in real projects.'
   },
   {
@@ -327,6 +354,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    title: "Forking the Course GitHub Repository",
     notes: 'Students are required to fork this repository, making a personal copy to experiment with'
   },
   {
@@ -343,6 +371,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
         />
       </>
     ),
+    title: "Git Graph",
     notes: 'This is an example of a submission day, all the different colour lines are students merging their work.\n\
     All students can see eachother work and learn from eachoder. Collaboration is encourage. I even give extra points to students that help their classmates to solve problems.'
   },
@@ -351,6 +380,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
       <div className="w-full flex flex-col items-center justify-center grow gap-8 mdx">
         <StudentsList students={classListf2024} />
       </div>,
+    title: "Student Projects",
     notes: 'At the end of the term, the students have created a 4 websites, for portfolio type work, 3d models, maps, bim and finaly everything combined'
   },
   {
@@ -365,6 +395,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
           <EpistemicObjectIcon style={{ fontSize: '20rem' }} />
         </a>
       </div>,
+    title: "Return to Epistemic Objects",
     notes: 'Let’s go back to look at the second epistemic object'
   }
 
