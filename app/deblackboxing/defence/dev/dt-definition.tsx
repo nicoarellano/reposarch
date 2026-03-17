@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const captions = [
-  <>A <strong>physical thing in real space</strong>, such as a building and its urban context and landscape</>,
-  <>The <strong>digital version of that product in virtual space</strong>, such as a BIM, GIS and all related metadata</>,
+  <>A <strong>physical thing in real the real world</strong>, such as a building or a landscape, which are made out of atoms</>,
+  <>The <strong>digital version of that object in virtual space</strong>, such as a BIM, GIS and all related metadata</>,
   <>And <strong>synchronized data connections between the two</strong>: sensors, IoT, cameras, etc</>,
 ]
 

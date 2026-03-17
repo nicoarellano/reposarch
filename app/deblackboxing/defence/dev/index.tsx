@@ -23,21 +23,24 @@ export const content: Toc = [
         <br />
       </>
     ),
-    notes: 'Canada’s Digital Twin project is the empirical validation of my dissertation. Is a project that I have been leading at CIMS since 2020. It describes all the elements of toolmaking that I have been testing in this dissertation.'
+    notes: 'Canada’s Digital Twin project is the empirical validation of my dissertation.\n\
+    Is a project that I have been leading at CIMS since 2020.\n\
+    It describes all the elements of toolmaking that I have been testing in this dissertation.'
   },
   {
     element: <DTDefinition />,
-    notes: 'Before we jump into CDT, let me start by briefly defining what a digital twin is for us.  There are many definitions of digital twins.\n\
-Ours is based on the one by the Digital Twin Institute.  Michael Grieves, its director, states that a Digital Twin requires a feedback loop between the physical and digital components.\n\
-This system has three parts:\n\
+    notes: 'Before we jump into the project, let me start by defining what a digital twin is for me.\n\
+This definition is based on the one by the Digital Twin Institute.\n\
+Michael Grieves, its director, states that a Digital Twin requires three parts:\n\
 _____________________________________________________________________________________________\n\
-1) A physical thing in real space: such as a building as it exists now, which is made out of atoms\n\
+1) A physical thing in real the real world: such as a building or a landscape, which are made out of atoms\n\
 _____________________________________________________________________________________________\n\
-2) The digital version of that product in virtual space, such as a BIM of that building, made out of bits\n\
+2) The digital version of that object in virtual space, such as a BIM of that building, made out of bits\n\
 _____________________________________________________________________________________________\n\
-And synchronized data connections between the two\n\
+And synchronized data connections between the two including real-time data feeds and feedback mechanisms including sensors, IoT, cameras, etc\n\
 \n\
-This is straightforward when you think about something like a digital twin of a jet engine, but once you start to think about a digital twin of Canada’s built environment it becomes a lot more complicated.'
+_____________________________________________________________________________________________\n\
+This is straightforward when you think about something like a digital twin of a jet engine, but once you start to think about a system more complex like Canada it becomes a lot more complicated.'
   },
   {
     element: <>
@@ -47,14 +50,17 @@ This is straightforward when you think about something like a digital twin of a 
         alt="CDT diagram"
       />
     </>,
-    notes: 'In the CDT project, we’re trying to capture the physical environment containing both\n\
-    the Physical, such as people, buildings, infrastructure, lakes, rivers, etc\n\
-    and non-physical aspects of Canada such as culture, legislation, history, weather, economy, etc.\n\
-    A digital transformation occurs turning the physical into data whether that is open or proprietary that we then bring into our open-source platform for insight, analysis, simulation, and prediction.',
+    notes: 'In the CDT project, tries to capture the real Canada containing both\n\
+    _____________________________________________________________________________________________\n\
+    1) The Physical, such as people, buildings, infrastructure, lakes, rivers, etc\n\
+    _____________________________________________________________________________________________\n\
+    2) And the non-physical aspects of Canada such as culture, legislation, history, weather, economy, etc.\n\
+    _____________________________________________________________________________________________\n\
+  The process begins with the conversion of physical assets into digital data. This information, gathered from both open and private sources, is brought into the platform to facilitate deeper insight, multi-scale simulation, and accurate predictions.',
   },
   {
     element: <CdtWhy />,
-    notes: '1) Organizations, such as municipalities, struggle with fragmented data silos where BIM models, GIS datasets, operational information, and maintenance records exist in isolation, making comprehensive decision-making nearly impossible.\n\
+    notes: '1) Organizations, struggle with fragmented data silos where BIM models, GIS datasets, operational information, and maintenance records exist in isolation, making comprehensive decision-making nearly impossible.\n\
     _____________________________________________________________________________________________\n\
 2) Proprietary lock-in traps organizations in expensive software ecosystems that limit flexibility and force dependency on specific vendors.\n\
 while poor BIM/GIS integration means that detailed building information cannot seamlessly connect with broader spatial and infrastructure context.\n\
@@ -63,7 +69,7 @@ ________________________________________________________________________________
 _____________________________________________________________________________________________\n\
 4) Perhaps most critically, the technical knowledge barriers inherent in current systems exclude non-technical stakeholders like facility managers, executives, and maintenance staff—from accessing the very information they need to make informed decisions about the built environment.\n\
 _____________________________________________________________________________________________\n\
-By democratizing access to digital twin technologies we’re creating an inclusive, collaborative ecosystem where every stakeholder can work optimally without limitations imposed by proprietary constraints or technical complexity.',
+By democratizing access to digital twin technologies the project creates an inclusive, collaborative ecosystem where reducing limitations imposed by proprietary constraints or technical complexity.',
   },
   {
     element: <CdtWhat />,
@@ -85,9 +91,12 @@ ________________________________________________________________________________
         alt="CDT platform architecture"
       />
     </>,
-    notes: 'The two most importan aspect of the CDT platform’s architecture, are\n\
+    notes: 'The two most important aspect of the CDT platform’s architecture, are\n\
+    _____________________________________________________________________________________________\n\
     1) That it is 100% built with free and open-source technologies.\n\
+    _____________________________________________________________________________________________\n\
     2) That it is based on a Canadian cloud infrastructure, with datacentres on Canadian soil (Vancouver and Toronto), and data sovereignty agreements in place.\n\
+    _____________________________________________________________________________________________\n\
 This architecture enables flexible deployment options that respect organizational security requirements.\n\
 Large organizations like the Department of National Defence with existing IT infrastructure can download and deploy the entire platform on their own servers and networks, maintaining complete control over sensitive data.\n\
 Smaller organizations without extensive infrastructure can securely access dedicated instances through browser-based authentication, with data isolation ensuring organizational privacy and confidentiality.',
