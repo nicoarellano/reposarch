@@ -49,16 +49,33 @@ This is straightforward when you think about something like a digital twin of a 
     </>,
     notes: 'In the CDT project, we’re trying to capture the physical environment containing both\n\
     the Physical, such as people, buildings, infrastructure, lakes, rivers, etc\n\
-    and non-physical aspects of Canada such as culture, legislation, weather, economy,etc.\n\
+    and non-physical aspects of Canada such as culture, legislation, history, weather, economy, etc.\n\
     A digital transformation occurs turning the physical into data whether that is open or proprietary that we then bring into our open-source platform for insight, analysis, simulation, and prediction.',
   },
   {
     element: <CdtWhy />,
-    notes: '',
+    notes: '1) Organizations, such as municipalities, struggle with fragmented data silos where BIM models, GIS datasets, operational information, and maintenance records exist in isolation, making comprehensive decision-making nearly impossible.\n\
+    _____________________________________________________________________________________________\n\
+2) Proprietary lock-in traps organizations in expensive software ecosystems that limit flexibility and force dependency on specific vendors.\n\
+while poor BIM/GIS integration means that detailed building information cannot seamlessly connect with broader spatial and infrastructure context.\n\
+_____________________________________________________________________________________________\n\
+3) These challenges are compounded by interoperability failures that prevent data exchange between different platforms and departments, creating workflow bottlenecks that slow project delivery and inflate costs.\n\
+_____________________________________________________________________________________________\n\
+4) Perhaps most critically, the technical knowledge barriers inherent in current systems exclude non-technical stakeholders like facility managers, executives, and maintenance staff—from accessing the very information they need to make informed decisions about the built environment.\n\
+_____________________________________________________________________________________________\n\
+By democratizing access to digital twin technologies we’re creating an inclusive, collaborative ecosystem where every stakeholder can work optimally without limitations imposed by proprietary constraints or technical complexity.',
   },
   {
     element: <CdtWhat />,
-    notes: '',
+    notes: 'What is our response to this?\n\
+    _____________________________________________________________________________________________\n\
+1) A web-based data visualization platforms with BIM/GIS capabilities\n\
+_____________________________________________________________________________________________\n\
+2) federated and national scale\n\
+_____________________________________________________________________________________________\n\
+3) based on open standards and built with open technology\n\
+_____________________________________________________________________________________________\n\
+4) open-source, accessible, and community-driven, governed and maintained by a non-for-profit',
   },
   {
     element: <>
