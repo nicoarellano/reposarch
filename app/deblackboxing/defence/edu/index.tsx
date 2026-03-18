@@ -196,19 +196,22 @@ I demand they at least share their creations with the group afterward.'
       </>
     ),
     title: "CAD viewer (dxf)",
-    notes: 'Having explained the basic concept of computer graphics, the course pivots towards specific tools for architects. So students can experience real toolmaking for architectural representation.\n\
-    After grasping the theory behind CAD, 3D CAD, and BIM, we experiment firsthand with custom tools\n\
-    \n\
-    The first example is a CAD viewer that works with the open format DXF.'
+    notes: 'Having established the foundational concepts of computer graphics, the course pivots toward specific tools for architects.\n\
+This allows students to experience real toolmaking for architectural representation.\n\
+After grasping the theory behind CAD, 3D CAD, and BIM, the class moves to firsthand experimentation with custom tools.\n\
+\n\
+The first example is a CAD viewer that works with the open format DXF.'
   },
   {
     element: (
       <iframe className="w-full h-full" src="https://threejs.org/editor/" />
     ),
     title: "Three.js Editor",
-    notes: 'Moving into 3D modelling, we utilize the Three.js library to handle scenes, lights, and textures natively in the browser.\n\
-    This is the engine behind many industry cloud platforms such as Autodesk Forge, and it is free and open-source.\n\
-    In this feature, the students can test with the different elements and see directly.'
+    notes: 'Moving into 3D modelling, I utilize the Three.js library to handle scenes, lights, and textures natively in the browser.\n\
+This is the exact engine behind major proprietary cloud platforms like Autodesk Platform Services—formerly Forge—and the Autodesk Construction Cloud (or ACC).\n\
+By learning Three.js, students are not just learning a library; they are discovering how to author the same industrial-grade tools used by tech giants, completely free and open-source.\n\
+\n\
+In this interactive feature, students can test the different elements and see the spatial results directly.'
   },
   {
     element: (
@@ -230,7 +233,8 @@ I demand they at least share their creations with the group afterward.'
     ),
     title: "Students photogrammetry models for assignment 2",
     notes:
-      'This is an example of the students’ work with the 3D viewer. for assignment 2, I asked them to create fotogrametric models of themselves. This composition shows some of the models from Fall 2024\n\
+      'This is an example of the students’ work with the 3D viewer.\n\
+      For assignment 2, I asked them to create photogrammetric models of themselves. This composition shows some of the models from Fall 2024\n\
       Now let me show you the result of some of those assignments where they embedded their models in interactive 3D scenes',
   },
   {
