@@ -23,7 +23,7 @@ interface Props {
 export const speakerNotes = (page: number, currentSlide: Slide) => {
   console.clear();
 
-  if (currentSlide?.notes) {
+  if (currentSlide?.title || currentSlide?.notes) {
     console.log(
       `%c${page}) ${currentSlide.title ?? ''}${'\u2003'.repeat(80)}`,
       'color: red; font-size: 30px; display:block; width:100vw; box-sizing:border-box; border-bottom: 3px solid red; padding:6px 8px; white-space: pre;'

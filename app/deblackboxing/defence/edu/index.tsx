@@ -278,7 +278,8 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Cesium JS)",
-    notes: 'We then expand to the urban scale. I show students a spectrum of GIS web engines—from the 3D global visualization of Cesium JS...'
+    notes: 'We then expand to the urban scale. I show students a spectrum of GIS web engines\n\
+    This example uses Cesium JS...'
   },
   {
     element: (
@@ -293,7 +294,7 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Leaflet)",
-    notes: 'To the more traditional 2D mapping of Leaflet...'
+    notes: 'This one uses the popular Leaflet...'
   },
   {
     element: (
@@ -308,7 +309,7 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Mapbox GL JS)",
-    notes: 'I also show them Mapbox GL JS, which is a powerful tool for 3D mapping and visualization, and it is widely used in the industry. It allows users to create interactive maps with custom styles and data layers, making it a versatile choice for architectural and urban applications.'
+    notes: 'I also show them Mapbox GL JS, which is a powerful tool for 3D mapping and visualization, and it is widely used in the industry.'
   },
   {
     element: (
@@ -324,42 +325,43 @@ In this interactive feature, students can test the different elements and see th
     ),
     title: "GIS viewer (Maplibre GL JS)",
     notes: 'Finally, we explore Maplibre GL JS, an open-source alternative to Mapbox GL JS, which offers similar functionality for creating interactive 3D maps.\n\
+    \n\
     Let me now show you a few examples from Assignment 3 where students experiment with maplibre and open datasets to create custom maps'
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/faezaafrin/map/index.html" />
     ),
-    title: "Student Project: Interactive Map",
-    notes: ''
+    title: "Student Project:",
+    notes: ' Interactive Ottawa food recommendations Map'
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/mostafabdeir/map/index.html " />
     ),
-    title: "Student Project: Interactive Map",
-    notes: ''
+    title: "Student Project:",
+    notes: ' Shawarma spots around Ottawa'
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/map/index.html" />
     ),
-    title: "Student Project: Interactive Map",
-    notes: ''
+    title: "Student Project:",
+    notes: 'Historic buildings in Almonte'
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/saraniadabee/map/index.html" />
     ),
-    title: "Student Project: Interactive Map",
-    notes: ''
+    title: "Student Project:",
+    notes: 'Timelapse of Volcanic Eruptions'
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/williamlozides/map/index.html" />
     ),
-    title: "Student Project: Interactive Map",
-    notes: ''
+    title: "Student Project:",
+    notes: 'Mapping the venues where the student performed at in Toronto'
   },
   {
     element: <>
@@ -367,7 +369,14 @@ In this interactive feature, students can test the different elements and see th
       <CustomizedTables data={Arcn5005F2024Evaluations} />
     </>,
     title: "Course Evaluations",
-    notes: 'These are the evaluations, Assignment 1 is a portfolio type work, Assignment 2 involves 3d models, Assignment 3 involves maps, and finally everything combined. The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.'
+    notes: 'These are the evaluations:\n\
+    _____________________________________________________________________________________\n\
+    - Assignment 1 is a portfolio type work using HTML, CSS and JavaScript,\n\
+    - Assignment 2 involves 3d models,\n\
+    - Assignment 3 involves maps,\n\
+    - and finally everything combined.\n\
+    - The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.\n\
+    - There are also 2 quizzes where I cover the theory of the course'
   },
   {
     element: (
@@ -387,7 +396,8 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "Course GitHub",
-    notes: 'The evaluation itself is an act of toolmaking. This is the GitHub repository. Where students will submit their work using the same tools as software developers use to collaborate in real projects.'
+    notes: 'This is the GitHub repository.\n\
+    Where students submit their work using the same tools as software developers use to collaborate in real projects.'
   },
   {
     element: (
@@ -405,7 +415,7 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "Forking the Course GitHub Repository",
-    notes: 'Students are required to fork this repository, making a personal copy to experiment with'
+    notes: 'Students need to Fork the repository, commit their work, create Pull requests, etc'
   },
   {
     element: (
@@ -415,15 +425,14 @@ In this interactive feature, students can test the different elements and see th
         <Image
           src="/images/defence/gitgraph.png"
           alt="Git Graph"
-          caption={
-            'Git Graph - Students committing their assignments to the course GitHub repository'
-          }
         />
       </>
     ),
     title: "Git Graph",
     notes: 'This is an example of a submission day, all the different colour lines are students merging their work.\n\
-    All students can see eachother work and learn from eachoder. Collaboration is encourage. I even give extra points to students that help their classmates to solve problems.'
+    All students can see each other work at all time and learn from each other.\n\
+    Collaboration is encourage.\n\
+    I even offer extra points to students that help their classmates to solve problems.'
   },
   {
     element:
@@ -431,7 +440,7 @@ In this interactive feature, students can test the different elements and see th
         <StudentsList students={classListf2024} />
       </div>,
     title: "Student Projects",
-    notes: 'At the end of the term, the students have created a 4 websites, for portfolio type work, 3d models, maps, bim and finaly everything combined'
+    notes: 'At the end of the term, the students have created a 4 websites, for portfolio type work, 3d models, maps, bim and finally everything combined'
   },
   {
     element:
@@ -446,7 +455,8 @@ In this interactive feature, students can test the different elements and see th
         </a>
       </div>,
     title: "Return to Epistemic Objects",
-    notes: 'Let’s go back to look at the second epistemic object'
+    notes: 'That is a quick peek into the course,\n\
+    Let’s now go back to look at the second epistemic object'
   }
 
 ];

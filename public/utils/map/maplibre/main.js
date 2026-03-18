@@ -9,7 +9,7 @@ const map = (window.map = new maplibregl.Map({
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
   maxPitch: 70,
   minZoom: 3,
-  maplibreLogo: true
+  maplibreLogo: true,
 }));
 
 map.addControl(new maplibregl.FullscreenControl(), 'top-left');
@@ -196,7 +196,7 @@ airports.forEach((airport) => {
     code: `${airport.code}`,
     type: 'Feature',
     properties: {
-      description: `<h2>${airport.name}</h2><ul><li>Code: ${airport.code}</li><li>Province: ${airport.province}</li><li>City: ${airport.city}</li></ul><img src="${image}" alt="${airport.code}" width=100px>`,
+      description: `<article class="airport-card"><header class="airport-card-header">Airport</header><div class="airport-card-body"><h3 class="airport-card-title">${airport.name}</h3><p class="airport-card-meta"><strong>${airport.code}</strong> | ${airport.city}, ${airport.province}</p><img class="airport-card-image" src="${image}" alt="${airport.name} (${airport.code})" /></div></article>`,
     },
     geometry: {
       type: 'Point',
@@ -251,6 +251,8 @@ const addLayers = () => {
   const popup = new maplibregl.Popup({
     closeButton: false,
     closeOnClick: false,
+    className: 'airport-popup',
+    offset: 16,
   });
 
   map.on('mouseenter', 'places', (e) => {

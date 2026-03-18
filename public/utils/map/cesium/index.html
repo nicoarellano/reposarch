@@ -12,14 +12,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cesium/1.93.0/Widgets/widgets.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body class="hide-overflow">
-    <img
-      class="logo"
-      height="30px"
-      src="/images/maps/cesium.png"
-      alt="cesium logo"
-    />
     <div class="simple-card-container bottom">
       <div class="toolbar">
         <a class="button circular" id="map-view" title="Map view">
@@ -49,7 +49,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
 
-    <div class="hide-overflow canvas" id="cesiumContainer"></div>
+    <div class="canvas" id="cesiumContainer"></div>
     <script src="./main.js" type="module"></script>
   </body>
 </html>
