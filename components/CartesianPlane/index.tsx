@@ -72,10 +72,10 @@ export default function CartesianPlane() {
       >
         <Canvas
           orthographic
-          camera={{ zoom: 60, position: [10, 10, 10] }}
+          camera={{ zoom: 60, position: [10, 15, 10] }}
           className="grow"
         >
-          <OrbitControls />
+          <OrbitControls target={[0, 2, 0]} />
           <ambientLight intensity={0.1} />
           <directionalLight
             color="#ffffff"
@@ -88,6 +88,46 @@ export default function CartesianPlane() {
 
           <axesHelper args={[10]} />
           <gridHelper args={[10]} />
+          {/* Axis labels using Html from drei */}
+          <Html position={[10.2, 0, 0]} center style={{ pointerEvents: 'none' }}>
+            <div
+              style={{
+                fontSize: '1.2rem',
+                fontFamily: 'monospace',
+                color: mode === 'light' ? '#b91c1c' : '#ffb4b4',
+                background: 'transparent',
+                padding: '0 4px',
+              }}
+            >
+              X
+            </div>
+          </Html>
+          <Html position={[0, 10.2, 0]} center style={{ pointerEvents: 'none' }}>
+            <div
+              style={{
+                fontSize: '1.2rem',
+                fontFamily: 'monospace',
+                color: mode === 'light' ? '#047857' : '#9ff3c9',
+                background: 'transparent',
+                padding: '0 4px',
+              }}
+            >
+              Y
+            </div>
+          </Html>
+          <Html position={[0, 0, 10.2]} center style={{ pointerEvents: 'none' }}>
+            <div
+              style={{
+                fontSize: '1.2rem',
+                fontFamily: 'monospace',
+                color: mode === 'light' ? '#1e3a8a' : '#bcd9ff',
+                background: 'transparent',
+                padding: '0 4px',
+              }}
+            >
+              Z
+            </div>
+          </Html>
           {/* Dotted projection lines perpendicular to each coordinate plane */}
           <Line points={[[xPosition, yPosition, zPosition], [0, yPosition, zPosition]]} color="red" lineWidth={1} dashed dashSize={0.15} gapSize={0.1} />
           <Line points={[[xPosition, yPosition, zPosition], [xPosition, 0, zPosition]]} color="green" lineWidth={1} dashed dashSize={0.15} gapSize={0.1} />

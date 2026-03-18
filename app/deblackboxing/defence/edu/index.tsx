@@ -146,8 +146,10 @@ I demand they at least share their creations with the group afterward.'
     element: <CartesianPlane />,
     title: "Interactive Cartesian Plane",
     notes:
-      "We then move to the 3D space with an interactive Cartesian Plane. Built with Three.js, it allows students to manipulate XYZ coordinates and see the results in real-time.\n\
-      This is a much more dynamic and graphic way of understanding the tri-dimensional digital world. Which is hard to grasp with a PowerPoint presentation",
+      "We then move to the 3D space with an interactive Cartesian Plane built with Three.js.\n\
+      This tool allows students to manipulate XYZ coordinates and see the results in real-time.\n\
+      This is a much more dynamic and graphic way of understanding the basis of tri-dimensional digital world.\n\
+      Which is harder to grasp with a static presentation",
   },
   {
     element: (
