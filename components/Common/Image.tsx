@@ -7,6 +7,7 @@ interface Props {
   fill?: boolean;
   caption?: string | null;
   href?: string;
+  className?: string;
 }
 
 export default function CustomImage({
@@ -15,18 +16,19 @@ export default function CustomImage({
   fill = true,
   caption = null,
   href = '',
+  className = '',
   ...props
 }: Props) {
   if (caption) {
     console.log(
       `%c Caption: ==================================`,
-      'color: red; font-size: 30px'
+      'color: green; font-size: 30px'
     );
     console.log(`%c "${caption}"`, 'font-size: 35px; color: #00f');
   }
 
   const image = (
-    <div className="h-full relative">
+    <div className={`h-full relative ${className}`}>
       <Image src={src} objectFit="contain" fill alt={alt} {...props} />
     </div>
   );

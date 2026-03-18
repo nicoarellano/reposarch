@@ -115,10 +115,16 @@ It functions as a 'living lab' co-developed with the students—a space to exper
       <>
         <h4 className='w-full text-left' >Drawing with Pixels (raster):</h4>
         <br />
-        <iframe
-          className="w-full h-full"
-          src="https://acepixels.netlify.app/"
-        />
+        <div className='relative inline-block w-full h-full'>
+          <iframe
+            className="w-full h-full"
+            src="https://acepixels.netlify.app/"
+          />
+          <div className='absolute left-0 top-0 bottom-0 w-1 bg-green-500'></div>
+          <div className='absolute left-0 -top-6 text-green-500 font-bold'>Y</div>
+          <div className='absolute bottom-0 right-0 h-1 bg-red-500 w-full'></div>
+          <div className='absolute -right-6 bottom-0 text-red-500 font-bold'>X</div>
+        </div>
       </>
     ),
     title: "Drawing with Pixels (raster)",
@@ -132,13 +138,20 @@ This proves the portal is not just a passive presentation, but a hands-on tool."
       <>
         <h4 className='w-full text-left' >Drawing with Pixels (raster):</h4>
         <br />
-        <Image
-          src="/images/computer-graphics/drawing-with-pixels.png"
-          alt="Pixel art"
-        />
+        <div className='relative inline-block w-full h-full bg-[#675563]'>
+          <Image
+            src="/images/computer-graphics/drawing-with-pixels.png"
+            alt="Pixel art"
+            className='mt-8'
+          />
+          <div className='absolute left-0 top-0 bottom-0 w-1 bg-green-500'></div>
+          <div className='absolute left-0 -top-6 text-green-500 font-bold'>Y</div>
+          <div className='absolute bottom-0 right-0 h-1 bg-red-500 w-full'></div>
+          <div className='absolute -right-6 bottom-0 text-red-500 font-bold'>X</div>
+        </div>
       </>
     ),
-    title: "Forking the Course GitHub Repository",
+    title: "Pixel art",
     notes: 'I often lose students that spend the rest of the class creating pixel art.\n\
 I demand they at least share their creations with the group afterward.'
   },
@@ -163,7 +176,8 @@ I demand they at least share their creations with the group afterward.'
       </>
     ),
     title: "Drawing with Code (vectorial)",
-    notes: 'This leads to procedural drawing. Using P5.js, we generate vector graphics through scripts, showing that architectural marks can be defined as repeatable procedures rather than static traces.\n\
+    notes: 'This leads to drawing with code.\n\
+    Using P5.js, we generate vector graphics through scripts, showing that architectural marks can be defined as repeatable functions rather than static traces.\n\
     Vectorial drawing is an important concept since it is at the base of CAD and parametric modelling\n\
     This tools allow students to understand the basic functions of geometry creation and dynamically interact with them.'
   },
@@ -184,7 +198,7 @@ I demand they at least share their creations with the group afterward.'
     title: "CAD viewer (dxf)",
     notes: 'Having explained the basic concept of computer graphics, the course pivots towards specific tools for architects. So students can experience real toolmaking for architectural representation.\n\
     After grasping the theory behind CAD, 3D CAD, and BIM, we experiment firsthand with custom tools\n\
-    _____________________________________________________________________________________________\n\
+    \n\
     The first example is a CAD viewer that works with the open format DXF.'
   },
   {
