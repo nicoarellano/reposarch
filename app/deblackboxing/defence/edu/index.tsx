@@ -325,7 +325,9 @@ In this interactive feature, students can test the different elements and see th
     ),
     title: "GIS viewer (Maplibre GL JS)",
     notes: 'Finally, we explore Maplibre GL JS, an open-source alternative to Mapbox GL JS, which offers similar functionality for creating interactive 3D maps.\n\
-    \n\
+    In this example I also added a dataset from the open data gallery of Natural Resources Canada.\n\
+    A BIM and a 3D model to show the potential of integrating diverse media with the map\n\
+    _____________________________________________________________________________________\n\
     Let me now show you a few examples from Assignment 3 where students experiment with maplibre and open datasets to create custom maps'
   },
   {
@@ -361,7 +363,7 @@ In this interactive feature, students can test the different elements and see th
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/williamlozides/map/index.html" />
     ),
     title: "Student Project:",
-    notes: 'Mapping the venues where the student performed at in Toronto'
+    notes: 'and the venues where the student performed at in Toronto'
   },
   {
     element: <>
