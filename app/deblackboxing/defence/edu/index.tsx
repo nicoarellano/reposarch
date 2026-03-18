@@ -23,11 +23,16 @@ export const content: Toc = [
   {
     element: <MainMenuContent />,
     title: "Course Portal, Main menu",
-    notes: "Because you have already read the theory, I wanted to explain why it was so important to teach the course through a custom portal.\n\
-My decision to develop this presentation tool as well as the course portal, rather than using traditional software like PowerPoint, directly reflects my central methodological claim.\n\
-Existing software do not adequately support the interactive demonstrations that are essential for teaching and explaining my work.\n\
-This conscious choice of medium highlights a foundational principle of the research: the architect can and will benefit by designing their own tools. So, in this context, the medium is a core element of the research message.\n\
-The portal is a web-based, open-source platform that serves as the course's didactic infrastructure. It contains everything from the course calendar and announcements to the list of lectures to date and relevant links (like the course GitHub repository), etc."
+    notes: "Because you have already read the theory, I didn't want to repeat it. Instead, I want to focus on why it was so important to teach this course through a custom portal.\n\
+\n\
+My decision to develop this presentation tool, along with the course portal, directly reflects my central argument.\n\
+To effectively teach and explain my work, I need interactive tools that allow me to demonstrate concepts in real-time. Because traditional software like PowerPoint cannot support these features, I had to build my own.\n\
+\n\
+This choice of medium highlights a foundational principle of the research: architects will benefit by customizing and designing their own tools. In this context, the medium is a core element of the research message.\n\
+\n\
+The portal itself is a web-based, open-source platform that serves as the course's didactic infrastructure.\n\
+It contains the calendar, announcements, all lectures, and important links.\n\
+It functions as a 'living lab' co-developed with the students—a space to experiment and test the exact same tools and concepts we are learning in the course."
   },
   {
     element: <>
@@ -35,7 +40,12 @@ The portal is a web-based, open-source platform that serves as the course's dida
       <ResourcesContent />
     </>,
     title: "Course Resources",
-    notes: "It also includes multiple resources to access and download, such as websites, influential videos and lectures, free software, papers, and peer-reviewed articles."
+    notes: "It also includes multiple resources to access and download, such as:\n\
+    - books,\n\
+    - websites,\n\
+    - influential videos and lectures,\n\
+    - free software,\n\
+    - and peer-reviewed articles."
   },
   {
     element: (
@@ -53,7 +63,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
       <TOC />
     </>,
     title: "Course Lectures",
-    notes: "All the lecture to date including all slides and class recordings are available through the portal as well."
+    notes: "The students can access all the lectures to date including all slides and class recordings through the portal."
   },
   {
     element: (
@@ -65,8 +75,10 @@ The portal is a web-based, open-source platform that serves as the course's dida
     ),
     title: "Example of a slide",
     notes:
-      'This is an example of one of the theory slides; the portal also acts as a slideshow.\n\
-      Speaker notes are also available, for example:\n\
+      'The portal also acts as a slideshow.\n\
+      The slides themselves are created with the same tools so they can inspect the source code of the entire presentation and see how it works.\n\
+      This is an example of one of the theory slides:\n\
+      Speaker notes are also available through the browser devTools.\n\
       _____________________________________________________________________________________\n\
       In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\n\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\n\
@@ -79,7 +91,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
     element: <Tags />,
     title: "Interactive features",
     notes:
-      'There are also interactive features that the students can use to test their knowledge when studing for the quizes.',
+      'There are interactive features that the students can use to test their knowledge when studying for the quizzes.',
   },
   {
     element: (
@@ -92,7 +104,8 @@ The portal is a web-based, open-source platform that serves as the course's dida
     ),
     title: "Code Editor",
     notes: 'More importantly, I have created interactive features to practice their programming skills.\n\
-    This exmple is a simple real-time  sandbox for them to test the different languages taught in the course.\n\
+    This example is a simple real-time  sandbox for them to test the different languages they learn in the course.\n\
+    \n\
     It is progressive because first we talk about HTML, then CSS and finally JavaScript.\n\
     At the end they can test the 3 languages together and see in real time how they interact.'
   },
@@ -110,14 +123,31 @@ The portal is a web-based, open-source platform that serves as the course's dida
     ),
     title: "Drawing with Pixels (raster)",
     notes:
-      "We then tackle the dominant paradigms of computer graphics. Students use this embedded raster tool to experiment with pixel-based drawing, making the 2D coordinate grid tangible.",
+      "I then introduce the foundational concepts of computer graphics.\n\
+Students use this embedded raster tool to experiment directly with pixel-based drawing.\n\
+This proves the portal is not just a passive presentation, but a hands-on tool.",
+  },
+  {
+    element: (
+      <>
+        <h4 className='w-full text-left' >Drawing with Pixels (raster):</h4>
+        <br />
+        <Image
+          src="/images/computer-graphics/drawing-with-pixels.png"
+          alt="Pixel art"
+        />
+      </>
+    ),
+    title: "Forking the Course GitHub Repository",
+    notes: 'I often lose students that spend the rest of the class creating pixel art.\n\
+I demand they at least share their creations with the group afterward.'
   },
   {
     element: <CartesianPlane />,
     title: "Interactive Cartesian Plane",
     notes:
       "We then move to the 3D space with an interactive Cartesian Plane. Built with Three.js, it allows students to manipulate XYZ coordinates and see the results in real-time.\n\
-      This is a much more dynamic and graphic way of understanding the tri-dimentional digital world. Which is hard to grasp with a PowerPoint presentation",
+      This is a much more dynamic and graphic way of understanding the tri-dimensional digital world. Which is hard to grasp with a PowerPoint presentation",
   },
   {
     element: (
@@ -185,7 +215,7 @@ The portal is a web-based, open-source platform that serves as the course's dida
     title: "Students photogrammetry models for assignment 2",
     notes:
       'This is an example of the students’ work with the 3D viewer. for assignment 2, I asked them to create fotogrametric models of themselves. This composition shows some of the models from Fall 2024\n\
-      Now let me show you the result of some of those assignments where they embeded their models in interactive 3D scenes',
+      Now let me show you the result of some of those assignments where they embedded their models in interactive 3D scenes',
   },
   {
     element: (
