@@ -62,22 +62,21 @@ This is straightforward when you think about something like a digital twin of a 
   },
   {
     element: <CdtWhy />,
-    title: "Why a National Digital Twin?",
-    notes: '1) Organizations, struggle with fragmented data silos where BIM models, GIS datasets, operational information, and maintenance records exist in isolation, making comprehensive decision-making nearly impossible.\n\
+    title: "Why do we need a National Digital Twin?",
+    notes: '1) Fragmented data silos — BIM, GIS, operational and maintenance data are often fragmented, so it is hard to get a complete picture.\n\
     _____________________________________________________________________________________________\n\
-2) Proprietary lock-in traps organizations in expensive software ecosystems that limit flexibility and force dependency on specific vendors.\n\
-while poor BIM/GIS integration means that detailed building information cannot seamlessly connect with broader spatial and infrastructure context.\n\
-_____________________________________________________________________________________________\n\
-3) These challenges are compounded by interoperability failures that prevent data exchange between different platforms and departments, creating workflow bottlenecks that slow project delivery and inflate costs.\n\
-_____________________________________________________________________________________________\n\
-4) Perhaps most critically, the technical knowledge barriers inherent in current systems exclude non-technical stakeholders like facility managers, executives, and maintenance staff—from accessing the very information they need to make informed decisions about the built environment.\n\
-_____________________________________________________________________________________________\n\
-By democratizing access to digital twin technologies the project creates an inclusive, collaborative ecosystem where reducing limitations imposed by proprietary constraints or technical complexity.',
+    2) Heavy dependency on proprietary solutions — closed file formats and black‑boxed processes lock organizations into vendors and reduce flexibility.\n\
+    _____________________________________________________________________________________________\n\
+    3) Interoperability failures and poor BIM/GIS integration — systems cannot exchange data reliably, so spatial and asset information remain disconnected.\n\
+    _____________________________________________________________________________________________\n\
+    4) Technical knowledge barriers exclude non-technical stakeholders — facility managers and decision makers are often unable to access or use the information they need.\n\
+    _____________________________________________________________________________________________\n\
+    We wanted to provide a solution to these challenges.',
   },
   {
     element: <CdtWhat />,
     title: "What is CDT?",
-    notes: 'What is our response to this?\n\
+    notes: 'Our response to this?\n\
     _____________________________________________________________________________________________\n\
 1) A web-based data visualization platforms with BIM/GIS capabilities\n\
 _____________________________________________________________________________________________\n\

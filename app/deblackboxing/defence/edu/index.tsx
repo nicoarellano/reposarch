@@ -309,7 +309,7 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Mapbox GL JS)",
-    notes: 'I also show them Mapbox GL JS, which is a powerful tool for 3D mapping and visualization, and it is widely used in the industry.'
+    notes: 'and Mapbox, for 3D mapping and visualization.'
   },
   {
     element: (
@@ -324,7 +324,7 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Maplibre GL JS)",
-    notes: 'Finally, we explore Maplibre GL JS, an open-source alternative to Mapbox GL JS, which offers similar functionality for creating interactive 3D maps.\n\
+    notes: 'Finally, we explore Maplibre, an open-source alternative to Mapbox, which offers similar functionality for creating interactive 3D maps.\n\
     In this example I also added a dataset from the open data gallery of Natural Resources Canada.\n\
     A BIM and a 3D model to show the potential of integrating diverse media with the map\n\
     _____________________________________________________________________________________\n\
@@ -373,12 +373,12 @@ In this interactive feature, students can test the different elements and see th
     title: "Course Evaluations",
     notes: 'These are the evaluations:\n\
     _____________________________________________________________________________________\n\
+    - There are also 2 quizzes where I cover the theory of the course\n\
     - Assignment 1 is a portfolio type work using HTML, CSS and JavaScript,\n\
-    - Assignment 2 involves 3d models,\n\
-    - Assignment 3 involves maps,\n\
-    - and finally everything combined.\n\
+    - Assignment 2 a 3d scene,\n\
+    - Assignment 3 is a map,\n\
     - The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.\n\
-    - There are also 2 quizzes where I cover the theory of the course'
+    - and the Final Assignment is everything combined.'
   },
   {
     element: (
@@ -442,7 +442,7 @@ In this interactive feature, students can test the different elements and see th
         <StudentsList students={classListf2024} />
       </div>,
     title: "Student Projects",
-    notes: 'At the end of the term, the students have created a 4 websites, for portfolio type work, 3d models, maps, bim and finally everything combined'
+    notes: 'At the end of the term, the students have created for portfolio type work, with 3d models, maps, bim and finally everything combined'
   },
   {
     element:
