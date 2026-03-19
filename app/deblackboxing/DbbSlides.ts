@@ -58,33 +58,40 @@ export const dbbSlides: Slides = [
     notes: "For this dissertation, I didn't want to stay in the theory only.\n\
 In order to address these two obstacles, my research is grounded in two epistemic objects.\n\
 In this case, an epistemic object it’s the blend between theory and practice. Exploring the research question through diverse media. Or as Federica defines it in her book, an entwined process of thinking, writing, and making.\n\
+The epistemic objects are:\n\
+\n\
+1) A university course to teach open-source digital toolmaking\n\
+2) The development of an open-soure digital tool\n\
 ______________________________________________________________________________________\n\
-1) I will now move into the first epistemic object. The course that I developed to teach open-source digital toolmaking to architecture students.\n\
+1) I will now move into the first epistemic object. The course.\n\
 ______________________________________________________________________________________\n\
-2) I will now move into my second epistemic object. The developed of an open-source digital tool for architectural representation."
-  },
+2) The developed of Canada’s Digital Twin."
+},
   {
     id: "conclusion",
     title: "Conclusion",
     url: "/deblackboxing/conclusion",
-    notes: "To conclude, my dissertation argues that for the contemporary architect, toolmaking is a fundamental competence. It is the key to securing the profession's agency in a world that is now mostly digital.\n\
-I have examined the shift from a practice rooted in analog tools to one of digital dependence. Increasingly, architects have become passive users of 'black-boxed' software, where the internal logic is hidden. This opacity doesn't just limit the tools available; it diminishes the architect's ability to define how they design and communicate design.\n\
-Through this research, I have demonstrated a different path:\n\
+    notes: "To conclude, this dissertation argues that toolmaking is an essential skill for today's architect. It is the key to securing  agency.\n\
+Often Architects are passive users of 'black-boxed' software.\n\
+This hidden logic limits their ability to design and communicate design.\n\
+This research demonstrates a new path:\n\
 ______________________________________________________________________________________\n\
-1) Architects will benefit by viewing the tool as a site for creative intervention rather than a fixed boundary.\n\
+1) Software is a space for creative intervention, not a boundary.\n\
 ______________________________________________________________________________________\n\
-2) The research shows that programming can be taught as a form of architectural literacy, turning students into software developers.\n\
+2) Programming can be taught as architectural literacy, turning students into toolmakers.\n\
 ______________________________________________________________________________________\n\
-3) And through Canada’s Digital Twin, I have shown that open-source toolmaking solves real-world problems that proprietary systems cannot.\n\
+3) Canada’s Digital Twin proves that open-source toolmaking solves problems proprietary systems cannot.\n\
 ______________________________________________________________________________________\n\
-Digital tools are the environment in which architectural representation happens. Often, the influence of these systems is so constant that it becomes unperceivable. I propose that architects gain a critical perspective by looking past the polished user interface. This allows them to understand the underlying logic of their tools and actively rewrite their biases.\n\
-This research lies in its specific call to action:\n\
+Architects can and should look inside user interface to understand and actively rewrite the biases of their tools.\n\
+The call to action is clear:\n\
 ______________________________________________________________________________________\n\
-1) Education serves as the primary site of intervention, training authors rather than operators.\n\
+1) Education should train authors, not just operators.\n\
 ______________________________________________________________________________________\n\
-2) Open-source collaboration keeps tools aligned with professional values rather than commercial profit.\n\
+2) Open-source collaboration keeps tools aligned with professional values, not commercial profit.\n\
 ______________________________________________________________________________________\n\
-Ultimately, the question is not whether architects will use software, but whether they will use it to define their own direction. By combining open-source collaboration with computational pedagogy, I believe the profession can transform its relationship with technology from one of dependency to one of true sovereignty.\n\
+The question is not if architects will use software, but if they will use it to define their own direction.\n\
+The profession can move from dependency to true sovereignty.\n\
+\n\
 Thank you so much. I look forward to your questions."
   },
 ];

@@ -140,7 +140,7 @@ This proves the portal is not just a passive presentation, but a hands-on tool."
         <br />
         <div className='relative inline-block w-full h-full bg-[#675563]'>
           <Image
-            src="/images/computer-graphics/drawing-with-pixels.png"
+            src="/images/computer-graphics/pixel-art-kk.png"
             alt="Pixel art"
             className='mt-8'
           />
@@ -152,8 +152,7 @@ This proves the portal is not just a passive presentation, but a hands-on tool."
       </>
     ),
     title: "Pixel art",
-    notes: 'I often lose students that spend the rest of the class creating pixel art.\n\
-I demand they at least share their creations with the group afterward.'
+    notes: 'I often lose students that spend the rest of the class creating pixel art.'
   },
   {
     element: <CartesianPlane />,
@@ -261,8 +260,8 @@ In this interactive feature, students can test the different elements and see th
       </div>
     ),
     title: "BIM viewer (ifc)",
-    notes: 'This exercise was a bonus track, where they used a library called open bim components to create their own BIM viewers.\n\
-    In this example, I wanted to show a super simple BIM viewer that allows user to load IFC models really quickly and access the metadata.\n\
+    notes: 'This exercise was to use a library called open bim components to create a BIM viewer.\n\
+    Here I wanted to show a super simple BIM viewer to load IFC models quickly and access the metadata.\n\
     This example was developed with just a few lines of code'
   },
   {
