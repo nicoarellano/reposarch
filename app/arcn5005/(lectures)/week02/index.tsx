@@ -1,5 +1,5 @@
 import { Toc } from '@/app/types/types';
-import Image from '@/components/Common/Image';
+import Image from '@/components/Common/SlideImage';
 import Video from '@/components/Common/Video';
 import PdfViewer from '@/components/Common/PdfViewer';
 import Photogrammetry from './photogrammetry.mdx';

@@ -1,5 +1,5 @@
 import { Toc } from '@/app/types/types';
-import Image from '@/components/Common/Image';
+import Image from '@/components/Common/SlideImage';
 // import Image as NextImage from "next/image";
 
 import Video from '@/components/Common/Video';

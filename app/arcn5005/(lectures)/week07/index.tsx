@@ -1,6 +1,6 @@
 import { Toc } from '@/app/types/types';
 
-import Image from '@/components/Common/Image';
+import Image from '@/components/Common/SlideImage';
 import Video from '@/components/Common/Video';
 import EmojiTitle from '@/components/Common/EmojiTitle';
 import PdfViewer from '@/components/Common/PdfViewer';

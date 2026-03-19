@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import Image from "../../../../components/Common/Image";
+import Image from "../../../../components/Common/SlideImage";
 import CommunityIcon from "@mui/icons-material/Diversity3Rounded";
 
 export default function Engage() {

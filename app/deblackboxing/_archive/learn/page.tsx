@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import Image from "../../../../components/Common/Image";
+import Image from "../../../../components/Common/SlideImage";
 import LearnIcon from "@mui/icons-material/SchoolRounded";
 
 export default function Learn() {

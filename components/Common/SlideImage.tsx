@@ -10,7 +10,7 @@ interface Props {
   className?: string;
 }
 
-export default function CustomImage({
+export default function SlideImage({
   src,
   alt,
   fill = true,

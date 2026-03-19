@@ -1,6 +1,6 @@
 import { Toc } from "@/app/types/types";
 
-import Image from "@/components/Common/Image";
+import Image from "@/components/Common/SlideImage";
 import Video from "@/components/Common/Video";
 import Quote from "@/components/Common/Quote";
 import EmojiTitle from "@/components/Common/EmojiTitle";
@@ -136,16 +136,16 @@ export const content: Toc = [
     notes:
       "Is a that AutoDesk acquired a couple of year ago, that one can access through Revit (since 2019). designers, engineers or construction professionals without any computer-related background or who do not know how to write code can access to basic but powerful scripting. (which is a type of coding used to automate processes) Dynamo provides flexibility to explore inaccessible places inside the general functionalities of Revit (such as its API (application programming interface) and to manipulate large amounts of data and complex geometry with precision. ",
   },
- /* {
-    element: (
-      <iframe
-        className="w-full h-full"
-        src="https://primer.dynamobim.org/index.html"
-        title="Dynamo Primer"
-      />
-    ),
-  },*/
-  { element: <RepetitiveTasks /> }, 
+  /* {
+     element: (
+       <iframe
+         className="w-full h-full"
+         src="https://primer.dynamobim.org/index.html"
+         title="Dynamo Primer"
+       />
+     ),
+   },*/
+  { element: <RepetitiveTasks /> },
   {
     element: (
       <Image

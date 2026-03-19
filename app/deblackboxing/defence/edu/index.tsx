@@ -1,6 +1,6 @@
 import { Toc } from '@/app/types/types';
 
-import Image from '@/components/Common/Image';
+import Image from '@/components/Common/SlideImage';
 import CartesianPlane from '@/components/CartesianPlane';
 import TOC from '@/app/arcn5005/(main)/toc/page';
 import dynamic from 'next/dynamic';
@@ -365,21 +365,21 @@ In this interactive feature, students can test the different elements and see th
     title: "Student Project:",
     notes: 'and the venues where the student performed at in Toronto'
   },
-  {
-    element: <>
-      <h4 className='mb-8' >Evaluations:</h4>
-      <CustomizedTables data={Arcn5005F2024Evaluations} />
-    </>,
-    title: "Course Evaluations",
-    notes: 'These are the evaluations:\n\
-    _____________________________________________________________________________________\n\
-    - There are also 2 quizzes where I cover the theory of the course\n\
-    - Assignment 1 is a portfolio type work using HTML, CSS and JavaScript,\n\
-    - Assignment 2 a 3d scene,\n\
-    - Assignment 3 is a map,\n\
-    - The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.\n\
-    - and the Final Assignment is everything combined.'
-  },
+  // {
+  //   element: <>
+  //     <h4 className='mb-8' >Evaluations:</h4>
+  //     <CustomizedTables data={Arcn5005F2024Evaluations} />
+  //   </>,
+  //   title: "Course Evaluations",
+  //   notes: 'These are the evaluations:\n\
+  //   _____________________________________________________________________________________\n\
+  //   - There are also 2 quizzes where I cover the theory of the course\n\
+  //   - Assignment 1 is a portfolio type work using HTML, CSS and JavaScript,\n\
+  //   - Assignment 2 a 3d scene,\n\
+  //   - Assignment 3 is a map,\n\
+  //   - The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.\n\
+  //   - and the Final Assignment is everything combined.'
+  // },
   {
     element: (
       <>
@@ -419,23 +419,23 @@ In this interactive feature, students can test the different elements and see th
     title: "Forking the Course GitHub Repository",
     notes: 'Students need to Fork the repository, commit their work, create Pull requests, etc'
   },
-  {
-    element: (
-      <>
-        <h3>Fork the course GitHub repository</h3>
-        <br />
-        <Image
-          src="/images/defence/gitgraph.png"
-          alt="Git Graph"
-        />
-      </>
-    ),
-    title: "Git Graph",
-    notes: 'This is an example of a submission day, all the different colour lines are students merging their work.\n\
-    All students can see each other work at all time and learn from each other.\n\
-    Collaboration is encourage.\n\
-    I even offer extra points to students that help their classmates to solve problems.'
-  },
+  // {
+  //   element: (
+  //     <>
+  //       <h3>Fork the course GitHub repository</h3>
+  //       <br />
+  //       <Image
+  //         src="/images/defence/gitgraph.png"
+  //         alt="Git Graph"
+  //       />
+  //     </>
+  //   ),
+  //   title: "Git Graph",
+  //   notes: 'This is an example of a submission day, all the different colour lines are students merging their work.\n\
+  //   All students can see each other work at all time and learn from each other.\n\
+  //   Collaboration is encourage.\n\
+  //   I even offer extra points to students that help their classmates to solve problems.'
+  // },
   {
     element:
       <div className="w-full flex flex-col items-center justify-center grow gap-8 mdx">

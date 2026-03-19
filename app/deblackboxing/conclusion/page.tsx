@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 export default function Home() {
-  const openBox = "/images/openBox.png";
   return (
     <div className="flex flex-col gap-[67px] justify-center items-center text-center">
       <h2>

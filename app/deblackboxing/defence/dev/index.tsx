@@ -1,11 +1,12 @@
 import React from 'react';
 import { Toc } from '@/app/types/types';
 
-import Image from '@/components/Common/Image';
+import SlideImage from '@/components/Common/SlideImage';
+import Image from 'next/image';
 import DTDefinition from './dt-definition';
 import CdtWhat from './cdt-what';
 import CdtWhy from './cdt-why';
-import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
+import AutoRedirect from './AutoRedirect';
 
 export const content: Toc = [
   {
@@ -14,7 +15,7 @@ export const content: Toc = [
         <br />
         <br />
         <br />
-        <Image
+        <SlideImage
           src={"/images/cdt/canada-logo.png"}
           alt="Canada’s Digital Twin"
         />
@@ -46,19 +47,19 @@ This is straightforward when you think about something like a digital twin of a 
   {
     element: <>
       <h4 className='w-2/3 text-left mb-8'>A National Digital Twin of Canada:</h4>
-      <Image
+      <SlideImage
         src={"/images/defence/dt diagram.png"}
         alt="CDT diagram"
       />
     </>,
     title: "A National Digital Twin of Canada",
-    notes: 'In the CDT project, tries to capture the real Canada containing both\n\
+    notes: 'The CDT project, tries to capture the real Canada containing both\n\
     _____________________________________________________________________________________________\n\
     1) The Physical, such as people, buildings, infrastructure, lakes, rivers, etc\n\
     _____________________________________________________________________________________________\n\
     2) And the non-physical aspects of Canada such as culture, legislation, history, weather, economy, etc.\n\
     _____________________________________________________________________________________________\n\
-  The process begins with the conversion of physical assets into digital data. This information, gathered from both open and private sources, is brought into the platform to facilitate deeper insight, multi-scale simulation, and accurate predictions.',
+  The physical assets are converted into digital data. This information, gathered from both open and private sources, is brought into the platform to facilitate deeper insight, multi-scale simulation, and accurate predictions.',
   },
   {
     element: <CdtWhy />,
@@ -89,7 +90,7 @@ ________________________________________________________________________________
   {
     element: <>
       <h4 className='w-2/3 text-left mb-8'>CDT Platform Architecture:</h4>
-      <Image
+      <SlideImage
         src={"/images/defence/dt arch.png"}
         alt="CDT platform architecture"
       />
@@ -101,9 +102,7 @@ ________________________________________________________________________________
     _____________________________________________________________________________________________\n\
     2) That it is based on a Canadian cloud infrastructure, with datacentres on Canadian soil (Vancouver and Toronto), and data sovereignty agreements in place.\n\
     _____________________________________________________________________________________________\n\
-This architecture enables flexible deployment options that respect organizational security requirements.\n\
-Large organizations like the Department of National Defence with existing IT infrastructure can download and deploy the entire platform on their own servers and networks, maintaining complete control over sensitive data.\n\
-Smaller organizations without extensive infrastructure can securely access dedicated instances through browser-based authentication, with data isolation ensuring organizational privacy and confidentiality.',
+This architecture enables flexible deployment options that respect organizational security requirements.',
   },
   {
     element: (
@@ -116,11 +115,11 @@ Smaller organizations without extensive infrastructure can securely access dedic
     title: "CDT Demo",
     notes: ' Now let me demonstrate the capabilities of the platform.\n\
 Starting with our secure login, the authentication system assigns role-based credentials with differentiated permissions based on organizational requirements.\n\
-One of our most significant technical achievement is our seamless BIM-GIS integration. This addresses one of the central challenges we faced: bridging fundamentally different data paradigms in a web environment.\n\
-Watch as I add BIM models to the campus. Here we have all 45 buildings on the campus, totalling 4 GB of BIM models. Each model loads with sub-2-second performance—even for files exceeding 500 megabytes.\n\
-Next, I’ll add GIS infrastructure data showing campus tunnels, demonstrating how building- scale and infrastructure - scale information coexist within our integrated environment.\n\
-This cross - scale integration required solving complex coordinate transformation challenges by extracting information from the ifc geolocation properties for accurate coordinate conversions.\n\
-Users can also add comments, photos, videos, and models directly to the map to share with other users, enhancing collaboration.\n\
+One of our most significant technical achievement is our BIM-GIS integration to bridge different data paradigms in single web-based system.\n\
+Watch as I add BIM models to the campus. Here we have all 45 buildings on the campus, totalling 4 GB of BIM models. Each model loads with sub-2-second —even for files exceeding 500 megabytes.\n\
+Next, I’ll add GIS infrastructure data showing campus tunnels, demonstrating how building-scale and infrastructure coexist.\n\
+This cross-scale integration required solving complex coordinate transformation challenges for accurate coordinate conversions.\n\
+Users can also add comments, photos, videos, and models directly to the map to share with other users, to enhance collaboration.\n\
 _____________________________________________________________________________________________\n\
 Zooming out to Ottawa reveals our open data federation capabilities.\n\
 The platform automatically retrieves open government data from municipal, provincial, and federal sources.Here we’re adding Ottawa neighbourhoods and transit stops, as well as national airport locations.This integration happens through standardized APIs—no additional data manipulation required.\n\
@@ -192,27 +191,30 @@ In this case, user data can generate a layer of data that can be use to help mit
       />
     ),
     title: "Digital Twin for Federal Assets",
-    notes: 'Currently, our largest project is in partnership with the National Research Council and the Department of National Defence to solve a crisis of asset information management. In response to this, we’ve developed a prototype for asset management, for the federal government.\n\
-The Department of National Defence, manages 21,000 built assets located across approximately 100 million hectares—spanning every province and territory. These assets are both geographically and typologically diverse— from military bases in the Arctic to heritage buildings in downtown Ottawa.  This massive portfolio is managed through fragmented information systems, siloed data practices, and incompatible proprietary technologies.\n\
-This isn’t just a Canadian or DND problem—it’s a global challenge that we believe digital twins are uniquely positioned to solve.\n\
+    notes: 'Currently, our largest project is in partnership with the National Research Council and the Department of National Defence to solve a crisis of asset information management.\n\
+DND, manages more than 21,000 built assets located across approximately 100 million hectares—spanning every province and territory.\n\
+from military bases in the Arctic to heritage buildings in downtown Ottawa.\n\
+This massive portfolio is managed through fragmented information systems and incompatible proprietary technologies.\n\
+This isn’t just a Canadian or DND problem—it’s a global challenge that Digital twins can help to address.\n\
 There are two main components to this research.\n\
 _____________________________________________________________________________________________\n\
-1) First, we conducted a comprehensive review of Open and International Standards for BIM and GIS. Next we defined specific use cases spanning the full asset lifecycle—from design and construction through operations and digital twin applications. This foundational work culminated in the creation of EIR templates specifically designed for federal assets\n\
-_____________________________________________________________________________________________\n\
-2) Second, we defined the functional and technical requirements of the platform itself. Through iterative prototyping, we used real-world DND assets to test integration of varied datasets into a federated architecture.\n\
+Through iterative prototyping, we used real-world DND assets to test integration of diverse datasets.\n\
 Our work with NRC and DND has been pivotal in testing the security, deployment, and scalability of the platform.'
   },
   {
     element:
-      <div className='flex flex-col items-center justify-center h-full gap-2'>
-        <h4 className='w-full text-center'>Return to Epistemic Objects:</h4>
-        <a
-          href={'/deblackboxing/epistemic-object/?animation=false'}
-          className="cursor-pointer"
-          aria-label="Open Epistemic Object page"
-        >
-          <EpistemicObjectIcon style={{ fontSize: '20rem' }} />
-        </a>
+      <div className="flex flex-col gap-[55px] justify-center items-center text-center">
+        <h2 className="!text-[34px] ">
+          An open future...
+        </h2>
+        <Image
+          priority
+          src={"/images/openBox.png"}
+          height={300}
+          width={300}
+          alt={"De-blackboxing"}
+        />
+        <AutoRedirect href={'/deblackboxing/conclusion'} delay={0} />
       </div>
   }
 
