@@ -38,18 +38,16 @@ body,
   width: 25%;
   top: 10px;
   left: 10px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(86, 113, 173, 0.5);
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .map-overlay .map-overlay-inner {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.92);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(86, 113, 173, 0.5);
   padding: 20px;
-  margin-bottom: 15px;
 }
 
 /* Main heading styles */
@@ -62,67 +60,154 @@ body,
 
 /* Month header styles */
 .map-overlay h3#month-header {
-  font-size: 0.7rem;
-  line-height: 1.8rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
   font-weight: bold;
-  text-align: left;
-  color: #2e2727;
-  font-style: italic;
-  margin-bottom: 15px;
-  letter-spacing: 0.8px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.4px;
   text-transform: capitalize;
 }
 
-/* Legend heading styles */
-.map-overlay h4 {
-  font-size: 0.7rem;
-  line-height: 1.5rem;
-  font-style: italic;
-  font-weight: bold;
-  text-align: left;
-  color: #2e2727;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  letter-spacing: 0.5px;
+/* Slider wrapper and ticks */
+.slider-wrap {
+  position: relative;
+  width: 100%;
+  margin: 6px auto 8px auto;
+  height: 24px;
 }
 
-/* Legend bar styles */
-.map-overlay .legend .bar {
-  flex-grow: 1;
-  height: 12px;
-  margin-right: 10px;
-  background: linear-gradient(to right, #fff5f5, #ff0000);
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Slider styling */
-.map-overlay input {
-  background-color: transparent;
-  display: block;
-  width: 90%; /* Increase slider width */
-  margin: 10px auto; /* Center slider and add spacing */
-  cursor: ew-resize;
+.month-ticks {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
   height: 8px;
-  appearance: none;
+  transform: translateY(-50%);
+  border-radius: 6px;
+  background: #ececec;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
-.map-overlay input::-webkit-slider-thumb {
+.month-ticks::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0) calc(100% / 11 - 1px),
+    rgba(0, 0, 0, 0.42) calc(100% / 11 - 1px),
+    rgba(0, 0, 0, 0.42) calc(100% / 11)
+  );
+  pointer-events: none;
+}
+
+#slider {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 8px;
+  z-index: 2;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+#slider::-webkit-slider-runnable-track {
+  height: 8px;
+  background: transparent;
+  border-radius: 6px;
+}
+
+#slider::-moz-range-track {
+  height: 8px;
+  background: transparent;
+  border-radius: 6px;
+}
+
+#slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 16px;
   height: 16px;
-  background: #333;
+  margin-top: -4px;
+  background: #ffffff;
+  border: 2px solid #e24343;
   border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.map-overlay input::-moz-range-thumb {
+#slider::-moz-range-thumb {
   width: 16px;
   height: 16px;
-  background: #333;
+  background: #ffffff;
+  border: 2px solid #e24343;
   border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Single compact legend card */
+.legend {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(245, 245, 245, 0.95);
+}
+
+.legend h4 {
+  margin: 0 0 6px 0;
+  font-size: 0.65rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #3a3a3a;
+}
+
+.legend .bar {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #fff5f5, #ff0000);
+  border-radius: 999px;
+}
+
+.legend-range {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  color: #4a4a4a;
+}
+
+/* Month abbreviations improve month readability at a glance */
+.month-labels {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2px;
+}
+
+.month-label {
+  font-size: 0.56rem;
+  text-align: center;
+  color: #707070;
+  letter-spacing: 0.2px;
+}
+
+.month-label.active {
+  color: #c62828;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .map-overlay {
+    width: min(88vw, 420px);
+  }
 }

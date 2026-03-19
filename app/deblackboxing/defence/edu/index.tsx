@@ -336,20 +336,20 @@ In this interactive feature, students can test the different elements and see th
     title: "Student Project:",
     notes: ' Interactive Ottawa food recommendations Map'
   },
-  {
-    element: (
-      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/mostafabdeir/map/index.html " />
-    ),
-    title: "Student Project:",
-    notes: ' Shawarma spots around Ottawa'
-  },
-  {
-    element: (
-      <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/map/index.html" />
-    ),
-    title: "Student Project:",
-    notes: 'Historic buildings in Almonte'
-  },
+  // {
+  //   element: (
+  //     <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/mostafabdeir/map/index.html " />
+  //   ),
+  //   title: "Student Project:",
+  //   notes: ' Shawarma spots around Ottawa'
+  // },
+  // {
+  //   element: (
+  //     <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/basilcurrie/map/index.html" />
+  //   ),
+  //   title: "Student Project:",
+  //   notes: 'Historic buildings in Almonte'
+  // },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/saraniadabee/map/index.html" />

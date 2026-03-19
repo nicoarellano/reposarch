@@ -1,35 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <title>Volcanic Eruptions Visualization</title>
-    <meta property="og:description" content="Visualize volcanic eruptions with a time slider." />
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+    <meta
+      property="og:description"
+      content="Visualize volcanic eruptions with a time slider."
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.134/examples/js/loaders/GLTFLoader.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="map"></div>
 
     <div class="map-overlay top">
-        <div class="map-overlay-inner">
-            <h2>Timelapse of Volcanic Eruptions</h2>
-            <h3 id="month-header"><span id="month">January</span></h3>
-            <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+      <div class="map-overlay-inner">
+        <h2>Timelapse of Volcanic Eruptions</h2>
+        <h3 id="month-header"><span id="month">January</span></h3>
+        <div class="slider-wrap">
+          <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+          <div class="month-ticks" aria-hidden="true"></div>
         </div>
-        <div class="map-overlay-inner">
-            <div id="legend" class="legend">
-                <div class="bar"></div>
-                <h4>Explosivity Index (VEI)</h4>
-            </div>
+        <div class="month-labels" aria-hidden="true">
+          <span class="month-label active">Jan</span>
+          <span class="month-label">Feb</span>
+          <span class="month-label">Mar</span>
+          <span class="month-label">Apr</span>
+          <span class="month-label">May</span>
+          <span class="month-label">Jun</span>
+          <span class="month-label">Jul</span>
+          <span class="month-label">Aug</span>
+          <span class="month-label">Sep</span>
+          <span class="month-label">Oct</span>
+          <span class="month-label">Nov</span>
+          <span class="month-label">Dec</span>
         </div>
+        <div id="legend" class="legend">
+          <h4>VEI</h4>
+          <div class="bar"></div>
+          <div class="legend-range">
+            <span>0</span>
+            <span>8+</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="tooltip"></div>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

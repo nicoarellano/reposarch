@@ -148,6 +148,22 @@ The platform also supports Information Delivery Specification (or IDS) integrati
 The viewer graphically highlights which model elements conform or do not conform to the specified requirements, making compliance checking both transparent and actionable during coordination.'
   },
   {
+    element:
+      <div className="flex flex-col gap-[55px] justify-center items-center text-center">
+        <h2 className="!text-[34px] ">
+          An open future...
+        </h2>
+        <Image
+          priority
+          src={"/images/openBox.png"}
+          height={300}
+          width={300}
+          alt={"De-blackboxing"}
+        />
+        <AutoRedirect href={'/deblackboxing/conclusion'} delay={0} />
+      </div>
+  },
+  {
     element: (
       <video
         src="https://cimsminio.ca-east.onfullhost.cloud/cdt-homepage/safeandaffordable.mp4"
@@ -201,21 +217,5 @@ ________________________________________________________________________________
 Through iterative prototyping, we used real-world DND assets to test integration of diverse datasets.\n\
 Our work with NRC and DND has been pivotal in testing the security, deployment, and scalability of the platform.'
   },
-  {
-    element:
-      <div className="flex flex-col gap-[55px] justify-center items-center text-center">
-        <h2 className="!text-[34px] ">
-          An open future...
-        </h2>
-        <Image
-          priority
-          src={"/images/openBox.png"}
-          height={300}
-          width={300}
-          alt={"De-blackboxing"}
-        />
-        <AutoRedirect href={'/deblackboxing/conclusion'} delay={0} />
-      </div>
-  }
 
 ];

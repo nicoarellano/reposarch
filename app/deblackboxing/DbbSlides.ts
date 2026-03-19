@@ -66,7 +66,7 @@ ________________________________________________________________________________
 1) I will now move into the first epistemic object. The course.\n\
 ______________________________________________________________________________________\n\
 2) The developed of Canada’s Digital Twin."
-},
+  },
   {
     id: "conclusion",
     title: "Conclusion",
@@ -92,6 +92,8 @@ ________________________________________________________________________________
 The question is not if architects will use software, but if they will use it to define their own direction.\n\
 The profession can move from dependency to true sovereignty.\n\
 \n\
-Thank you so much. I look forward to your questions."
+Thank you so much. I look forward to your questions.\n\
+______________________________________________________________________________________\n\
+***If demos of the USE CASES are needed, go to https://reposarch.vercel.app/arcn5005/defence-dev/10"
   },
 ];
