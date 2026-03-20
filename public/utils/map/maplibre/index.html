@@ -67,12 +67,69 @@
         border: 1px solid rgba(15, 23, 42, 0.1);
         display: block;
       }
+
+      .map-legend {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        z-index: 5;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        padding: 10px 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(2px);
+        color: #111;
+      }
+
+      .map-legend-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 600;
+      }
+
+      .map-legend-icon {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+      }
+
+      .map-legend-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.75));
+      }
+
+      .map-legend-source {
+        margin-top: 4px;
+        font-size: 11px;
+        line-height: 1.2;
+        color: #333;
+      }
     </style>
   </head>
 
   <body class="hide-overflow">
     <div class="hide-overflow canvas">
       <div id="map-f2024" style="width: 100%; height: 100%"></div>
+      <div class="map-legend" aria-label="Map legend">
+        <div class="map-legend-row">
+          <span class="map-legend-icon" aria-hidden="true">
+            <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#2f2f2f"
+                d="M15,6.8182L15,8.5l-6.5-1l-0.3182,4.7727L11,14v1l-3.5-0.6818L4,15v-1l2.8182-1.7273L6.5,7.5L0,8.5V6.8182L6.5,4.5v-3c0,0,0-1.5,1-1.5s1,1.5,1,1.5v2.8182L15,6.8182z"
+              />
+            </svg>
+          </span>
+          <span>Canadian Airports</span>
+        </div>
+        <div class="map-legend-source">* source Natural Resources Canada</div>
+      </div>
       <script src="./main.js" type="module"></script>
     </div>
     <div class="simple-card-container bottom">

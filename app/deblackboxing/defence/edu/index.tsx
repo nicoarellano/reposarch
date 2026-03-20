@@ -23,16 +23,20 @@ export const content: Toc = [
   {
     element: <MainMenuContent />,
     title: "Course Portal, Main menu",
-    notes: "Because you have already read the theory, I didn't want to repeat it. Instead, I want to focus on why it was so important to teach this course through a custom portal.\n\
+    notes: "Since you have already read the theory, I don’t want to repeat it.\n\
+Instead, I want to explain why I built a custom portal to teach this course.\n\
+This is the exact same reason I built this custom presentation tool for this defense.\n\
+My central argument is that to teach my work effectively, I need interactive, real-time tools.\n\
+Since, traditional software like PowerPoint cannot do this the way I needed, I had to build my own.\n\
 \n\
-My decision to develop this presentation tool, along with the course portal, directly reflects my central argument.\n\
-To effectively teach and explain my work, I need interactive tools that allow me to demonstrate concepts in real-time. Because traditional software like PowerPoint cannot support these features, I had to build my own.\n\
+This choice proves a core principle of my research: architects benefit by designing their own tools.\n\
+Here, the medium is a core element of the research message.\n\
 \n\
-This choice of medium highlights a foundational principle of the research: architects will benefit by customizing and designing their own tools. In this context, the medium is a core element of the research message.\n\
+The portal is a web-based, open-source platform that serves as the course infrastructure.\n\
+It holds the calendar, lectures, and resources.\n\
+More importantly, it acts as a 'living lab' co-developed with the students—a space to test the exact tools taught in the class.\n\
 \n\
-The portal itself is a web-based, open-source platform that serves as the course's didactic infrastructure.\n\
-It contains the calendar, announcements, all lectures, and important links.\n\
-It functions as a 'living lab' co-developed with the students—a space to experiment and test the exact same tools and concepts we are learning in the course."
+Let me show you a few examples"
   },
   {
     element: <>
@@ -40,7 +44,7 @@ It functions as a 'living lab' co-developed with the students—a space to exper
       <ResourcesContent />
     </>,
     title: "Course Resources",
-    notes: "It also includes multiple resources to access and download, such as:\n\
+    notes: "The portal includes multiple resources to access and download, such as:\n\
     - books,\n\
     - websites,\n\
     - influential videos and lectures,\n\
@@ -55,7 +59,7 @@ It functions as a 'living lab' co-developed with the students—a space to exper
         <PdfViewer src="/resources/Raymond, Erik - The Cathedral and the Bazaar Musings on Linux and Open Source by an Accidental Revolutionary (1999).pdf" />
       </>
     ),
-    notes: "For example, students can access some ebooks and resources directly through the portal."
+    notes: "Students can access ebooks and resources directly through the portal."
   },
   {
     element: <>
@@ -63,7 +67,7 @@ It functions as a 'living lab' co-developed with the students—a space to exper
       <TOC />
     </>,
     title: "Course Lectures",
-    notes: "The students can access all the lectures to date including all slides and class recordings through the portal."
+    notes: "Students can access all the lectures to date including all slides and class recordings through the portal."
   },
   {
     element: (
@@ -75,10 +79,10 @@ It functions as a 'living lab' co-developed with the students—a space to exper
     ),
     title: "Example of a slide",
     notes:
-      'The portal also acts as a slideshow.\n\
-      The slides themselves are created with the same tools so they can inspect the source code of the entire presentation and see how it works.\n\
+      'I use the portal as a slideshow.\n\
+      All the slides are created with the same tools.\n\
+      So the students can inspect the source code of the whole course material and see how it works.\n\
       This is an example of one of the theory slides:\n\
-      Speaker notes are also available through the browser devTools.\n\
       _____________________________________________________________________________________\n\
       In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\n\
        GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\n\
@@ -91,7 +95,7 @@ It functions as a 'living lab' co-developed with the students—a space to exper
     element: <Tags />,
     title: "Interactive features",
     notes:
-      'There are interactive features that the students can use to test their knowledge when studying for the quizzes.',
+      'There are dynamic features that students can use to test their knowledge when studying for the quizzes.',
   },
   {
     element: (
@@ -103,10 +107,12 @@ It functions as a 'living lab' co-developed with the students—a space to exper
       </>
     ),
     title: "Code Editor",
-    notes: 'More importantly, I have created interactive features to practice their programming skills.\n\
-    This example is a simple real-time  sandbox for them to test the different languages they learn in the course.\n\
+    notes: 'More importantly, I have created interactive tools to practice their programming skills.\n\
     \n\
-    It is progressive because first we talk about HTML, then CSS and finally JavaScript.\n\
+    This example is a simple real-time sandbox for them to test the different languages I teach in the course.\n\
+    \n\
+    It is progressive because first I teach them HTML, then CSS and finally JavaScript.\n\
+    \n\
     At the end they can test the 3 languages together and see in real time how they interact.'
   },
 
@@ -152,16 +158,7 @@ This proves the portal is not just a passive presentation, but a hands-on tool."
       </>
     ),
     title: "Pixel art",
-    notes: 'I often lose students that spend the rest of the class creating pixel art.'
-  },
-  {
-    element: <CartesianPlane />,
-    title: "Interactive Cartesian Plane",
-    notes:
-      "We then move to the 3D space with an interactive Cartesian Plane built with Three.js.\n\
-      This tool allows students to manipulate XYZ coordinates and see the results in real-time.\n\
-      This is a much more dynamic and graphic way of understanding the basis of tri-dimensional digital world.\n\
-      Which is harder to grasp with a static presentation",
+    notes: 'Some students have used it to create pixel art.'
   },
   {
     element: (
@@ -202,15 +199,26 @@ After grasping the theory behind CAD, 3D CAD, and BIM, the class moves to firsth
 The first example is a CAD viewer that works with the open format DXF.'
   },
   {
+    element: <CartesianPlane />,
+    title: "Interactive Cartesian Plane",
+    notes:
+      "We then move to the 3D space with an interactive Cartesian Plane built with Three.js.\n\
+      This tool allows students to manipulate XYZ coordinates and see the results in real-time.\n\
+      This is a much more dynamic and graphic way of understanding the basis of tri-dimensional digital world.\n\
+      Which is harder to grasp with a static presentation",
+  },
+  {
     element: (
       <iframe className="w-full h-full" src="https://threejs.org/editor/" />
     ),
     title: "Three.js Editor",
-    notes: 'Moving into 3D modelling, I utilize the Three.js library to handle scenes, lights, and textures natively in the browser.\n\
-This is the exact engine behind major proprietary cloud platforms like Autodesk Platform Services—formerly Forge—and the Autodesk Construction Cloud (or ACC).\n\
+    notes: 'Three.js library is a great tool to handle scenes, lights, and textures natively in the browser.\n\
+It is the exact engine behind major proprietary cloud platforms such as Autodesk Forge (now Platform Services)\n\
+and the popular Autodesk Construction Cloud (ACC) among others.\n\
+\n\
 By learning Three.js, students are not just learning a library; they are discovering how to author the same industrial-grade tools used by tech giants, completely free and open-source.\n\
 \n\
-In this interactive feature, students can test the different elements and see the spatial results directly.'
+In this interactive editor, students can test the different elements and see the spatial results directly.'
   },
   {
     element: (
@@ -220,7 +228,9 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "Custom 3D scene (three.js)",
-    notes: 'Then we move to a more custom 3D viewer built with Three.js, which allows students to create their own scenes from scratch and to load and manipulate 3D models in real-time, demonstrating the core principles of 3D representation and interaction.'
+    notes: 'We them move to a more custom 3D viewer built with Three.js,\n\
+    this allows students to create their own scenes from scratch and to load and manipulate 3D models in real-time,\n\
+    demonstrating the core principles of 3D representation and interaction.'
   },
   {
     element: (
@@ -232,9 +242,10 @@ In this interactive feature, students can test the different elements and see th
     ),
     title: "Students photogrammetry models for assignment 2",
     notes:
-      'This is an example of the students’ work with the 3D viewer.\n\
-      For assignment 2, I asked them to create photogrammetric models of themselves. This composition shows some of the models from Fall 2024\n\
-      Now let me show you the result of some of those assignments where they embedded their models in interactive 3D scenes',
+      'This is an example of the students’ work.\n\
+      For assignment 2, I asked them to create photogrammetric models of themselves and add them to Three.js.\n\
+      This composition shows some of the models from Fall 2024\n\
+      Now let me show you the result of some of those assignments where students embedded their avatars in 3D scenes',
   },
   {
     element: (
@@ -248,7 +259,7 @@ In this interactive feature, students can test the different elements and see th
       <iframe className="w-full h-full overflow-hidden" src="/arcn5005/terms/f2024/students/maisjoudeh/three/index.html" />
     ),
     title: "Student Project: Interactive Cafeteria Design",
-    notes: 'Or this student that designed a cafeteria where she used her avatar to embed herself in the design'
+    notes: 'Or this student that designed a cafeteria where she used her photogrametric model to embed herselve in the design'
   },
   {
     element: (
@@ -260,9 +271,9 @@ In this interactive feature, students can test the different elements and see th
       </div>
     ),
     title: "BIM viewer (ifc)",
-    notes: 'This exercise was to use a library called open bim components to create a BIM viewer.\n\
-    Here I wanted to show a super simple BIM viewer to load IFC models quickly and access the metadata.\n\
-    This example was developed with just a few lines of code'
+    notes: 'I taught students a library called Open BIM components\n\
+    which allows them to create custom BIM tools.\n\
+    This is an example of a simple BIM viewer to load IFC models and access the metadata.'
   },
   {
     element: (
@@ -277,7 +288,8 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Cesium JS)",
-    notes: 'We then expand to the urban scale. I show students a spectrum of GIS web engines\n\
+    notes: 'We then move to the urban scale.\n\
+    I show students the most popular GIS web engines\n\
     This example uses Cesium JS...'
   },
   {
@@ -293,7 +305,7 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Leaflet)",
-    notes: 'This one uses the popular Leaflet...'
+    notes: 'This one uses the Leaflet, widely used for 2D maps'
   },
   {
     element: (
@@ -308,7 +320,7 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Mapbox GL JS)",
-    notes: 'and Mapbox, for 3D mapping and visualization.'
+    notes: 'Mapbox, for 3D mapping.'
   },
   {
     element: (
@@ -323,18 +335,21 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "GIS viewer (Maplibre GL JS)",
-    notes: 'Finally, we explore Maplibre, an open-source alternative to Mapbox, which offers similar functionality for creating interactive 3D maps.\n\
-    In this example I also added a dataset from the open data gallery of Natural Resources Canada.\n\
-    A BIM and a 3D model to show the potential of integrating diverse media with the map\n\
-    _____________________________________________________________________________________\n\
-    Let me now show you a few examples from Assignment 3 where students experiment with maplibre and open datasets to create custom maps'
+    notes: 'Finally, Maplibre, an open-source alternative to Mapbox,\n\
+    \n\
+    In this example I also added a dataset from the open data gallery of Natural Resources Canada,\n\
+    Canadian Airports.\n\
+    A 3D model and the BIM of the Architecture school to show the potential for BIM-GIS integration\n\
+    \n\
+    Let me now show you a few examples from Assignment 3\n\
+    where students experiment with maplibre and datasets of their choice to create custom maps'
   },
   {
     element: (
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/faezaafrin/map/index.html" />
     ),
     title: "Student Project:",
-    notes: ' Interactive Ottawa food recommendations Map'
+    notes: 'This one is an interactive Ottawa food recommendations Map'
   },
   // {
   //   element: (
@@ -355,7 +370,7 @@ In this interactive feature, students can test the different elements and see th
       <iframe className="w-full h-full" src="/arcn5005/terms/f2024/students/saraniadabee/map/index.html" />
     ),
     title: "Student Project:",
-    notes: 'Timelapse of Volcanic Eruptions'
+    notes: 'a timelapse of Volcanic Eruptions'
   },
   {
     element: (
@@ -398,7 +413,7 @@ In this interactive feature, students can test the different elements and see th
     ),
     title: "Course GitHub",
     notes: 'This is the GitHub repository.\n\
-    Where students submit their work using the same tools as software developers use to collaborate in real projects.'
+    Where students submit their work using the same tools software developers use to collaborate in real projects.'
   },
   {
     element: (
@@ -416,7 +431,8 @@ In this interactive feature, students can test the different elements and see th
       </>
     ),
     title: "Forking the Course GitHub Repository",
-    notes: 'Students need to Fork the repository, commit their work, create Pull requests, etc'
+    notes: 'Students need to fork the repository, commit their changes, and create Pull requests to merge their work to the course repository\n\
+    Their work will be accessible by their classmates and future students as a reference'
   },
   // {
   //   element: (
@@ -441,7 +457,13 @@ In this interactive feature, students can test the different elements and see th
         <StudentsList students={classListf2024} />
       </div>,
     title: "Student Projects",
-    notes: 'At the end of the term, the students have created for portfolio type work, with 3d models, maps, bim and finally everything combined'
+    notes: 'At the end of the term, the students have created:\n\
+    - a portfolio type website,\n\
+    - 3d scene,\n\
+    - a custom map,\n\
+    - a bim viewer\n\
+    - and the final assignment is a combination of all new skills\n\
+    I encourage them to use their studio project in the final assignment'
   },
   {
     element:

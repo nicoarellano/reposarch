@@ -5,7 +5,7 @@ const map = (window.map = new maplibregl.Map({
   container: 'map-f2024',
   style: '/map-styles/satelliteHybrid.json',
   center: [-98.74, 56.415], // starting position [lng, lat]
-  zoom: 3, // starting zoom
+  zoom: 3.5, // starting zoom
   antialias: true, // create the gl context with MSAA antialiasing, so custom layers are antialiased
   maxPitch: 70,
   minZoom: 3,
@@ -179,7 +179,7 @@ goTo.onclick = function () {
     this.setAttribute('title', 'Go to site');
     document.getElementById('go-to-icon').setAttribute('d', icons.goToIcon);
     // Fly to Canada
-    flyTo(map, -98.74, 56.415, 3, 0);
+    flyTo(map, -98.74, 56.415, 3.5, 0);
   }
   toggleGoTo = !toggleGoTo;
 };
@@ -226,6 +226,10 @@ airports.forEach((airport) => {
 });
 
 const addLayers = () => {
+  if (!map.hasImage('airport-custom')) {
+    map.addImage('airport-custom', createAirportIcon());
+  }
+
   map.addSource('places', {
     type: 'geojson',
     data: {
@@ -234,16 +238,16 @@ const addLayers = () => {
     },
   });
 
-  // Add a layer showing the places.
+  // Add airport icon symbols.
   map.addLayer({
     id: `places`,
-    type: 'circle',
+    type: 'symbol',
     source: 'places',
-    paint: {
-      'circle-color': 'red',
-      'circle-radius': 6,
-      'circle-stroke-width': 2,
-      'circle-stroke-color': 'yellow',
+    layout: {
+      'icon-image': 'airport-custom',
+      'icon-size': 0.7,
+      'icon-allow-overlap': true,
+      'icon-ignore-placement': true,
     },
   });
 
@@ -288,4 +292,36 @@ function flyTo(map, lng, lat, zoom = 15, pitch = 50) {
     pitch: pitch,
     duration: 2000,
   });
+}
+
+function createAirportIcon() {
+  const size = 48;
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    return { width: size, height: size, data: new Uint8Array(size * size * 4) };
+  }
+
+  // Draw the provided Maki airport path in white on transparent background.
+  const makiAirportPath = new Path2D(
+    'M15,6.8182L15,8.5l-6.5-1l-0.3182,4.7727L11,14v1l-3.5-0.6818L4,15v-1l2.8182-1.7273L6.5,7.5L0,8.5V6.8182L6.5,4.5v-3c0,0,0-1.5,1-1.5s1,1.5,1,1.5v2.8182L15,6.8182z',
+  );
+
+  ctx.save();
+  ctx.translate(6, 6);
+  ctx.scale(2.4, 2.4);
+  ctx.fillStyle = '#2f2f2f';
+  ctx.strokeStyle = '#ffffff';
+  ctx.lineWidth = 0.7;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  ctx.fill(makiAirportPath);
+  ctx.stroke(makiAirportPath);
+  ctx.restore();
+
+  const imageData = ctx.getImageData(0, 0, size, size);
+  return { width: size, height: size, data: imageData.data };
 }

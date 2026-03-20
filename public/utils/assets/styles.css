@@ -220,6 +220,8 @@ nav {
 
 .logo {
   position: absolute;
+  pointer-events: none;
+  z-index: 99;
   bottom: 0;
   height: 2rem;
   background-color: rgba(255, 255, 255, 0.8);
