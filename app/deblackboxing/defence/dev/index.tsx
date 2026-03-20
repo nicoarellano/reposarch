@@ -34,11 +34,11 @@ export const content: Toc = [
     notes: 'Before describing the project, I want to define a digital twin.\n\
 Based on the Digital Twin Institute, a digital twin requires three parts:\n\
 _____________________________________________________________________________________________\n\
-1) A physical thing in real the real world: such as a building or a landscape\n\
+  1) A physical thing in real the real world: such as a building or a landscape\n\
 _____________________________________________________________________________________________\n\
-2) The digital version of that object in virtual space, such as a BIM or GIS\n\
+  2) The digital version of that object in virtual space, such as a BIM or GIS\n\
 _____________________________________________________________________________________________\n\
-3) and Synchronized data connections between the two, using real-time feeds from sensors, cameras, or IoT\n\
+  3) and Synchronized data connections between the two, using real-time feeds from sensors, cameras, or IoT\n\
 \n\
 _____________________________________________________________________________________________\n\
 This concept is straightforward for a jet engine.\n\
@@ -54,38 +54,39 @@ But capturing a system as complex as Canada requires a completely different scal
     </>,
     title: "A National Digital Twin of Canada",
     notes: 'The CDT project aims to capture the real Canada, containing both\n\
-    _____________________________________________________________________________________________\n\
+_____________________________________________________________________________________________\n\
     1) The Physical, such as people, buildings, infrastructure, lakes, rivers, etc\n\
-    _____________________________________________________________________________________________\n\
+_____________________________________________________________________________________________\n\
     2) And the non-physical aspects such as culture, legislation, history, weather, economy, etc.\n\
-    _____________________________________________________________________________________________\n\
-  Physical assets are converted into digital data. By bringing this information together from open and private sources, the platform provides deeper insights, multi-scale simulations, and accurate predictions.',
+_____________________________________________________________________________________________\n\
+Physical assets are converted into digital data.\n\
+By bringing this information together from open and private sources, the platform provides deeper insights, multi-scale simulations, and accurate predictions.',
   },
   {
     element: <CdtWhy />,
     title: "Why do we need an open-source National Digital Twin?",
     notes: '1) Fragmented data silos — lack of a system to integrate diverse data sources.\n\
-    _____________________________________________________________________________________________\n\
-    2) Heavy dependency on proprietary solutions and closed file formats lock organizations and reduce flexibility.\n\
-    _____________________________________________________________________________________________\n\
-    3) Interoperability failures. Poor BIM and GIS integration means information remain disconnected.\n\
-    _____________________________________________________________________________________________\n\
-    4) Technical barriers. Complex systems exclude facility managers and decision-makers from accessing the vital information they need.\n\
-    _____________________________________________________________________________________________\n\
-    The CDT project provides solutions to these challenges.',
+_____________________________________________________________________________________________\n\
+  2) Heavy dependency on proprietary solutions and closed file formats lock organizations and reduce flexibility.\n\
+_____________________________________________________________________________________________\n\
+  3) Interoperability failures. Poor BIM and GIS integration means information remain disconnected.\n\
+_____________________________________________________________________________________________\n\
+  4) Technical barriers. Complex systems exclude facility managers and decision-makers from accessing the vital information they need.\n\
+_____________________________________________________________________________________________\n\
+The CDT project provides solutions to these challenges.',
   },
   {
     element: <CdtWhat />,
     title: "What is CDT?",
     notes: 'What is that solution?\n\
     _____________________________________________________________________________________________\n\
-1) A web-based data visualization platforms with BIM/GIS capabilities\n\
+  1) A web-based data visualization platforms with BIM/GIS capabilities\n\
 _____________________________________________________________________________________________\n\
-2) federated and national scale\n\
+  2) federated and national scale\n\
 _____________________________________________________________________________________________\n\
-3) based on open standards and built with open technology\n\
+  3) based on open standards and built with open technology\n\
 _____________________________________________________________________________________________\n\
-4) open-source, accessible, and community-driven, governed and maintained by a non-for-profit',
+  4) open-source, accessible, and community-driven, governed and maintained by a non-for-profit',
   },
   {
     element: <>
@@ -97,11 +98,11 @@ ________________________________________________________________________________
     </>,
     title: "CDT Platform Architecture",
     notes: 'The two most important aspect of the CDT platform’s architecture, are\n\
-    _____________________________________________________________________________________________\n\
-    1) That it is 100% built with free and open-source technologies.\n\
-    _____________________________________________________________________________________________\n\
-    2) That it is based on a Canadian cloud infrastructure, with datacentres on Canadian soil to ensure data sovereignty.\n\
-    _____________________________________________________________________________________________\n\
+_____________________________________________________________________________________________\n\
+  1) That it is 100% built with free and open-source technologies.\n\
+_____________________________________________________________________________________________\n\
+  2) That it is based on a Canadian cloud infrastructure, with datacentres on Canadian soil to ensure data sovereignty.\n\
+_____________________________________________________________________________________________\n\
 This architecture enables flexible deployment options\n\
 and respect organizational security requirements.\n\
 \n\

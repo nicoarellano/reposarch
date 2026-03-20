@@ -45,11 +45,11 @@ Let me show you a few examples"
     </>,
     title: "Course Resources",
     notes: "The portal includes multiple resources to access and download, such as:\n\
-    - books,\n\
-    - websites,\n\
-    - influential videos and lectures,\n\
-    - free software,\n\
-    - and peer-reviewed articles."
+  - books,\n\
+  - websites,\n\
+  - influential videos and lectures,\n\
+  - free software,\n\
+  - and peer-reviewed articles."
   },
   {
     element: (
@@ -80,16 +80,16 @@ Let me show you a few examples"
     title: "Example of a slide",
     notes:
       'I use the portal as a slideshow.\n\
-      All the slides are created with the same tools.\n\
-      So the students can inspect the source code of the whole course material and see how it works.\n\
-      This is an example of one of the theory slides:\n\
+All the slides are created with the same tools.\n\
+So the students can inspect the source code of the whole course material and see how it works.\n\
+This is an example of one of the theory slides:\n\
       _____________________________________________________________________________________\n\
-      In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\n\
-       GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\n\
-       With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\n\
-       GUIs made computer more accessible for non-programmers, including architects.\n\
-       Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\n\
-       Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.',
+  In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, which can be considered as the first computer drawing program or the first graphical user interface (GUI).\n\
+  GUIs are human-computer interaction devices that allow users to interact with the computer through graphical icons instead of written code.\n\
+  With a GUI the user can click or touch and manipulate the symbols displayed on the screen and thus, directly alter the program.\n\
+  GUIs made computer more accessible for non-programmers, including architects.\n\
+  Since then, GUIs are certainly the preferred vehicle for architects to interact with computers.\n\
+  Robert Woodbury, architect and author of the book Elements of Parametric Design, states that GUIs have profoundly changed the way in which architects interact with computers. He says that “the graphical user interface, which makes computers so easy to use, also makes them hard to use powerfully.',
   },
   {
     element: <Tags />,
@@ -108,12 +108,12 @@ Let me show you a few examples"
     ),
     title: "Code Editor",
     notes: 'More importantly, I have created interactive tools to practice their programming skills.\n\
-    \n\
-    This example is a simple real-time sandbox for them to test the different languages I teach in the course.\n\
-    \n\
-    It is progressive because first I teach them HTML, then CSS and finally JavaScript.\n\
-    \n\
-    At the end they can test the 3 languages together and see in real time how they interact.'
+\n\
+This example is a simple real-time sandbox for them to test the different languages I teach in the course.\n\
+\n\
+It is progressive because first I teach them HTML, then CSS and finally JavaScript.\n\
+\n\
+At the end they can test the 3 languages together and see in real time how they interact.'
   },
 
   {
@@ -173,9 +173,10 @@ This proves the portal is not just a passive presentation, but a hands-on tool."
     ),
     title: "Drawing with Code (vectorial)",
     notes: 'This leads to drawing with code.\n\
-    Using P5.js, we generate vector graphics through scripts, showing that architectural marks can be defined as repeatable functions rather than static traces.\n\
-    Vectorial drawing is an important concept since it is at the base of CAD and parametric modelling\n\
-    This tools allow students to understand the basic functions of geometry creation and dynamically interact with them.'
+Using P5.js, we generate vector graphics through scripts,\n\
+showing that architectural marks can be defined as repeatable functions rather than static traces.\n\
+Vectorial drawing is an important concept since it is at the base of CAD and parametric modelling\n\
+This tools allow students to understand the basic functions of geometry creation and dynamically interact with them.'
   },
   {
     element: (
@@ -203,9 +204,9 @@ The first example is a CAD viewer that works with the open format DXF.'
     title: "Interactive Cartesian Plane",
     notes:
       "We then move to the 3D space with an interactive Cartesian Plane built with Three.js.\n\
-      This tool allows students to manipulate XYZ coordinates and see the results in real-time.\n\
-      This is a much more dynamic and graphic way of understanding the basis of tri-dimensional digital world.\n\
-      Which is harder to grasp with a static presentation",
+This tool allows students to manipulate XYZ coordinates and see the results in real-time.\n\
+This is a much more dynamic and graphic way of understanding the basis of tri-dimensional digital world.\n\
+Which is harder to grasp with a static presentation",
   },
   {
     element: (
@@ -229,8 +230,8 @@ In this interactive editor, students can test the different elements and see the
     ),
     title: "Custom 3D scene (three.js)",
     notes: 'We them move to a more custom 3D viewer built with Three.js,\n\
-    this allows students to create their own scenes from scratch and to load and manipulate 3D models in real-time,\n\
-    demonstrating the core principles of 3D representation and interaction.'
+this allows students to create their own scenes from scratch and to load and manipulate 3D models in real-time,\n\
+demonstrating the core principles of 3D representation and interaction.'
   },
   {
     element: (
@@ -243,9 +244,9 @@ In this interactive editor, students can test the different elements and see the
     title: "Students photogrammetry models for assignment 2",
     notes:
       'This is an example of the students’ work.\n\
-      For assignment 2, I asked them to create photogrammetric models of themselves and add them to Three.js.\n\
-      This composition shows some of the models from Fall 2024\n\
-      Now let me show you the result of some of those assignments where students embedded their avatars in 3D scenes',
+For assignment 2, I asked them to create photogrammetric models of themselves and add them to Three.js.\n\
+This composition shows some of the models from Fall 2024\n\
+Now let me show you the result of some of those assignments where students embedded their avatars in 3D scenes',
   },
   {
     element: (
@@ -272,8 +273,8 @@ In this interactive editor, students can test the different elements and see the
     ),
     title: "BIM viewer (ifc)",
     notes: 'I taught students a library called Open BIM components\n\
-    which allows them to create custom BIM tools.\n\
-    This is an example of a simple BIM viewer to load IFC models and access the metadata.'
+which allows them to create custom BIM tools.\n\
+This is an example of a simple BIM viewer to load IFC models and access the metadata.'
   },
   {
     element: (
@@ -289,8 +290,8 @@ In this interactive editor, students can test the different elements and see the
     ),
     title: "GIS viewer (Cesium JS)",
     notes: 'We then move to the urban scale.\n\
-    I show students the most popular GIS web engines\n\
-    This example uses Cesium JS...'
+I show students the most popular GIS web engines\n\
+This example uses Cesium JS...'
   },
   {
     element: (
@@ -336,13 +337,13 @@ In this interactive editor, students can test the different elements and see the
     ),
     title: "GIS viewer (Maplibre GL JS)",
     notes: 'Finally, Maplibre, an open-source alternative to Mapbox,\n\
-    \n\
-    In this example I also added a dataset from the open data gallery of Natural Resources Canada,\n\
-    Canadian Airports.\n\
-    A 3D model and the BIM of the Architecture school to show the potential for BIM-GIS integration\n\
-    \n\
-    Let me now show you a few examples from Assignment 3\n\
-    where students experiment with maplibre and datasets of their choice to create custom maps'
+\n\
+In this example I also added a dataset from the open data gallery of Natural Resources Canada,\n\
+Canadian Airports.\n\
+A 3D model and the BIM of the Architecture school to show the potential for BIM-GIS integration\n\
+\n\
+Let me now show you a few examples from Assignment 3\n\
+where students experiment with maplibre and datasets of their choice to create custom maps'
   },
   {
     element: (
@@ -413,7 +414,7 @@ In this interactive editor, students can test the different elements and see the
     ),
     title: "Course GitHub",
     notes: 'This is the GitHub repository.\n\
-    Where students submit their work using the same tools software developers use to collaborate in real projects.'
+Where students submit their work using the same tools software developers use to collaborate in real projects.'
   },
   {
     element: (
@@ -432,7 +433,7 @@ In this interactive editor, students can test the different elements and see the
     ),
     title: "Forking the Course GitHub Repository",
     notes: 'Students need to fork the repository, commit their changes, and create Pull requests to merge their work to the course repository\n\
-    Their work will be accessible by their classmates and future students as a reference'
+Their work will be accessible by their classmates and future students as a reference'
   },
   // {
   //   element: (
@@ -458,12 +459,12 @@ In this interactive editor, students can test the different elements and see the
       </div>,
     title: "Student Projects",
     notes: 'At the end of the term, the students have created:\n\
-    - a portfolio type website,\n\
-    - 3d scene,\n\
-    - a custom map,\n\
-    - a bim viewer\n\
-    - and the final assignment is a combination of all new skills\n\
-    I encourage them to use their studio project in the final assignment'
+  - a portfolio type website,\n\
+  - 3d scene,\n\
+  - a custom map,\n\
+  - a bim viewer\n\
+  - and the final assignment is a combination of all new skills\n\
+I encourage them to use their studio project in the final assignment'
   },
   {
     element:
@@ -479,7 +480,7 @@ In this interactive editor, students can test the different elements and see the
       </div>,
     title: "Return to Epistemic Objects",
     notes: 'That is a quick peek into the course,\n\
-    Let’s now go back to look at the second epistemic object'
+Let’s now go back to look at the second epistemic object'
   }
 
 ];
