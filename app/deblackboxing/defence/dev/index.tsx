@@ -127,7 +127,7 @@ ________________________________________________________________________________
 Zooming out to Ottawa reveals our open data federation capabilities.\n\
 The platform automatically retrieves open government data from municipal, provincial, and federal sources.Here we’re adding Ottawa neighbourhoods and transit stops, as well as national airport locations.This integration happens through standardized APIs—no additional data manipulation required.\n\
 We currently federate data from over 60 sources, including Natural Resources Canada, Statistics Canada, and dozens of municipal open data portals.This makes previously inaccessible datasets easy to layer and visualize alongside your building information.\n\
-The dynamic visualization controls allow users to adjust colour scales and graphic quality for enhanced analysis.This transforms fragmented government data into actionable intelligence for asset managers, supporting data - driven decision - making for all users.\n\
+The dynamic visualization controls allow users to adjust colour scales and graphic quality for enhanced analysis.This transforms fragmented government data into actionable intelligence for asset managers, supporting data-driven decision-making for all users.\n\
 Returning to the Carleton Campus, let me now demonstrate our BIM viewer, an example of openBIM standards in action. Opening this IFC model in our viewer showcases native browser-based IFC processing.\n\
 _____________________________________________________________________________________________\n\
 The complete IFC tree structure is preserved exactly as authored, maintaining the entire IFC hierarchy.\n\
@@ -170,7 +170,9 @@ The viewer graphically highlights which model elements conform or do not conform
     notes: 'After more than 8 years at CIMS working on large scale BIM models and GIS integration,\n\
 I learned the hard way that the proprietary software we were using were not giving us the flexibility and control that we needed.\n\
 \n\
-Open-source toolmaking was the only solution to achieve the level of customization and scalability required.'
+Open-source toolmaking was the only solution to achieve the level of customization and scalability required.\n\
+\n\
+This concludes the demonstration of Canada’s Digital Twin. I will now conclude the defence.'
   },
   {
     element: (

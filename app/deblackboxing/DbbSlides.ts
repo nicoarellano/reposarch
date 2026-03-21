@@ -9,7 +9,7 @@ export const dbbSlides: Slides = [
   - Professor Irani\n\
   - Professor Keena\n\
   - Professor Bashandy\n\
-  - Federica, Azam and Steve\n\
+  - Proffessors Federica, Azam and Steve\n\
 Thank you so much for being here today.\n\
 I am Nicolás Arellano, and it is an honour to present my dissertation titled:\n\
 Deblackboxing the Digital Toolbox: \n\

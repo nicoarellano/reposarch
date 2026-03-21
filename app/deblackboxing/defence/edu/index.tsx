@@ -14,6 +14,7 @@ import Tags from '@/app/arcn5005/(lectures)/week05/Tags';
 import Three from '@/components/Common/Three';
 import EpistemicObjectIcon from '@mui/icons-material/HomeRepairServiceRounded';
 import CodeEditor from '@/components/Common/CodeEditor';
+import AutoRedirect from '../dev/AutoRedirect';
 
 const BimViewer = dynamic(() => import('@/components/Common/BimViewer'), { ssr: false });
 
@@ -229,7 +230,7 @@ In this interactive editor, students can test the different elements and see the
       </>
     ),
     title: "Custom 3D scene (three.js)",
-    notes: 'We them move to a more custom 3D viewer built with Three.js,\n\
+    notes: 'We then move to a more custom 3D viewer built with Three.js,\n\
 this allows students to create their own scenes from scratch and to load and manipulate 3D models in real-time,\n\
 demonstrating the core principles of 3D representation and interaction.'
   },
@@ -456,6 +457,7 @@ Their work will be accessible by their classmates and future students as a refer
     element:
       <div className="w-full flex flex-col items-center justify-center grow gap-8 mdx">
         <StudentsList students={classListf2024} />
+        <AutoRedirect href={'/deblackboxing/epistemic-object/?animation=false'} delay={0} automatic={false} />
       </div>,
     title: "Student Projects",
     notes: 'At the end of the term, the students have created:\n\
@@ -464,7 +466,10 @@ Their work will be accessible by their classmates and future students as a refer
   - a custom map,\n\
   - a bim viewer\n\
   - and the final assignment is a combination of all new skills\n\
-I encourage them to use their studio project in the final assignment'
+I encourage them to use their studio project in the final assignment\n\
+_____________________________________________________________________________________\n\
+  That was a glimpse into the course platform,\n\
+  I will now transition back to the second epistemic object'
   },
   {
     element:
@@ -476,11 +481,12 @@ I encourage them to use their studio project in the final assignment'
           aria-label="Open Epistemic Object page"
         >
           <EpistemicObjectIcon style={{ fontSize: '20rem' }} />
+          <AutoRedirect href={'/deblackboxing/epistemic-object/?animation=false'} delay={0} />
         </a>
       </div>,
     title: "Return to Epistemic Objects",
-    notes: 'That is a quick peek into the course,\n\
-Let’s now go back to look at the second epistemic object'
+    notes: 'That was a glimpse into the course platform,\n\
+  I will now transition back to the second epistemic object'
   }
 
 ];
