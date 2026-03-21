@@ -187,16 +187,20 @@ goTo.onclick = function () {
 let airporsFeatureCollection = [];
 
 airports.forEach((airport) => {
-  const image =
-    airport.image === ''
-      ? 'https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg'
-      : airport.image;
+  // Replace spaces with underscores and add .jpg to match Wikipedia's format
+  const formattedName = `${airport.name.replace(/\s+/g, '_')}_airport.jpg`;
+
+  // Try the specific airport name first
+  const nameFallbackUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${formattedName}?width=800`;
+
+  // Assign it if the specific airport image is empty
+  const imageUrl = airport.image === '' ? nameFallbackUrl : airport.image;
 
   let airportFeature = {
     code: `${airport.code}`,
     type: 'Feature',
     properties: {
-      description: `<article class="airport-card"><header class="airport-card-header">Airport</header><div class="airport-card-body"><h3 class="airport-card-title">${airport.name}</h3><p class="airport-card-meta"><strong>${airport.code}</strong> | ${airport.city}, ${airport.province}</p><img class="airport-card-image" src="${image}" alt="${airport.name} (${airport.code})" /></div></article>`,
+      description: `<article class="airport-card"><header class="airport-card-header">Airport</header><div class="airport-card-body"><h3 class="airport-card-title">${airport.name}</h3><p class="airport-card-meta"><strong>${airport.code}</strong> | ${airport.city}, ${airport.province}</p><img class="airport-card-image" src="${imageUrl}" alt="${airport.name} (${airport.code})" /></div></article>`,
     },
     geometry: {
       type: 'Point',

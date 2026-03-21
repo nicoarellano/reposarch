@@ -1,6 +1,7 @@
 import { Toc } from '@/app/types/types';
 
-import Image from '@/components/Common/SlideImage';
+import SlideImage from '@/components/Common/SlideImage';
+import Image from 'next/image';
 import CartesianPlane from '@/components/CartesianPlane';
 import TOC from '@/app/arcn5005/(main)/toc/page';
 import dynamic from 'next/dynamic';
@@ -72,7 +73,7 @@ Let me show you a few examples"
   },
   {
     element: (
-      <Image
+      <SlideImage
         src="/images/computer-graphics/sketchpad.png"
         alt="Ivan Sutherland inventor of Sketchpad, the first GUI"
         caption={'a) In 1963, Ivan Sutherland at MIT developed a program called ‘Sketchpad’, the first GUI.  b) Sketchpad interface. source: Sdegno, Alberto. 2017. "For an Archeology of the Digital Iconography" Proceedings 1, no. 9: 1093.'}
@@ -146,7 +147,7 @@ This proves the portal is not just a passive presentation, but a hands-on tool."
         <h4 className='w-full text-left' >Drawing with Pixels (raster):</h4>
         <br />
         <div className='relative inline-block w-full h-full bg-[#675563]'>
-          <Image
+          <SlideImage
             src="/images/computer-graphics/pixel-art-kk.png"
             alt="Pixel art"
             className='mt-8'
@@ -236,7 +237,7 @@ demonstrating the core principles of 3D representation and interaction.'
   },
   {
     element: (
-      <Image
+      <SlideImage
         src="/images/three/f2024-render.png"
         alt="students photogrammetry models"
         caption={'Composition of some of the student’s 3D models created for the photogrammetry exercise, class Fall 2024.'}
@@ -403,7 +404,7 @@ where students experiment with maplibre and datasets of their choice to create c
         <br />
         <h3>Reposarch = Open Source Architectural Representation</h3>
         <br />
-        <Image
+        <SlideImage
           src="/images/computer-graphics/course-GitHub.png"
           alt="GitHub"
           href="https://github.com/nicoarellano/reposarch"
@@ -422,7 +423,7 @@ Where students submit their work using the same tools software developers use to
       <>
         <h3>Fork the course GitHub repository</h3>
         <br />
-        <Image
+        <SlideImage
           src="/images/computer-graphics/forking.gif"
           alt="Fork Reposarch"
           href="https://github.com/nicoarellano/reposarch"
@@ -474,13 +475,23 @@ ________________________________________________________________________________
   {
     element:
       <div className='flex flex-col items-center justify-center h-full gap-2'>
-        <h4 className='w-full text-center'>Return to Epistemic Objects:</h4>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <a
           href={'/deblackboxing/epistemic-object/?animation=false'}
           className="cursor-pointer"
           aria-label="Open Epistemic Object page"
         >
-          <EpistemicObjectIcon style={{ fontSize: '20rem' }} />
+          <Image
+            priority
+            src={'/images/openBox.png'}
+            height={300}
+            width={300}
+            alt="Epistemic Object"
+          />
           <AutoRedirect href={'/deblackboxing/epistemic-object/?animation=false'} delay={0} />
         </a>
       </div>,

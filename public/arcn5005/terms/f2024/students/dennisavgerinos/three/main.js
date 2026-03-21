@@ -44,7 +44,7 @@ const gltfLoader = new THREE.GLTFLoader();
 let mesh;
 
 gltfLoader.load(
-  'DennisW.glb',
+  '/models/dennisavgerinos/DennisW.glb',
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 4;
@@ -60,7 +60,7 @@ gltfLoader.load(
 );
 
 gltfLoader.load(
-  'AnimalsW.glb',
+  '/models/dennisavgerinos/AnimalsW.glb',
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 3;
@@ -76,7 +76,7 @@ gltfLoader.load(
 );
 
 gltfLoader.load(
-  'scale.glb',
+  '/models/dennisavgerinos/scale.glb',
   function (gltf) {
     mesh = gltf.scene;
     mesh.scale.x = 2;
