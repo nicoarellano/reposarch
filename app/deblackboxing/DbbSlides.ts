@@ -89,26 +89,31 @@ When architects are passive users of 'black-boxed' software.\n\
 This hidden logic limits their ability to design and communicate design.\n\
 This research demonstrates a different path:\n\
 ______________________________________________________________________________________\n\
-  1) Software as a space for creative intervention, not a boundary.\n\
+  1) Software can be a space for creative intervention, not a boundary.\n\
 ______________________________________________________________________________________\n\
-  2) Programming can be taught as architectural literacy, turning architects into toolmakers.\n\
+  2) Software development can be taught as architectural literacy, turning architects into toolmakers.\n\
 ______________________________________________________________________________________\n\
-  3) Open-source toolmaking can solve problems proprietary systems cannot,\n\
-(Canada’s Digital Twin is an example of that)\n\
+  3) Open-source toolmaking can solve problems proprietary systems cannot.\n\
 ______________________________________________________________________________________\n\
-Architects can and should look inside user interface to understand and actively rewrite the biases of their tools.\n\
-My call of action is that:\n\
+The call to action I propose is that:\n\
 ______________________________________________________________________________________\n\
-  1) Education should focus on training authors, not just operators.\n\
+  1) Education should train authors, not just operators.\n\
 ______________________________________________________________________________________\n\
-  2) Open-source collaboration keeps tools aligned with professional values, not only commercial interests.\n\
+  2) Open-source development keeps tools aligned with professional values, not only commercial interests.\n\
 ______________________________________________________________________________________\n\
 The question is not if architects will use software, but if they will use it to define their own direction.\n\
-For the momentum I am witnessing in the last few years,\n\
-I truly believe the profession can move from dependency to true sovereignty.\n\
 \n\
-Thank you so much. I look forward to your questions.\n\
+For the momentum I have witnessed in the last few years,\n\
+I truly believe the profession can move from dependency to true sovereignty.\n\
+"
+  },
+  {
+    id: "thanks",
+    title: "",
+    url: "/deblackboxing/thanks",
+    notes: "Thank you so much. I look forward to your questions.\n\
+\n\
 ______________________________________________________________________________________\n\
 (If demos of the USE CASES are needed, go to https://reposarch.vercel.app/arcn5005/defence-dev/11)"
-  },
+  }
 ];
