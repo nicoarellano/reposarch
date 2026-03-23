@@ -437,23 +437,6 @@ Where students submit their work using the same tools software developers use to
     notes: 'Students need to fork the repository, commit their changes, and create Pull requests to merge their work to the course repository\n\
 Their work will be accessible by their classmates and future students as a reference'
   },
-  // {
-  //   element: (
-  //     <>
-  //       <h3>Fork the course GitHub repository</h3>
-  //       <br />
-  //       <Image
-  //         src="/images/defence/gitgraph.png"
-  //         alt="Git Graph"
-  //       />
-  //     </>
-  //   ),
-  //   title: "Git Graph",
-  //   notes: 'This is an example of a submission day, all the different colour lines are students merging their work.\n\
-  //   All students can see each other work at all time and learn from each other.\n\
-  //   Collaboration is encourage.\n\
-  //   I even offer extra points to students that help their classmates to solve problems.'
-  // },
   {
     element:
       <div className="w-full flex flex-col items-center justify-center grow gap-8 mdx">
@@ -467,6 +450,8 @@ Their work will be accessible by their classmates and future students as a refer
   - a custom map,\n\
   - a bim viewer\n\
   - and the final assignment is a combination of all new skills\n\
+Here, you can see one example\n\
+\n\
 I encourage them to use their studio project in the final assignment\n\
 _____________________________________________________________________________________\n\
   That was a glimpse into the course platform,\n\

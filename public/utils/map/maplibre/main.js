@@ -187,14 +187,10 @@ goTo.onclick = function () {
 let airporsFeatureCollection = [];
 
 airports.forEach((airport) => {
-  // Replace spaces with underscores and add .jpg to match Wikipedia's format
-  const formattedName = `${airport.name.replace(/\s+/g, '_')}_airport.jpg`;
-
-  // Try the specific airport name first
-  const nameFallbackUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${formattedName}?width=800`;
-
-  // Assign it if the specific airport image is empty
-  const imageUrl = airport.image === '' ? nameFallbackUrl : airport.image;
+  const imageUrl =
+    airport.image === ''
+      ? 'https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_777-300_Taking_off_from_JFK.jpg'
+      : airport.image;
 
   let airportFeature = {
     code: `${airport.code}`,

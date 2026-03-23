@@ -68,8 +68,10 @@ transferring design control from the architect to the software vendors."
     url: "/deblackboxing/epistemic-object",
     notes: "For this dissertation, I didn't want to stay in the theory only.\n\
 So in order to address these two obstacles, my research is grounded in two epistemic objects.\n\
+\n\
 In this case, an epistemic object is the blend between theory and practice.\n\
 Exploring the research question through diverse media.\n\
+\n\
 Or as Federica defines it in her book, an entwined process of thinking, writing, and making.\n\
 In this dissertation, the epistemic objects are:\n\
 \n\

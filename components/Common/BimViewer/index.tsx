@@ -149,9 +149,7 @@ export default function BimViewer() {
             }
 
             // Plain dblclick: fly to predefined destination
-            const position = [-15.065493696794935, 6.9118486040943345, 31.05191078632189];
-            const target = [-4.762749667264913, 5.5235950700449585, 14.132624895649673];
-            flyTo(position, target, 1000);
+            goToRoom307();
         };
 
         viewport.addEventListener('dblclick', onDblClick as EventListener);
@@ -195,6 +193,16 @@ export default function BimViewer() {
             return fragments.core.load(buffer, { modelId });
         };
 
+        const goToRoom307 = () => {
+            const position = [-15.065493696794935, 6.9118486040943345, 31.05191078632189];
+            const target = [-4.762749667264913, 5.5235950700449585, 14.132624895649673];
+            flyTo(position, target, 1000);
+        };
+
+        const handleGoTo307 = () => {
+            goToRoom307();
+        };
+
 
         //  Spatial Tree 
         const [spatialTree, updateSpatialTree] = BUIC.tables.spatialTree({
@@ -235,23 +243,32 @@ export default function BimViewer() {
             const loadExampleBtn = BUI.html`
       <bim-button label="Load Example (Arch building)" @click=${loadFragment}></bim-button>
     `;
+            const goTo307 = BUI.html`
+      <bim-button label="Go to room 307" @click=${handleGoTo307}></bim-button>
+    `;
 
             return BUI.html`
         <bim-panel label="Properties" style="overflow: hidden; display: flex; flex-direction: column;">
           <bim-panel-section label="Element Data" style="overflow-y: auto; flex: 1; min-height: 0;">
             <div style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; box-sizing: border-box;">
               ${loadFragBtn}
-              ${loadExampleBtn}
-              <br/>
-              <bim-text-input
-                    @input=${onTextInput}
-                    placeholder="Search tree & properties"
-                    debounce="250">
-                  </bim-text-input>
-                  <p>Properties:</p>
-                  ${propertiesTable}
-                  <p>Spatial Tree:</p>
-                  ${spatialTree}                    
+              <div class="flex flex-row gap-2">
+                  ${loadExampleBtn}
+                  ${goTo307}
+              </div>
+                        </div>
+        </bim-panel-section>
+        <bim-panel-section label="Properties" style="flex: 1; min-height: 0;">
+                     <div style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; box-sizing: border-box;">
+           <bim-text-input
+                 @input=${onTextInput}
+                 placeholder="Search tree & properties"
+                 debounce="250">
+               </bim-text-input>
+                                    ${propertiesTable}
+                     </div>
+        </bim-panel-section>
+        </bim-panel>                
       `;
         });
 
