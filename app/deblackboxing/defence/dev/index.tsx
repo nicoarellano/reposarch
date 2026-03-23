@@ -148,7 +148,15 @@ Each BCF Topic is connected to a precise Viewpoint within the IFC model, moving 
 These topics reveal: identification, responsible party assignments, proposed resolutions, and clearly defined status progression. This vendor-neutral standard ensures that collaboration data remains interoperable and accessible across all authoring tools and platforms.\n\
 _____________________________________________________________________________________________\n\
 The platform also supports Information Delivery Specification (or IDS) integration—another fundamental openBIM standard. By importing IDS files, users can check IFC models against explicit, machine-readable Exchange Requirements that define what information must be delivered, and in what form.\n\
-The viewer graphically highlights which model elements conform or do not conform to the specified requirements, making compliance checking both transparent and actionable during coordination.'
+The viewer graphically highlights which model elements conform or do not conform to the specified requirements, making compliance checking both transparent and actionable during coordination.\n\
+_____________________________________________________________________________________________\n\
+_____________________________________________________________________________________________\n\
+After more than 8 years at CIMS working on large scale BIM models and GIS integration,\n\
+I learned the hard way that the proprietary software we were using were not giving us the flexibility and control that we needed.\n\
+\n\
+Open-source toolmaking was the only solution to achieve the level of customization and scalability required.\n\
+_____________________________________________________________________________________________\n\
+This concludes the demonstration of Canada’s Digital Twin.'
   },
   {
     element: (
@@ -172,7 +180,8 @@ I learned the hard way that the proprietary software we were using were not givi
 \n\
 Open-source toolmaking was the only solution to achieve the level of customization and scalability required.\n\
 \n\
-This concludes the demonstration of Canada’s Digital Twin. I will now conclude the defence.'
+_____________________________________________________________________________________________\n\
+This concludes the demonstration of Canada’s Digital Twin.'
   },
   {
     element: (

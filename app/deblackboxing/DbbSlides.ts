@@ -53,7 +53,7 @@ ________________________________________________________________________________
     id: "obstacles",
     title: "Obstacles (Chapter 1)",
     url: "/deblackboxing/obstacles",
-    notes: "Let me know describe to you the problem that I have identified in my research\n\
+    notes: "Let me know describe to you the problem that I identify in Chapter 1\n\
 Which is that the architecture profession faces a crisis of agency.\n\
 This crises of agency is presented through two interrelated phenomena:\n\
 ______________________________________________________________________________________\n\
@@ -91,7 +91,9 @@ ________________________________________________________________________________
     id: "conclusion",
     title: "Conclusion",
     url: "/deblackboxing/conclusion",
-    notes: "To conclude, this dissertation argues that toolmaking is an essential skill for architects.\n\
+    notes: "To conclude,\n\
+    \n\
+    this dissertation argues that toolmaking is an essential skill for architects.\n\
 It is key to securing agency.\n\
 When architects are passive users of 'black-boxed' software.\n\
 This hidden logic limits their ability to design and communicate design.\n\
