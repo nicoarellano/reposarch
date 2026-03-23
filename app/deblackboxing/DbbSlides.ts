@@ -20,11 +20,16 @@ Open-Source Toolmaking for Architects Beyond Proprietary Software and Closed Fil
     id: "abstract",
     title: "Abstract",
     url: "/deblackboxing/abstract",
-    notes: "As you may recall, my dissertation examines 'deblackboxing' as an architect-led practice of toolmaking.\n\
-Specifically, it explores expanding the architect's disciplinary scope from operating software to authorship.\n\
-To reclaim agency, this research proposes Deblackboxing:\n\
-which is the critical act of making digital tools inspectable and modifiable.\n\
-My research argues that the way to achieve this is through open-source toolmaking."
+    notes: "As you may recall, my dissertation examines\n\
+  1)'deblackboxing' as an architect-led practice of toolmaking.\n\
+    \n\
+  2) Specifically, it explores the expansion of the architect’s disciplinary scope from operating software to its authorship.\n\
+\n\
+  3) To reclaim agency, this research proposes\n\
+\n\
+  4) Deblackboxing, which is the critical act of making digital tools inspectable and modifiable.\n\
+\n\
+  5) My research argues that the way to achieve this is through open-source toolmaking."
   },
   {
     id: "chapters",
@@ -46,7 +51,7 @@ ________________________________________________________________________________
   },
   {
     id: "obstacles",
-    title: "Obstacles: black boxes and digital oblivion (Chapter 1)",
+    title: "Obstacles (Chapter 1)",
     url: "/deblackboxing/obstacles",
     notes: "Let me know describe to you the problem that I have identified in my research\n\
 Which is that the architecture profession faces a crisis of agency.\n\

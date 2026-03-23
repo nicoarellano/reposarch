@@ -8,7 +8,7 @@ import EastIcon from "@mui/icons-material/EastRounded";
 
 function ObstaclesContent() {
   const blackBox = "/images/blackBox.png";
-  const proprietary = "/images/defence/proprietaryBoxes.png";
+  const obstacles = "/images/defence/obstacles.png";
   const interfaces = "/images/defence/interaction.png";
   const searchParams = useSearchParams();
   const animateParam = searchParams.get("animate") ?? searchParams.get("animation");
@@ -84,8 +84,8 @@ function ObstaclesContent() {
           <Image
             priority
             src={interfaces}
-            height={300}
-            width={300}
+            height={400}
+            width={400}
             alt="Interfaces — the medium is the message"
           />
         </div>
@@ -94,9 +94,9 @@ function ObstaclesContent() {
         </div>
         <Image
           priority
-          src={blackBox}
-          height={300}
-          width={300}
+          src={obstacles}
+          height={600}
+          width={600}
           alt="Black box"
         />
         <div style={rightStyle}>
@@ -105,7 +105,7 @@ function ObstaclesContent() {
         <div style={rightStyle}>
           <Image
             priority
-            src={proprietary}
+            src={blackBox}
             height={300}
             width={300}
             alt="Proprietary software and closed file formats"
