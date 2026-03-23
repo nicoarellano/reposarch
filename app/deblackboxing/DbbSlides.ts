@@ -13,7 +13,7 @@ export const dbbSlides: Slides = [
 Thank you so much for being here today.\n\
 \n\
 I am Nicolás Arellano, and it is an honour to present my dissertation titled:\n\
-Deblackboxing the Digital Toolbox: \n\
+Deblackboxing the Architect's Toolbox: \n\
 Open-Source Toolmaking for Architects Beyond Proprietary Software and Closed File Formats."
   },
   {

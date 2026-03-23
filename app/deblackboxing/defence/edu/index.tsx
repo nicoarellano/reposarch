@@ -35,7 +35,7 @@ This choice proves a core principle of my research: architects benefit by design
 Here, the medium is a core element of the research message.\n\
 \n\
 The portal is a web-based, open-source platform that serves as the course infrastructure.\n\
-It holds the calendar, lectures, and resources.\n\
+It holds the calendar, announcements, lectures, and important links.\n\
 More importantly, it acts as a 'living lab' co-developed with the students—a space to test the exact tools taught in the class.\n\
 \n\
 Let me show you a few examples"
@@ -61,7 +61,8 @@ Let me show you a few examples"
         <PdfViewer src="/resources/Raymond, Erik - The Cathedral and the Bazaar Musings on Linux and Open Source by an Accidental Revolutionary (1999).pdf" />
       </>
     ),
-    notes: "Students can access ebooks and resources directly through the portal."
+    notes: "Students can access ebooks and resources directly through the portal.\n\
+    For example, Raymond’s seminal book"
   },
   {
     element: <>
@@ -176,7 +177,9 @@ This proves the portal is not just a passive presentation, but a hands-on tool."
     title: "Drawing with Code (vectorial)",
     notes: 'This leads to drawing with code.\n\
 Using P5.js, we generate vector graphics through scripts,\n\
+\n\
 showing that architectural marks can be defined as repeatable functions rather than static traces.\n\
+\n\
 Vectorial drawing is an important concept since it is at the base of CAD and parametric modelling\n\
 This tools allow students to understand the basic functions of geometry creation and dynamically interact with them.'
   },
@@ -262,7 +265,7 @@ Now let me show you the result of some of those assignments where students embed
       <iframe className="w-full h-full overflow-hidden" src="/arcn5005/terms/f2024/students/maisjoudeh/three/index.html" />
     ),
     title: "Student Project: Interactive Cafeteria Design",
-    notes: 'Or this student that designed a cafeteria where she used her photogrametric model to embed herselve in the design'
+    notes: 'Or this student that designed a cafeteria where she used her photogrammetric model to embed herself in the design'
   },
   {
     element: (
@@ -382,21 +385,6 @@ where students experiment with maplibre and datasets of their choice to create c
     title: "Student Project:",
     notes: 'and the venues where the student performed at in Toronto'
   },
-  // {
-  //   element: <>
-  //     <h4 className='mb-8' >Evaluations:</h4>
-  //     <CustomizedTables data={Arcn5005F2024Evaluations} />
-  //   </>,
-  //   title: "Course Evaluations",
-  //   notes: 'These are the evaluations:\n\
-  //   _____________________________________________________________________________________\n\
-  //   - There are also 2 quizzes where I cover the theory of the course\n\
-  //   - Assignment 1 is a portfolio type work using HTML, CSS and JavaScript,\n\
-  //   - Assignment 2 a 3d scene,\n\
-  //   - Assignment 3 is a map,\n\
-  //   - The BIM assignment is a bonus track for students that want to go deeper into the topic and get extra points.\n\
-  //   - and the Final Assignment is everything combined.'
-  // },
   {
     element: (
       <>
