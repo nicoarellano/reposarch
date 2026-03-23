@@ -9,8 +9,9 @@ export const dbbSlides: Slides = [
   - Professor Irani\n\
   - Professor Keena\n\
   - Professor Bashandy\n\
-  - Proffessors Federica, Azam and Steve\n\
+  - Professors Federica, Azam and Steve\n\
 Thank you so much for being here today.\n\
+\n\
 I am Nicolás Arellano, and it is an honour to present my dissertation titled:\n\
 Deblackboxing the Digital Toolbox: \n\
 Open-Source Toolmaking for Architects Beyond Proprietary Software and Closed File Formats."
@@ -32,14 +33,14 @@ My research argues that the way to achieve this is through open-source toolmakin
     notes: "The dissertation is organized into three main chapters.\n\
 ______________________________________________________________________________________\n\
       - Chapter 1: Deblackboxing the Digital Toolbox for Architects,\n\
-      establishes the problem. The need for a reflection on the relationship between architects and their representation tools.\n\
+      → establishes the problem. The need for a reflection on the relationship between architects and their representation tools.\n\
       and presents alternatives to the existing tools we have and use.\n\
 ______________________________________________________________________________________\n\
       - Chapter 2: Teaching Open-Source Toolmaking for Architects,\n\
-      details the educational framework I have developed and taught at Carleton University.\n\
+      → details the educational framework I have developed and taught at Carleton University.\n\
 ______________________________________________________________________________________\n\
       - Chapter 3: Developing a BIM/GIS Open-Source Tool,\n\
-      documents the creation and deployment of an open-source BIM/GIS platform, called Canada's Digital Twin.\n\
+      → documents the creation and deployment the platform Canada's Digital Twin.\n\
 ______________________________________________________________________________________\n\
       - And the conclusion is an optimistic invitation to a more open relationship with digital tools, one in which architects are active shapers of these instruments."
   },
@@ -52,7 +53,7 @@ Which is that the architecture profession faces a crisis of agency.\n\
 This crises of agency is presented through two interrelated phenomena:\n\
 ______________________________________________________________________________________\n\
   1) Digital Oblivion, which I define as the passive acceptance of these tools in our offices and schools.\n\
-  We ofter prioritize instruction and training on mastering interfaces\n\
+  We often prioritize instruction and training on mastering interfaces\n\
   instead of teaching how to understand the underlying system behind them.\n\
 ______________________________________________________________________________________\n\
   2) The second obstacle is the rooted dependency on Black Boxes,\n\
