@@ -12,13 +12,37 @@ export default function Abstract({ searchParams }: Props) {
   const { mode } = searchParams;
   const [animationStep, setAnimationStep] = useState(0);
   const maxAnimationStep = 6;
+  const isSequenceActive = animationStep < maxAnimationStep;
 
   const goToNextStep = () => {
     setAnimationStep((prev) => (prev < maxAnimationStep ? prev + 1 : prev));
   };
 
+  const goToPreviousStep = () => {
+    setAnimationStep((prev) => (prev > 0 ? prev - 1 : prev));
+  };
+
+  useEffect(() => {
+    // Auto-advance from the initial highlighted state to the first focused highlight.
+    if (animationStep !== 1) return;
+    const timeoutId = window.setTimeout(() => {
+      setAnimationStep(2);
+    }, 1000);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [animationStep]);
+
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft" && animationStep > 0) {
+        e.preventDefault();
+        e.stopPropagation();
+        goToPreviousStep();
+        return;
+      }
+
+      if (!isSequenceActive) return;
+
       if (e.key === "ArrowRight" || e.key === " " || e.key === "Space" || e.key === "Spacebar") {
         e.preventDefault();
         e.stopPropagation();
@@ -27,7 +51,7 @@ export default function Abstract({ searchParams }: Props) {
     };
     window.addEventListener("keydown", handleKey, true);
     return () => window.removeEventListener("keydown", handleKey, true);
-  }, []);
+  }, [animationStep, isSequenceActive]);
 
   const abstract =
     <p className="text-lg ">
@@ -55,6 +79,7 @@ export default function Abstract({ searchParams }: Props) {
     <section
       className="flex-col flex justify-center items-center w-full h-full cursor-text"
       onClick={(e) => {
+        if (!isSequenceActive) return;
         e.stopPropagation();
         goToNextStep();
       }}

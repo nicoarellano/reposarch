@@ -69,7 +69,7 @@ transferring design control from the architect to the software vendors."
   },
   {
     id: "epistemic-object",
-    title: "Epistemic Objects: How to overcome the black boxes and digital oblivion?",
+    title: "Epistemic Objects",
     url: "/deblackboxing/epistemic-object",
     notes: "For this dissertation, I didn't want to stay in the theory only.\n\
 So in order to address these two obstacles, my research is grounded in two epistemic objects.\n\
