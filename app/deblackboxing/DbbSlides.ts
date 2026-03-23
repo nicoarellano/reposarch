@@ -113,8 +113,7 @@ ________________________________________________________________________________
 ______________________________________________________________________________________\n\
 The question is not if architects will use software, but if they will use it to define their own direction.\n\
 \n\
-For the momentum I have witnessed in the last few years,\n\
-I truly believe the profession can move from dependency to true sovereignty.\n\
+Following these principles, I truly believe the profession can move from dependency to true sovereignty.\n\
 "
   },
   {
